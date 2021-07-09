@@ -1,26 +1,17 @@
 id: bioimage.io
 name: BioImage.IO
+type: collection
+description: BioImage.IO RDF collections
 tags: []
+version: 0.1.0
+authors:
+  - name: BioImgae.IO Team
+documentation: ./README.md
+git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
-splash_title: BioImage Model Zoo
-splash_subtitle: Advanced AI models in one-click
-splash_feature_list:
-  - Integrate with Fiji, Ilastik, ImJoy
-  - Try model instantly with BioEngine
-  - Contribute your models via Github
-  - Link models to datasets and applications
-explore_button_text: Start Exploring
-background_image: static/img/zoo-background.svg
-resource_types:
-  - model
-  - application
-  - notebook
-  - dataset
-default_type: model
-url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-models/main
 attachments:
-  rdfs:
+  zenodo:
     - id: 10.5072/zenodo.849111
       name: 3D UNet - arabidopsis - ZeroCostDL4Mic
       type: model
@@ -420,3 +411,21 @@ attachments:
         _doi: 10.5072/zenodo.872925
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/rdf.yaml
+  github: []
+config:
+  splash_title: BioImage Model Zoo
+  splash_subtitle: Advanced AI models in one-click
+  splash_feature_list:
+    - Integrate with Fiji, Ilastik, ImJoy
+    - Try model instantly with BioEngine
+    - Contribute your models via Github
+    - Link models to datasets and applications
+  explore_button_text: Start Exploring
+  background_image: static/img/zoo-background.svg
+  resource_types:
+    - model
+    - application
+    - notebook
+    - dataset
+  default_type: model
+  url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-models/main
