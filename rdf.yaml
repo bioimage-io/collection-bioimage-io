@@ -9,7 +9,10 @@ authors:
 documentation: ./README.md
 git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png"
-attachments: {}
+attachments:
+  zenodo: []
+  github: []
+
 config:
   splash_title: BioImage Model Zoo
   splash_subtitle: Advanced AI models in one-click

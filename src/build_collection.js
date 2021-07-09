@@ -33,11 +33,7 @@ async function main() {
     }
   });
   console.log("All rdf items", items);
-  if (template.attachments.rdfs) {
-    template.attachments.rdfs = items.concat(template.attachments.rdfs);
-  } else {
-    template.attachments.rdfs = items;
-  }
+  template.attachments.zenodo = items;
   await writeFile("./dist/rdf.yaml", yaml.dump(template));
   await writeFile("./dist/rdf.json", JSON.stringify(template));
   await copyFile("./README.md", "./dist/README.md");
