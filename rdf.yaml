@@ -29,4 +29,4 @@ config:
     - notebook
     - dataset
   default_type: model
-  url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
