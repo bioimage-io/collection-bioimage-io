@@ -278,7 +278,13 @@ export class ZenodoClient {
       }
     } catch (e) {
       console.error("Failed to reset zenodo_credential");
-      localStorage.removeItem("zenodo_credential");
+      // this may still fail, e.g. in nodejs
+      try{
+        localStorage.removeItem("zenodo_credential");
+      }
+      finally{
+
+      }
     }
   }
 
