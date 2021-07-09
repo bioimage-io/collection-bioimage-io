@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "js-yaml": "^4.1.0",
     "node-fetch": "^2.6.1",
+    "node-localstorage": "^2.2.1",
     "spdx-license-list": "^6.4.0"
   },
   "devDependencies": {

@@ -2,12 +2,17 @@ import { ZenodoClient } from "./utils.js";
 import siteConfig from "./site.config.json";
 import fetch from "node-fetch";
 import { readFile, writeFile, mkdir, copyFile } from "fs/promises";
+import { LocalStorage } from "node-localstorage";
 import fs from "fs";
 
 import yaml from "js-yaml";
 
 if (!globalThis.fetch) {
   globalThis.fetch = fetch;
+}
+
+if (!globalThis.localStorage) {
+  globalThis.localStorage = new LocalStorage('./scratch');
 }
 
 const zenodoBaseURL = siteConfig.zenodo_config.use_sandbox

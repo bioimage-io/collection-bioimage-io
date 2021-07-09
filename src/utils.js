@@ -266,9 +266,8 @@ export class ZenodoClient {
     this.callbackUrl = encodeURIComponent("https://imjoy.io/login-helper");
     this.credential = null;
     try {
-      this.lastUserId = localStorage.getItem("zenodo_user_id")
-      if(this.lastUserId)
-        this.lastUserId = parseInt(this.lastUserId);
+      this.lastUserId = localStorage.getItem("zenodo_user_id");
+      if (this.lastUserId) this.lastUserId = parseInt(this.lastUserId);
       let lastCredential = localStorage.getItem("zenodo_credential");
       if (lastCredential) {
         this.credential = JSON.parse(lastCredential);
@@ -280,7 +279,7 @@ export class ZenodoClient {
         }
       }
     } catch (e) {
-      console.error("Failed to reset zenodo_credential"); 
+      console.error("Failed to reset zenodo_credential");
     }
   }
 
@@ -291,6 +290,11 @@ export class ZenodoClient {
   logout() {
     return new Promise((resolve, reject) => {
       this.credential = null;
+      try {
+        localStorage.removeItem("zenodo_credential");
+      } catch (e) {
+        console.error("Failed to reset zenodo_credential");
+      }
       const loginWindow = window.open(`${this.baseURL}/logout`, "Logout");
       try {
         loginWindow.focus();
