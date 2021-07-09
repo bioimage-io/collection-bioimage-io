@@ -1,0 +1,24 @@
+{
+  "name": "collection-bioimage-io",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node -r esm src/build_collection.js",
+    "check-format": "prettier --check \"{src,tests}/**/**\"",
+    "format": "prettier --write \"{src,tests}/**/**\""
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^2.6.1",
+    "spdx-license-list": "^6.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "esm": "^3.2.25",
+    "prettier": "^1.19.1"
+  }
+}

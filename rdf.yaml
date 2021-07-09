@@ -1,0 +1,22 @@
+
+id: bioimage.io
+name: BioImage.IO
+tags: []
+icon: "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png"
+splash_title: BioImage Model Zoo
+splash_subtitle: Advanced AI models in one-click
+splash_feature_list:
+  - Integrate with Fiji, Ilastik, ImJoy
+  - Try model instantly with BioEngine
+  - Contribute your models via Github
+  - Link models to datasets and applications
+explore_button_text: Start Exploring
+background_image: static/img/zoo-background.svg
+resource_types:
+  - model
+  - application
+  - notebook
+  - dataset
+default_type: model
+url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-models/main
+attachments: {}
