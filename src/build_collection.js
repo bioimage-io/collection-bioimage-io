@@ -30,7 +30,8 @@ async function main() {
   const templateStr = await readFile("./rdf.yaml");
   const template = yaml.load(templateStr);
   const items = await zenodoClient.getResourceItems({
-    community: siteConfig.zenodo_config.community
+    community: siteConfig.zenodo_config.community,
+    size: 10000, // only show the first 10000 items
   });
   items.forEach(item => {
     if (item.config._deposit) {
