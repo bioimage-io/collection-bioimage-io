@@ -707,41 +707,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.872918
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/fc05a6ea-3aea-47fb-9760-f177d7c4a7d1/rdf.yaml
-    - id: 10.5072/zenodo.881940
-      name: DSB-Nuclei-BoundaryModelNew
-      type: model
-      authors:
-        - name: Constantin Pape
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - u-net
-        - nucleus-segmentation
-        - segmentation
-        - volume-em
-        - platynereis
-        - nuclei
-        - affinity-prediction
-        - zenodo
-      description: DSB-Nuclei-BoundaryModel
-      license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/documentation.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/cover.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/rdf.yaml
-      links:
-        - 10.5072/zenodo.881915
-        - ilastik/ilastik
-        - deepimagej/deepimagej
-        - imjoy/BioImageIO-Packager
-      config:
-        _doi: 10.5072/zenodo.881989
-        _conceptdoi: 10.5072/zenodo.881940
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/rdf.yaml
     - id: 10.5072/zenodo.881842
       name: CovidIf training data
       type: dataset
@@ -777,6 +742,41 @@ attachments:
         _conceptdoi: 10.5072/zenodo.881842
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/75b365f2-a335-43cb-892a-93e35b2d7c98/rdf.yaml
+    - id: 10.5072/zenodo.881940
+      name: DSB-Nuclei-BoundaryModelNew
+      type: model
+      authors:
+        - name: Constantin Pape
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - u-net
+        - nucleus-segmentation
+        - segmentation
+        - volume-em
+        - platynereis
+        - nuclei
+        - affinity-prediction
+        - zenodo
+      description: DSB-Nuclei-BoundaryModel
+      license: CC-BY-4.0
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/documentation.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/cover.jpg
+      source: >-
+        https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/rdf.yaml
+      links:
+        - 10.5072/zenodo.881915
+        - ilastik/ilastik
+        - deepimagej/deepimagej
+        - imjoy/BioImageIO-Packager
+      config:
+        _doi: 10.5072/zenodo.881989
+        _conceptdoi: 10.5072/zenodo.881940
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/rdf.yaml
     - id: 10.5072/zenodo.886788
       name: ISBI2012-2D-AffinityModel
       type: model
