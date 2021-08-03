@@ -52,6 +52,11 @@ class OutputCacheInterface(ABC):
     def set(self, key: Key, entry: Entry) -> None:
         raise NotImplementedError
 
+    @abstractmethod
+    def write(self) -> None:
+        """write output to disk"""
+        raise NotImplementedError
+
 
 class OutputCache(OutputCacheInterface):
     def __init__(self, path: Path):
@@ -62,11 +67,6 @@ class OutputCache(OutputCacheInterface):
             self.data = {}
 
     def get(self, key: Key) -> Optional[Entry]:
-        # ent = self.data
-        # key_names = [df.name for df in dataclasses.fields(key)]
-        # for kn in key_names:
-        #     ent = ent.get(kn, {})
-
         ent = self.data.get(self._key_to_yaml_key(key))
         return None if ent is None else Entry(**ent)
 
@@ -77,7 +77,7 @@ class OutputCache(OutputCacheInterface):
     def _key_to_yaml_key(key: Key) -> str:
         return ",".join(map(str, dataclasses.astuple(key)))
 
-    def write(self):
+    def write(self) -> None:
         yaml.dump(self.data, self.path)
 
 
@@ -90,18 +90,17 @@ def main(collection_path: Path, output_cache_path: Path) -> int:
     output_cache = OutputCache(output_cache_path)
     for id_, source in get_zenodo_community_rersources(collection_path).items():
         key = Key(id_)
-        ent = output_cache.get(key)
-        if ent is None:
-            try:
-                spec.load_raw_resource_description(source, update_to_current_format=False)
-            except ValidationError as e:
-                errors = nested_default_dict_as_nested_dict(e.normalized_messages())
-            except Exception as e:
-                errors = [str(e)]
-            else:
-                errors = []
 
-            output_cache.set(key, Entry(source, errors))
+        try:
+            spec.load_raw_resource_description(source, update_to_current_format=False)
+        except ValidationError as e:
+            errors = nested_default_dict_as_nested_dict(e.normalized_messages())
+        except Exception as e:
+            errors = [str(e)]
+        else:
+            errors = []
+
+        output_cache.set(key, Entry(source, errors))
 
     output_cache.write()
     return 0
