@@ -49,6 +49,7 @@ jobs:
         environment-file: dev/environment-base.yaml
         python-version: ${{ matrix.python-version }}
     - name: update collection test for ${{ matrix.python-version }}
+      shell: bash -l {0}
       run: python scripts/update_collection_validation.py dist/rdf.yaml dist/validation_summary.yaml
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
