@@ -674,39 +674,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.881892
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/c396ca77-12e7-4f02-9ab3-01dbbaa32def/rdf.yaml
-    - id: 10.5072/zenodo.872924
-      name: Platyereis-nuclei-BoundaryModel
-      type: model
-      authors:
-        - name: Constantin Pape
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - u-net
-        - nuclei-segmentation
-        - segmentation
-        - volume-em
-        - platynereis
-        - nuclei
-        - affinity-prediction
-        - zenodo
-      description: Platyereis-nuclei-BoundaryModel
-      license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/documentation.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/cover.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/rdf.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - ilastik/Ilastik
-      config:
-        _doi: 10.5072/zenodo.872925
-        _conceptdoi: 10.5072/zenodo.872924
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/rdf.yaml
     - id: 10.5072/zenodo.872918
       name: Platyereis-cells-BoundaryModel
       type: model
@@ -887,6 +854,39 @@ attachments:
         _conceptdoi: 10.5072/zenodo.872852
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/12102045-f235-4426-afff-2b801725eb15/rdf.yaml
+    - id: 10.5072/zenodo.872924
+      name: Platyereis-nuclei-BoundaryModel
+      type: model
+      authors:
+        - name: Constantin Pape
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - u-net
+        - nuclei-segmentation
+        - segmentation
+        - volume-em
+        - platynereis
+        - nuclei
+        - affinity-prediction
+        - zenodo
+      description: Platyereis-nuclei-BoundaryModel
+      license: CC-BY-4.0
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/documentation.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/cover.jpg
+      source: >-
+        https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/rdf.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+        - ilastik/Ilastik
+      config:
+        _doi: 10.5072/zenodo.872925
+        _conceptdoi: 10.5072/zenodo.872924
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/rdf.yaml
   github:
     - id: zero
       source: >-
