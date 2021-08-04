@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "node -r esm src/build_collection.js",
+    "build": "node src/fetch_source.js && node -r esm src/build_collection.js",
     "check-format": "prettier --check \"{src,tests}/**/**\"",
     "format": "prettier --write \"{src,tests}/**/**\""
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "download": "^8.0.0",
     "js-yaml": "^4.1.0",
     "node-fetch": "^2.6.1",
     "node-localstorage": "^2.2.1",
