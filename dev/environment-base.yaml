@@ -1,0 +1,7 @@
+name: bio-core-dev
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - bioimageio.spec
