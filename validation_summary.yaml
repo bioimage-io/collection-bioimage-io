@@ -1,4 +1,4 @@
-10.5072/zenodo.849032,3.9.6,0.3.2post1,None:
+10.5072/zenodo.849032,3.9.6,0.3.2post2,None:
   errors:
     authors:
       0:
@@ -6,7 +6,7 @@
     id: [Unknown field.]
     rdf_file: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/472b09aa-f70b-48e9-b836-6ab560e3b70c/model.yaml
-10.5072/zenodo.849110,3.9.6,0.3.2post1,None:
+10.5072/zenodo.849110,3.9.6,0.3.2post2,None:
   errors:
     documentation: ['Invalid suffix (https:/github.com/HenriquesLab/ZeroCostDL4Mic/wiki):
         Replacement index 0 out of range for positional args tuple', 'Invalid as_posix
@@ -86,41 +86,41 @@
           tensorflow_version: [Unknown field.]
           weights_format: [Must be equal to onnx.]
   source: https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/model.yaml
-10.5072/zenodo.856197,3.9.6,0.3.2post1,None:
+10.5072/zenodo.856197,3.9.6,0.3.2post2,None:
   errors:
     rdf_file: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/956c0bd6-5472-4052-a1ef-94ccf94cadc9/model.yaml
-10.5072/zenodo.872852,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872852,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/12102045-f235-4426-afff-2b801725eb15/rdf.yaml
-10.5072/zenodo.872854,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872854,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/7c3fb1b0-74aa-4b98-97c4-6cf6167c20bc/rdf.yaml
-10.5072/zenodo.872860,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872860,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/rdf.yaml
-10.5072/zenodo.872914,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872914,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/406bdb5a-4dad-48cc-ae9a-d61f737d7de9/rdf.yaml
-10.5072/zenodo.872916,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872916,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/c28391fb-4935-4a76-951f-f6910dae8fbd/rdf.yaml
-10.5072/zenodo.872918,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872918,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/fc05a6ea-3aea-47fb-9760-f177d7c4a7d1/rdf.yaml
-10.5072/zenodo.872924,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872924,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/rdf.yaml
-10.5072/zenodo.872944,3.9.6,0.3.2post1,None:
+10.5072/zenodo.872944,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/36604653-1541-4891-b6bd-de5963217e5f/rdf.yaml
-10.5072/zenodo.880273,3.9.6,0.3.2post1,None:
+10.5072/zenodo.880273,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/9567559e-501c-4106-be15-8e10fbbe2390/rdf.yaml
-10.5072/zenodo.880412,3.9.6,0.3.2post1,None:
+10.5072/zenodo.880412,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/81fa667e-293f-4f3f-aca7-b352f6546c7f/rdf.yaml
-10.5072/zenodo.880528,3.9.6,0.3.2post1,None:
+10.5072/zenodo.880528,3.9.6,0.3.2post2,None:
   errors:
     date: [Unknown field.]
     documentation: ['Invalid suffix (https:/github.com/HenriquesLab/ZeroCostDL4Mic/wiki):
@@ -196,47 +196,47 @@
               _schema: [Invalid input type.]
           weights_format: [Must be equal to onnx.]
   source: https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/model.yaml
-10.5072/zenodo.881018,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881018,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/6f7f9164-f183-4b3c-9201-362187b2ba9f/rdf.yaml
-10.5072/zenodo.881020,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881020,3.9.6,0.3.2post2,None:
   errors: ['HTTP Error 404: NOT FOUND']
   source: https://sandbox.zenodo.org/api/files/b129783b-c251-4995-a71b-2ee0cc4ada49/mito_em.yaml
-10.5072/zenodo.881842,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881842,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/75b365f2-a335-43cb-892a-93e35b2d7c98/rdf.yaml
-10.5072/zenodo.881848,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881848,3.9.6,0.3.2post2,None:
   errors:
     id: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/886646e7-8b7c-4e7b-a4e4-05c0343d6704/rdf.yaml
-10.5072/zenodo.881892,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881892,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/c396ca77-12e7-4f02-9ab3-01dbbaa32def/rdf.yaml
-10.5072/zenodo.881898,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881898,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/d1278f8e-1f20-4c69-a86b-8f7dd4b89291/rdf.yaml
-10.5072/zenodo.881914,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881914,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/9335cedd-0a6f-458d-a28e-ac4a79216e2e/rdf.yaml
-10.5072/zenodo.881916,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881916,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/a762cbb3-5722-49ca-bc2e-75e77e741a6a/rdf.yaml
-10.5072/zenodo.881940,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881940,3.9.6,0.3.2post2,None:
   errors:
     id: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/rdf.yaml
-10.5072/zenodo.881942,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881942,3.9.6,0.3.2post2,None:
   errors:
     id: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/24ddb8e3-c9f0-459a-93f6-5d0a7703e6d0/rdf.yaml
-10.5072/zenodo.881944,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881944,3.9.6,0.3.2post2,None:
   errors:
     id: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/c36de755-742d-4e34-9ffc-211d583d0ef1/rdf.yaml
-10.5072/zenodo.881973,3.9.6,0.3.2post1,None:
+10.5072/zenodo.881973,3.9.6,0.3.2post2,None:
   errors:
     id: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/83af3b6d-77b9-4fec-b488-402ddae756c8/rdf.yaml
-10.5072/zenodo.886788,3.9.6,0.3.2post1,None:
+10.5072/zenodo.886788,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/678d163d-baa9-4c9a-987b-a1b3f0ac1bae/rdf.yaml
