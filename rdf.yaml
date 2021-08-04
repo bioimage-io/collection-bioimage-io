@@ -82,8 +82,7 @@ attachments:
         views: 4
         volume: 3371205
       license: BSD-1-Clause
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/472b09aa-f70b-48e9-b836-6ab560e3b70c/undefined
+      documentation: https://github.com/LEB-EPFL/DEFCoN-ImageJ/wiki
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/472b09aa-f70b-48e9-b836-6ab560e3b70c/cover_image.jpg
@@ -124,8 +123,7 @@ attachments:
         views: 0
         volume: 0
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/6f7f9164-f183-4b3c-9201-362187b2ba9f/undefined
+      documentation: http://brainiac2.mit.edu/isbi_challenge/home
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/6f7f9164-f183-4b3c-9201-362187b2ba9f/cover0.jpg
@@ -450,8 +448,7 @@ attachments:
         views: 6
         volume: 1464513584
       license: MIT
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/undefined
+      documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/combined.jpg
@@ -501,8 +498,7 @@ attachments:
         views: 4
         volume: 28650230
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/a762cbb3-5722-49ca-bc2e-75e77e741a6a/undefined
+      documentation: https://cremi.org/
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/a762cbb3-5722-49ca-bc2e-75e77e741a6a/cover0.png
@@ -545,8 +541,7 @@ attachments:
         views: 3
         volume: 936141
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/9335cedd-0a6f-458d-a28e-ac4a79216e2e/undefined
+      documentation: https://www.kaggle.com/c/data-science-bowl-2018
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/9335cedd-0a6f-458d-a28e-ac4a79216e2e/cover0.jpg
@@ -589,8 +584,7 @@ attachments:
         views: 1
         volume: 7605178
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/d1278f8e-1f20-4c69-a86b-8f7dd4b89291/undefined
+      documentation: https://www.biorxiv.org/content/10.1101/2020.02.26.961037v1.abstract
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/d1278f8e-1f20-4c69-a86b-8f7dd4b89291/cover0.png
@@ -633,8 +627,7 @@ attachments:
         views: 1
         volume: 4158595
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/c396ca77-12e7-4f02-9ab3-01dbbaa32def/undefined
+      documentation: https://osf.io/uzq3w/wiki/home/
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/c396ca77-12e7-4f02-9ab3-01dbbaa32def/cover0.png
@@ -675,8 +668,7 @@ attachments:
         views: 0
         volume: 0
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/75b365f2-a335-43cb-892a-93e35b2d7c98/undefined
+      documentation: https://onlinelibrary.wiley.com/doi/full/10.1002/bies.202000257
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/75b365f2-a335-43cb-892a-93e35b2d7c98/cover0.jpg
@@ -764,8 +756,7 @@ attachments:
         views: 2
         volume: 0
       license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/b129783b-c251-4995-a71b-2ee0cc4ada49/undefined
+      documentation: https://mitoem.grand-challenge.org/
       covers:
         - >-
           https://grand-challenge-public-prod.s3.amazonaws.com/b/566/banner.x10.jpeg
@@ -811,8 +802,7 @@ attachments:
         views: 3
         volume: 964879264
       license: MIT
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/undefined
+      documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
       covers:
         - >-
           https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/input.png
