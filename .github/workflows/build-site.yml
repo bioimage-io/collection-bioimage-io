@@ -10,13 +10,14 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-validate:
 
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [14.17.3]
+        python-version: [3.9]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,21 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: dist # The folder the action should deploy.
-
-  update-collection-validation:
-    needs: [build]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.9]  # todo: make matrix with pytorch/tensorflow/onnx envs instead of the one dev env
-    steps:
-    - uses: actions/checkout@v2
-    - name: install dependencies
+    - name: install validation dependencies
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
