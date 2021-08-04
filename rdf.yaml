@@ -11,6 +11,55 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.849110
+      name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+      type: model
+      authors:
+        - affiliation: UC3M, EPFL
+          name: DeepImageJ
+        - affiliation: PIP python package
+          name: pydeepimagej
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - segmentation
+        - arabidopsis
+        - zerocostdl4mic
+        - 3dunet
+        - zenodo
+      description: >-
+        Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
+        microscopy 3D volumes.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 4069
+        version_unique_downloads: 1562
+        version_unique_views: 32
+        version_views: 41
+        version_volume: 2976455009
+        views: 0
+        volume: 0
+      license: MIT
+      documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/input.png
+        - >-
+          https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/output.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+        - deepimagej/deepimagej
+        - zero/notebook_u-net_3d_zerocostdl4mic
+      config:
+        _doi: 10.5072/zenodo.893215
+        _conceptdoi: 10.5072/zenodo.849110
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/model.yaml
     - id: 10.5072/zenodo.886788
       name: ISBI2012-2D-AffinityModel
       type: model
@@ -770,55 +819,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.881020
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/b129783b-c251-4995-a71b-2ee0cc4ada49/mito_em.yaml
-    - id: 10.5072/zenodo.849110
-      name: 3D UNet - arabidopsis - ZeroCostDL4Mic
-      type: model
-      authors:
-        - affiliation: UC3M, EPFL
-          name: DeepImageJ
-        - affiliation: PIP python package
-          name: pydeepimagej
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - ZeroCostDL4Mic
-        - deepimagej
-        - segmentation
-        - 3DUNet
-        - arabidopsis
-        - zenodo
-      description: >-
-        Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
-        microscopy 3D volumes.
-      stats:
-        downloads: 1217
-        unique_downloads: 549
-        unique_views: 3
-        version_downloads: 3963
-        version_unique_downloads: 1507
-        version_unique_views: 30
-        version_views: 38
-        version_volume: 2952855521
-        views: 3
-        volume: 964879264
-      license: MIT
-      documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/input.png
-        - >-
-          https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/output.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - deepimagej/deepimagej
-        - zero/notebook_u-net_3d_zerocostdl4mic
-      config:
-        _doi: 10.5072/zenodo.880817
-        _conceptdoi: 10.5072/zenodo.849110
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/model.yaml
     - id: 10.5072/zenodo.872944
       name: 2D UNet Arabidopsis Ovules
       type: model

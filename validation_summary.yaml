@@ -62,10 +62,12 @@
         - authors:
             0:
               _schema: [Invalid input type.]
+          tensorflow_version: [Unknown field.]
           weights_format: [Must be equal to pytorch_state_dict.]
         - authors:
             0:
               _schema: [Invalid input type.]
+          tensorflow_version: [Unknown field.]
           weights_format: [Must be equal to pytorch_script.]
         - authors:
             0:
@@ -81,8 +83,9 @@
         - authors:
             0:
               _schema: [Invalid input type.]
+          tensorflow_version: [Unknown field.]
           weights_format: [Must be equal to onnx.]
-  source: https://sandbox.zenodo.org/api/files/710e900f-7112-4944-8eb6-f391d1b9c3d4/model.yaml
+  source: https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/model.yaml
 10.5072/zenodo.856197,3.9.6,0.3.2post1,None:
   errors:
     rdf_file: [Unknown field.]
