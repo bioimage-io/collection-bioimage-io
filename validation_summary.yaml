@@ -6,6 +6,83 @@
     id: [Unknown field.]
     rdf_file: [Unknown field.]
   source: https://sandbox.zenodo.org/api/files/472b09aa-f70b-48e9-b836-6ab560e3b70c/model.yaml
+10.5072/zenodo.849110,3.9.6,0.3.2post2,None:
+  errors:
+    documentation: ['Invalid suffix (https:/github.com/HenriquesLab/ZeroCostDL4Mic/wiki):
+        Replacement index 0 out of range for positional args tuple', 'Invalid as_posix
+        (https:/github.com/HenriquesLab/ZeroCostDL4Mic/wiki): expected local, relative
+        file path.']
+    inputs:
+      0:
+        data_range: [Not a valid tuple.]
+        preprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+    language: ['Must be one of: python, java.']
+    outputs:
+      0:
+        data_range: [Not a valid tuple.]
+        postprocessing:
+          0:
+            binarize: [Unknown field.]
+            name: [Missing data for required field.]
+    packaged_by:
+      0:
+        _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+    weights:
+      keras_hdf5:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_saved_model_bundle.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+      tensorflow_saved_model_bundle:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to keras_hdf5.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+  source: https://sandbox.zenodo.org/api/files/1f67029c-3917-4cae-ad1f-361f6d5bae7c/model.yaml
 10.5072/zenodo.856197,3.9.6,0.3.2post2,None:
   errors:
     rdf_file: [Unknown field.]
@@ -40,6 +117,75 @@
 10.5072/zenodo.880412,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/81fa667e-293f-4f3f-aca7-b352f6546c7f/rdf.yaml
+10.5072/zenodo.880528,3.9.6,0.3.2post2,None:
+  errors:
+    inputs:
+      0:
+        data_range: [Not a valid tuple.]
+        preprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+    language: ['Must be one of: python, java.']
+    outputs:
+      0:
+        data_range: [Not a valid tuple.]
+    packaged_by:
+      0:
+        _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+    weights:
+      keras_hdf5:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_saved_model_bundle.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+      tensorflow_saved_model_bundle:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to keras_hdf5.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+  source: https://sandbox.zenodo.org/api/files/954ada81-d28f-47de-b9d3-686559c76401/model.yaml
 10.5072/zenodo.881018,3.9.6,0.3.2post2,None:
   errors: [Invalid RDF type dataset]
   source: https://sandbox.zenodo.org/api/files/6f7f9164-f183-4b3c-9201-362187b2ba9f/rdf.yaml
