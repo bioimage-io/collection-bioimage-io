@@ -11,55 +11,6 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
-    - id: 10.5072/zenodo.849110
-      name: 3D UNet - arabidopsis - ZeroCostDL4Mic
-      type: model
-      authors:
-        - affiliation: UC3M, EPFL
-          name: DeepImageJ
-        - affiliation: PIP python package
-          name: pydeepimagej
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - segmentation
-        - arabidopsis
-        - zerocostdl4mic
-        - 3dunet
-        - zenodo
-      description: >-
-        Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
-        microscopy 3D volumes.
-      stats:
-        downloads: 109
-        unique_downloads: 62
-        unique_views: 3
-        version_downloads: 4203
-        version_unique_downloads: 1632
-        version_unique_views: 38
-        version_views: 47
-        version_volume: 3572789086
-        views: 3
-        volume: 277916165
-      license: MIT
-      documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/input.png
-        - >-
-          https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/output.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - deepimagej/deepimagej
-        - zero/notebook_u-net_3d_zerocostdl4mic
-      config:
-        _doi: 10.5072/zenodo.893215
-        _conceptdoi: 10.5072/zenodo.849110
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/f5d5fe6e-b72f-4daa-8518-24fb9c028ee1/model.yaml
     - id: 10.5072/zenodo.886788
       name: ISBI2012-2D-AffinityModel
       type: model
@@ -462,61 +413,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.881940
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/bc7c3c89-23e5-47f4-8a0d-e95b4f73bad3/rdf.yaml
-    - id: 10.5072/zenodo.880528
-      name: Multi-Organ Nucleus Segmentation (StarDist 2D)
-      type: model
-      authors:
-        - affiliation: EPFL, UC3M
-          name: DeepImageJ team
-        - affiliation: Universidad Carlos III de Madrid
-          name: Estibaliz Gómez de Mariscal
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - ZeroCostDL4Mic
-        - deepImageJ
-        - segmentation
-        - histopathology
-        - StarDist
-        - histology
-        - digital pathology
-        - zenodo
-      description: >-
-        Nucleus segmentation in digital pathology datasets using a StarDist
-        trained model in 2D. The dataset is the one provided in the MoNuSeg 2018
-        Challenge.
-      stats:
-        downloads: 1926
-        unique_downloads: 560
-        unique_views: 6
-        version_downloads: 2329
-        version_unique_downloads: 658
-        version_unique_views: 13
-        version_views: 21
-        version_volume: 2001894668
-        views: 6
-        volume: 1622721045
-      license: MIT
-      documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/combined.jpg
-        - >-
-          https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/input.png
-        - >-
-          https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/output.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/model.yaml
-      links:
-        - zero/notebook_stardist_2d_zerocostdl4mic_deepimagej
-        - deepimagej/deepimagej
-        - imjoy/bioimageio-packager
-        - deepimagej/monuseg_digital_pathology_miccai2018
-      config:
-        _doi: 10.5072/zenodo.881946
-        _conceptdoi: 10.5072/zenodo.880528
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/f62fce40-2b61-4290-867f-0c825cb03582/model.yaml
     - id: 10.5072/zenodo.881916
       name: >-
         CREMI: MICCAI Challenge on Circuit Reconstruction from Electron
