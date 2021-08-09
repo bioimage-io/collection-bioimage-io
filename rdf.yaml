@@ -91,16 +91,16 @@ attachments:
         Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
         microscopy 3D volumes.
       stats:
-        downloads: 0
-        unique_downloads: 0
-        unique_views: 0
-        version_downloads: 4245
-        version_unique_downloads: 1653
-        version_unique_views: 38
-        version_views: 47
-        version_volume: 3580408622
-        views: 0
-        volume: 0
+        downloads: 69
+        unique_downloads: 51
+        unique_views: 3
+        version_downloads: 4348
+        version_unique_downloads: 1717
+        version_unique_views: 41
+        version_views: 50
+        version_volume: 3740254001
+        views: 3
+        volume: 10237838
       license: MIT
       documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
       covers:
@@ -179,16 +179,16 @@ attachments:
         - zenodo
       description: This is a test model
       stats:
-        downloads: 457
-        unique_downloads: 435
+        downloads: 477
+        unique_downloads: 454
         unique_views: 4
-        version_downloads: 2311
-        version_unique_downloads: 1678
+        version_downloads: 2331
+        version_unique_downloads: 1697
         version_unique_views: 15
         version_views: 20
-        version_volume: 32303820
+        version_volume: 32512510
         views: 4
-        volume: 4835786
+        volume: 5044476
       license: BSD-1-Clause
       documentation: https://github.com/LEB-EPFL/DEFCoN-ImageJ/wiki
       covers:
@@ -540,16 +540,16 @@ attachments:
         reconstruction of neurons and neuronal connectivity from serial section
         electron microscopy data.
       stats:
-        downloads: 281
-        unique_downloads: 126
+        downloads: 313
+        unique_downloads: 153
         unique_views: 3
-        version_downloads: 281
-        version_unique_downloads: 126
+        version_downloads: 313
+        version_unique_downloads: 153
         version_unique_views: 3
         version_views: 4
-        version_volume: 31418558
+        version_volume: 32321222
         views: 4
-        volume: 31418558
+        volume: 32321222
       license: CC-BY-4.0
       documentation: https://cremi.org/
       covers:
@@ -583,16 +583,16 @@ attachments:
         Subset of the nucleus segmentation training data provided by the 2018
         Kaggle Data Science Bowl.
       stats:
-        downloads: 127
-        unique_downloads: 119
+        downloads: 153
+        unique_downloads: 145
         unique_views: 3
-        version_downloads: 127
-        version_unique_downloads: 119
+        version_downloads: 153
+        version_unique_downloads: 145
         version_unique_views: 3
         version_views: 3
-        version_volume: 1047631
+        version_volume: 1081811
         views: 3
-        volume: 1047631
+        volume: 1081811
       license: CC-BY-4.0
       documentation: https://www.kaggle.com/c/data-science-bowl-2018
       covers:
@@ -1038,16 +1038,16 @@ attachments:
         - zenodo
       description: Platyereis-nuclei-BoundaryModel
       stats:
-        downloads: 915
-        unique_downloads: 613
+        downloads: 939
+        unique_downloads: 637
         unique_views: 0
-        version_downloads: 915
-        version_unique_downloads: 613
+        version_downloads: 939
+        version_unique_downloads: 637
         version_unique_views: 0
         version_views: 0
-        version_volume: 653870350
+        version_volume: 653923246
         views: 0
-        volume: 653870350
+        volume: 653923246
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/documentation.md
