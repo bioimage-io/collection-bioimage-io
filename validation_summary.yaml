@@ -230,3 +230,7 @@
 10.5072/zenodo.886788,3.9.6,0.3.2post2,None:
   errors: []
   source: https://sandbox.zenodo.org/api/files/678d163d-baa9-4c9a-987b-a1b3f0ac1bae/rdf.yaml
+10.5072/zenodo.894458,3.9.6,0.3.2post2,None:
+  errors:
+    type: [Missing data for required field.]
+  source: https://sandbox.zenodo.org/api/files/0d4e7168-8ec0-4e33-b154-4db9f8831bc9/model.yaml
