@@ -234,3 +234,82 @@
   errors:
     type: [Missing data for required field.]
   source: https://sandbox.zenodo.org/api/files/0d4e7168-8ec0-4e33-b154-4db9f8831bc9/model.yaml
+10.5072/zenodo.904904,3.9.6,0.3.2post2,None:
+  errors:
+    inputs:
+      0:
+        data_range: [Not a valid tuple.]
+        preprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+    language: ['Must be one of: python, java.']
+    outputs:
+      0:
+        data_range: [Not a valid tuple.]
+        postprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+          1:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+          2:
+            binarize: [Unknown field.]
+            name: [Missing data for required field.]
+    packaged_by:
+      0:
+        _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+    weights:
+      keras_hdf5:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_saved_model_bundle.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+      tensorflow_saved_model_bundle:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to keras_hdf5.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+  source: https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/model.yaml

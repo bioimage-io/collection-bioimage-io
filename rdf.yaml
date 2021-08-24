@@ -11,6 +11,56 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.904904
+      name: 2D UNet - ZeroCostDL4Mic
+      type: model
+      authors:
+        - name: ZeroCostDL4Mic
+        - affiliation: EPFL, UC3M
+          name: DeepImageJ
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - zerocostdl4mic
+        - deepimagej
+        - segmentation
+        - tem
+        - unet
+        - zenodo
+      description: >-
+        2D U-Net trained for binary segmentation using the EM images of neuronal
+        membranes and segmentation masks from the ISBI segmentation challenge
+        2012.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 0
+        version_unique_downloads: 0
+        version_unique_views: 0
+        version_views: 0
+        version_volume: 0
+        views: 0
+        volume: 0
+      license: MIT
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/input.png
+        - >-
+          https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/output.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+        - deepimagej/deepimagej
+        - zero/notebook_u-net_2d_zerocostdl4mic_deepimagej
+      config:
+        _doi: 10.5072/zenodo.904905
+        _conceptdoi: 10.5072/zenodo.904904
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/model.yaml
     - id: 10.5072/zenodo.894458
       name: Fully Residual U-Net - TEM
       type: model
