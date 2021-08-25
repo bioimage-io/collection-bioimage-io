@@ -288,16 +288,16 @@ attachments:
         - zenodo
       description: This is a test model
       stats:
-        downloads: 932
-        unique_downloads: 880
+        downloads: 977
+        unique_downloads: 923
         unique_views: 6
-        version_downloads: 2786
-        version_unique_downloads: 2123
+        version_downloads: 2831
+        version_unique_downloads: 2166
         version_unique_views: 17
         version_views: 22
-        version_volume: 38863599
+        version_volume: 39338652
         views: 6
-        volume: 11395565
+        volume: 11870618
       license: BSD-1-Clause
       documentation: https://github.com/LEB-EPFL/DEFCoN-ImageJ/wiki
       covers:
@@ -649,16 +649,16 @@ attachments:
         reconstruction of neurons and neuronal connectivity from serial section
         electron microscopy data.
       stats:
-        downloads: 554
-        unique_downloads: 344
+        downloads: 569
+        unique_downloads: 357
         unique_views: 3
-        version_downloads: 554
-        version_unique_downloads: 344
+        version_downloads: 569
+        version_unique_downloads: 357
         version_unique_views: 3
         version_views: 4
-        version_volume: 42079184
+        version_volume: 42463702
         views: 4
-        volume: 42079184
+        volume: 42463702
       license: CC-BY-4.0
       documentation: https://cremi.org/
       covers:
@@ -692,16 +692,16 @@ attachments:
         Subset of the nucleus segmentation training data provided by the 2018
         Kaggle Data Science Bowl.
       stats:
-        downloads: 342
-        unique_downloads: 334
+        downloads: 354
+        unique_downloads: 346
         unique_views: 3
-        version_downloads: 342
-        version_unique_downloads: 334
+        version_downloads: 354
+        version_unique_downloads: 346
         version_unique_views: 3
         version_views: 3
-        version_volume: 1447330
+        version_volume: 1453678
         views: 3
-        volume: 1447330
+        volume: 1453678
       license: CC-BY-4.0
       documentation: https://www.kaggle.com/c/data-science-bowl-2018
       covers:
@@ -1147,16 +1147,16 @@ attachments:
         - zenodo
       description: Platyereis-nuclei-BoundaryModel
       stats:
-        downloads: 1102
-        unique_downloads: 800
+        downloads: 1114
+        unique_downloads: 812
         unique_views: 0
-        version_downloads: 1102
-        version_unique_downloads: 800
+        version_downloads: 1114
+        version_unique_downloads: 812
         version_unique_views: 0
         version_views: 0
-        version_volume: 654282498
+        version_volume: 654308946
         views: 0
-        volume: 654282498
+        volume: 654308946
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/documentation.md
