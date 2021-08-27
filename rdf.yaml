@@ -11,6 +11,66 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.894458
+      name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
+      type: model
+      authors:
+        - affiliation: Universidad Carlos III de Madrid
+          name: Estibaliz Gómez-de-Mariscal
+        - affiliation: Masaryk University
+          name: Martin Maška
+        - affiliation: Masaryk University
+          name: Anna Kotrbová
+        - affiliation: Masaryk University
+          name: Vendula Pospíchalová
+        - affiliation: Masaryk University
+          name: Pavel Matula
+        - affiliation: Universidad Carlos III de Madrid
+          name: Arrate Muñoz-Barrutia
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - extracellular-vesicles
+        - segmentation
+        - tem
+        - frunet
+        - exosomes
+        - electron-microscopy
+        - 2d-segmentation
+        - zenodo
+      description: >-
+        DeepImageJ compatible fully residual U-Net trained to segment small
+        extracellular vesicles in 2D TEM images
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 293
+        version_unique_downloads: 121
+        version_unique_views: 9
+        version_views: 32
+        version_volume: 4125827239
+        views: 0
+        volume: 0
+      license: BSD-3-Clause
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/15f6cc78-b503-4880-966d-6a865794c9e8/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/15f6cc78-b503-4880-966d-6a865794c9e8/frunet_sev.jpg
+      source: >-
+        https://sandbox.zenodo.org/api/files/15f6cc78-b503-4880-966d-6a865794c9e8/model.yaml
+      links:
+        - deepimagej/deepimagej
+        - imjoy/bioimageio-packager
+        - deepimagej/evstemsegmentationfrunet
+        - ilastik/ilastik
+      config:
+        _doi: 10.5072/zenodo.906449
+        _conceptdoi: 10.5072/zenodo.894458
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/15f6cc78-b503-4880-966d-6a865794c9e8/model.yaml
     - id: 10.5072/zenodo.905991
       name: HeLa DIC Cell Segmentation (U-Net)
       type: model
@@ -153,65 +213,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.904904
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/d6bdaa4f-d337-4c06-85ed-3d1430a2784b/model.yaml
-    - id: 10.5072/zenodo.894458
-      name: Fully Residual U-Net - TEM
-      type: model
-      authors:
-        - affiliation: Universidad Carlos III de Madrid
-          name: Estibaliz Gómez-de-Mariscal
-        - affiliation: Masaryk University
-          name: Martin Maška
-        - affiliation: Masaryk University
-          name: Anna Kotrbová
-        - affiliation: Masaryk University
-          name: Vendula Pospíchalová
-        - affiliation: Masaryk University
-          name: Pavel Matula
-        - affiliation: Universidad Carlos III de Madrid
-          name: Arrate Muñoz-Barrutia
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - segmentation
-        - frunet
-        - exosomes
-        - tem
-        - 2dsegmentation
-        - extracellularvesicles
-        - electronmicroscopy
-        - zenodo
-      description: >-
-        DeepImageJ compatible fully residual U-Net trained to segment small
-        extracellular vesicles in 2D TEM images. The model has been trained on
-        images with pixel size 1.566 nm, please adjust your image resolution to
-        this specification to get a well performing model..
-      stats:
-        downloads: 0
-        unique_downloads: 0
-        unique_views: 1
-        version_downloads: 161
-        version_unique_downloads: 29
-        version_unique_views: 6
-        version_views: 23
-        version_volume: 3887509176
-        views: 1
-        volume: 0
-      license: BSD-3-Clause
-      documentation: https://cbia.fi.muni.cz/research/segmentation/fru-net.html
-      covers:
-        - https://sandbox.zenodo.org/record/894459/files/frunet_sev.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/0d4e7168-8ec0-4e33-b154-4db9f8831bc9/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - deepimagej/EVsTEMsegmentationFRUNet
-        - deepimagej
-      config:
-        _doi: 10.5072/zenodo.904786
-        _conceptdoi: 10.5072/zenodo.894458
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/0d4e7168-8ec0-4e33-b154-4db9f8831bc9/model.yaml
     - id: 10.5072/zenodo.880528
       name: Multi-Organ Nucleus Segmentation (StarDist 2D)
       type: model
