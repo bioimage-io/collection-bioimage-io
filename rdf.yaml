@@ -109,55 +109,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.907585
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/model.yaml
-    - id: 10.5072/zenodo.906808
-      name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
-      type: model
-      authors:
-        - affiliation: UCL, Francis Crick Institute, Turku and Åbo Akademi University
-          name: ZeroCostDL4Mic team
-        - affiliation: UC3M, EPFL
-          name: DeepImageJ team
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - zerocostdl4mic
-        - deepimagej
-        - smlm
-        - image-reconstruction
-        - super-resolution
-        - zenodo
-      description: >-
-        A trained Deep-STORM model for image reconstruction from high-density
-        single-molecule localization microscopy (SMLM).
-      stats:
-        downloads: 34
-        unique_downloads: 21
-        unique_views: 1
-        version_downloads: 34
-        version_unique_downloads: 21
-        version_unique_views: 1
-        version_views: 2
-        version_volume: 73478055
-        views: 2
-        volume: 73478055
-      license: MIT
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/22f85b0f-94a7-427b-a378-ac8a9357c821/README.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/22f85b0f-94a7-427b-a378-ac8a9357c821/input.png
-        - >-
-          https://sandbox.zenodo.org/api/files/22f85b0f-94a7-427b-a378-ac8a9357c821/zoom.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/22f85b0f-94a7-427b-a378-ac8a9357c821/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - deepimagej/deepimagej
-      config:
-        _doi: 10.5072/zenodo.906809
-        _conceptdoi: 10.5072/zenodo.906808
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/22f85b0f-94a7-427b-a378-ac8a9357c821/model.yaml
     - id: 10.5072/zenodo.906806
       name: Skin lesions classification
       type: model
@@ -306,54 +257,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.906802
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/bfac9db5-f773-4d1b-a0f8-754628b3f5b3/model.yaml
-    - id: 10.5072/zenodo.906784
-      name: 3D U-Net - ZeroCostDL4Mic - TEM Images ISBI Challenge
-      type: model
-      authors:
-        - affiliation: EPFL, UC3M
-          name: DeepImageJ team
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - tem
-        - mitochondria
-        - segmentation
-        - 3d-unet
-        - zerocostdl4mic
-        - deepimagej-beta
-        - zenodo
-      description: >-
-        3D U-Net trained using ZeroCostDL4Mic notebooks to segment mitochondria
-        in Transmission Electron Microscopy (TEM) data.
-      stats:
-        downloads: 20
-        unique_downloads: 19
-        unique_views: 0
-        version_downloads: 20
-        version_unique_downloads: 19
-        version_unique_views: 0
-        version_views: 0
-        version_volume: 50560
-        views: 0
-        volume: 50560
-      license: MIT
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/b18544e5-2fea-42ff-b02a-bb981d434524/README.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/b18544e5-2fea-42ff-b02a-bb981d434524/exampleImage.gif
-      source: >-
-        https://sandbox.zenodo.org/api/files/b18544e5-2fea-42ff-b02a-bb981d434524/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - deepimagej/deepimagej
-        - zero/notebook_u-net_3d_zerocostdl4mic_deepimagej
-      config:
-        _doi: 10.5072/zenodo.906785
-        _conceptdoi: 10.5072/zenodo.906784
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/b18544e5-2fea-42ff-b02a-bb981d434524/model.yaml
     - id: 10.5072/zenodo.905080
       name: Pancreatic Cell Phase Contrast Segmentation (DeepWater - CTC submission)
       type: model
