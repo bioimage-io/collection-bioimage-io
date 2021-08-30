@@ -11,6 +11,104 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.907595
+      name: Widefield Super-resolution (GAN - DAPI)
+      type: model
+      authors:
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Hongda Wang
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Yair Rivenson
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Aydogan Ozcan
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - gan
+        - fluorescence-microscopy
+        - super-resolution
+        - zenodo
+      description: >-
+        A trained GAN to transform diffraction-limited input images into
+        super-resolved ones.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 0
+        version_unique_downloads: 0
+        version_unique_views: 0
+        version_views: 0
+        version_volume: 0
+        views: 0
+        volume: 0
+      license: CC-BY-4.0
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/exampleImage.png
+        - >-
+          https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/resultImage.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+      config:
+        _doi: 10.5072/zenodo.907596
+        _conceptdoi: 10.5072/zenodo.907595
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/model.yaml
+    - id: 10.5072/zenodo.907585
+      name: Widefield Super-resolution (GAN - TxRed)
+      type: model
+      authors:
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Hongda Wang
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Yair Rivenson
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Aydogan Ozcan
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - gan
+        - fluorescence-microscopy
+        - super-resolution
+        - zenodo
+      description: >-
+        A trained GAN to transform diffraction-limited input images into
+        super-resolved ones.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 1
+        version_downloads: 0
+        version_unique_downloads: 0
+        version_unique_views: 1
+        version_views: 1
+        version_volume: 0
+        views: 1
+        volume: 0
+      license: CC-BY-4.0
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/exampleImage.png
+        - >-
+          https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/resultImage.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+      config:
+        _doi: 10.5072/zenodo.907586
+        _conceptdoi: 10.5072/zenodo.907585
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/model.yaml
     - id: 10.5072/zenodo.906808
       name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
       type: model

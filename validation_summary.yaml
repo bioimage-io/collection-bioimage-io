@@ -355,3 +355,10 @@
     test_outputs: [Missing data for required field.]
     type: [Missing data for required field.]
   source: https://sandbox.zenodo.org/api/files/22f85b0f-94a7-427b-a378-ac8a9357c821/model.yaml
+10.5072/zenodo.907585,3.9.6,0.3.2post2,None:
+  errors:
+    type: [Missing data for required field.]
+  source: https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/model.yaml
+10.5072/zenodo.907595,3.9.6,0.3.2post2,None:
+  errors: ['HTTP Error 404: NOT FOUND']
+  source: https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/model.yaml
