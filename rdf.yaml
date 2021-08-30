@@ -11,6 +11,105 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.906808
+      name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
+      type: model
+      authors:
+        - affiliation: UCL, Francis Crick Institute, Turku and Åbo Akademi University
+          name: ZeroCostDL4Mic team
+        - affiliation: UC3M, EPFL
+          name: DeepImageJ team
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - zerocostdl4mic
+        - deepimagej
+        - smlm
+        - image-reconstruction
+        - super-resolution
+        - zenodo
+      description: >-
+        A trained Deep-STORM model for image reconstruction from high-density
+        single-molecule localization microscopy (SMLM).
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 42
+        version_unique_downloads: 28
+        version_unique_views: 2
+        version_views: 3
+        version_volume: 73560850
+        views: 0
+        volume: 0
+      license: MIT
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/input.png
+        - >-
+          https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/zoom.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/model.yaml
+      links:
+        - deepimagej/deepimagej
+        - zero/notebook_deep-storm_2d_zerocostdl4mic_deepimagej
+        - imjoy/bioimageio-packager
+        - deepimagej/smlm-deepimagej
+      config:
+        _doi: 10.5072/zenodo.907832
+        _conceptdoi: 10.5072/zenodo.906808
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/model.yaml
+    - id: 10.5072/zenodo.906784
+      name: 3D U-Net - ZeroCostDL4Mic
+      type: model
+      authors:
+        - affiliation: EPFL, UC3M
+          name: DeepImageJ team
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - tem
+        - mitochondria
+        - segmentation
+        - 3d-unet
+        - zerocostdl4mic
+        - deepimagej-beta
+        - zenodo
+      description: >-
+        3D U-Net trained using ZeroCostDL4Mic notebooks to segment mitochondria
+        in Transmission Electron Microscopy (TEM) data.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 25
+        version_unique_downloads: 24
+        version_unique_views: 0
+        version_views: 0
+        version_volume: 63850
+        views: 0
+        volume: 0
+      license: MIT
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/52771cb2-5886-41a3-b8ee-4def7203951f/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/52771cb2-5886-41a3-b8ee-4def7203951f/exampleImage.gif
+      source: >-
+        https://sandbox.zenodo.org/api/files/52771cb2-5886-41a3-b8ee-4def7203951f/model.yaml
+      links:
+        - deepimagej/deepimagej
+        - zero/notebook_u-net_3d_zerocostdl4mic_deepimagej
+        - imjoy/bioimageio-packager
+      config:
+        _doi: 10.5072/zenodo.907831
+        _conceptdoi: 10.5072/zenodo.906784
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/52771cb2-5886-41a3-b8ee-4def7203951f/model.yaml
     - id: 10.5072/zenodo.907595
       name: Widefield Super-resolution (GAN - DAPI)
       type: model
