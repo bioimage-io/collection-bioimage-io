@@ -325,7 +325,7 @@
   source: https://sandbox.zenodo.org/api/files/3fa83215-f885-4c05-8ae7-60b2e2225555/model.yaml
 10.5072/zenodo.905991,3.9.6,0.3.2post2,None:
   errors: ['HTTP Error 404: NOT FOUND']
-  source: https://sandbox.zenodo.org/api/files/2dda5458-452f-419f-a928-f776129b55e0/model.yaml
+  source: https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/model.yaml
 10.5072/zenodo.906784,3.9.6,0.3.2post2,None:
   errors:
     run_mode:

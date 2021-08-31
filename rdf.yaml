@@ -11,6 +11,48 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.905991
+      name: HeLa DIC Cell Segmentation (U-Net)
+      type: model
+      authors:
+        - affiliation: EPFL, UC3M
+          name: DeepImageJ
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - hela-cells
+        - segmentation
+        - phase-contrast
+        - zenodo
+      description: >-
+        DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
+        contrast microscopy images
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 100
+        version_unique_downloads: 93
+        version_unique_views: 10
+        version_views: 13
+        version_volume: 2587253
+        views: 0
+        volume: 0
+      license: BSD-2-Clause
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/README.md
+      covers:
+        - https://sandbox.zenodo.org/record/905992/files/unet_hela_seg.jpg
+      source: >-
+        https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+      config:
+        _doi: 10.5072/zenodo.908123
+        _conceptdoi: 10.5072/zenodo.905991
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/model.yaml
     - id: 10.5072/zenodo.906808
       name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
       type: model
@@ -404,48 +446,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.905080
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/3fa83215-f885-4c05-8ae7-60b2e2225555/model.yaml
-    - id: 10.5072/zenodo.905991
-      name: HeLa DIC Cell Segmentation (U-Net)
-      type: model
-      authors:
-        - affiliation: EPFL, UC3M
-          name: DeepImageJ
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - hela-cells
-        - segmentation
-        - phase-contrast
-        - zenodo
-      description: >-
-        DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
-        contrast microscopy images
-      stats:
-        downloads: 1
-        unique_downloads: 1
-        unique_views: 6
-        version_downloads: 98
-        version_unique_downloads: 91
-        version_unique_views: 10
-        version_views: 13
-        version_volume: 2537009
-        views: 9
-        volume: 2861
-      license: BSD-2-Clause
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/2dda5458-452f-419f-a928-f776129b55e0/README.md
-      covers:
-        - https://sandbox.zenodo.org/record/905992/files/unet_hela_seg.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/2dda5458-452f-419f-a928-f776129b55e0/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-      config:
-        _doi: 10.5072/zenodo.906610
-        _conceptdoi: 10.5072/zenodo.905991
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/2dda5458-452f-419f-a928-f776129b55e0/model.yaml
     - id: 10.5072/zenodo.894458
       name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
       type: model
