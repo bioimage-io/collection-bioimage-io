@@ -636,16 +636,16 @@ attachments:
         Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
         microscopy 3D volumes.
       stats:
-        downloads: 1176
-        unique_downloads: 727
+        downloads: 1201
+        unique_downloads: 744
         unique_views: 5
-        version_downloads: 5456
-        version_unique_downloads: 2394
+        version_downloads: 5480
+        version_unique_downloads: 2410
         version_unique_views: 43
         version_views: 52
-        version_volume: 4466998869
+        version_volume: 4471013875
         views: 5
-        volume: 736979706
+        volume: 740997712
       license: MIT
       documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
       covers:
