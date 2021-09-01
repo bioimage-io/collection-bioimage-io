@@ -8,10 +8,6 @@
   source: https://sandbox.zenodo.org/api/files/472b09aa-f70b-48e9-b836-6ab560e3b70c/model.yaml
 10.5072/zenodo.849110,3.9.6,0.3.2post2,None:
   errors:
-    documentation: ['Invalid suffix (https:/github.com/HenriquesLab/ZeroCostDL4Mic/wiki):
-        Replacement index 0 out of range for positional args tuple', 'Invalid as_posix
-        (https:/github.com/HenriquesLab/ZeroCostDL4Mic/wiki): expected local, relative
-        file path.']
     inputs:
       0:
         data_range: [Not a valid tuple.]
@@ -82,7 +78,7 @@
             0:
               _schema: [Invalid input type.]
           weights_format: [Must be equal to onnx.]
-  source: https://sandbox.zenodo.org/api/files/1f67029c-3917-4cae-ad1f-361f6d5bae7c/model.yaml
+  source: https://sandbox.zenodo.org/api/files/494811fc-a47e-45e9-952e-be006dfa084f/model.yaml
 10.5072/zenodo.856197,3.9.6,0.3.2post2,None:
   errors:
     rdf_file: [Unknown field.]
