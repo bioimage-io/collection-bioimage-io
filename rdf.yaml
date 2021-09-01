@@ -61,6 +61,55 @@ attachments:
         _conceptdoi: 10.5072/zenodo.849110
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/494811fc-a47e-45e9-952e-be006dfa084f/model.yaml
+    - id: 10.5072/zenodo.908833
+      name: Widefield Super-resolution (GAN - FITC)
+      type: model
+      authors:
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Hongda Wang
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Yair Rivenson
+        - affiliation: University of California, Los Angeles, CA, USA
+          name: Aydogan Ozcan
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - gan
+        - fluorescence-microscopy
+        - super-resolution
+        - zenodo
+      description: >-
+        A trained GAN to transform diffraction-limited input images into
+        super-resolved ones.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 1
+        version_downloads: 0
+        version_unique_downloads: 0
+        version_unique_views: 1
+        version_views: 1
+        version_volume: 0
+        views: 1
+        volume: 0
+      license: CC-BY-4.0
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/exampleImage.png
+        - >-
+          https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/resultImage.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+      config:
+        _doi: 10.5072/zenodo.908834
+        _conceptdoi: 10.5072/zenodo.908833
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/model.yaml
     - id: 10.5072/zenodo.905991
       name: HeLa DIC Cell Segmentation (U-Net)
       type: model

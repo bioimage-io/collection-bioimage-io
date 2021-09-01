@@ -358,3 +358,7 @@
 10.5072/zenodo.907595,3.9.6,0.3.2post2,None:
   errors: ['HTTP Error 404: NOT FOUND']
   source: https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/model.yaml
+10.5072/zenodo.908833,3.9.6,0.3.2post2,None:
+  errors:
+    type: [Missing data for required field.]
+  source: https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/model.yaml
