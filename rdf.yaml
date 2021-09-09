@@ -61,97 +61,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.849110
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/494811fc-a47e-45e9-952e-be006dfa084f/model.yaml
-    - id: 10.5072/zenodo.908833
-      name: Widefield Super-resolution (GAN - FITC)
-      type: model
-      authors:
-        - affiliation: University of California, Los Angeles, CA, USA
-          name: Hongda Wang
-        - affiliation: University of California, Los Angeles, CA, USA
-          name: Yair Rivenson
-        - affiliation: University of California, Los Angeles, CA, USA
-          name: Aydogan Ozcan
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - gan
-        - fluorescence-microscopy
-        - super-resolution
-        - zenodo
-      description: >-
-        A trained GAN to transform diffraction-limited input images into
-        super-resolved ones.
-      stats:
-        downloads: 358
-        unique_downloads: 221
-        unique_views: 1
-        version_downloads: 358
-        version_unique_downloads: 221
-        version_unique_views: 1
-        version_views: 1
-        version_volume: 8391169
-        views: 1
-        volume: 8391169
-      license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/README.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/exampleImage.png
-        - >-
-          https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/resultImage.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-      config:
-        _doi: 10.5072/zenodo.908834
-        _conceptdoi: 10.5072/zenodo.908833
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/0e9463f3-b94d-424c-b677-5166432a535b/model.yaml
-    - id: 10.5072/zenodo.905991
-      name: HeLa DIC Cell Segmentation (U-Net)
-      type: model
-      authors:
-        - affiliation: EPFL, UC3M
-          name: DeepImageJ
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - hela-cells
-        - segmentation
-        - phase-contrast
-        - zenodo
-      description: >-
-        DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
-        contrast microscopy images
-      stats:
-        downloads: 0
-        unique_downloads: 0
-        unique_views: 6
-        version_downloads: 282
-        version_unique_downloads: 267
-        version_unique_views: 16
-        version_views: 20
-        version_volume: 7112131
-        views: 6
-        volume: 0
-      license: BSD-2-Clause
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/README.md
-      covers:
-        - https://sandbox.zenodo.org/record/905992/files/unet_hela_seg.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-      config:
-        _doi: 10.5072/zenodo.908123
-        _conceptdoi: 10.5072/zenodo.905991
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/be0c363d-0f80-4475-a13c-a482552499bf/model.yaml
     - id: 10.5072/zenodo.906808
       name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
       type: model
@@ -251,55 +160,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.906784
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/52771cb2-5886-41a3-b8ee-4def7203951f/model.yaml
-    - id: 10.5072/zenodo.907595
-      name: Widefield Super-resolution (GAN - DAPI)
-      type: model
-      authors:
-        - affiliation: University of California, Los Angeles, CA, USA
-          name: Hongda Wang
-        - affiliation: University of California, Los Angeles, CA, USA
-          name: Yair Rivenson
-        - affiliation: University of California, Los Angeles, CA, USA
-          name: Aydogan Ozcan
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - gan
-        - fluorescence-microscopy
-        - super-resolution
-        - zenodo
-      description: >-
-        A trained GAN to transform diffraction-limited input images into
-        super-resolved ones.
-      stats:
-        downloads: 375
-        unique_downloads: 193
-        unique_views: 6
-        version_downloads: 375
-        version_unique_downloads: 193
-        version_unique_views: 6
-        version_views: 6
-        version_volume: 21959445
-        views: 6
-        volume: 21959445
-      license: CC-BY-4.0
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/README.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/exampleImage.png
-        - >-
-          https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/resultImage.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-      config:
-        _doi: 10.5072/zenodo.907596
-        _conceptdoi: 10.5072/zenodo.907595
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/8f6cbe5c-2836-45a8-a344-7ff7e03bd9ea/model.yaml
     - id: 10.5072/zenodo.907585
       name: Widefield Super-resolution (GAN - TxRed)
       type: model
@@ -322,16 +182,16 @@ attachments:
         A trained GAN to transform diffraction-limited input images into
         super-resolved ones.
       stats:
-        downloads: 471
-        unique_downloads: 294
+        downloads: 485
+        unique_downloads: 303
         unique_views: 2
-        version_downloads: 471
-        version_unique_downloads: 294
+        version_downloads: 485
+        version_unique_downloads: 303
         version_unique_views: 2
         version_views: 2
-        version_volume: 10062128
+        version_volume: 10345837
         views: 2
-        volume: 10062128
+        volume: 10345837
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/173fa444-886d-4bdd-9fe4-91e94f405ecf/README.md
@@ -497,54 +357,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.906802
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/bfac9db5-f773-4d1b-a0f8-754628b3f5b3/model.yaml
-    - id: 10.5072/zenodo.905080
-      name: Pancreatic Cell Phase Contrast Segmentation (DeepWater - CTC submission)
-      type: model
-      authors:
-        - affiliation: Centre for Biomedical Image Analysis, Masaryk University
-          name: Filip Lux
-        - affiliation: Centre for Biomedical Image Analysis, Masaryk University
-          name: Petr Matula
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepwater
-        - deepimagej
-        - segmentation
-        - watershed
-        - cell-tracking-challenge
-        - phase-contrast
-        - zenodo
-      description: >-
-        The method combines deep learning with watershed segmentation. For each
-        frame, the convolutional neural network of U-Net shape detects all cells
-        by markers and recognizes the foreground and the background of the
-        frame. Then, the final segmentation is generated by a Marker-Controlled
-        Watershed transformation.
-      stats:
-        downloads: 211
-        unique_downloads: 150
-        unique_views: 2
-        version_downloads: 461
-        version_unique_downloads: 376
-        version_unique_views: 4
-        version_views: 7
-        version_volume: 50427611
-        views: 3
-        volume: 34189089
-      license: MIT
-      documentation: http://public.celltrackingchallenge.net/participants/MU-Lux-CZ.pdf
-      covers:
-        - https://sandbox.zenodo.org/record/905081/files/cover.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/3fa83215-f885-4c05-8ae7-60b2e2225555/model.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-      config:
-        _doi: 10.5072/zenodo.906620
-        _conceptdoi: 10.5072/zenodo.905080
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/3fa83215-f885-4c05-8ae7-60b2e2225555/model.yaml
     - id: 10.5072/zenodo.894458
       name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
       type: model
