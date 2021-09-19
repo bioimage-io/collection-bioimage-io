@@ -83,16 +83,16 @@ attachments:
         A trained GAN to transform diffraction-limited input images into
         super-resolved ones.
       stats:
-        downloads: 397
-        unique_downloads: 174
+        downloads: 406
+        unique_downloads: 178
         unique_views: 3
-        version_downloads: 853
-        version_unique_downloads: 441
+        version_downloads: 862
+        version_unique_downloads: 445
         version_unique_views: 8
         version_views: 12
-        version_volume: 724814313
+        version_volume: 724947876
         views: 3
-        volume: 682849598
+        volume: 682983161
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/8b1d0c16-db10-4645-ae11-5c4296415a2e/README.md
@@ -328,16 +328,16 @@ attachments:
         A trained Deep-STORM model for image reconstruction from high-density
         single-molecule localization microscopy (SMLM).
       stats:
-        downloads: 866
-        unique_downloads: 481
+        downloads: 874
+        unique_downloads: 484
         unique_views: 3
-        version_downloads: 910
-        version_unique_downloads: 511
+        version_downloads: 918
+        version_unique_downloads: 514
         version_unique_views: 5
         version_views: 7
-        version_volume: 456569407
+        version_volume: 456842155
         views: 4
-        volume: 383001187
+        volume: 383273935
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/README.md
@@ -424,16 +424,16 @@ attachments:
         - zenodo
       description: CNN trained to classify the type of imaged skin lesion.
       stats:
-        downloads: 555
-        unique_downloads: 494
+        downloads: 559
+        unique_downloads: 497
         unique_views: 2
-        version_downloads: 555
-        version_unique_downloads: 494
+        version_downloads: 559
+        version_unique_downloads: 497
         version_unique_views: 2
         version_views: 2
-        version_volume: 155704785
+        version_volume: 155809941
         views: 2
-        volume: 155704785
+        volume: 155809941
       license: BSD-2-Clause
       documentation: >-
         https://sandbox.zenodo.org/api/files/5218d3ab-9b32-47ea-891e-0da59e849ad6/README.md
@@ -474,16 +474,16 @@ attachments:
         bright-field images of histologically stained versions of the same
         samples.
       stats:
-        downloads: 835
-        unique_downloads: 477
+        downloads: 843
+        unique_downloads: 480
         unique_views: 0
-        version_downloads: 835
-        version_unique_downloads: 477
+        version_downloads: 843
+        version_unique_downloads: 480
         version_unique_views: 0
         version_views: 0
-        version_volume: 79042276
+        version_volume: 79958296
         views: 0
-        volume: 79042276
+        volume: 79958296
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/0dcd8dec-ed38-4d10-a487-025597c207b6/README.md
@@ -526,16 +526,16 @@ attachments:
         bright-field images of histologically stained versions of the same
         samples.
       stats:
-        downloads: 834
-        unique_downloads: 478
+        downloads: 844
+        unique_downloads: 482
         unique_views: 0
-        version_downloads: 834
-        version_unique_downloads: 478
+        version_downloads: 844
+        version_unique_downloads: 482
         version_unique_views: 0
         version_views: 0
-        version_volume: 77797669
+        version_volume: 78704306
         views: 0
-        volume: 77797669
+        volume: 78704306
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/bfac9db5-f773-4d1b-a0f8-754628b3f5b3/README.md
@@ -782,16 +782,16 @@ attachments:
         - zenodo
       description: This is a test model
       stats:
-        downloads: 1585
-        unique_downloads: 1492
+        downloads: 1589
+        unique_downloads: 1495
         unique_views: 9
-        version_downloads: 3439
-        version_unique_downloads: 2735
+        version_downloads: 3443
+        version_unique_downloads: 2738
         version_unique_views: 20
         version_views: 25
-        version_volume: 47328419
+        version_volume: 47371315
         views: 9
-        volume: 19860385
+        volume: 19903281
       license: BSD-1-Clause
       documentation: https://github.com/LEB-EPFL/DEFCoN-ImageJ/wiki
       covers:
@@ -1050,16 +1050,16 @@ attachments:
         - zenodo
       description: Arabidopsis-ovules-BoundaryModel
       stats:
-        downloads: 1668
-        unique_downloads: 1329
+        downloads: 1670
+        unique_downloads: 1331
         unique_views: 5
-        version_downloads: 1779
-        version_unique_downloads: 1347
+        version_downloads: 1781
+        version_unique_downloads: 1349
         version_unique_views: 6
         version_views: 10
-        version_volume: 3827417301
+        version_volume: 3827470735
         views: 6
-        volume: 2996763582
+        volume: 2996817016
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/83af3b6d-77b9-4fec-b488-402ddae756c8/documentation.md
@@ -1357,16 +1357,16 @@ attachments:
         - zenodo
       description: ISBI2012-2D-BoundaryModel
       stats:
-        downloads: 1572
-        unique_downloads: 1317
+        downloads: 1574
+        unique_downloads: 1319
         unique_views: 4
-        version_downloads: 2124
-        version_unique_downloads: 1519
+        version_downloads: 2126
+        version_unique_downloads: 1521
         version_unique_views: 17
         version_views: 28
-        version_volume: 1384046372
+        version_volume: 1384178300
         views: 6
-        volume: 472164272
+        volume: 472296200
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/9567559e-501c-4106-be15-8e10fbbe2390/documentation.md
@@ -1777,16 +1777,16 @@ attachments:
         lateral root nuclei on original resolution. Voxel size:
         (0.25x0.1625x0.1625 µm^3) (ZYX).
       stats:
-        downloads: 2328
-        unique_downloads: 1094
+        downloads: 2330
+        unique_downloads: 1095
         unique_views: 2
-        version_downloads: 2328
-        version_unique_downloads: 1094
+        version_downloads: 2330
+        version_unique_downloads: 1095
         version_unique_views: 2
         version_views: 3
-        version_volume: 284936428
+        version_volume: 285239534
         views: 3
-        volume: 284936428
+        volume: 285239534
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/unet3d.md
@@ -1819,16 +1819,16 @@ attachments:
         - zenodo
       description: Uploaded via BioImage.IO website (https://bioimage.io)
       stats:
-        downloads: 1957
-        unique_downloads: 1465
+        downloads: 1958
+        unique_downloads: 1466
         unique_views: 6
-        version_downloads: 1957
-        version_unique_downloads: 1465
+        version_downloads: 1958
+        version_unique_downloads: 1466
         version_unique_views: 6
         version_views: 7
-        version_volume: 767244805
+        version_volume: 767744286
         views: 7
-        volume: 767244805
+        volume: 767744286
       license: BSD-3-Clause
       documentation: >-
         https://sandbox.zenodo.org/api/files/956c0bd6-5472-4052-a1ef-94ccf94cadc9/README.md
