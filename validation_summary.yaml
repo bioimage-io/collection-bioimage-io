@@ -115,3 +115,6 @@
 10.5072/zenodo.908833,3.9.7,0.3.3post0,None:
   errors: ['[Errno 2] No such file or directory: ''https:/sandbox.zenodo.org/api/files/8b1d0c16-db10-4645-ae11-5c4296415a2e/model.yaml''']
   source: https://sandbox.zenodo.org/api/files/8b1d0c16-db10-4645-ae11-5c4296415a2e/model.yaml
+10.5072/zenodo.921275,3.9.7,0.3.3post0,None:
+  errors: ['[Errno 2] No such file or directory: ''https:/sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/rdf.yaml''']
+  source: https://sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/rdf.yaml

@@ -11,6 +11,48 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.921275
+      name: HPA Bestfitting Densenet
+      type: model
+      authors:
+        - name: Shubin Dai
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - classification
+        - densenet-121
+        - hpa
+        - onnx
+        - cells
+        - protein-localization
+        - zenodo
+      description: The winning model of HPA image classification 2019 by Bestfitting
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 0
+        version_unique_downloads: 0
+        version_unique_views: 0
+        version_views: 0
+        version_volume: 0
+        views: 0
+        volume: 0
+      license: MIT
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/bestfitting-densenet-diagram.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/rdf.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+      config:
+        _doi: 10.5072/zenodo.921277
+        _conceptdoi: 10.5072/zenodo.921275
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/rdf.yaml
     - id: 10.5072/zenodo.907585
       name: Widefield Super-resolution (GAN - TxRed)
       type: model
