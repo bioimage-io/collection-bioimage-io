@@ -28,16 +28,16 @@ attachments:
         - zenodo
       description: The winning model of HPA image classification 2019 by Bestfitting
       stats:
-        downloads: 29
-        unique_downloads: 9
+        downloads: 35
+        unique_downloads: 14
         unique_views: 0
-        version_downloads: 34
-        version_unique_downloads: 9
+        version_downloads: 40
+        version_unique_downloads: 14
         version_unique_views: 1
         version_views: 1
-        version_volume: 71068234
+        version_volume: 71436856
         views: 0
-        volume: 71002965
+        volume: 71371587
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/5d346d01-76ce-4cda-98b3-93b5f2bf4cde/README.md
