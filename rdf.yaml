@@ -11,6 +11,59 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.927181
+      name: Flow chamber cell segmentation
+      type: model
+      authors:
+        - affiliation: >-
+            Turku Bioscience Centre, University of Turku and Abo Akademi
+            University
+          name: Guillaume Jacquemet
+        - affiliation: Universidad Carlos III de Madrid
+          name: Estibaliz Gómez de Mariscal
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - zerocostdl4mic
+        - segmentation
+        - flowchamber
+        - brightfield
+        - instance-segmentation
+        - stardist
+        - cells
+        - zenodo
+      description: >-
+        Trained StarDist model to segment of cancer cells in paired brightfield
+        images.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 50
+        version_unique_downloads: 38
+        version_unique_views: 2
+        version_views: 2
+        version_volume: 1376434
+        views: 0
+        volume: 0
+      license: MIT
+      documentation: null
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/e236cb69-aa12-4017-a356-12cec1b3c379/cover.jpg
+      source: >-
+        https://sandbox.zenodo.org/api/files/e236cb69-aa12-4017-a356-12cec1b3c379/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+        - deepimagej/deepimagej
+        - zero/notebook_stardist_2d_zerocostdl4mic_deepimagej
+        - zero/dataset_stardist_brightfield2_zerocostdl4mic
+      config:
+        _doi: 10.5072/zenodo.927913
+        _conceptdoi: 10.5072/zenodo.927181
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/e236cb69-aa12-4017-a356-12cec1b3c379/model.yaml
     - id: 10.5072/zenodo.927158
       name: T cell nuceli segmentation - brightfield
       type: model
@@ -61,56 +114,6 @@ attachments:
         _conceptdoi: 10.5072/zenodo.927158
         _rdf_file: >-
           https://sandbox.zenodo.org/api/files/16dce8f1-37e5-44fc-b1e8-da4c4c6a3dfc/model.yaml
-    - id: 10.5072/zenodo.927181
-      name: Flow chamber cell segmentation
-      type: model
-      authors:
-        - affiliation: >-
-            Turku Bioscience Centre, University of Turku and Ã…bo Akademi
-            University
-          name: Guillaume Jacquemet
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - deepimagej
-        - zerocostdl4mic
-        - segmentation
-        - flowchamber
-        - brightfield
-        - instance-segmentation
-        - stardist
-        - zenodo
-      description: >-
-        Trained StarDist model to segment of cancer cells in paired brightfield
-        images.
-      stats:
-        downloads: 30
-        unique_downloads: 25
-        unique_views: 0
-        version_downloads: 39
-        version_unique_downloads: 28
-        version_unique_views: 2
-        version_views: 2
-        version_volume: 1080675
-        views: 0
-        volume: 849382
-      license: MIT
-      documentation: null
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/2da41d1a-88cc-4ed6-be2c-31bf47e979a0/cover.jpg
-      source: >-
-        https://sandbox.zenodo.org/api/files/2da41d1a-88cc-4ed6-be2c-31bf47e979a0/model.yaml
-      links:
-        - deepimagej/deepimagej
-        - zero/notebook_stardist_2d_zerocostdl4mic_deepimagej
-        - zero/dataset_stardist_brightfield2_zerocostdl4mic
-        - imjoy/bioimageio-packager
-      config:
-        _doi: 10.5072/zenodo.927419
-        _conceptdoi: 10.5072/zenodo.927181
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/2da41d1a-88cc-4ed6-be2c-31bf47e979a0/model.yaml
     - id: 10.5072/zenodo.927364
       name: Nuclei (SiR-DNA) segmentation
       type: model
