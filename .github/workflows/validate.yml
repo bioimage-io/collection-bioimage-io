@@ -25,10 +25,12 @@ jobs:
       id: extract_branch
     - name: dist folder main branch
       if: ${{ steps.extract_branch.outputs.branch }} == main
+      run: echo "dist folder dist"
       env:
         dist: dist
     - name: dist folder any branch other than main
       if: ${{ steps.extract_branch.outputs.branch }} != main
+      run: echo "dist folder dist-${{ steps.extract_branch.outputs.branch }}"
       env:
         dist: dist-${{ steps.extract_branch.outputs.branch }}
     - name: Use Node.js ${{ matrix.node-version }}
@@ -65,5 +67,5 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages # The branch the action should deploy to.
+        branch: dist-${{ env.dist }} # The branch the action should deploy to.
         folder: ${{ env.dist }} # The folder the action should deploy.
