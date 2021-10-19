@@ -5,7 +5,6 @@ channels:
   - defaults
 dependencies:
   - black
-  - bioimageio.spec
   - conda-build
   - mypy
   - pytest
@@ -16,5 +15,14 @@ dependencies:
   - onnxruntime
   - tensorflow
   - pip
+  # bioimageio dependencies; to be removed when using conda packages:
+  - marshmallow < 4.0
+  - marshmallow-jsonschema
+  - marshmallow-union
+  - ruamel.yaml
+  - requests
+  - typer
+  - typing-extensions
   - pip:
+    - git+https://github.com/bioimage-io/spec-bioimage-io.git@better_exception_for_validate
     - git+https://github.com/bioimage-io/core-bioimage-io-python.git@add_test_resource
