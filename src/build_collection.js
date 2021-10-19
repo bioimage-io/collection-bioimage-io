@@ -7,7 +7,6 @@ import fs from "fs";
 
 import yaml from "js-yaml";
 
-dist = "./npm-dist"
 
 if (!globalThis.fetch) {
   globalThis.fetch = fetch;
@@ -28,7 +27,7 @@ const zenodoClient = new ZenodoClient(
 );
 
 async function main() {
-  if (!fs.existsSync(dist)) await mkdir(dist);
+  if (!fs.existsSync("./npm-dist")) await mkdir("./npm-dist");
   const templateStr = await readFile("./rdf.yaml");
   const template = yaml.load(templateStr);
   const items = await zenodoClient.getResourceItems({
@@ -42,9 +41,9 @@ async function main() {
   });
   console.log("All rdf items", items);
   template.attachments.zenodo = items;
-  await writeFile(dist + "/rdf.yaml", yaml.dump(template));
-  await writeFile(dist + "/rdf.json", JSON.stringify(template));
-  await copyFile("/README.md", dist + "/README.md");
+  await writeFile("./npm-dist/rdf.yaml", yaml.dump(template));
+  await writeFile("./npm-dist/rdf.json", JSON.stringify(template));
+  await copyFile("/README.md", "./npm-dist/README.md");
 }
 
 main();
