@@ -42,6 +42,12 @@ jobs:
     - name: copy generated files to branch sepcific dist folder
       shell: bash
       run: mkdir ${{ env.dist }}; cp npm-dist/* ${{ env.dist }}
+    - name: Deploy 🚀
+      if: ${{ steps.extract_branch.outputs.branch }} == main
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: npm-dist  # The folder the action should deploy.
 
   validate-ilastik:
     runs-on: ubuntu-latest
