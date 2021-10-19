@@ -1,0 +1,20 @@
+name: bio-ilastik
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - black
+  - bioimageio.spec
+  - conda-build
+  - mypy
+  - pytest
+  - python >=3.7
+  - xarray
+  - pytorch
+  - cpuonly
+  - onnxruntime
+  - tensorflow
+  - pip
+  - pip:
+    - git+https://github.com/bioimage-io/core-bioimage-io-python.git@add_test_resource

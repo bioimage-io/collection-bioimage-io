@@ -1,0 +1,69 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Validate BioImage.IO collection
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron:  '0 */2 * * *'
+jobs:
+  fetch-collection:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.17.3]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: dist folder main branch
+      if: ${{ steps.extract_branch.outputs.branch }} == main
+      env:
+        dist: dist
+    - name: dist folder any branch other than main
+      if: ${{ steps.extract_branch.outputs.branch }} != main
+      env:
+        dist: dist-${{ steps.extract_branch.outputs.branch }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    - name: copy generated files to branch sepcific dist folder
+      shell: bash
+      run: mkdir ${{ env.dist }}; cp npm-dist/* ${{ env.dist }}
+
+  validate-ilastik:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
+        weights-format: [onnx]
+
+    needs: fetch-collection
+    steps:
+    - uses: actions/checkout@v2
+    - name: install validation dependencies
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        channel-priority: strict
+        activate-environment: bio-spec
+        environment-file: dev/environment-ilastik.yaml
+        python-version: ${{ matrix.python-version }}
+    - name: validate for ${{ matrix.python-version }} ${{ matrix.weights-format }}
+      shell: bash -l {0}
+      run: python scripts/update_collection_validation.py ${{ env.dist }}/rdf.yaml ${{ env.dist }}/validation_summaries/ilastik/${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: ${{ env.dist }} # The folder the action should deploy.
