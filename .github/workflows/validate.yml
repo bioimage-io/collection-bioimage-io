@@ -76,6 +76,7 @@ jobs:
         path: dist
     - run: mv dist/npm-dist/* dist/
     - run: rm dist/npm-dist
+    - run: cp README.md dist/README.md
     - name: Get branch name to deploy to
       id: get_branch
       shell: bash

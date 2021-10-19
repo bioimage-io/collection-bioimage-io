@@ -43,7 +43,6 @@ async function main() {
   template.attachments.zenodo = items;
   await writeFile("./dist/rdf.yaml", yaml.dump(template));
   await writeFile("./dist/rdf.json", JSON.stringify(template));
-  await copyFile("/README.md", "./dist/README.md");
 }
 
 main();
