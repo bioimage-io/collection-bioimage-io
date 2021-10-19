@@ -56,10 +56,10 @@ jobs:
       with:
         name: npm-dist
         path: npm-dist
-    - name: validate for ${{ matrix.python-version }} ${{ matrix.weights-format }}
+    - name: validate for py${{ matrix.python-version }} ${{ matrix.weights-format }}
       shell: bash -l {0}
-      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
-    - name: "Upload Artifact"
+      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/py${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
+    - name: "Upload validation summary"
       uses: actions/upload-artifact@v2
       with:
         name: validate-ilastik
@@ -74,7 +74,7 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         path: dist
-    - run: mv dist/npm-dist/ dist/
+    - run: mv dist/npm-dist/* dist/
     - run: rm dist/npm-dist
     - name: Get branch name to deploy to
       id: get_branch
