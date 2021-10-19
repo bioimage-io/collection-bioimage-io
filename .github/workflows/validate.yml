@@ -58,7 +58,7 @@ jobs:
         path: npm-dist
     - name: validate for ${{ matrix.python-version }} ${{ matrix.weights-format }}
       shell: bash -l {0}
-      run: python scripts/generate_collection_test_summary.py npm-dist/collection.yaml dist/${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
+      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v2
       with:
