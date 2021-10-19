@@ -64,7 +64,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: validate for ${{ matrix.python-version }} ${{ matrix.weights-format }}
       shell: bash -l {0}
-      run: python scripts/update_collection_validation.py ${{ env.dist }}/rdf.yaml ${{ env.dist }}/validation_summaries/ilastik/${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml
+      run: python scripts/generate_collection_test_summary.py ${{ env.dist }}/rdf.yaml ${{ env.dist }}/validation_summaries/ilastik/${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml
 
   deploy-validation-summaries:
     runs-on: ubuntu-latest
