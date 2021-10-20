@@ -16,5 +16,6 @@ dependencies:
   - ruamel.yaml
   - numpy
   - xarray
+  - tqdm
   - pip:
       - git+https://github.com/bioimage-io/core-bioimage-io-python.git
