@@ -4,7 +4,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - bioimageio.core >=0.4.3; <0.5
+  - bioimageio.core >=0.4.3,<0.5
   - cpuonly
   - onnxruntime
   - python >=3.7
