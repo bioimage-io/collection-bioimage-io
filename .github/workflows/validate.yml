@@ -34,44 +34,44 @@ jobs:
         path: dist
         retention-days: 1
 
-#  validate-ilastik:
-#    runs-on: ubuntu-latest
-#    strategy:
-#      matrix:
-#        python-version: [3.8, 3.9]
-#        weights-format: [pytorch_state_dict, pytorch_script, tensorflow_saved_model_bundle, onnx]
-#
-#    needs: build-collection
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: install validation dependencies
-#      uses: conda-incubator/setup-miniconda@v2
-#      with:
-#        auto-update-conda: true
-#        mamba-version: "*"
-#        channel-priority: strict
-#        activate-environment: bio-spec
-#        environment-file: dev/environment-ilastik.yaml
-#        python-version: ${{ matrix.python-version }}
-#    - name: Download npm output (collection)
-#      uses: actions/download-artifact@v2
-#      with:
-#        name: npm-dist
-#        path: npm-dist
-#    - name: validate for py${{ matrix.python-version }} ${{ matrix.weights-format }}
-#      shell: bash -l {0}
-#      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/py${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
-#    - name: "Upload validation summary"
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: validate-ilastik
-#        path: dist
-#        retention-days: 1
+  validate-bio-core-mix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+        weights-format: [pytorch_state_dict, pytorch_script, tensorflow_saved_model_bundle, onnx]
+
+    needs: build-collection
+    steps:
+    - uses: actions/checkout@v2
+    - name: install validation dependencies
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        mamba-version: "*"
+        channel-priority: strict
+        activate-environment: bio-spec
+        environment-file: dev/environment-mix.yaml
+        python-version: ${{ matrix.python-version }}
+    - name: Download npm output (collection)
+      uses: actions/download-artifact@v2
+      with:
+        name: npm-dist
+        path: npm-dist
+    - name: validate for py${{ matrix.python-version }} ${{ matrix.weights-format }}
+      shell: bash -l {0}
+      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/py${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
+    - name: "Upload validation summary"
+      uses: actions/upload-artifact@v2
+      with:
+        name: validate-bio-core-mix
+        path: dist
+        retention-days: 1
 
   deploy:
     runs-on: ubuntu-latest
 
-    needs: [build-collection]
+    needs: [build-collection, validate-bio-core-mix]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v2

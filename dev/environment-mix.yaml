@@ -1,0 +1,20 @@
+name: bio-core-mix
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+#  - bioimageio.core >=0.4.3; <0.5
+  - cpuonly
+  - onnxruntime
+  - python >=3.7
+  - pytorch
+  - tensorflow
+  # tmp
+  - bioimageio.spec
+  - pip
+  - ruamel.yaml
+  - numpy
+  - xarray
+  - pip:
+      - git+https://github.com/bioimage-io/core-bioimage-io-python.git
