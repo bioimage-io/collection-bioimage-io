@@ -2,7 +2,7 @@ import sys
 from argparse import ArgumentParser
 from pathlib import Path
 
-from bioimageio.core.prediction import test_resource
+from bioimageio.core.resource_tests import test_resource
 from bioimageio.spec import validate
 from bioimageio.spec.model.raw_nodes import WeightsFormat
 from bioimageio.spec.shared import yaml
