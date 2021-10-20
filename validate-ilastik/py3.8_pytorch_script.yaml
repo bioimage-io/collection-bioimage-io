@@ -1,0 +1,746 @@
+10.5072/zenodo.849032:
+  error:
+    authors:
+      0:
+        name: [Not a valid string.]
+    id: [Unknown field.]
+    rdf_file: [Unknown field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.849110:
+  error: 'weight format pytorch_script not among weight formats listed in model: [''tensorflow_saved_model_bundle'',
+    ''keras_hdf5'']'
+  name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 56, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+      line 142, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+      line 61, in create_model_adapter\n    raise RuntimeError(\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.856197:
+  error:
+    rdf_file: [Unknown field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.872852:
+  error: 'weight format pytorch_script not among weight formats listed in model: [''pytorch_state_dict'']'
+  name: 3D UNet Arabidopsis Ovules
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 56, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+      line 142, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+      line 61, in create_model_adapter\n    raise RuntimeError(\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872854:
+  error: 'Failed to download https://sandbox.zenodo.org/api/files/7c3fb1b0-74aa-4b98-97c4-6cf6167c20bc/environment.yaml
+    (HTTP Error 404: NOT FOUND)'
+  name: 3D UNet Lateral Root Primordia Cell Boundaries
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+      line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+      nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/functools.py\", line
+      875, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 150, in _resolve_uri_uri_node\n    local_path = _download_uri_to_local_path(path_or_remote_uri)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 280, in _download_uri_to_local_path\n    raise RuntimeError(f\"Failed to
+      download {uri} ({e})\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872860:
+  error: 'Failed to download https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/environment.yaml
+    (HTTP Error 404: NOT FOUND)'
+  name: 3D UNet Lateral Root Primordia Nuclei
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+      line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+      nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/functools.py\", line
+      875, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 150, in _resolve_uri_uri_node\n    local_path = _download_uri_to_local_path(path_or_remote_uri)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 280, in _download_uri_to_local_path\n    raise RuntimeError(f\"Failed to
+      download {uri} ({e})\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872914:
+  error: 'weight format pytorch_script not among weight formats listed in model: [''pytorch_state_dict'']'
+  name: CREMI-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 56, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+      line 142, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+      line 61, in create_model_adapter\n    raise RuntimeError(\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872916:
+  error: 'Failed to download https://sandbox.zenodo.org/api/files/c28391fb-4935-4a76-951f-f6910dae8fbd/environment.yaml
+    (HTTP Error 404: NOT FOUND)'
+  name: DSB-Nuclei-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+      line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+      nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/functools.py\", line
+      875, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 150, in _resolve_uri_uri_node\n    local_path = _download_uri_to_local_path(path_or_remote_uri)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 280, in _download_uri_to_local_path\n    raise RuntimeError(f\"Failed to
+      download {uri} ({e})\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872918:
+  error: 'Failed to download https://sandbox.zenodo.org/api/files/fc05a6ea-3aea-47fb-9760-f177d7c4a7d1/environment.yaml
+    (HTTP Error 404: NOT FOUND)'
+  name: Platyereis-cells-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+      line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+      nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/functools.py\", line
+      875, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 150, in _resolve_uri_uri_node\n    local_path = _download_uri_to_local_path(path_or_remote_uri)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 280, in _download_uri_to_local_path\n    raise RuntimeError(f\"Failed to
+      download {uri} ({e})\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872924:
+  error: 'Failed to download https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/environment.yaml
+    (HTTP Error 404: NOT FOUND)'
+  name: Platyereis-nuclei-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+      line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+      nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in generic_transformer\n    return dataclasses.replace(node, **{name:
+      self.transform(value) for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+      for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\",
+      line 48, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/functools.py\", line
+      875, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 150, in _resolve_uri_uri_node\n    local_path = _download_uri_to_local_path(path_or_remote_uri)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+      line 280, in _download_uri_to_local_path\n    raise RuntimeError(f\"Failed to
+      download {uri} ({e})\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.872944:
+  error: 'weight format pytorch_script not among weight formats listed in model: [''pytorch_state_dict'']'
+  name: 2D UNet Arabidopsis Ovules
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 56, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+      line 142, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+      line 61, in create_model_adapter\n    raise RuntimeError(\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.880273:
+  error: null
+  name: ISBI2012-2D-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.880412:
+  error: null
+  name: EM-Mitochondria-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.880528:
+  error:
+    inputs:
+      0:
+        data_range: [Not a valid tuple.]
+        preprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+    language: ['Must be one of: python, java.']
+    outputs:
+      0:
+        data_range: [Not a valid tuple.]
+    packaged_by:
+      0:
+        _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+    weights:
+      keras_hdf5:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_saved_model_bundle.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+      tensorflow_saved_model_bundle:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to keras_hdf5.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.881018:
+  error: Invalid RDF type dataset
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+      update_to_current_format=update_format)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 203, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+      data_version)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 173, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+      line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid
+      RDF type {type_}\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881020:
+  error: 'expected loaded resource to be a dictionary, but got type <class ''str''>:
+    https://sandbox.zenodo.org/api/files/b129783b-c251-4995-a71b-2ee0cc4ada49/mito_em.yaml'
+  name: https://sandbox.zenodo.org/api/files/b129783b-c251-4995-a71b-2ee0cc4ada49/mito_em.yaml
+  nested_errors: {}
+  source_name: https://sandbox.zenodo.org/api/files/b129783b-c251-4995-a71b-2ee0cc4ada49/mito_em.yaml
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 102, in resolve_rdf_source\n    source, resp = urlretrieve(source)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 247, in urlretrieve\n    with contextlib.closing(urlopen(url, data)) as
+      fp:\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 222, in urlopen\n    return opener.open(url, data, timeout)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line
+      531, in open\n    response = meth(req, response)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 640, in http_response\n    response = self.parent.error(\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 569, in error\n    return self._call_chain(*args)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 502, in _call_chain\n    result = func(*args)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 649, in http_error_default\n    raise HTTPError(req.full_url, code, msg,
+      hdrs, fp)\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881842:
+  error: Invalid RDF type dataset
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+      update_to_current_format=update_format)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 203, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+      data_version)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 173, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+      line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid
+      RDF type {type_}\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881848:
+  error:
+    id: [Unknown field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.881892:
+  error: Invalid RDF type dataset
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+      update_to_current_format=update_format)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 203, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+      data_version)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 173, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+      line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid
+      RDF type {type_}\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881898:
+  error: Invalid RDF type dataset
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+      update_to_current_format=update_format)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 203, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+      data_version)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 173, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+      line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid
+      RDF type {type_}\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881914:
+  error: Invalid RDF type dataset
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+      update_to_current_format=update_format)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 203, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+      data_version)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 173, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+      line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid
+      RDF type {type_}\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881916:
+  error: Invalid RDF type dataset
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+      update_to_current_format=update_format)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 203, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+      data_version)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 173, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+      line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid
+      RDF type {type_}\")\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.881940:
+  error: null
+  name: DSB-Nuclei-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.881942:
+  error:
+    id: [Unknown field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.881944:
+  error: null
+  name: Platyereis-nuclei-BoundaryModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.881973:
+  error:
+    id: [Unknown field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.886788:
+  error: null
+  name: ISBI2012-2D-AffinityModel
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.894458:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.904904:
+  error:
+    inputs:
+      0:
+        data_range: [Not a valid tuple.]
+        preprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+    language: ['Must be one of: python, java.']
+    outputs:
+      0:
+        data_range: [Not a valid tuple.]
+        postprocessing:
+          0:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+          1:
+            name: [Missing data for required field.]
+            scale_range: [Unknown field.]
+          2:
+            binarize: [Unknown field.]
+            name: [Missing data for required field.]
+    packaged_by:
+      0:
+        _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+    weights:
+      keras_hdf5:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_saved_model_bundle.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+      tensorflow_saved_model_bundle:
+        value:
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_state_dict.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to pytorch_script.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to keras_hdf5.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to tensorflow_js.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+        - authors:
+            0:
+              _schema: [Invalid input type.]
+          weights_format: [Must be equal to onnx.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.905080:
+  error:
+    run_mode:
+      _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.905991:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.906784:
+  error:
+    run_mode:
+      _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.906802:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.906804:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.906806:
+  error:
+    cite: [Missing data for required field.]
+    run_mode:
+      _schema: [Invalid input type.]
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.906808:
+  error:
+    run_mode:
+      _schema: [Invalid input type.]
+    test_inputs: [Missing data for required field.]
+    test_outputs: [Missing data for required field.]
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.907585:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.907595:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.908833:
+  error:
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.921275:
+  error: 'expected loaded resource to be a dictionary, but got type <class ''str''>:
+    https://sandbox.zenodo.org/api/files/adbe7f27-328f-4705-a112-6648fcba0743/rdf%20(36).yaml'
+  name: https://sandbox.zenodo.org/api/files/adbe7f27-328f-4705-a112-6648fcba0743/rdf%20(36).yaml
+  nested_errors: {}
+  source_name: https://sandbox.zenodo.org/api/files/adbe7f27-328f-4705-a112-6648fcba0743/rdf%20(36).yaml
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 102, in resolve_rdf_source\n    source, resp = urlretrieve(source)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 247, in urlretrieve\n    with contextlib.closing(urlopen(url, data)) as
+      fp:\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 222, in urlopen\n    return opener.open(url, data, timeout)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line
+      531, in open\n    response = meth(req, response)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 640, in http_response\n    response = self.parent.error(\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 569, in error\n    return self._call_chain(*args)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 502, in _call_chain\n    result = func(*args)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
+      line 649, in http_error_default\n    raise HTTPError(req.full_url, code, msg,
+      hdrs, fp)\n"]
+  weights_format: pytorch_script
+10.5072/zenodo.927158:
+  error:
+    documentation: [Missing data for required field.]
+    inputs:
+      0:
+        preprocessing: [Field may not be null.]
+    license: [Field may not be null.]
+    outputs:
+      0:
+        postprocessing: [Field may not be null.]
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.927181:
+  error:
+    documentation: [Missing data for required field.]
+    inputs:
+      0:
+        preprocessing: [Field may not be null.]
+    outputs:
+      0:
+        postprocessing: [Field may not be null.]
+    type: [Missing data for required field.]
+  name: https://sandbox.zeno...
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: null
+  weights_format: pytorch_script
+10.5072/zenodo.927364:
+  error: 'expected loaded resource to be a dictionary, but got type <class ''str''>:
+    https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml'
+  name: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml
+  nested_errors: {}
+  source_name: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+      line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+      line 132, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+      line 431, in load\n    return self.load(fp)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+      line 434, in load\n    return constructor.get_single_data()\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\",
+      line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+    '  File "_ruamel_yaml.pyx", line 701, in _ruamel_yaml.CParser.get_single_node
+
+      ', '  File "_ruamel_yaml.pyx", line 904, in _ruamel_yaml.CParser._parse_next_event
+
+      ']
+  weights_format: pytorch_script
+10.5072/zenodo.938150:
+  error: 'weight format pytorch_script not among weight formats listed in model: [''tensorflow_saved_model_bundle'',
+    ''keras_hdf5'']'
+  name: 3D UNet and binarization - ZeroCostDL4Mic
+  nested_errors: {}
+  source_name: https://sandbox.zeno...
+  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+      line 56, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+      line 142, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+      line 61, in create_model_adapter\n    raise RuntimeError(\n"]
+  weights_format: pytorch_script
