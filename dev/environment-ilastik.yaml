@@ -25,4 +25,4 @@ dependencies:
   - typing-extensions
   - pip:
     - git+https://github.com/bioimage-io/spec-bioimage-io.git
-    - git+https://github.com/bioimage-io/core-bioimage-io-python.git@add_test_resource
+    - git+https://github.com/bioimage-io/core-bioimage-io-python.git
