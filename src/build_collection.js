@@ -7,6 +7,7 @@ import fs from "fs";
 
 import yaml from "js-yaml";
 
+
 if (!globalThis.fetch) {
   globalThis.fetch = fetch;
 }
@@ -42,7 +43,6 @@ async function main() {
   template.attachments.zenodo = items;
   await writeFile("./dist/rdf.yaml", yaml.dump(template));
   await writeFile("./dist/rdf.json", JSON.stringify(template));
-  await copyFile("./README.md", "./dist/README.md");
 }
 
 main();

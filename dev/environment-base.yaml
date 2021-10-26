@@ -1,6 +1,5 @@
-name: bio-core-dev
+name: bio-spec
 channels:
-  - pytorch
   - conda-forge
   - defaults
 dependencies:

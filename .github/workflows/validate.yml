@@ -1,0 +1,93 @@
+# This workflow will gather the BioImage.IO resource collection from zenodo using node, then validate the collected
+# resources and publish the validation summaries on the gh-pages branch
+
+name: Validate BioImage.IO collection
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron:  '0 */2 * * *'
+
+
+jobs:
+  build-collection:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.17.3]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    - name: "Upload npm output"
+      uses: actions/upload-artifact@v2
+      with:
+        name: npm-dist
+        path: dist
+        retention-days: 1
+
+  validate-bio-core-mix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+        weights-format: [pytorch_state_dict, pytorch_script, tensorflow_saved_model_bundle, onnx]
+
+    needs: build-collection
+    steps:
+    - uses: actions/checkout@v2
+    - name: install validation dependencies
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        mamba-version: "*"
+        channel-priority: strict
+        activate-environment: bio-spec
+        environment-file: dev/environment-mix.yaml
+        python-version: ${{ matrix.python-version }}
+    - name: Download npm output (collection)
+      uses: actions/download-artifact@v2
+      with:
+        name: npm-dist
+        path: npm-dist
+    - name: validate for py${{ matrix.python-version }} ${{ matrix.weights-format }}
+      shell: bash -l {0}
+      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/py${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
+    - name: "Upload validation summary"
+      uses: actions/upload-artifact@v2
+      with:
+        name: validate-bio-core-mix
+        path: dist
+        retention-days: 1
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: [build-collection, validate-bio-core-mix]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+      with:
+        path: dist
+    - run: mv dist/npm-dist/* dist/
+    - run: rm -r dist/npm-dist
+    - run: cp ./README.md ./dist/README.md
+    - name: Get branch name to deploy to
+      id: get_branch
+      shell: bash
+      run: |
+        if [[ ${{ github.event_name }} -eq pull_request ]]; then branch=gh-pages-${{ github.event.pull_request.head.ref }}; else branch=gh-pages; fi
+        echo "::set-output name=branch::$branch"
+    - name: Deploy to ${{ steps.get_branch.outputs.branch }} 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: ${{ steps.get_branch.outputs.branch }}  # The branch the action should deploy to.
+        folder: dist  # The folder the action should deploy.
