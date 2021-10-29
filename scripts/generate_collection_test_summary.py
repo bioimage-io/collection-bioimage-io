@@ -1,3 +1,4 @@
+import platform
 import sys
 from argparse import ArgumentParser
 from pathlib import Path
@@ -38,12 +39,15 @@ def main(collection_path: Path, output_summary_path: Path, weights_format: Weigh
     summary = {}
     for id_, source in get_zenodo_community_rersources(collection_path).items():
         s = validate(source)
-        assert "weights_format" not in s
-        s["weights_format"] = weights_format
-        if s["error"] is None:
+        assert set(s.keys()) == {"name", "source_name", "error", "traceback", "nested_errors"}, s.keys()
+        # prefix static validation summary keys with 'static_'
+        s = {k if k in ("name", "source_name") else "static_" + k: v for k, v in s.items()}
+
+        s["dynamic_tests"] = {}
+        if s["static_error"] is None:
             # dynamic test
             dyn_summary = test_resource(source, weight_format=weights_format)
-            s.update(dyn_summary)
+            s["dynamic_tests"][f"py{platform.python_version()}_{weights_format}"] = dyn_summary
 
         summary[id_] = s
 
