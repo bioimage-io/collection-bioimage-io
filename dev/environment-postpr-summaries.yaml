@@ -1,0 +1,6 @@
+name: postpr
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ruamel.yaml

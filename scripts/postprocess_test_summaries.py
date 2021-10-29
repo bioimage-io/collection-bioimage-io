@@ -4,7 +4,9 @@ import warnings
 from argparse import ArgumentParser
 from pathlib import Path
 
-from bioimageio.spec.shared import yaml
+from ruamel.yaml import YAML
+
+yaml = YAML(typ="safe")
 
 try:
     from typing import get_args
