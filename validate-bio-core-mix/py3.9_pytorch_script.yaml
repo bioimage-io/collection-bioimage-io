@@ -78,7 +78,7 @@
   weights_format: pytorch_script
 10.5072/zenodo.872860:
   error: 'Failed to download https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/environment.yaml
-    (HTTP Error 429: TOO MANY REQUESTS)'
+    (HTTP Error 404: NOT FOUND)'
   name: 3D UNet Lateral Root Primordia Nuclei
   nested_errors: {}
   source_name: https://sandbox.zeno...
