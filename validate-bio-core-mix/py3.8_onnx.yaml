@@ -24,26 +24,12 @@
       line 61, in create_model_adapter\n    raise RuntimeError(\n"]
   weights_format: onnx
 10.5072/zenodo.856197:
-  error: 'expected loaded resource to be a dictionary, but got type <class ''str''>:
-    https://sandbox.zenodo.org/api/files/956c0bd6-5472-4052-a1ef-94ccf94cadc9/model.yaml'
-  name: https://sandbox.zenodo.org/api/files/956c0bd6-5472-4052-a1ef-94ccf94cadc9/model.yaml
+  error:
+    rdf_file: [Unknown field.]
+  name: https://sandbox.zeno...
   nested_errors: {}
-  source_name: https://sandbox.zenodo.org/api/files/956c0bd6-5472-4052-a1ef-94ccf94cadc9/model.yaml
-  traceback: ["  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
-      line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
-    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
-      line 113, in resolve_rdf_source\n    source, resp = urlretrieve(source)\n",
-    "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
-      line 247, in urlretrieve\n    with contextlib.closing(urlopen(url, data)) as
-      fp:\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
-      line 222, in urlopen\n    return opener.open(url, data, timeout)\n", "  File
-      \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line
-      531, in open\n    response = meth(req, response)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
-      line 640, in http_response\n    response = self.parent.error(\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
-      line 569, in error\n    return self._call_chain(*args)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
-      line 502, in _call_chain\n    result = func(*args)\n", "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\",
-      line 649, in http_error_default\n    raise HTTPError(req.full_url, code, msg,
-      hdrs, fp)\n"]
+  source_name: https://sandbox.zeno...
+  traceback: null
   weights_format: onnx
 10.5072/zenodo.872852:
   error: 'weight format onnx not among weight formats listed in model: [''pytorch_state_dict'']'
