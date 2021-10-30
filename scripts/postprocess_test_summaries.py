@@ -77,7 +77,7 @@ def main(summaries_dir: Path, output_dir: Path) -> int:
                     if test_name in final_summary[env_name]["dynamic_tests"]:
                         warnings.warn(f"Overwriting dynamic test {test_name} for doi {doi} in test env {env_name}")
 
-                    final_summary[env_name]["dynamic_tests"].update()
+                    final_summary[env_name]["dynamic_tests"][test_name] = report
 
         out_path = output_dir / f"{doi}.json"
         out_path.parent.mkdir(parents=True, exist_ok=True)  # doi has slashes that create subdirs
