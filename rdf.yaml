@@ -664,16 +664,16 @@ attachments:
         A trained Deep-STORM model for image reconstruction from high-density
         single-molecule localization microscopy (SMLM).
       stats:
-        downloads: 5837
-        unique_downloads: 3132
+        downloads: 5967
+        unique_downloads: 3243
         unique_views: 11
-        version_downloads: 5881
-        version_unique_downloads: 3162
+        version_downloads: 6011
+        version_unique_downloads: 3273
         version_unique_views: 13
         version_views: 15
-        version_volume: 1023415059
+        version_volume: 1024867181
         views: 12
-        volume: 949846839
+        volume: 951298961
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/README.md
@@ -760,16 +760,16 @@ attachments:
         - zenodo
       description: CNN trained to classify the type of imaged skin lesion.
       stats:
-        downloads: 3341
-        unique_downloads: 3032
+        downloads: 3452
+        unique_downloads: 3142
         unique_views: 4
-        version_downloads: 3341
-        version_unique_downloads: 3032
+        version_downloads: 3452
+        version_unique_downloads: 3142
         version_unique_views: 4
         version_views: 4
-        version_volume: 583155833
+        version_volume: 583742072
         views: 4
-        volume: 583155833
+        volume: 583742072
       license: BSD-2-Clause
       documentation: >-
         https://sandbox.zenodo.org/api/files/5218d3ab-9b32-47ea-891e-0da59e849ad6/README.md
@@ -810,16 +810,16 @@ attachments:
         bright-field images of histologically stained versions of the same
         samples.
       stats:
-        downloads: 4908
-        unique_downloads: 2670
+        downloads: 5012
+        unique_downloads: 2771
         unique_views: 1
-        version_downloads: 4908
-        version_unique_downloads: 2670
+        version_downloads: 5012
+        version_unique_downloads: 2771
         version_unique_views: 1
         version_views: 1
-        version_volume: 1341029094
+        version_volume: 1342323023
         views: 1
-        volume: 1341029094
+        volume: 1342323023
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/0dcd8dec-ed38-4d10-a487-025597c207b6/README.md
@@ -862,16 +862,16 @@ attachments:
         bright-field images of histologically stained versions of the same
         samples.
       stats:
-        downloads: 4459
-        unique_downloads: 2400
+        downloads: 4561
+        unique_downloads: 2500
         unique_views: 6
-        version_downloads: 4459
-        version_unique_downloads: 2400
+        version_downloads: 4561
+        version_unique_downloads: 2500
         version_unique_views: 6
         version_views: 6
-        version_volume: 2206881314
+        version_volume: 2207918686
         views: 6
-        volume: 2206881314
+        volume: 2207918686
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/bfac9db5-f773-4d1b-a0f8-754628b3f5b3/README.md
@@ -1118,16 +1118,16 @@ attachments:
         - zenodo
       description: This is a test model
       stats:
-        downloads: 2973
-        unique_downloads: 2798
+        downloads: 3073
+        unique_downloads: 2898
         unique_views: 10
-        version_downloads: 4828
-        version_unique_downloads: 4042
+        version_downloads: 4928
+        version_unique_downloads: 4142
         version_unique_views: 22
         version_views: 27
-        version_volume: 66643129
+        version_volume: 67659945
         views: 10
-        volume: 39175064
+        volume: 40191880
       license: BSD-1-Clause
       documentation: https://github.com/LEB-EPFL/DEFCoN-ImageJ/wiki
       covers:
