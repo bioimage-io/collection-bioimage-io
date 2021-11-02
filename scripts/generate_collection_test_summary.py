@@ -35,21 +35,39 @@ def get_zenodo_community_rersources(collection_path: Path):
 
 
 def main(collection_path: Path, output_summary_path: Path, weights_format: WeightsFormat) -> int:
+    test_name = f"py{platform.python_version()}_{weights_format}"
+    NAME = "name"
+    ERROR = "error"
+    SUCCESS = "success"
+    NESTED_ERRORS = "nested_errors"
+    TRACEBACK = "traceback"
     output_summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary = {}
     for id_, source in get_zenodo_community_rersources(collection_path).items():
         s = validate(source)
-        assert set(s.keys()) == {"name", "source_name", "error", "traceback", "nested_errors"}, s.keys()
-        # prefix static validation summary keys with 'static_'
-        s = {k if k in ("name", "source_name") else "static_" + k: v for k, v in s.items()}
+        static_error = s.pop(ERROR, None)
+        static_nested_errors = s.pop(NESTED_ERRORS, None)
+        static_check = {NAME: "static resource format validation", SUCCESS: not (static_error or static_nested_errors)}
+        if not static_check[SUCCESS]:
+            static_check[ERROR] = static_error
+            static_check[TRACEBACK] = s.pop(TRACEBACK, None)
+            static_check[NESTED_ERRORS] = static_nested_errors
 
-        s["dynamic_tests"] = {}
-        if s["static_error"] is None:
+        dynamic_check = {NAME: "reproduced test outputs"}
+        if s[ERROR] is None:
             # dynamic test
             dyn_summary = test_resource(source, weight_format=weights_format)
-            s["dynamic_tests"][f"py{platform.python_version()}_{weights_format}"] = dyn_summary
+            dyn_error = dyn_summary.get(ERROR, None)
+            dynamic_check[SUCCESS] = dyn_error is None
+            if not dynamic_check[SUCCESS]:
+                dynamic_check[ERROR] = dyn_error
+                dynamic_check[TRACEBACK] = dyn_summary.get(TRACEBACK, None)
+        else:
+            dynamic_check[SUCCESS] = False
+            dynamic_check[ERROR] = "skipped due to invalid resource format"
+            dynamic_check[TRACEBACK] = None
 
-        summary[id_] = s
+        summary[id_] = {test_name: [static_check, dynamic_check]}
 
     yaml.dump(summary, output_summary_path)
     return 0
