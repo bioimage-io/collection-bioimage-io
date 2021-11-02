@@ -1,0 +1,188 @@
+{
+  "bio-core-mix": {
+    "py3.8.12_onnx": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_pytorch_script": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_pytorch_state_dict": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_tensorflow_saved_model_bundle": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_onnx": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_pytorch_script": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_pytorch_state_dict": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_tensorflow_saved_model_bundle": [
+      {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/f1fff282-e246-4402-a3a1-052a2c411ab2/model.yaml",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
+          "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ]
+  }
+}

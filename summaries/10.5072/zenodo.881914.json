@@ -1,0 +1,164 @@
+{
+  "bio-core-mix": {
+    "py3.8.12_onnx": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_pytorch_script": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_pytorch_state_dict": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_tensorflow_saved_model_bundle": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_onnx": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_pytorch_script": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_pytorch_state_dict": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_tensorflow_saved_model_bundle": [
+      {
+        "error": "Invalid RDF type dataset",
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/commands.py\", line 56, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_current_format=update_format)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 217, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_, data_version)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 187, in _get_spec_submodule\n    sub_spec = get_latest_format_version_module(type_)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/common.py\", line 54, in get_latest_format_version_module\n    raise ValueError(f\"Invalid RDF type {type_}\")\n"
+        ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ]
+  }
+}

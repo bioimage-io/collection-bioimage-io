@@ -1,0 +1,244 @@
+{
+  "bio-core-mix": {
+    "py3.8.12_onnx": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_pytorch_script": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_pytorch_state_dict": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.8.12_tensorflow_saved_model_bundle": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_onnx": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_pytorch_script": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_pytorch_state_dict": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ],
+    "py3.9.7_tensorflow_saved_model_bundle": [
+      {
+        "error": {
+          "run_mode": {
+            "_schema": [
+              "Invalid input type."
+            ]
+          },
+          "test_inputs": [
+            "Missing data for required field."
+          ],
+          "test_outputs": [
+            "Missing data for required field."
+          ],
+          "type": [
+            "Missing data for required field."
+          ]
+        },
+        "name": "static resource format validation",
+        "nested_errors": {},
+        "success": false,
+        "traceback": null
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
+      }
+    ]
+  }
+}
