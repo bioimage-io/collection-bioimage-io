@@ -1,3 +1,4 @@
+import platform
 import sys
 from argparse import ArgumentParser
 from pathlib import Path
@@ -34,18 +35,39 @@ def get_zenodo_community_rersources(collection_path: Path):
 
 
 def main(collection_path: Path, output_summary_path: Path, weights_format: WeightsFormat) -> int:
+    test_name = f"py{platform.python_version()}_{weights_format}"
+    NAME = "name"
+    ERROR = "error"
+    SUCCESS = "success"
+    NESTED_ERRORS = "nested_errors"
+    TRACEBACK = "traceback"
     output_summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary = {}
     for id_, source in get_zenodo_community_rersources(collection_path).items():
         s = validate(source)
-        assert "weights_format" not in s
-        s["weights_format"] = weights_format
-        if s["error"] is None:
+        static_error = s.get(ERROR, None)
+        static_nested_errors = s.get(NESTED_ERRORS, None)
+        static_check = {NAME: "static resource format validation", SUCCESS: not (static_error or static_nested_errors)}
+        if not static_check[SUCCESS]:
+            static_check[ERROR] = static_error
+            static_check[TRACEBACK] = s.get(TRACEBACK, None)
+            static_check[NESTED_ERRORS] = static_nested_errors
+
+        dynamic_check = {NAME: "reproduced test outputs"}
+        if static_error is None:
             # dynamic test
             dyn_summary = test_resource(source, weight_format=weights_format)
-            s.update(dyn_summary)
+            dyn_error = dyn_summary.get(ERROR, None)
+            dynamic_check[SUCCESS] = dyn_error is None
+            if not dynamic_check[SUCCESS]:
+                dynamic_check[ERROR] = dyn_error
+                dynamic_check[TRACEBACK] = dyn_summary.get(TRACEBACK, None)
+        else:
+            dynamic_check[SUCCESS] = False
+            dynamic_check[ERROR] = "skipped due to invalid resource format"
+            dynamic_check[TRACEBACK] = None
 
-        summary[id_] = s
+        summary[id_] = {test_name: [static_check, dynamic_check]}
 
     yaml.dump(summary, output_summary_path)
     return 0
