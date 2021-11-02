@@ -45,16 +45,16 @@ def main(collection_path: Path, output_summary_path: Path, weights_format: Weigh
     summary = {}
     for id_, source in get_zenodo_community_rersources(collection_path).items():
         s = validate(source)
-        static_error = s.pop(ERROR, None)
-        static_nested_errors = s.pop(NESTED_ERRORS, None)
+        static_error = s.get(ERROR, None)
+        static_nested_errors = s.get(NESTED_ERRORS, None)
         static_check = {NAME: "static resource format validation", SUCCESS: not (static_error or static_nested_errors)}
         if not static_check[SUCCESS]:
             static_check[ERROR] = static_error
-            static_check[TRACEBACK] = s.pop(TRACEBACK, None)
+            static_check[TRACEBACK] = s.get(TRACEBACK, None)
             static_check[NESTED_ERRORS] = static_nested_errors
 
         dynamic_check = {NAME: "reproduced test outputs"}
-        if s[ERROR] is None:
+        if static_error is None:
             # dynamic test
             dyn_summary = test_resource(source, weight_format=weights_format)
             dyn_error = dyn_summary.get(ERROR, None)
