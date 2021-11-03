@@ -11,7 +11,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -34,7 +34,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -57,7 +57,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -80,7 +80,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -103,7 +103,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -126,7 +126,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -149,7 +149,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
@@ -172,7 +172,7 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/io_.py\", line 146, in resolve_rdf_source\n    source = yaml.load(source)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 431, in load\n    return self.load(fp)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/main.py\", line 434, in load\n    return constructor.get_single_data()\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 120, in get_single_data\n    node = self.composer.get_single_node()\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/ruamel/yaml/constructor.py\", line 119, in get_single_data\n    node = self.composer.get_single_node()\n",
           "  File \"_ruamel_yaml.pyx\", line 701, in _ruamel_yaml.CParser.get_single_node\n",
           "  File \"_ruamel_yaml.pyx\", line 904, in _ruamel_yaml.CParser._parse_next_event\n"
         ]
