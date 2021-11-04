@@ -2,32 +2,21 @@
   "bio-core-mix": {
     "py3.8.12_onnx": [
       {
-        "error": {
-          "documentation": [
-            "Missing data for required field."
-          ],
-          "inputs": {
-            "0": {
-              "preprocessing": [
-                "Field may not be null."
-              ]
-            }
-          },
-          "outputs": {
-            "0": {
-              "postprocessing": [
-                "Field may not be null."
-              ]
-            }
-          },
-          "type": [
-            "Missing data for required field."
-          ]
-        },
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/e236cb69-aa12-4017-a356-12cec1b3c379/model.yaml",
         "name": "static resource format validation",
         "nested_errors": {},
         "success": false,
-        "traceback": null
+        "traceback": [
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 113, in resolve_rdf_source\n    source, resp = urlretrieve(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 247, in urlretrieve\n    with contextlib.closing(urlopen(url, data)) as fp:\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 222, in urlopen\n    return opener.open(url, data, timeout)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 531, in open\n    response = meth(req, response)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 640, in http_response\n    response = self.parent.error(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 569, in error\n    return self._call_chain(*args)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 502, in _call_chain\n    result = func(*args)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 649, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\n"
+        ]
       },
       {
         "error": "skipped due to invalid resource format",
