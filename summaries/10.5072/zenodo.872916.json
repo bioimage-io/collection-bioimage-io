@@ -11,7 +11,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -38,7 +38,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -65,7 +65,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -92,7 +92,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -119,7 +119,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -146,7 +146,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -173,7 +173,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
@@ -200,7 +200,7 @@
         "success": false,
         "traceback": [
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 145, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
