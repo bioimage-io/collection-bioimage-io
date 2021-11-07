@@ -38,18 +38,27 @@
     ],
     "py3.8.12_tensorflow_saved_model_bundle": [
       {
+        "error": "expected loaded resource to be a dictionary, but got type <class 'str'>: https://sandbox.zenodo.org/api/files/9567559e-501c-4106-be15-8e10fbbe2390/rdf.yaml",
         "name": "static resource format validation",
-        "success": true
-      },
-      {
-        "error": "weight format tensorflow_saved_model_bundle not among weight formats listed in model: ['pytorch_script', 'pytorch_state_dict']",
-        "name": "reproduced test outputs",
+        "nested_errors": {},
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 56, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 145, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/commands.py\", line 41, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/io_.py\", line 113, in resolve_rdf_source\n    source, resp = urlretrieve(source)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 247, in urlretrieve\n    with contextlib.closing(urlopen(url, data)) as fp:\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 222, in urlopen\n    return opener.open(url, data, timeout)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 531, in open\n    response = meth(req, response)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 640, in http_response\n    response = self.parent.error(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 569, in error\n    return self._call_chain(*args)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 502, in _call_chain\n    result = func(*args)\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/urllib/request.py\", line 649, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\n"
         ]
+      },
+      {
+        "error": "skipped due to invalid resource format",
+        "name": "reproduced test outputs",
+        "success": false,
+        "traceback": null
       }
     ],
     "py3.9.7_onnx": [
