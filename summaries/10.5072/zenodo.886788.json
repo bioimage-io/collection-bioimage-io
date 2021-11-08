@@ -6,7 +6,7 @@
         "success": true
       },
       {
-        "error": "Output and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched elements: 21229 / 2097152 (1.01%)\nMax absolute difference: 0.00181919\nMax relative difference: 1.\n x: array([[[[2.5241e-01, 1.6527e-01, 1.3083e-01, ..., 3.0019e-01,\n          2.5673e-01, 2.9213e-01],\n         [1.1550e-01, 3.0777e-02, 1.8271e-02, ..., 6.1141e-02,...\n y: array([[[[2.5239e-01, 1.6525e-01, 1.3081e-01, ..., 3.0017e-01,\n          2.5671e-01, 2.9212e-01],\n         [1.1548e-01, 3.0769e-02, 1.8265e-02, ..., 6.1130e-02,...",
+        "error": "Output and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched elements: 21230 / 2097152 (1.01%)\nMax absolute difference: 0.00182039\nMax relative difference: 1.\n x: array([[[[2.5241e-01, 1.6527e-01, 1.3083e-01, ..., 3.0019e-01,\n          2.5673e-01, 2.9213e-01],\n         [1.1549e-01, 3.0777e-02, 1.8270e-02, ..., 6.1141e-02,...\n y: array([[[[2.5239e-01, 1.6525e-01, 1.3081e-01, ..., 3.0017e-01,\n          2.5671e-01, 2.9212e-01],\n         [1.1548e-01, 3.0769e-02, 1.8265e-02, ..., 6.1130e-02,...",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": null
