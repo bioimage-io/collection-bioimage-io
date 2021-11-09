@@ -22,28 +22,8 @@
         "success": true
       },
       {
-        "error": "Failed to download https://sandbox.zenodo.org/api/files/9567559e-501c-4106-be15-8e10fbbe2390/weights-torchscript.pt (HTTP Error 500: INTERNAL SERVER ERROR)",
         "name": "reproduced test outputs",
-        "success": false,
-        "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 49, in test_resource\n    model = load_resource_description(model_rdf)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\", line 150, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd, nodes_module=nodes)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 287, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path).transform(raw_rd)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 57, in transform_dict\n    return {key: self.transform(value) for key, value in node.items()}\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 57, in <dictcomp>\n    return {key: self.transform(value) for key, value in node.items()}\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/functools.py\", line 875, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 150, in _resolve_uri_uri_node\n    local_path = _download_uri_to_local_path(path_or_remote_uri)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\", line 280, in _download_uri_to_local_path\n    raise RuntimeError(f\"Failed to download {uri} ({e})\")\n"
-        ]
+        "success": true
       }
     ],
     "py3.8.12_pytorch_state_dict": [
