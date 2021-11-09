@@ -168,7 +168,7 @@
         "success": true
       },
       {
-        "error": "Failed to download https://sandbox.zenodo.org/api/files/fc05a6ea-3aea-47fb-9760-f177d7c4a7d1/cover.jpg (HTTP Error 500: INTERNAL SERVER ERROR)",
+        "error": "Failed to download https://sandbox.zenodo.org/api/files/fc05a6ea-3aea-47fb-9760-f177d7c4a7d1/environment.yaml (HTTP Error 404: NOT FOUND)",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
@@ -179,8 +179,8 @@
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 54, in transform_list\n    return [self.transform(subnode) for subnode in node]\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 54, in <listcomp>\n    return [self.transform(subnode) for subnode in node]\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in generic_transformer\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 63, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value) for name, value in iter_fields(node)})\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/spec/shared/utils.py\", line 48, in transform\n    return transformer(node)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\", line 56, in transform_URI\n    local_path = resolve_uri(node, root_path=self.root_path)\n",
           "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/functools.py\", line 877, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",

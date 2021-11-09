@@ -168,7 +168,7 @@
         "success": true
       },
       {
-        "error": "Failed to download https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/environment.yaml (HTTP Error 500: INTERNAL SERVER ERROR)",
+        "error": "Failed to download https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/environment.yaml (HTTP Error 404: NOT FOUND)",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [

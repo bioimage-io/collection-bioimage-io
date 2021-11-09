@@ -43,6 +43,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -66,15 +76,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -116,6 +117,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -163,15 +174,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -244,6 +246,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -267,15 +279,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -317,6 +320,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -364,15 +377,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -445,6 +449,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -468,15 +482,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -518,6 +523,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -565,15 +580,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -646,6 +652,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -669,15 +685,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -719,6 +726,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -766,15 +783,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -847,6 +855,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -870,15 +888,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -920,6 +929,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -967,15 +986,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -1048,6 +1058,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -1071,15 +1091,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -1121,6 +1132,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -1168,15 +1189,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -1249,6 +1261,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -1272,15 +1294,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -1322,6 +1335,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -1369,15 +1392,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -1450,6 +1464,16 @@
           "weights": {
             "keras_hdf5": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -1473,15 +1497,6 @@
                   "weights_format": [
                     "Must be equal to pytorch_script."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
@@ -1523,6 +1538,16 @@
             },
             "tensorflow_saved_model_bundle": {
               "value": [
+                "Errors in all options for this field. Fix any of the following errors:",
+                {
+                  "authors": {
+                    "0": {
+                      "_schema": [
+                        "Invalid input type."
+                      ]
+                    }
+                  }
+                },
                 {
                   "authors": {
                     "0": {
@@ -1570,15 +1595,6 @@
                   "weights_format": [
                     "Must be equal to tensorflow_js."
                   ]
-                },
-                {
-                  "authors": {
-                    "0": {
-                      "_schema": [
-                        "Invalid input type."
-                      ]
-                    }
-                  }
                 },
                 {
                   "authors": {
