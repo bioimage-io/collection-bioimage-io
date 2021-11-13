@@ -11,6 +11,59 @@ icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
   zenodo:
+    - id: 10.5072/zenodo.959294
+      name: Pancreatic Cell Segmentation - U-Net
+      type: model
+      authors:
+        - affiliation: Ikerbasque - EHU/UPV
+          name: Ignacio Arganda-Carreras
+        - affiliation: EPFL, UC3M
+          name: DeepImageJ
+      tags:
+        - bioimage.io
+        - bioimage.io:model
+        - deepimagej
+        - pancreatic-stem-cells
+        - segmentation
+        - phase-contrast
+        - unet
+        - neubias
+        - cell-tracking-challenge
+        - zenodo
+      description: >-
+        DeepImageJ compatible U-Net trained to segment phase contrast microscopy
+        images of pancreatic stem cells on a 2D polystyrene substrate.
+      stats:
+        downloads: 0
+        unique_downloads: 0
+        unique_views: 0
+        version_downloads: 0
+        version_unique_downloads: 0
+        version_unique_views: 1
+        version_views: 1
+        version_volume: 0
+        views: 0
+        volume: 0
+      license: BSD-2-Clause
+      documentation: >-
+        https://sandbox.zenodo.org/api/files/cdc22576-c81f-493c-bd19-90b06640807e/README.md
+      covers:
+        - >-
+          https://sandbox.zenodo.org/api/files/cdc22576-c81f-493c-bd19-90b06640807e/exampleImage.png
+        - >-
+          https://sandbox.zenodo.org/api/files/cdc22576-c81f-493c-bd19-90b06640807e/resultImage.png
+      source: >-
+        https://sandbox.zenodo.org/api/files/cdc22576-c81f-493c-bd19-90b06640807e/model.yaml
+      links:
+        - imjoy/BioImageIO-Packager
+        - deepimagej/deepimagej
+        - ilastik/ilastik
+        - deepimagej/unet-pancreaticcellsegmentation
+      config:
+        _doi: 10.5072/zenodo.959354
+        _conceptdoi: 10.5072/zenodo.959294
+        _rdf_file: >-
+          https://sandbox.zenodo.org/api/files/cdc22576-c81f-493c-bd19-90b06640807e/model.yaml
     - id: 10.5072/zenodo.921275
       name: HPA Bestfitting Densenet
       type: model
@@ -122,16 +175,16 @@ attachments:
         Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
         microscopy 3D volumes.
       stats:
-        downloads: 15976
-        unique_downloads: 2568
-        unique_views: 1
-        version_downloads: 26084
-        version_unique_downloads: 7116
-        version_unique_views: 76
-        version_views: 97
-        version_volume: 185383466862
-        views: 1
-        volume: 175862330034
+        downloads: 16286
+        unique_downloads: 2634
+        unique_views: 2
+        version_downloads: 26395
+        version_unique_downloads: 7183
+        version_unique_views: 78
+        version_views: 99
+        version_volume: 188511530583
+        views: 2
+        volume: 178754458183
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/b7b70fb7-b859-479b-a30e-3d5ad4463929/README.md
@@ -169,16 +222,16 @@ attachments:
         - zenodo
       description: Platyereis-nuclei-BoundaryModel
       stats:
-        downloads: 13782
-        unique_downloads: 2978
+        downloads: 14027
+        unique_downloads: 3044
         unique_views: 4
-        version_downloads: 16203
-        version_unique_downloads: 5028
+        version_downloads: 16448
+        version_unique_downloads: 5094
         version_unique_views: 17
         version_views: 32
-        version_volume: 214503951358
+        version_volume: 218033671025
         views: 5
-        volume: 211725943232
+        volume: 215255662899
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/c4b92a9e-19cf-4fd0-878a-c0954c49986f/documentation.md
@@ -215,16 +268,16 @@ attachments:
         - zenodo
       description: DSB-Nuclei-BoundaryModel
       stats:
-        downloads: 14239
-        unique_downloads: 2952
+        downloads: 14501
+        unique_downloads: 3021
         unique_views: 7
-        version_downloads: 16459
-        version_unique_downloads: 4755
+        version_downloads: 16721
+        version_unique_downloads: 4824
         version_unique_views: 20
         version_views: 36
-        version_volume: 231064479489
+        version_volume: 235025041544
         views: 11
-        volume: 228800510390
+        volume: 232761072445
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/782ae236-8146-44fe-b2ac-a16314dcd7e2/documentation.md
@@ -269,16 +322,16 @@ attachments:
         Trained StarDist model to segment of cancer cells in paired brightfield
         images.
       stats:
-        downloads: 4252
-        unique_downloads: 3735
+        downloads: 4315
+        unique_downloads: 3796
         unique_views: 9
-        version_downloads: 4413
-        version_unique_downloads: 3830
+        version_downloads: 4476
+        version_unique_downloads: 3891
         version_unique_views: 12
         version_views: 12
-        version_volume: 1071014914
+        version_volume: 1072520119
         views: 9
-        volume: 902927719
+        volume: 904432924
       license: MIT
       documentation: null
       covers:
@@ -370,16 +423,16 @@ attachments:
         Trained StarDist model for breast cancer cell nuclei (SiR-DNA)
         segmentation in fluorescence microscopy images.
       stats:
-        downloads: 4661
-        unique_downloads: 3787
+        downloads: 4727
+        unique_downloads: 3843
         unique_views: 20
-        version_downloads: 4677
-        version_unique_downloads: 3792
+        version_downloads: 4743
+        version_unique_downloads: 3848
         version_unique_views: 21
         version_views: 25
-        version_volume: 1566402228
+        version_volume: 1596393691
         views: 24
-        volume: 1547550080
+        volume: 1577541543
       license: MIT
       documentation: null
       covers:
@@ -419,16 +472,16 @@ attachments:
         A trained GAN to transform diffraction-limited input images into
         super-resolved ones.
       stats:
-        downloads: 7865
-        unique_downloads: 4073
+        downloads: 8071
+        unique_downloads: 4182
         unique_views: 13
-        version_downloads: 8417
-        version_unique_downloads: 4407
+        version_downloads: 8623
+        version_unique_downloads: 4516
         version_unique_views: 17
         version_views: 20
-        version_volume: 4804663810
+        version_volume: 4809578032
         views: 16
-        volume: 4767982697
+        volume: 4772896919
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/67a7eae5-2290-4b61-b273-eee0fa916d90/README.md
@@ -572,16 +625,16 @@ attachments:
         frame. Then, the final segmentation is generated by a Marker-Controlled
         Watershed transformation.
       stats:
-        downloads: 4950
-        unique_downloads: 3961
+        downloads: 5009
+        unique_downloads: 4015
         unique_views: 20
-        version_downloads: 5504
-        version_unique_downloads: 4384
+        version_downloads: 5563
+        version_unique_downloads: 4438
         version_unique_views: 29
         version_views: 37
-        version_volume: 2059835526
+        version_volume: 2064206346
         views: 24
-        volume: 1954807608
+        volume: 1959178428
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/05933bba-2a1d-4b6f-935e-26528ddc450a/README.md
@@ -664,16 +717,16 @@ attachments:
         A trained Deep-STORM model for image reconstruction from high-density
         single-molecule localization microscopy (SMLM).
       stats:
-        downloads: 7543
-        unique_downloads: 4176
-        unique_views: 14
-        version_downloads: 7587
-        version_unique_downloads: 4206
-        version_unique_views: 16
-        version_views: 18
-        version_volume: 1356398274
-        views: 15
-        volume: 1282830054
+        downloads: 7627
+        unique_downloads: 4226
+        unique_views: 15
+        version_downloads: 7671
+        version_unique_downloads: 4256
+        version_unique_views: 17
+        version_views: 19
+        version_volume: 1358722351
+        views: 16
+        volume: 1285154131
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/586c72d8-d5fe-42bc-b9a4-8faff6de6963/README.md
@@ -715,16 +768,16 @@ attachments:
         3D U-Net trained using ZeroCostDL4Mic notebooks to segment mitochondria
         in Transmission Electron Microscopy (TEM) data.
       stats:
-        downloads: 4644
-        unique_downloads: 4117
+        downloads: 4706
+        unique_downloads: 4167
         unique_views: 11
-        version_downloads: 4671
-        version_unique_downloads: 4143
+        version_downloads: 4733
+        version_unique_downloads: 4193
         version_unique_views: 12
         version_views: 12
-        version_volume: 28209499901
+        version_volume: 28385623931
         views: 11
-        volume: 28209430735
+        volume: 28385554765
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/52771cb2-5886-41a3-b8ee-4def7203951f/README.md
@@ -760,16 +813,16 @@ attachments:
         - zenodo
       description: CNN trained to classify the type of imaged skin lesion.
       stats:
-        downloads: 4423
-        unique_downloads: 4046
+        downloads: 4475
+        unique_downloads: 4091
         unique_views: 4
-        version_downloads: 4423
-        version_unique_downloads: 4046
+        version_downloads: 4475
+        version_unique_downloads: 4091
         version_unique_views: 4
         version_views: 4
-        version_volume: 598557067
+        version_volume: 599384171
         views: 4
-        volume: 598557067
+        volume: 599384171
       license: BSD-2-Clause
       documentation: >-
         https://sandbox.zenodo.org/api/files/5218d3ab-9b32-47ea-891e-0da59e849ad6/README.md
@@ -810,16 +863,16 @@ attachments:
         bright-field images of histologically stained versions of the same
         samples.
       stats:
-        downloads: 5905
-        unique_downloads: 3419
+        downloads: 5942
+        unique_downloads: 3445
         unique_views: 1
-        version_downloads: 5905
-        version_unique_downloads: 3419
+        version_downloads: 5942
+        version_unique_downloads: 3445
         version_unique_views: 1
         version_views: 1
-        version_volume: 1397387968
+        version_volume: 1399724241
         views: 1
-        volume: 1397387968
+        volume: 1399724241
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/0dcd8dec-ed38-4d10-a487-025597c207b6/README.md
@@ -862,16 +915,16 @@ attachments:
         bright-field images of histologically stained versions of the same
         samples.
       stats:
-        downloads: 5297
-        unique_downloads: 3072
+        downloads: 5330
+        unique_downloads: 3097
         unique_views: 8
-        version_downloads: 5297
-        version_unique_downloads: 3072
+        version_downloads: 5330
+        version_unique_downloads: 3097
         version_unique_views: 8
         version_views: 8
-        version_volume: 2245217861
+        version_volume: 2247126623
         views: 8
-        volume: 2245217861
+        volume: 2247126623
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/bfac9db5-f773-4d1b-a0f8-754628b3f5b3/README.md
@@ -1026,16 +1079,16 @@ attachments:
         trained model in 2D. The dataset is the one provided in the MoNuSeg 2018
         Challenge.
       stats:
-        downloads: 7953
-        unique_downloads: 3366
+        downloads: 8009
+        unique_downloads: 3396
         unique_views: 13
-        version_downloads: 10411
-        version_unique_downloads: 4064
+        version_downloads: 10467
+        version_unique_downloads: 4094
         version_unique_views: 28
         version_views: 42
-        version_volume: 7351064977
+        version_volume: 7374263694
         views: 16
-        volume: 5209636468
+        volume: 5232835185
       license: MIT
       documentation: >-
         https://sandbox.zenodo.org/api/files/954ada81-d28f-47de-b9d3-686559c76401/README.md
@@ -1118,16 +1171,16 @@ attachments:
         - zenodo
       description: This is a test model
       stats:
-        downloads: 3676
-        unique_downloads: 3472
+        downloads: 3702
+        unique_downloads: 3498
         unique_views: 14
-        version_downloads: 5531
-        version_unique_downloads: 4716
+        version_downloads: 5557
+        version_unique_downloads: 4742
         version_unique_views: 26
         version_views: 32
-        version_volume: 75434366
+        version_volume: 75703926
         views: 15
-        volume: 47966301
+        volume: 48235861
       license: BSD-1-Clause
       documentation: https://github.com/LEB-EPFL/DEFCoN-ImageJ/wiki
       covers:
@@ -1159,16 +1212,16 @@ attachments:
         First challenge on 2d segmentation of neuronal processes in EM images.
         Organised as part of the ISBI2012 conference.
       stats:
-        downloads: 2204
-        unique_downloads: 1821
+        downloads: 2226
+        unique_downloads: 1840
         unique_views: 3
-        version_downloads: 2209
-        version_unique_downloads: 1824
+        version_downloads: 2231
+        version_unique_downloads: 1843
         version_unique_views: 18
         version_views: 21
-        version_volume: 1093554112
+        version_volume: 1102364846
         views: 3
-        volume: 1093531220
+        volume: 1102341954
       license: CC-BY-4.0
       documentation: http://brainiac2.mit.edu/isbi_challenge/home
       covers:
@@ -1252,16 +1305,16 @@ attachments:
         - zenodo
       description: CREMI-BoundaryModel
       stats:
-        downloads: 4029
-        unique_downloads: 3637
+        downloads: 4061
+        unique_downloads: 3669
         unique_views: 5
-        version_downloads: 4158
-        version_unique_downloads: 3677
+        version_downloads: 4190
+        version_unique_downloads: 3709
         version_unique_views: 8
         version_views: 13
-        version_volume: 9896850480
+        version_volume: 9897372400
         views: 7
-        volume: 8338330028
+        volume: 8338851948
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/24ddb8e3-c9f0-459a-93f6-5d0a7703e6d0/documentation.md
@@ -1341,16 +1394,16 @@ attachments:
         - zenodo
       description: Arabidopsis-ovules-BoundaryModel
       stats:
-        downloads: 4258
-        unique_downloads: 3489
+        downloads: 4288
+        unique_downloads: 3519
         unique_views: 11
-        version_downloads: 4370
-        version_unique_downloads: 3508
+        version_downloads: 4400
+        version_unique_downloads: 3538
         version_unique_views: 12
         version_views: 18
-        version_volume: 8378919367
+        version_volume: 8379475021
         views: 14
-        volume: 7548253958
+        volume: 7548809612
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/83af3b6d-77b9-4fec-b488-402ddae756c8/documentation.md
@@ -1602,16 +1655,16 @@ attachments:
         - zenodo
       description: ISBI2012-2D-BoundaryModel
       stats:
-        downloads: 14195
-        unique_downloads: 3439
+        downloads: 14401
+        unique_downloads: 3469
         unique_views: 11
-        version_downloads: 14747
-        version_unique_downloads: 3641
+        version_downloads: 14953
+        version_unique_downloads: 3671
         version_unique_views: 24
         version_views: 35
-        version_volume: 60003039269
+        version_volume: 61001432189
         views: 13
-        volume: 59091157169
+        volume: 60089550089
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/9567559e-501c-4106-be15-8e10fbbe2390/documentation.md
@@ -1793,16 +1846,16 @@ attachments:
         - zenodo
       description: CREMI-BoundaryModel
       stats:
-        downloads: 10022
-        unique_downloads: 3106
+        downloads: 10162
+        unique_downloads: 3133
         unique_views: 4
-        version_downloads: 10065
-        version_unique_downloads: 3119
+        version_downloads: 10205
+        version_unique_downloads: 3146
         version_unique_views: 5
         version_views: 5
-        version_volume: 340015127855
+        version_volume: 345825744064
         views: 4
-        volume: 339651198868
+        volume: 345461815077
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/406bdb5a-4dad-48cc-ae9a-d61f737d7de9/documentation.md
@@ -1886,16 +1939,16 @@ attachments:
         - zenodo
       description: Platyereis-nuclei-BoundaryModel
       stats:
-        downloads: 5027
-        unique_downloads: 2768
+        downloads: 5082
+        unique_downloads: 2791
         unique_views: 0
-        version_downloads: 5027
-        version_unique_downloads: 2768
+        version_downloads: 5082
+        version_unique_downloads: 2791
         version_unique_views: 0
         version_views: 0
-        version_volume: 1193573514
+        version_volume: 1194419468
         views: 0
-        volume: 1193573514
+        volume: 1194419468
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/f4eab9b7-81ce-4603-93e7-9ccd3731506c/documentation.md
@@ -1930,16 +1983,16 @@ attachments:
         - zenodo
       description: Platyereis-cells-BoundaryModel
       stats:
-        downloads: 4837
-        unique_downloads: 2618
+        downloads: 4893
+        unique_downloads: 2641
         unique_views: 0
-        version_downloads: 4837
-        version_unique_downloads: 2618
+        version_downloads: 4893
+        version_unique_downloads: 2641
         version_unique_views: 0
         version_views: 0
-        version_volume: 841056032
+        version_volume: 841439795
         views: 0
-        volume: 841056032
+        volume: 841439795
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/fc05a6ea-3aea-47fb-9760-f177d7c4a7d1/documentation.md
@@ -1974,16 +2027,16 @@ attachments:
         - zenodo
       description: DSB-Nuclei-BoundaryModel
       stats:
-        downloads: 4964
-        unique_downloads: 2690
+        downloads: 5019
+        unique_downloads: 2713
         unique_views: 3
-        version_downloads: 4964
-        version_unique_downloads: 2690
+        version_downloads: 5019
+        version_unique_downloads: 2713
         version_unique_views: 3
         version_views: 3
-        version_volume: 1213042796
+        version_volume: 1213485409
         views: 3
-        volume: 1213042796
+        volume: 1213485409
       license: CC-BY-4.0
       documentation: >-
         https://sandbox.zenodo.org/api/files/c28391fb-4935-4a76-951f-f6910dae8fbd/documentation.md
@@ -2064,16 +2117,16 @@ attachments:
         - zenodo
       description: Uploaded via BioImage.IO website (https://bioimage.io)
       stats:
-        downloads: 3461
-        unique_downloads: 2887
+        downloads: 3482
+        unique_downloads: 2908
         unique_views: 6
-        version_downloads: 3461
-        version_unique_downloads: 2887
+        version_downloads: 3482
+        version_unique_downloads: 2908
         version_unique_views: 6
         version_views: 7
-        version_volume: 1052415685
+        version_volume: 1054946754
         views: 7
-        volume: 1052415685
+        volume: 1054946754
       license: BSD-3-Clause
       documentation: >-
         https://sandbox.zenodo.org/api/files/956c0bd6-5472-4052-a1ef-94ccf94cadc9/README.md
