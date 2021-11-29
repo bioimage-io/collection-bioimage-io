@@ -6,13 +6,11 @@
         "success": true
       },
       {
-        "error": "weight format onnx not among weight formats listed in model: ['pytorch_state_dict']",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -22,13 +20,11 @@
         "success": true
       },
       {
-        "error": "weight format pytorch_script not among weight formats listed in model: ['pytorch_state_dict']",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -38,15 +34,11 @@
         "success": true
       },
       {
-        "error": "different number of dimensions on data and dims: 1 vs 5",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 59, in test_resource\n    results = predict(prediction_pipeline, inputs)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction.py\", line 247, in predict\n    tagged_data = [\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction.py\", line 248, in <listcomp>\n    xr.DataArray(ipt, dims=ipt_spec.axes) for ipt, ipt_spec in zip(inputs, prediction_pipeline.input_specs)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/xarray/core/dataarray.py\", line 406, in __init__\n    coords, dims = _infer_coords_and_dims(data.shape, coords, dims)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/xarray/core/dataarray.py\", line 123, in _infer_coords_and_dims\n    raise ValueError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -56,13 +48,11 @@
         "success": true
       },
       {
-        "error": "weight format tensorflow_saved_model_bundle not among weight formats listed in model: ['pytorch_state_dict']",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -72,13 +62,11 @@
         "success": true
       },
       {
-        "error": "weight format onnx not among weight formats listed in model: ['pytorch_state_dict']",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -88,13 +76,11 @@
         "success": true
       },
       {
-        "error": "weight format pytorch_script not among weight formats listed in model: ['pytorch_state_dict']",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -104,15 +90,11 @@
         "success": true
       },
       {
-        "error": "different number of dimensions on data and dims: 1 vs 5",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 59, in test_resource\n    results = predict(prediction_pipeline, inputs)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction.py\", line 247, in predict\n    tagged_data = [\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction.py\", line 248, in <listcomp>\n    xr.DataArray(ipt, dims=ipt_spec.axes) for ipt, ipt_spec in zip(inputs, prediction_pipeline.input_specs)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/xarray/core/dataarray.py\", line 406, in __init__\n    coords, dims = _infer_coords_and_dims(data.shape, coords, dims)\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/xarray/core/dataarray.py\", line 123, in _infer_coords_and_dims\n    raise ValueError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ],
@@ -122,13 +104,11 @@
         "success": true
       },
       {
-        "error": "weight format tensorflow_saved_model_bundle not among weight formats listed in model: ['pytorch_state_dict']",
+        "error": "'NpzFile' object has no attribute 'shape'",
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 105, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape), ipt_spec.shape):\n"
         ]
       }
     ]

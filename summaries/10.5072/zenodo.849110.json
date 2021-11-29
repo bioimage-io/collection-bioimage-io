@@ -10,9 +10,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 185, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 116, in create_model_adapter\n    raise RuntimeError(\n"
         ]
       }
     ],
@@ -26,9 +26,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 185, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 116, in create_model_adapter\n    raise RuntimeError(\n"
         ]
       }
     ],
@@ -42,9 +42,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 185, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 116, in create_model_adapter\n    raise RuntimeError(\n"
         ]
       }
     ],
@@ -58,9 +58,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 154, in create_prediction_pipeline\n    return _PredictionPipelineImpl(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 68, in __init__\n    raise NotImplementedError(f\"Not yet implemented inference for run mode '{bioimageio_model.run_mode.name}'\")\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 191, in create_prediction_pipeline\n    return _PredictionPipelineImpl(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 91, in __init__\n    raise NotImplementedError(f\"Not yet implemented inference for run mode '{bioimageio_model.run_mode.name}'\")\n"
         ]
       }
     ],
@@ -74,9 +74,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 185, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 116, in create_model_adapter\n    raise RuntimeError(\n"
         ]
       }
     ],
@@ -90,9 +90,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 185, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 116, in create_model_adapter\n    raise RuntimeError(\n"
         ]
       }
     ],
@@ -106,9 +106,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 148, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 61, in create_model_adapter\n    raise RuntimeError(\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 185, in create_prediction_pipeline\n    model_adapter: ModelAdapter = create_model_adapter(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\", line 116, in create_model_adapter\n    raise RuntimeError(\n"
         ]
       }
     ],
@@ -122,9 +122,9 @@
         "name": "reproduced test outputs",
         "success": false,
         "traceback": [
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 55, in test_resource\n    prediction_pipeline = create_prediction_pipeline(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 154, in create_prediction_pipeline\n    return _PredictionPipelineImpl(\n",
-          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 68, in __init__\n    raise NotImplementedError(f\"Not yet implemented inference for run mode '{bioimageio_model.run_mode.name}'\")\n"
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\", line 120, in test_resource\n    with create_prediction_pipeline(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 191, in create_prediction_pipeline\n    return _PredictionPipelineImpl(\n",
+          "  File \"/usr/share/miniconda/envs/bio-spec/lib/python3.9/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\", line 91, in __init__\n    raise NotImplementedError(f\"Not yet implemented inference for run mode '{bioimageio_model.run_mode.name}'\")\n"
         ]
       }
     ]
