@@ -33,15 +33,19 @@ jobs:
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
-        commit-message: Update RDF items
+        commit-message: Update RDF collection
         committer: GitHub <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: false
         branch: rdf-item-patch
         delete-branch: true
-        title: 'Update RDF items'
+        title: 'Update RDF collection'
         body: |
-          There are changes to the RDF index file, please review the changes.
+          There are changes to the RDF collection, please review the changes and resolve all the pending RDF items.
+          - [ ] Passed the BioImage.IO Spec validator tests
+          - [ ] Passed the BioImage.IO Core CI tests
+          - [ ] All the `pending` items are resolved (either mark as `passed` or `skipped`)
+          - [ ] Approved by at least one of the BioImage.IO admin team member
         labels: |
           RDF
           automated pr
