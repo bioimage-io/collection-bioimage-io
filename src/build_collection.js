@@ -56,7 +56,6 @@ async function main(args) {
     }
   });
   const passedItems = items.filter(item => item.status === "passed");
-  const pendingItems = items.filter(item => item.status === "pending");
   console.log("Passed rdf items", passedItems.map(item => item.id));
   console.log("New items rdf items", newItems.map(item => item.id));
   generated.attachments.zenodo = passedItems;
