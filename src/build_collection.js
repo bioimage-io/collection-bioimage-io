@@ -64,8 +64,8 @@ async function main(args) {
   await writeFile("./dist/rdf.yaml", yaml.dump(generated));
   await writeFile("./dist/rdf.json", JSON.stringify(generated));
   if(newItems.length>0){
-    if("--overwrite" in args){
-      await writeFile("./rdf.yaml", JSON.stringify(newIndexRdf));
+    if(args.includes("--overwrite")){
+      await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
     }
     else{
       await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
