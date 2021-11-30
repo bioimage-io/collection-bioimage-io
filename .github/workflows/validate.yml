@@ -11,9 +11,9 @@ on:
   schedule:
     - cron:  '0 1,13 * * *'
 
-
 jobs:
   build-collection:
+    if: github.ref == 'refs/heads/main' # only run for main branch
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,8 +26,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build-overwrite
+    - name: Check RDF collection
+      if: github.ref != 'refs/heads/main' # for the PR
+      run: npm run build-overwrite
+    - name: Check RDF collection
+      if: github.ref == 'refs/heads/main' # for main branch
+      run: npm run build-overwrite
     - name: Create Pull Request
+      if: github.ref == 'refs/heads/main' # for main branch
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
@@ -77,7 +83,7 @@ jobs:
         path: npm-dist
     - name: validate for py${{ matrix.python-version }} ${{ matrix.weights-format }}
       shell: bash -l {0}
-      run: python scripts/generate_collection_test_summary.py npm-dist/rdf.yaml dist/py${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
+      run: python scripts/generate_collection_test_summary.py npm-dist/test-rdf.yaml dist/py${{ matrix.python-version }}_${{ matrix.weights-format }}.yaml ${{ matrix.weights-format }}
     - name: "Upload validation summary"
       uses: actions/upload-artifact@v2
       with:

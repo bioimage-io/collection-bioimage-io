@@ -35,7 +35,8 @@ async function main(args) {
   if (!fs.existsSync("./dist")) await mkdir("./dist");
   const templateStr = await readFile(indexRdf);
   const newIndexRdf = yaml.load(templateStr);
-  const generated = yaml.load(templateStr); // copy template
+  const pendingRdfs = yaml.load(templateStr);
+  const passedRdfs = yaml.load(templateStr); // copy template
   const items = await zenodoClient.getResourceItems({
     community: null, // siteConfig.zenodo_config.community,
     size: 10000 // only show the first 10000 items
@@ -75,20 +76,25 @@ async function main(args) {
     "Removed rdf items",
     removedItems.map(item => item.id)
   );
-  generated.attachments.zenodo = passedItems;
+  pendingRdfs.attachments.zenodo = newItems;
+  passedRdfs.attachments.zenodo = passedItems;
   newIndexRdf.attachments.zenodo = items.map(item => {
     return { id: item.id, status: item.status };
   });
-  await writeFile("./dist/rdf.yaml", yaml.dump(generated));
-  await writeFile("./dist/rdf.json", JSON.stringify(generated));
+  await writeFile("./dist/rdf.yaml", yaml.dump(passedRdfs));
+  await writeFile("./dist/rdf.json", JSON.stringify(passedRdfs));
   if (newItems.length > 0 || removedItems.length > 0) {
-    if (args.includes("--overwrite")) {
+    if (args.includes("--overwrite")) { // for running on the main branch
       await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
-    } else {
+      // test all items
+      await writeFile("./dist/test-rdf.yaml", yaml.dump(passedRdfs));
+    } else { // for the PR
       await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
+      // test only the new items
+      await writeFile("./dist/test-rdf.yaml", yaml.dump(pendingRdfs));
     }
-    await writeFile("./dist/new-rdf.yaml", yaml.dump(newItems));
-    await writeFile("./dist/new-rdf.json", JSON.stringify(newItems));
+    await writeFile("./dist/new-rdf.yaml", yaml.dump(pendingRdfs));
+    await writeFile("./dist/new-rdf.json", JSON.stringify(pendingRdfs));
   } else {
     console.log("No new items detected!");
   }
