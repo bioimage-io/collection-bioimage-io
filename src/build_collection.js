@@ -63,13 +63,15 @@ async function main(args) {
   newIndexRdf.attachments.zenodo = items.map(item => {return {"id": item.id, "status": item.status} })
   await writeFile("./dist/rdf.yaml", yaml.dump(generated));
   await writeFile("./dist/rdf.json", JSON.stringify(generated));
-  if(newItems.length>0){
+  if(newItems.length > 0){
     if(args.includes("--overwrite")){
       await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
     }
     else{
       await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
     }
+    await writeFile("./dist/new-rdf.yaml", yaml.dump(newItems));
+    await writeFile("./dist/new-rdf.json", JSON.stringify(newItems));
   }
   else{
     console.log("No new items detected!");
