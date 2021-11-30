@@ -3,10 +3,10 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "build": "node src/fetch_source.js && node -r esm src/build_collection.js",
-    "build-overwrite": "node src/fetch_source.js && node -r esm src/build_collection.js --overwrite",
-    "check-format": "prettier --check \"{src,tests}/**/**\"",
-    "format": "prettier --write \"{src,tests}/**/**\""
+    "build": "node scripts/fetch_source.js && node -r esm scripts/build_collection.js",
+    "build-overwrite": "node scripts/fetch_source.js && node -r esm scripts/build_collection.js --overwrite",
+    "check-format": "prettier --check \"{scripts,tests}/**/*js\"",
+    "format": "prettier --write \"{scripts,tests}/**/*js\""
   },
   "dependencies": {
     "axios": "^0.21.1",

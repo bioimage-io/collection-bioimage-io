@@ -14,7 +14,7 @@ if (!globalThis.fetch) {
 }
 
 if (!globalThis.localStorage) {
-  globalThis.localStorage = new LocalStorage('./scratch');
+  globalThis.localStorage = new LocalStorage("./scratch");
 }
 
 const zenodoBaseURL = siteConfig.zenodo_config.use_sandbox
@@ -29,7 +29,7 @@ const zenodoClient = new ZenodoClient(
   zenodoBaseURL,
   client_id,
   siteConfig.zenodo_config.use_sandbox
-)
+);
 
 async function main(args) {
   if (!fs.existsSync("./dist")) await mkdir("./dist");
@@ -37,8 +37,8 @@ async function main(args) {
   const newIndexRdf = yaml.load(templateStr);
   const generated = yaml.load(templateStr); // copy template
   const items = await zenodoClient.getResourceItems({
-    community: siteConfig.zenodo_config.community,
-    size: 10000, // only show the first 10000 items
+    community: null, // siteConfig.zenodo_config.community,
+    size: 10000 // only show the first 10000 items
   });
   const currentItems = newIndexRdf.attachments.zenodo;
   const newItems = [];
@@ -50,8 +50,7 @@ async function main(args) {
     if (!matched) {
       item.status = "pending";
       newItems.push(item);
-    }
-    else{
+    } else {
       item.status = matched.status;
     }
   });
@@ -62,26 +61,35 @@ async function main(args) {
       item.status = "deleted";
       removedItems.push(item);
     }
-  })
+  });
   const passedItems = items.filter(item => item.status === "passed");
-  console.log("Passed rdf items", passedItems.map(item => item.id));
-  console.log("New rdf items", newItems.map(item => item.id));
-  console.log("Removed rdf items", removedItems.map(item => item.id));
+  console.log(
+    "Passed rdf items",
+    passedItems.map(item => item.id)
+  );
+  console.log(
+    "New rdf items",
+    newItems.map(item => item.id)
+  );
+  console.log(
+    "Removed rdf items",
+    removedItems.map(item => item.id)
+  );
   generated.attachments.zenodo = passedItems;
-  newIndexRdf.attachments.zenodo = items.map(item => {return {"id": item.id, "status": item.status} })
+  newIndexRdf.attachments.zenodo = items.map(item => {
+    return { id: item.id, status: item.status };
+  });
   await writeFile("./dist/rdf.yaml", yaml.dump(generated));
   await writeFile("./dist/rdf.json", JSON.stringify(generated));
-  if(newItems.length > 0 || removedItems.length > 0){
-    if(args.includes("--overwrite")){
+  if (newItems.length > 0 || removedItems.length > 0) {
+    if (args.includes("--overwrite")) {
       await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
-    }
-    else{
+    } else {
       await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
     }
     await writeFile("./dist/new-rdf.yaml", yaml.dump(newItems));
     await writeFile("./dist/new-rdf.json", JSON.stringify(newItems));
-  }
-  else{
+  } else {
     console.log("No new items detected!");
   }
 }
