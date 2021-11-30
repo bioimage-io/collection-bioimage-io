@@ -26,10 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - name: Check RDF collection
-      if: github.ref != 'refs/heads/main' # for the PR
-      run: npm run build
-    - name: Check RDF collection
+    - name: Check for new RDF items and build the whole collection
       if: github.ref == 'refs/heads/main' # for main branch
       run: npm run build-overwrite
     - name: Create Pull Request
@@ -50,6 +47,9 @@ jobs:
           RDF
           automated pr
         draft: false
+    - name: Build the test collection with only new RDF items
+      if: github.ref != 'refs/heads/main' # for the PR
+      run: npm run build
     - name: "Upload npm output"
       uses: actions/upload-artifact@v2
       with:
