@@ -6,7 +6,10 @@ const indexRdf = "./rdf.yaml";
 async function main() {
   const templateStr = await readFile(indexRdf);
   const newIndexRdf = yaml.load(templateStr);
-  const currentItems = newIndexRdf.attachments.zenodo;
+  let currentItems = [];
+  for(let category of Object.keys(newIndexRdf.attachments)) {
+    currentItems = currentItems.concat(newIndexRdf.attachments[category]);
+  }
   const passedItems = currentItems.filter(item => item.status === "passed");
   const pendingItems = currentItems.filter(item => item.status === "pending");
   console.log(
