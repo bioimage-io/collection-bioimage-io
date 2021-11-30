@@ -28,7 +28,7 @@ jobs:
     - run: npm ci
     - name: Check RDF collection
       if: github.ref != 'refs/heads/main' # for the PR
-      run: npm run build-overwrite
+      run: npm run build
     - name: Check RDF collection
       if: github.ref == 'refs/heads/main' # for main branch
       run: npm run build-overwrite
