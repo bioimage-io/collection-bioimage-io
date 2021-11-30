@@ -55,14 +55,23 @@ async function main(args) {
       item.status = matched.status;
     }
   });
+  const removedItems = [];
+  currentItems.forEach(item => {
+    const matched = items.find(i => i.id === item.id);
+    if (!matched) {
+      item.status = "deleted";
+      removedItems.push(item);
+    }
+  })
   const passedItems = items.filter(item => item.status === "passed");
   console.log("Passed rdf items", passedItems.map(item => item.id));
-  console.log("New items rdf items", newItems.map(item => item.id));
+  console.log("New rdf items", newItems.map(item => item.id));
+  console.log("Removed rdf items", removedItems.map(item => item.id));
   generated.attachments.zenodo = passedItems;
   newIndexRdf.attachments.zenodo = items.map(item => {return {"id": item.id, "status": item.status} })
   await writeFile("./dist/rdf.yaml", yaml.dump(generated));
   await writeFile("./dist/rdf.json", JSON.stringify(generated));
-  if(newItems.length > 0){
+  if(newItems.length > 0 || removedItems.length > 0){
     if(args.includes("--overwrite")){
       await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
     }
