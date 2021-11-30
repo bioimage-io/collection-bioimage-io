@@ -1,0 +1,140 @@
+name: BioImage.IO
+type: collection
+description: BioImage.IO RDF collections
+tags: []
+version: 0.1.0
+authors:
+  - name: BioImgae.IO Team
+documentation: ./README.md
+git_repo: https://github.com/bioimage-io/collection-bioimage-io
+icon: >-
+  https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
+attachments:
+  zenodo:
+    - id: 10.5072/zenodo.959294
+      status: pending
+    - id: 10.5072/zenodo.921275
+      status: pending
+    - id: 10.5072/zenodo.938150
+      status: pending
+    - id: 10.5072/zenodo.849110
+      status: pending
+    - id: 10.5072/zenodo.881944
+      status: pending
+    - id: 10.5072/zenodo.881940
+      status: pending
+    - id: 10.5072/zenodo.927181
+      status: pending
+    - id: 10.5072/zenodo.927158
+      status: pending
+    - id: 10.5072/zenodo.927364
+      status: pending
+    - id: 10.5072/zenodo.907585
+      status: pending
+    - id: 10.5072/zenodo.908833
+      status: pending
+    - id: 10.5072/zenodo.907595
+      status: pending
+    - id: 10.5072/zenodo.905080
+      status: pending
+    - id: 10.5072/zenodo.905991
+      status: pending
+    - id: 10.5072/zenodo.906808
+      status: pending
+    - id: 10.5072/zenodo.906784
+      status: pending
+    - id: 10.5072/zenodo.906806
+      status: pending
+    - id: 10.5072/zenodo.906804
+      status: pending
+    - id: 10.5072/zenodo.906802
+      status: pending
+    - id: 10.5072/zenodo.894458
+      status: pending
+    - id: 10.5072/zenodo.904904
+      status: pending
+    - id: 10.5072/zenodo.880528
+      status: pending
+    - id: 10.5072/zenodo.886788
+      status: pending
+    - id: 10.5072/zenodo.849032
+      status: pending
+    - id: 10.5072/zenodo.881018
+      status: pending
+    - id: 10.5072/zenodo.881848
+      status: pending
+    - id: 10.5072/zenodo.881942
+      status: pending
+    - id: 10.5072/zenodo.880412
+      status: pending
+    - id: 10.5072/zenodo.881973
+      status: pending
+    - id: 10.5072/zenodo.881916
+      status: pending
+    - id: 10.5072/zenodo.881914
+      status: pending
+    - id: 10.5072/zenodo.881898
+      status: pending
+    - id: 10.5072/zenodo.881892
+      status: pending
+    - id: 10.5072/zenodo.881842
+      status: pending
+    - id: 10.5072/zenodo.880273
+      status: pending
+    - id: 10.5072/zenodo.881020
+      status: pending
+    - id: 10.5072/zenodo.872944
+      status: pending
+    - id: 10.5072/zenodo.872852
+      status: pending
+    - id: 10.5072/zenodo.872914
+      status: pending
+    - id: 10.5072/zenodo.872854
+      status: pending
+    - id: 10.5072/zenodo.872924
+      status: pending
+    - id: 10.5072/zenodo.872918
+      status: pending
+    - id: 10.5072/zenodo.872916
+      status: pending
+    - id: 10.5072/zenodo.872860
+      status: passed
+    - id: 10.5072/zenodo.856197
+      status: pending
+  github:
+    - id: zero
+      source: >-
+        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    - id: deepimagej
+      source: >-
+        https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    - id: fiji
+      source: >-
+        https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+    - id: imjoy
+      source: >-
+        https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+    - id: ilastik
+      source: >-
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/manifest.bioimage.io.yaml
+    - id: hpa
+      source: >-
+        https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+config:
+  splash_title: BioImage Model Zoo
+  splash_subtitle: Advanced AI models in one-click
+  splash_feature_list:
+    - Integrate with Fiji, Ilastik, ImJoy
+    - Try model instantly with BioEngine
+    - Contribute your models via Github
+    - Link models to datasets and applications
+  explore_button_text: Start Exploring
+  background_image: static/img/zoo-background.svg
+  resource_types:
+    - model
+    - application
+    - notebook
+    - dataset
+  default_type: model
+  url_root: >-
+    https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
