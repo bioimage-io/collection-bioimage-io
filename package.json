@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node scripts/fetch_source.js && node -r esm scripts/build_collection.js",
     "build-overwrite": "node scripts/fetch_source.js && node -r esm scripts/build_collection.js --overwrite",
+    "check-pending": "node -r esm scripts/check_pending.js",
     "check-format": "prettier --check \"{scripts,tests}/**/*js\"",
     "format": "prettier --write \"{scripts,tests}/**/*js\""
   },
