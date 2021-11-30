@@ -62,7 +62,12 @@ async function main(args) {
     }
     else{
       const resources = await getResourceItemsFromPartner(partner.source);
-      partner.config = resources.config;
+      if(resources.config.id !== partner.id) {
+        throw new Error("Partner id does not match source id");
+      }
+      for(let k of Object.keys(resources.config)) {
+        partner[k] = resources.config[k];
+      }
       items = resources.items;
     }
     const currentItems = newIndexRdf.attachments[partner.id] || [];
