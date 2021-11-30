@@ -31,75 +31,96 @@ const zenodoClient = new ZenodoClient(
   siteConfig.zenodo_config.use_sandbox
 );
 
+async function getResourceItemsFromPartner(source) {
+  console.log("Getting resource items from " + source);
+  const collection = yaml.load(await (await fetch(source)).text());
+  const items = [];
+  for(let type of ["dataset", "application"]) {
+    if (collection[type]) {
+      for(let item of collection[type]) {
+        items.push(item);
+      }
+    }
+  }
+  return {config: collection.config, items: items};
+}
+
 async function main(args) {
   if (!fs.existsSync("./dist")) await mkdir("./dist");
   const templateStr = await readFile(indexRdf);
   const newIndexRdf = yaml.load(templateStr);
   const pendingRdfs = yaml.load(templateStr);
   const passedRdfs = yaml.load(templateStr); // copy template
-  const items = await zenodoClient.getResourceItems({
-    community: null, // siteConfig.zenodo_config.community,
-    size: 10000 // only show the first 10000 items
-  });
-  const currentItems = newIndexRdf.attachments.zenodo;
-  const newItems = [];
-  items.forEach(item => {
-    if (item.config._deposit) {
-      delete item.config._deposit;
+  const partners = [{id: "zenodo"}].concat(passedRdfs.config.partners)
+  for(let partner of partners) {
+    let items;
+    if (partner.id === "zenodo") {
+      items = await zenodoClient.getResourceItems({
+        community: null, // siteConfig.zenodo_config.community,
+        size: 10000 // only show the first 10000 items
+      });
     }
-    const matched = currentItems.find(i => i.id === item.id);
-    if (!matched) {
-      item.status = "pending";
-      newItems.push(item);
-    } else {
-      item.status = matched.status;
+    else{
+      const resources = await getResourceItemsFromPartner(partner.source);
+      partner.config = resources.config;
+      items = resources.items;
     }
-  });
-  const removedItems = [];
-  currentItems.forEach(item => {
-    const matched = items.find(i => i.id === item.id);
-    if (!matched) {
-      item.status = "deleted";
-      removedItems.push(item);
-    }
-  });
-  const passedItems = items.filter(item => item.status === "passed");
-  const pendingItems = items.filter(item => item.status === "pending");
-  console.log(
-    "Passed rdf items",
-    passedItems.map(item => item.id)
-  );
-  console.log(
-    "New rdf items",
-    newItems.map(item => item.id)
-  );
-  console.log(
-    "Removed rdf items",
-    removedItems.map(item => item.id)
-  );
-  console.log(
-    "Pending rdf items",
-    pendingItems.map(item => item.id)
-  );
-  pendingRdfs.attachments.zenodo = pendingItems;
-  passedRdfs.attachments.zenodo = passedItems;
-  newIndexRdf.attachments.zenodo = items.map(item => {
-    return { id: item.id, status: item.status };
-  });
+    const currentItems = newIndexRdf.attachments[partner.id] || [];
+    const newItems = [];
+    items.forEach(item => {
+      if (item.config && item.config._deposit) {
+        delete item.config._deposit;
+      }
+      const matched = currentItems.find(i => i.id === item.id);
+      if (!matched) {
+        item.status = "pending";
+        newItems.push(item);
+      } else {
+        item.status = matched.status;
+      }
+    });
+    const removedItems = [];
+    currentItems.forEach(item => {
+      const matched = items.find(i => i.id === item.id);
+      if (!matched) {
+        item.status = "deleted";
+        removedItems.push(item);
+      }
+    });
+    const passedItems = items.filter(item => item.status === "passed");
+    const pendingItems = items.filter(item => item.status === "pending");
+    console.log(
+      "Passed rdf items in " + partner.id,
+      passedItems.map(item => item.id)
+    );
+    console.log(
+      "New rdf items in " + partner.id,
+      newItems.map(item => item.id)
+    );
+    console.log(
+      "Removed rdf items in " + partner.id,
+      removedItems.map(item => item.id)
+    );
+    console.log(
+      "Pending rdf items in " + partner.id,
+      pendingItems.map(item => item.id)
+    );
+    pendingRdfs.attachments[partner.id] = pendingItems;
+    passedRdfs.attachments[partner.id] = passedItems;
+    newIndexRdf.attachments[partner.id] = items.map(item => {
+      return { id: item.id, status: item.status };
+    });
+  }
   await writeFile("./dist/rdf.yaml", yaml.dump(passedRdfs));
   await writeFile("./dist/rdf.json", JSON.stringify(passedRdfs));
-  if (newItems.length > 0 || removedItems.length > 0) {
-    if (args.includes("--overwrite")) { // for running on the main branch
-      await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
-      // test all items
-      await writeFile("./dist/test-rdf.yaml", yaml.dump(passedRdfs));
-    } else { // for the PR
-      await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
-      // test only the new items
-      await writeFile("./dist/test-rdf.yaml", yaml.dump(pendingRdfs));
-    }
-  } else {
-    console.log("No new items detected!");
+  if (args.includes("--overwrite")) { // for running on the main branch
+    await writeFile("./rdf.yaml", yaml.dump(newIndexRdf));
+    // test all items
+    await writeFile("./dist/test-rdf.yaml", yaml.dump(passedRdfs));
+  } else { // for the PR
+    await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
+    // test only the new items
+    await writeFile("./dist/test-rdf.yaml", yaml.dump(pendingRdfs));
   }
 }
 
