@@ -12,7 +12,7 @@ icon: >-
 attachments:
   zenodo:
     - id: 10.5281/zenodo.5744489
-      status: pending
+      status: passed
   github:
     - id: zero
       source: >-
