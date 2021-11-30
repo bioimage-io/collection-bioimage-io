@@ -10,58 +10,7 @@ git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
-  zenodo:
-    - id: 10.5072/zenodo.872860
-      name: 3D UNet Lateral Root Primordia Nuclei
-      type: model
-      authors:
-        - name: Adrian Wolny
-        - name: Lorenzo Cerrone
-      tags:
-        - bioimage.io
-        - bioimage.io:model
-        - unet3d
-        - pytorch
-        - arabidopsis
-        - lateral root
-        - cell nuclei
-        - segmentation
-        - plant tissue
-        - zenodo
-      description: >-
-        A variant of 3D U-Net trained on light-sheet images of Arabidopsis
-        lateral root nuclei on original resolution. Voxel size:
-        (0.25x0.1625x0.1625 µm^3) (ZYX).
-      stats:
-        downloads: 9031
-        unique_downloads: 3232
-        unique_views: 4
-        version_downloads: 9031
-        version_unique_downloads: 3232
-        version_unique_views: 4
-        version_views: 5
-        version_volume: 918869986
-        views: 5
-        volume: 918869986
-      license: MIT
-      documentation: >-
-        https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/unet3d.md
-      covers:
-        - >-
-          https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/raw.png
-        - >-
-          https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/pred.png
-      source: >-
-        https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/rdf.yaml
-      links:
-        - imjoy/BioImageIO-Packager
-        - ilastik/Ilastik
-      config:
-        _doi: 10.5072/zenodo.872861
-        _conceptdoi: 10.5072/zenodo.872860
-        _rdf_file: >-
-          https://sandbox.zenodo.org/api/files/a6e1b0c5-bcad-4b52-933e-13c36283d93a/rdf.yaml
-      status: passed
+  zenodo: []
   github:
     - id: zero
       source: >-
