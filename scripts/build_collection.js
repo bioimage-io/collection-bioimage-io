@@ -64,6 +64,7 @@ async function main(args) {
     }
   });
   const passedItems = items.filter(item => item.status === "passed");
+  const pendingItems = items.filter(item => item.status === "pending");
   console.log(
     "Passed rdf items",
     passedItems.map(item => item.id)
@@ -76,7 +77,11 @@ async function main(args) {
     "Removed rdf items",
     removedItems.map(item => item.id)
   );
-  pendingRdfs.attachments.zenodo = newItems;
+  console.log(
+    "Pending rdf items",
+    pendingItems.map(item => item.id)
+  );
+  pendingRdfs.attachments.zenodo = pendingItems;
   passedRdfs.attachments.zenodo = passedItems;
   newIndexRdf.attachments.zenodo = items.map(item => {
     return { id: item.id, status: item.status };
@@ -93,8 +98,6 @@ async function main(args) {
       // test only the new items
       await writeFile("./dist/test-rdf.yaml", yaml.dump(pendingRdfs));
     }
-    await writeFile("./dist/new-rdf.yaml", yaml.dump(pendingRdfs));
-    await writeFile("./dist/new-rdf.json", JSON.stringify(pendingRdfs));
   } else {
     console.log("No new items detected!");
   }

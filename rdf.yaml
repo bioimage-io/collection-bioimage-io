@@ -10,7 +10,9 @@ git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
-  zenodo: []
+  zenodo:
+    - id: 10.5281/zenodo.5744489
+      status: pending
   github:
     - id: zero
       source: >-
