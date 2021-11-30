@@ -60,6 +60,12 @@ jobs:
         name: npm-dist
         path: dist
         retention-days: 1
+    - name: Deploy to gh-pages 🚀
+      if: github.ref == 'refs/heads/main' # for main branch
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: dist  # The folder the action should deploy.
 
   validate-bio-core-mix:
     runs-on: ubuntu-latest
