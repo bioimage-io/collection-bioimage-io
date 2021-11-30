@@ -26,7 +26,24 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build
+    - run: npm run build-overwrite
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Update RDF items
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: rdf-item-patch
+        delete-branch: true
+        title: 'Update RDF items'
+        body: |
+          There are changes to the RDF index file, please review the changes.
+        labels: |
+          RDF
+          automated pr
+        draft: false
     - name: "Upload npm output"
       uses: actions/upload-artifact@v2
       with:

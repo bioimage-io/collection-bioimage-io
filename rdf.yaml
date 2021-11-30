@@ -9,7 +9,9 @@ documentation: ./README.md
 git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png"
 attachments:
-  zenodo: []
+  zenodo: 
+    - id: 10.5072/zenodo.872860
+      status: passed
   github:
     - id: zero
       source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml

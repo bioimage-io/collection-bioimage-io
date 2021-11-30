@@ -4,6 +4,7 @@ dist
 scratch
 src/site.config.json
 src/utils.js
+./new-rdf.yaml
 
 # local env files
 .env.local

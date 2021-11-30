@@ -1,9 +1,10 @@
 {
   "name": "collection-bioimage-io",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "build": "node src/fetch_source.js && node -r esm src/build_collection.js",
+    "build-overwrite": "node src/fetch_source.js && node -r esm src/build_collection.js --overwrite",
     "check-format": "prettier --check \"{src,tests}/**/**\"",
     "format": "prettier --write \"{src,tests}/**/**\""
   },

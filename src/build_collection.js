@@ -7,6 +7,7 @@ import fs from "fs";
 
 import yaml from "js-yaml";
 
+const indexRdf = "./rdf.yaml";
 
 if (!globalThis.fetch) {
   globalThis.fetch = fetch;
@@ -20,29 +21,60 @@ const zenodoBaseURL = siteConfig.zenodo_config.use_sandbox
   ? "https://sandbox.zenodo.org"
   : "https://zenodo.org";
 
+const client_id = siteConfig.zenodo_config.use_sandbox
+  ? siteConfig.zenodo_config.sandbox_client_id
+  : siteConfig.zenodo_config.production_client_id;
+
 const zenodoClient = new ZenodoClient(
   zenodoBaseURL,
-  siteConfig.zenodo_config.client_id,
+  client_id,
   siteConfig.zenodo_config.use_sandbox
-);
+)
 
-async function main() {
+async function main(args) {
   if (!fs.existsSync("./dist")) await mkdir("./dist");
-  const templateStr = await readFile("./rdf.yaml");
-  const template = yaml.load(templateStr);
+  const templateStr = await readFile(indexRdf);
+  const newIndexRdf = yaml.load(templateStr);
+  const generated = yaml.load(templateStr); // copy template
   const items = await zenodoClient.getResourceItems({
     community: siteConfig.zenodo_config.community,
     size: 10000, // only show the first 10000 items
   });
+  const currentItems = newIndexRdf.attachments.zenodo;
+  const newItems = [];
   items.forEach(item => {
     if (item.config._deposit) {
       delete item.config._deposit;
     }
+    const matched = currentItems.find(i => i.id === item.id);
+    if (!matched) {
+      item.status = "pending";
+      newItems.push(item);
+    }
+    else{
+      item.status = matched.status;
+    }
   });
-  console.log("All rdf items", items);
-  template.attachments.zenodo = items;
-  await writeFile("./dist/rdf.yaml", yaml.dump(template));
-  await writeFile("./dist/rdf.json", JSON.stringify(template));
+  const passedItems = items.filter(item => item.status === "passed");
+  const pendingItems = items.filter(item => item.status === "pending");
+  console.log("Passed rdf items", passedItems.map(item => item.id));
+  console.log("New items rdf items", newItems.map(item => item.id));
+  generated.attachments.zenodo = passedItems;
+  newIndexRdf.attachments.zenodo = items.map(item => {return {"id": item.id, "status": item.status} })
+  await writeFile("./dist/rdf.yaml", yaml.dump(generated));
+  await writeFile("./dist/rdf.json", JSON.stringify(generated));
+  if(newItems.length>0){
+    if("--overwrite" in args){
+      await writeFile("./rdf.yaml", JSON.stringify(newIndexRdf));
+    }
+    else{
+      await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
+    }
+  }
+  else{
+    console.log("No new items detected!");
+  }
 }
 
-main();
+var args = process.argv.slice(2);
+main(args);
