@@ -9,7 +9,145 @@ documentation: ./README.md
 git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
-attachments: {}
+attachments:
+  zenodo:
+    - id: 10.5281/zenodo.5744489
+      status: pending
+      type: model
+  zero:
+    - id: Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+      status: pending
+    - id: Dataset_Noise2Void_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_Noise2Void_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_CARE_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_CARE_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_fnet_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_Deep-STORM_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_CycleGAN_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_pix2pix_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_YOLOv2_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_StarDist_Fluo_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_StarDist_brightfield_ZeroCostDL4Mic
+      status: pending
+    - id: Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook Preview
+      status: pending
+    - id: Notebook_U-Net_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_U-Net_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_StarDist_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_StarDist_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Noise2Void_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Noise2Void_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_CARE_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_CARE_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_fnet_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_fnet_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_pix2pix_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_CycleGAN_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Augmentor_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_DenoiSeg_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
+      status: pending
+    - id: Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
+      status: pending
+    - id: Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
+      status: pending
+    - id: Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
+      status: pending
+    - id: Notebook_RCAN_3D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_SplineDist_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_YOLOv2_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Detectron2_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_DRMIME_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Cellpose_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_RetinaNet_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_DecoNoising_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_MaskRCNN_ZeroCostDL4Mic
+      status: pending
+    - id: Notebook_Quality_Control_ZeroCostDL4Mic
+      status: pending
+  deepimagej:
+    - id: MoNuSeg_digital_pathology_miccai2018
+      status: pending
+    - id: deepimagej-web
+      status: pending
+      type: application
+    - id: deepimagej
+      status: pending
+    - id: unet-pancreaticcellsegmentation
+      status: pending
+      type: application
+    - id: smlm-deepimagej
+      status: pending
+      type: application
+    - id: EVsTEMsegmentationFRUNet
+      status: pending
+      type: application
+  fiji:
+    - id: Fiji
+      status: pending
+  imjoy:
+    - id: LuCa-7color
+      status: pending
+    - id: BioImageIO-Packager
+      status: pending
+    - id: Notebook Preview
+      status: pending
+    - id: ImJoy
+      status: pending
+    - id: ImageJ.JS
+      status: pending
+    - id: ImJoyFiddle
+      status: pending
+    - id: vizarr
+      status: pending
+    - id: CellPose
+      status: pending
+  ilastik:
+    - id: ilastik
+      status: pending
+  hpa:
+    - id: HPA-Classification
+      status: pending
 config:
   splash_title: BioImage Model Zoo
   splash_subtitle: Advanced AI models in one-click
