@@ -10,7 +10,7 @@ git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: >-
   https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 attachments:
-  undefined:
+  dataset:
     - id: Dataset_StarDist_2D_ZeroCostDL4Mic_2D
       name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
       description: >-
@@ -35,6 +35,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
+      type: dataset
       status: passed
     - id: Dataset_Noise2Void_2D_ZeroCostDL4Mic
       name: Noise2Void (2D) example training and test dataset - ZeroCostDL4Mic
@@ -59,6 +60,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png
+      type: dataset
       status: passed
     - id: Dataset_Noise2Void_3D_ZeroCostDL4Mic
       name: Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic
@@ -81,6 +83,7 @@ attachments:
       covers:
         - >-
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      type: dataset
       status: passed
     - id: Dataset_CARE_2D_ZeroCostDL4Mic
       name: CARE (2D) example training and test dataset - ZeroCostDL4Mic
@@ -103,6 +106,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
+      type: dataset
       status: passed
     - id: Dataset_CARE_3D_ZeroCostDL4Mic
       name: CARE (3D) example training and test dataset - ZeroCostDL4Mic
@@ -125,6 +129,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
+      type: dataset
       status: passed
     - id: Dataset_fnet_3D_ZeroCostDL4Mic
       name: >-
@@ -149,6 +154,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Fnet_exemplary_data_mitochondria.png
+      type: dataset
       status: passed
     - id: Dataset_Deep-STORM_ZeroCostDL4Mic
       name: Deep-STORM training and example dataset - ZeroCostDL4Mic
@@ -176,6 +182,7 @@ attachments:
       covers:
         - >-
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      type: dataset
       status: passed
     - id: Dataset_CycleGAN_ZeroCostDL4Mic
       name: CycleGAN example training and test dataset - ZeroCostDL4Mic
@@ -198,6 +205,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/unpaired-image_translation.png
+      type: dataset
       status: passed
     - id: Dataset_pix2pix_ZeroCostDL4Mic
       name: pix2pix example training and test dataset - ZeroCostDL4Mic
@@ -218,6 +226,7 @@ attachments:
       covers:
         - >-
           https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/paired-image_translation.png
+      type: dataset
       status: passed
     - id: Dataset_YOLOv2_ZeroCostDL4Mic
       name: YoloV2 example training and test dataset - ZeroCostDL4Mic
@@ -241,6 +250,7 @@ attachments:
       covers:
         - >-
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      type: dataset
       status: passed
     - id: Dataset_StarDist_Fluo_ZeroCostDL4Mic
       name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
@@ -271,6 +281,7 @@ attachments:
       covers:
         - >-
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
+      type: dataset
       status: passed
     - id: Dataset_StarDist_brightfield_ZeroCostDL4Mic
       name: Combining StarDist and TrackMate example 2 - T cell dataset
@@ -300,6 +311,7 @@ attachments:
       covers:
         - >-
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
+      type: dataset
       status: passed
     - id: Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
@@ -329,10 +341,13 @@ attachments:
       covers:
         - >-
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
+      type: dataset
       status: passed
+  application:
     - id: Notebook Preview
       source: >-
         https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
+      type: application
       status: passed
     - id: Notebook_U-Net_2D_ZeroCostDL4Mic
       name: U-Net (2D) - ZeroCostDL4Mic
@@ -373,6 +388,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_U-Net_3D_ZeroCostDL4Mic
       name: U-Net (3D) - ZeroCostDL4Mic
@@ -411,6 +427,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_StarDist_2D_ZeroCostDL4Mic
       name: StarDist (2D) - ZeroCostDL4Mic
@@ -452,6 +469,7 @@ attachments:
         - Dataset_StarDist_Fluo_ZeroCostDL4Mic
         - Dataset_StarDist_brightfield_ZeroCostDL4Mic
         - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_StarDist_3D_ZeroCostDL4Mic
       name: StarDist (3D) - ZeroCostDL4Mic
@@ -489,6 +507,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_Noise2Void_2D_ZeroCostDL4Mic
       name: Noise2Void (2D) - ZeroCostDL4Mic
@@ -528,6 +547,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_Noise2Void_2D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_Noise2Void_3D_ZeroCostDL4Mic
       name: Noise2VOID (3D) - ZeroCostDL4Mic
@@ -567,6 +587,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_Noise2Void_3D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_CARE_2D_ZeroCostDL4Mic
       name: CARE (2D) - ZeroCostDL4Mic
@@ -611,6 +632,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_CARE_2D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_CARE_3D_ZeroCostDL4Mic
       name: CARE (3D) - ZeroCostDL4Mic
@@ -655,6 +677,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_CARE_3D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_fnet_3D_ZeroCostDL4Mic
       name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
@@ -698,6 +721,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_fnet_3D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_fnet_2D_ZeroCostDL4Mic
       name: Label-free Prediction - fnet - (2D) ZeroCostDL4Mic
@@ -740,6 +764,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic
       name: Deep-STORM (2D) - ZeroCostDL4Mic
@@ -786,6 +811,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_Deep-STORM_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_pix2pix_2D_ZeroCostDL4Mic
       name: pix2pix (2D) - ZeroCostDL4Mic
@@ -825,6 +851,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_pix2pix_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_CycleGAN_2D_ZeroCostDL4Mic
       name: CycleGAN (2D) - ZeroCostDL4Mic
@@ -867,6 +894,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_CycleGAN_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_Augmentor_ZeroCostDL4Mic
       name: Augmentor - ZeroCostDL4Mic
@@ -907,6 +935,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_DenoiSeg_2D_ZeroCostDL4Mic
       name: DenoiSeg (2D) - ZeroCostDL4Mic
@@ -947,6 +976,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
       name: Deep-STORM (2D) - ZeroCostDL4Mic - DeepImageJ
@@ -997,6 +1027,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_Deep-STORM_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
       name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
@@ -1039,6 +1070,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
       name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
@@ -1083,6 +1115,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
       name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
@@ -1125,6 +1158,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
       name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
@@ -1166,6 +1200,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_RCAN_3D_ZeroCostDL4Mic
       name: RCAN (3D) - ZeroCostDL4Mic
@@ -1209,6 +1244,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_CARE_3D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_SplineDist_2D_ZeroCostDL4Mic
       name: SplineDist (2D) - ZeroCostDL4Mic
@@ -1251,6 +1287,7 @@ attachments:
         - Dataset_StarDist_Fluo_ZeroCostDL4Mic
         - Dataset_StarDist_brightfield_ZeroCostDL4Mic
         - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_YOLOv2_ZeroCostDL4Mic
       name: YOLOv2 - ZeroCostDL4Mic
@@ -1286,6 +1323,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_YOLOv2_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_Detectron2_ZeroCostDL4Mic
       name: Detectron2 - ZeroCostDL4Mic
@@ -1322,6 +1360,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_YOLOv2_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_DRMIME_ZeroCostDL4Mic
       name: DRMIME - ZeroCostDL4Mic
@@ -1356,6 +1395,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_Cellpose_2D_ZeroCostDL4Mic
       name: Cellpose (2D) - ZeroCostDL4Mic
@@ -1392,6 +1432,7 @@ attachments:
         - Dataset_StarDist_Fluo_ZeroCostDL4Mic
         - Dataset_StarDist_brightfield_ZeroCostDL4Mic
         - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_RetinaNet_ZeroCostDL4Mic
       name: RetinaNet - ZeroCostDL4Mic
@@ -1427,6 +1468,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_YOLOv2_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_DecoNoising_2D_ZeroCostDL4Mic
       name: DecoNoising (2D) - ZeroCostDL4Mic
@@ -1466,6 +1508,7 @@ attachments:
       links:
         - Notebook Preview
         - Dataset_Noise2Void_2D_ZeroCostDL4Mic
+      type: application
       status: passed
     - id: Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic
       name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
@@ -1500,6 +1543,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_MaskRCNN_ZeroCostDL4Mic
       name: MaskRCNN - ZeroCostDL4Mic
@@ -1534,6 +1578,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Notebook_Quality_Control_ZeroCostDL4Mic
       name: Quality Control - ZeroCostDL4Mic
@@ -1567,6 +1612,7 @@ attachments:
       git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
       links:
         - Notebook Preview
+      type: application
       status: passed
     - id: Fiji
       name: Fiji
@@ -1591,14 +1637,17 @@ attachments:
       tags:
         - fiji
         - software
+      type: application
       status: passed
     - id: ilastik
       source: >-
         https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
+      type: application
       status: passed
     - id: HPA-Classification
       source: >-
         https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
+      type: application
       status: passed
 config:
   splash_title: BioImage Model Zoo
