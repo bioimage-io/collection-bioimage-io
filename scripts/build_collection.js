@@ -38,6 +38,7 @@ async function getResourceItemsFromPartner(source) {
   for(let type of ["dataset", "application"]) {
     if (collection[type]) {
       for(let item of collection[type]) {
+        item.type = type;
         items.push(item);
       }
     }
