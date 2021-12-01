@@ -52,6 +52,8 @@ async function main(args) {
   const pendingRdfs = yaml.load(templateStr);
   const passedRdfs = yaml.load(templateStr); // copy template
   const partners = [{id: "zenodo"}].concat(passedRdfs.config.partners)
+  // regroup the attachments as types
+  passedRdfs.attachments = {};
   for(let partner of partners) {
     let items;
     if (partner.id === "zenodo") {
@@ -111,9 +113,12 @@ async function main(args) {
       pendingItems.map(item => item.id)
     );
     pendingRdfs.attachments[partner.id] = pendingItems;
-    passedRdfs.attachments[partner.id] = passedItems;
+    passedItems.forEach(item => {
+      passedRdfs.attachments[item.type] = passedRdfs.attachments[item.type] || [];
+      passedRdfs.attachments[item.type].push(item);
+    });
     newIndexRdf.attachments[partner.id] = items.map(item => {
-      return { id: item.id, status: item.status };
+      return { id: item.id, status: item.status, type: item.type };
     });
   }
   await writeFile("./dist/rdf.yaml", yaml.dump(passedRdfs));

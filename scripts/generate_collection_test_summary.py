@@ -31,7 +31,7 @@ def parse_args():
 
 def get_zenodo_community_rersources(collection_path: Path):
     collection = yaml.load(collection_path)
-    return {entry["id"]: entry["source"] for entry in collection["attachments"]["zenodo"]}
+    return {entry["id"]: entry["source"] for entry in collection["attachments"]["model"]}
 
 
 def main(collection_path: Path, output_summary_path: Path, weights_format: WeightsFormat) -> int:
