@@ -31,6 +31,71 @@ const zenodoClient = new ZenodoClient(
   siteConfig.zenodo_config.use_sandbox
 );
 
+async function parseImJoyPlugin(source){
+  let content = await (await fetch(source)).text();
+    const parsed = /<config(.*?)>(.*?)<\/config>/gm.exec(content);
+    const type = parsed[1];
+    let item;
+    if(type=="yaml"){
+      item = yaml.load(parsed[2]);
+    }
+    else{
+      item = JSON.parse(parsed[2]);
+    }
+
+      
+    const app_config = {
+      "id": item["id"],
+      "type": "application",
+      "source": source,
+      "passive": item["passive"] || false,
+    }
+    fields = [
+      "icon",
+      "name",
+      "version",
+      "api_version",
+      "description",
+      "license",
+      "requirements",
+      "dependencies",
+      "env",
+      "passive",
+    ]
+    for(let f of fields){
+      if(plugin_config.includes(f))
+          app_config[f] = plugin_config[f]
+    }
+    tags = plugin_config.tags || []
+    if(!tags.includes("bioengine"))
+      tags.push("bioengine")
+    app_config["tags"] = tags
+      
+    app_config["documentation"] = plugin_config.docs
+    app_config["covers"] = plugin_config.cover
+    // make sure we have a list
+    if(!app_config["covers"]){
+      app_config["covers"] = []
+    }else if(typeof app_config["covers"] !== "object"){
+      app_config["covers"] = [app_config["covers"]]
+    }
+
+    app_config["badges"] = plugin_config.badge
+    if(!app_config["badges"]){
+      app_config["badges"] = []
+    }else if(typeof app_config["badges"] !== "object"){
+      app_config["badges"] = [app_config["badges"]]
+    }
+
+    app_config["authors"] = plugin_config.author
+    if(!app_config["authors"]){
+      app_config["authors"] = []
+    }else if(typeof app_config["authors"] !== "object"){
+      app_config["authors"] = [app_config["authors"]]
+    }
+
+  return app_config
+}
 async function getResourceItemsFromPartner(source) {
   console.log("Getting resource items from " + source);
   const collection = yaml.load(await (await fetch(source)).text());
@@ -39,7 +104,11 @@ async function getResourceItemsFromPartner(source) {
     if (collection[type]) {
       for(let item of collection[type]) {
         item.type = type;
-        items.push(item);
+        if(type === "application" && item.source && item.source.endsWith(".imjoy.html")){
+          // item = await parseImJoyPlugin(item.source)
+        }
+        else
+          items.push(item);
       }
     }
   }
