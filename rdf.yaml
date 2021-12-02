@@ -344,11 +344,6 @@ attachments:
       type: dataset
       status: passed
   application:
-    - id: Notebook Preview
-      source: >-
-        https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
-      type: application
-      status: passed
     - id: Notebook_U-Net_2D_ZeroCostDL4Mic
       name: U-Net (2D) - ZeroCostDL4Mic
       description: >-
@@ -1637,16 +1632,6 @@ attachments:
       tags:
         - fiji
         - software
-      type: application
-      status: passed
-    - id: ilastik
-      source: >-
-        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
-      type: application
-      status: passed
-    - id: HPA-Classification
-      source: >-
-        https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
       type: application
       status: passed
 config:
