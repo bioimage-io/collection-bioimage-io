@@ -343,6 +343,57 @@ attachments:
           https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
       type: dataset
       status: passed
+    - id: MoNuSeg_digital_pathology_miccai2018
+      name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
+      description: >-
+        Labelled images for instance segmentation of cell nuclei in digital
+        pathology datasets (MoNuSeg 2018 Challenge).
+      cite:
+        - text: Neeraj Kumar et al. Transactions on medical imaging 2020
+          doi: https://doi.org/10.1109/TMI.2019.2947628
+      authors:
+        - name: DeepImageJ
+          affiliation: EPFL, UC3M
+      documentation: https://monuseg.grand-challenge.org/
+      tags:
+        - StarDist
+        - segmentation
+        - pathology
+        - H&E
+        - histology
+        - 2D
+        - nuclei segmentation
+        - digital pathology
+      source: https://monuseg.grand-challenge.org/Data/
+      covers:
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg1.jpg
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg2.jpg
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg3.jpg
+      type: dataset
+      status: passed
+    - id: LuCa-7color
+      name: LuCa-7color
+      description: >-
+        Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer
+        (http://www.perkinelmer.com)
+      authors:
+        - Perkin Elmer
+      tags:
+        - OME-TIFF
+      license: CC-BY 4.0
+      download_url: >-
+        https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
+      source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
+      covers:
+        - >-
+          https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png
+      links:
+        - vizarr
+      type: dataset
+      status: passed
   application:
     - id: Notebook_U-Net_2D_ZeroCostDL4Mic
       name: U-Net (2D) - ZeroCostDL4Mic
@@ -1608,6 +1659,165 @@ attachments:
       links:
         - Notebook Preview
       type: application
+      status: passed
+    - id: deepimagej-web
+      type: application
+      name: DeepImageJ
+      description: >-
+        DeepImageJ is a user-friendly plugin that enables the use of pre-trained
+        deep learning models in ImageJ and Fiji.
+      source: https://deepimagej.github.io/deepimagej/index.html
+      cite:
+        text: >-
+          Gómez-de-Mariscal, E., García-López-de-Haro, C., Ouyang, W., Donati,
+          L., Lundberg E., Unser, M., Muñoz-Barrutia, A. and Sage, D.
+          DeepImageJ: A user-friendly plugin to run deep learning models in
+          ImageJ, BioRxiv, 2019
+        doi: https://doi.org/10.1101/799270
+      authors:
+        - name: DeepImageJ
+          affiliation: EPFL, UC3M
+      icon: >-
+        https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+      documentation: https://deepimagej.github.io/deepimagej/index.html
+      git_repo: https://github.com/deepimagej/deepimagej-plugin
+      passive: true
+      tags:
+        - deepimagej
+        - software
+      config:
+        supported_weight_formats:
+          - tensorflow_saved_model_bundle
+      status: passed
+    - id: unet-pancreaticcellsegmentation
+      type: application
+      name: 2D U-Net for binary segmentation
+      description: >-
+        Easy example to define a 2D U-Net for segmentation with Keras and import
+        it into DeepImageJ format
+      cite:
+        - text: >-
+            Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell
+            counting, detection, and morphometry. Nat Methods 16, 67–70 (2019).
+          doi: https://doi.org/10.1038/s41592-018-0261-2
+      authors:
+        - name: Ignacio Arganda-Carreras
+          affiliation: EPFL, UC3M
+        - name: DeepImageJ
+          affiliation: EPFL, UC3M
+      covers:
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
+      badges:
+        - label: Open in Colab
+          icon: https://colab.research.google.com/assets/colab-badge.svg
+          url: >-
+            https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+      documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+      tags:
+        - unet
+        - segmentation
+        - deepimagej
+        - notebook
+        - training
+        - cell-segmentation
+      source: >-
+        https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+      links:
+        - UNet2DPancreaticSegmentation
+      status: passed
+    - id: smlm-deepimagej
+      type: application
+      name: SMLM-superresolution
+      description: >-
+        Single molecule localization microscopy (SMLM) processing using
+        deepImageJ and ThunderSTORM in an ImageJ macro.
+      covers:
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/cover.png
+      download_url: >-
+        https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+      source: >-
+        https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+      cite:
+        - text: Lucas von Chamier et al., Nature Communications 2021
+          doi: https://doi.org/10.1038/s41467-021-22518-0
+        - text: Gómez de Mariscal et al. bioRxiv 2019
+          doi: https://doi.org/10.1101/799270
+        - text: M. Ovesný, et al., Bioinformatics 2014
+          doi: https://doi.org/10.1093/bioinformatics/btu202
+      authors:
+        - name: DeepImageJ
+          affiliation: EPFL, UC3M
+      icon: >-
+        https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+      documentation: >-
+        https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
+      tags:
+        - deepimagej
+        - smlm
+        - macro
+        - deepstorm
+        - thunderstorm
+        - workflow
+        - pipeline
+        - superresolution
+      status: passed
+    - id: EVsTEMsegmentationFRUNet
+      type: application
+      name: Small extracellular vesicle instance segmentation (FRU-Net)
+      description: >-
+        Ready to use notebook for the segmentation of small extrcaellular
+        vesicles in transmission electron microscopy (TEM) images. The notebook
+        is optimized to use it in Google Colaboratory. It will download the
+        original code and dataset, and make the inference connecting with
+        Google's GPU.
+      cite:
+        - text: >-
+            Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of
+            SmallExtracellular Vesicles in Transmission Electron Microscopy
+            Images Scientific Reports, (2019)
+          doi: https://doi.org/10.1038/s41598-019-49431-3
+      authors:
+        - name: Estibaliz Gómez-de-Mariscal
+          affiliation: Universidad Carlos III de Madrid
+        - name: Martin Maška
+          affiliation: Masaryk University
+        - name: Anna Kotrbová
+          affiliation: Masaryk University
+        - name: Vendula Pospíchalová
+          affiliation: Masaryk University
+        - name: Pavel Matula
+          affiliation: Masaryk University
+        - name: Arrate Muñoz-Barrutia
+          affiliation: Universidad Carlos III de Madrid
+      covers:
+        - >-
+          https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-019-49431-3/MediaObjects/41598_2019_49431_Fig1_HTML.png
+        - >-
+          https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg
+      badges:
+        - label: Open in Colab
+          icon: https://colab.research.google.com/assets/colab-badge.svg
+          url: >-
+            https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb
+      documentation: >-
+        https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+      tags:
+        - extracellular-vesicles
+        - segmentation
+        - TEM
+        - notebook
+        - model-inference
+        - google-colab
+        - workflow
+        - pipeline
+      source: >-
+        https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
+      links:
+        - FRUNet2DsEVSegmentation
       status: passed
     - id: Fiji
       name: Fiji
