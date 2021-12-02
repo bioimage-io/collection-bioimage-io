@@ -78,7 +78,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8, 3.9]
-        weights-format: [pytorch_state_dict, pytorch_script, tensorflow_saved_model_bundle, onnx]
+        weights-format: [pytorch_state_dict, torchscript, tensorflow_saved_model_bundle, onnx]
 
     needs: build-collection
     steps:
