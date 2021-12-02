@@ -82,7 +82,7 @@ attachments:
       source: https://doi.org/10.5281/zenodo.3713326
       covers:
         - >-
-          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_dataset.png
       type: dataset
       status: passed
     - id: Dataset_CARE_2D_ZeroCostDL4Mic
@@ -181,7 +181,7 @@ attachments:
       source: https://doi.org/10.5281/zenodo.3959089
       covers:
         - >-
-          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_dataset.png
       type: dataset
       status: passed
     - id: Dataset_CycleGAN_ZeroCostDL4Mic
@@ -204,7 +204,7 @@ attachments:
       source: https://doi.org/10.5281/zenodo.3941884
       covers:
         - >-
-          https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/unpaired-image_translation.png
+          https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png
       type: dataset
       status: passed
     - id: Dataset_pix2pix_ZeroCostDL4Mic
@@ -225,7 +225,7 @@ attachments:
       source: https://doi.org/10.5281/zenodo.3941889
       covers:
         - >-
-          https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/paired-image_translation.png
+          https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/pix2pix_dataset.png
       type: dataset
       status: passed
     - id: Dataset_YOLOv2_ZeroCostDL4Mic
@@ -249,7 +249,7 @@ attachments:
       source: https://doi.org/10.5281/zenodo.3941908
       covers:
         - >-
-          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png
       type: dataset
       status: passed
     - id: Dataset_StarDist_Fluo_ZeroCostDL4Mic
