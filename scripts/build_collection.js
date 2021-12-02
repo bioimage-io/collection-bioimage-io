@@ -119,11 +119,12 @@ async function main(args) {
   if (!fs.existsSync("./dist")) await mkdir("./dist");
   const templateStr = await readFile(indexRdf);
   const newIndexRdf = yaml.load(templateStr);
-  const pendingRdfs = yaml.load(templateStr);
+  const newRdfs = yaml.load(templateStr);
   const passedRdfs = yaml.load(templateStr); // copy template
   const partners = [{id: "zenodo"}].concat(passedRdfs.config.partners)
   // regroup the attachments as types
   passedRdfs.attachments = {};
+  let newItemCount = 0;
   for(let partner of partners) {
     let items;
     if (partner.id === "zenodo") {
@@ -182,7 +183,8 @@ async function main(args) {
       "Pending rdf items in " + partner.id,
       pendingItems.map(item => item.id)
     );
-    pendingRdfs.attachments[partner.id] = pendingItems;
+    newRdfs.attachments[partner.id] = newItems;
+    newItemCount += newItems.length;
     passedItems.forEach(item => {
       passedRdfs.attachments[item.type] = passedRdfs.attachments[item.type] || [];
       passedRdfs.attachments[item.type].push(item);
@@ -199,8 +201,14 @@ async function main(args) {
     await writeFile("./dist/test-rdf.yaml", yaml.dump(passedRdfs));
   } else { // for the PR
     await writeFile("./new-rdf.yaml", yaml.dump(newIndexRdf));
-    // test only the new items
-    await writeFile("./dist/test-rdf.yaml", yaml.dump(pendingRdfs));
+    if(newItemCount >0){
+      console.log(`Saving ${newItemCount} new items to test-rdf.yaml`)
+      // test only the new items
+      await writeFile("./dist/test-rdf.yaml", yaml.dump(newRdfs));
+    }
+    else{
+      console.log(`No new items for testing, skip producing test-rdf.yaml`)
+    }
   }
 }
 
