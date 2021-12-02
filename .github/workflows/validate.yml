@@ -47,7 +47,7 @@ jobs:
             - [ ] Passed the BioImage.IO Core CI tests
             - [ ] The meta information for the RDF item is complete
               - [ ] The tags is complete and describes the model
-              - [ ] Naming is intuitive
+              - [ ] Naming is intuitive and descriptive, example:  Multi-Organ Nucleus Segmentation (StarDist 2D)
               - [ ] Authors
               - [ ] Documentation is complete
                 * For models, include an overview, describe how the model is trained, what is the training data, how to use the model, how to validate the results and list the references. TODO: Model documentation template.
