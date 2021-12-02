@@ -29,9 +29,9 @@ def parse_args():
     return args
 
 
-def get_zenodo_community_rersources(collection_path: Path):
+def get_model_rersources(collection_path: Path):
     collection = yaml.load(collection_path)
-    return {entry["id"]: entry["source"] for entry in collection["attachments"]["model"]}
+    return {entry["id"]: entry["source"] for entry in collection["attachments"].get("model", {})}
 
 
 def main(collection_path: Path, output_summary_path: Path, weights_format: WeightsFormat) -> int:
@@ -43,7 +43,7 @@ def main(collection_path: Path, output_summary_path: Path, weights_format: Weigh
     TRACEBACK = "traceback"
     output_summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary = {}
-    for id_, source in get_zenodo_community_rersources(collection_path).items():
+    for id_, source in get_model_rersources(collection_path).items():
         s = validate(source)
         static_error = s.get(ERROR, None)
         static_nested_errors = s.get(NESTED_ERRORS, None)
