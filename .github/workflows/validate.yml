@@ -72,15 +72,21 @@ jobs:
       with:
         branch: gh-pages  # The branch the action should deploy to.
         folder: dist  # The folder the action should deploy.
+#    - name: Check which resource types need validation
+#      id: needs_validation
+#      run: |
+#        echo '::set-output name=model::'
+# todo: check test-rdf.yaml for the resource types and set them as outputs of this job
 
   validate-bio-core-mix:
+    needs: build-collection
+    if: -n jobs.build-collection.needs_validation.model
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8, 3.9]
         weights-format: [pytorch_state_dict, torchscript, tensorflow_saved_model_bundle, onnx]
 
-    needs: build-collection
     steps:
     - uses: actions/checkout@v2
     - name: install validation dependencies
