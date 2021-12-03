@@ -72,15 +72,14 @@ jobs:
       with:
         branch: gh-pages  # The branch the action should deploy to.
         folder: dist  # The folder the action should deploy.
-#    - name: Check which resource types need validation
-#      id: needs_validation
-#      run: |
-#        echo '::set-output name=model::'
-# todo: check test-rdf.yaml for the resource types and set them as outputs of this job
+    - name: Check which resource types need validation
+      id: need_validation
+      run: |
+        echo "::set-output name=types::models,notebooks,applications"  # todo: determine this output from a script
 
   validate-bio-core-mix:
     needs: build-collection
-    if: -n jobs.build-collection.needs_validation.model
+    if: contains(jobs.build-collection.need_validation.outputs.types, 'model')
     runs-on: ubuntu-latest
     strategy:
       matrix:
