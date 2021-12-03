@@ -1,0 +1,41 @@
+id: deepimagej/unet-pancreaticcellsegmentation
+type: application
+name: 2D U-Net for binary segmentation
+description: >-
+  Easy example to define a 2D U-Net for segmentation with Keras and import it
+  into DeepImageJ format
+cite:
+  - text: >-
+      Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell
+      counting, detection, and morphometry. Nat Methods 16, 67–70 (2019).
+    doi: https://doi.org/10.1038/s41592-018-0261-2
+authors:
+  - name: Ignacio Arganda-Carreras
+    affiliation: EPFL, UC3M
+  - name: DeepImageJ
+    affiliation: EPFL, UC3M
+covers:
+  - >-
+    https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
+  - >-
+    https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
+badges:
+  - label: Open in Colab
+    icon: https://colab.research.google.com/assets/colab-badge.svg
+    url: >-
+      https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+tags:
+  - unet
+  - segmentation
+  - deepimagej
+  - notebook
+  - training
+  - cell-segmentation
+source: >-
+  https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+links:
+  - UNet2DPancreaticSegmentation
+config:
+  partner: deepimagej
+  status: pending
