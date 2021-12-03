@@ -35,4 +35,4 @@ tags:
   - superresolution
 config:
   partner: deepimagej
-  status: pending
+  status: passed

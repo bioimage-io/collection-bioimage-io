@@ -19,4 +19,4 @@ links:
 type: dataset
 config:
   partner: imjoy
-  status: pending
+  status: passed

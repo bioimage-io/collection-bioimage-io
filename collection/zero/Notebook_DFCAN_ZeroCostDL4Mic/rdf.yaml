@@ -45,4 +45,4 @@ links:
 type: application
 config:
   partner: zero
-  status: pending
+  status: passed

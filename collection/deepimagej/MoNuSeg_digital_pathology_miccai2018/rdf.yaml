@@ -30,4 +30,4 @@ covers:
 type: dataset
 config:
   partner: deepimagej
-  status: pending
+  status: passed

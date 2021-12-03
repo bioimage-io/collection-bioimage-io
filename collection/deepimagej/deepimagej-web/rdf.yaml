@@ -25,4 +25,4 @@ config:
   supported_weight_formats:
     - tensorflow_saved_model_bundle
   partner: deepimagej
-  status: pending
+  status: passed

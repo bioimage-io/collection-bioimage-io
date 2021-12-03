@@ -22,4 +22,4 @@ tags:
 type: application
 config:
   partner: fiji
-  status: pending
+  status: passed

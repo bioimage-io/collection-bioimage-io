@@ -52,4 +52,4 @@ links:
   - FRUNet2DsEVSegmentation
 config:
   partner: deepimagej
-  status: pending
+  status: passed

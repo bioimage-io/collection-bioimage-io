@@ -23,4 +23,4 @@ covers:
 type: dataset
 config:
   partner: zero
-  status: pending
+  status: passed

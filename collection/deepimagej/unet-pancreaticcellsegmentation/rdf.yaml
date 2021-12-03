@@ -38,4 +38,4 @@ links:
   - UNet2DPancreaticSegmentation
 config:
   partner: deepimagej
-  status: pending
+  status: passed
