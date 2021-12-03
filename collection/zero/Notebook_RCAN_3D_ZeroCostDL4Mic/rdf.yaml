@@ -1,0 +1,46 @@
+id: zero/Notebook_RCAN_3D_ZeroCostDL4Mic
+name: RCAN (3D) - ZeroCostDL4Mic
+description: >-
+  RCAN is a neural network capable of image restoration from corrupted
+  bio-images. The network allows image denoising and resolution improvement in
+  3D images, in a supervised training manner. The function of the network is
+  essentially determined by the set of images provided in the training dataset.
+  For instance, if noisy images are provided as input and high signal-to-noise
+  ratio images are provided as targets, the network will perform denoising. Note
+  - visit the ZeroCostDL4Mic wiki to check the original publications this
+  network is based on and make sure you cite these.
+cite:
+  - text: >-
+      von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep
+      learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021).
+      https://doi.org/10.1038/s41467-021-22518-0
+    doi: https://doi.org/10.1038/s41467-021-22518-0
+authors:
+  - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+covers:
+  - >-
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_CARE_notebook.png
+badges:
+  - label: Open in Colab
+    icon: https://colab.research.google.com/assets/colab-badge.svg
+    url: >-
+      https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
+documentation: >-
+  https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+tags:
+  - colab
+  - notebook
+  - CARE
+  - denoising
+  - ZeroCostDL4Mic
+  - 3D
+source: >-
+  https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
+git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+links:
+  - Notebook Preview
+  - Dataset_CARE_3D_ZeroCostDL4Mic
+type: application
+config:
+  partner: zero
+  status: passed

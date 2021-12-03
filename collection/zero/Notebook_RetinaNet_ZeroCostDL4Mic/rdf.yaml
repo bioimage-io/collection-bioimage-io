@@ -1,0 +1,41 @@
+id: zero/Notebook_RetinaNet_ZeroCostDL4Mic
+name: RetinaNet - ZeroCostDL4Mic
+description: >-
+  RetinaNet is a is an object detection network, which identifies objects in
+  images and draws bounding boxes around them.
+cite:
+  - text: >-
+      von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep
+      learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021).
+      https://doi.org/10.1038/s41467-021-22518-0
+    doi: https://doi.org/10.1038/s41467-021-22518-0
+authors:
+  - Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
+covers:
+  - >-
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
+  - >-
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
+badges:
+  - label: Open in Colab
+    icon: https://colab.research.google.com/assets/colab-badge.svg
+    url: >-
+      https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
+documentation: >-
+  https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+tags:
+  - colab
+  - notebook
+  - RetinaNet
+  - object detection
+  - ZeroCostDL4Mic
+source: >-
+  https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
+git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+links:
+  - Notebook Preview
+  - Dataset_YOLOv2_ZeroCostDL4Mic
+type: application
+config:
+  partner: zero
+  status: passed

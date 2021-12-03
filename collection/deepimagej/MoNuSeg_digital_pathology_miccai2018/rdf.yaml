@@ -1,0 +1,33 @@
+id: deepimagej/MoNuSeg_digital_pathology_miccai2018
+name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
+description: >-
+  Labelled images for instance segmentation of cell nuclei in digital pathology
+  datasets (MoNuSeg 2018 Challenge).
+cite:
+  - text: Neeraj Kumar et al. Transactions on medical imaging 2020
+    doi: https://doi.org/10.1109/TMI.2019.2947628
+authors:
+  - name: DeepImageJ
+    affiliation: EPFL, UC3M
+documentation: https://monuseg.grand-challenge.org/
+tags:
+  - StarDist
+  - segmentation
+  - pathology
+  - H&E
+  - histology
+  - 2D
+  - nuclei segmentation
+  - digital pathology
+source: https://monuseg.grand-challenge.org/Data/
+covers:
+  - >-
+    https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg1.jpg
+  - >-
+    https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg2.jpg
+  - >-
+    https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg3.jpg
+type: dataset
+config:
+  partner: deepimagej
+  status: passed

@@ -18,7 +18,6 @@ if (!globalThis.localStorage) {
 }
 
 const ZENODO_PREFIX = "10.5281";
-
 const zenodoBaseURL = siteConfig.zenodo_config.use_sandbox
   ? "https://sandbox.zenodo.org"
   : "https://zenodo.org";
@@ -94,6 +93,7 @@ async function parseImJoyPlugin(source) {
 
   return app_config;
 }
+
 async function getResourceItemsFromPartner(source) {
   console.log("Getting resource items from " + source);
   const collection = yaml.load(await (await fetch(source)).text());
@@ -115,17 +115,13 @@ async function getResourceItemsFromPartner(source) {
   return { config: collection.config, items: items };
 }
 
-async function main(args) {
+async function main() {
   if (!fs.existsSync("./dist")) await mkdir("./dist");
   if (!fs.existsSync("./collection")) await mkdir("./collection");
   const templateStr = await readFile(indexRdf);
-  const passedRdfs = yaml.load(templateStr); // copy template
-  const pendingRdfs = yaml.load(templateStr); // copy template
-  // regroup the attachments as types
-  passedRdfs.attachments = {};
-  pendingRdfs.attachments = {};
-
-  const currentItems = [];
+  const template = yaml.load(templateStr); // copy template
+  const partners = [{ id: ZENODO_PREFIX }].concat(template.config.partners);
+  const allCurrentItems = [];
   fs.readdirSync("collection").forEach(folder => {
     // if folder is a folder
     if (fs.lstatSync(`collection/${folder}`).isDirectory()) {
@@ -135,47 +131,88 @@ async function main(args) {
             const item = yaml.load(
               fs.readFileSync(`collection/${folder}/${subfolder}/rdf.yaml`)
             );
-            currentItems.push(item);
+            // make sure we have the right partner
+            item.config = item.config || {};
+            item.config.partner = folder;
+            allCurrentItems.push(item);
           }
         }
       });
     }
   });
-  const passedItems = currentItems.filter(
-    item => item.config && item.config.status === "passed"
-  );
-  const pendingItems = currentItems.filter(
-    item => item.config && item.config.status === "pending"
-  );
-  console.log(
-    "Passed rdf items",
-    passedItems.map(item => item.id)
-  );
-  console.log(
-    "Pending rdf items",
-    pendingItems.map(item => item.id)
-  );
+  for (let partner of partners) {
+    let items;
+    if (partner.id === ZENODO_PREFIX) {
+      items = await zenodoClient.getResourceItems({
+        community: null, // siteConfig.zenodo_config.community,
+        size: 10000 // only show the first 10000 items
+      });
+    } else {
+      const resources = await getResourceItemsFromPartner(partner.source);
+      if (resources.config.id !== partner.id) {
+        throw new Error("Partner id does not match source id");
+      }
+      for (let k of Object.keys(resources.config)) {
+        partner[k] = resources.config[k];
+      }
+      items = resources.items;
+      // place items under name scope
+      items.forEach(item => {
+        item.id = partner.id + "/" + item.id;
+      });
+    }
 
-  passedItems.forEach(item => {
-    passedRdfs.attachments[item.type] = passedRdfs.attachments[item.type] || [];
-    passedRdfs.attachments[item.type].push(item);
-  }); 
-  await writeFile("./dist/rdf.yaml", yaml.dump(passedRdfs));
-  await writeFile("./dist/rdf.json", JSON.stringify(passedRdfs));
-
-  if (args.includes("--pending")) { 
-    pendingItems.forEach(item => {
-      pendingRdfs.attachments[item.type] = pendingRdfs.attachments[item.type] || [];
-      pendingRdfs.attachments[item.type].push(item);
+    const currentItems = allCurrentItems.filter(item => {
+      return item.config.partner === partner.id;
     });
-    await writeFile("./dist/test-rdf.yaml", yaml.dump(pendingRdfs));
-    await writeFile("./dist/test-rdf.json", JSON.stringify(pendingRdfs));
-  }
-  else{
-    await writeFile("./dist/test-rdf.yaml", yaml.dump(passedRdfs));
-    await writeFile("./dist/test-rdf.json", JSON.stringify(passedRdfs));
+    const newItems = [];
+    items.forEach(item => {
+      if (item.config && item.config._deposit) {
+        delete item.config._deposit;
+      }
+      const matched = currentItems.find(i => i.id === item.id);
+      item.config = item.config || {};
+      item.config.partner = partner.id;
+      if (!matched) {
+        item.config.status = "pending";
+        newItems.push(item);
+      } else {
+        item.config.status = matched.config.status;
+      }
+    });
+    const removedItems = [];
+    currentItems.forEach(item => {
+      const matched = items.find(i => i.id === item.id);
+      item.config = item.config || {};
+      if (!matched) {
+        item.config.status = "deleted";
+        removedItems.push(item);
+      }
+    });
+    const passedItems = items.filter(item => item.config.status === "passed");
+    const pendingItems = items.filter(item => item.config.status === "pending");
+    console.log(
+      "Passed rdf items in " + partner.id,
+      passedItems.map(item => item.id)
+    );
+    console.log(
+      "New rdf items in " + partner.id,
+      newItems.map(item => item.id)
+    );
+    console.log(
+      "Removed rdf items in " + partner.id,
+      removedItems.map(item => item.id)
+    );
+    console.log(
+      "Pending rdf items in " + partner.id,
+      pendingItems.map(item => item.id)
+    );
+    for (let item of items) {
+      if (!fs.existsSync("./collection/" + item.id))
+        await mkdir("./collection/" + item.id, { recursive: true });
+      await writeFile(`./collection/${item.id}/rdf.yaml`, yaml.dump(item));
+    }
   }
 }
 
-var args = process.argv.slice(2);
-main(args);
+main();
