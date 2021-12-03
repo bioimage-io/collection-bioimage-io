@@ -27,7 +27,10 @@ jobs:
     - run: npm ci
     - name: Check for new RDF items and build the whole collection
       if: github.ref == 'refs/heads/main' # for main branch
-      run: npm run build-overwrite
+      run: npm run fetch
+    - name: Check for new RDF items and build the whole collection
+      if: github.ref == 'refs/heads/main' # for main branch
+      run: npm run build
     - name: Create Pull Request
       if: github.ref == 'refs/heads/main' # for main branch
       id: cpr
@@ -57,9 +60,9 @@ jobs:
           RDF
           automated pr
         draft: false
-    - name: Build the test collection with only new RDF items
-      if: github.ref != 'refs/heads/main' # for the PR
-      run: npm run build
+    - name: Check for new RDF items and build the whole collection
+      if: github.ref != 'refs/heads/main' # for the PR branch
+      run: npm run build-pending
     - name: "Upload npm output"
       uses: actions/upload-artifact@v2
       with:
