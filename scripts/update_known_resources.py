@@ -1,6 +1,7 @@
 import json
 import sys
 import warnings
+from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Literal, Union
@@ -16,7 +17,7 @@ yaml = YAML(typ="safe")
 @dataclass
 class Args(TypedNamespace):
     collection: Path = field(default=Path("collection"), metadata=dict(help="path to collection folder"))
-    new_resources: Path = field(default=Path("new_resources"), metadata=dict(help="folder to save new resources to"))
+    # new_resources: Path = field(default=Path("new_resources"), metadata=dict(help="folder to save new resources to"))
 
 
 parser = Args.get_parser("Fetch new bioimage.io resources.", add_help=True)
@@ -54,12 +55,13 @@ def write_concept(
     else:  # create new concept
         concept = {"status": "pending", "versions": [new_version]}
 
+    assert isinstance(concept, dict)
     concept_path.parent.mkdir(parents=True, exist_ok=True)
     yaml.dump(concept, concept_path)
     return concept
 
 
-def write_rdf(*, rdf_urls: List[str], doi, concept_doi, rdf_path: Path) -> dict:
+def get_rdf(*, rdf_urls: List[str], doi, concept_doi) -> dict:
     if len(rdf_urls) == 1:
         r = requests.get(rdf_urls[0])
         if r.status_code != 200:
@@ -67,7 +69,7 @@ def write_rdf(*, rdf_urls: List[str], doi, concept_doi, rdf_path: Path) -> dict:
                 f"Could not get rdf.yaml for new version {doi} of {concept_doi} ({r.status_code}: {r.reason}); "
                 "skipping update"
             )
-        rdf = r.json()
+        rdf = yaml.load(r.text)
         if not isinstance(rdf, dict):
             warnings.warn(
                 f"Found invalid rdf.yaml (not a dict) for new version {doi} of {concept_doi}; " "writing empty rdf.yaml"
@@ -79,23 +81,28 @@ def write_rdf(*, rdf_urls: List[str], doi, concept_doi, rdf_path: Path) -> dict:
         )
         rdf = {}
 
-    yaml.dump(rdf, rdf_path)
     return rdf
 
 
-def write_card(card_path: Path, *, rdf: dict, concept: dict):
-    """general version of card to be shown on bioimage.io; maybe refined after resource validation"""
-
+# def write_card_and_get_type(card_path: Path, *, concept: dict, doi: str) -> Optional[str]:
+#     """general version of card to be shown on bioimage.io; maybe refined after resource validation"""
+#     try:
+#         node = load_raw_resource_description(doi)
+#
+#         return node.type
+#     except Exception as e:
+#         warnings.warn(f"invalid resource at {doi}")
+#         return None
 
 def main(args: Args):
-    updated_concepts = set()
-    new_resources = {"model": [], "rdf": []}
+    updated_concepts = defaultdict(list)
     validation_cases = {"model": [], "rdf": []}
-    old_hit = False
-    for page in range(10):
-        r = requests.get(
-            f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=0&keywords=bioimage.io"
-        )
+    stop = False
+    soft_validation_case_limit = 230  # gh actions matrix limit: 256
+    for page in range(1, 10):
+        zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
+        print(zenodo_request)
+        r = requests.get(zenodo_request)
         if not r.status_code == 200:
             warnings.warn(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
             break
@@ -110,30 +117,21 @@ def main(args: Args):
             created = hit["created"]
             new_version = {"doi": doi, "created": created, "status": "pending"}
 
-            concept_path = args.collection / concept_doi / "concept.yaml"  # to be pushed to main
-            card_path = (
-                args.new_resources / doi / "card.json"
-            )  # to be pushed if this version is the latest on merge of concept PR
-            rdf_path = args.new_resources / doi / "rdf.yaml"  # basis for validation
-
+            concept_path = args.collection / concept_doi / "concept.yaml"
             concept = write_concept(
                 concept_path=concept_path, concept_doi=concept_doi, doi=doi, new_version=new_version
             )
-            if concept == "blocked":
+            if concept in ("blocked", "old_hit"):
                 continue
-            elif concept == "old_hit":
-                old_hit = True
-                break
             else:
                 assert isinstance(concept, dict)
 
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
-            rdf = write_rdf(rdf_urls=rdf_urls, doi=doi, concept_doi=concept_doi, rdf_path=rdf_path)
-            write_card(card_path, concept=concept, rdf=rdf)
+            rdf = get_rdf(rdf_urls=rdf_urls, doi=doi, concept_doi=concept_doi)
 
             # categorize rdf by type (to know what kind of validation to run)
             type_ = rdf.get("type")
-            if type_ not in new_resources:
+            if type_ not in validation_cases:
                 type_ = "rdf"
 
             if type_ == "model":
@@ -150,16 +148,22 @@ def main(args: Args):
             else:
                 validation_cases[type_].append({"doi": doi})
 
-            new_resources[type_].append({"doi": doi, "concept_doi": concept_doi})
-            updated_concepts.add(concept_doi)
-        if old_hit:
+            updated_concepts[concept_doi].append(doi)
+            if n_validation_cases := sum(map(len, validation_cases.values())) >= soft_validation_case_limit:
+                warnings.warn(f"Stopping after reaching soft limit {soft_validation_case_limit} with {n_validation_cases} validation cases.")
+                stop = True
+                break
+
+        if stop:
             break
 
-    for type_, entries in new_resources:
-        set_gh_actions_output(f"{type_}_matrix", json.dumps({"resource": entries}))
+    for type_, cases in validation_cases.items():
+        set_gh_actions_output(f"{type_}_matrix", json.dumps({"validation_case": cases}))
 
-    set_gh_actions_output(f"{type_}_matrix", json.dumps({"resource": entries}))
-    # set_gh_actions_output("updated_concepts_matrix", json.dumps({"concept_doi": list(updated_concepts)}))
+    set_gh_actions_output(
+        "updated_concepts_matrix",
+        json.dumps({"update": [{"concept_doi": k, "new_dois": v} for k, v in updated_concepts.items()]}),
+    )
 
 
 if __name__ == "__main__":

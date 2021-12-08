@@ -18,16 +18,16 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: install deps
-      run: pip install dataclass-argparse, requests, ruamel.yaml
+      run: pip install typer, requests, ruamel.yaml
     - name: update known resources
       id: update_known
-      run: python scripts/update_known_resources.py collection, dist/new_resources
-    - name: "Upload new resources artefact"
-      uses: actions/upload-artifact@v2
-      with:
-        name: new_resources
-        path: dist/new_resources
-        retention-days: 1
+      run: python scripts/update_known_resources.py --collection collection
+#    - name: "Upload new resources artefact"
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: new_resources
+#        path: dist/new_resources
+#        retention-days: 1
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,21 +43,71 @@ jobs:
     needs: new-resources
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # resource: [{concept_doi: ..., doi: ...}, ...]
+      fail-fast: false
+      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # validation_case: [{doi: ..., weight_format: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-    - run: mkdir -p dist
-    - uses: actions/download-artifact@v2
+#    - run: mkdir -p dist
+#    - uses: actions/download-artifact@v2
+#      with:
+#        name: new_resources
+#        path: dist/new_resources
+    - name: install validation dependencies
+      uses: conda-incubator/setup-miniconda@v2
       with:
-        name: new_resources
-        path: dist/new_resources
+        auto-update-conda: true
+        mamba-version: "*"
+        channel-priority: strict
+        activate-environment: bio-spec
+        environment-file: dev/environment-mix.yaml  # todo: install deps from rdf
+        python-version: 3.8
+    - name: validate ${{ matrix.validation_case }}
+      shell: bash -l {0}
+      run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.validation_case.doi }} ${{ matrix.validation_case.weight_format }}
 
-  update-concpets:
-    needs: [validate-new-models]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}
+
+#  validate-new-models:
+#    needs: new-resources
+#    runs-on: ubuntu-latest
+#    strategy:
+#      fail-fast: false
+#      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # validation_case: [{doi: ..., weight_format: ...}, ...]
+#
+#    steps:
+#    - uses: actions/checkout@v2
+#      with:
+#        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+#        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+##    - run: mkdir -p dist
+##    - uses: actions/download-artifact@v2
+##      with:
+##        name: new_resources
+##        path: dist/new_resources
+#    - name: install validation dependencies
+#      uses: conda-incubator/setup-miniconda@v2
+#      with:
+#        auto-update-conda: true
+#        mamba-version: "*"
+#        channel-priority: strict
+#        activate-environment: bio-spec
+#        environment-file: dev/environment-mix.yaml  # todo: install deps from rdf
+#        python-version: 3.8
+#    - name: validate ${{ matrix.validation_case }}
+#      shell: bash -l {0}
+#      run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.validation_case.doi }} ${{ matrix.validation_case.weight_format }}
+#    - name: "Upload new resources artefact"
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: ${{ matrix.validation_case.doi }}_validation_summary
+#        path: dist/summaries
+#        retention-days: 90  # todo: what if PR is merged after 90 days?? --> close PR automatically and redo test on reopen
+#
+#  update-concpets:
+#    needs: [validate-new-models]
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}
