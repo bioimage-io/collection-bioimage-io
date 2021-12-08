@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.8]
         weights-format: [pytorch_state_dict, torchscript, tensorflow_saved_model_bundle, onnx]
 
     needs: build-collection
