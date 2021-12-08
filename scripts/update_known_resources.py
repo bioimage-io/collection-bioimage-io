@@ -7,20 +7,10 @@ from pathlib import Path
 from typing import List, Literal, Union
 
 import requests
+import typer
 from ruamel.yaml import YAML
 
-from dataclass_argparse import TypedNamespace
-
 yaml = YAML(typ="safe")
-
-
-@dataclass
-class Args(TypedNamespace):
-    collection: Path = field(default=Path("collection"), metadata=dict(help="path to collection folder"))
-    # new_resources: Path = field(default=Path("new_resources"), metadata=dict(help="folder to save new resources to"))
-
-
-parser = Args.get_parser("Fetch new bioimage.io resources.", add_help=True)
 
 
 def set_gh_actions_output(name: str, output: str):
@@ -94,11 +84,12 @@ def get_rdf(*, rdf_urls: List[str], doi, concept_doi) -> dict:
 #         warnings.warn(f"invalid resource at {doi}")
 #         return None
 
-def main(args: Args):
+
+def main(collection_folder: Path = Path("collection")) -> int:
     updated_concepts = defaultdict(list)
-    validation_cases = {"model": [], "rdf": []}
+    # validation_cases = {"model": [], "rdf": []}
     stop = False
-    soft_validation_case_limit = 230  # gh actions matrix limit: 256
+    # soft_validation_case_limit = 230  # gh actions matrix limit: 256
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         print(zenodo_request)
@@ -117,7 +108,7 @@ def main(args: Args):
             created = hit["created"]
             new_version = {"doi": doi, "created": created, "status": "pending"}
 
-            concept_path = args.collection / concept_doi / "concept.yaml"
+            concept_path = collection_folder / concept_doi / "concept.yaml"
             concept = write_concept(
                 concept_path=concept_path, concept_doi=concept_doi, doi=doi, new_version=new_version
             )
@@ -126,46 +117,46 @@ def main(args: Args):
             else:
                 assert isinstance(concept, dict)
 
-            rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
-            rdf = get_rdf(rdf_urls=rdf_urls, doi=doi, concept_doi=concept_doi)
+            # rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
+            # rdf = get_rdf(rdf_urls=rdf_urls, doi=doi, concept_doi=concept_doi)
 
             # categorize rdf by type (to know what kind of validation to run)
-            type_ = rdf.get("type")
-            if type_ not in validation_cases:
-                type_ = "rdf"
-
-            if type_ == "model":
-                # generate validation cases per weight format
-                weight_entries = rdf.get("weights")
-                if not weight_entries or not isinstance(weight_entries, dict):
-                    weight_formats = [""]
-                else:
-                    weight_formats = list(weight_entries)
-
-                for wf in weight_formats:
-                    validation_cases[type_].append({"doi": doi, "weight_format": wf})
-
-            else:
-                validation_cases[type_].append({"doi": doi})
+            # type_ = rdf.get("type")
+            # if type_ not in validation_cases:
+            #     type_ = "rdf"
+            #
+            # if type_ == "model":
+            #     # generate validation cases per weight format
+            #     weight_entries = rdf.get("weights")
+            #     if not weight_entries or not isinstance(weight_entries, dict):
+            #         weight_formats = [""]
+            #     else:
+            #         weight_formats = list(weight_entries)
+            #
+            #     for wf in weight_formats:
+            #         validation_cases[type_].append({"doi": doi, "weight_format": wf})
+            #
+            # else:
+            #     validation_cases[type_].append({"doi": doi})
 
             updated_concepts[concept_doi].append(doi)
-            if n_validation_cases := sum(map(len, validation_cases.values())) >= soft_validation_case_limit:
-                warnings.warn(f"Stopping after reaching soft limit {soft_validation_case_limit} with {n_validation_cases} validation cases.")
-                stop = True
-                break
+            # if n_validation_cases := sum(map(len, validation_cases.values())) >= soft_validation_case_limit:
+            #     warnings.warn(f"Stopping after reaching soft limit {soft_validation_case_limit} with {n_validation_cases} validation cases.")
+            #     stop = True
+            #     break
 
         if stop:
             break
 
-    for type_, cases in validation_cases.items():
-        set_gh_actions_output(f"{type_}_matrix", json.dumps({"validation_case": cases}))
+    # for type_, cases in validation_cases.items():
+    #     set_gh_actions_output(f"{type_}_matrix", json.dumps({"validation_case": cases}))
 
     set_gh_actions_output(
         "updated_concepts_matrix",
         json.dumps({"update": [{"concept_doi": k, "new_dois": v} for k, v in updated_concepts.items()]}),
     )
+    return 0
 
 
 if __name__ == "__main__":
-    args = parser.parse_args()
-    sys.exit(main(args))
+    typer.run(main)

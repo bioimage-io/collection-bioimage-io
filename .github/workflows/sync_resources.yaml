@@ -5,11 +5,11 @@ on:
     branches: [ pyci ]
 
 jobs:
-  new-resources:
+  collect-new-resources:
     runs-on: ubuntu-latest
     outputs:
-      model_matrix: ${{ steps.update_known.outputs.model_matrix }}
-      rdf_matrix: ${{ steps.update_known.outputs.rdf_matrix }}
+#      model_matrix: ${{ steps.update_known.outputs.model_matrix }}
+#      rdf_matrix: ${{ steps.update_known.outputs.rdf_matrix }}
       updated_concepts_matrix: ${{ steps.update_known.outputs.updated_concepts_matrix }}
 
     steps:
@@ -21,13 +21,7 @@ jobs:
       run: pip install typer, requests, ruamel.yaml
     - name: update known resources
       id: update_known
-      run: python scripts/update_known_resources.py --collection collection
-#    - name: "Upload new resources artefact"
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: new_resources
-#        path: dist/new_resources
-#        retention-days: 1
+      run: python scripts/update_known_resources.py collection
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,23 +33,18 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
 
-  validate-new-models:
+  open-prs:
     needs: new-resources
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # validation_case: [{doi: ..., weight_format: ...}, ...]
+      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}  # update: [{concept_doi: ..., dois: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-#    - run: mkdir -p dist
-#    - uses: actions/download-artifact@v2
-#      with:
-#        name: new_resources
-#        path: dist/new_resources
     - name: install validation dependencies
       uses: conda-incubator/setup-miniconda@v2
       with:
@@ -68,6 +57,27 @@ jobs:
     - name: validate ${{ matrix.validation_case }}
       shell: bash -l {0}
       run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.validation_case.doi }} ${{ matrix.validation_case.weight_format }}
+    - name: set resource status to accepted
+      run: python scripts/set_resource_status.py collection ${{ matrix.update.concept_doi }} "${{ matrix.update.dois }}" accepted
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.PAT }} # using a PAT will make sure we can trigger the CI in PR
+        commit-message: 'Update ${{ matrix.update.concept_doi }}'
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: update-${{ matrix.update.concept_doi }}
+        delete-branch: false
+        title: 'Update ${{ matrix.update.concept_doi }}'
+        body: |
+          Update ${{ matrix.update.concept_doi }} with new versions: ${{ matrix.update.dois }}
+#          todo: better pr body
+        labels: |
+          RDF
+          automated pr
+        draft: true
 
 
 #  validate-new-models:
