@@ -1,0 +1,63 @@
+name: sync
+
+on:
+  push:
+    branches: [ pyci ]
+
+jobs:
+  new-resources:
+    runs-on: ubuntu-latest
+    outputs:
+      model_matrix: ${{ steps.update_known.outputs.model_matrix }}
+      rdf_matrix: ${{ steps.update_known.outputs.rdf_matrix }}
+      updated_concepts_matrix: ${{ steps.update_known.outputs.updated_concepts_matrix }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: install deps
+      run: pip install dataclass-argparse, requests, ruamel.yaml
+    - name: update known resources
+      id: update_known
+      run: python scripts/update_known_resources.py collection, dist/new_resources
+    - name: "Upload new resources artefact"
+      uses: actions/upload-artifact@v2
+      with:
+        name: new_resources
+        path: dist/new_resources
+        retention-days: 1
+    - name: Commit files
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+
+  validate-new-models:
+    needs: new-resources
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # resource: [{concept_doi: ..., doi: ...}, ...]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - run: mkdir -p dist
+    - uses: actions/download-artifact@v2
+      with:
+        name: new_resources
+        path: dist/new_resources
+
+  update-concpets:
+    needs: [validate-new-models]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}
