@@ -64,7 +64,7 @@ jobs:
         mamba-version: "*"
         channel-priority: strict
         activate-environment: validate
-        environment-file: dev/new_resources/${{ matrix.case.id }}/${{ matrix.case.weight_format }}_env.yaml
+        environment-file: dist/new_resources/${{ matrix.case.id }}/${{ matrix.case.weight_format }}_env.yaml
         python-version: 3.8
     - name: validate ${{ matrix.case }}
       shell: bash -l {0}
