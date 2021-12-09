@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-new-resources.outputs.model_matrix) }}  # case: [{id: ..., weight_format: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.model_matrix) }}  # case: [{env_name: ..., id: ..., weight_format: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
@@ -63,10 +63,10 @@ jobs:
         auto-update-conda: true
         mamba-version: "*"
         channel-priority: strict
-        activate-environment: validate
+        activate-environment: ${{ matrix.case.env_name }}
         environment-file: dist/new_resources/${{ matrix.case.id }}/${{ matrix.case.weight_format }}_env.yaml
         python-version: 3.8
-    - name: validate ${{ matrix.case }}
+    - name: validate
       shell: bash -l {0}
       run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.case.id }} ${{ matrix.case.weight_format }}
     - name: "Upload validation summary"
@@ -81,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-new-resources.outputs.rdf_matrix) }}  # case: [{id: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.rdf_matrix) }}  # case: [{env_name: ..., id: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
@@ -98,10 +98,10 @@ jobs:
 #        auto-update-conda: true
 #        mamba-version: "*"
 #        channel-priority: strict
-#        activate-environment: validate
+#        activate-environment: ${{ matrix.case.env_name }}
 #        environment-file: dev/new_resources/${{ matrix.case.id }}/${{ matrix.case.weight_format }}_env.yaml
 #        python-version: 3.8
-    - name: validate ${{ matrix.case }}
+    - name: validate
       shell: bash -l {0}
       run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.case.id }}
     - name: "Upload validation summary"

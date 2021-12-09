@@ -183,6 +183,13 @@ def write_conda_env_file(
 #         return None
 
 
+def ensure_valid_conda_env_name(name: str) -> str:
+    for illegal in ("/", " ", ":", "#"):
+        name = name.replace(illegal, "")
+
+    return name or "empty"
+
+
 def main(collection_folder: Path, new_resources: Path) -> int:
     updated_concepts = defaultdict(list)
     validation_cases = {"model": [], "rdf": []}
@@ -236,11 +243,13 @@ def main(collection_folder: Path, new_resources: Path) -> int:
                     weight_formats = list(weight_entries)
 
                 for wf in weight_formats:
-                    validation_cases[type_].append({"id": doi, "weight_format": wf})
+                    validation_cases[type_].append(
+                        {"env_name": ensure_valid_conda_env_name(doi), "id": doi, "weight_format": wf}
+                    )
                     write_conda_env_file(type_, rdf, wf, hit["files"], new_resources / doi / f"{wf}_env.yaml")
 
             else:
-                validation_cases[type_].append({"id": doi})
+                validation_cases[type_].append({"env_name": ensure_valid_conda_env_name(doi), "id": doi})
 
             yaml.dump(hit, new_resources / doi / "hit.yaml")
 
