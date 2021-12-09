@@ -79,7 +79,13 @@ def get_rdf(*, rdf_urls: List[str], doi, concept_doi) -> dict:
 
 
 def write_conda_env_file(
-    type_: Literal["rdf", "model"], rdf: dict, weight_format: str, file_hits: Sequence[dict], path: Path
+    *,
+    type_: Literal["rdf", "model"],
+    rdf: dict,
+    weight_format: str,
+    file_hits: Sequence[dict],
+    path: Path,
+    env_name: str,
 ):
     # minimal env for invalid model rdf to be checked with bioimageio.spec for validation errors only
     conda_env = {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.spec"]}
@@ -166,7 +172,7 @@ def write_conda_env_file(
     else:
         ValueError(type_)
 
-    conda_env["name"] = "validation"
+    conda_env["name"] = env_name
 
     path.parent.mkdir(parents=True, exist_ok=True)
     yaml.dump(conda_env, path)
@@ -246,7 +252,14 @@ def main(collection_folder: Path, new_resources: Path) -> int:
                     validation_cases[type_].append(
                         {"env_name": ensure_valid_conda_env_name(doi), "id": doi, "weight_format": wf}
                     )
-                    write_conda_env_file(type_, rdf, wf, hit["files"], new_resources / doi / f"{wf}_env.yaml")
+                    write_conda_env_file(
+                        type_=type_,
+                        rdf=rdf,
+                        weight_format=wf,
+                        file_hits=hit["files"],
+                        path=new_resources / doi / f"{wf}_env.yaml",
+                        env_name=ensure_valid_conda_env_name(doi),
+                    )
 
             else:
                 validation_cases[type_].append({"env_name": ensure_valid_conda_env_name(doi), "id": doi})
