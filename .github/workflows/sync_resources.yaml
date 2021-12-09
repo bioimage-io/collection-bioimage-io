@@ -108,7 +108,7 @@ jobs:
         retention-days: 1
 
   open-prs:
-    needs: [collect-new-resources, validate-models]
+    needs: [collect-new-resources, validate-models, validate-rdfs]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -128,7 +128,7 @@ jobs:
     - name: set resource status to accepted
       run: python scripts/set_resource_status.py collection ${{ matrix.update.id }} ${{ matrix.update.concept_doi }} "${{ matrix.update.new_version_ids }}" accepted
     - name: update bioimage.io card data
-      run: python scripts/update_card_data.py collection ${{ matrix.update.id }} "${{ matrix.update.dois }}" dist/new_resources
+      run: python scripts/update_card_data.py collection ${{ matrix.update.id }} "${{ matrix.update.new_version_ids }}" dist/new_resources
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
