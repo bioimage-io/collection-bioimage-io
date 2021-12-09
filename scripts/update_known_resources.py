@@ -4,7 +4,7 @@ import warnings
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Literal, Sequence, Union
+from typing import List, Literal, Optional, Sequence, Tuple, Union
 
 import requests
 import typer
@@ -24,7 +24,7 @@ def set_gh_actions_output(name: str, output: str):
 
 
 def write_concept(
-    *, concept_path: Path, concept_doi: str, doi: str, new_version: dict
+    *, concept_path: Path, id_: str, concept_doi: Optional[str], version_id: str, new_version: dict
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if concept_path.exists():
         concept = yaml.load(concept_path)
@@ -32,21 +32,19 @@ def write_concept(
         if concept["status"] == "blocked":
             return "blocked"
         elif concept["status"] in ("accepted", "pending"):
-            assert concept[
-                "versions"
-            ], f"expected at least one existing version for {concept['status']} concept {concept_doi}"
+            assert concept["versions"], f"expected at least one existing version for {concept['status']} concept {id_}"
         else:
             raise ValueError(concept["status"])
 
         for known_version in concept["versions"]:
-            if known_version["doi"] == doi:
+            if known_version["version_id"] == version_id:
                 # fetched resource is known; assume all following older resources have been processed earlier
                 return "old_hit"
 
         # extend concept by new version
         concept["pending_versions"].append(new_version)
     else:  # create new concept
-        concept = {"status": "pending", "versions": [new_version]}
+        concept = {"status": "pending", "versions": [new_version], "id": id_, "concept_doi": concept_doi}
 
     assert isinstance(concept, dict)
     concept_path.parent.mkdir(parents=True, exist_ok=True)
@@ -62,22 +60,27 @@ def get_rdf(*, rdf_urls: List[str], doi, concept_doi) -> dict:
                 f"Could not get rdf.yaml for new version {doi} of {concept_doi} ({r.status_code}: {r.reason}); "
                 "skipping update"
             )
-        rdf = yaml.load(r.text)
-        if not isinstance(rdf, dict):
-            warnings.warn(
-                f"Found invalid rdf.yaml (not a dict) for new version {doi} of {concept_doi}; " "writing empty rdf.yaml"
-            )
             rdf = {}
+        else:
+            rdf = yaml.load(r.text)
+            if not isinstance(rdf, dict):
+                warnings.warn(
+                    f"Found invalid rdf.yaml (not a dict) for new version {doi} of {concept_doi}; "
+                    "writing empty rdf.yaml"
+                )
+                rdf = {}
     else:
         warnings.warn(
             f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; " "writing empty rdf.yaml"
         )
         rdf = {}
-
+        source = None
     return rdf
 
 
-def write_conda_env_file(type_: Literal["rdf", "model"], rdf: dict, weight_format: str, file_hits: Sequence[dict], path: Path):
+def write_conda_env_file(
+    type_: Literal["rdf", "model"], rdf: dict, weight_format: str, file_hits: Sequence[dict], path: Path
+):
     # minimal env for invalid model rdf to be checked with bioimageio.spec for validation errors only
     conda_env = {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.spec"]}
     if type_ == "rdf":
@@ -96,7 +99,11 @@ def write_conda_env_file(type_: Literal["rdf", "model"], rdf: dict, weight_forma
                         if dep_node.manager in ["conda", "pip"]:
                             if isinstance(dep_node.file, Path):
                                 # look for file name in file_hits
-                                dep_file_urls = [file_hit["links"]["self"] for file_hit in file_hits if file_hit["key"] == dep_node.file.name]
+                                dep_file_urls = [
+                                    file_hit["links"]["self"]
+                                    for file_hit in file_hits
+                                    if file_hit["key"] == dep_node.file.name
+                                ]
                                 if len(dep_file_urls) != 1:
                                     raise ValueError(f"Could not get url of dependency file {dep_node.file}")
 
@@ -164,6 +171,7 @@ def write_conda_env_file(type_: Literal["rdf", "model"], rdf: dict, weight_forma
     path.parent.mkdir(parents=True, exist_ok=True)
     yaml.dump(conda_env, path)
 
+
 # def write_card_and_get_type(card_path: Path, *, concept: dict, doi: str) -> Optional[str]:
 #     """general version of card to be shown on bioimage.io; maybe refined after resource validation"""
 #     try:
@@ -196,11 +204,15 @@ def main(collection_folder: Path = Path("collection"), new_resources: Path = Pat
             concept_doi = hit["conceptdoi"]
             doi = hit["doi"]  # "version" doi
             created = hit["created"]
-            new_version = {"doi": doi, "created": created, "status": "pending"}
+            new_version = {"version_id": doi, "doi": doi, "created": created, "status": "pending"}
 
             concept_path = collection_folder / concept_doi / "concept.yaml"
             concept = write_concept(
-                concept_path=concept_path, concept_doi=concept_doi, doi=doi, new_version=new_version
+                concept_path=concept_path,
+                id_=concept_doi,
+                concept_doi=concept_doi,
+                version_id=doi,
+                new_version=new_version,
             )
             if concept in ("blocked", "old_hit"):
                 continue
@@ -224,27 +236,36 @@ def main(collection_folder: Path = Path("collection"), new_resources: Path = Pat
                     weight_formats = list(weight_entries)
 
                 for wf in weight_formats:
-                    validation_cases[type_].append({"doi": doi, "weight_format": wf})
+                    validation_cases[type_].append({"id": doi, "weight_format": wf})
                     write_conda_env_file(type_, rdf, wf, hit["files"], new_resources / doi / f"{wf}_env.yaml")
 
             else:
-                validation_cases[type_].append({"doi": doi})
+                validation_cases[type_].append({"id": doi})
+
+            yaml.dump(hit, new_resources / doi / "hit.yaml")
 
             updated_concepts[concept_doi].append(doi)
-            if n_validation_cases := sum(map(len, validation_cases.values())) >= soft_validation_case_limit:
-                warnings.warn(f"Stopping after reaching soft limit {soft_validation_case_limit} with {n_validation_cases} validation cases.")
+            n_validation_cases = sum(map(len, validation_cases.values()))
+            if n_validation_cases >= soft_validation_case_limit:
+                warnings.warn(
+                    f"Stopping after reaching soft limit {soft_validation_case_limit} with {n_validation_cases} validation cases."
+                )
                 stop = True
                 break
 
         if stop:
             break
 
+    # todo: add resources hosted on github
+
     for type_, cases in validation_cases.items():
         set_gh_actions_output(f"{type_}_matrix", json.dumps({"case": cases}))
 
     set_gh_actions_output(
         "updated_concepts_matrix",
-        json.dumps({"update": [{"concept_doi": k, "new_dois": v} for k, v in updated_concepts.items()]}),
+        json.dumps(
+            {"update": [{"id": k, "concept_doi": k, "new_version_ids": v} for k, v in updated_concepts.items()]}
+        ),
     )
     return 0
 

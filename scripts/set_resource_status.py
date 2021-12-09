@@ -10,14 +10,14 @@ yaml = YAML(typ="safe")
 def main(
     collection_folder: Path,
     concept_doi: str,
-    dois: str = typer.Argument(..., help="json string of list of dois"),
+    version_ids: str = typer.Argument(..., help="json string of list of dois"),
     status: str = typer.Argument(..., help="status to set"),
 ) -> int:
-    dois = json.loads(dois)
+    version_ids = json.loads(version_ids)
     concept_path = collection_folder / concept_doi / "concept.yaml"
     concept = yaml.load(concept_path)
     for v in concept["versions"]:
-        if v["doi"] in dois:
+        if v["version_id"] in version_ids:
             v["status"] = status
 
     yaml.dump(concept, concept_path)

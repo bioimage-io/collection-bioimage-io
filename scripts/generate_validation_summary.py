@@ -15,13 +15,13 @@ except ImportError:
 def main(
     summary_root: Path,
     doi: str,
-    weight_format: Optional[str] = typer.Argument(None, help="weight format to use to test model."),
+    weight_format: Optional[str] = typer.Argument(None, help="weight format to test model with."),
 ) -> int:
-    summary_path = summary_root / doi
+    summary_name = "validation_summary.yaml"
     if weight_format is not None:
-        summary_path /= weight_format
+        summary_name = f"{weight_format}_{summary_name }"
 
-    summary_path /= "validation_summary.yaml"
+    summary_path = summary_root / doi / summary_name
     assert not summary_path.exists()
 
     NAME = "name"

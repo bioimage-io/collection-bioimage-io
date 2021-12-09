@@ -17,8 +17,8 @@ jobs:
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-    - name: install deps
-      run: pip install typer, requests, ruamel.yaml
+    - name: install script deps
+      run: pip install bioimageio.spec
     - name: update known resources
       id: update_known
       run: python scripts/update_known_resources.py collection dist/new_resources
@@ -77,78 +77,39 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}  # update: [{concept_doi: ..., dois: ...}, ...]
+      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}  # update: [{id: ..., concept_doi: ..., new_version_ids: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-    - name: download validation summaries
+    - name: download artefacts
       uses: actions/download-artifact@v2
       with:
         path: dist
+    - name: install script deps
+      run: pip install bioimageio.core
     - name: set resource status to accepted
-      run: python scripts/set_resource_status.py collection ${{ matrix.update.concept_doi }} "${{ matrix.update.dois }}" accepted
+      run: python scripts/set_resource_status.py collection ${{ matrix.update.id }} ${{ matrix.update.concept_doi }} "${{ matrix.update.new_version_ids }}" accepted
+    - name: update bioimage.io card data
+      run: python scripts/update_card_data.py collection ${{ matrix.update.id }} "${{ matrix.update.dois }}" dist/new_resources
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.PAT }} # using a PAT will make sure we can trigger the CI in PR
-        commit-message: 'Update ${{ matrix.update.concept_doi }}'
+        commit-message: 'Update ${{ matrix.update.id }}'
         committer: GitHub <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: false
-        branch: update-${{ matrix.update.concept_doi }}
-        delete-branch: false
-        title: 'Update ${{ matrix.update.concept_doi }}'
+        branch: update-${{ matrix.update.id }}
+        delete-branch: true
+        title: 'Update ${{ matrix.update.id }}'
         body: |
-          Update ${{ matrix.update.concept_doi }} with new versions: ${{ matrix.update.dois }}
+          Update ${{ matrix.update.id }} with new versions: ${{ matrix.update.new_version_ids }}
 #          todo: better pr body
         labels: |
           RDF
           automated pr
-        draft: true
-
-
-#  validate-new-models:
-#    needs: new-resources
-#    runs-on: ubuntu-latest
-#    strategy:
-#      fail-fast: false
-#      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # validation_case: [{doi: ..., weight_format: ...}, ...]
-#
-#    steps:
-#    - uses: actions/checkout@v2
-#      with:
-#        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-#        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-##    - run: mkdir -p dist
-##    - uses: actions/download-artifact@v2
-##      with:
-##        name: new_resources
-##        path: dist/new_resources
-#    - name: install validation dependencies
-#      uses: conda-incubator/setup-miniconda@v2
-#      with:
-#        auto-update-conda: true
-#        mamba-version: "*"
-#        channel-priority: strict
-#        activate-environment: bio-spec
-#        environment-file: dev/environment-mix.yaml  # todo: install deps from rdf
-#        python-version: 3.8
-#    - name: validate ${{ matrix.validation_case }}
-#      shell: bash -l {0}
-#      run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.validation_case.doi }} ${{ matrix.validation_case.weight_format }}
-#    - name: "Upload new resources artefact"
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: ${{ matrix.validation_case.doi }}_validation_summary
-#        path: dist/summaries
-#        retention-days: 90  # todo: what if PR is merged after 90 days?? --> close PR automatically and redo test on reopen
-#
-#  update-concpets:
-#    needs: [validate-new-models]
-#    runs-on: ubuntu-latest
-#    strategy:
-#      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}
+        draft: false
