@@ -88,7 +88,8 @@ def write_conda_env_file(
     env_name: str,
 ):
     # minimal env for invalid model rdf to be checked with bioimageio.spec for validation errors only
-    conda_env = {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.spec"]}
+    minimal_conda_env = {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.core"]}
+    conda_env = dict(minimal_conda_env)
     if type_ == "rdf":
         pass
     elif type_ == "model":
@@ -146,22 +147,20 @@ def write_conda_env_file(
 
                     except Exception as e:
                         warnings.warn(f"Failed to resolve weight dependencies: {e}")
+                        conda_env = dict(minimal_conda_env)
 
             elif weight_format == "torchscript":
-                conda_env["dependencies"].append("bioimageio.core")
                 conda_env["channels"].insert(0, "pytorch")
                 conda_env["dependencies"].append("pytorch")
                 conda_env["dependencies"].append("cpuonly")
                 # todo: pin pytorch version for torchscript (add version to torchscript weight spec)
             elif weight_format == "tensorflow_saved_model_bundle":
-                conda_env["dependencies"].append("bioimageio.core")
                 tf_version = weights.get("tensorflow_version")
                 if not tf_version:
                     # todo: document default tf version
                     tf_version = "1.15"
                 conda_env["dependencies"].append(f"tensorflow={tf_version}")
             elif weight_format == "onnx":
-                conda_env["dependencies"].append("bioimageio.core")
                 conda_env["dependencies"].append("onnxruntime")
                 # note: we should not need to worry about the opset version,
                 # see https://github.com/microsoft/onnxruntime/blob/master/docs/Versioning.md
