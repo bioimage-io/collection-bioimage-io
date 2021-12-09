@@ -240,7 +240,7 @@ def main(collection_folder: Path = Path("collection"), new_resources: Path = Pat
             break
 
     for type_, cases in validation_cases.items():
-        set_gh_actions_output(f"{type_}_matrix", json.dumps({"validation_case": cases}))
+        set_gh_actions_output(f"{type_}_matrix", json.dumps({"case": cases}))
 
     set_gh_actions_output(
         "updated_concepts_matrix",
