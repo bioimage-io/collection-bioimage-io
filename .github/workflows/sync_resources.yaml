@@ -40,11 +40,11 @@ jobs:
         branch: ${{ github.ref }}
 
   validate-model:
-    needs: new-resources
+    needs: collect-new-resources
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # case: [{doi: ..., weight_format: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.model_matrix) }}  # case: [{doi: ..., weight_format: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
@@ -73,11 +73,11 @@ jobs:
         retention-days: 1
 
   open-prs:
-    needs: validate
+    needs: [collect-new-resources, validate]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.new-resources.outputs.updated_concepts_matrix) }}  # update: [{id: ..., concept_doi: ..., new_version_ids: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_concepts_matrix) }}  # update: [{id: ..., concept_doi: ..., new_version_ids: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
