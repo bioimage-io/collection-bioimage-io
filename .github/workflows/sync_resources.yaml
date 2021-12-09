@@ -39,12 +39,12 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
 
-  validate-model:
+  validate-models:
     needs: collect-new-resources
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-new-resources.outputs.model_matrix) }}  # case: [{doi: ..., weight_format: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.model_matrix) }}  # case: [{id: ..., weight_format: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
@@ -60,20 +60,55 @@ jobs:
         mamba-version: "*"
         channel-priority: strict
         activate-environment: validate
-        environment-file: dev/new_resources/${{ matrix.case.doi }}/${{ matrix.case.weight_format }}_env.yaml
+        environment-file: dev/new_resources/${{ matrix.case.id }}/${{ matrix.case.weight_format }}_env.yaml
         python-version: 3.8
-    - name: validate ${{ matrix.validation_case }}
+    - name: validate ${{ matrix.case }}
       shell: bash -l {0}
-      run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.validation_case.doi }} ${{ matrix.validation_case.weight_format }}
+      run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.case.id }} ${{ matrix.case.weight_format }}
     - name: "Upload validation summary"
       uses: actions/upload-artifact@v2
       with:
-        name: summaries/${{ matrix.validation_case.doi }}/${{ matrix.validation_case.weight_format }}
-        path: dist/summaries/${{ matrix.validation_case.doi }}/${{ matrix.validation_case.weight_format }}
+        name: summaries/${{ matrix.case.id }}/${{ matrix.case.weight_format }}
+        path: dist/summaries/${{ matrix.case.id }}/${{ matrix.case.weight_format }}
+        retention-days: 1
+
+  validate-rdfs:
+    needs: collect-new-resources
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.rdf_matrix) }}  # case: [{id: ...}, ...]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: download environment.yaml
+      uses: actions/download-artifact@v2
+      with:
+        name: new_resources
+        path: dist/new_resources
+    - name: install validation dependencies
+      run: pip install bioimageio.core
+#    - name: install validation dependencies
+#      uses: conda-incubator/setup-miniconda@v2
+#      with:
+#        auto-update-conda: true
+#        mamba-version: "*"
+#        channel-priority: strict
+#        activate-environment: validate
+#        environment-file: dev/new_resources/${{ matrix.case.id }}/${{ matrix.case.weight_format }}_env.yaml
+#        python-version: 3.8
+    - name: validate ${{ matrix.case }}
+      shell: bash -l {0}
+      run: python scripts/generate_validation_summary.py dist/summaries ${{ matrix.case.id }}
+    - name: "Upload validation summary"
+      uses: actions/upload-artifact@v2
+      with:
+        name: summaries/${{ matrix.case.id }}
+        path: dist/summaries/${{ matrix.case.id }}
         retention-days: 1
 
   open-prs:
-    needs: [collect-new-resources, validate]
+    needs: [collect-new-resources, validate-models]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
