@@ -23,17 +23,21 @@ jobs:
       id: update_known
       run: python scripts/update_known_resources.py collection dist/new_resources
     - name: "Upload environment files of new_resources"
+      if: contains(steps.update_known.found_new_resources, 'yes')
       uses: actions/upload-artifact@v2
       with:
         name: new_resources
         path: dist/new_resources
         retention-days: 1
     - name: Commit files
+      if: contains(steps.update_known.found_new_resources, 'yes')
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git commit -m "Add changes" -a
+        git add collection
+        git commit -m "Add new resources" -a
     - name: Push changes
+      if: contains(steps.update_known.found_new_resources, 'yes')
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}

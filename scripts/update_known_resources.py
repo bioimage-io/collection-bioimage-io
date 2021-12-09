@@ -267,6 +267,8 @@ def main(collection_folder: Path, new_resources: Path) -> int:
             {"update": [{"id": k, "concept_doi": k, "new_version_ids": v} for k, v in updated_concepts.items()]}
         ),
     )
+    set_gh_actions_output("found_new_resources", "yes" if updated_concepts else "")
+
     return 0
 
 
