@@ -183,7 +183,7 @@ def write_conda_env_file(
 #         return None
 
 
-def main(collection_folder: Path = Path("collection"), new_resources: Path = Path("new_resources")) -> int:
+def main(collection_folder: Path, new_resources: Path) -> int:
     updated_concepts = defaultdict(list)
     validation_cases = {"model": [], "rdf": []}
     stop = False
