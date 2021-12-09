@@ -28,7 +28,6 @@ jobs:
         name: new_resources
         path: dist/new_resources
         retention-days: 1
-
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -47,6 +46,7 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJson(needs.new-resources.outputs.model_matrix) }}  # case: [{doi: ..., weight_format: ...}, ...]
 
+    steps:
     - uses: actions/checkout@v2
     - name: download environment.yaml
       uses: actions/download-artifact@v2
