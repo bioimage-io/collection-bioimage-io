@@ -1,6 +1,0 @@
-name: bio-spec
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - bioimageio.spec
