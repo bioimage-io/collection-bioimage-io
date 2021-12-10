@@ -138,7 +138,7 @@ jobs:
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: false
         branch: auto-update-${{ matrix.update.id }}
-        delete-branch: true
+        delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
         title: 'Update ${{ matrix.update.id }}'
         body: |
           Update ${{ matrix.update.id }} with new versions: ${{ matrix.update.new_version_ids }}

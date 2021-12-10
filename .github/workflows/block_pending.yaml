@@ -32,3 +32,17 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
+
+  delete_PR_branch:
+    if: contains(github.event.pull_request.head.ref, 'auto-update=') || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check if branch still exists
+        id: ls-remote
+        run: |
+          out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
+          echo "::set-output name=out::$out"
+      - name: delete PR branch ${{ github.event.pull_request.head.ref }}
+        if: steps.ls-remote.outputs.out
+        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
