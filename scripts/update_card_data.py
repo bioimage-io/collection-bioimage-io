@@ -144,16 +144,16 @@ def make_version_card(
         rd = load_raw_resource_description(doi)
         authors = rd.authors if hasattr(rd, "authors") else []
         covers = rd.covers if hasattr(rd, "covers") else []
-        description = rd.description if hasattr(rd, "description") else UNKNOWN
-        documentation = rd.documentation if hasattr(rd, "documentation") else UNKNOWN
-        format_version = rd.format_version
-        license_ = rd.license if hasattr(rd, "license") else UNKNOWN
+        description = rd.description or "missing" if hasattr(rd, "description") else UNKNOWN
+        documentation = rd.documentation or "missing" if hasattr(rd, "documentation") else UNKNOWN
+        format_version = rd.format_version or "missing"
+        license_ = rd.license or "missing" if hasattr(rd, "license") else UNKNOWN
         links = rd.links if hasattr(rd, "links") else []
         maintainers = rd.maintainers if hasattr(rd, "maintainers") else []
-        name = rd.name
+        name = rd.name or "missing"
         source = str(rd.root_path)
         tags = rd.tags if hasattr(rd, "tags") else []
-        type_ = rd.type
+        type_ = rd.type or "missing"
     except Exception as e:
         warnings.warn(str(e))
         authors = []
