@@ -4,7 +4,7 @@ import warnings
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Literal, Optional, Sequence, Tuple, Union
+from typing import Dict, List, Literal, Optional, Sequence, Tuple, Union
 
 import requests
 import typer
@@ -88,7 +88,10 @@ def write_conda_env_file(
     env_name: str,
 ):
     # minimal env for invalid model rdf to be checked with bioimageio.spec for validation errors only
-    minimal_conda_env = {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.core"]}
+    minimal_conda_env: Dict[str, List[Union[str, Dict[str, List[str]]]]] = {
+        "channels": ["conda-forge", "defaults"],
+        "dependencies": ["bioimageio.core"],
+    }
     conda_env = dict(minimal_conda_env)
     if type_ == "rdf":
         pass
@@ -141,7 +144,7 @@ def write_conda_env_file(
                                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
                                 conda_env["dependencies"].append("bioimageio.core")
                                 conda_env["dependencies"].append("pip")
-                                conda_env["dependencies"].append({"pip": pip_req})  # type: ignore
+                                conda_env["dependencies"].append({"pip": pip_req})
                             else:
                                 raise NotImplementedError(dep_node.manager)
 
@@ -159,7 +162,8 @@ def write_conda_env_file(
                 if not tf_version:
                     # todo: document default tf version
                     tf_version = "1.15"
-                conda_env["dependencies"].append(f"tensorflow={tf_version}")
+                conda_env["dependencies"].append(f"pip")
+                conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
             elif weight_format == "onnx":
                 conda_env["dependencies"].append("onnxruntime")
                 # note: we should not need to worry about the opset version,
