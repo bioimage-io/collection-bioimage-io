@@ -2,5 +2,5 @@ concept_doi: 10.5281/zenodo.5749843
 id: 10.5281/zenodo.5749843
 status: pending
 versions:
-- {created: '2021-12-02T14:27:16.753974+00:00', doi: 10.5281/zenodo.5749844, status: pending,
+- {created: '2021-12-02T14:27:16.753974+00:00', doi: 10.5281/zenodo.5749844, status: accepted,
   version_id: 10.5281/zenodo.5749844}

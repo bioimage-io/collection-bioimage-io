@@ -1,0 +1,32 @@
+authors:
+- {affiliation: 'UC3M, EPFL', email: missing, github_user: missing, name: DeepImageJ,
+  orcid: missing}
+- {affiliation: 'UCL, University of Turku and Åbo Akademi University', email: missing,
+  github_user: missing, name: ZeroCostDL4Mic, orcid: missing}
+concept_doi: 10.5281/zenodo.5749843
+covers:
+- {authority: zenodo.org, fragment: '', path: /api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/input.png,
+  query: '', scheme: https, uri_string: null}
+- {authority: zenodo.org, fragment: '', path: /api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/output.png,
+  query: '', scheme: https, uri_string: null}
+created: 2021-12-02 14:27:16.753974+00:00
+description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
+  microscopy 3D volumes.
+documentation: {authority: zenodo.org, fragment: '', path: /api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/README.md,
+  query: '', scheme: https, uri_string: null}
+format_version: 0.4.0
+id: 10.5281/zenodo.5749843
+license: MIT
+links: [imjoy/BioImageIO-Packager]
+maintainers: missing
+name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+previous_versions: []
+source: /home/runner/work/collection-bioimage-io/collection-bioimage-io
+stats: {downloads: 689.0, unique_downloads: 115.0, unique_views: 13.0, version_downloads: 689.0,
+  version_unique_downloads: 115.0, version_unique_views: 13.0, version_views: 16.0,
+  version_volume: 9045976570.0, views: 16.0, volume: 9045976570.0}
+tags: [zerocostdl4mic, deepimagej, segmentation, 3dunet]
+type: model
+validation_summary: {}
+version_doi: 10.5281/zenodo.5749844
+version_id: 10.5281/zenodo.5749844
