@@ -4,7 +4,7 @@ import warnings
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Literal, Optional, Sequence, Tuple, Union
+from typing import DefaultDict, Dict, List, Literal, Optional, Sequence, Tuple, Union
 
 import requests
 import typer
@@ -188,11 +188,14 @@ def ensure_valid_conda_env_name(name: str) -> str:
     return name or "empty"
 
 
-def main(collection_folder: Path, new_resources: Path) -> int:
-    updated_concepts = defaultdict(list)
-    validation_cases = {"model": [], "rdf": []}
+def update_from_zenodo(
+    collection_folder: Path,
+    new_resources: Path,
+    updated_concepts: DefaultDict[str, List[str]],
+    validation_cases: Dict[str, List[Dict[str, str]]],
+) -> None:
     stop = False
-    soft_validation_case_limit = 230  # gh actions matrix limit: 256
+    soft_validation_case_limit = 100  # gh actions matrix limit: 256
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         print(zenodo_request)
@@ -269,6 +272,13 @@ def main(collection_folder: Path, new_resources: Path) -> int:
 
         if stop:
             break
+
+
+def main(collection_folder: Path, new_resources: Path) -> int:
+    updated_concepts = defaultdict(list)
+    validation_cases = {"model": [], "rdf": []}
+
+    update_from_zenodo(collection_folder, new_resources, updated_concepts, validation_cases)
 
     # todo: add resources hosted on github
 
