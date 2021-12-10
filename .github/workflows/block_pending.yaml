@@ -1,0 +1,33 @@
+name: Block pending resource versions on auto-update-PR close
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  block:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: update status in concept
+      id: update_status
+      run: python scripts/block_pending_resources.py collection ${{ github.event.pull_request.head.ref }}
+    - name: Commit files
+      if: steps.update_status.outputs.made_changes == 'yes'
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "Block pending" -a
+    - name: Push changes to ${{ github.ref }}
+      if: steps.update_status.outputs.made_changes == 'yes'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

@@ -135,7 +135,7 @@ jobs:
         committer: GitHub <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         signoff: false
-        branch: update-${{ matrix.update.id }}
+        branch: auto-update-${{ matrix.update.id }}
         delete-branch: true
         title: 'Update ${{ matrix.update.id }}'
         body: |
