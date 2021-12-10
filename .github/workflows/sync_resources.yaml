@@ -109,7 +109,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_concepts_matrix) }}  # update: [{id: ..., concept_doi: ..., new_version_ids: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_concepts_matrix) }}  # update: [{id: ..., new_version_ids: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2

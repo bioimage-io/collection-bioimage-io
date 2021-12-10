@@ -181,17 +181,6 @@ def write_conda_env_file(
     yaml.dump(conda_env, path)
 
 
-# def write_card_and_get_type(card_path: Path, *, concept: dict, doi: str) -> Optional[str]:
-#     """general version of card to be shown on bioimage.io; maybe refined after resource validation"""
-#     try:
-#         node = load_raw_resource_description(doi)
-#
-#         return node.type
-#     except Exception as e:
-#         warnings.warn(f"invalid resource at {doi}")
-#         return None
-
-
 def ensure_valid_conda_env_name(name: str) -> str:
     for illegal in ("/", " ", ":", "#"):
         name = name.replace(illegal, "")
@@ -288,9 +277,7 @@ def main(collection_folder: Path, new_resources: Path) -> int:
 
     set_gh_actions_output(
         "updated_concepts_matrix",
-        json.dumps(
-            {"update": [{"id": k, "concept_doi": k, "new_version_ids": v} for k, v in updated_concepts.items()]}
-        ),
+        json.dumps({"update": [{"id": k, "new_version_ids": json.dumps(v)} for k, v in updated_concepts.items()]}),
     )
     set_gh_actions_output("found_new_resources", "yes" if updated_concepts else "")
 
