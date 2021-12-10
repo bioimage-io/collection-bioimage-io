@@ -9,12 +9,12 @@ yaml = YAML(typ="safe")
 
 def main(
     collection_folder: Path,
-    concept_doi: str,
+    id_: str,
     version_ids: str = typer.Argument(..., help="json string of list of dois"),
     status: str = typer.Argument(..., help="status to set"),
 ) -> int:
     version_ids = json.loads(version_ids)
-    concept_path = collection_folder / concept_doi / "concept.yaml"
+    concept_path = collection_folder / id_ / "concept.yaml"
     concept = yaml.load(concept_path)
     for v in concept["versions"]:
         if v["version_id"] in version_ids:
