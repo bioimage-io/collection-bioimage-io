@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import Dict, List, Optional, Union
 
 import typer
+from boltons.iterutils import remap
+from marshmallow import missing
 from ruamel.yaml import YAML
 
 from bioimageio.core import load_raw_resource_description
@@ -141,19 +143,23 @@ def make_version_card(
 
     # obtain other card fields
     try:
-        rd = load_raw_resource_description(doi)
-        authors = rd.authors if hasattr(rd, "authors") else []
-        covers = rd.covers if hasattr(rd, "covers") else []
-        description = rd.description or "missing" if hasattr(rd, "description") else UNKNOWN
-        documentation = rd.documentation or "missing" if hasattr(rd, "documentation") else UNKNOWN
-        format_version = rd.format_version or "missing"
-        license_ = rd.license or "missing" if hasattr(rd, "license") else UNKNOWN
-        links = rd.links if hasattr(rd, "links") else []
-        maintainers = rd.maintainers if hasattr(rd, "maintainers") else []
-        name = rd.name or "missing"
-        source = str(rd.root_path)
-        tags = rd.tags if hasattr(rd, "tags") else []
-        type_ = rd.type or "missing"
+        rd = asdict(load_raw_resource_description(doi))
+
+        # replace Marshmallow missing values
+        rd = remap(rd, lambda p, k, v: (k, "missing" if v is missing else v))
+
+        authors = rd.get("authors", [])
+        covers = rd.get("covers", [])
+        description = rd.get("description", UNKNOWN)
+        documentation = rd.get("documentation", UNKNOWN)
+        format_version = rd.get("format_version", UNKNOWN)
+        license_ = rd.get("license", UNKNOWN)
+        links = rd.get("links", [])
+        maintainers = rd.get("maintainers", [])
+        name = rd.get("name", UNKNOWN)
+        source = str(rd.get("root_path", UNKNOWN))
+        tags = rd.get("tags", [])
+        type_ = rd.get("type", UNKNOWN)
     except Exception as e:
         warnings.warn(str(e))
         authors = []
