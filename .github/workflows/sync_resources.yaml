@@ -112,6 +112,7 @@ jobs:
         retention-days: 1
 
   open-prs:
+    if: ${{ always() }}  # run even if validation jobs (partially) fail
     needs: [collect-new-resources, validate-models, validate-rdfs]
     runs-on: ubuntu-latest
     strategy:
