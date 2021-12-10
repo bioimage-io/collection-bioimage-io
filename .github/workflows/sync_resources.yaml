@@ -116,6 +116,8 @@ jobs:
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: Pull latest auto commit
+      run: git pull origin
     - name: download artefacts
       uses: actions/download-artifact@v2
       with:
