@@ -1,0 +1,30 @@
+authors:
+- {affiliation: EMBL Heidelberg, email: missing, github_user: missing, name: Constantin
+    Pape, orcid: missing}
+concept_doi: 10.5281/zenodo.5764892
+covers:
+- {authority: zenodo.org, fragment: '', path: /api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png,
+  query: '', scheme: https, uri_string: null}
+created: 2021-12-07 18:02:09.736653+00:00
+description: Nucleus segmentation for fluorescence microscopy
+documentation: {authority: zenodo.org, fragment: '', path: /api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md,
+  query: '', scheme: https, uri_string: null}
+format_version: 0.4.0
+id: 10.5281/zenodo.5764892
+license: CC-BY-4.0
+links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
+  imjoy/BioImageIO-Packager]
+maintainers:
+- {affiliation: missing, email: missing, github_user: constantinpape, name: missing,
+  orcid: missing}
+name: NucleiSegmentationBoundaryModel
+previous_versions: []
+source: /home/runner/work/collection-bioimage-io/collection-bioimage-io
+stats: {downloads: 137.0, unique_downloads: 23.0, unique_views: 6.0, version_downloads: 137.0,
+  version_unique_downloads: 23.0, version_unique_views: 6.0, version_views: 7.0, version_volume: 3139842290.0,
+  views: 7.0, volume: 3139842290.0}
+tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
+type: model
+validation_summary: {}
+version_doi: 10.5281/zenodo.5764893
+version_id: 10.5281/zenodo.5764893
