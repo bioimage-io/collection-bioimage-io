@@ -47,6 +47,7 @@ jobs:
     needs: collect-new-resources
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically
       fail-fast: false
       matrix: ${{ fromJson(needs.collect-new-resources.outputs.model_matrix) }}  # case: [{env_name: ..., id: ..., weight_format: ...}, ...]
 
