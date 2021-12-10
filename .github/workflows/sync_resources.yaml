@@ -127,7 +127,7 @@ jobs:
     - name: set resource status to accepted
       run: python scripts/set_resource_status.py collection ${{ matrix.update.id }} '${{ matrix.update.new_version_ids }}' accepted
     - name: update bioimage.io card data
-      run: python scripts/update_card_data.py collection ${{ matrix.update.id }} '${{ matrix.update.new_version_ids }}' dist/new_resources
+      run: python scripts/update_card_data.py collection ${{ matrix.update.id }} '${{ matrix.update.new_version_ids }}' dist/summaries dist/new_resources
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
