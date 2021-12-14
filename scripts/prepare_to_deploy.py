@@ -19,6 +19,7 @@ def main(
     ),
     resource_folder: Path = typer.Argument(...),
     pending_versions: str = typer.Argument(..., help="json string of list of pending versions_ids"),
+    artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts"),
 ) -> int:
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
@@ -41,8 +42,9 @@ def main(
 
         yaml.dump(rdf_data, resource_folder / version_id / "rdf.yaml")
 
-        # move dynamic validation summaries
-        shutil.move(resource_folder / version_id / "*" / "validation_summary_*.yaml", resource_folder / version_id)
+        # move validation summaries and conda env yaml files from artifact to version_id folder
+        for sp in artifact_folder.glob(f"{version_id.replace('/', '')}*/**/*.yaml"):
+            shutil.move(sp, resource_folder / version_id)
 
     return 0
 
