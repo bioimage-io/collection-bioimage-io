@@ -65,8 +65,9 @@ jobs:
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
         title: 'Update ${{ matrix.update.resource_id }}'
         body: |
-          Update ${{ matrix.update.resource_id }} with new versions: ${{ matrix.update.new_version_ids }} (sources: ${{ matrix.update.new_version_sources }})
-#          todo: better pr body
+          Update ${{ matrix.update.resource_id }} with new versions:
+          ${{ matrix.update.new_version_ids  | sed 's/"//g' }}
+          sources: ${{ matrix.update.new_version_sources | sed 's/"//g'}})
         labels: |
           auto-update
         draft: false
