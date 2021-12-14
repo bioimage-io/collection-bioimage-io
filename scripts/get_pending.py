@@ -36,7 +36,7 @@ def main(
         warnings.warn(f"called with non-auto-update branch {branch}")
 
     set_gh_actions_output("pending_matrix", json.dumps({"version_id": pending}))
-    # set_gh_actions_output("found_pending", "yes" if pending else "no")
+    set_gh_actions_output("found_pending", "yes" if pending else "no")
     return 0
 
 

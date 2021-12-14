@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
+      found_pending: ${{ steps.get_pending.outputs.found_pending }}
 
     steps:
     - uses: actions/checkout@v2
@@ -80,7 +81,7 @@ jobs:
 
   deploy:
     needs: [get-pending, static-validation, dynamic-validation]
-    if: always()  # run even if dynamic validation fails
+    if: always()  && needs.get-pending.outputs.found_pending == 'yes' # run even if dynamic validation fails
     runs-on: ubuntu-latest
 
     steps:
