@@ -169,7 +169,7 @@ def main(collection_folder: Path, branch: str, resource_folder: Path, version_id
 
         latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
 
-        yaml.dump(latest_static_summary, static_summary_path.with_stem("validation_summary_latest_static"))
+        yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 
     set_gh_actions_output("passed_static", passed_static)
     set_gh_actions_output("passed_latest_static", passed_latest_static)
