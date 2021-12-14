@@ -32,7 +32,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        branch: pyci  # todo: make main
 
   deploy:  # deploy to gh-pages from gh-pages preview
     if: contains(github.event.pull_request.head.ref, 'auto-update=') || github.event.pull_request.merged == true
