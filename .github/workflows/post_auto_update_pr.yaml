@@ -21,6 +21,8 @@ jobs:
     - name: update status in resource.yaml
       id: update_status
       run: python scripts/block_pending_resources.py collection ${{ github.event.pull_request.head.ref }}
+    - name: debug ${{ github.event.pull_request.head.ref }}
+      run: echo ${{ github.event.pull_request.head.ref }}
     - name: Commit files
       if: steps.update_status.outputs.made_changes == 'yes'
       run: |
