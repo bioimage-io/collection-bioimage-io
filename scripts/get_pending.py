@@ -15,8 +15,6 @@ def main(
     branch: str = typer.Argument(
         ..., help="branch name should be 'auto-update-{resource_id} and is only used to get resource_id."
     ),
-    resource_folder: Path = typer.Argument(...),
-    pending_versions: str = typer.Argument(..., help="json string of list of pending versions_ids")
 ) -> int:
     pending = []
     if branch.startswith("auto-update-"):
