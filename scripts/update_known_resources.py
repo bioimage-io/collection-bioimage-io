@@ -97,20 +97,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             resource_doi = hit["conceptdoi"]
             doi = hit["doi"]  # "version" doi
             created = hit["created"]
-            new_version = {"version_id": doi, "doi": doi, "created": created, "status": "pending"}
-
             resource_path = collection_folder / resource_doi / "resource.yaml"
-            resource = write_resource(
-                resource_path=resource_path,
-                resource_id=resource_doi,
-                resource_doi=resource_doi,
-                version_id=doi,
-                new_version=new_version,
-            )
-            if resource in ("blocked", "old_hit"):
-                continue
-            else:
-                assert isinstance(resource, dict)
 
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             if len(rdf_urls) == 0:
@@ -120,7 +107,18 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
                 if len(rdf_urls) > 1:
                     warnings.warn("found multiple 'rdf.yaml' sources?!?")
 
-            updated_resources[resource_doi].append({"version_id": doi, "source": source})
+            new_version = {"version_id": doi, "doi": doi, "created": created, "status": "pending", "source": source}
+
+            resource = write_resource(
+                resource_path=resource_path,
+                resource_id=resource_doi,
+                resource_doi=resource_doi,
+                version_id=doi,
+                new_version=new_version,
+            )
+            if resource not in ("blocked", "old_hit"):
+                assert isinstance(resource, dict)
+                updated_resources[resource_doi].append({"version_id": doi, "source": source})
 
 
 def main(collection_folder: Path) -> int:
