@@ -1,0 +1,43 @@
+id: 10.5281/zenodo.5764892
+name: NucleiSegmentationBoundaryModel
+type: model
+authors:
+  - affiliation: EMBL Heidelberg
+    name: Constantin Pape
+tags:
+  - bioimage.io
+  - bioimage.io:model
+  - fluorescence-light-microscopy
+  - nuclei
+  - instance-segmentation
+  - unet
+  - zenodo
+description: Nucleus segmentation for fluorescence microscopy
+stats:
+  downloads: 1224
+  unique_downloads: 202
+  unique_views: 8
+  version_downloads: 1224
+  version_unique_downloads: 202
+  version_unique_views: 8
+  version_views: 12
+  version_volume: 30468817771
+  views: 12
+  volume: 30468817771
+license: CC-BY-4.0
+documentation: >-
+  https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
+covers:
+  - https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png
+source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+links:
+  - ilastik/stardist_dsb_training_data
+  - ilastik/ilastik
+  - deepimagej/deepimagej
+  - imjoy/BioImageIO-Packager
+config:
+  _doi: 10.5281/zenodo.5764893
+  _conceptdoi: 10.5281/zenodo.5764892
+  _rdf_file: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+  partner: '10.5281'
+  status: pending
