@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: pyci  # todo: make main
     - name: install script deps
       run: pip install typer ruamel.yaml
     - name: get pending
