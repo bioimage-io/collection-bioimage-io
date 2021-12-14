@@ -87,6 +87,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: install script deps
       run: pip install typer ruamel.yaml bioimageio.spec
+    - name: download artefacts
+      uses: actions/download-artifact@v2
+      with:
+        path: dist
     - name: prepare deployment
       run: python scripts/prepare_to_deploy.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ needs.get-pending.outputs.pending_matrix }}'
     - name: Deploy to gh-pages-${{ github.event.pull_request.head.ref }} 🚀
