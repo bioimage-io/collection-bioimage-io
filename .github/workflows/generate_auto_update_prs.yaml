@@ -1,0 +1,72 @@
+name: sync
+
+on:
+  push:
+    branches: [ main, pyci ]  # todo: remove pyci
+
+jobs:
+  collect-new-resources:
+    runs-on: ubuntu-latest
+    outputs:
+      updated_resources_matrix: ${{ steps.update_known.outputs.updated_resources_matrix }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: install script deps
+      run: pip install bioimageio.spec
+    - name: update known resources
+      id: update_known
+      run: python scripts/update_known_resources.py collection
+    - name: Commit files
+      if: steps.update_known.outputs.found_new_resources == 'yes'
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add collection
+        git commit -m "Add new resources" -a
+    - name: Push changes
+      if: steps.update_known.outputs.found_new_resources == 'yes'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+
+  open-pr:
+    needs: [collect-new-resources]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}  # update: [{resource_id: ..., new_version_ids: ..., new_version_sources: ...}, ...]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: Pull latest auto commit
+      run: git pull origin
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: set resource status to accepted
+      run: python scripts/set_resource_status.py collection ${{ matrix.update.resource_id }} '${{ matrix.update.new_version_ids }}' accepted
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 'Update ${{ matrix.update.resource_id }}'
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: auto-update-${{ matrix.update.resource_id }}
+        delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
+        title: 'Update ${{ matrix.update.resource_id }}'
+        body: |
+          Update ${{ matrix.update.resource_id }} with new versions: ${{ matrix.update.new_version_ids }} (sources: ${{ matrix.update.new_version_sources }})
+#          todo: better pr body
+        labels: |
+          auto-update
+        draft: false

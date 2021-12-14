@@ -1,17 +1,12 @@
 import json
-import sys
 import warnings
 from collections import defaultdict
-from dataclasses import dataclass, field
 from pathlib import Path
-from typing import DefaultDict, Dict, List, Literal, Optional, Sequence, Tuple, Union
+from typing import DefaultDict, Dict, List, Literal, Optional, Union
 
 import requests
 import typer
 from ruamel.yaml import YAML
-
-import bioimageio.spec.model.schema
-from bioimageio.spec.shared.raw_nodes import URI
 
 yaml = YAML(typ="safe")
 
@@ -23,36 +18,7 @@ def set_gh_actions_output(name: str, output: str):
     print(f"::set-output name={name}::{output}")
 
 
-def write_concept(
-    *, concept_path: Path, id_: str, concept_doi: Optional[str], version_id: str, new_version: dict
-) -> Union[dict, Literal["old_hit", "blocked"]]:
-    if concept_path.exists():
-        concept = yaml.load(concept_path)
-        assert isinstance(concept, dict)
-        if concept["status"] == "blocked":
-            return "blocked"
-        elif concept["status"] in ("accepted", "pending"):
-            assert concept["versions"], f"expected at least one existing version for {concept['status']} concept {id_}"
-        else:
-            raise ValueError(concept["status"])
-
-        for known_version in concept["versions"]:
-            if known_version["version_id"] == version_id:
-                # fetched resource is known; assume all following older resources have been processed earlier
-                return "old_hit"
-
-        # extend concept by new version
-        concept["pending_versions"].append(new_version)
-    else:  # create new concept
-        concept = {"status": "pending", "versions": [new_version], "id": id_, "concept_doi": concept_doi}
-
-    assert isinstance(concept, dict)
-    concept_path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(concept, concept_path)
-    return concept
-
-
-def get_rdf(*, rdf_urls: List[str], doi, concept_doi) -> dict:
+def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
     if len(rdf_urls) == 1:
         r = requests.get(rdf_urls[0])
         if r.status_code != 200:
@@ -74,128 +40,47 @@ def get_rdf(*, rdf_urls: List[str], doi, concept_doi) -> dict:
             f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; " "writing empty rdf.yaml"
         )
         rdf = {}
-        source = None
+
     return rdf
 
 
-def write_conda_env_file(
-    *,
-    type_: Literal["rdf", "model"],
-    rdf: dict,
-    weight_format: str,
-    file_hits: Sequence[dict],
-    path: Path,
-    env_name: str,
-):
-    # minimal env for invalid model rdf to be checked with bioimageio.spec for validation errors only
-    minimal_conda_env: Dict[str, List[Union[str, Dict[str, List[str]]]]] = {
-        "channels": ["conda-forge", "defaults"],
-        "dependencies": ["bioimageio.core"],
-    }
-    conda_env = dict(minimal_conda_env)
-    if type_ == "rdf":
-        pass
-    elif type_ == "model":
-        if weight_format:
-            weights = rdf["weights"][weight_format]
-            if weight_format in ["pytorch_state_dict"]:  # weights with specified dependencies field
-                dep_data = weights.get("dependencies")  # model spec > 0.4.0
-                if not dep_data:
-                    dep_data = rdf.get("dependencies")  # model spec <= 0.4.0
+def write_resource(
+    *, resource_path: Path, resource_id: str, resource_doi: Optional[str], version_id: str, new_version: dict
+) -> Union[dict, Literal["old_hit", "blocked"]]:
+    if resource_path.exists():
+        resource = yaml.load(resource_path)
+        assert isinstance(resource, dict)
+        if resource["status"] == "blocked":
+            return "blocked"
+        elif resource["status"] in ("accepted", "pending"):
+            assert resource[
+                "versions"
+            ], f"expected at least one existing version for {resource['status']} resource {resource_id}"
+        else:
+            raise ValueError(resource["status"])
 
-                if dep_data:
-                    try:
-                        dep_node = bioimageio.spec.shared.fields.Dependencies().deserialize(dep_data)
-                        if dep_node.manager in ["conda", "pip"]:
-                            if isinstance(dep_node.file, Path):
-                                # look for file name in file_hits
-                                dep_file_urls = [
-                                    file_hit["links"]["self"]
-                                    for file_hit in file_hits
-                                    if file_hit["key"] == dep_node.file.name
-                                ]
-                                if len(dep_file_urls) != 1:
-                                    raise ValueError(f"Could not get url of dependency file {dep_node.file}")
+        for known_version in resource["versions"]:
+            if known_version["version_id"] == version_id:
+                # fetched resource is known; assume all following older resources have been processed earlier
+                return "old_hit"
 
-                                dep_file_url = dep_file_urls[0]
-                            elif isinstance(dep_node.file, URI):
-                                dep_file_url = str(dep_node.file)
-                            else:
-                                raise TypeError(dep_node.file)
+        # extend resource by new version
+        resource["pending_versions"].append(new_version)
+    else:  # create new resource
+        resource = {
+            "status": "pending",
+            "versions": [new_version],
+            "resource_id": resource_id,
+            "resource_doi": resource_doi,
+        }
 
-                            r = requests.get(dep_file_url)
-                            r.raise_for_status()
-                            dep_file_content = r.text
-                            if dep_node.manager == "conda":
-                                conda_env = yaml.load(dep_file_content)
-                                # add bioimageio.core if not present
-                                channels = conda_env.get("channels", [])
-                                if "conda-forge" not in channels:
-                                    conda_env["channels"] = channels + ["conda-forge"]
-
-                                deps = conda_env.get("dependencies", [])
-                                if not isinstance(deps, list):
-                                    raise TypeError(
-                                        f"expected dependencies in conda environment.yaml to be a list, but got: {deps}"
-                                    )
-                                if not any(d.startswith("bioimageio.core") for d in deps):
-                                    conda_env["dependencies"] = deps + ["bioimageio.core"]
-                            elif dep_node.manager == "pip":
-                                pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
-                                conda_env["dependencies"].append("bioimageio.core")
-                                conda_env["dependencies"].append("pip")
-                                conda_env["dependencies"].append({"pip": pip_req})
-                            else:
-                                raise NotImplementedError(dep_node.manager)
-
-                    except Exception as e:
-                        warnings.warn(f"Failed to resolve weight dependencies: {e}")
-                        conda_env = dict(minimal_conda_env)
-
-            elif weight_format == "torchscript":
-                conda_env["channels"].insert(0, "pytorch")
-                conda_env["dependencies"].append("pytorch")
-                conda_env["dependencies"].append("cpuonly")
-                # todo: pin pytorch version for torchscript (add version to torchscript weight spec)
-            elif weight_format == "tensorflow_saved_model_bundle":
-                tf_version = weights.get("tensorflow_version")
-                if not tf_version:
-                    # todo: document default tf version
-                    tf_version = "1.15"
-                conda_env["dependencies"].append(f"pip")
-                conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
-            elif weight_format == "onnx":
-                conda_env["dependencies"].append("onnxruntime")
-                # note: we should not need to worry about the opset version,
-                # see https://github.com/microsoft/onnxruntime/blob/master/docs/Versioning.md
-            else:
-                warnings.warn(f"Unknown weight format '{weight_format}'")
-                # todo: add weight formats
-
-    else:
-        ValueError(type_)
-
-    conda_env["name"] = env_name
-
-    path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(conda_env, path)
+    assert isinstance(resource, dict)
+    resource_path.parent.mkdir(parents=True, exist_ok=True)
+    yaml.dump(resource, resource_path)
+    return resource
 
 
-def ensure_valid_conda_env_name(name: str) -> str:
-    for illegal in ("/", " ", ":", "#"):
-        name = name.replace(illegal, "")
-
-    return name or "empty"
-
-
-def update_from_zenodo(
-    collection_folder: Path,
-    new_resources: Path,
-    updated_concepts: DefaultDict[str, List[str]],
-    validation_cases: Dict[str, List[Dict[str, str]]],
-) -> None:
-    stop = False
-    soft_validation_case_limit = 100  # gh actions matrix limit: 256
+def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]) -> None:
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         print(zenodo_request)
@@ -209,87 +94,58 @@ def update_from_zenodo(
             break
 
         for hit in hits:
-            concept_doi = hit["conceptdoi"]
+            resource_doi = hit["conceptdoi"]
             doi = hit["doi"]  # "version" doi
             created = hit["created"]
             new_version = {"version_id": doi, "doi": doi, "created": created, "status": "pending"}
 
-            concept_path = collection_folder / concept_doi / "concept.yaml"
-            concept = write_concept(
-                concept_path=concept_path,
-                id_=concept_doi,
-                concept_doi=concept_doi,
+            resource_path = collection_folder / resource_doi / "resource.yaml"
+            resource = write_resource(
+                resource_path=resource_path,
+                resource_id=resource_doi,
+                resource_doi=resource_doi,
                 version_id=doi,
                 new_version=new_version,
             )
-            if concept in ("blocked", "old_hit"):
+            if resource in ("blocked", "old_hit"):
                 continue
             else:
-                assert isinstance(concept, dict)
+                assert isinstance(resource, dict)
 
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
-            rdf = get_rdf(rdf_urls=rdf_urls, doi=doi, concept_doi=concept_doi)
-
-            # categorize rdf by type (to know what kind of validation to run)
-            type_ = rdf.get("type")
-            if type_ not in validation_cases:
-                type_ = "rdf"
-
-            if type_ == "model":
-                # generate validation cases per weight format
-                weight_entries = rdf.get("weights")
-                if not weight_entries or not isinstance(weight_entries, dict):
-                    weight_formats = [""]
-                else:
-                    weight_formats = list(weight_entries)
-
-                for wf in weight_formats:
-                    validation_cases[type_].append(
-                        {"env_name": ensure_valid_conda_env_name(doi), "id": doi, "weight_format": wf}
-                    )
-                    write_conda_env_file(
-                        type_=type_,
-                        rdf=rdf,
-                        weight_format=wf,
-                        file_hits=hit["files"],
-                        path=new_resources / doi / f"{wf}_env.yaml",
-                        env_name=ensure_valid_conda_env_name(doi),
-                    )
-
+            if len(rdf_urls) == 0:
+                source = "unknown"
             else:
-                validation_cases[type_].append({"env_name": ensure_valid_conda_env_name(doi), "id": doi})
+                source = sorted(rdf_urls)[0]
+                if len(rdf_urls) > 1:
+                    warnings.warn("found multiple 'rdf.yaml' sources?!?")
 
-            yaml.dump(hit, new_resources / doi / "hit.yaml")
-
-            updated_concepts[concept_doi].append(doi)
-            n_validation_cases = sum(map(len, validation_cases.values()))
-            if n_validation_cases >= soft_validation_case_limit:
-                warnings.warn(
-                    f"Stopping after reaching soft limit {soft_validation_case_limit} with {n_validation_cases} validation cases."
-                )
-                stop = True
-                break
-
-        if stop:
-            break
+            updated_resources[resource_doi].append({"version_id": doi, "source": source})
 
 
-def main(collection_folder: Path, new_resources: Path) -> int:
-    updated_concepts = defaultdict(list)
-    validation_cases = {"model": [], "rdf": []}
+def main(collection_folder: Path) -> int:
+    updated_resources: DefaultDict[str, List[Dict[str, str]]] = defaultdict(list)
 
-    update_from_zenodo(collection_folder, new_resources, updated_concepts, validation_cases)
+    update_from_zenodo(collection_folder, updated_resources)
 
     # todo: add resources hosted on github
 
-    for type_, cases in validation_cases.items():
-        set_gh_actions_output(f"{type_}_matrix", json.dumps({"case": cases}))
-
     set_gh_actions_output(
-        "updated_concepts_matrix",
-        json.dumps({"update": [{"id": k, "new_version_ids": json.dumps(v)} for k, v in updated_concepts.items()]}),
+        "updated_resources_matrix",
+        json.dumps(
+            {
+                "update": [
+                    {
+                        "resource_id": k,
+                        "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
+                        "new_version_sources": json.dumps([vv["source"] for vv in v]),
+                    }
+                    for k, v in updated_resources.items()
+                ]
+            }
+        ),
     )
-    set_gh_actions_output("found_new_resources", "yes" if updated_concepts else "")
+    set_gh_actions_output("found_new_resources", "yes" if updated_resources else "")
 
     return 0
 
