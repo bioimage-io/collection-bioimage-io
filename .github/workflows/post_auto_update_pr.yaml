@@ -18,7 +18,7 @@ jobs:
       run: pip install typer ruamel.yaml
     - name: install script deps
       run: pip install typer ruamel.yaml
-    - name: update status in concept
+    - name: update status in resource.yaml
       id: update_status
       run: python scripts/block_pending_resources.py collection ${{ github.event.pull_request.head.ref }}
     - name: Commit files
