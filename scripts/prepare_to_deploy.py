@@ -30,7 +30,7 @@ def main(
     resource_path = collection_folder / resource_id / "resource.yaml"
     resource = yaml.load(resource_path)
 
-    pending_versions = json.loads(pending_versions)
+    pending_versions = json.loads(pending_versions)["version_id"]
     for v in resource["versions"]:
         version_id = v["version_id"]
         if version_id not in pending_versions or v["status"] == "blocked":
