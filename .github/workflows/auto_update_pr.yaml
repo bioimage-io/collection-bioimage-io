@@ -21,6 +21,7 @@ jobs:
 
   static-validation:
     needs: get-pending
+    if: needs.get-pending.outputs.found_pending == 'yes'
     runs-on: ubuntu-latest
     outputs:
       passed_latest_static: ${{ steps.static_validation.outputs.passed_latest_static }}

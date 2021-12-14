@@ -14,13 +14,13 @@ def main(
     status: str = typer.Argument(..., help="status to set"),
 ) -> int:
     version_ids = json.loads(version_ids)
-    concept_path = collection_folder / id_ / "concept.yaml"
-    concept = yaml.load(concept_path)
-    for v in concept["versions"]:
+    resource_path = collection_folder / id_ / "resource.yaml"
+    resource = yaml.load(resource_path)
+    for v in resource["versions"]:
         if v["version_id"] in version_ids:
             v["status"] = status
 
-    yaml.dump(concept, concept_path)
+    yaml.dump(resource, resource_path)
     return 0
 
 
