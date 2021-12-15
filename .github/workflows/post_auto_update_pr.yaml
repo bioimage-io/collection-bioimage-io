@@ -6,7 +6,7 @@ on:
     types: [ closed ]
 
 jobs:
-  block_pending:  # Block (still) pending resource versions
+  block_pending_after_merge:  # Block (still) pending resource versions
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
