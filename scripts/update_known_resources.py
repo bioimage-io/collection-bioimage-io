@@ -165,7 +165,7 @@ def main(collection_folder: Path) -> int:
                         "new_version_ids": "\n".join(["  - " + vv["version_id"] for vv in v]),
                         "new_version_sources": "\n".join(["  - " + vv["source"] for vv in v]),
                         "resource_name": v[0]["name"],
-                        "maintainers": str(list(set(sum(vv["maintainers"] for vv in v)))),
+                        "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[])))),
                     }
                     for k, v in updated_resources.items()
                 ]
