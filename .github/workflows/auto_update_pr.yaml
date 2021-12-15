@@ -64,7 +64,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::$(echo ${{ matrix.case.version_id }} | sed 's#/##g')static_validation_artifact
+      run: echo ::set-output name=name::static_validation_artifact$(echo ${{ matrix.version_id }} | sed 's#/##g')
     - name: download environment.yaml
       uses: actions/download-artifact@v2
       with:
