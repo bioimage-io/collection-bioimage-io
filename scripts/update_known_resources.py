@@ -104,15 +104,15 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             if len(rdf_urls) == 0:
                 source = "unknown"
-                name = "unknown"
+                name = doi
             else:
                 source = sorted(rdf_urls)[0]
                 try:
                     r = requests.get(source)
-                    name = yaml.load(r.text).get("name", "unknown")
+                    name = yaml.load(r.text).get("name", doi)
                 except Exception as e:
                     warnings.warn(f"Failed to obtain version name: {e}")
-                    name = "unknown"
+                    name = doi
 
                 if len(rdf_urls) > 1:
                     warnings.warn("found multiple 'rdf.yaml' sources?!?")
