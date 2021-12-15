@@ -4,7 +4,6 @@ from pathlib import Path
 import typer
 
 from bioimageio.core.resource_tests import test_resource
-from bioimageio.spec.model.raw_nodes import WeightsFormat
 from bioimageio.spec.shared import yaml
 
 try:
@@ -18,7 +17,7 @@ def main(
     branch: str,
     resource_folder: Path,
     version_id: str,
-    weight_format: Optional[WeightsFormat] = typer.Argument(None, help="weight format to test model with."),
+    weight_format: Optional[str] = typer.Argument(None, help="weight format to test model with."),
 ) -> int:
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
