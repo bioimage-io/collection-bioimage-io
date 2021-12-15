@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}  # update: [{resource_id: ..., new_version_ids: ..., new_version_sources: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}  # update: [{resource_id: ..., resource_name: ..., new_version_ids: ..., new_version_sources: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
@@ -71,6 +71,10 @@ jobs:
           ${{ matrix.update.new_version_ids }}
           sources of new versions:
           ${{ matrix.update.new_version_sources }}
+
+          IMPORTANT: If new resource versions are detected this PR branch is beeing **force-pushed**.
+          Either merge any manual changes before updates to the external resource occur
+          or keep your updates safe in a separate branch and make a PR on this PR branch.
         labels: |
           auto-update
         draft: false
