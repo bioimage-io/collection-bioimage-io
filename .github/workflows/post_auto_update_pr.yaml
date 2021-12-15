@@ -1,0 +1,81 @@
+name: post auto-update
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
+
+jobs:
+  block_pending:  # Block (still) pending resource versions
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: main
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: update status in resource.yaml
+      id: update_status
+      run: python scripts/block_pending_resources.py collection ${{ github.event.pull_request.head.ref }}
+    - name: debug ${{ github.event.pull_request.head.ref }}
+      run: echo ${{ github.event.pull_request.head.ref }}
+    - name: Commit files
+      if: steps.update_status.outputs.made_changes == 'yes'
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "Block pending" -a
+    - name: Push changes to ${{ github.ref }}
+      if: steps.update_status.outputs.made_changes == 'yes'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+
+  deploy:  # deploy to gh-pages from gh-pages preview
+    if: contains(github.event.pull_request.head.ref, 'auto-update=') || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages-${{ github.event.pull_request.head.ref }}
+    - name: Deploy to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: .
+
+  delete_gh_pages_preview:
+    needs: deploy
+    if: always() && contains(github.event.pull_request.head.ref, 'auto-update=')  # run even if deploy is skipped
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check if branch still exists
+        id: ls-remote
+        run: |
+          out=$(git ls-remote --heads origin gh-pages-${{ github.event.pull_request.head.ref }}
+          echo "::set-output name=out::$out"
+      - name: delete PR branch gh-pages-${{ github.event.pull_request.head.ref }}
+        if: steps.ls-remote.outputs.out
+        run: git push origin --delete gh-pages-${{ github.event.pull_request.head.ref }}
+
+
+  delete_PR_branches:
+    if: contains(github.event.pull_request.head.ref, 'auto-update=')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check if branch still exists
+        id: ls-remote
+        run: |
+          out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
+          echo "::set-output name=out::$out"
+      - name: delete PR branch ${{ github.event.pull_request.head.ref }}
+        if: steps.ls-remote.outputs.out
+        run: git push origin --delete ${{ github.event.pull_request.head.ref }}

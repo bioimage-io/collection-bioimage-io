@@ -1,0 +1,111 @@
+name: auto-update
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  get-pending:
+    runs-on: ubuntu-latest
+    outputs:
+      pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
+      found_pending: ${{ steps.get_pending.outputs.found_pending }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: main
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: get pending
+      id: get_pending
+      run: python scripts/get_pending.py collection ${{ github.event.pull_request.head.ref }}
+    - name: debug found pending ${{ steps.get_pending.outputs.found_pending }}
+      run: echo ${{ steps.get_pending.outputs.pending_matrix }}
+
+  static-validation:
+    needs: get-pending
+    if: needs.get-pending.outputs.found_pending == 'yes'
+    runs-on: ubuntu-latest
+    outputs:
+      passed_latest_static: ${{ steps.static_validation.outputs.passed_latest_static }}
+      dynamic_test_cases: ${{ steps.static_validation.outputs.dynamic_test_cases }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.get-pending.outputs.pending_matrix) }}  # version_id: [...]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install requests typer ruamel.yaml bioimageio.spec
+    - name: static validation
+      id: static_validation
+      run: python scripts/static_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.version_id }}
+    - name: get artifact name wo forward slashes
+      id: artifact_name
+      run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
+    - name: "Upload validation summaries"
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.artifact_name.outputs.name }}
+        path: dist/resources/${{ matrix.version_id }}
+        retention-days: 1
+
+  dynamic-validation:
+    needs: static-validation
+    if: needs.static-validation.outputs.passed_latest_static == 'yes'
+    runs-on: ubuntu-latest
+    strategy:
+#      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically (or does it?)
+      fail-fast: false
+      matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # case: [{env_name: ..., version_id: ..., weight_format: ...}, ...]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: get artifact name wo forward slashes
+      id: artifact_name
+      run: echo ::set-output name=name::$(echo ${{ matrix.case.version_id }} | sed 's#/##g')static_validation_artifact
+    - name: download environment.yaml
+      uses: actions/download-artifact@v2
+      with:
+        name: ${{ steps.artifact_name.outputs.name }}
+        path: dist/resources/${{ matrix.case.version_id }}
+    - name: install validation dependencies
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        mamba-version: "*"
+        channel-priority: strict
+        activate-environment: ${{ matrix.case.env_name }}
+        environment-file: dist/resources/${{ matrix.case.version_id }}/conda_env_${{ matrix.case.weight_format }}.yaml
+    - name: dynamic validation
+      shell: bash -l {0}
+      run: python scripts/dynamic_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.case.version_id }} ${{ matrix.case.weight_format }}
+    - name: "Upload validation summary"
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.artifact_name.outputs.name }}${{ matrix.case.weight_format }}
+        path: dist/resources/${{ matrix.case.version_id }}/${{ matrix.case.weight_format }}
+        retention-days: 1
+
+
+  deploy:
+    needs: [get-pending, static-validation, dynamic-validation]
+    if: always()  && needs.get-pending.outputs.found_pending == 'yes' # run even if dynamic validation fails
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec
+    - name: download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        path: artifacts
+    - name: prepare deployment
+      run: python scripts/prepare_to_deploy.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ needs.get-pending.outputs.pending_matrix }}' artifacts
+    - name: Deploy to gh-pages-${{ github.event.pull_request.head.ref }} 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages-${{ github.event.pull_request.head.ref }}  # The branch the action should deploy to.
+        folder: dist  # The folder the action should deploy.
