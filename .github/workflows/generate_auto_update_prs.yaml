@@ -2,7 +2,7 @@ name: generate auto-update PRs
 
 on:
   push:
-    branches: [ main, pyci ]  # todo: remove pyci
+    branches: [ main ]
 
 jobs:
   collect-new-resources:

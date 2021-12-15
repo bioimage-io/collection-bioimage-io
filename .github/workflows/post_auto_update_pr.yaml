@@ -2,7 +2,7 @@ name: post auto-update
 
 on:
   pull_request:
-    branches: [main, pyci]  # todo: remove pyci
+    branches: [ main ]
     types: [ closed ]
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: pyci  # todo: make main
+        ref: main
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: install script deps
@@ -34,7 +34,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: pyci  # todo: make main
+        branch: main
 
   deploy:  # deploy to gh-pages from gh-pages preview
     if: contains(github.event.pull_request.head.ref, 'auto-update=') || github.event.pull_request.merged == true
