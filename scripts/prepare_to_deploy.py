@@ -45,7 +45,7 @@ def main(
 
         # move validation summaries and conda env yaml files from artifact to version_id folder
         for sp in artifact_folder.glob(f"**/{version_id.replace('/', '')}*/**/*.yaml"):
-            shutil.move(sp, resource_folder / version_id)
+            shutil.move(str(sp), str(resource_folder / version_id))
 
     return 0
 
