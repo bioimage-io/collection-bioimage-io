@@ -41,7 +41,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}  # update: [{resource_id: ..., resource_name: ..., new_version_ids: ..., new_version_sources: ...}, ...]
+      # matrix: update: [{resource_id:..., resource_name:..., new_version_ids:..., new_version_sources:..., maintainers: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}
 
     steps:
     - uses: actions/checkout@v2
@@ -72,12 +73,14 @@ jobs:
           ${{ matrix.update.new_version_ids }}
           sources of new versions:
           ${{ matrix.update.new_version_sources }}
+          maintainers: ${{ matrix.update.maintainers }}
 
           deployment preview (will be) available at: [gh-pages-auto-update-${{ matrix.update.resource_id }}](/bioimage-io/collection-bioimage-io/tree/gh-pages-auto-update-${{ matrix.update.resource_id }})
 
           IMPORTANT: If new resource versions are detected this PR branch is beeing **force-pushed**.
           Either merge any manual changes before updates to the external resource occur
           or keep your updates safe in a separate branch and make a PR on [this PR's branch](/bioimage-io/collection-bioimage-io/tree/auto-update-${{ matrix.update.resource_id }}).
+
         labels: |
           auto-update
         draft: false

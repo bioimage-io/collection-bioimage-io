@@ -102,20 +102,20 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             resource_path = collection_folder / resource_doi / "resource.yaml"
 
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
-            if len(rdf_urls) == 0:
-                source = "unknown"
-                name = doi
-            else:
+            rdf = None
+            source = "unknown"
+            name = doi
+            if len(rdf_urls) > 0:
+                if len(rdf_urls) > 1:
+                    warnings.warn("found multiple 'rdf.yaml' sources?!?")
+
                 source = sorted(rdf_urls)[0]
                 try:
                     r = requests.get(source)
-                    name = yaml.load(r.text).get("name", doi)
+                    rdf = yaml.load(r.text)
+                    name = rdf.get("name", doi)
                 except Exception as e:
                     warnings.warn(f"Failed to obtain version name: {e}")
-                    name = doi
-
-                if len(rdf_urls) > 1:
-                    warnings.warn("found multiple 'rdf.yaml' sources?!?")
 
             new_version = {
                 "version_id": doi,
@@ -135,6 +135,16 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             )
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
+                # add more fields just
+                maintainers = []
+                if rdf is not None:
+                    _maintainers = rdf.get("maintainers")
+                    if isinstance(_maintainers, list) and all(isinstance(m, dict) for m in _maintainers):
+                        maintainers = [m.get("github_user") for m in _maintainers]
+                        # only expect non empty strings and prepend single '@'
+                        maintainers = ["@" + m.strip("@") for m in maintainers if isinstance(m, str) and m]
+
+                new_version["maintainers"] = maintainers
                 updated_resources[resource_doi].append(new_version)
 
 
@@ -152,9 +162,10 @@ def main(collection_folder: Path) -> int:
                 "update": [
                     {
                         "resource_id": k,
-                        "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
-                        "new_version_sources": json.dumps([vv["source"] for vv in v]),
+                        "new_version_ids": "\n".join(["  - " + vv["version_id"] for vv in v]),
+                        "new_version_sources": "\n".join(["  - " + vv["source"] for vv in v]),
                         "resource_name": v[0]["name"],
+                        "maintainers": str(list(set(sum(vv["maintainers"] for vv in v)))),
                     }
                     for k, v in updated_resources.items()
                 ]
