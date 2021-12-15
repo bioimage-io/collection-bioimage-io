@@ -78,7 +78,6 @@ jobs:
         channel-priority: strict
         activate-environment: ${{ matrix.case.env_name }}
         environment-file: dist/resources/${{ matrix.case.version_id }}/conda_env_${{ matrix.case.weight_format }}.yaml
-        python-version: 3.8
     - name: dynamic validation
       shell: bash -l {0}
       run: python scripts/dynamic_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.case.version_id }} ${{ matrix.case.weight_format }}
