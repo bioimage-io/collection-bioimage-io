@@ -1,7 +1,0 @@
-resource_doi: 10.5281/zenodo.5744489
-resource_id: 10.5281/zenodo.5744489
-status: pending
-versions:
-- {created: '2021-11-30T14:37:51.631245+00:00', doi: 10.5281/zenodo.5744490, name: UNet
-    2D Nuclei Broad, source: 'https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/rdf.yaml',
-  status: pending, version_id: 10.5281/zenodo.5744490}
