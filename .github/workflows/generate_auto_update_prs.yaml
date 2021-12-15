@@ -63,11 +63,10 @@ jobs:
         signoff: false
         branch: auto-update-${{ matrix.update.resource_id }}
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
-        title: 'Update ${{ matrix.update.resource_id }}'
+        title: 'Update ${{ matrix.update.resource_name }}'
         body: |
-          Update <todo insert resource name>
           resource id: ${{ matrix.update.resource_id }}
-          add new versions:
+          new versions:
           ${{ matrix.update.new_version_ids }}
           sources of new versions:
           ${{ matrix.update.new_version_sources }}

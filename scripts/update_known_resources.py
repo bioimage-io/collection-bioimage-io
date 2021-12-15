@@ -65,7 +65,9 @@ def write_resource(
                 return "old_hit"
 
         # extend resource by new version
-        resource["pending_versions"].append(new_version)
+        resource["versions"].insert(0, new_version)
+        # make sure latest is first
+        resource["versions"].sort(key=lambda v: v["created"], reverse=True)
     else:  # create new resource
         resource = {
             "status": "pending",
@@ -80,7 +82,7 @@ def write_resource(
     return resource
 
 
-def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]) -> None:
+def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         print(zenodo_request)
@@ -102,12 +104,27 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             if len(rdf_urls) == 0:
                 source = "unknown"
+                name = "unknown"
             else:
                 source = sorted(rdf_urls)[0]
+                try:
+                    r = requests.get(source)
+                    name = yaml.load(r.text).get("name", "unknown")
+                except Exception as e:
+                    warnings.warn(f"Failed to obtain version name: {e}")
+                    name = "unknown"
+
                 if len(rdf_urls) > 1:
                     warnings.warn("found multiple 'rdf.yaml' sources?!?")
 
-            new_version = {"version_id": doi, "doi": doi, "created": created, "status": "pending", "source": source}
+            new_version = {
+                "version_id": doi,
+                "doi": doi,
+                "created": created,
+                "status": "pending",
+                "source": source,
+                "name": name,
+            }
 
             resource = write_resource(
                 resource_path=resource_path,
@@ -137,6 +154,7 @@ def main(collection_folder: Path) -> int:
                         "resource_id": k,
                         "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
                         "new_version_sources": json.dumps([vv["source"] for vv in v]),
+                        "resource_name": v[0]["name"],
                     }
                     for k, v in updated_resources.items()
                 ]
