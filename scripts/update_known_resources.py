@@ -162,8 +162,10 @@ def main(collection_folder: Path) -> int:
                 "update": [
                     {
                         "resource_id": k,
-                        "new_version_ids": "\n".join(["  - " + vv["version_id"] for vv in v]),
-                        "new_version_sources": "\n".join(["  - " + vv["source"] for vv in v]),
+                        "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
+                        "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
+                        "new_version_sources": json.dumps([vv["source"] for vv in v]),
+                        "new_version_sources_md": "\n".join(["  - " + vv["source"] for vv in v]),
                         "resource_name": v[0]["name"],
                         "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[])))),
                     }

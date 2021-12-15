@@ -3,6 +3,8 @@ name: generate auto-update PRs
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron:  '0 1,13 * * *'
 
 jobs:
   collect-new-resources:
@@ -70,9 +72,9 @@ jobs:
         body: |
           resource id: ${{ matrix.update.resource_id }}
           new versions:
-          ${{ matrix.update.new_version_ids }}
+          ${{ matrix.update.new_version_ids_md }}
           sources of new versions:
-          ${{ matrix.update.new_version_sources }}
+          ${{ matrix.update.new_version_sources_md }}
           maintainers: ${{ matrix.update.maintainers }}
 
           deployment preview (will be) available at: [gh-pages-auto-update-${{ matrix.update.resource_id }}](/bioimage-io/collection-bioimage-io/tree/gh-pages-auto-update-${{ matrix.update.resource_id }})
