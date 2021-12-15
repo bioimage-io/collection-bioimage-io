@@ -135,7 +135,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             )
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
-                updated_resources[resource_doi].append({"version_id": doi, "source": source})
+                updated_resources[resource_doi].append(new_version)
 
 
 def main(collection_folder: Path) -> int:
