@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_known.outputs.updated_resources_matrix }}
+      found_new_resources: ${{ steps.update_known.outputs.found_new_resources }}
 
     steps:
     - uses: actions/checkout@v2
@@ -36,6 +37,7 @@ jobs:
 
   open-pr:
     needs: [collect-new-resources]
+    if: needs.collect-new-resources.outputs.found_new_resources == 'yes'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
