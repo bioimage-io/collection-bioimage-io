@@ -41,8 +41,6 @@ jobs:
     - name: static validation
       id: static_validation
       run: python scripts/static_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.version_id }}
-    - name: debug test cases
-      run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::static_validation_artifact$(echo ${{ matrix.version_id }} | sed 's#/##g')
@@ -60,7 +58,7 @@ jobs:
     strategy:
 #      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically (or does it?)
       fail-fast: false
-      matrix: ${{ fromJson(needs.get-pending.outputs.dynamic_test_cases) }}  # case: [{env_name: ..., version_id: ..., weight_format: ...}, ...]
+      matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # case: [{env_name: ..., version_id: ..., weight_format: ...}, ...]
 
     steps:
     - uses: actions/checkout@v2
