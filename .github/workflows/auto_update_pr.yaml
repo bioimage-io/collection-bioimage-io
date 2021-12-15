@@ -43,7 +43,7 @@ jobs:
       run: python scripts/static_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.version_id }}
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact$
+      run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
     - name: "Upload validation summaries"
       uses: actions/upload-artifact@v2
       with:
