@@ -59,7 +59,7 @@ jobs:
       - name: check if branch still exists
         id: ls-remote
         run: |
-          out=$(git ls-remote --heads origin gh-pages-${{ github.event.pull_request.head.ref }}
+          out=$(git ls-remote --heads origin gh-pages-${{ github.event.pull_request.head.ref }})
           echo "::set-output name=out::$out"
       - name: delete PR branch gh-pages-${{ github.event.pull_request.head.ref }}
         if: steps.ls-remote.outputs.out
