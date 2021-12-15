@@ -36,8 +36,8 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
 
-  deploy:  # deploy to gh-pages from gh-pages preview
-    if: contains(github.event.pull_request.head.ref, 'auto-update=') || github.event.pull_request.merged == true
+  deploy:  # deploy to gh-pages from gh-pages preview  # todo: only deploy new accepted (not blocked)
+    if: contains(github.event.pull_request.head.ref, 'auto-update-') || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
 
   delete_gh_pages_preview:
     needs: deploy
-    if: always() && contains(github.event.pull_request.head.ref, 'auto-update=')  # run even if deploy is skipped
+    if: always() && contains(github.event.pull_request.head.ref, 'auto-update-')  # run even if deploy is skipped
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -67,7 +67,7 @@ jobs:
 
 
   delete_PR_branches:
-    if: contains(github.event.pull_request.head.ref, 'auto-update=')
+    if: contains(github.event.pull_request.head.ref, 'auto-update-')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
