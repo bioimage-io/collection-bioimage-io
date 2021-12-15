@@ -167,7 +167,8 @@ def main(collection_folder: Path) -> int:
                         "new_version_sources": json.dumps([vv["source"] for vv in v]),
                         "new_version_sources_md": "\n".join(["  - " + vv["source"] for vv in v]),
                         "resource_name": v[0]["name"],
-                        "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[])))),
+                        "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[]))))[1:-1]
+                        or "none specified",
                     }
                     for k, v in updated_resources.items()
                 ]
