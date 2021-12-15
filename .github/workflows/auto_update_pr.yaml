@@ -41,6 +41,8 @@ jobs:
     - name: static validation
       id: static_validation
       run: python scripts/static_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.version_id }}
+    - name: debug test cases
+      run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::static_validation_artifact$(echo ${{ matrix.version_id }} | sed 's#/##g')
