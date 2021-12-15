@@ -40,6 +40,7 @@ def main(
         rdf_data = serialize_raw_resource_description_to_dict(rdf_node)
         rdf_data.update(v)
 
+        (resource_folder / version_id).mkdir(parents=True, exist_ok=True)
         yaml.dump(rdf_data, resource_folder / version_id / "rdf.yaml")
 
         # move validation summaries and conda env yaml files from artifact to version_id folder
