@@ -86,6 +86,13 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
                 tf_version = "1.15"
             conda_env["dependencies"].append(f"pip")
             conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
+        elif weight_format == "keras_hdf5":
+            tf_version = rd.weights["keras_hdf5"].tensorflow_version
+            if not tf_version:
+                # todo: document default tf version
+                tf_version = "1.15"
+            conda_env["dependencies"].append(f"pip")
+            conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "onnx":
             conda_env["dependencies"].append("onnxruntime")
             # note: we should not need to worry about the opset version,
