@@ -48,7 +48,13 @@ def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
 
 
 def write_resource(
-    *, resource_path: Path, resource_id: str, resource_doi: Optional[str], version_id: str, new_version: dict
+    *,
+    resource_path: Path,
+    resource_id: str,
+    resource_doi: Optional[str],
+    version_id: str,
+    new_version: dict,
+    overwrite: bool = False,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if resource_path.exists():
         resource = yaml.load(resource_path)
@@ -62,9 +68,14 @@ def write_resource(
         else:
             raise ValueError(resource["status"])
 
-        for known_version in resource["versions"]:
+        for idx, known_version in enumerate(list(resource["versions"])):
             if known_version["version_id"] == version_id:
-                # fetched resource is known; assume all following older resources have been processed earlier
+                if overwrite:
+                    old_version = resource["versions"].pop(idx)
+                    if old_version != new_version:
+                        break
+
+                # fetched resource is known
                 return "old_hit"
 
         # extend resource by new version
@@ -181,7 +192,7 @@ def update_from_collection(
                 created = datetime.fromordinal(1)
 
                 # separate rdf under source (that also lives in github)?
-                rdf = dict(r)
+                rdf = {}
                 githubusercontent_url = "https://raw.githubusercontent.com/"
                 if source.startswith(githubusercontent_url) and source.endswith(".yaml"):
                     try:
@@ -204,20 +215,24 @@ def update_from_collection(
                             version_id = tag.sha
                             version_name = tag.tag
 
-                new_version = {
-                    "version_id": version_id,
-                    "created": created,
-                    "status": "pending",
-                    "source": source,
-                    "name": rdf.get("name", resource_id),
-                    "version_name": version_name,
-                }
+                new_version = rdf
+                new_version.update(
+                    {
+                        "version_id": version_id,
+                        "created": created,
+                        "status": "pending",
+                        "source": source,
+                        "name": rdf.get("name", resource_id),
+                        "version_name": version_name,
+                    }
+                )
                 resource = write_resource(
                     resource_path=collection_folder / resource_id / "resource.yaml",
                     resource_id=resource_id,
                     resource_doi=None,
                     version_id=version_id,
                     new_version=new_version,
+                    overwrite=True,
                 )
                 if resource not in ("blocked", "old_hit"):
                     assert isinstance(resource, dict)
