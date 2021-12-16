@@ -55,7 +55,7 @@ jobs:
 
   deploy_collection:  # deploy collection rdf to gh-pages
     needs: deploy
-    if: always() && contains(github.event.pull_request.head.ref, 'auto-update-') && github.event.pull_request.merged == true
+    if: always() && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
