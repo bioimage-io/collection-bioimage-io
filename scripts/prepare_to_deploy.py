@@ -36,8 +36,13 @@ def main(
         if version_id not in pending_versions or v["status"] == "blocked":
             continue
 
-        rdf_node = load_raw_resource_description(v["source"])
-        rdf_data = serialize_raw_resource_description_to_dict(rdf_node)
+        try:
+            rdf_node = load_raw_resource_description(v["source"])
+            rdf_data = serialize_raw_resource_description_to_dict(rdf_node)
+        except Exception as e:
+            warnings.warn(f"Failed to interpret {v['source']} as rdf: {e}")
+            rdf_data = {}
+
         rdf_data.update(v)
 
         (resource_folder / version_id).mkdir(parents=True, exist_ok=True)
