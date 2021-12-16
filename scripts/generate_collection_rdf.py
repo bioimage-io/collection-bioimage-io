@@ -47,7 +47,7 @@ def main() -> int:
     rdf_path = Path("dist/rdf.yaml")
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
-    with rdf_path.with_suffix(".json") as f:
+    with open(rdf_path.with_suffix(".json"), "w") as f:
         json.dump(rdf, f)
 
     return 0
