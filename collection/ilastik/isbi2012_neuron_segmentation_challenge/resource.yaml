@@ -1,0 +1,7 @@
+resource_doi: null
+resource_id: ilastik/isbi2012_neuron_segmentation_challenge
+status: pending
+versions:
+- {created: ! '0001-01-01 00:00:00', name: 'ISBI Challenge: Segmentation of neuronal
+    structures in EM stacks', source: 'https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download',
+  status: pending, version_id: ilastik/isbi2012_neuron_segmentation_challenge, version_name: latest}
