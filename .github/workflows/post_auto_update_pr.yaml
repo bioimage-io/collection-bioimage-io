@@ -79,7 +79,7 @@ jobs:
 
   delete_gh_pages_preview:
     needs: deploy
-    if: always() && contains(github.event.pull_request.head.ref, 'auto-update-')  # run even if deploy is skipped
+    if: always() && needs.deploy.result != "failure" && contains(github.event.pull_request.head.ref, 'auto-update-')  # run even if deploy is skipped
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
