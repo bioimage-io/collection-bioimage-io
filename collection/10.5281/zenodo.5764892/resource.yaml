@@ -4,4 +4,4 @@ status: pending
 versions:
 - {created: '2021-12-07T18:02:09.736653+00:00', doi: 10.5281/zenodo.5764893, name: NucleiSegmentationBoundaryModel,
   source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml',
-  status: pending, version_id: 10.5281/zenodo.5764893}
+  status: accepted, version_id: 10.5281/zenodo.5764893}
