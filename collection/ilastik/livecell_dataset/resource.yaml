@@ -2,5 +2,5 @@ resource_doi: null
 resource_id: ilastik/livecell_dataset
 status: pending
 versions:
-- {created: ! '0001-01-01 00:00:00', name: LIVECell, source: 'https://sartorius-research.github.io/LIVECell/',
+- {created: ! '0001-01-01 00:00:00', name: ilastik/livecell_dataset, source: 'https://sartorius-research.github.io/LIVECell/',
   status: pending, version_id: ilastik/livecell_dataset, version_name: latest}

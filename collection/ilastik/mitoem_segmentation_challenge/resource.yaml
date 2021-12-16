@@ -2,6 +2,6 @@ resource_doi: null
 resource_id: ilastik/mitoem_segmentation_challenge
 status: pending
 versions:
-- {created: ! '0001-01-01 00:00:00', name: 'MitoEM Challenge: Large-scale 3D Mitochondria
-    Instance Segmentation', source: 'https://mitoem.grand-challenge.org/', status: pending,
-  version_id: ilastik/mitoem_segmentation_challenge, version_name: latest}
+- {created: ! '0001-01-01 00:00:00', name: ilastik/mitoem_segmentation_challenge,
+  source: 'https://mitoem.grand-challenge.org/', status: pending, version_id: ilastik/mitoem_segmentation_challenge,
+  version_name: latest}

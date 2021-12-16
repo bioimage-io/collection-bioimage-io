@@ -2,5 +2,5 @@ resource_doi: null
 resource_id: ilastik/covid_if_training_data
 status: pending
 versions:
-- {created: ! '0001-01-01 00:00:00', name: Covid-IF Training Data, source: 'https://zenodo.org/record/5092850',
+- {created: ! '0001-01-01 00:00:00', name: ilastik/covid_if_training_data, source: 'https://zenodo.org/record/5092850',
   status: pending, version_id: ilastik/covid_if_training_data, version_name: latest}
