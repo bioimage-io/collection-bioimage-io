@@ -249,8 +249,7 @@ def main(collection_folder: Path) -> int:
     updated_resources: DefaultDict[str, List[Dict[str, str]]] = defaultdict(list)
 
     update_from_zenodo(collection_folder, updated_resources)
-
-    # todo: add resources hosted on github
+    update_from_github(collection_folder, updated_resources)
 
     set_gh_actions_output(
         "updated_resources_matrix",
