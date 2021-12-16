@@ -1,6 +1,0 @@
-resource_doi: null
-resource_id: ilastik/platynereis_em_training_data
-status: pending
-versions:
-- {created: ! '0001-01-01 00:00:00', name: ilastik/platynereis_em_training_data, source: 'https://doi.org/10.5281/zenodo.3675220',
-  status: pending, version_id: ilastik/platynereis_em_training_data, version_name: latest}
