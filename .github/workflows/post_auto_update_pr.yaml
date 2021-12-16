@@ -75,7 +75,7 @@ jobs:
       with:
         clean: false
         branch: gh-pages
-        folder: dist
+        folder: maint/dist
 
   delete_gh_pages_preview:
     needs: deploy
