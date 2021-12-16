@@ -44,7 +44,7 @@ outputs:
 sample_inputs: ['https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/test_input.npy']
 sample_outputs: ['https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/test_output.npy']
 source: https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/rdf.yaml
-status: maybe_accepted
+status: accepted
 tags: [unet2d, pytorch, nucleus, segmentation, dsb2018]
 test_inputs: ['https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/test_input.npy']
 test_outputs: ['https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/test_output.npy']
