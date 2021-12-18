@@ -18,6 +18,6 @@ versions:
     source: https://mitoem.grand-challenge.org/
     tags: [mitochondria, electron-microscopy, 3D, mito-em-challenge, instance-segmentation]
     type: dataset
-  status: pending
+  status: accepted
   version_id: ilastik/mitoem_segmentation_challenge
   version_name: latest
