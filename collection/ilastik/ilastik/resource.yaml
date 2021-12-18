@@ -1,6 +1,0 @@
-resource_doi: null
-resource_id: ilastik/ilastik
-status: pending
-versions:
-- {created: ! '0001-01-01 00:00:00', name: ilastik/ilastik, source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html',
-  status: pending, version_id: ilastik/ilastik, version_name: latest}
