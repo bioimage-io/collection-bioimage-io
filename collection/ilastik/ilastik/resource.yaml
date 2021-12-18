@@ -5,6 +5,6 @@ versions:
 - created: 0001-01-01 00:00:00
   name: ilastik/ilastik
   source: {source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html'}
-  status: pending
+  status: accepted
   version_id: ilastik/ilastik
   version_name: latest
