@@ -184,6 +184,7 @@ def update_from_collection(
     for rtype in resource_types:
         for r in c.get(rtype, []):
             try:
+                collection_item = {k: v for k, v in r.items() if k != "id"}
                 source = r["source"]
                 resource_id = f"{collection_id}/{r['id']}"
                 # no version_id for rdfs only specified in the collection (not in separate rdf under source)
@@ -191,8 +192,8 @@ def update_from_collection(
                 version_name = "latest"
                 created = datetime.fromordinal(1)
 
-                # separate rdf under source (that also lives in github)?
-                rdf = {}
+                # assume rdf is defined outside of collection under source (that also lives in github)
+                rdf = None
                 githubusercontent_url = "https://raw.githubusercontent.com/"
                 if source.startswith(githubusercontent_url) and source.endswith(".yaml"):
                     try:
@@ -203,6 +204,7 @@ def update_from_collection(
 
                     except Exception as e:
                         warnings.warn(f"Failed to load rdf from {source}: {e}")
+                        rdf = None
                     else:
                         try:
                             orga, repo, branch, *_ = source[len(githubusercontent_url) :].split("/")
@@ -215,7 +217,14 @@ def update_from_collection(
                             version_id = tag.sha
                             version_name = tag.tag
 
-                new_version = rdf
+                # fallback assumes rdf is defined in collection; source does not point to a (valid) rdf
+                if rdf is None:
+                    source = collection_item
+                    new_version = {}
+                else:
+                    # collection item specifies update rdf, like we allow for a manual update here
+                    new_version = collection_item
+
                 new_version.update(
                     {
                         "version_id": version_id,
@@ -226,6 +235,7 @@ def update_from_collection(
                         "version_name": version_name,
                     }
                 )
+
                 resource = write_resource(
                     resource_path=collection_folder / resource_id / "resource.yaml",
                     resource_id=resource_id,
