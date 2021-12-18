@@ -1,0 +1,28 @@
+resource_doi: null
+resource_id: ilastik/cremi_training_data
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  name: ilastik/cremi_training_data
+  source:
+    authors:
+    - {name: Constantin Pape}
+    cite:
+    - {text: 'Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman',
+      url: 'https://cremi.org/'}
+    covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png',
+      'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png',
+      'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png']
+    description: Training data from the challenge on 3d EM segmentation on neuronal
+      processes.
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
+    format_version: 0.2.1
+    name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
+      Images'
+    source: https://cremi.org/
+    tags: [electron-microscopy, brain, neurons, instance-segmentation, cremi-challenge,
+      3D]
+    type: dataset
+  status: pending
+  version_id: ilastik/cremi_training_data
+  version_name: latest
