@@ -219,6 +219,7 @@ def update_from_collection(
 
                 # fallback assumes rdf is defined in collection; source does not point to a (valid) rdf
                 if rdf is None:
+                    rdf = {}
                     source = collection_item
                     new_version = {}
                 else:
