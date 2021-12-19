@@ -9,9 +9,9 @@ yaml = YAML(typ="safe")
 
 
 def main() -> int:
-    collection_path = Path("main/collection")
+    collection_path = Path("collection")
     resource_path = Path("gh-pages/resources")
-    rdf = yaml.load(Path("main/collection_rdf_template.yaml"))
+    rdf = yaml.load(Path("collection_rdf_template.yaml"))
 
     for r_path in collection_path.glob("**/resource.yaml"):
         r = yaml.load(r_path)
@@ -44,7 +44,7 @@ def main() -> int:
             else:
                 warnings.warn(f"ignoring resource {r_path} with type '{type_}'")
 
-    rdf_path = Path("main/dist/rdf.yaml")
+    rdf_path = Path("dist/rdf.yaml")
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
     with open(rdf_path.with_suffix(".json"), "w") as f:
