@@ -53,30 +53,6 @@ jobs:
         branch: gh-pages
         folder: .
 
-  deploy_collection:  # deploy collection rdf to gh-pages
-    needs: deploy
-    if: always() && github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: gh-pages
-        path: gh-pages
-    - uses: actions/checkout@v2
-      with:
-        ref: main
-        path: main
-    - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec
-    - name: generate collection rdf
-      run: python main/scripts/generate_collection_rdf.py
-    - name: Deploy collection rdf to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        clean: false
-        branch: gh-pages
-        folder: maint/dist
-
   delete_gh_pages_preview:
     needs: deploy
     if: always() && needs.deploy.result != 'failure' && contains(github.event.pull_request.head.ref, 'auto-update-')  # run even if deploy is skipped

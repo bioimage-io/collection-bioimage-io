@@ -87,3 +87,25 @@ jobs:
         labels: |
           auto-update
         draft: false
+
+  deploy_collection:  # deploy collection rdf to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - uses: actions/checkout@v2
+      with:
+        ref: main
+        path: main
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec
+    - name: generate collection rdf
+      run: python main/scripts/generate_collection_rdf.py
+    - name: Deploy collection rdf to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: main/dist
