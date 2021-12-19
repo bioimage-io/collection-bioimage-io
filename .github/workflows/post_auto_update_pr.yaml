@@ -1,7 +1,7 @@
 name: post auto-update
 
 # do not run this workflow in parallel as we push to gh-pages
-concurrency: post-auto-update
+concurrency: deploy-auto-update
 
 on:
   pull_request:
