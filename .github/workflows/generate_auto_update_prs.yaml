@@ -99,7 +99,7 @@ jobs:
     - name: install script deps
       run: pip install typer ruamel.yaml bioimageio.spec
     - name: generate collection rdf
-      run: python main/scripts/generate_collection_rdf.py
+      run: python scripts/generate_collection_rdf.py
     - name: Deploy collection rdf to gh-pages 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
