@@ -72,7 +72,8 @@ def write_resource(
             if known_version["version_id"] == version_id:
                 if overwrite:
                     old_version = resource["versions"].pop(idx)
-                    if old_version != new_version:
+                    old_version.pop("status", None)  # don't overwrite status
+                    if old_version != {k: v for k, v in new_version.items() if k != "status"}:
                         break
 
                 # fetched resource is known
