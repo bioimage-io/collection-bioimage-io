@@ -37,6 +37,7 @@ def main() -> int:
     processed_gh_pages_previews = []
 
     for r_path in collection_path.glob("**/resource.yaml"):
+        print("process ", r_path)
         r = yaml.load(r_path)
         if r["status"] != "accepted":
             continue
