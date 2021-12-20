@@ -19,6 +19,6 @@ versions:
     source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
     tags: [electron-microscopy, brain, neurons, instance-segmentation, 2D, isbi2012-challenge]
     type: dataset
-  status: pending
+  status: blocked
   version_id: ilastik/isbi2012_neuron_segmentation_challenge
   version_name: latest
