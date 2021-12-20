@@ -5,6 +5,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
+  n_resource_versions: {}
+  n_resources: {}
   partners:
   - {id: ilastik, source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml'}
   resource_types: [model, application, notebook, dataset]
