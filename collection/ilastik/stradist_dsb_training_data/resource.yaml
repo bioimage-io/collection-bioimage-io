@@ -1,6 +1,6 @@
 resource_doi: null
 resource_id: ilastik/stradist_dsb_training_data
-status: pending
+status: accepted
 versions:
 - created: 0001-01-01 00:00:00
   name: ilastik/stradist_dsb_training_data
