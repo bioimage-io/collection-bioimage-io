@@ -43,6 +43,7 @@ jobs:
     if: needs.collect-new-resources.outputs.found_new_resources == 'yes'
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1  # to limit content creation (PRs) on github to avoid getting temporary blocked
       fail-fast: false
       # matrix: update: [{resource_id:..., resource_name:..., new_version_ids:..., new_version_sources:..., maintainers: ...}, ...]
       matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}
