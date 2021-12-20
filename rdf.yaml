@@ -5,8 +5,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {}
-  n_resources: {}
+  n_resource_versions: {model: 1}
+  n_resources: {model: 1}
   partners:
   - {id: ilastik, source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml'}
   resource_types: [model, application, notebook, dataset]
@@ -21,7 +21,181 @@ description: BioImage.IO collection RDF
 documentation: README.md
 git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
-model: []
+model:
+- attachments:
+    files: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/zero_mean_unit_variance.ijm']
+    unknown: {}
+  authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  cite:
+  - {text: training library, url: 'https://doi.org/10.5281/zenodo.5108853'}
+  - {text: architecture, url: 'https://doi.org/10.1007/978-3-319-24574-4_28'}
+  - {text: segmentation algorithm, url: 'https://doi.org/10.1038/nmeth.4151'}
+  - {text: data, url: 'https://www.nature.com/articles/s41592-019-0612-7'}
+  config:
+    deepimagej:
+      allow_tiling: true
+      model_keys: null
+      prediction:
+        postprocess:
+        - {spec: null}
+        preprocess:
+        - {kwargs: zero_mean_unit_variance.ijm, spec: 'ij.IJ::runMacroFile'}
+      pyramidal_model: false
+      test_information:
+        inputs:
+        - name: sample_input_0.tif
+          pixel_size: {x: 1, y: 1, z: 1}
+          size: 256 x 256 x 1 x 1
+        memory_peak: null
+        outputs:
+        - {name: sample_output_0.tif, size: 256 x 256 x 1 x 2, type: image}
+        runtime: null
+  covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
+  created: '2021-12-07T18:02:09.736653+00:00'
+  description: Nucleus segmentation for fluorescence microscopy
+  documentation: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
+  doi: 10.5281/zenodo.5764893
+  format_version: 0.4.1
+  inputs:
+  - axes: bcyx
+    data_range: [0.0, 255.0]
+    data_type: uint8
+    name: input0
+    preprocessing:
+    - kwargs: {axes: cyx, mode: per_sample}
+      name: zero_mean_unit_variance
+    shape:
+      min: [1, 1, 32, 32]
+      step: [0, 0, 16, 16]
+  license: CC-BY-4.0
+  links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
+    imjoy/BioImageIO-Packager]
+  maintainers:
+  - {github_user: constantinpape}
+  name: NucleiSegmentationBoundaryModel
+  outputs:
+  - axes: bcyx
+    data_range: [-.inf, .inf]
+    data_type: float32
+    halo: [0, 0, 16, 16]
+    name: output0
+    shape:
+      offset: [0.0, 0.0, 0.0, 0.0]
+      reference_tensor: input0
+      scale: [1.0, 2.0, 1.0, 1.0]
+  previous_versions: []
+  sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
+  sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
+  source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+  status: accepted
+  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
+  test_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_input_0.npy']
+  test_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_output_0.npy']
+  timestamp: '2021-12-07T18:43:26.889129'
+  type: model
+  validation_summaries:
+    latest_static:
+      error: null
+      name: bioimageio.spec static validation with auto-conversion to latest format
+      nested_errors: {}
+      traceback: null
+      warnings: {}
+    onnx:
+      error: No module named 'torch'
+      name: reproduced test outputs
+      traceback: ["  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_tests.py\",
+          line 94, in test_resource\n    rd = load_resource_description(model_rdf)\n",
+        "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_io/io_.py\",
+          line 51, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+          nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
+          line 125, in resolve_raw_resource_description\n    rd = SourceNodeTransformer().transform(rd)\n",
+        "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in generic_transformer\n    return dataclasses.replace(node, **{name:
+          self.transform(value) for name, value in iter_fields(node)})\n", "  File
+          \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+          for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 62, in transform_dict\n    return {key: self.transform(value) for key,
+          value in node.items()}\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 62, in <dictcomp>\n    return {key: self.transform(value) for key,
+          value in node.items()}\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in generic_transformer\n    return dataclasses.replace(node, **{name:
+          self.transform(value) for name, value in iter_fields(node)})\n", "  File
+          \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+          for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
+          line 85, in transform_ResolvedImportableSourceFile\n    importlib_spec.loader.exec_module(dep)
+          \ # type: ignore  # todo: possible to use \"loader.load_module\"?\n", '  File
+          "<frozen importlib._bootstrap_external>", line 883, in exec_module
+
+          ', '  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+
+          ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/unet.py\",
+          line 1, in <module>\n    import torch\n"]
+    pytorch_state_dict:
+      error: No module named 'torch'
+      name: reproduced test outputs
+      traceback: ["  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_tests.py\",
+          line 94, in test_resource\n    rd = load_resource_description(model_rdf)\n",
+        "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_io/io_.py\",
+          line 51, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+          nodes_module=nodes)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
+          line 125, in resolve_raw_resource_description\n    rd = SourceNodeTransformer().transform(rd)\n",
+        "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in generic_transformer\n    return dataclasses.replace(node, **{name:
+          self.transform(value) for name, value in iter_fields(node)})\n", "  File
+          \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+          for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 62, in transform_dict\n    return {key: self.transform(value) for key,
+          value in node.items()}\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 62, in <dictcomp>\n    return {key: self.transform(value) for key,
+          value in node.items()}\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in generic_transformer\n    return dataclasses.replace(node, **{name:
+          self.transform(value) for name, value in iter_fields(node)})\n", "  File
+          \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 68, in <dictcomp>\n    return dataclasses.replace(node, **{name: self.transform(value)
+          for name, value in iter_fields(node)})\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/spec/shared/utils/_node_transformer.py\",
+          line 53, in transform\n    return transformer(node)\n", "  File \"/usr/share/miniconda/envs/10.5281zenodo.5764893/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
+          line 85, in transform_ResolvedImportableSourceFile\n    importlib_spec.loader.exec_module(dep)
+          \ # type: ignore  # todo: possible to use \"loader.load_module\"?\n", '  File
+          "<frozen importlib._bootstrap_external>", line 883, in exec_module
+
+          ', '  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+
+          ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/unet.py\",
+          line 1, in <module>\n    import torch\n"]
+    static:
+      error: null
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: null
+      warnings: {}
+    torchscript: {error: null, name: reproduced test outputs, traceback: null}
+  version: '0.1'
+  version_id: 10.5281/zenodo.5764893
+  version_name: revision 1
+  weights:
+    onnx: {opset_version: 12, sha256: df913b85947f5132bcdaf81d91af0963f60d44f4caf8a4fec672d96a2f327b44,
+      source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights.onnx'}
+    pytorch_state_dict:
+      architecture: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/unet.py:UNet2d
+      architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
+      dependencies: conda:https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/environment.yaml
+      kwargs: {depth: 4, final_activation: Sigmoid, gain: 2, in_channels: 1, initial_features: 64,
+        out_channels: 2, postprocessing: null, return_side_outputs: false}
+      sha256: 608f52cd7f5119f7a7b8272395b0c169714e8be34536eaf159820f72a1d6a5b7
+      source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights.pt
+    torchscript: {sha256: 8410950508655a300793b389c815dc30b1334062fc1dadb1e15e55a93cbb99a0,
+      source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights-torchscript.pt'}
 name: BioImage.IO
 notebook: []
 tags: []

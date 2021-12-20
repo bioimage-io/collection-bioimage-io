@@ -71,6 +71,7 @@ timestamp: '2021-12-07T18:43:26.889129'
 type: model
 version: '0.1'
 version_id: 10.5281/zenodo.5764893
+version_name: revision 1
 weights:
   onnx: {opset_version: 12, sha256: df913b85947f5132bcdaf81d91af0963f60d44f4caf8a4fec672d96a2f327b44,
     source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights.onnx'}
