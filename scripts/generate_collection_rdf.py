@@ -36,8 +36,10 @@ def main() -> int:
 
     processed_gh_pages_previews = []
 
-    for r_path in collection_path.glob("**/resource.yaml"):
-        print("process ", r_path)
+    n_accepted = {}
+    n_accepted_versions = {}
+    known_resources = list(collection_path.glob("**/resource.yaml"))
+    for r_path in known_resources:
         r = yaml.load(r_path)
         if r["status"] != "accepted":
             continue
@@ -56,7 +58,6 @@ def main() -> int:
         for v in r["versions"]:
             if v["status"] != "accepted":
                 continue
-
             version_sub_path = Path("resources") / v["version_id"]
             if from_preview:
                 v_path = ghp_prev / version_sub_path / "rdf.yaml"
@@ -104,9 +105,21 @@ def main() -> int:
             type_list = rdf.get(type_)
             if isinstance(type_list, list):
                 type_list.append(latest_version)
+                n_accepted[type_] = n_accepted.get(type_, 0) + 1
+                n_accepted_versions[type_] = (
+                    n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
+                )
             else:
                 warnings.warn(f"ignoring resource {r_path} with type '{type_}'")
 
+    print(f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources.")
+    print("accepted resources per type:")
+    pprint(n_accepted)
+    print("accepted resource versions per type:")
+    pprint(n_accepted_versions)
+
+    rdf["config"]["n_resources"] = n_accepted
+    rdf["config"]["n_resource_versions"] = n_accepted_versions
     rdf_path = Path("dist/gh-pages-update/rdf.yaml")
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
