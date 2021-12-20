@@ -88,21 +88,46 @@ jobs:
           auto-update
         draft: false
 
-  deploy_collection:  # deploy collection rdf to gh-pages
+  deploy:  # deploy new resource versions and collection rdf to gh-pages
     runs-on: ubuntu-latest
+    outputs:
+      processed_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_gh_pages_previews }}
+      processed_any_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_any_gh_pages_previews }}
+
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
-      with:
-        ref: gh-pages
-        path: gh-pages
+#    - uses: actions/checkout@v2
+#      with:
+#        ref: gh-pages
+#        path: dist/gh-pages
     - name: install script deps
       run: pip install typer ruamel.yaml bioimageio.spec
     - name: generate collection rdf
+      id: gen_coll_rdf
       run: python scripts/generate_collection_rdf.py
     - name: Deploy collection rdf to gh-pages 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         clean: false
         branch: gh-pages
-        folder: dist
+        folder: dist/gh-pages-update
+
+  rm-previews:
+    needs: deploy
+    if: needs.deploy.outputs.processed_any_gh_pages_previews == 'yes'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix: ${{ fromJson(needs.deploy.outputs.processed_gh_pages_previews) }}  # preview-branch: [...]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: check if branch still exists
+        id: ls-remote
+        run: |
+          out=$(git ls-remote --heads origin ${{ matrix.preview-branch }})
+          echo "::set-output name=out::$out"
+      - name: delete ${{ matrix.preview-branch }}
+        if: steps.ls-remote.outputs.out
+        run: git push origin --delete ${{ matrix.preview-branch }}
