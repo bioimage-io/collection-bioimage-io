@@ -22,8 +22,10 @@ def main() -> int:
     rdf = yaml.load(Path("collection_rdf_template.yaml"))
 
     subprocess.run(["git", "fetch"])
+    remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
+    remote_branches = remote_branch_proc.stdout.split()
     gh_pages = Path("dist/gh-pages")
-    subprocess.run(["git", "worktree", "add", str(gh_pages), f"origin/gh-pages"])
+    subprocess.run(["git", "worktree", "add", str(gh_pages), f"gh-pages"])
     gh_pages_previews = Path("dist/gh-pages-previews")
     gh_pages_update = Path("dist/gh-pages-update")
     gh_pages_update.mkdir(parents=True)
@@ -40,19 +42,20 @@ def main() -> int:
             if v["status"] != "accepted":
                 continue
 
-            v_path = gh_pages / "resources" / v["version_id"] / "rdf.yaml"
-            if not v_path.exists():
-                # might be a new resource; deploy from preview
-                preview_branch = f"gh-pages-auto-update-{r['version_id']}"
+            # deploy from preview if it exists
+            preview_branch = f"gh-pages-auto-update-{r['version_id']}"
+            if f"origin/{preview_branch}" in remote_branches:
                 # checkout preview separately
                 ghp_preview = gh_pages_previews / preview_branch
-                subprocess.run(["git", "worktree", "add", str(ghp_preview), f"origin/{preview_branch}"])
+                subprocess.run(["git", "worktree", "add", str(ghp_preview), f"{preview_branch}"])
                 v_path = ghp_preview / "resources" / v["version_id"] / "rdf.yaml"
                 # move gh-pages preview content to gh-pages update
                 if v_path.exists():
                     processed_gh_pages_previews.append(preview_branch)
                     shutil.move(str(ghp_preview / "*"), str(gh_pages_update))
                     v_path = gh_pages_update / "resources" / v["version_id"] / "rdf.yaml"
+            else:
+                v_path = gh_pages / "resources" / v["version_id"] / "rdf.yaml"
 
             if not v_path.exists():
                 warnings.warn(f"ignoring missing resource version {v_path}")
