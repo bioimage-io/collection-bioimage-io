@@ -23,6 +23,6 @@ versions:
     tags: [electron-microscopy, brain, neurons, instance-segmentation, cremi-challenge,
       3D]
     type: dataset
-  status: pending
+  status: accepted
   version_id: ilastik/cremi_training_data
   version_name: latest
