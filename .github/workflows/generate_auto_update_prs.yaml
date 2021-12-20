@@ -1,5 +1,5 @@
 name: generate auto-update PRs
-concurrency: deploy-auto-update # do not run this workflow in parallel
+concurrency: generate-auto-update  # do not run this workflow in parallel
 
 on:
   push:

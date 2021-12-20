@@ -1,8 +1,5 @@
 name: post auto-update
 
-# do not run this workflow in parallel as we push to gh-pages
-concurrency: deploy-auto-update
-
 on:
   pull_request:
     branches: [ main ]
@@ -82,4 +79,3 @@ jobs:
       - name: delete PR branch ${{ github.event.pull_request.head.ref }}
         if: steps.ls-remote.outputs.out
         run: git push origin --delete ${{ github.event.pull_request.head.ref }}
-
