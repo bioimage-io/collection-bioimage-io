@@ -21,10 +21,10 @@ def main() -> int:
     collection_path = Path("collection")
     rdf = yaml.load(Path("collection_rdf_template.yaml"))
 
+    subprocess.run(["git", "fetch"])
     gh_pages = Path("dist/gh-pages")
-    subprocess.run(["git", "worktree", "add", str(gh_pages)])  # checkout gh-pages separately
+    subprocess.run(["git", "worktree", "add", str(gh_pages), f"origin/gh-pages"])
     gh_pages_previews = Path("dist/gh-pages-previews")
-    gh_pages_previews.mkdir(parents=True)
     gh_pages_update = Path("dist/gh-pages-update")
     gh_pages_update.mkdir(parents=True)
 
@@ -46,7 +46,7 @@ def main() -> int:
                 preview_branch = f"gh-pages-auto-update-{r['version_id']}"
                 # checkout preview separately
                 ghp_preview = gh_pages_previews / preview_branch
-                subprocess.run(["git", "worktree", "add", str(ghp_preview)])
+                subprocess.run(["git", "worktree", "add", str(ghp_preview), f"origin/{preview_branch}"])
                 v_path = ghp_preview / "resources" / v["version_id"] / "rdf.yaml"
                 # move gh-pages preview content to gh-pages update
                 if v_path.exists():
