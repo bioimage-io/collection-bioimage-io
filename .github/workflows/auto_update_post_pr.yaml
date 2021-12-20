@@ -36,36 +36,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
 
-  deploy:  # deploy to gh-pages from gh-pages preview  # todo: only deploy new accepted (not blocked)
-    if: contains(github.event.pull_request.head.ref, 'auto-update-') && github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: gh-pages-${{ github.event.pull_request.head.ref }}
-    - name: Deploy to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        clean: false
-        branch: gh-pages
-        folder: .
-
-  delete_gh_pages_preview:
-    needs: deploy
-    if: always() && needs.deploy.result != 'failure' && contains(github.event.pull_request.head.ref, 'auto-update-')  # run even if deploy is skipped
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: check if branch still exists
-        id: ls-remote
-        run: |
-          out=$(git ls-remote --heads origin gh-pages-${{ github.event.pull_request.head.ref }})
-          echo "::set-output name=out::$out"
-      - name: delete PR branch gh-pages-${{ github.event.pull_request.head.ref }}
-        if: steps.ls-remote.outputs.out
-        run: git push origin --delete gh-pages-${{ github.event.pull_request.head.ref }}
-
-
   delete_PR_branches:
     if: contains(github.event.pull_request.head.ref, 'auto-update-')
     runs-on: ubuntu-latest
