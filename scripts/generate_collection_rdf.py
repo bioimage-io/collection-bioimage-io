@@ -52,24 +52,30 @@ def main() -> int:
                 if v_path.exists():
                     processed_gh_pages_previews.append(preview_branch)
                     shutil.move(str(ghp_preview / "*"), str(gh_pages_update))
+                    v_path = gh_pages_update / "resources" / v["version_id"] / "rdf.yaml"
 
             if not v_path.exists():
                 warnings.warn(f"ignoring missing resource version {v_path}")
                 continue
 
+            this_version = yaml.load(v_path)
+            if not isinstance(this_version, dict):
+                warnings.warn(f"ignoring non-dict resource version {v_path}")
+                continue
+
+            # add validation summaries
+            val_summaries = {}
+            for val_path in v_path.parent.glob("validation_summary_*.yaml"):
+                name = val_path.stem.replace("validation_summary_", "")
+                val_summaries[name] = yaml.load(val_path)
+
+            this_version["validation_summaries"] = val_summaries
+
             if latest_version is None:
-                latest_version = yaml.load(v_path)
-                if isinstance(latest_version, dict):
-                    latest_version["previous_versions"] = []
-                else:
-                    latest_version = None
-                    warnings.warn(f"ignoring non-dict {v_path}")
+                latest_version = this_version
+                latest_version["previous_versions"] = []
             else:
-                previous_version = yaml.load(v_path)
-                if isinstance(previous_version, dict):
-                    latest_version["previous_versions"].append(previous_version)
-                else:
-                    warnings.warn(f"ignoring non-dict previous version {v_path}")
+                latest_version["previous_versions"].append(this_version)
 
         if latest_version is None:
             warnings.warn(f"Ignoring resource at {r_path} without any accepted versions")
