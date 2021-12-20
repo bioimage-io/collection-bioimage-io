@@ -22,7 +22,17 @@ def main(
             if not only_if_pending or (only_if_pending and v["status"] == "pending"):
                 v["status"] = status
 
+    if any(v["status"] == "accepted" for v in resource["versions"]):
+        resource_status = "accepted"
+    elif any(v["status"] == "pending" for v in resource["versions"]):
+        resource_status = "pending"
+    else:
+        resource_status = "blocked"
+
+    resource["status"] = resource_status
+
     yaml.dump(resource, resource_path)
+
     return 0
 
 

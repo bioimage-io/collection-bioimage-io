@@ -58,6 +58,7 @@ def main() -> int:
         for v in r["versions"]:
             if v["status"] != "accepted":
                 continue
+
             version_sub_path = Path("resources") / v["version_id"]
             if from_preview:
                 v_path = ghp_prev / version_sub_path / "rdf.yaml"
