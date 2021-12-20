@@ -3,6 +3,7 @@ import shutil
 import subprocess
 import warnings
 from pathlib import Path
+from pprint import pprint
 
 import typer
 from ruamel.yaml import YAML
@@ -24,6 +25,9 @@ def main() -> int:
     subprocess.run(["git", "fetch"])
     remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
     remote_branches = remote_branch_proc.stdout.split()
+    print("found remote branches:")
+    pprint(remote_branches)
+
     gh_pages = Path("dist/gh-pages")
     subprocess.run(["git", "worktree", "add", str(gh_pages), f"gh-pages"])
     gh_pages_previews = Path("dist/gh-pages-previews")
