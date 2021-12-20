@@ -67,7 +67,11 @@ def main() -> int:
             val_summaries = {}
             for val_path in v_path.parent.glob("validation_summary_*.yaml"):
                 name = val_path.stem.replace("validation_summary_", "")
-                val_summaries[name] = yaml.load(val_path)
+                val_sum = yaml.load(val_path)
+                if not isinstance(val_sum, dict):
+                    val_sum = {"output": val_sum}
+
+                val_summaries[name] = {k: v for k, v in val_sum.items() if k != "source_name"}
 
             this_version["validation_summaries"] = val_summaries
 
