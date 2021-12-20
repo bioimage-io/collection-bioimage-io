@@ -1,6 +1,8 @@
 application: []
 authors:
 - {name: BioImgae.IO Team}
+cite:
+- {text: todo cite BioImageIO, url: 'https://bioimage.io'}
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
@@ -19,6 +21,7 @@ config:
 dataset: []
 description: BioImage.IO collection RDF
 documentation: README.md
+format_version: 0.2.1
 git_repo: https://github.com/bioimage-io/collection-bioimage-io
 icon: https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/icons/android-chrome-384x384.png
 model:
