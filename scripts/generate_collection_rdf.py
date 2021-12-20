@@ -67,7 +67,9 @@ def main() -> int:
                     processed_gh_pages_previews.append(preview_branch)
                     ghp_up = gh_pages_update / version_sub_path
                     ghp_up.mkdir(parents=True)
-                    shutil.move(str(ghp_prev / version_sub_path / "*"), str(ghp_up))
+                    shutil.copytree(
+                        str(ghp_prev / version_sub_path), str(ghp_up), copy_function=shutil.move, dirs_exist_ok=True
+                    )
                     v_path = ghp_up / "rdf.yaml"
             else:
                 v_path = gh_pages / version_sub_path / "rdf.yaml"
