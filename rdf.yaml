@@ -85,6 +85,7 @@ model:
       reference_tensor: input0
       scale: [1.0, 2.0, 1.0, 1.0]
   previous_versions: []
+  resource_id: 10.5281/zenodo.5764892
   sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
   source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
