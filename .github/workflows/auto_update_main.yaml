@@ -98,7 +98,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec
+      run: pip install typer ruamel.yaml bioimageio.spec boltons
     - name: generate collection rdf
       id: gen_coll_rdf
       run: python scripts/generate_collection_rdf.py

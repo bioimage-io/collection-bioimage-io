@@ -6,6 +6,7 @@ from pathlib import Path
 from pprint import pprint
 
 import typer
+from boltons.iterutils import remap
 from ruamel.yaml import YAML
 
 yaml = YAML(typ="safe")
@@ -127,8 +128,20 @@ def main() -> int:
     rdf_path = Path("dist/gh-pages-update/rdf.yaml")
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
+
+    # valid JSON does not support NaNs...
+    def convert_nan(p, k, v):
+        """replace numbers -inf/inf with stings '-inf'/'inf'"""
+        number_strings = ["-inf", "inf", "nan"]
+        for n in number_strings:
+            if v == float(n):
+                return k, n
+
+        return True
+
+    rdf = remap(rdf, convert_nan)
     with open(rdf_path.with_suffix(".json"), "w") as f:
-        json.dump(rdf, f)
+        json.dump(rdf, f, allow_nan=False)
 
     set_gh_actions_output("processed_gh_pages_previews", json.dumps({"preview-branch": processed_gh_pages_previews}))
     set_gh_actions_output("processed_any_gh_pages_previews", "yes" if processed_gh_pages_previews else "no")
