@@ -97,10 +97,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-#    - uses: actions/checkout@v2
-#      with:
-#        ref: gh-pages
-#        path: dist/gh-pages
+      with:
+        fetch-depth: 0
     - name: install script deps
       run: pip install typer ruamel.yaml bioimageio.spec
     - name: generate collection rdf

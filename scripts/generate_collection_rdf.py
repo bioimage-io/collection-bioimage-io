@@ -43,7 +43,7 @@ def main() -> int:
             v_path = gh_pages / "resources" / v["version_id"] / "rdf.yaml"
             if not v_path.exists():
                 # might be a new resource; deploy from preview
-                preview_branch = f"gh-pages-auto-update-{r['resource_id']}"
+                preview_branch = f"gh-pages-auto-update-{r['version_id']}"
                 # checkout preview separately
                 ghp_preview = gh_pages_previews / preview_branch
                 subprocess.run(["git", "worktree", "add", str(ghp_preview)])
