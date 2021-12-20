@@ -278,38 +278,30 @@ def main(collection_folder: Path) -> int:
     update_from_zenodo(collection_folder, updated_resources)
     update_from_github(collection_folder, updated_resources)
 
-    set_gh_actions_output(
-        "updated_resources_matrix",
-        json.dumps(
-            {
-                "update": [
-                    {
-                        "resource_id": k,
-                        "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
-                        "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
-                        "new_version_sources": json.dumps([vv["source"] for vv in v]),
-                        "new_version_sources_md": "\n".join(
-                            [
-                                "  - "
-                                + (
-                                    f"dict(name={vv['source'].get('name')}, ...)"
-                                    if isinstance(vv["source"], dict)
-                                    else vv["source"]
-                                )
-                                for vv in v
-                            ]
-                        ),
-                        "resource_name": v[0]["name"],
-                        "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[]))))[1:-1].replace(
-                            "'", ""
-                        )
-                        or "none specified",
-                    }
-                    for k, v in updated_resources.items()
+    updates = [
+        {
+            "resource_id": k,
+            "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
+            "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
+            "new_version_sources": json.dumps([vv["source"] for vv in v]),
+            "new_version_sources_md": "\n".join(
+                [
+                    "  - "
+                    + (
+                        f"dict(name={vv['source'].get('name')}, ...)"
+                        if isinstance(vv["source"], dict)
+                        else vv["source"]
+                    )
+                    for vv in v
                 ]
-            }
-        ),
-    )
+            ),
+            "resource_name": v[0]["name"],
+            "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[]))))[1:-1].replace("'", "")
+            or "none specified",
+        }
+        for k, v in updated_resources.items()
+    ]
+    set_gh_actions_output("updated_resources_matrix", json.dumps({"update": updates}))
     set_gh_actions_output("found_new_resources", "yes" if updated_resources else "")
 
     return 0
