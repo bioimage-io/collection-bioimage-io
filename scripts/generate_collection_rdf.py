@@ -44,7 +44,8 @@ def main() -> int:
         # deploy from preview if it exists
         preview_branch = f"gh-pages-auto-update-{r['resource_id']}"
         from_preview = f"origin/{preview_branch}" in remote_branches
-
+        print("from_preview", from_preview)
+        print(f"origin/{preview_branch}")
         # checkout preview separately
         ghp_prev = gh_pages_previews / preview_branch
         if from_preview:
