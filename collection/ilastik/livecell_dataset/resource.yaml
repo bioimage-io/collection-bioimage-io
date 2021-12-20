@@ -18,6 +18,6 @@ versions:
     source: https://sartorius-research.github.io/LIVECell/
     tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
     type: dataset
-  status: pending
+  status: accepted
   version_id: ilastik/livecell_dataset
   version_name: latest
