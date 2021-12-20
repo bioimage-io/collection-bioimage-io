@@ -89,7 +89,7 @@ jobs:
         retention-days: 1
 
 
-  deploy:
+  deploy-preview:
     needs: [get-pending, static-validation, dynamic-validation]
     if: always()  && needs.get-pending.outputs.found_pending == 'yes' # run even if dynamic validation fails
     runs-on: ubuntu-latest
@@ -103,7 +103,7 @@ jobs:
       with:
         path: artifacts
     - name: prepare deployment
-      run: python scripts/prepare_to_deploy.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ needs.get-pending.outputs.pending_matrix }}' artifacts
+      run: python scripts/prepare_to_deploy_preview.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ needs.get-pending.outputs.pending_matrix }}' artifacts
     - name: Deploy to gh-pages-${{ github.event.pull_request.head.ref }} 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
