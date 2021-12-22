@@ -10,6 +10,7 @@ config:
   n_resource_versions: {model: 1}
   n_resources: {model: 1}
   partners:
+  - {id: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml'}
   - {id: ilastik, source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml'}
   resource_types: [model, application, notebook, dataset]
   splash_feature_list: ['Integrate with Fiji, Ilastik, ImJoy', Try model instantly
