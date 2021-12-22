@@ -29,7 +29,10 @@ jobs:
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git commit -m "Block pending" -a
-    - name: Push changes to ${{ github.ref }}
+    - name: rebase
+      run: |
+        git pull --rebase
+    - name: Push changes to main
       if: steps.update_status.outputs.made_changes == 'yes'
       uses: ad-m/github-push-action@master
       with:
