@@ -91,7 +91,7 @@ jobs:
 
   deploy-preview:
     needs: [get-pending, static-validation, dynamic-validation]
-    if: always()  && needs.get-pending.outputs.found_pending == 'yes' # run even if dynamic validation fails
+    if: always() && needs.get-pending.outputs.found_pending == 'yes' # run even if dynamic validation fails
     runs-on: ubuntu-latest
 
     steps:
@@ -112,6 +112,7 @@ jobs:
 
   passed-validation:
     needs: deploy-preview
+    if: always()
     runs-on: ubuntu-latest
 
     steps:
