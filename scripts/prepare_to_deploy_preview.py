@@ -19,7 +19,7 @@ def main(
     ),
     resource_folder: Path = typer.Argument(...),
     pending_versions: str = typer.Argument(..., help="json string of list of pending versions_ids"),
-    artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts"),
+    artifact_folder: Path = typer.Argument(..., help="folder with validation and conda environment artifacts"),
 ) -> int:
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]

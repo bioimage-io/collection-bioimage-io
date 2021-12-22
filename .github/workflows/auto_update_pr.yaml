@@ -109,3 +109,18 @@ jobs:
       with:
         branch: gh-pages-${{ github.event.pull_request.head.ref }}  # The branch the action should deploy to.
         folder: dist  # The folder the action should deploy.
+
+  passed-validation:
+    needs: deploy-preview
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        path: artifacts
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: check if all validations passed
+      run: python scripts/check_validation_passed.py artifacts
