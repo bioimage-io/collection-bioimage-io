@@ -1,0 +1,12 @@
+resource_doi: null
+resource_id: deepimagej/UNet2DPancreaticSegmentation
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
+  links: [deepimagej, unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
+  name: Pancreatic Cell Segmentation (U-Net)
+  source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
+  status: pending
+  version_id: deepimagej/UNet2DPancreaticSegmentation
+  version_name: latest
