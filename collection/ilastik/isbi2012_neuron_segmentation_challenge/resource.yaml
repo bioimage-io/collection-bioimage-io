@@ -1,6 +1,6 @@
 resource_doi: null
 resource_id: ilastik/isbi2012_neuron_segmentation_challenge
-status: pending
+status: accepted
 versions:
 - created: 0001-01-01 00:00:00
   name: ilastik/isbi2012_neuron_segmentation_challenge
