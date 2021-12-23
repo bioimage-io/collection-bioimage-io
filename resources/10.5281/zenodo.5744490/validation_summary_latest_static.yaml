@@ -1,7 +1,0 @@
-error:
-  _schema: [Missing 'sha256' which is now required.]
-name: bioimageio.spec static validation with auto-conversion to latest format
-nested_errors: {}
-source_name: https://zenodo.org/a...
-traceback: null
-warnings: {}

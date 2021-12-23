@@ -1,6 +1,0 @@
-error: null
-name: bioimageio.spec static validation
-nested_errors: {}
-source_name: '{name: Covid-IF Training Data, ...}'
-traceback: null
-warnings: {type: Unrecognized type dataset. Validating as rdf.}

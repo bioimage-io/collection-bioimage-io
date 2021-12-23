@@ -1,7 +1,0 @@
-error: null
-name: bioimageio.spec static validation with auto-conversion to latest format
-nested_errors: {}
-source_name: '{name: ISBI Challenge: Segmentation of neuronal structures in EM stacks,
-  ...}'
-traceback: null
-warnings: {type: Unrecognized type dataset. Validating as rdf.}
