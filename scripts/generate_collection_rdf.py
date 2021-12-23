@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import subprocess
+from datetime import datetime
 from pathlib import Path
 from pprint import pprint
 
@@ -129,17 +130,20 @@ def main() -> int:
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
 
-    # valid JSON does not support NaNs...
-    def convert_nan(p, k, v):
-        """replace numbers -inf/inf with stings '-inf'/'inf'"""
+    def convert_for_json(p, k, v):
+        """convert anything not json compatible"""
+        # replace nans
         number_strings = ["-inf", "inf", "nan"]
         for n in number_strings:
             if v == float(n):
                 return k, n
 
+        if isinstance(v, datetime):
+            return k, v.isoformat()
+
         return True
 
-    rdf = remap(rdf, convert_nan)
+    rdf = remap(rdf, convert_for_json)
     with open(rdf_path.with_suffix(".json"), "w") as f:
         json.dump(rdf, f, allow_nan=False)
 
