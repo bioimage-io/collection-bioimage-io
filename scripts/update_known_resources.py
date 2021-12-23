@@ -1,5 +1,4 @@
 import json
-import os
 import warnings
 from collections import defaultdict
 from datetime import datetime
@@ -102,7 +101,7 @@ def update_with_new_version(
 ):
     # add more fields just
     maintainers = []
-    if rdf is not None:
+    if isinstance(rdf, dict):
         _maintainers = rdf.get("maintainers")
         if isinstance(_maintainers, list) and all(isinstance(m, dict) for m in _maintainers):
             maintainers = [m.get("github_user") for m in _maintainers]
