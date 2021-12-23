@@ -1,0 +1,10 @@
+resource_doi: null
+resource_id: imjoy/ImJoyFiddle
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  name: imjoy/ImJoyFiddle
+  source: {source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-fiddle.imjoy.html'}
+  status: pending
+  version_id: imjoy/ImJoyFiddle
+  version_name: latest
