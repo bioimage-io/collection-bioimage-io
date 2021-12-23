@@ -1,0 +1,6 @@
+error: null
+name: bioimageio.spec static validation with auto-conversion to latest format
+nested_errors: {}
+source_name: '{name: DSB Nucleus Segmentation Training Data, ...}'
+traceback: null
+warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
