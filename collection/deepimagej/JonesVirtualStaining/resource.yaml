@@ -1,0 +1,12 @@
+resource_doi: null
+resource_id: deepimagej/JonesVirtualStaining
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  name: Jones Virtual Staining (GAN)
+  source: https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/model.yaml
+  status: pending
+  version_id: deepimagej/JonesVirtualStaining
+  version_name: latest

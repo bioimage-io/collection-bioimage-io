@@ -1,0 +1,37 @@
+resource_doi: null
+resource_id: deepimagej/EVsTEMsegmentationFRUNet
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  name: deepimagej/EVsTEMsegmentationFRUNet
+  source:
+    authors:
+    - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
+    - {affiliation: Masaryk University, name: Martin Maška}
+    - {affiliation: Masaryk University, name: Anna Kotrbová}
+    - {affiliation: Masaryk University, name: Vendula Pospíchalová}
+    - {affiliation: Masaryk University, name: Pavel Matula}
+    - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
+    badges:
+    - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
+        in Colab, url: 'https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb'}
+    cite:
+    - {doi: 'https://doi.org/10.1038/s41598-019-49431-3', text: 'Gómez-de-Mariscal,
+        E. et al., Deep-Learning-Based Segmentation of SmallExtracellular Vesicles
+        in Transmission Electron Microscopy Images Scientific Reports, (2019)'}
+    covers: ['https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-019-49431-3/MediaObjects/41598_2019_49431_Fig1_HTML.png',
+      'https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg']
+    description: Ready to use notebook for the segmentation of small extrcaellular
+      vesicles in transmission electron microscopy (TEM) images. The notebook is optimized
+      to use it in Google Colaboratory. It will download the original code and dataset,
+      and make the inference connecting with Google's GPU.
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+    links: [FRUNet2DsEVSegmentation]
+    name: Small extracellular vesicle instance segmentation (FRU-Net)
+    source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
+    tags: [extracellular-vesicles, segmentation, TEM, notebook, model-inference, google-colab,
+      workflow, pipeline]
+    type: application
+  status: pending
+  version_id: deepimagej/EVsTEMsegmentationFRUNet
+  version_name: latest
