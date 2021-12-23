@@ -1,6 +1,6 @@
 resource_doi: null
 resource_id: ilastik/livecell_dataset
-status: pending
+status: accepted
 versions:
 - created: 0001-01-01 00:00:00
   name: ilastik/livecell_dataset
@@ -18,6 +18,6 @@ versions:
     source: https://sartorius-research.github.io/LIVECell/
     tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
     type: dataset
-  status: pending
+  status: accepted
   version_id: ilastik/livecell_dataset
   version_name: latest
