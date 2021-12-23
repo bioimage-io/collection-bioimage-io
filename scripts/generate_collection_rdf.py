@@ -1,7 +1,7 @@
 import json
+import os
 import shutil
 import subprocess
-import warnings
 from pathlib import Path
 from pprint import pprint
 
@@ -48,11 +48,10 @@ def main() -> int:
         # deploy from preview if it exists
         preview_branch = f"gh-pages-auto-update-{r['resource_id']}"
         from_preview = f"origin/{preview_branch}" in remote_branches
-        print("from_preview", from_preview)
-        print(f"origin/{preview_branch}")
         # checkout preview separately
         ghp_prev = gh_pages_previews / preview_branch
         if from_preview:
+            print(f"checkout {preview_branch} at {ghp_prev}")
             subprocess.run(["git", "worktree", "add", str(ghp_prev), f"{preview_branch}"])
 
         latest_version = None
@@ -71,17 +70,18 @@ def main() -> int:
                     shutil.copytree(
                         str(ghp_prev / version_sub_path), str(ghp_up), copy_function=shutil.move, dirs_exist_ok=True
                     )
+                    print("update", ghp_prev / version_sub_path, os.listdir(str(ghp_prev / version_sub_path)))
                     v_path = ghp_up / "rdf.yaml"
             else:
                 v_path = gh_pages / version_sub_path / "rdf.yaml"
 
             if not v_path.exists():
-                warnings.warn(f"ignoring missing resource version {v_path}")
+                print(f"ignoring missing resource version {v_path}")
                 continue
 
             this_version = yaml.load(v_path)
             if not isinstance(this_version, dict):
-                warnings.warn(f"ignoring non-dict resource version {v_path}")
+                print(f"ignoring non-dict resource version {v_path}")
                 continue
 
             # add validation summaries
@@ -104,7 +104,7 @@ def main() -> int:
                 latest_version["previous_versions"].append(this_version)
 
         if latest_version is None:
-            warnings.warn(f"Ignoring resource at {r_path} without any accepted versions")
+            print(f"Ignoring resource at {r_path} without any accepted versions")
         else:
             type_ = latest_version.get("type", "unknown")
             type_list = rdf.get(type_)
@@ -115,7 +115,7 @@ def main() -> int:
                     n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
                 )
             else:
-                warnings.warn(f"ignoring resource {r_path} with type '{type_}'")
+                print(f"ignoring resource {r_path} with type '{type_}'")
 
     print(f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources.")
     print("accepted resources per type:")

@@ -1,4 +1,3 @@
-import warnings
 from pathlib import Path
 
 import typer
@@ -43,7 +42,7 @@ def main(
 
     else:
         # don't fail, but warn for non-auto-update branches
-        warnings.warn(f"called with non-auto-update branch {branch}")
+        print(f"called with non-auto-update branch {branch}")
 
     set_gh_actions_output("made_changes", "yes" if made_changes else "no")
     return 0

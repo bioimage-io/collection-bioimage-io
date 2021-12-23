@@ -1,5 +1,4 @@
 import json
-import warnings
 from pathlib import Path
 
 import typer
@@ -33,7 +32,7 @@ def main(
 
     else:
         # don't fail, but warn for non-auto-update branches
-        warnings.warn(f"called with non-auto-update branch {branch}")
+        print(f"called with non-auto-update branch {branch}")
 
     set_gh_actions_output("pending_matrix", json.dumps({"version_id": pending}))
     set_gh_actions_output("found_pending", "yes" if pending else "no")

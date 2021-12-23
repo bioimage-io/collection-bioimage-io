@@ -1,4 +1,3 @@
-import warnings
 from pathlib import Path
 
 import typer
@@ -22,7 +21,7 @@ def main(
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
     else:
-        warnings.warn(f"called with non-auto-update branch {branch}")
+        print(f"called with non-auto-update branch {branch}")
         return 0
 
     if weight_format is None:

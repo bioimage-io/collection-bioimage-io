@@ -1,5 +1,4 @@
 import json
-import warnings
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -24,7 +23,7 @@ def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
     if len(rdf_urls) == 1:
         r = requests.get(rdf_urls[0])
         if r.status_code != 200:
-            warnings.warn(
+            print(
                 f"Could not get rdf.yaml for new version {doi} of {concept_doi} ({r.status_code}: {r.reason}); "
                 "skipping update"
             )
@@ -32,13 +31,13 @@ def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
         else:
             rdf = yaml.load(r.text)
             if not isinstance(rdf, dict):
-                warnings.warn(
+                print(
                     f"Found invalid rdf.yaml (not a dict) for new version {doi} of {concept_doi}; "
                     "writing empty rdf.yaml"
                 )
                 rdf = {}
     else:
-        warnings.warn(
+        print(
             f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; " "writing empty rdf.yaml"
         )
         rdf = {}
@@ -118,7 +117,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
         print(zenodo_request)
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
-            warnings.warn(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
+            print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
             break
 
         hits = r.json()["hits"]["hits"]
@@ -137,7 +136,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             name = doi
             if len(rdf_urls) > 0:
                 if len(rdf_urls) > 1:
-                    warnings.warn("found multiple 'rdf.yaml' sources?!?")
+                    print("found multiple 'rdf.yaml' sources?!?")
 
                 source = sorted(rdf_urls)[0]
                 try:
@@ -145,7 +144,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
                     rdf = yaml.load(r.text)
                     name = rdf.get("name", doi)
                 except Exception as e:
-                    warnings.warn(f"Failed to obtain version name: {e}")
+                    print(f"Failed to obtain version name: {e}")
 
             new_version = {
                 "version_id": doi,
@@ -203,7 +202,7 @@ def update_from_collection(
                             raise TypeError(f"rdf type: type(rdf)")
 
                     except Exception as e:
-                        warnings.warn(f"Failed to load rdf from {source}: {e}")
+                        print(f"Failed to load rdf from {source}: {e}")
                         rdf = None
                     else:
                         try:
@@ -212,7 +211,7 @@ def update_from_collection(
                             commit = repo.get_commit(branch)
                             tag = repo.get_git_tag(commit.sha)
                         except Exception as e:
-                            warnings.warn(f"Failed to fetch version_id from github: {e}")
+                            print(f"Failed to fetch version_id from github: {e}")
                         else:
                             version_id = tag.sha
                             version_name = tag.tag
@@ -251,7 +250,7 @@ def update_from_collection(
 
             except Exception as e:
                 # don't fail for single bad resource in collection
-                warnings.warn(f"Failed to add resource: {e}")
+                print(f"Failed to add resource: {e}")
 
 
 def update_from_github(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]):
@@ -268,7 +267,7 @@ def update_from_github(collection_folder: Path, updated_resources: DefaultDict[s
             p_source = p["source"]
             update_from_collection(collection_folder, p_id, p_source, updated_resources, resource_types, gh)
         except Exception as e:
-            warnings.warn(f"Failed to process collection {p_source} for {p_id} partner: {e}")
+            print(f"Failed to process collection {p_source} for {p_id} partner: {e}")
 
 
 def main(collection_folder: Path) -> int:

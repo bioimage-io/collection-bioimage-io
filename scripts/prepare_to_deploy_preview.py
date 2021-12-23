@@ -1,6 +1,5 @@
 import json
 import shutil
-import warnings
 from pathlib import Path
 
 import typer
@@ -24,7 +23,7 @@ def main(
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
     else:
-        warnings.warn(f"called with non-auto-update branch {branch}")
+        print(f"called with non-auto-update branch {branch}")
         return 0
 
     resource_path = collection_folder / resource_id / "resource.yaml"
@@ -40,7 +39,7 @@ def main(
             rdf_node = load_raw_resource_description(v["source"])
             rdf_data = serialize_raw_resource_description_to_dict(rdf_node)
         except Exception as e:
-            warnings.warn(f"Failed to interpret {v['source']} as rdf: {e}")
+            print(f"Failed to interpret {v['source']} as rdf: {e}")
             rdf_data = {}
 
         rdf_data.update(v)
