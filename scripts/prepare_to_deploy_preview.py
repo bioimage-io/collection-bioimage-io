@@ -37,10 +37,11 @@ def main(
 
         try:
             rdf_node = load_raw_resource_description(v["source"])
-            rdf_data = serialize_raw_resource_description_to_dict(rdf_node)
         except Exception as e:
             print(f"Failed to interpret {v['source']} as rdf: {e}")
             rdf_data = {}
+        else:
+            rdf_data = serialize_raw_resource_description_to_dict(rdf_node)
 
         rdf_data.update(v)
 
