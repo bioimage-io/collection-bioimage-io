@@ -1,0 +1,8 @@
+error: null
+name: bioimageio.spec static validation with auto-conversion to latest format
+nested_errors: {}
+source_name: '{name: LIVECell, ...}'
+traceback: null
+warnings: {license: CC-BY-NC-4.0 (Creative Commons Attribution Non Commercial 4.0
+    International) is not FSF Free/libre., type: Unrecognized type 'dataset'. Validating
+    as rdf.}
