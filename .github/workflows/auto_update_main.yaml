@@ -24,13 +24,14 @@ jobs:
     - name: update known resources
       id: update_known
       run: python scripts/update_known_resources.py collection
-    - name: Commit files
+    - name: Commit files and rebase
       if: steps.update_known.outputs.found_new_resources == 'yes'
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add collection
         git commit -m "Add new resources" -a
+        git pull --rebase
     - name: Push changes
       if: steps.update_known.outputs.found_new_resources == 'yes'
       uses: ad-m/github-push-action@master
