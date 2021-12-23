@@ -31,24 +31,24 @@ config:
   url_root: >-
     https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
   partners:
-#    - id: zero
-#      source: >-
-#        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    - id: zero
+      source: >-
+        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
     - id: deepimagej
       source: >-
         https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-#    - id: fiji
-#      source: >-
-#        https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
-#    - id: imjoy
-#      source: >-
-#        https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+    - id: fiji
+      source: >-
+        https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+    - id: imjoy
+      source: >-
+        https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
     - id: ilastik
       source: >-
         https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
-#    - id: hpa
-#      source: >-
-#        https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    - id: hpa
+      source: >-
+        https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
 
 model: []
 application: []
