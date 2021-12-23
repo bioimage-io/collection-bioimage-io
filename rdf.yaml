@@ -7,8 +7,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {}
-  n_resources: {}
+  n_resource_versions: {dataset: 1}
+  n_resources: {dataset: 1}
   partners:
   - {id: zero, source: 'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml'}
   - {id: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml'}
@@ -23,7 +23,58 @@ config:
   splash_subtitle: Advanced AI models in one-click
   splash_title: BioImage Model Zoo
   url_root: https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
-dataset: []
+dataset:
+- authors:
+  - {name: Constantin Pape}
+  cite:
+  - {doi: 'https://doi.org/10.1016/j.cell.2021.07.017', text: 'Vergara, Pape, Meechan
+      et al.'}
+  covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png']
+  created: 0001-01-01 00:00:00
+  description: Training data for EM segmentation of cellular membranes, nuclei, cuticle
+    and cilia in Platynereis.
+  documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+  format_version: 0.2.1
+  license: CC-BY-4.0
+  name: ilastik/platynereis_em_training_data
+  previous_versions: []
+  resource_id: ilastik/platynereis_em_training_data
+  source:
+    authors:
+    - {name: Constantin Pape}
+    cite:
+    - {doi: 'https://doi.org/10.1016/j.cell.2021.07.017', text: 'Vergara, Pape, Meechan
+        et al.'}
+    covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png']
+    description: Training data for EM segmentation of cellular membranes, nuclei,
+      cuticle and cilia in Platynereis.
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+    format_version: 0.2.1
+    license: CC-BY-4.0
+    name: Platynereis EM Traning Data
+    source: https://doi.org/10.5281/zenodo.3675220
+    tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
+      3D]
+    type: dataset
+  status: accepted
+  tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
+    3D]
+  type: dataset
+  validation_summaries:
+    latest_static:
+      error: null
+      name: bioimageio.spec static validation with auto-conversion to latest format
+      nested_errors: {}
+      traceback: null
+      warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
+    static:
+      error: null
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: null
+      warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
+  version_id: ilastik/platynereis_em_training_data
+  version_name: latest
 description: BioImage.IO collection RDF
 documentation: README.md
 format_version: 0.2.1
