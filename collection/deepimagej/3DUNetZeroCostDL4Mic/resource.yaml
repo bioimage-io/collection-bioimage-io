@@ -1,0 +1,12 @@
+resource_doi: null
+resource_id: deepimagej/3DUNetZeroCostDL4Mic
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
+  links: [deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ, imjoy/BioImageIO-Packager]
+  name: 3D U-Net - ZeroCostDL4Mic
+  source: https://raw.githubusercontent.com/deepimagej/models/master/3du-net_zerocostdl4mic/model.yaml
+  status: pending
+  version_id: deepimagej/3DUNetZeroCostDL4Mic
+  version_name: latest

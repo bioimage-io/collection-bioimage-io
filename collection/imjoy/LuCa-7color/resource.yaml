@@ -1,0 +1,19 @@
+resource_doi: null
+resource_id: imjoy/LuCa-7color
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  name: imjoy/LuCa-7color
+  source:
+    authors: [Perkin Elmer]
+    covers: ['https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png']
+    description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
+    download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
+    license: CC-BY 4.0
+    links: [vizarr]
+    name: LuCa-7color
+    source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
+    tags: [OME-TIFF]
+  status: pending
+  version_id: imjoy/LuCa-7color
+  version_name: latest

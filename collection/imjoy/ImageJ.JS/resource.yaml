@@ -1,0 +1,10 @@
+resource_doi: null
+resource_id: imjoy/ImageJ.JS
+status: pending
+versions:
+- created: 0001-01-01 00:00:00
+  name: imjoy/ImageJ.JS
+  source: {source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html'}
+  status: pending
+  version_id: imjoy/ImageJ.JS
+  version_name: latest
