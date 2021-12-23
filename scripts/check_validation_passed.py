@@ -7,7 +7,7 @@ from ruamel.yaml import YAML
 yaml = YAML(typ="safe")
 
 
-def main(artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts")) -> int:
+def main(artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts")):
     # check validation summaries in artifact folder
     failed_val = []
     for sp in artifact_folder.glob(f"**/validation_summary*.yaml"):
@@ -17,9 +17,7 @@ def main(artifact_folder: Path = typer.Argument(..., help="folder with validatio
 
     if failed_val:
         pprint(failed_val)
-        return 1
-    else:
-        return 0
+        raise typer.Exit(code=1)
 
 
 if __name__ == "__main__":
