@@ -7,8 +7,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {dataset: 1}
-  n_resources: {dataset: 1}
+  n_resource_versions: {dataset: 2}
+  n_resources: {dataset: 2}
   partners:
   - {id: zero, source: 'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml'}
   - {id: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml'}
@@ -24,6 +24,55 @@ config:
   splash_title: BioImage Model Zoo
   url_root: https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
 dataset:
+- authors:
+  - {name: Constantin Pape}
+  cite:
+  - {doi: 'https://doi.org/10.1038/s41592-021-01249-6', text: Edlund et al.}
+  covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg']
+  created: 0001-01-01 00:00:00
+  description: LIVECell—A large-scale dataset for label-free live cell segmentation
+  documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
+  format_version: 0.2.1
+  license: CC-BY-NC-4.0
+  name: ilastik/livecell_dataset
+  previous_versions: []
+  resource_id: ilastik/livecell_dataset
+  source:
+    authors:
+    - {name: Constantin Pape}
+    cite:
+    - {doi: 'https://doi.org/10.1038/s41592-021-01249-6', text: Edlund et al.}
+    covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg']
+    description: LIVECell—A large-scale dataset for label-free live cell segmentation
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
+    format_version: 0.2.1
+    license: CC-BY-NC-4.0
+    name: LIVECell
+    source: https://sartorius-research.github.io/LIVECell/
+    tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
+    type: dataset
+  status: accepted
+  tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
+  type: dataset
+  validation_summaries:
+    latest_static:
+      error: null
+      name: bioimageio.spec static validation with auto-conversion to latest format
+      nested_errors: {}
+      traceback: null
+      warnings: {license: CC-BY-NC-4.0 (Creative Commons Attribution Non Commercial
+          4.0 International) is not FSF Free/libre., type: Unrecognized type 'dataset'.
+          Validating as rdf.}
+    static:
+      error: null
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: null
+      warnings: {license: CC-BY-NC-4.0 (Creative Commons Attribution Non Commercial
+          4.0 International) is not FSF Free/libre., type: Unrecognized type 'dataset'.
+          Validating as rdf.}
+  version_id: ilastik/livecell_dataset
+  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
