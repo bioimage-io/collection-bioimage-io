@@ -2,7 +2,7 @@ id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:11:24.261497
+- created: 2021-12-25 18:16:38.849668
   name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
   source:
     authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
