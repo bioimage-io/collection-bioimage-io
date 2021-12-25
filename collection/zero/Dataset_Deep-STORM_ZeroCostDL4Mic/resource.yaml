@@ -1,0 +1,23 @@
+doi: null
+id: zero/Dataset_Deep-STORM_ZeroCostDL4Mic
+status: accepted
+versions:
+- created: 0001-01-01 00:00:00
+  name: zero/Dataset_Deep-STORM_ZeroCostDL4Mic
+  source:
+    authors: [Christophe Leterrier, Romain F. Laine]
+    cite:
+    - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L.,
+        Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy
+        with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
+    covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_dataset.png']
+    description: Time-series of simulated, randomly distributed single-molecule localization
+      (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition
+      of Glial cells stained with phalloidin for actin (Example dataset).
+    documentation: https://doi.org/10.5281/zenodo.3959089
+    name: Deep-STORM training and example dataset - ZeroCostDL4Mic
+    source: https://doi.org/10.5281/zenodo.3959089
+    tags: [SMLM, Deep-STORM, ZeroCostDL4Mic, 2D]
+  status: accepted
+  version_id: zero/Dataset_Deep-STORM_ZeroCostDL4Mic
+  version_name: latest
