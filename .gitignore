@@ -5,7 +5,6 @@ scratch
 scripts/site.config.json
 scripts/utils.js
 new-rdf.yaml
-collection
 
 # local env files
 .env.local
