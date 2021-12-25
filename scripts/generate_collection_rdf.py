@@ -49,7 +49,7 @@ def main() -> int:
             continue
 
         # deploy from preview if it exists
-        preview_branch = f"gh-pages-auto-update-{r['resource_id']}"
+        preview_branch = f"gh-pages-auto-update-{r['id']}"
         from_preview = f"origin/{preview_branch}" in remote_branches
         # checkout preview separately
         ghp_prev = gh_pages_previews / preview_branch
@@ -101,7 +101,7 @@ def main() -> int:
 
             if latest_version is None:
                 latest_version = this_version
-                latest_version["resource_id"] = r["resource_id"]
+                latest_version["id"] = r["id"]
                 latest_version["previous_versions"] = []
             else:
                 latest_version["previous_versions"].append(this_version)

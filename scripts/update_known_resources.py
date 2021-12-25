@@ -85,8 +85,8 @@ def write_resource(
         resource = {
             "status": "pending",
             "versions": [new_version],
-            "resource_id": resource_id,
-            "resource_doi": resource_doi,
+            "id": resource_id,
+            "doi": resource_doi,
         }
 
     assert isinstance(resource, dict)
@@ -278,7 +278,7 @@ def main(collection_folder: Path) -> int:
 
     updates = [
         {
-            "resource_id": k,
+            "id": k,
             "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
             "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
             "new_version_sources": json.dumps([vv["source"] for vv in v]),
