@@ -2,7 +2,7 @@ id: hpa/HPA-wienerschnitzelgemeinschaft
 status: pending
 type: model
 versions:
-- created: 2021-12-25 18:11:32.769797
+- created: 2021-12-25 18:16:47.048981
   name: HPA-wienerschnitzelgemeinschaft
   source:
     authors: [Shaikat Mahmood Galib, Christof Henkel, Kevin Hwang, Dmytro Poplavskiy,

@@ -2,7 +2,7 @@ id: zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:11:24.262818
+- created: 2021-12-25 18:16:38.850854
   name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
   source:
     authors: [Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams]
