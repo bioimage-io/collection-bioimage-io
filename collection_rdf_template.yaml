@@ -25,7 +25,6 @@ config:
   resource_types:
     - model
     - application
-    - notebook
     - dataset
   default_type: model
   url_root: >-
@@ -52,5 +51,4 @@ config:
 attachments:
   model: []
   application: []
-  notebook: []
   dataset: []
