@@ -27,7 +27,7 @@ versions:
     type: application
   status: pending
   version_id: master
-- created: 2021-12-25 18:06:27.012600
+- created: 2021-12-25 18:11:29.729976
   name: 2D U-Net for binary segmentation
   source:
     authors:

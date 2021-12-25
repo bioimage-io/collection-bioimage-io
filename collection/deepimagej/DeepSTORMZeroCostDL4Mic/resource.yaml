@@ -9,7 +9,7 @@ versions:
   source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/model.yaml
   status: pending
   version_id: master
-- created: 2021-12-25 18:06:25.708192
+- created: 2021-12-25 18:11:26.228114
   download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
   links: [zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej, imjoy/BioImageIO-Packager]
   name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)

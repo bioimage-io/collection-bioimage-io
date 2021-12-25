@@ -2,7 +2,7 @@ id: ilastik/cremi_training_data
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:06:28.475226
+- created: 2021-12-25 18:11:32.404266
   name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
     Images'
   source:

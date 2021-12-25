@@ -2,7 +2,7 @@ id: zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:06:24.797185
+- created: 2021-12-25 18:11:24.242628
   name: Noise2Void (2D) - ZeroCostDL4Mic
   source:
     authors: [Romain Laine and the ZeroCostDL4Mic Team]
