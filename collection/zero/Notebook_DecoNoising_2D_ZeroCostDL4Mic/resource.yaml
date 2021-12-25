@@ -2,7 +2,7 @@ id: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.954311
+- created: 2021-12-25 18:06:24.832610
   name: DecoNoising (2D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -29,5 +29,5 @@ versions:
       Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
     name: DecoNoising (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
-  status: accepted
+  status: pending
   version_id: latest

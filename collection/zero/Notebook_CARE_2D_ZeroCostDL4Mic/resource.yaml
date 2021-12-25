@@ -2,7 +2,7 @@ id: zero/Notebook_CARE_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.852259
+- created: 2021-12-25 18:06:24.800572
   name: CARE (2D) - ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -35,5 +35,5 @@ versions:
       Dataset_CARE_2D_coli_DeepBacs, Dataset_fnet_DeepBacs]
     name: CARE (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
-  status: accepted
+  status: pending
   version_id: latest

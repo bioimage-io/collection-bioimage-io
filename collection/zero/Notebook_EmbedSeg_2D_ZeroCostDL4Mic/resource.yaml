@@ -2,7 +2,7 @@ id: zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.987185
+- created: 2021-12-25 18:06:24.843788
   name: EmbedSeg (2D) - ZeroCostDL4Mic
   source:
     authors: ['Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team']
@@ -27,5 +27,5 @@ versions:
       Dataset_StarDist_fluo2_ZeroCostDL4Mic]
     name: EmbedSeg (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
-  status: accepted
+  status: pending
   version_id: latest

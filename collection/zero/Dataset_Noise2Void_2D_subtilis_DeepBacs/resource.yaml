@@ -2,7 +2,7 @@ id: zero/Dataset_Noise2Void_2D_subtilis_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:54:08.238086
+- created: 2021-12-25 18:06:24.876255
   name: Bacillus subtilis denoising dataset - DeepBacs
   source:
     authors: [Mia Conduit, Séamus Holden]
@@ -19,5 +19,5 @@ versions:
     download_url: https://zenodo.org/record/5551135
     name: Bacillus subtilis denoising dataset - DeepBacs
     tags: [Noise2Void, denoising, DeepBacs, 2D]
-  status: accepted
+  status: pending
   version_id: latest

@@ -2,7 +2,7 @@ id: zero/Notebook_CARE_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.856052
+- created: 2021-12-25 18:06:24.802182
   name: CARE (3D) - ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -32,5 +32,5 @@ versions:
     links: [Notebook Preview, Dataset_CARE_3D_ZeroCostDL4Mic]
     name: CARE (3D) - ZeroCostDL4Mic
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
-  status: accepted
+  status: pending
   version_id: latest

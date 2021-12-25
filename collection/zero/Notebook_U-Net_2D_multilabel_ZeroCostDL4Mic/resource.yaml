@@ -2,7 +2,7 @@ id: zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.907178
+- created: 2021-12-25 18:06:24.818485
   name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
   source:
     authors: [Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams]
@@ -32,5 +32,5 @@ versions:
     name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
     tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel,
       ZeroCostDL4Mic, 2D]
-  status: accepted
+  status: pending
   version_id: latest

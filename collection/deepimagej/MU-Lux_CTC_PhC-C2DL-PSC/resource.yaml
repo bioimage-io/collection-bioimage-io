@@ -9,3 +9,10 @@ versions:
   source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
   status: pending
   version_id: master
+- created: 2021-12-25 18:06:25.911271
+  download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  name: Pancreatic Cell Phase Contrast Segmentation (DeepWater - CTC submission)
+  source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
+  status: pending
+  version_id: 081bf4da443cc28ba20826d2d6fea7856075787c

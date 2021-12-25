@@ -2,7 +2,7 @@ id: zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.849011
+- created: 2021-12-25 18:06:24.798665
   name: Noise2VOID (3D) - ZeroCostDL4Mic
   source:
     authors: [Romain Laine and the ZeroCostDL4Mic Team]
@@ -30,5 +30,5 @@ versions:
     links: [Notebook Preview, Dataset_Noise2Void_3D_ZeroCostDL4Mic]
     name: Noise2VOID (3D) - ZeroCostDL4Mic
     tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D]
-  status: accepted
+  status: pending
   version_id: latest

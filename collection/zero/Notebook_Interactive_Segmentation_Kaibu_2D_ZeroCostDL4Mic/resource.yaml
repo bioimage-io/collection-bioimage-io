@@ -2,7 +2,7 @@ id: zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.965591
+- created: 2021-12-25 18:06:24.834086
   name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
   source:
     authors: ['Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team']
@@ -29,5 +29,5 @@ versions:
     links: [Notebook Preview]
     name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
-  status: accepted
+  status: pending
   version_id: latest

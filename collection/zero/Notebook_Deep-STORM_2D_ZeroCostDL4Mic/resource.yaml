@@ -2,7 +2,7 @@ id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:54:07.870239
+- created: 2021-12-25 18:06:24.806650
   name: Deep-STORM (2D) - ZeroCostDL4Mic
   source:
     authors: [Romain Laine and the ZeroCostDL4Mic Team]
@@ -36,5 +36,5 @@ versions:
     links: [Notebook Preview, Dataset_Deep-STORM_ZeroCostDL4Mic]
     name: Deep-STORM (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
-  status: accepted
+  status: pending
   version_id: latest

@@ -9,3 +9,10 @@ versions:
   source: https://raw.githubusercontent.com/deepimagej/models/master/defcon_density_map_estimation/model.yaml
   status: pending
   version_id: master
+- created: 2021-12-25 18:06:25.614405
+  download_url: https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  name: SMLM Density Map Estimation (DEFCoN)
+  source: https://raw.githubusercontent.com/deepimagej/models/master/defcon_density_map_estimation/model.yaml
+  status: pending
+  version_id: 081bf4da443cc28ba20826d2d6fea7856075787c
