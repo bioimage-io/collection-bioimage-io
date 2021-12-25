@@ -1,5 +1,5 @@
 id: ilastik/stradist_dsb_training_data
-status: pending
+status: accepted
 type: dataset
 versions:
 - created: 2021-12-25 18:54:25.179782
@@ -20,5 +20,5 @@ versions:
     tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
       2D]
     type: dataset
-  status: pending
+  status: accepted
   version_id: latest
