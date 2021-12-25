@@ -313,7 +313,7 @@ def main(collection_folder: Path) -> int:
 
     updates = [
         {
-            "id": k,
+            "resource_id": k,
             "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
             "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
             "new_version_sources": json.dumps([(vv.get("source") or None) for vv in v]),
