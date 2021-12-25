@@ -23,6 +23,8 @@ def set_gh_actions_output(name: str, output: str):
 def main() -> int:
     collection_path = Path("collection")
     rdf = yaml.load(Path("collection_rdf_template.yaml"))
+    rdf['attachments'] = rdf.get('attachments', {})
+    attachments = rdf['attachments']
 
     subprocess.run(["git", "fetch"])
     remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
@@ -34,7 +36,7 @@ def main() -> int:
     subprocess.run(["git", "worktree", "add", str(gh_pages), f"gh-pages"])
     gh_pages_previews = Path("dist/gh-pages-previews")
     gh_pages_update = Path("dist/gh-pages-update")
-    gh_pages_update.mkdir(parents=True)
+    gh_pages_update.mkdir(parents=True, exist_ok=True)
 
     processed_gh_pages_previews = []
 
@@ -108,7 +110,8 @@ def main() -> int:
             print(f"Ignoring resource at {r_path} without any accepted versions")
         else:
             type_ = latest_version.get("type", "unknown")
-            type_list = rdf.get(type_)
+            attachments[type_] = attachments.get(type_)
+            type_list = attachments[type_]
             if isinstance(type_list, list):
                 type_list.append(latest_version)
                 n_accepted[type_] = n_accepted.get(type_, 0) + 1

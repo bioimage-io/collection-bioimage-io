@@ -49,8 +49,8 @@ config:
     - id: hpa
       source: >-
         https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-
-model: []
-application: []
-notebook: []
-dataset: []
+attachments:
+  model: []
+  application: []
+  notebook: []
+  dataset: []
