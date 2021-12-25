@@ -59,7 +59,7 @@ jobs:
     - name: install script deps
       run: pip install typer ruamel.yaml
     - name: set resource status to accepted
-      run: python scripts/set_resource_status.py collection ${{ matrix.update.resource_id }} '${{ matrix.update.new_version_ids }}' accepted
+      run: python scripts/set_resource_status.py collection '${{ matrix.update.resource_id }}' '${{ matrix.update.new_version_ids }}' accepted
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
