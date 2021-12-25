@@ -1,5 +1,5 @@
-resource_doi: 10.5281/zenodo.5744489
-resource_id: 10.5281/zenodo.5744489
+doi: 10.5281/zenodo.5744489
+id: 10.5281/zenodo.5744489
 status: blocked
 versions:
 - {created: '2021-11-30T14:37:51.631245+00:00', doi: 10.5281/zenodo.5744490, name: UNet

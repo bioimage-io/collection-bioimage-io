@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: hpa/HPAShuffleNetV2
+doi: null
+id: hpa/HPAShuffleNetV2
 status: pending
 versions:
 - created: 0001-01-01 00:00:00

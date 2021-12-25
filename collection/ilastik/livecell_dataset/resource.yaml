@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: ilastik/livecell_dataset
+doi: null
+id: ilastik/livecell_dataset
 status: accepted
 versions:
 - created: 0001-01-01 00:00:00

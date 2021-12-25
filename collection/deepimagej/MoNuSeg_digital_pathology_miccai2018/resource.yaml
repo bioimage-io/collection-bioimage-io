@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: deepimagej/MoNuSeg_digital_pathology_miccai2018
+doi: null
+id: deepimagej/MoNuSeg_digital_pathology_miccai2018
 status: pending
 versions:
 - created: 0001-01-01 00:00:00
