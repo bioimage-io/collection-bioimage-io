@@ -25,7 +25,6 @@ config:
   resource_types:
     - model
     - application
-    - notebook
     - dataset
   default_type: model
   url_root: >-
@@ -49,8 +48,7 @@ config:
     - id: hpa
       source: >-
         https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-
-model: []
-application: []
-notebook: []
-dataset: []
+attachments:
+  model: []
+  application: []
+  dataset: []
