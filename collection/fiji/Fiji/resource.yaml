@@ -1,9 +1,9 @@
-doi: null
 id: fiji/Fiji
 status: pending
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: fiji/Fiji
+- created: 2021-12-25 18:54:19.814641
+  name: Fiji
   source:
     authors: [Fiji community]
     cite: {doi: 'https://doi.org/10.1038/nmeth.2019', text: 'Schindelin, J., Arganda-Carreras,
@@ -19,5 +19,4 @@ versions:
     source: https://fiji.sc/
     tags: [fiji, software]
   status: pending
-  version_id: fiji/Fiji
-  version_name: latest
+  version_id: latest

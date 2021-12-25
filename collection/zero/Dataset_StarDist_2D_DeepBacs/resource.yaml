@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_StarDist_2D_DeepBacs
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_StarDist_2D_DeepBacs
+- created: 2021-12-25 18:54:08.211243
+  name: Mixed segmentation dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann, Mia Conduit, Séamus Holden, Pedro Matos
         Pereira, Mariana Pinho]
@@ -17,9 +17,8 @@ versions:
     description: Mixed training and test images of S. aureus, E. coli and B. subtilis
       for cell segmentation using StarDist.
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    download_url: https://zenodo.org/record/5551009
     name: Mixed segmentation dataset - DeepBacs
-    source: https://zenodo.org/record/5551009
     tags: [StarDist, segmentation, DeepBacs, 2D]
   status: accepted
-  version_id: zero/Dataset_StarDist_2D_DeepBacs
-  version_name: latest
+  version_id: latest

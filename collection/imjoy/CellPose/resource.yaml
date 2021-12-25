@@ -1,10 +1,6 @@
-doi: null
 id: imjoy/CellPose
 status: pending
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: imjoy/CellPose
-  source: {source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/cellpose.imjoy.html'}
-  status: pending
-  version_id: imjoy/CellPose
-  version_name: latest
+- {created: ! '2021-12-25 18:54:23.735575', name: CellPose, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/cellpose.imjoy.html',
+  status: pending, version_id: master}

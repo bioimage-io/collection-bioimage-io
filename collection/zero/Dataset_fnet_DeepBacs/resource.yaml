@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_fnet_DeepBacs
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_fnet_DeepBacs
+- created: 2021-12-25 18:54:08.244381
+  name: Artificial labeling of E. coli membranes dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]
     cite:
@@ -17,9 +17,8 @@ versions:
       of membranes in brightfield images using fnet or CARE, as well as trained models
       for prediction of super-resolution membranes.
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    download_url: https://zenodo.org/record/5551123
     name: Artificial labeling of E. coli membranes dataset - DeepBacs
-    source: https://zenodo.org/record/5551123
     tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
   status: accepted
-  version_id: zero/Dataset_fnet_DeepBacs
-  version_name: latest
+  version_id: latest

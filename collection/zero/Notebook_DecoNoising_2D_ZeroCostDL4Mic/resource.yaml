@@ -1,9 +1,9 @@
-doi: null
 id: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic
 status: accepted
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic
+- created: 2021-12-25 18:54:07.954311
+  name: DecoNoising (2D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
     badges:
@@ -23,12 +23,11 @@ versions:
       wiki to check the original publications this network is based on and make sure
       you cite these.
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links: [Notebook Preview, Dataset_Noise2Void_2D_ZeroCostDL4Mic, Dataset_Noise2Void_2D_subtilis_DeepBacs,
       Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
     name: DecoNoising (2D) - ZeroCostDL4Mic
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
   status: accepted
-  version_id: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic
-  version_name: latest
+  version_id: latest

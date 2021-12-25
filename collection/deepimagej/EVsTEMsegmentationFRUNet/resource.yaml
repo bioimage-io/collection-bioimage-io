@@ -1,9 +1,9 @@
-doi: null
 id: deepimagej/EVsTEMsegmentationFRUNet
 status: pending
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: deepimagej/EVsTEMsegmentationFRUNet
+- created: 2021-12-25 18:54:18.765132
+  name: Small extracellular vesicle instance segmentation (FRU-Net)
   source:
     authors:
     - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
@@ -33,5 +33,4 @@ versions:
       workflow, pipeline]
     type: application
   status: pending
-  version_id: deepimagej/EVsTEMsegmentationFRUNet
-  version_name: latest
+  version_id: master

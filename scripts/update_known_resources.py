@@ -3,11 +3,15 @@ from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from typing import DefaultDict, Dict, List, Literal, Optional, Sequence, Union
+import traceback
 
 import requests
 import typer
 from github import Github
+from github.GithubException import UnknownObjectException
 from ruamel.yaml import YAML
+from imjoy_plugin_parser import get_plugin_as_rdf
+
 
 yaml = YAML(typ="safe")
 
@@ -49,11 +53,14 @@ def write_resource(
     *,
     resource_path: Path,
     resource_id: str,
+    resource_type: str,
     resource_doi: Optional[str],
     version_id: str,
     new_version: dict,
     overwrite: bool = False,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
+    if not new_version.get("created"):
+        new_version["created"] = datetime.now()
     if resource_path.exists():
         resource = yaml.load(resource_path)
         assert isinstance(resource, dict)
@@ -81,13 +88,18 @@ def write_resource(
         resource["versions"].insert(0, new_version)
         # make sure latest is first
         resource["versions"].sort(key=lambda v: v["created"], reverse=True)
+        resource["type"] = resource_type
     else:  # create new resource
         resource = {
             "status": "pending",
             "versions": [new_version],
             "id": resource_id,
             "doi": resource_doi,
+            "type": resource_type,
         }
+
+    if "doi" in resource and not resource["doi"]:
+        del resource["doi"]
 
     assert isinstance(resource, dict)
     resource_path.parent.mkdir(parents=True, exist_ok=True)
@@ -127,13 +139,14 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
         for hit in hits:
             resource_doi = hit["conceptdoi"]
             doi = hit["doi"]  # "version" doi
-            created = hit["created"]
+            created = None
             resource_path = collection_folder / resource_doi / "resource.yaml"
             version_name = f"revision {hit['revision']}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
             source = "unknown"
             name = doi
+            resource_type = "unknown"
             if len(rdf_urls) > 0:
                 if len(rdf_urls) > 1:
                     print("found multiple 'rdf.yaml' sources?!?")
@@ -143,6 +156,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
                     r = requests.get(source)
                     rdf = yaml.load(r.text)
                     name = rdf.get("name", doi)
+                    resource_type = rdf.get("type")
                 except Exception as e:
                     print(f"Failed to obtain version name: {e}")
 
@@ -158,6 +172,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             resource = write_resource(
                 resource_path=resource_path,
                 resource_id=resource_doi,
+                resource_type=resource_type,
                 resource_doi=resource_doi,
                 version_id=doi,
                 new_version=new_version,
@@ -184,41 +199,61 @@ def update_from_collection(
         for r in c.get(rtype, []):
             try:
                 collection_item = {k: v for k, v in r.items() if k != "id"}
-                source = r["source"]
+                source = r.get("source")
                 resource_id = f"{collection_id}/{r['id']}"
                 # no version_id for rdfs only specified in the collection (not in separate rdf under source)
-                version_id = resource_id
-                version_name = "latest"
-                created = datetime.fromordinal(1)
+                version_id = "latest"
+                version_name = None
+                created = None
 
                 # assume rdf is defined outside of collection under source (that also lives in github)
                 rdf = None
                 githubusercontent_url = "https://raw.githubusercontent.com/"
-                if source.startswith(githubusercontent_url) and source.endswith(".yaml"):
+
+                if source and (source.startswith('http://') or source.startswith('https://')):
                     try:
-                        req = requests.get(source)
-                        rdf = yaml.load(req.text)
+                        if "//zenodo.org/record/" in source and source.split('/')[-1].isnumeric():
+                            # if a zenodo record is provided (e.g. https://zenodo.org/record/4034976),
+                            # assuming the source is URI + '/files/rdf.yaml'
+                            source = source + '/files/rdf.yaml'
+                        # TODO: resolve DOI
+
+                        if source.split('?')[0].endswith('.imjoy.html'):
+                            rdf = get_plugin_as_rdf(r['id'], source)
+                        elif source.split('?')[0].endswith('.yaml'):
+                            req = requests.get(source)
+                            rdf = yaml.load(req.text)
+                        else:
+                            raise ValueError(f"Invalid source type: {source} (only "
+                            "*.yaml and *.imjoy.html are allowed)")
                         if not isinstance(rdf, dict):
                             raise TypeError(f"rdf type: type(rdf)")
 
                     except Exception as e:
                         print(f"Failed to load rdf from {source}: {e}")
                         rdf = None
-                    else:
+
+                    if source.startswith(githubusercontent_url):
                         try:
                             orga, repo, branch, *_ = source[len(githubusercontent_url) :].split("/")
+                            version_id = branch
                             repo = gh.get_repo(f"{orga}/{repo}")
                             commit = repo.get_commit(branch)
                             tag = repo.get_git_tag(commit.sha)
+                        except UnknownObjectException:
+                            version_id = commit.sha
                         except Exception as e:
                             print(f"Failed to fetch version_id from github: {e}")
                         else:
                             version_id = tag.sha
                             version_name = tag.tag
+                elif source is not None:
+                    print(f"Invalid source URI: {source}")
+                    continue
 
                 # fallback assumes rdf is defined in collection; source does not point to a (valid) rdf
                 if rdf is None:
-                    rdf = {}
+                    rdf = collection_item
                     source = collection_item
                     new_version = {}
                 else:
@@ -232,14 +267,16 @@ def update_from_collection(
                         "status": "pending",
                         "source": source,
                         "name": rdf.get("name", resource_id),
-                        "version_name": version_name,
                     }
                 )
+                if version_name:
+                    new_version["version_name"] = version_name
 
                 resource = write_resource(
                     resource_path=collection_folder / resource_id / "resource.yaml",
                     resource_id=resource_id,
                     resource_doi=None,
+                    resource_type=rtype,
                     version_id=version_id,
                     new_version=new_version,
                     overwrite=True,
@@ -250,7 +287,7 @@ def update_from_collection(
 
             except Exception as e:
                 # don't fail for single bad resource in collection
-                print(f"Failed to add resource: {e}")
+                print(f"Failed to add resource: {traceback.format_exc()}")
 
 
 def update_from_github(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]):
@@ -260,8 +297,6 @@ def update_from_github(collection_folder: Path, updated_resources: DefaultDict[s
     gh = Github()
 
     for p in partners:
-        p_id = "unknown"
-        p_source = "unknown"
         try:
             p_id = p["id"]
             p_source = p["source"]
@@ -281,7 +316,7 @@ def main(collection_folder: Path) -> int:
             "id": k,
             "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
             "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
-            "new_version_sources": json.dumps([vv["source"] for vv in v]),
+            "new_version_sources": json.dumps([(vv.get("source") or None) for vv in v]),
             "new_version_sources_md": "\n".join(
                 [
                     "  - "

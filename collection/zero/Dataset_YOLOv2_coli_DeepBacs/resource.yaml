@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_YOLOv2_coli_DeepBacs
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_YOLOv2_coli_DeepBacs
+- created: 2021-12-25 18:54:08.247707
+  name: Escherichia coli growth stage object detection dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]
     cite:
@@ -16,9 +16,8 @@ versions:
     description: Training and test images of E. coli cells for object detection and
       classification.
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    download_url: https://zenodo.org/record/5551016
     name: Escherichia coli growth stage object detection dataset - DeepBacs
-    source: https://zenodo.org/record/5551016
     tags: [YOLOv2, object detection, DeepBacs, 2D]
   status: accepted
-  version_id: zero/Dataset_YOLOv2_coli_DeepBacs
-  version_name: latest
+  version_id: latest

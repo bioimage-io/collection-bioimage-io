@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+- created: 2021-12-25 18:54:08.060927
+  name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
   source:
     authors: [Gautier Follain, Guillaume Jacquemet]
     cite:
@@ -19,8 +19,6 @@ versions:
     documentation: https://zenodo.org/record/4034939
     download_url: https://zenodo.org/record/4034939
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
-    source: https://zenodo.org/record/4034939
     tags: [StarDist, ZeroCostDL4Mic]
   status: accepted
-  version_id: zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-  version_name: latest
+  version_id: latest

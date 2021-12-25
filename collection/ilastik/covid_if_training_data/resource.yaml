@@ -1,9 +1,9 @@
-doi: null
 id: ilastik/covid_if_training_data
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: ilastik/covid_if_training_data
+- created: 2021-12-25 18:54:25.160483
+  name: Covid-IF Training Data
   source:
     authors:
     - {name: Constantin Pape}
@@ -23,5 +23,4 @@ versions:
       covid19, semantic-segmentation, instance-segmentation]
     type: dataset
   status: accepted
-  version_id: ilastik/covid_if_training_data
-  version_name: latest
+  version_id: latest

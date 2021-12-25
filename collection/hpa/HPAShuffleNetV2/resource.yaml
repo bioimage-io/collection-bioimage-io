@@ -1,11 +1,10 @@
-doi: null
 id: hpa/HPAShuffleNetV2
 status: pending
+type: model
 versions:
-- created: 0001-01-01 00:00:00
+- created: 2021-12-25 18:54:26.335142
   links: [HPA-Classification]
   name: HPA ShuffleNetV2
   source: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/models/HPAShuffleNetV2/HPAShuffleNetV2.model.yaml
   status: pending
-  version_id: hpa/HPAShuffleNetV2
-  version_name: latest
+  version_id: master

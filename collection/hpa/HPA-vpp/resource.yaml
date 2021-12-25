@@ -1,0 +1,22 @@
+id: hpa/HPA-vpp
+status: pending
+type: model
+versions:
+- created: 2021-12-25 18:54:26.358611
+  name: HPA-vpp
+  source:
+    authors: [Yinzheng Gu, Chuanpeng Li, Jinbin Xie]
+    badges:
+    - {ext: 5th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
+    covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
+    description: An ensemble of seven CNN models and a multi-layer perceptron network,
+      using image augmentation, multi scales, weighted sampling and MultiLabelSoftMargin
+      loss.
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/vpp/README.md
+    framework: pytorch
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/vpp
+    license: MIT
+    name: HPA-vpp
+    tags: [classification, inception-v3, inception-v4, multilayer-perceptron, xception]
+  status: pending
+  version_id: latest

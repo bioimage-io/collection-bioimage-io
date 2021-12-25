@@ -1,0 +1,21 @@
+id: hpa/HPA-Random-Walk
+status: pending
+type: model
+versions:
+- created: 2021-12-25 18:54:26.381205
+  name: HPA-Random Walk
+  source:
+    authors: [Zhifeng Gao, Cheng Ju, Xiaohan Yi, Hongdong Zheng]
+    badges:
+    - {ext: 38th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
+    covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
+    description: An ensemble model of three different resolutions based on single
+      attention gated network.
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/random_walk/README.md
+    framework: pytorch
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/random_walk
+    license: MIT
+    name: HPA-Random Walk
+    tags: [attention-gate, classification, resnet-18]
+  status: pending
+  version_id: latest

@@ -1,10 +1,6 @@
-doi: null
 id: imjoy/Notebook Preview
 status: pending
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: imjoy/Notebook Preview
-  source: {source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html'}
-  status: pending
-  version_id: imjoy/Notebook Preview
-  version_name: latest
+- {created: ! '2021-12-25 18:54:21.069912', name: Notebook Preview, source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html',
+  status: pending, version_id: master}

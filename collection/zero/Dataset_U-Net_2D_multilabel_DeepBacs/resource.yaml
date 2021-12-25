@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_U-Net_2D_multilabel_DeepBacs
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_U-Net_2D_multilabel_DeepBacs
+- created: 2021-12-25 18:54:08.077839
+  name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
   source:
     authors: [Mia Conduit, Séamus Holden]
     cite:
@@ -16,9 +16,8 @@ versions:
     description: Paired bright field images and segmented binary masks of live E.
       coli cells.
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    download_url: https://zenodo.org/record/5639253
     name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
-    source: https://zenodo.org/record/5639253
     tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
   status: accepted
-  version_id: zero/Dataset_U-Net_2D_multilabel_DeepBacs
-  version_name: latest
+  version_id: latest

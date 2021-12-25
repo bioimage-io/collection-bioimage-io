@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_YOLOv2_antibiotic_DeepBacs
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_YOLOv2_antibiotic_DeepBacs
+- created: 2021-12-25 18:54:08.252700
+  name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]
     cite:
@@ -16,9 +16,8 @@ versions:
     description: Training and test images of E. coli cells treated with different
       antibiotics for antibiotic phenotyping.
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    download_url: https://zenodo.org/record/5551057
     name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
-    source: https://zenodo.org/record/5551057
     tags: [YOLOv2, object detection, DeepBacs, 2D]
   status: accepted
-  version_id: zero/Dataset_YOLOv2_antibiotic_DeepBacs
-  version_name: latest
+  version_id: latest

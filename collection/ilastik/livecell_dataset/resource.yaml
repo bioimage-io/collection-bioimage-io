@@ -1,9 +1,9 @@
-doi: null
 id: ilastik/livecell_dataset
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: ilastik/livecell_dataset
+- created: 2021-12-25 18:54:25.305446
+  name: LIVECell
   source:
     authors:
     - {name: Constantin Pape}
@@ -19,5 +19,4 @@ versions:
     tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
     type: dataset
   status: accepted
-  version_id: ilastik/livecell_dataset
-  version_name: latest
+  version_id: latest

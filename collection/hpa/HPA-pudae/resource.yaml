@@ -1,0 +1,21 @@
+id: hpa/HPA-pudae
+status: pending
+type: model
+versions:
+- created: 2021-12-25 18:54:26.344433
+  name: HPA-pudae
+  source:
+    authors: [Park Jinmo]
+    badges:
+    - {ext: 3rd, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
+    covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
+    description: An ensemble using focal loss, per image normalization and spatial
+      attention.
+    documentation: https://raw.githubusercontent.com/CellProfiling/pudae-kaggle-hpa/master/README.md
+    framework: pytorch
+    git_repo: https://github.com/CellProfiling/pudae-kaggle-hpa
+    license: BSD-2-Clause
+    name: HPA-pudae
+    tags: [classification, inception-v3, resnet-34, se-resnext-50]
+  status: pending
+  version_id: latest

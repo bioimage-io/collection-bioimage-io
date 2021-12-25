@@ -1,9 +1,9 @@
-doi: null
 id: ilastik/mitoem_segmentation_challenge
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: ilastik/mitoem_segmentation_challenge
+- created: 2021-12-25 18:54:25.347656
+  name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
   source:
     authors:
     - {name: Constantin Pape}
@@ -19,5 +19,4 @@ versions:
     tags: [mitochondria, electron-microscopy, 3D, mito-em-challenge, instance-segmentation]
     type: dataset
   status: accepted
-  version_id: ilastik/mitoem_segmentation_challenge
-  version_name: latest
+  version_id: latest
