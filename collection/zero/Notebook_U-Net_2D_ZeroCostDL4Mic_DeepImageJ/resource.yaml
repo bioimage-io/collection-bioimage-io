@@ -1,9 +1,9 @@
-doi: null
 id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
 status: accepted
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
+- created: 2021-12-25 18:54:07.903261
+  name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
   source:
     authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
         teams]
@@ -27,11 +27,10 @@ versions:
       on and make sure you cite these. Networks trained in this notebook can be used
       in Fiji via deepImageJ.
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links: [Notebook Preview]
     name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
   status: accepted
-  version_id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
-  version_name: latest
+  version_id: latest

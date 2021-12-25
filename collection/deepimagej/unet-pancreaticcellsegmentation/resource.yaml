@@ -1,9 +1,9 @@
-doi: null
 id: deepimagej/unet-pancreaticcellsegmentation
 status: pending
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: deepimagej/unet-pancreaticcellsegmentation
+- created: 2021-12-25 18:54:18.580880
+  name: 2D U-Net for binary segmentation
   source:
     authors:
     - {affiliation: 'EPFL, UC3M', name: Ignacio Arganda-Carreras}
@@ -26,5 +26,4 @@ versions:
     tags: [unet, segmentation, deepimagej, notebook, training, cell-segmentation]
     type: application
   status: pending
-  version_id: deepimagej/unet-pancreaticcellsegmentation
-  version_name: latest
+  version_id: master

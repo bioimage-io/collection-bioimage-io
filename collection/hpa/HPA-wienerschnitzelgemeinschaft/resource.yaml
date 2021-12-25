@@ -1,0 +1,23 @@
+id: hpa/HPA-wienerschnitzelgemeinschaft
+status: pending
+type: model
+versions:
+- created: 2021-12-25 18:54:26.349968
+  name: HPA-wienerschnitzelgemeinschaft
+  source:
+    authors: [Shaikat Mahmood Galib, Christof Henkel, Kevin Hwang, Dmytro Poplavskiy,
+      Bojan Tunguz, Russ Wolfinger]
+    badges:
+    - {ext: 4th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
+    covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
+    description: An ensemble of diverse and highly optimized CNN models, using hill
+      climbing and weighted voting.
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/wienerschnitzelgemeinschaft/README.md
+    framework: pytorch
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/wienerschnitzelgemeinschaft
+    license: MIT
+    name: HPA-wienerschnitzelgemeinschaft
+    tags: [airnet-50, airnext-50, cbam, classification, hill-climbing, inception-resnet-v2,
+      inception-v3, preresnet-50, resnet-18, resnet-34, resnet-50, resnet-101, se-resnext-50]
+  status: pending
+  version_id: latest

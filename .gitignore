@@ -5,6 +5,7 @@ scratch
 scripts/site.config.json
 scripts/utils.js
 new-rdf.yaml
+__pycache__
 
 # local env files
 .env.local

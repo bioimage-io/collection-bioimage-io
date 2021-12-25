@@ -1,9 +1,9 @@
-doi: null
 id: deepimagej/MoNuSeg_digital_pathology_miccai2018
 status: pending
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: deepimagej/MoNuSeg_digital_pathology_miccai2018
+- created: 2021-12-25 18:54:18.772529
+  name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
   source:
     authors:
     - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -21,5 +21,4 @@ versions:
     tags: [StarDist, segmentation, pathology, H&E, histology, 2D, nuclei segmentation,
       digital pathology]
   status: pending
-  version_id: deepimagej/MoNuSeg_digital_pathology_miccai2018
-  version_name: latest
+  version_id: latest

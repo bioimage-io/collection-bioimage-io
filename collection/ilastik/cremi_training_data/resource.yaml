@@ -1,9 +1,10 @@
-doi: null
 id: ilastik/cremi_training_data
-status: accepted
+status: pending
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: ilastik/cremi_training_data
+- created: 2021-12-25 18:54:25.175493
+  name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
+    Images'
   source:
     authors:
     - {name: Constantin Pape}
@@ -23,6 +24,5 @@ versions:
     tags: [electron-microscopy, brain, neurons, instance-segmentation, cremi-challenge,
       3D]
     type: dataset
-  status: accepted
-  version_id: ilastik/cremi_training_data
-  version_name: latest
+  status: pending
+  version_id: latest

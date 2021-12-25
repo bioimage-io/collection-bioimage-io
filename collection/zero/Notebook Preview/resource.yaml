@@ -1,10 +1,6 @@
-doi: null
 id: zero/Notebook Preview
 status: accepted
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Notebook Preview
-  source: {source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html'}
-  status: accepted
-  version_id: zero/Notebook Preview
-  version_name: latest
+- {created: ! '2021-12-25 18:54:07.811410', name: Notebook Preview, source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html',
+  status: accepted, version_id: master}

@@ -1,9 +1,9 @@
-doi: null
 id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
 status: accepted
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
+- created: 2021-12-25 18:54:07.894377
+  name: Deep-STORM (2D) - ZeroCostDL4Mic - DeepImageJ
   source:
     authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
         teams]
@@ -33,11 +33,10 @@ versions:
       on and make sure you cite these. Networks trained in this notebook can be used
       in Fiji via deepImageJ and ThunderSTORM plugin.
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links: [Notebook Preview, Dataset_Deep-STORM_ZeroCostDL4Mic]
     name: Deep-STORM (2D) - ZeroCostDL4Mic - DeepImageJ
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
   status: accepted
-  version_id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
-  version_name: latest
+  version_id: latest

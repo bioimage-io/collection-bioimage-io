@@ -1,10 +1,6 @@
-doi: null
 id: deepimagej/deepimagej
 status: pending
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: deepimagej/deepimagej
-  source: {source: 'https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html'}
-  status: pending
-  version_id: deepimagej/deepimagej
-  version_name: latest
+- {created: ! '2021-12-25 18:54:18.444109', name: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html',
+  status: pending, version_id: master}

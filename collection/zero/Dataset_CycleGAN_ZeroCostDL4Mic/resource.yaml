@@ -1,9 +1,9 @@
-doi: null
 id: zero/Dataset_CycleGAN_ZeroCostDL4Mic
 status: accepted
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Dataset_CycleGAN_ZeroCostDL4Mic
+- created: 2021-12-25 18:54:08.036681
+  name: CycleGAN example training and test dataset - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet]
     cite:
@@ -14,9 +14,8 @@ versions:
     description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk
       and SRRF reconstructed images)
     documentation: https://doi.org/10.5281/zenodo.3941884
+    download_url: https://doi.org/10.5281/zenodo.3941884
     name: CycleGAN example training and test dataset - ZeroCostDL4Mic
-    source: https://doi.org/10.5281/zenodo.3941884
     tags: [CycleGAN, ZeroCostDL4Mic]
   status: accepted
-  version_id: zero/Dataset_CycleGAN_ZeroCostDL4Mic
-  version_name: latest
+  version_id: latest

@@ -1,9 +1,9 @@
-doi: null
 id: zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic
 status: accepted
+type: application
 versions:
-- created: 0001-01-01 00:00:00
-  name: zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic
+- created: 2021-12-25 18:54:07.987185
+  name: EmbedSeg (2D) - ZeroCostDL4Mic
   source:
     authors: ['Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team']
     badges:
@@ -20,13 +20,12 @@ versions:
       method that can be used to segment object from bioimages and was first published
       by Lalit et al. in 2021, on arXiv.
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
       Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
       Dataset_StarDist_fluo2_ZeroCostDL4Mic]
     name: EmbedSeg (2D) - ZeroCostDL4Mic
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
     tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
   status: accepted
-  version_id: zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic
-  version_name: latest
+  version_id: latest

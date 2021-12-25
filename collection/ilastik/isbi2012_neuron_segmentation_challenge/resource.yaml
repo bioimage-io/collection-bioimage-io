@@ -1,9 +1,9 @@
-doi: null
 id: ilastik/isbi2012_neuron_segmentation_challenge
-status: accepted
+status: pending
+type: dataset
 versions:
-- created: 0001-01-01 00:00:00
-  name: ilastik/isbi2012_neuron_segmentation_challenge
+- created: 2021-12-25 18:54:25.263894
+  name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
   source:
     authors:
     - {name: Constantin Pape}
@@ -19,6 +19,5 @@ versions:
     source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
     tags: [electron-microscopy, brain, neurons, instance-segmentation, 2D, isbi2012-challenge]
     type: dataset
-  status: accepted
-  version_id: ilastik/isbi2012_neuron_segmentation_challenge
-  version_name: latest
+  status: pending
+  version_id: latest

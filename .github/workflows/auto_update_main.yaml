@@ -20,7 +20,7 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: install script deps
-      run: pip install bioimageio.spec PyGithub
+      run: pip install bioimageio.spec PyGithub lxml
     - name: update known resources
       id: update_known
       run: python scripts/update_known_resources.py collection
