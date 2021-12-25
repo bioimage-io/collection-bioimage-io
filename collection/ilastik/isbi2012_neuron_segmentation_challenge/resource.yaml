@@ -2,7 +2,7 @@ id: ilastik/isbi2012_neuron_segmentation_challenge
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:06:28.477601
+- created: 2021-12-25 18:11:32.406851
   name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
   source:
     authors:

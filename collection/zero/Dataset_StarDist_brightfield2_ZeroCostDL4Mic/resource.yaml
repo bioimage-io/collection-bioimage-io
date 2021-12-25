@@ -2,7 +2,7 @@ id: zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:06:24.867402
+- created: 2021-12-25 18:11:24.298726
   name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
   source:
     authors: [Gautier Follain, Guillaume Jacquemet]

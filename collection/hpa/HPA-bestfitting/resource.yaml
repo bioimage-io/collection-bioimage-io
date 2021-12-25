@@ -2,7 +2,7 @@ id: hpa/HPA-bestfitting
 status: pending
 type: model
 versions:
-- created: 2021-12-25 18:06:28.661225
+- created: 2021-12-25 18:11:32.765930
   name: HPA-bestfitting
   source:
     authors: [Shubin Dai]

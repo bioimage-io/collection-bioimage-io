@@ -2,5 +2,5 @@ id: imjoy/ImageJ.JS
 status: pending
 type: application
 versions:
-- {created: ! '2021-12-25 18:06:27.614310', name: ImageJ.JS, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html',
+- {created: ! '2021-12-25 18:11:30.976381', name: ImageJ.JS, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html',
   status: pending, version_id: master}
