@@ -35,5 +35,5 @@ versions:
       Dataset_CARE_2D_coli_DeepBacs, Dataset_fnet_DeepBacs]
     name: CARE (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest

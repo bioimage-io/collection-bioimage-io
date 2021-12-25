@@ -18,5 +18,5 @@ versions:
     download_url: https://doi.org/10.5281/zenodo.3959089
     name: Deep-STORM training and example dataset - ZeroCostDL4Mic
     tags: [SMLM, Deep-STORM, ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest

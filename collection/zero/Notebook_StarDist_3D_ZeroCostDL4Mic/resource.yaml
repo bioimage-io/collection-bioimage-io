@@ -27,5 +27,5 @@ versions:
     links: [Notebook Preview]
     name: StarDist (3D) - ZeroCostDL4Mic
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
-  status: pending
+  status: accepted
   version_id: latest

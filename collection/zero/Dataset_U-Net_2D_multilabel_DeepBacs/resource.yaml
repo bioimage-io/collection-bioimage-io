@@ -19,5 +19,5 @@ versions:
     download_url: https://zenodo.org/record/5639253
     name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
     tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
-  status: pending
+  status: accepted
   version_id: latest

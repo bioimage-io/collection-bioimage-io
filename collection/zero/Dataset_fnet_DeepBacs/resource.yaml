@@ -20,5 +20,5 @@ versions:
     download_url: https://zenodo.org/record/5551123
     name: Artificial labeling of E. coli membranes dataset - DeepBacs
     tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
-  status: pending
+  status: accepted
   version_id: latest

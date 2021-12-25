@@ -19,5 +19,5 @@ versions:
     download_url: https://zenodo.org/record/5551112
     name: Escherichia coli nucleoid denoising dataset - DeepBacs
     tags: [Noise2Void, CARE, denoising, DeepBacs, 2D]
-  status: pending
+  status: accepted
   version_id: latest

@@ -33,5 +33,5 @@ versions:
     links: [Notebook Preview, Dataset_fnet_3D_ZeroCostDL4Mic]
     name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
     tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
-  status: pending
+  status: accepted
   version_id: latest

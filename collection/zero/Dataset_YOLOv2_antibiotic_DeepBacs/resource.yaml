@@ -19,5 +19,5 @@ versions:
     download_url: https://zenodo.org/record/5551057
     name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
     tags: [YOLOv2, object detection, DeepBacs, 2D]
-  status: pending
+  status: accepted
   version_id: latest

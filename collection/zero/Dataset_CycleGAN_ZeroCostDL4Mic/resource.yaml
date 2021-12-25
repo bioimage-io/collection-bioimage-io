@@ -17,5 +17,5 @@ versions:
     download_url: https://doi.org/10.5281/zenodo.3941884
     name: CycleGAN example training and test dataset - ZeroCostDL4Mic
     tags: [CycleGAN, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest

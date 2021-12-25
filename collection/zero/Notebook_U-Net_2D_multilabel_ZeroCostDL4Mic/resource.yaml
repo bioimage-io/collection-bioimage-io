@@ -32,5 +32,5 @@ versions:
     name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
     tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel,
       ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest

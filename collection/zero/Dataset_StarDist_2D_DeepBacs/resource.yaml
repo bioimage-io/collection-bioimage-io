@@ -20,5 +20,5 @@ versions:
     download_url: https://zenodo.org/record/5551009
     name: Mixed segmentation dataset - DeepBacs
     tags: [StarDist, segmentation, DeepBacs, 2D]
-  status: pending
+  status: accepted
   version_id: latest

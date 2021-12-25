@@ -20,5 +20,5 @@ versions:
     download_url: https://zenodo.org/record/4034939
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
     tags: [StarDist, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest

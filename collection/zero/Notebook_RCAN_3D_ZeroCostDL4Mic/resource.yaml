@@ -32,5 +32,5 @@ versions:
     links: [Notebook Preview, Dataset_CARE_3D_ZeroCostDL4Mic]
     name: RCAN (3D) - ZeroCostDL4Mic
     tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D]
-  status: pending
+  status: accepted
   version_id: latest

@@ -22,5 +22,5 @@ versions:
     tags: [high-content-imaging, fluorescence-light-microscopy, 2D, cells, nuclei,
       covid19, semantic-segmentation, instance-segmentation]
     type: dataset
-  status: pending
+  status: accepted
   version_id: latest

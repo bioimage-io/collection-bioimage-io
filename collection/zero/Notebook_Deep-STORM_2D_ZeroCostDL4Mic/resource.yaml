@@ -36,5 +36,5 @@ versions:
     links: [Notebook Preview, Dataset_Deep-STORM_ZeroCostDL4Mic]
     name: Deep-STORM (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest

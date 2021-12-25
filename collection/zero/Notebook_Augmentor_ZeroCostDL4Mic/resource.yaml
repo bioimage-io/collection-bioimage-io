@@ -31,5 +31,5 @@ versions:
     links: [Notebook Preview]
     name: Augmentor - ZeroCostDL4Mic
     tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest

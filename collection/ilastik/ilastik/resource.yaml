@@ -3,4 +3,4 @@ status: accepted
 type: application
 versions:
 - {created: ! '2021-12-25 18:11:31.846650', name: ilastik, source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html',
-  status: pending, version_id: main}
+  status: accepted, version_id: main}

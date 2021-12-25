@@ -27,5 +27,5 @@ versions:
       Dataset_StarDist_fluo2_ZeroCostDL4Mic]
     name: EmbedSeg (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
