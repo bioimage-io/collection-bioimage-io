@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: deepimagej/UNet2DGlioblastomaSegmentation
+doi: null
+id: deepimagej/UNet2DGlioblastomaSegmentation
 status: pending
 versions:
 - created: 0001-01-01 00:00:00

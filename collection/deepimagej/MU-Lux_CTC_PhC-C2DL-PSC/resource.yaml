@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
+doi: null
+id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
 status: pending
 versions:
 - created: 0001-01-01 00:00:00

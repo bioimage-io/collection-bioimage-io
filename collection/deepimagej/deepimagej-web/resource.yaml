@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: deepimagej/deepimagej-web
+doi: null
+id: deepimagej/deepimagej-web
 status: pending
 versions:
 - created: 0001-01-01 00:00:00

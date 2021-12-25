@@ -1,5 +1,5 @@
-resource_doi: null
-resource_id: deepimagej/Mt3VirtualStaining
+doi: null
+id: deepimagej/Mt3VirtualStaining
 status: pending
 versions:
 - created: 0001-01-01 00:00:00
