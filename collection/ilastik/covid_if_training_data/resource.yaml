@@ -2,7 +2,7 @@ id: ilastik/covid_if_training_data
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:16:46.746272
+- created: 2021-12-25 18:28:33.591155
   name: Covid-IF Training Data
   source:
     authors:
@@ -22,5 +22,5 @@ versions:
     tags: [high-content-imaging, fluorescence-light-microscopy, 2D, cells, nuclei,
       covid19, semantic-segmentation, instance-segmentation]
     type: dataset
-  status: accepted
+  status: pending
   version_id: latest

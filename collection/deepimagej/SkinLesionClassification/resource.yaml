@@ -9,7 +9,7 @@ versions:
   source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/model.yaml
   status: pending
   version_id: master
-- created: 2021-12-25 18:16:43.288703
+- created: 2021-12-25 18:28:30.163660
   download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
   links: [deepimagej]
   name: Skin lesions classification

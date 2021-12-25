@@ -2,7 +2,7 @@ id: ilastik/stradist_dsb_training_data
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:16:46.748649
+- created: 2021-12-25 18:28:33.593976
   name: DSB Nucleus Segmentation Training Data
   source:
     authors:
@@ -20,5 +20,5 @@ versions:
     tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
       2D]
     type: dataset
-  status: accepted
+  status: pending
   version_id: latest

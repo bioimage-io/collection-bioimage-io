@@ -2,7 +2,7 @@ id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:16:38.849668
+- created: 2021-12-25 18:28:24.082264
   name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
   source:
     authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
@@ -32,5 +32,5 @@ versions:
     links: [Notebook Preview]
     name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-  status: accepted
+  status: pending
   version_id: latest

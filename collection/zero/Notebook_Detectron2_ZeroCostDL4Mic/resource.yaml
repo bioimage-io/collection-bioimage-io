@@ -2,7 +2,7 @@ id: zero/Notebook_Detectron2_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:16:38.856881
+- created: 2021-12-25 18:28:24.090256
   name: Detectron2 - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -28,5 +28,5 @@ versions:
       Dataset_YOLOv2_antibiotic_DeepBacs]
     name: Detectron2 - ZeroCostDL4Mic
     tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
-  status: accepted
+  status: pending
   version_id: latest

@@ -2,7 +2,7 @@ id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:16:38.854587
+- created: 2021-12-25 18:28:24.087671
   name: SplineDist (2D) - ZeroCostDL4Mic
   source:
     authors: [Romain F. Laine and the ZeroCostDL4Mic Team]
@@ -31,5 +31,5 @@ versions:
       Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs, Dataset_SplineDist_2D_DeepBacs]
     name: SplineDist (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
-  status: accepted
+  status: pending
   version_id: latest

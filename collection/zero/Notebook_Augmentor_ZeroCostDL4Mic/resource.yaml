@@ -2,7 +2,7 @@ id: zero/Notebook_Augmentor_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:16:38.845051
+- created: 2021-12-25 18:28:24.077141
   name: Augmentor - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -31,5 +31,5 @@ versions:
     links: [Notebook Preview]
     name: Augmentor - ZeroCostDL4Mic
     tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
-  status: accepted
+  status: pending
   version_id: latest

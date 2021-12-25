@@ -2,7 +2,7 @@ id: zero/Notebook_StarDist_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:16:38.832808
+- created: 2021-12-25 18:28:24.063755
   name: StarDist (3D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -27,5 +27,5 @@ versions:
     links: [Notebook Preview]
     name: StarDist (3D) - ZeroCostDL4Mic
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
-  status: accepted
+  status: pending
   version_id: latest

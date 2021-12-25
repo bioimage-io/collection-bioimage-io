@@ -2,7 +2,7 @@ id: zero/Dataset_CARE_2D_coli_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:16:38.888296
+- created: 2021-12-25 18:28:24.125029
   name: Escherichia coli nucleoid denoising dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]
@@ -19,5 +19,5 @@ versions:
     download_url: https://zenodo.org/record/5551112
     name: Escherichia coli nucleoid denoising dataset - DeepBacs
     tags: [Noise2Void, CARE, denoising, DeepBacs, 2D]
-  status: accepted
+  status: pending
   version_id: latest

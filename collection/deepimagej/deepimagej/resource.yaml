@@ -4,5 +4,5 @@ type: application
 versions:
 - {created: ! '2021-12-25 18:54:18.444109', name: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html',
   status: pending, version_id: master}
-- {created: ! '2021-12-25 18:16:44.089189', name: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html',
+- {created: ! '2021-12-25 18:28:30.966669', name: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html',
   status: pending, version_id: 081bf4da443cc28ba20826d2d6fea7856075787c}

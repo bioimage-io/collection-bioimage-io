@@ -2,7 +2,7 @@ id: zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-25 18:16:38.868381
+- created: 2021-12-25 18:28:24.102976
   name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
   source:
     authors: [Johanna Jukkala, Guillaume Jacquemet]
@@ -16,5 +16,5 @@ versions:
     download_url: https://doi.org/10.5281/zenodo.3715492
     name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
     tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
-  status: accepted
+  status: pending
   version_id: latest

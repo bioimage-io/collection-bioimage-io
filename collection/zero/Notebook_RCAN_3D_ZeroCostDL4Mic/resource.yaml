@@ -2,7 +2,7 @@ id: zero/Notebook_RCAN_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:16:38.853427
+- created: 2021-12-25 18:28:24.086383
   name: RCAN (3D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -32,5 +32,5 @@ versions:
     links: [Notebook Preview, Dataset_CARE_3D_ZeroCostDL4Mic]
     name: RCAN (3D) - ZeroCostDL4Mic
     tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D]
-  status: accepted
+  status: pending
   version_id: latest
