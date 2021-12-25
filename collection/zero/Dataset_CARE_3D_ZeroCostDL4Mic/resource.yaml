@@ -1,0 +1,21 @@
+doi: null
+id: zero/Dataset_CARE_3D_ZeroCostDL4Mic
+status: accepted
+versions:
+- created: 0001-01-01 00:00:00
+  name: zero/Dataset_CARE_3D_ZeroCostDL4Mic
+  source:
+    authors: [Guillaume Jacquemet]
+    cite:
+    - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L.,
+        Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy
+        with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
+    covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png']
+    description: Fluorescence microscopy (Lifeact-RFP)
+    documentation: https://doi.org/10.5281/zenodo.3713337
+    name: CARE (3D) example training and test dataset - ZeroCostDL4Mic
+    source: https://doi.org/10.5281/zenodo.3713337
+    tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
+  status: accepted
+  version_id: zero/Dataset_CARE_3D_ZeroCostDL4Mic
+  version_name: latest

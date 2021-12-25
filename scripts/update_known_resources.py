@@ -270,7 +270,7 @@ def update_from_github(collection_folder: Path, updated_resources: DefaultDict[s
             print(f"Failed to process collection {p_source} for {p_id} partner: {e}")
 
 
-def main(collection_folder: Path = "collection") -> int:
+def main(collection_folder: Path) -> int:
     updated_resources: DefaultDict[str, List[Dict[str, Union[dict, str]]]] = defaultdict(list)
 
     update_from_zenodo(collection_folder, updated_resources)

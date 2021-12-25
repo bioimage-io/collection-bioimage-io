@@ -1,0 +1,35 @@
+doi: null
+id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
+status: accepted
+versions:
+- created: 0001-01-01 00:00:00
+  name: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
+  source:
+    authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
+        teams]
+    badges:
+    - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
+        in Colab, url: 'https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb'}
+    cite:
+    - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L.,
+        Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy
+        with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
+    - {doi: 'https://arxiv.org/abs/1606.06650', text: 'Özgün Çiçek, Ahmed Abdulkadir,
+        Soeren S. Lienkamp, Thomas Brox, Olaf Ronneberger. 3D U-Net: Learning Dense
+        Volumetric Segmentation from Sparse Annotation. https://arxiv.org/abs/1606.06650'}
+    covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png']
+    description: 3D binary segmentation. The 3D U-Net was first introduced by Çiçek
+      et al for learning dense volumetric segmentations from sparsely annotated ground-truth
+      data building upon the original U-Net architecture by Ronneberger et al. Note
+      - visit the ZeroCostDL4Mic wiki to check the original publications this network
+      is based on and make sure you cite these. Networks trained in this notebook
+      can be used in Fiji via deepImageJ.
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links: [Notebook Preview]
+    name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
+  status: accepted
+  version_id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
+  version_name: latest
