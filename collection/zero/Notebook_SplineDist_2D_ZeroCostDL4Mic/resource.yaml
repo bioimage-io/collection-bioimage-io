@@ -31,5 +31,5 @@ versions:
       Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs, Dataset_SplineDist_2D_DeepBacs]
     name: SplineDist (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
