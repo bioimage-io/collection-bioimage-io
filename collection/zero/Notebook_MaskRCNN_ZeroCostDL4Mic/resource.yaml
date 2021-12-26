@@ -25,5 +25,5 @@ versions:
     links: [Notebook Preview]
     name: MaskRCNN - ZeroCostDL4Mic
     tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
