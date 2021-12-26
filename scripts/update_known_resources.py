@@ -7,8 +7,6 @@ import traceback
 
 import requests
 import typer
-from github import Github
-from github.GithubException import UnknownObjectException
 from ruamel.yaml import YAML
 from imjoy_plugin_parser import get_plugin_as_rdf
 
@@ -60,7 +58,7 @@ def write_resource(
     overwrite: bool = False,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if not new_version.get("created"):
-        new_version["created"] = datetime.now()
+        new_version["created"] = str(datetime.now().isoformat())
     if resource_path.exists():
         resource = yaml.load(resource_path)
         assert isinstance(resource, dict)
@@ -78,7 +76,8 @@ def write_resource(
                 if overwrite:
                     old_version = resource["versions"].pop(idx)
                     old_version.pop("status", None)  # don't overwrite status
-                    if old_version != {k: v for k, v in new_version.items() if k != "status"}:
+                    old_version.pop("created", None)  # don't overwrite created
+                    if old_version != {k: v for k, v in new_version.items() if k != "status" and k != "created"}:
                         break
 
                 # fetched resource is known
@@ -126,11 +125,11 @@ def update_with_new_version(
 def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
-        print(zenodo_request)
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
             print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
             break
+        print(f"Collecting items from zenodo: {zenodo_request}")
 
         hits = r.json()["hits"]["hits"]
         if not hits:
@@ -188,17 +187,18 @@ def update_from_collection(
     collection_source: str,
     updated_resources: DefaultDict[str, List[Dict[str, str]]],
     resource_types: Sequence[str],
-    gh: Github,
 ):
     req = requests.get(collection_source)
     if not req.status_code == 200:
         raise RuntimeError(f"Could not get collection from {collection_source}: {req.status_code}: {req.reason}")
+    print(f"Collecting items from {collection_id}: {collection_source}")
 
     c = yaml.load(req.text)
     for rtype in resource_types:
         for r in c.get(rtype, []):
             try:
                 collection_item = {k: v for k, v in r.items() if k != "id"}
+
                 source = r.get("source")
                 resource_id = f"{collection_id}/{r['id']}"
                 # no version_id for rdfs only specified in the collection (not in separate rdf under source)
@@ -222,31 +222,20 @@ def update_from_collection(
                             rdf = get_plugin_as_rdf(r['id'], source)
                         elif source.split('?')[0].endswith('.yaml'):
                             req = requests.get(source)
+                            if not req.ok:
+                                raise Exception(req.reason)
                             rdf = yaml.load(req.text)
                         else:
-                            raise ValueError(f"Invalid source type: {source} (only "
-                            "*.yaml and *.imjoy.html are allowed)")
-                        if not isinstance(rdf, dict):
-                            raise TypeError(f"rdf type: type(rdf)")
+                            rdf = None
 
                     except Exception as e:
-                        print(f"Failed to load rdf from {source}: {e}")
+                        # TODO: create PR to remove failed items
+                        print(f"WARNING: Failed to load rdf (id: {resource_id}) from {source}: {e}")
                         rdf = None
 
                     if source.startswith(githubusercontent_url):
-                        try:
-                            orga, repo, branch, *_ = source[len(githubusercontent_url) :].split("/")
-                            version_id = branch
-                            repo = gh.get_repo(f"{orga}/{repo}")
-                            commit = repo.get_commit(branch)
-                            tag = repo.get_git_tag(commit.sha)
-                        except UnknownObjectException:
-                            version_id = commit.sha
-                        except Exception as e:
-                            print(f"Failed to fetch version_id from github: {e}")
-                        else:
-                            version_id = tag.sha
-                            version_name = tag.tag
+                        orga, repo, branch, *_ = source[len(githubusercontent_url) :].split("/")
+                        version_id = f"{orga}/{repo}/{branch}"
                 elif source is not None:
                     print(f"Invalid source URI: {source}")
                     continue
@@ -259,6 +248,14 @@ def update_from_collection(
                 else:
                     # collection item specifies update rdf, like we allow for a manual update here
                     new_version = collection_item
+
+                rdf["type"] = rdf.get("type", rtype)
+                if "links" in rdf:
+                    # Resolve relative links
+                    for idx in range(len(rdf["links"])):
+                        link = rdf["links"][idx]
+                        if "/" not in link:
+                            rdf["links"][idx] = f"{collection_id}/{link}"
 
                 new_version.update(
                     {
@@ -294,13 +291,12 @@ def update_from_github(collection_folder: Path, updated_resources: DefaultDict[s
     rdf_template = yaml.load(collection_folder.parent / "collection_rdf_template.yaml")
     partners = rdf_template["config"]["partners"]
     resource_types = rdf_template["config"]["resource_types"]
-    gh = Github()
 
     for p in partners:
         try:
             p_id = p["id"]
             p_source = p["source"]
-            update_from_collection(collection_folder, p_id, p_source, updated_resources, resource_types, gh)
+            update_from_collection(collection_folder, p_id, p_source, updated_resources, resource_types)
         except Exception as e:
             print(f"Failed to process collection {p_source} for {p_id} partner: {e}")
 
@@ -312,7 +308,7 @@ def main(collection_folder: Path, max_resource_count: int) -> int:
     update_from_github(collection_folder, updated_resources)
 
     # limit the number of PR created
-    updated_resources = updated_resources[:max_resource_count]
+    updated_items = list(updated_resources.items())[:max_resource_count]
 
     updates = [
         {
@@ -335,10 +331,10 @@ def main(collection_folder: Path, max_resource_count: int) -> int:
             "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[]))))[1:-1].replace("'", "")
             or "none specified",
         }
-        for k, v in updated_resources.items()
+        for k, v in updated_items
     ]
     set_gh_actions_output("updated_resources_matrix", json.dumps({"update": updates}))
-    set_gh_actions_output("found_new_resources", "yes" if updated_resources else "")
+    set_gh_actions_output("found_new_resources", "yes" if updated_items else "")
 
     return 0
 

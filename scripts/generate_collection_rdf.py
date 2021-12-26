@@ -1,7 +1,4 @@
 import json
-import os
-import shutil
-import subprocess
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
@@ -9,9 +6,13 @@ from pprint import pprint
 import typer
 from boltons.iterutils import remap
 from ruamel.yaml import YAML
+from bioimageio.spec import load_raw_resource_description
+from bioimageio.spec.io_ import serialize_raw_resource_description_to_dict
+from imjoy_plugin_parser import get_plugin_as_rdf
 
 yaml = YAML(typ="safe")
 
+SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
 def set_gh_actions_output(name: str, output: str):
     """set output of a github actions workflow step calling this script"""
@@ -26,15 +27,7 @@ def main() -> int:
     rdf['attachments'] = rdf.get('attachments', {})
     attachments = rdf['attachments']
 
-    subprocess.run(["git", "fetch"])
-    remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
-    remote_branches = remote_branch_proc.stdout.split()
-    print("found remote branches:")
-    pprint(remote_branches)
-
-    gh_pages = Path("dist/gh-pages")
-    subprocess.run(["git", "worktree", "add", str(gh_pages), f"gh-pages"])
-
+    resources_dir = Path("dist/gh-pages/resources")
 
     n_accepted = {}
     n_accepted_versions = {}
@@ -43,23 +36,34 @@ def main() -> int:
         r = yaml.load(r_path)
         if r["status"] != "accepted":
             continue
-
+        resource_id = r["id"]
         latest_version = None
         for v in r["versions"]:
             if v["status"] != "accepted":
                 continue
+            if isinstance(v["source"], dict):
+                this_version = v["source"]
+            elif v["source"].split("?")[0].endswith(".imjoy.html"):
+                rdf = get_plugin_as_rdf(r['id'].split("/")[1], v["source"])
+            else:
+                try:
+                    rdf_node = load_raw_resource_description(v["source"])
+                except Exception as e:
+                    print(f"Failed to interpret {v['source']} as rdf: {e}")
+                    continue
+                else:
+                    this_version = serialize_raw_resource_description_to_dict(rdf_node)
 
-            version_sub_path = Path("resources") / v["version_id"]
-            v_path = gh_pages / version_sub_path / "rdf.yaml"
+            this_version.update(v)
+            version_sub_path = Path(resource_id) / v["version_id"]
+            
+            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{v['version_id']}/rdf.yaml"
+            if isinstance(this_version["source"], dict):
+                this_version["source"] = this_version["rdf_source"]
 
-            if not v_path.exists():
-                print(f"ignoring missing resource version {v_path}")
-                continue
-
-            this_version = yaml.load(v_path)
-            if not isinstance(this_version, dict):
-                print(f"ignoring non-dict resource version {v_path}")
-                continue
+            (resources_dir / version_sub_path).mkdir(parents=True, exist_ok=True)
+            v_path = resources_dir / version_sub_path / "rdf.yaml"
+            yaml.dump(this_version, v_path)
 
             # add validation summaries
             val_summaries = {}
@@ -101,6 +105,7 @@ def main() -> int:
     print("accepted resource versions per type:")
     pprint(n_accepted_versions)
 
+    rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
     rdf_path = Path("dist/gh-pages/rdf.yaml")
