@@ -39,6 +39,27 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
 
+
+  deploy:  # deploy new resource versions and collection rdf to gh-pages
+    runs-on: ubuntu-latest
+    outputs:
+      processed_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_gh_pages_previews }}
+      processed_any_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_any_gh_pages_previews }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec boltons
+    - name: generate collection rdf
+      id: gen_coll_rdf
+      run: python scripts/generate_collection_rdf.py
+    - name: Deploy collection rdf to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist/gh-pages-update
+
   open-pr:
     needs: [collect-new-resources]
     if: needs.collect-new-resources.outputs.found_new_resources == 'yes'
@@ -89,26 +110,6 @@ jobs:
         labels: |
           auto-update
         draft: false
-
-  deploy:  # deploy new resource versions and collection rdf to gh-pages
-    runs-on: ubuntu-latest
-    outputs:
-      processed_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_gh_pages_previews }}
-      processed_any_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_any_gh_pages_previews }}
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec boltons
-    - name: generate collection rdf
-      id: gen_coll_rdf
-      run: python scripts/generate_collection_rdf.py
-    - name: Deploy collection rdf to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        clean: false
-        branch: gh-pages
-        folder: dist/gh-pages-update
 
   rm-previews:
     needs: deploy
