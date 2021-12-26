@@ -1,0 +1,21 @@
+authors:
+- {name: Constantin Pape}
+cite:
+- {doi: 'https://doi.org/10.1002/bies.202000257', text: 'Pape, Remme et al.'}
+covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover0.jpg',
+  'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover1.jpg',
+  'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover2.jpg']
+created: '2021-12-26T23:42:30.953410'
+description: Training data for cell and nucleus segmentation as well as infection
+  classification in IF data of Covid-19 infected cells.
+documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
+format_version: 0.2.1
+license: CC-BY-4.0
+name: Covid-IF Training Data
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/covid_if_training_data/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/covid_if_training_data/latest/rdf.yaml
+status: accepted
+tags: [high-content-imaging, fluorescence-light-microscopy, 2D, cells, nuclei, covid19,
+  semantic-segmentation, instance-segmentation]
+type: dataset
+version_id: latest

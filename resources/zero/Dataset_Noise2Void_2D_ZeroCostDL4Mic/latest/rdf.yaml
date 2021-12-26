@@ -1,0 +1,17 @@
+authors: [Aki Stubb, Guillaume Jacquemet, Johanna Ivaska]
+cite:
+- {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
+    R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic.
+    Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
+covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png']
+created: '2021-12-26T23:42:20.703843'
+description: Fluorescence microscopy (paxillin-GFP)
+documentation: https://doi.org/10.5281/zenodo.3713315
+download_url: https://doi.org/10.5281/zenodo.3713315
+name: Noise2Void (2D) example training and test dataset - ZeroCostDL4Mic
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
+status: accepted
+tags: [Noise2Void, denoising, ZeroCostDL4Mic, 2D]
+type: dataset
+version_id: latest

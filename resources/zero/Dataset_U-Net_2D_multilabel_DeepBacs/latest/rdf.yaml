@@ -1,0 +1,20 @@
+authors: [Mia Conduit, Séamus Holden]
+cite:
+- {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
+    F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier,
+    Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike
+    Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source
+    deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152'}
+covers: ['https://zenodo.org/api/iiif/v2/8ba101cf-97ac-4e68-9fff-4cc130b5ea81:93b67447-8b0a-4053-a522-9c141623ca6f:A_Multilabel_U-Net_example_B.subtilis.png/full/750,/0/default.png']
+created: '2021-12-26T23:42:20.811600'
+description: Paired bright field images and segmented binary masks of live E. coli
+  cells.
+documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+download_url: https://zenodo.org/record/5639253
+name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
+status: accepted
+tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
+type: dataset
+version_id: latest

@@ -1,0 +1,19 @@
+authors:
+- {name: Constantin Pape}
+cite:
+- {doi: 'https://doi.org/10.1038/s41592-019-0612-7', text: Caicedo et al.}
+covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg']
+created: '2021-12-26T23:42:30.979267'
+description: Subset of the nucleus segmentation training data from the 2018 Kaggle
+  Data Science Bowl.
+documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
+format_version: 0.2.1
+license: CC0-1.0
+name: DSB Nucleus Segmentation Training Data
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/stradist_dsb_training_data/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/stradist_dsb_training_data/latest/rdf.yaml
+status: accepted
+tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
+  2D]
+type: dataset
+version_id: latest

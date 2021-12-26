@@ -1,0 +1,21 @@
+authors: [Gautier Follain, Guillaume Jacquemet]
+cite:
+- {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
+    R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic.
+    Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
+- {doi: 'https://doi.org/10.1101/2020.09.22.306233', text: 'Elnaz Fazeli, Nathan H.
+    Roy, Gautier Follain, Romain F. Laine, Lucas von Chamier, Pekka E. Hänninen, John
+    E. Eriksson, Jean-Yves Tinevez, Guillaume Jacquemet. Automated cell tracking using
+    StarDist and TrackMate. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.09.22.306233'}
+covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png']
+created: '2021-12-26T23:42:20.788644'
+description: Paired brightfield images of cancer cells and corresponding masks
+documentation: https://zenodo.org/record/4034939
+download_url: https://zenodo.org/record/4034939
+name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest/rdf.yaml
+status: accepted
+tags: [StarDist, ZeroCostDL4Mic]
+type: dataset
+version_id: latest

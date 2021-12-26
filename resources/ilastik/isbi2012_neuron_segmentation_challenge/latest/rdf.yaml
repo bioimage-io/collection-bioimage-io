@@ -1,0 +1,17 @@
+authors:
+- {name: Constantin Pape}
+cite:
+- {doi: 'https://doi.org/10.3389/fnana.2015.00142', text: Arganda-Carreras et al.}
+covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover0.jpg',
+  'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover1.png']
+created: '2021-12-26T23:42:30.994184'
+description: Training data from challenge on 2d EM segmentation of neuronal processes.
+documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi.md
+format_version: 0.2.1
+name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml
+status: accepted
+tags: [electron-microscopy, brain, neurons, instance-segmentation, 2D, isbi2012-challenge]
+type: dataset
+version_id: latest

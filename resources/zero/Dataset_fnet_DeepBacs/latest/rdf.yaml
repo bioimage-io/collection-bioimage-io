@@ -1,0 +1,21 @@
+authors: [Christoph Spahn, Mike Heilemann]
+cite:
+- {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
+    F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier,
+    Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike
+    Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source
+    deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152'}
+covers: ['https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png']
+created: '2021-12-26T23:42:20.859384'
+description: Training and test images of E. coli cells for artificial labeling of
+  membranes in brightfield images using fnet or CARE, as well as trained models for
+  prediction of super-resolution membranes.
+documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+download_url: https://zenodo.org/record/5551123
+name: Artificial labeling of E. coli membranes dataset - DeepBacs
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
+status: accepted
+tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
+type: dataset
+version_id: latest

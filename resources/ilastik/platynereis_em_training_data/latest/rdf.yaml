@@ -1,0 +1,20 @@
+authors:
+- {name: Constantin Pape}
+cite:
+- {doi: 'https://doi.org/10.1016/j.cell.2021.07.017', text: 'Vergara, Pape, Meechan
+    et al.'}
+covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png']
+created: '2021-12-26T23:42:31.057816'
+description: Training data for EM segmentation of cellular membranes, nuclei, cuticle
+  and cilia in Platynereis.
+documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+format_version: 0.2.1
+license: CC-BY-4.0
+name: Platynereis EM Traning Data
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/platynereis_em_training_data/latest/rdf.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/platynereis_em_training_data/latest/rdf.yaml
+status: accepted
+tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
+  3D]
+type: dataset
+version_id: latest
