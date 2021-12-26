@@ -1,5 +1,5 @@
 id: hpa/HPA-One-More
-status: pending
+status: accepted
 type: model
 versions:
 - created: 2021-12-26 19:33:54.598006
@@ -17,5 +17,5 @@ versions:
     license: MIT
     name: HPA-One More Layer Of Stacking
     tags: [bn-inception, classification, inception-v4, lightgbm, se-resnext-50, xception]
-  status: pending
+  status: accepted
   version_id: latest
