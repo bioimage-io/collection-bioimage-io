@@ -2,7 +2,7 @@ id: fiji/Fiji
 status: pending
 type: application
 versions:
-- created: 2021-12-25 18:28:31.511212
+- created: 2021-12-26 02:01:48.640588
   name: Fiji
   source:
     authors: [Fiji community]

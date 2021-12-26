@@ -2,7 +2,7 @@ id: hpa/HPA-conv
 status: pending
 type: model
 versions:
-- created: 2021-12-25 18:28:33.917394
+- created: 2021-12-26 02:01:50.850377
   name: HPA-conv is all you need
   source:
     authors: [Xuan Cao, Runmin Wei, Yuanhao Wu, Xun Zhu]

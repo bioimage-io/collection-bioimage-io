@@ -2,5 +2,5 @@ id: imjoy/vizarr
 status: pending
 type: application
 versions:
-- {created: ! '2021-12-25 18:28:32.550162', name: vizarr, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html',
+- {created: ! '2021-12-26 02:01:49.770976', name: vizarr, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html',
   status: pending, version_id: master}

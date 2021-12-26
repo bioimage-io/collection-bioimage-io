@@ -2,7 +2,7 @@ id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:28:24.060528
+- created: 2021-12-26 02:01:45.439231
   name: U-Net (3D) - ZeroCostDL4Mic
   source:
     authors: [Daniel Krentzel and the ZeroCostDL4Mic Team]

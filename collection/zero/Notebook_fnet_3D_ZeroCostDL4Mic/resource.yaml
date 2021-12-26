@@ -2,7 +2,7 @@ id: zero/Notebook_fnet_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:28:24.070538
+- created: 2021-12-26 02:01:45.450860
   name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]

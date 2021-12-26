@@ -2,5 +2,5 @@ id: imjoy/ImJoyFiddle
 status: pending
 type: application
 versions:
-- {created: ! '2021-12-25 18:28:32.382598', name: ImJoyFiddle, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-fiddle.imjoy.html',
+- {created: ! '2021-12-26 02:01:49.234971', name: ImJoyFiddle, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-fiddle.imjoy.html',
   status: pending, version_id: master}

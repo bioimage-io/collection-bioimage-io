@@ -2,7 +2,7 @@ id: deepimagej/unet-pancreaticcellsegmentation
 status: pending
 type: application
 versions:
-- created: 2021-12-25 18:54:18.580880
+- created: 2021-12-26 02:01:48.375816
   name: 2D U-Net for binary segmentation
   source:
     authors:

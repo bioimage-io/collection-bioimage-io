@@ -2,7 +2,7 @@ id: zero/Notebook_StarDist_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-25 18:28:24.063755
+- created: 2021-12-26 02:01:45.443001
   name: StarDist (3D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]

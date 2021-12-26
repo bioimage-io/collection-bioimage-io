@@ -2,7 +2,7 @@ id: hpa/HPA-WAIR
 status: pending
 type: model
 versions:
-- created: 2021-12-25 18:28:33.911468
+- created: 2021-12-26 02:01:50.843323
   name: HPA-WAIR
   source:
     authors: [Jun Lan]
