@@ -8,6 +8,22 @@ on:
     - cron:  '0 1,13 * * *'
 
 jobs:
+  build-collection:  # deploy collection rdf to gh-pages
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec boltons
+    - name: generate collection rdf
+      run: python scripts/generate_collection_rdf.py
+    - name: Deploy collection rdf to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist/gh-pages
+
   collect-new-resources:
     runs-on: ubuntu-latest
     outputs:
@@ -23,42 +39,13 @@ jobs:
       run: pip install bioimageio.spec PyGithub lxml
     - name: update known resources
       id: update_known
-      run: python scripts/update_known_resources.py collection
-    - name: Commit files and rebase
-      if: steps.update_known.outputs.found_new_resources == 'yes'
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add collection
-        git commit -m "Add new resources" -a
-        git pull --rebase
-    - name: Push changes
-      if: steps.update_known.outputs.found_new_resources == 'yes'
-      uses: ad-m/github-push-action@master
+      run: python scripts/update_known_resources.py collection 5
+    - name: "Upload updated collection"
+      uses: actions/upload-artifact@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-
-
-  deploy:  # deploy new resource versions and collection rdf to gh-pages
-    runs-on: ubuntu-latest
-    outputs:
-      processed_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_gh_pages_previews }}
-      processed_any_gh_pages_previews: ${{ steps.gen_coll_rdf.outputs.processed_any_gh_pages_previews }}
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec boltons
-    - name: generate collection rdf
-      id: gen_coll_rdf
-      run: python scripts/generate_collection_rdf.py
-    - name: Deploy collection rdf to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        clean: false
-        branch: gh-pages
-        folder: dist/gh-pages-update
+        name: updated-collection
+        path: collection
+        retention-days: 1
 
   open-pr:
     needs: [collect-new-resources]
@@ -71,12 +58,11 @@ jobs:
       matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}
 
     steps:
-    - uses: actions/checkout@v2
+    - name: download new collection
+      uses: actions/download-artifact@v2
       with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-    - name: Pull latest auto commit
-      run: git pull origin
+        name: updated-collection
+        path: collection
     - name: install script deps
       run: pip install typer ruamel.yaml
     - name: set resource status to accepted
@@ -110,23 +96,3 @@ jobs:
         labels: |
           auto-update
         draft: false
-
-  rm-previews:
-    needs: deploy
-    if: needs.deploy.outputs.processed_any_gh_pages_previews == 'yes'
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-parallel: 1
-      matrix: ${{ fromJson(needs.deploy.outputs.processed_gh_pages_previews) }}  # preview-branch: [...]
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: check if branch still exists
-        id: ls-remote
-        run: |
-          out=$(git ls-remote --heads origin ${{ matrix.preview-branch }})
-          echo "::set-output name=out::$out"
-      - name: delete ${{ matrix.preview-branch }}
-        if: steps.ls-remote.outputs.out
-        run: git push origin --delete ${{ matrix.preview-branch }}

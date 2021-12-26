@@ -34,11 +34,7 @@ def main() -> int:
 
     gh_pages = Path("dist/gh-pages")
     subprocess.run(["git", "worktree", "add", str(gh_pages), f"gh-pages"])
-    gh_pages_previews = Path("dist/gh-pages-previews")
-    gh_pages_update = Path("dist/gh-pages-update")
-    gh_pages_update.mkdir(parents=True, exist_ok=True)
 
-    processed_gh_pages_previews = []
 
     n_accepted = {}
     n_accepted_versions = {}
@@ -48,35 +44,13 @@ def main() -> int:
         if r["status"] != "accepted":
             continue
 
-        # deploy from preview if it exists
-        preview_branch = f"gh-pages-auto-update-{r['id']}"
-        from_preview = f"origin/{preview_branch}" in remote_branches
-        # checkout preview separately
-        ghp_prev = gh_pages_previews / preview_branch
-        if from_preview:
-            print(f"checkout {preview_branch} at {ghp_prev}")
-            subprocess.run(["git", "worktree", "add", str(ghp_prev), f"{preview_branch}"])
-
         latest_version = None
         for v in r["versions"]:
             if v["status"] != "accepted":
                 continue
 
             version_sub_path = Path("resources") / v["version_id"]
-            if from_preview:
-                v_path = ghp_prev / version_sub_path / "rdf.yaml"
-                # move gh-pages preview content to gh-pages update
-                if v_path.exists():
-                    processed_gh_pages_previews.append(preview_branch)
-                    ghp_up = gh_pages_update / version_sub_path
-                    ghp_up.mkdir(parents=True)
-                    shutil.copytree(
-                        str(ghp_prev / version_sub_path), str(ghp_up), copy_function=shutil.move, dirs_exist_ok=True
-                    )
-                    print("update", ghp_prev / version_sub_path, os.listdir(str(ghp_prev / version_sub_path)))
-                    v_path = ghp_up / "rdf.yaml"
-            else:
-                v_path = gh_pages / version_sub_path / "rdf.yaml"
+            v_path = gh_pages / version_sub_path / "rdf.yaml"
 
             if not v_path.exists():
                 print(f"ignoring missing resource version {v_path}")
@@ -129,7 +103,7 @@ def main() -> int:
 
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
-    rdf_path = Path("dist/gh-pages-update/rdf.yaml")
+    rdf_path = Path("dist/gh-pages/rdf.yaml")
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
 
@@ -150,8 +124,6 @@ def main() -> int:
     with open(rdf_path.with_suffix(".json"), "w") as f:
         json.dump(rdf, f, allow_nan=False)
 
-    set_gh_actions_output("processed_gh_pages_previews", json.dumps({"preview-branch": processed_gh_pages_previews}))
-    set_gh_actions_output("processed_any_gh_pages_previews", "yes" if processed_gh_pages_previews else "no")
     return 0
 
 

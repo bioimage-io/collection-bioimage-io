@@ -74,7 +74,7 @@ def write_resource(
             raise ValueError(resource["status"])
 
         for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id:
+            if known_version["version_id"] == version_id or new_version.get("source") == known_version.get("source"):
                 if overwrite:
                     old_version = resource["versions"].pop(idx)
                     old_version.pop("status", None)  # don't overwrite status
@@ -305,11 +305,14 @@ def update_from_github(collection_folder: Path, updated_resources: DefaultDict[s
             print(f"Failed to process collection {p_source} for {p_id} partner: {e}")
 
 
-def main(collection_folder: Path) -> int:
+def main(collection_folder: Path, max_resource_count: int) -> int:
     updated_resources: DefaultDict[str, List[Dict[str, Union[dict, str]]]] = defaultdict(list)
 
     update_from_zenodo(collection_folder, updated_resources)
     update_from_github(collection_folder, updated_resources)
+
+    # limit the number of PR created
+    updated_resources = updated_resources[:max_resource_count]
 
     updates = [
         {
