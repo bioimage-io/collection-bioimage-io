@@ -1,5 +1,5 @@
 id: hpa/HPA-NTU_MiRA
-status: pending
+status: accepted
 type: model
 versions:
 - created: 2021-12-26 19:33:54.601036
@@ -17,5 +17,5 @@ versions:
     license: MIT
     name: HPA-NTU_MiRA
     tags: [classification, resnet-34]
-  status: pending
+  status: accepted
   version_id: latest
