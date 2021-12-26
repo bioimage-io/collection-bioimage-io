@@ -29,5 +29,5 @@ versions:
     links: [Notebook Preview]
     name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
