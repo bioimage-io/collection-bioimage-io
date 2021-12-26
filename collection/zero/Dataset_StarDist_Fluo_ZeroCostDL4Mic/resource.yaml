@@ -2,7 +2,7 @@ id: zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:46.768190
+- created: '2021-12-26T23:42:20.772408'
   name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
   source:
     authors: [Guillaume Jacquemet]
@@ -21,5 +21,6 @@ versions:
     download_url: https://zenodo.org/record/4034976
     name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
     tags: [StarDist, ZeroCostDL4Mic]
-  status: pending
+    type: dataset
+  status: accepted
   version_id: latest

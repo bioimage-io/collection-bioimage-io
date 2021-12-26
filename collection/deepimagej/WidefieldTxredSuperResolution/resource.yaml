@@ -2,17 +2,10 @@ id: deepimagej/WidefieldTxredSuperResolution
 status: pending
 type: model
 versions:
-- created: 2021-12-26 19:33:49.399062
+- created: '2021-12-26T23:54:49.696931'
   download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: Widefield Super-resolution (GAN - TxRed)
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/model.yaml
   status: pending
-  version_id: 081bf4da443cc28ba20826d2d6fea7856075787c
-- created: 2021-12-25 18:54:13.721907
-  download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
-  links: [deepimagej, imjoy/BioImageIO-Packager]
-  name: Widefield Super-resolution (GAN - TxRed)
-  source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/model.yaml
-  status: pending
-  version_id: master
+  version_id: deepimagej/models/master

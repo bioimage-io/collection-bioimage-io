@@ -2,7 +2,7 @@ id: zero/Dataset_YOLOv2_coli_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:46.784064
+- created: '2021-12-26T23:42:20.867956'
   name: Escherichia coli growth stage object detection dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]
@@ -19,5 +19,6 @@ versions:
     download_url: https://zenodo.org/record/5551016
     name: Escherichia coli growth stage object detection dataset - DeepBacs
     tags: [YOLOv2, object detection, DeepBacs, 2D]
-  status: pending
+    type: dataset
+  status: accepted
   version_id: latest

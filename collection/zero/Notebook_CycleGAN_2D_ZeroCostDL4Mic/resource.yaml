@@ -2,7 +2,7 @@ id: zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 19:33:46.713728
+- created: '2021-12-26T23:42:20.439885'
   name: CycleGAN (2D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -29,8 +29,9 @@ versions:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links: [Notebook Preview, Dataset_CycleGAN_ZeroCostDL4Mic]
+    links: [zero/Notebook Preview, zero/Dataset_CycleGAN_ZeroCostDL4Mic]
     name: CycleGAN (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
-  status: pending
+    type: application
+  status: accepted
   version_id: latest

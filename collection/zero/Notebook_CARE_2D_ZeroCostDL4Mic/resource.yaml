@@ -2,7 +2,7 @@ id: zero/Notebook_CARE_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 19:33:46.704078
+- created: '2021-12-26T23:42:20.394498'
   name: CARE (2D) - ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -31,9 +31,10 @@ versions:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links: [Notebook Preview, Dataset_CARE_2D_ZeroCostDL4Mic, Dataset_Noisy_Nuclei_ZeroCostDL4Mic,
-      Dataset_CARE_2D_coli_DeepBacs, Dataset_fnet_DeepBacs]
+    links: [zero/Notebook Preview, zero/Dataset_CARE_2D_ZeroCostDL4Mic, zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic,
+      zero/Dataset_CARE_2D_coli_DeepBacs, zero/Dataset_fnet_DeepBacs]
     name: CARE (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
-  status: pending
+    type: application
+  status: accepted
   version_id: latest

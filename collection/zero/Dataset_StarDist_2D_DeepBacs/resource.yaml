@@ -2,7 +2,7 @@ id: zero/Dataset_StarDist_2D_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:46.777856
+- created: '2021-12-26T23:42:20.827148'
   name: Mixed segmentation dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann, Mia Conduit, Séamus Holden, Pedro Matos
@@ -20,5 +20,6 @@ versions:
     download_url: https://zenodo.org/record/5551009
     name: Mixed segmentation dataset - DeepBacs
     tags: [StarDist, segmentation, DeepBacs, 2D]
-  status: pending
+    type: dataset
+  status: accepted
   version_id: latest

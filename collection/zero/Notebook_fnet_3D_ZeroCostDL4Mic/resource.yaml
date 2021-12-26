@@ -2,7 +2,7 @@ id: zero/Notebook_fnet_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 19:33:46.707340
+- created: '2021-12-26T23:42:20.410172'
   name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -30,8 +30,9 @@ versions:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links: [Notebook Preview, Dataset_fnet_3D_ZeroCostDL4Mic]
+    links: [zero/Notebook Preview, zero/Dataset_fnet_3D_ZeroCostDL4Mic]
     name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
     tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
-  status: pending
+    type: application
+  status: accepted
   version_id: latest

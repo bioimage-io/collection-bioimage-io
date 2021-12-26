@@ -2,7 +2,7 @@ id: zero/Notebook_MaskRCNN_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 19:33:46.741647
+- created: '2021-12-26T23:42:20.652008'
   name: MaskRCNN - ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -22,8 +22,9 @@ versions:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links: [Notebook Preview]
+    links: [zero/Notebook Preview]
     name: MaskRCNN - ZeroCostDL4Mic
     tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
-  status: pending
+    type: application
+  status: accepted
   version_id: latest

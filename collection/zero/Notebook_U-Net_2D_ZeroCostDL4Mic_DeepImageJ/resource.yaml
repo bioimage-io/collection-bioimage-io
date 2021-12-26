@@ -2,7 +2,7 @@ id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 19:33:46.721587
+- created: '2021-12-26T23:42:20.477045'
   name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
   source:
     authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
@@ -29,8 +29,9 @@ versions:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links: [Notebook Preview]
+    links: [zero/Notebook Preview]
     name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-  status: pending
+    type: application
+  status: accepted
   version_id: latest

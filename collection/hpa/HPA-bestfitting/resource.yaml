@@ -2,7 +2,7 @@ id: hpa/HPA-bestfitting
 status: pending
 type: model
 versions:
-- created: 2021-12-26 19:33:54.590355
+- created: '2021-12-26T23:42:31.607943'
   name: HPA-bestfitting
   source:
     authors: [Shubin Dai]
@@ -19,5 +19,6 @@ versions:
     license: MIT
     name: HPA-bestfitting
     tags: [classification, densenet-121, inception-v3, resnet-34, resnet-50]
+    type: model
   status: pending
   version_id: latest

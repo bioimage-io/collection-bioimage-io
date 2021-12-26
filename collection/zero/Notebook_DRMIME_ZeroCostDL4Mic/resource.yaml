@@ -2,7 +2,7 @@ id: zero/Notebook_DRMIME_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 19:33:46.732741
+- created: '2021-12-26T23:42:20.590164'
   name: DRMIME - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -24,8 +24,9 @@ versions:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links: [Notebook Preview]
+    links: [zero/Notebook Preview]
     name: DRMIME - ZeroCostDL4Mic
     tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
-  status: pending
+    type: application
+  status: accepted
   version_id: latest

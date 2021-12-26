@@ -2,7 +2,7 @@ id: zero/Dataset_SplineDist_2D_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:46.779089
+- created: '2021-12-26T23:42:20.835038'
   name: Escherichia coli bright field segmentation dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]
@@ -19,5 +19,6 @@ versions:
     download_url: https://zenodo.org/record/5550935
     name: Escherichia coli bright field segmentation dataset - DeepBacs
     tags: [StarDist, segmentation, DeepBacs, 2D]
-  status: pending
+    type: dataset
+  status: accepted
   version_id: latest

@@ -2,7 +2,7 @@ id: zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:46.773816
+- created: '2021-12-26T23:42:20.804208'
   name: Noisy nuclei dataset.
   source:
     authors: [Guillaume Jacquemet]
@@ -22,5 +22,6 @@ versions:
     download_url: https://zenodo.org/record/5750174
     name: Noisy nuclei dataset.
     tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
-  status: pending
+    type: dataset
+  status: accepted
   version_id: latest

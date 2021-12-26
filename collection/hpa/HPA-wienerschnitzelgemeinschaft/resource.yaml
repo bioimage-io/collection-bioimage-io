@@ -2,7 +2,7 @@ id: hpa/HPA-wienerschnitzelgemeinschaft
 status: pending
 type: model
 versions:
-- created: 2021-12-26 19:33:54.595089
+- created: '2021-12-26T23:42:31.645550'
   name: HPA-wienerschnitzelgemeinschaft
   source:
     authors: [Shaikat Mahmood Galib, Christof Henkel, Kevin Hwang, Dmytro Poplavskiy,
@@ -19,5 +19,6 @@ versions:
     name: HPA-wienerschnitzelgemeinschaft
     tags: [airnet-50, airnext-50, cbam, classification, hill-climbing, inception-resnet-v2,
       inception-v3, preresnet-50, resnet-18, resnet-34, resnet-50, resnet-101, se-resnext-50]
+    type: model
   status: pending
   version_id: latest

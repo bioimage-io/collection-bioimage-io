@@ -2,7 +2,7 @@ id: ilastik/platynereis_em_training_data
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:54.203740
+- created: '2021-12-26T23:42:31.057816'
   name: Platynereis EM Traning Data
   source:
     authors:
@@ -21,5 +21,5 @@ versions:
     tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
       3D]
     type: dataset
-  status: pending
+  status: accepted
   version_id: latest

@@ -2,7 +2,7 @@ id: imjoy/LuCa-7color
 status: pending
 type: dataset
 versions:
-- created: 2021-12-26 19:33:53.121019
+- created: '2021-12-26T23:42:30.067337'
   name: LuCa-7color
   source:
     authors: [Perkin Elmer]
@@ -10,9 +10,10 @@ versions:
     description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
     download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
     license: CC-BY 4.0
-    links: [vizarr]
+    links: [imjoy/vizarr]
     name: LuCa-7color
     source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
     tags: [OME-TIFF]
+    type: dataset
   status: pending
   version_id: latest
