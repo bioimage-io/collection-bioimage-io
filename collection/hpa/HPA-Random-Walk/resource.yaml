@@ -2,7 +2,7 @@ id: hpa/HPA-Random-Walk
 status: pending
 type: model
 versions:
-- created: 2021-12-26 19:33:54.602285
+- created: '2021-12-26T23:42:31.699687'
   name: HPA-Random Walk
   source:
     authors: [Zhifeng Gao, Cheng Ju, Xiaohan Yi, Hongdong Zheng]
@@ -17,5 +17,6 @@ versions:
     license: MIT
     name: HPA-Random Walk
     tags: [attention-gate, classification, resnet-18]
+    type: model
   status: pending
   version_id: latest

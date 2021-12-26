@@ -2,7 +2,7 @@ id: deepimagej/EVsTEMsegmentationFRUNet
 status: pending
 type: application
 versions:
-- created: 2021-12-26 19:33:51.403043
+- created: '2021-12-26T23:54:53.419635'
   name: Small extracellular vesicle instance segmentation (FRU-Net)
   source:
     authors:
@@ -26,11 +26,11 @@ versions:
       to use it in Google Colaboratory. It will download the original code and dataset,
       and make the inference connecting with Google's GPU.
     documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
-    links: [FRUNet2DsEVSegmentation]
+    links: [deepimagej/FRUNet2DsEVSegmentation]
     name: Small extracellular vesicle instance segmentation (FRU-Net)
     source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
     tags: [extracellular-vesicles, segmentation, TEM, notebook, model-inference, google-colab,
       workflow, pipeline]
     type: application
   status: pending
-  version_id: master
+  version_id: BIIG-UC3M/FRU-Net-TEM-segmentation/master

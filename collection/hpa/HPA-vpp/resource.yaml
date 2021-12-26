@@ -2,7 +2,7 @@ id: hpa/HPA-vpp
 status: pending
 type: model
 versions:
-- created: 2021-12-26 19:33:54.596586
+- created: '2021-12-26T23:42:31.658655'
   name: HPA-vpp
   source:
     authors: [Yinzheng Gu, Chuanpeng Li, Jinbin Xie]
@@ -18,5 +18,6 @@ versions:
     license: MIT
     name: HPA-vpp
     tags: [classification, inception-v3, inception-v4, multilayer-perceptron, xception]
+    type: model
   status: pending
   version_id: latest

@@ -2,7 +2,7 @@ id: zero/Dataset_U-Net_2D_multilabel_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 19:33:46.775103
+- created: '2021-12-26T23:42:20.811600'
   name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
   source:
     authors: [Mia Conduit, Séamus Holden]
@@ -19,5 +19,6 @@ versions:
     download_url: https://zenodo.org/record/5639253
     name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
     tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
-  status: pending
+    type: dataset
+  status: accepted
   version_id: latest

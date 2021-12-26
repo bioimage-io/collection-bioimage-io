@@ -2,7 +2,7 @@ id: deepimagej/smlm-deepimagej
 status: pending
 type: application
 versions:
-- created: 2021-12-26 19:33:51.391638
+- created: '2021-12-26T23:54:53.403265'
   name: SMLM-superresolution
   source:
     authors:
@@ -25,4 +25,4 @@ versions:
     tags: [deepimagej, smlm, macro, deepstorm, thunderstorm, workflow, pipeline, superresolution]
     type: application
   status: pending
-  version_id: master
+  version_id: deepimagej/imagej-macros/master

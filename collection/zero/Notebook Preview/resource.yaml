@@ -2,7 +2,5 @@ id: zero/Notebook Preview
 status: accepted
 type: application
 versions:
-- {created: ! '2021-12-26 19:33:46.692598', name: Notebook Preview, source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html',
-  status: pending, version_id: 2a07751974f450d5f536879c1851816c95f66ac8}
-- {created: ! '2021-12-25 18:54:07.811410', name: Notebook Preview, source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html',
-  status: accepted, version_id: master}
+- {created: '2021-12-26T23:54:47.436310', name: Notebook Preview, source: 'https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html',
+  status: accepted, version_id: bioimage-io/nbpreview/master}

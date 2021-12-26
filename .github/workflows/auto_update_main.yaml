@@ -87,7 +87,7 @@ jobs:
           sources of new versions:
           ${{ matrix.update.new_version_sources_md }}
 
-          deployment preview (will be) available at: [gh-pages-auto-update-${{ matrix.update.resource_id }}](/bioimage-io/collection-bioimage-io/tree/gh-pages-auto-update-${{ matrix.update.resource_id }})
+          deployment preview (will be) available at: [gh-pages](/bioimage-io/collection-bioimage-io/tree/gh-pages/resources/${{ matrix.update.resource_id }})
           maintainers: ${{ matrix.update.maintainers }}
 
           IMPORTANT: If new resource versions are detected this PR branch is beeing **force-pushed**.

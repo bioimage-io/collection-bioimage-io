@@ -2,5 +2,5 @@ id: imjoy/ImJoy
 status: pending
 type: application
 versions:
-- {created: ! '2021-12-26 19:33:52.375093', name: ImJoy, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html',
-  status: pending, version_id: master}
+- {created: '2021-12-26T23:54:55.951247', name: ImJoy, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html',
+  status: pending, version_id: imjoy-team/bioimage-io-models/master}
