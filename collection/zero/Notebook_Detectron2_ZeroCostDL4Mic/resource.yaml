@@ -2,7 +2,7 @@ id: zero/Notebook_Detectron2_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 18:50:36.070151
+- created: 2021-12-26 19:33:46.731321
   name: Detectron2 - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]

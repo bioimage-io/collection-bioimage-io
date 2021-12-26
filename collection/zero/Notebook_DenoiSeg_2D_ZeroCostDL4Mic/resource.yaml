@@ -2,7 +2,7 @@ id: zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 18:50:36.055274
+- created: 2021-12-26 19:33:46.716707
   name: DenoiSeg (2D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]

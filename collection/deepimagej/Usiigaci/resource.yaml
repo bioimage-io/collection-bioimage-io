@@ -2,7 +2,7 @@ id: deepimagej/Usiigaci
 status: pending
 type: model
 versions:
-- created: 2021-12-26 18:50:38.272168
+- created: 2021-12-26 19:33:50.403138
   download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: NIH/3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)

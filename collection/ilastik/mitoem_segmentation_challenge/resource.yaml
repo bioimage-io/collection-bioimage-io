@@ -2,7 +2,7 @@ id: ilastik/mitoem_segmentation_challenge
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 18:50:40.935907
+- created: 2021-12-26 19:33:54.201800
   name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
   source:
     authors:

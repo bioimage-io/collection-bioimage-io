@@ -2,7 +2,7 @@ id: ilastik/stradist_dsb_training_data
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 18:50:40.928857
+- created: 2021-12-26 19:33:54.197339
   name: DSB Nucleus Segmentation Training Data
   source:
     authors:
