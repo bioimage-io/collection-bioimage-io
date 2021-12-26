@@ -1,5 +1,5 @@
 id: deepimagej/smlm-deepimagej
-status: pending
+status: accepted
 type: application
 versions:
 - created: 2021-12-26 19:33:51.391638
@@ -24,5 +24,5 @@ versions:
     source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     tags: [deepimagej, smlm, macro, deepstorm, thunderstorm, workflow, pipeline, superresolution]
     type: application
-  status: pending
+  status: accepted
   version_id: master
