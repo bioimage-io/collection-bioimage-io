@@ -24,5 +24,5 @@ versions:
     links: [Notebook Preview]
     name: Quality Control - ZeroCostDL4Mic
     tags: [colab, notebook, Quality Control, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
