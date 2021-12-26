@@ -27,5 +27,5 @@ versions:
     links: [Notebook Preview]
     name: DRMIME - ZeroCostDL4Mic
     tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
