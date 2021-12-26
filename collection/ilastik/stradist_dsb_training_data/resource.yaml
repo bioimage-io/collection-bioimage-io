@@ -20,5 +20,5 @@ versions:
     tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
       2D]
     type: dataset
-  status: pending
+  status: accepted
   version_id: latest
