@@ -34,5 +34,5 @@ versions:
       Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs]
     name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-  status: pending
+  status: accepted
   version_id: latest
