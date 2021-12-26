@@ -32,5 +32,5 @@ versions:
     links: [Notebook Preview]
     name: DenoiSeg (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest
