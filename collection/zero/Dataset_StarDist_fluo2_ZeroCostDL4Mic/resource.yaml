@@ -21,5 +21,5 @@ versions:
     download_url: https://zenodo.org/record/4811213
     name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
     tags: [StarDist, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
