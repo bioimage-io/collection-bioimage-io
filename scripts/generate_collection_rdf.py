@@ -44,7 +44,7 @@ def main() -> int:
             if isinstance(v["source"], dict):
                 this_version = v["source"]
             elif v["source"].split("?")[0].endswith(".imjoy.html"):
-                rdf = get_plugin_as_rdf(r['id'].split("/")[1], v["source"])
+                this_version = get_plugin_as_rdf(r['id'].split("/")[1], v["source"])
             else:
                 try:
                     rdf_node = load_raw_resource_description(v["source"])
