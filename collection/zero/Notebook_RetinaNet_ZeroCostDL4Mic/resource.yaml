@@ -28,5 +28,5 @@ versions:
       Dataset_YOLOv2_antibiotic_DeepBacs]
     name: RetinaNet - ZeroCostDL4Mic
     tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
