@@ -30,5 +30,5 @@ versions:
     links: [Notebook Preview, Dataset_pix2pix_ZeroCostDL4Mic]
     name: pix2pix (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest
