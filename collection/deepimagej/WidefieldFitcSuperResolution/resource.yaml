@@ -2,7 +2,7 @@ id: deepimagej/WidefieldFitcSuperResolution
 status: pending
 type: model
 versions:
-- created: 2021-12-26 13:17:10.592258
+- created: 2021-12-26 18:50:37.893004
   download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: Widefield Super-resolution (GAN - FITC)

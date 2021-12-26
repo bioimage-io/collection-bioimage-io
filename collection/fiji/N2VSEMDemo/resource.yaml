@@ -2,7 +2,7 @@ id: fiji/N2VSEMDemo
 status: pending
 type: model
 versions:
-- created: 2021-12-26 13:17:11.669025
+- created: 2021-12-26 18:50:39.041818
   download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
   links: [Fiji]
   name: N2V SEM Demo

@@ -2,7 +2,7 @@ id: zero/Notebook_DFCAN_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 13:17:08.857944
+- created: 2021-12-26 18:50:36.082843
   name: DFCAN - ZeroCostDL4Mic
   source:
     authors: ['Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team']

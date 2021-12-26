@@ -2,7 +2,7 @@ id: deepimagej/MoNuSeg_digital_pathology_miccai2018
 status: pending
 type: dataset
 versions:
-- created: 2021-12-26 13:17:11.469197
+- created: 2021-12-26 18:50:38.810235
   name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
   source:
     authors:

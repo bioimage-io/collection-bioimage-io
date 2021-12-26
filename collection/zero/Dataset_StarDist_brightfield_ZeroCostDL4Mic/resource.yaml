@@ -2,7 +2,7 @@ id: zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 13:17:08.876137
+- created: 2021-12-26 18:50:36.108999
   name: Combining StarDist and TrackMate example 2 - T cell dataset
   source:
     authors: [Nathan H. Roy, Guillaume Jacquemet]

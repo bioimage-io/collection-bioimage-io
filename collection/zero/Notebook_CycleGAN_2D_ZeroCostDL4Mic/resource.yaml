@@ -2,7 +2,7 @@ id: zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 13:17:08.828263
+- created: 2021-12-26 18:50:36.049424
   name: CycleGAN (2D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]

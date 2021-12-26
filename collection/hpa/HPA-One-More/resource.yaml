@@ -2,7 +2,7 @@ id: hpa/HPA-One-More
 status: pending
 type: model
 versions:
-- created: 2021-12-26 13:17:13.482129
+- created: 2021-12-26 18:50:41.250073
   name: HPA-One More Layer Of Stacking
   source:
     authors: [Dmitry Buslov, Sergei Fironov, Alexander Kiselev, Dmytro Panchenko]

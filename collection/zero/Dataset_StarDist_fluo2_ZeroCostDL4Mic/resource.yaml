@@ -2,7 +2,7 @@ id: zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 13:17:08.878800
+- created: 2021-12-26 18:50:36.112028
   name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
   source:
     authors: [Hussein Al-Akhrass, Johanna Ivaska, Guillaume Jacquemet]
