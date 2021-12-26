@@ -1,5 +1,5 @@
 id: deepimagej/MoNuSeg_digital_pathology_miccai2018
-status: pending
+status: accepted
 type: dataset
 versions:
 - created: 2021-12-26 19:33:51.404725
@@ -20,5 +20,5 @@ versions:
     source: https://monuseg.grand-challenge.org/Data/
     tags: [StarDist, segmentation, pathology, H&E, histology, 2D, nuclei segmentation,
       digital pathology]
-  status: pending
+  status: accepted
   version_id: latest
