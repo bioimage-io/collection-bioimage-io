@@ -2,7 +2,7 @@ id: zero/Dataset_SplineDist_2D_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 02:01:45.520098
+- created: 2021-12-26 13:17:08.884900
   name: Escherichia coli bright field segmentation dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]

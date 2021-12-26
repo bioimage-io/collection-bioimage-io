@@ -2,7 +2,7 @@ id: zero/Dataset_U-Net_2D_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 02:01:45.517599
+- created: 2021-12-26 13:17:08.882509
   name: Escherichia coli bright field segmentation dataset - DeepBacs
   source:
     authors: [Spahn Christoph, Heilemann Mike]

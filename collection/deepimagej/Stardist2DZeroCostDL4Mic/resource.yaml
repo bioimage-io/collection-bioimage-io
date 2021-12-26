@@ -2,7 +2,7 @@ id: deepimagej/Stardist2DZeroCostDL4Mic
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:48.203981
+- created: 2021-12-26 13:17:11.326819
   download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
   links: [deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ, MoNuSeg_digital_pathology_miccai2018]
   name: Multi-Organ Nucleus Segmentation Challenge

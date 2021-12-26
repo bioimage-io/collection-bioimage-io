@@ -2,7 +2,7 @@ id: deepimagej/FRUNet2DsEVSegmentation
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:45.978562
+- created: 2021-12-26 13:17:09.318436
   download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
   links: [deepimagej, EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
   name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)

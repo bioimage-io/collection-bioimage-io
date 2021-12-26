@@ -2,5 +2,5 @@ id: hpa/HPA-Classification
 status: pending
 type: application
 versions:
-- {created: ! '2021-12-26 02:01:51.004026', name: HPA-Classification, source: 'https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html',
+- {created: ! '2021-12-26 13:17:13.629193', name: HPA-Classification, source: 'https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html',
   status: pending, version_id: master}

@@ -2,7 +2,7 @@ id: zero/Dataset_fnet_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 02:01:45.524474
+- created: 2021-12-26 13:17:08.888714
   name: Artificial labeling of E. coli membranes dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]

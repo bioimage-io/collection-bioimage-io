@@ -2,7 +2,7 @@ id: deepimagej/JonesVirtualStaining
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:47.540321
+- created: 2021-12-26 13:17:10.713936
   download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: Jones Virtual Staining (GAN)

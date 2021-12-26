@@ -2,7 +2,7 @@ id: deepimagej/Mt3VirtualStaining
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:47.675704
+- created: 2021-12-26 13:17:10.856176
   download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: Masson’s Trichrome Virtual Staining (GAN)

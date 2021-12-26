@@ -2,7 +2,7 @@ id: deepimagej/WidefieldDapiSuperResolution
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:47.237211
+- created: 2021-12-26 13:17:10.469709
   download_url: https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: Widefield Super-resolution (GAN - DAPI)

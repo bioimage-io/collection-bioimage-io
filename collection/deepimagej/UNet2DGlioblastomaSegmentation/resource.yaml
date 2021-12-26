@@ -2,7 +2,7 @@ id: deepimagej/UNet2DGlioblastomaSegmentation
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:46.403774
+- created: 2021-12-26 13:17:09.715450
   download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
   links: [deepimagej, imjoy/BioImageIO-Packager]
   name: Glioblastoma Phase Contrast Cell Segmentation (U-Net)

@@ -2,7 +2,7 @@ id: zero/Notebook_YOLOv2_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 02:01:45.473076
+- created: 2021-12-26 13:17:08.844259
   name: YOLOv2 - ZeroCostDL4Mic
   source:
     authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]

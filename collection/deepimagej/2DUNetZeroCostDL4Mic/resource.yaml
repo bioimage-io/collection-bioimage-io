@@ -2,7 +2,7 @@ id: deepimagej/2DUNetZeroCostDL4Mic
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:46.831868
+- created: 2021-12-26 13:17:10.074352
   download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
   links: [zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej, imjoy/BioImageIO-Packager]
   name: 2D UNet - ZeroCostDL4Mic

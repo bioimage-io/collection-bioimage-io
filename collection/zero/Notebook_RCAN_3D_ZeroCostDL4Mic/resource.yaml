@@ -2,7 +2,7 @@ id: zero/Notebook_RCAN_3D_ZeroCostDL4Mic
 status: accepted
 type: application
 versions:
-- created: 2021-12-26 02:01:45.469998
+- created: 2021-12-26 13:17:08.841228
   name: RCAN (3D) - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]

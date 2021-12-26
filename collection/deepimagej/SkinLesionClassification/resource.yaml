@@ -2,7 +2,7 @@ id: deepimagej/SkinLesionClassification
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:47.939294
+- created: 2021-12-26 13:17:11.098566
   download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
   links: [deepimagej]
   name: Skin lesions classification

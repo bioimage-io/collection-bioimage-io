@@ -2,7 +2,7 @@ id: hpa/HPA-Random-Walk
 status: pending
 type: model
 versions:
-- created: 2021-12-26 02:01:50.853023
+- created: 2021-12-26 13:17:13.486324
   name: HPA-Random Walk
   source:
     authors: [Zhifeng Gao, Cheng Ju, Xiaohan Yi, Hongdong Zheng]

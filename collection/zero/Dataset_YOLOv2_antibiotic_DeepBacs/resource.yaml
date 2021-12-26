@@ -2,7 +2,7 @@ id: zero/Dataset_YOLOv2_antibiotic_DeepBacs
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 02:01:45.526939
+- created: 2021-12-26 13:17:08.891111
   name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
   source:
     authors: [Christoph Spahn, Mike Heilemann]

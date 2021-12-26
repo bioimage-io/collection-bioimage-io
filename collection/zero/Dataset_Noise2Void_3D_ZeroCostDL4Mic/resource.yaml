@@ -2,7 +2,7 @@ id: zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic
 status: accepted
 type: dataset
 versions:
-- created: 2021-12-26 02:01:45.492571
+- created: 2021-12-26 13:17:08.865115
   name: Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic
   source:
     authors: [Guillaume Jacquemet]
