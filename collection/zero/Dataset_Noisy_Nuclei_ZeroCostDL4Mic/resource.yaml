@@ -22,5 +22,5 @@ versions:
     download_url: https://zenodo.org/record/5750174
     name: Noisy nuclei dataset.
     tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
-  status: pending
+  status: accepted
   version_id: latest
