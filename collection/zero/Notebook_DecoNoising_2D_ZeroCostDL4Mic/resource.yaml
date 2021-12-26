@@ -29,5 +29,5 @@ versions:
       Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
     name: DecoNoising (2D) - ZeroCostDL4Mic
     tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
-  status: pending
+  status: accepted
   version_id: latest
