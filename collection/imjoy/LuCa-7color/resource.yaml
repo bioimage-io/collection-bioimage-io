@@ -1,5 +1,5 @@
 id: imjoy/LuCa-7color
-status: pending
+status: accepted
 type: dataset
 versions:
 - created: 2021-12-26 19:33:53.121019
@@ -14,5 +14,5 @@ versions:
     name: LuCa-7color
     source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
     tags: [OME-TIFF]
-  status: pending
+  status: accepted
   version_id: latest
