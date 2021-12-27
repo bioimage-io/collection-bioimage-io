@@ -1,8 +1,8 @@
-error: Invalid RDF format version 0.3.2 for RDF type rdf. Submodule bioimageio.spec.rdf.v0_3
+error: Invalid RDF format version 0.3.0 for RDF type rdf. Submodule bioimageio.spec.rdf.v0_3
   does not exist.
 name: bioimageio.spec static validation
 nested_errors: {}
-source_name: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml...
+source_name: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml...
 traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
     line 70, in validate\n    raw_rd = load_raw_resource_description(rdf_source, update_to_format=\"latest\"
     if update_format else None)\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
