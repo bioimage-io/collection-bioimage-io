@@ -6,24 +6,9 @@ on:
     branches: [ main ]
   schedule:
     - cron:  '0 1,13 * * *'
+  workflow_dispatch: # triggered by http endpoints
 
 jobs:
-  build-collection:  # deploy collection rdf to gh-pages
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec boltons lxml requests
-    - name: generate collection rdf
-      run: python scripts/generate_collection_rdf.py
-    - name: Deploy collection rdf to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        clean: false
-        branch: gh-pages
-        folder: dist/gh-pages
-
   collect-new-resources:
     runs-on: ubuntu-latest
     outputs:
