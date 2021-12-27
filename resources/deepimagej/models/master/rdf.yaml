@@ -1,7 +1,7 @@
-created: '2021-12-27T02:47:01.469113'
-download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
-links: [deepimagej, unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
-name: Pancreatic Cell Segmentation (U-Net)
-source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
+created: '2021-12-27T02:47:01.219579'
+download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
+links: [deepimagej, EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
+name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
+source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
 status: accepted
 version_id: deepimagej/models/master
