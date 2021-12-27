@@ -1,0 +1,19 @@
+api_version: 0.2.3
+authors: []
+badges: []
+covers: []
+created: '2021-12-26T23:54:55.509414'
+description: Previewing Jupyter notebook without a Jupyter server
+documentation: null
+icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
+id: Notebook Preview
+name: Notebook Preview
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/Notebook
+  Preview/bioimage-io/nbpreview/master/rdf.yaml
+requirements: []
+source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
+status: accepted
+tags: [imjoy, notebook, jupyter, bioengine]
+type: application
+version: 0.1.0
+version_id: bioimage-io/nbpreview/master
