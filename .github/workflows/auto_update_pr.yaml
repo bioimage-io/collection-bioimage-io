@@ -13,10 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: main
     - name: install script deps
-      run: pip install typer ruamel.yaml
+      run: pip install typer ruamel.yaml requests
     - name: get pending
       id: get_pending
       run: python scripts/get_pending.py collection ${{ github.event.pull_request.head.ref }}
