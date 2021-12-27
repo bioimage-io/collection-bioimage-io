@@ -1,0 +1,11 @@
+id: deepimagej/UNet2DHeLaSegmentation
+status: accepted
+type: model
+versions:
+- created: '2021-12-27T02:29:09.418531'
+  download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  name: HeLa DIC Cell Segmentation (U-Net)
+  source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml
+  status: accepted
+  version_id: deepimagej/models/master
