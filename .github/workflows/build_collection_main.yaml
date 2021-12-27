@@ -3,6 +3,7 @@ name: build-collection
 on:
   push:
     branches: [ main ]
+  workflow_dispatch: # triggered by http endpoints
 
 jobs:
   build-collection:  # deploy collection rdf to gh-pages
