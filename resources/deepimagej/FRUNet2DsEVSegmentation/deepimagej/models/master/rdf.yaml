@@ -1,4 +1,4 @@
-created: '2021-12-27T13:24:39.885967'
+created: '2021-12-27T14:12:51.145364'
 download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
 links: [deepimagej, EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
 name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
