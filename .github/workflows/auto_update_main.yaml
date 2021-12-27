@@ -75,8 +75,6 @@ jobs:
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
-        add-paths: | # only commit the current resource item
-          collection/${{ matrix.update.resource_id }}/*
         token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
         commit-message: 'Update ${{ matrix.update.resource_id }}'
         committer: GitHub <noreply@github.com>
