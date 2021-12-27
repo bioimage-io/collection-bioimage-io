@@ -163,7 +163,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
                 "version_id": doi,
                 "doi": doi,
                 "created": created,
-                "status": "pending",
+                "status": "accepted", # default to accepted
                 "source": source,
                 "name": name,
                 "version_name": version_name,
@@ -261,7 +261,7 @@ def update_from_collection(
                     {
                         "version_id": version_id,
                         "created": created,
-                        "status": "pending",
+                        "status": "accepted", # default to accepted
                         "source": source,
                         "name": rdf.get("name", resource_id),
                     }

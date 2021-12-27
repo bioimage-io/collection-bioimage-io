@@ -58,19 +58,21 @@ jobs:
       matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}
 
     steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: download new collection
       uses: actions/download-artifact@v2
       with:
         name: updated-collection
         path: collection
-    - name: install script deps
-      run: pip install typer ruamel.yaml
-    - name: set resource status to accepted
-      run: python scripts/set_resource_status.py collection '${{ matrix.update.resource_id }}' '${{ matrix.update.new_version_ids }}' accepted
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
+        add-paths: | # only commit the current resource item
+          collection/${{ matrix.update.resource_id }}/*
         token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
         commit-message: 'Update ${{ matrix.update.resource_id }}'
         committer: GitHub <noreply@github.com>
