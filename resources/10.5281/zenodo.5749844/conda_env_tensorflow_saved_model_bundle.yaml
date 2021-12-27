@@ -1,0 +1,6 @@
+channels: [conda-forge, defaults]
+dependencies:
+- bioimageio.core
+- pip
+- pip: [tensorflow==1.15.2]
+name: 10.5281zenodo.5749844

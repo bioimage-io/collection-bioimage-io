@@ -1,0 +1,86 @@
+attachments:
+  files: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/exampleImage.tif',
+    'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/resultImage.tif',
+    'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/per_sample_scale_range.ijm',
+    'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/binarize.ijm',
+    'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/params.csv']
+  unknown: {}
+authors:
+- {affiliation: 'UC3M, EPFL', name: DeepImageJ}
+- {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
+cite:
+- {doi: 'https://doi.org/10.1007/978-3-319-46723-8_49', text: 'Çiçek, Özgün, et al.
+    MICCAI 2016'}
+- {doi: 'https://doi.org/10.1101/2020.03.20.000133', text: Lucas von Chamier et al.
+    biorXiv 2020}
+- {doi: 'https://doi.org/10.7554/eLife.57613', text: 'Adrian Wolny et al., eLife 2020'}
+config:
+  deepimagej:
+    allow_tiling: true
+    model_keys: {tensorflow_model_tag: tf.saved_model.tag_constants.SERVING, tensorflow_siganture_def: tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY}
+    prediction:
+      postprocess:
+      - {kwargs: binarize.ijm, spec: 'ij.IJ::runMacroFile'}
+      preprocess:
+      - {kwargs: per_sample_scale_range.ijm, spec: 'ij.IJ::runMacroFile'}
+    pyramidal_model: false
+    test_information:
+      device: null
+      inputs:
+        name: input
+        pixel_size: {x: 1 µm, y: 1 µm, z: 1 µm}
+        size: 1 x 256 x 256 x 8 x 1
+      memory_peak: null
+      outputs: {name: output, size: 1 x 256 x 256 x 8 x 1, type: image}
+      runtime: null
+covers: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/input.png',
+  'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/output.png']
+created: '2021-12-27T02:29:04.330072'
+description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
+  microscopy 3D volumes.
+documentation: https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/README.md
+doi: 10.5281/zenodo.5749844
+format_version: 0.4.1
+inputs:
+- axes: byxzc
+  data_range: [-.inf, .inf]
+  data_type: float32
+  name: input
+  preprocessing:
+  - kwargs: {axes: xyzc, max_percentile: 100, min_percentile: 0, mode: per_sample}
+    name: scale_range
+  shape: [1, 256, 256, 8, 1]
+license: MIT
+links: [imjoy/BioImageIO-Packager]
+name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+outputs:
+- axes: byxzc
+  data_range: [-.inf, .inf]
+  data_type: float32
+  halo: [0, 47, 47, 0, 0]
+  name: output
+  shape:
+    offset: [0.0, 0.0, 0.0, 0.0, 0.0]
+    reference_tensor: input
+    scale: [1.0, 1.0, 1.0, 1.0, 1.0]
+packaged_by:
+- {affiliation: PIP python package, name: pydeepimagej}
+sample_inputs: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/exampleImage.tif']
+sample_outputs: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/resultImage.tif']
+source: https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/rdf.yaml
+status: accepted
+tags: [zerocostdl4mic, deepimagej, segmentation, 3dunet]
+test_inputs: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/exampleImage.npy']
+test_outputs: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/resultImage.npy']
+timestamp: '2021-10-14T11:37:36.531000+00:00'
+type: model
+version: '0.1'
+version_id: 10.5281/zenodo.5749844
+version_name: revision 1
+weights:
+  keras_hdf5: {sha256: 4e34b2b630899a28f087ba607f6c8df9f32fd04240e75ee1c5ee50187070eb7c,
+    source: 'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/keras_model.h5',
+    tensorflow_version: 1.15.2}
+  tensorflow_saved_model_bundle: {parent: keras_hdf5, sha256: e8e9550ffb58b96ae223a196ffe2366402251a2bc40b8d75e43c6c7aa5f0474e,
+    source: 'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/tensorflow_saved_model_bundle.zip',
+    tensorflow_version: 1.15.2}
