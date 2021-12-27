@@ -1,0 +1,87 @@
+attachments:
+  files: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/zero_mean_unit_variance.ijm']
+  unknown: {}
+authors:
+- {affiliation: EMBL Heidelberg, name: Constantin Pape}
+cite:
+- {text: training library, url: 'https://doi.org/10.5281/zenodo.5108853'}
+- {text: architecture, url: 'https://doi.org/10.1007/978-3-319-24574-4_28'}
+- {text: segmentation algorithm, url: 'https://doi.org/10.1038/nmeth.4151'}
+- {text: data, url: 'https://www.nature.com/articles/s41592-019-0612-7'}
+config:
+  deepimagej:
+    allow_tiling: true
+    model_keys: null
+    prediction:
+      postprocess:
+      - {spec: null}
+      preprocess:
+      - {kwargs: zero_mean_unit_variance.ijm, spec: 'ij.IJ::runMacroFile'}
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: sample_input_0.tif
+        pixel_size: {x: 1, y: 1, z: 1}
+        size: 256 x 256 x 1 x 1
+      memory_peak: null
+      outputs:
+      - {name: sample_output_0.tif, size: 256 x 256 x 1 x 2, type: image}
+      runtime: null
+covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
+created: '2021-12-27T10:43:23.739958'
+description: Nucleus segmentation for fluorescence microscopy
+documentation: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
+doi: 10.5281/zenodo.5764893
+format_version: 0.4.1
+inputs:
+- axes: bcyx
+  data_range: [0.0, 255.0]
+  data_type: uint8
+  name: input0
+  preprocessing:
+  - kwargs: {axes: cyx, mode: per_sample}
+    name: zero_mean_unit_variance
+  shape:
+    min: [1, 1, 32, 32]
+    step: [0, 0, 16, 16]
+license: CC-BY-4.0
+links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
+  imjoy/BioImageIO-Packager]
+maintainers:
+- {github_user: constantinpape}
+name: NucleiSegmentationBoundaryModel
+outputs:
+- axes: bcyx
+  data_range: [-.inf, .inf]
+  data_type: float32
+  halo: [0, 0, 16, 16]
+  name: output0
+  shape:
+    offset: [0.0, 0.0, 0.0, 0.0]
+    reference_tensor: input0
+    scale: [1.0, 2.0, 1.0, 1.0]
+sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
+sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
+source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+status: accepted
+tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
+test_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_input_0.npy']
+test_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_output_0.npy']
+timestamp: '2021-12-07T18:43:26.889129'
+type: model
+version: '0.1'
+version_id: 10.5281/zenodo.5764893
+version_name: revision 1
+weights:
+  onnx: {opset_version: 12, sha256: df913b85947f5132bcdaf81d91af0963f60d44f4caf8a4fec672d96a2f327b44,
+    source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights.onnx'}
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/unet.py:UNet2d
+    architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
+    dependencies: conda:https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/environment.yaml
+    kwargs: {depth: 4, final_activation: Sigmoid, gain: 2, in_channels: 1, initial_features: 64,
+      out_channels: 2, postprocessing: null, return_side_outputs: false}
+    sha256: 608f52cd7f5119f7a7b8272395b0c169714e8be34536eaf159820f72a1d6a5b7
+    source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights.pt
+  torchscript: {sha256: 8410950508655a300793b389c815dc30b1334062fc1dadb1e15e55a93cbb99a0,
+    source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights-torchscript.pt'}
