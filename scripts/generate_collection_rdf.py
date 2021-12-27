@@ -5,6 +5,7 @@ from pprint import pprint
 
 import typer
 from boltons.iterutils import remap
+import requests
 from ruamel.yaml import YAML
 from bioimageio.spec import load_raw_resource_description
 from bioimageio.spec.io_ import serialize_raw_resource_description_to_dict
@@ -24,6 +25,21 @@ def set_gh_actions_output(name: str, output: str):
 def main() -> int:
     collection_path = Path("collection")
     rdf = yaml.load(Path("collection_rdf_template.yaml"))
+    # resolve partners
+    if "partners" in rdf["config"]:
+        partners = rdf["config"]["partners"]
+        for idx in range(len(partners)):
+            partner = partners[idx]
+            if partner["source"].startswith("http"):
+                response = requests.get(partner["source"])
+                if not response.ok:
+                    raise Exception("WARNING: Failed to fetch partner config from: " + partner["source"])
+                partner_info = yaml.load(response.text)
+                if "config" in partner_info:
+                    assert partner_info["config"]["id"] == partner["id"], f"Partner id mismatch ({partner_info['config']['id']} != {partner['id']})"
+                    partners[idx].update(partner_info["config"])
+        print(f"partners updated: {len(partners)}")
+
     rdf['attachments'] = rdf.get('attachments', {})
     attachments = rdf['attachments']
 

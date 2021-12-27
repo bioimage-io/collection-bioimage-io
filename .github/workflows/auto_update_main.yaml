@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec boltons lxml
+      run: pip install typer ruamel.yaml bioimageio.spec boltons lxml requests
     - name: generate collection rdf
       run: python scripts/generate_collection_rdf.py
     - name: Deploy collection rdf to gh-pages 🚀
