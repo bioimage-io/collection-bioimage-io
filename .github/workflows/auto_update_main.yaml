@@ -66,7 +66,11 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: updated-collection
-        path: collection
+        path: updated-collection
+    - name: replace resource item folder
+      run: |
+        cp -r updated-collection/${{ matrix.update.resource_id }} collection
+        rm -rf updated-collection
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
