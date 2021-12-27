@@ -1,6 +1,6 @@
 id: imjoy/BioImageIO-Packager
-status: pending
+status: accepted
 type: application
 versions:
 - {created: '2021-12-26T23:54:55.052403', name: BioImageIO-Packager, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html',
-  status: pending, version_id: imjoy-team/bioimage-io-models/master}
+  status: accepted, version_id: imjoy-team/bioimage-io-models/master}
