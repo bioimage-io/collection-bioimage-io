@@ -90,7 +90,7 @@ def write_resource(
         resource["type"] = resource_type
     else:  # create new resource
         resource = {
-            "status": "pending",
+            "status": "accepted", # default to accepted
             "versions": [new_version],
             "id": resource_id,
             "doi": resource_doi,
