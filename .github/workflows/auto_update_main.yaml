@@ -69,8 +69,8 @@ jobs:
         path: updated-collection
     - name: replace resource item folder
       run: |
-        mkdir -p collection/${{ matrix.update.resource_id }}
-        cp -r updated-collection/${{ matrix.update.resource_id }}/* collection/${{ matrix.update.resource_id }}
+        mkdir -p "collection/${{ matrix.update.resource_id }}"
+        cp -r "updated-collection/${{ matrix.update.resource_id }}/*" "collection/${{ matrix.update.resource_id }}"
         rm -rf updated-collection
     - name: Create Pull Request
       id: cpr
