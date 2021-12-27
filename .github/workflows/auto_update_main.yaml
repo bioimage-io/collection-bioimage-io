@@ -44,10 +44,10 @@ jobs:
         path: collection
         retention-days: 1
     - uses: crondaemon/close-pr@v1
-        with:
-          comment: "Clean up PR"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        comment: "Clean up PR"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   open-pr:
     needs: [collect-new-resources]
