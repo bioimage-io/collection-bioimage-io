@@ -39,6 +39,7 @@ class dotdict(dict):  # pylint: disable=invalid-name
         """Make a deep copy."""
         return dotdict(copy.deepcopy(dict(self), memo=memo))
 
+
 def parse_imjoy_plugin(source, overwrite_config=None):
     """Parse ImJoy plugin file and return a dict with all the fields."""
     root = etree.HTML("<html>" + source + "</html>")
@@ -113,16 +114,17 @@ def parse_imjoy_plugin(source, overwrite_config=None):
     config["lang"] = config.get("lang") or "javascript"
     return config
 
-def get_plugin_as_rdf(resource_id, source_url):
-    """Convert imjoy plugin config to RDF format"""
-    req = requests.get(source_url)
-    source = req.text
-    plugin_config = parse_imjoy_plugin(source)
-    rdf = {
-        "id": resource_id,
-        "type": "application",
-        "source": source_url,
-    }
+
+def convert_config_to_rdf(plugin_config, plugin_id, source_url=None):
+    """Convert imjoy plugin config to RDF format."""
+    rdf = dotdict(
+        {
+            "type": "application",
+            "id": plugin_id,
+        }
+    )
+    if source_url:
+        rdf["source"] = source_url
     fields = [
         "icon",
         "name",
@@ -134,35 +136,48 @@ def get_plugin_as_rdf(resource_id, source_url):
         "dependencies",
         "env",
         "passive",
+        "services",
     ]
-    for f in fields:
-        if f in plugin_config:
-            rdf[f] = plugin_config[f]
+    for field in fields:
+        if field in plugin_config:
+            rdf[field] = plugin_config[field]
     tags = plugin_config.get("labels", []) + plugin_config.get("flags", [])
     if "bioengine" not in tags:
         tags.append("bioengine")
     rdf["tags"] = tags
-        
-    rdf["documentation"] = plugin_config.get("docs")
+
+    docs = plugin_config.get("docs")
+    if docs:
+        rdf["documentation"] = docs.get("content")
     rdf["covers"] = plugin_config.get("cover")
     # make sure we have a list
     if not rdf["covers"]:
         rdf["covers"] = []
-    elif type(rdf["covers"]) is not list:
+    elif not isinstance(rdf["covers"], list):
         rdf["covers"] = [rdf["covers"]]
 
     rdf["badges"] = plugin_config.get("badge")
     if not rdf["badges"]:
         rdf["badges"] = []
-    elif type(rdf["badges"]) is not list:
+    elif not isinstance(rdf["badges"], list):
         rdf["badges"] = [rdf["badges"]]
 
     rdf["authors"] = plugin_config.get("author")
     if not rdf["authors"]:
         rdf["authors"] = []
-    elif type(rdf["authors"]) is not list:
+    elif not isinstance(rdf["authors"], list):
         rdf["authors"] = [rdf["authors"]]
 
+    rdf["attachments"] = {}
+    return rdf
+
+
+def get_plugin_as_rdf(resource_id, source_url):
+    """Get imjoy plugin config in RDF format."""
+    req = requests.get(source_url)
+    source = req.text
+    plugin_config = parse_imjoy_plugin(source)
+    rdf = convert_config_to_rdf(plugin_config, resource_id, source_url)
     assert resource_id == plugin_config["name"], (
         "Please use the app name (" + plugin_config["name"] + ") as its application id."
     )
