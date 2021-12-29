@@ -40,7 +40,8 @@ def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
                 rdf = {}
     else:
         print(
-            f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; " "writing empty rdf.yaml"
+            f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; "
+            "writing empty rdf.yaml"
         )
         rdf = {}
 
@@ -72,12 +73,18 @@ def write_resource(
             raise ValueError(resource["status"])
 
         for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id or new_version.get("source") == known_version.get("source"):
+            if known_version["version_id"] == version_id or new_version.get(
+                "source"
+            ) == known_version.get("source"):
                 if overwrite:
                     old_version = resource["versions"].pop(idx)
                     old_version.pop("status", None)  # don't overwrite status
                     old_version.pop("created", None)  # don't overwrite created
-                    if old_version != {k: v for k, v in new_version.items() if k != "status" and k != "created"}:
+                    if old_version != {
+                        k: v
+                        for k, v in new_version.items()
+                        if k != "status" and k != "created"
+                    }:
                         break
 
                 # fetched resource is known
@@ -90,7 +97,7 @@ def write_resource(
         resource["type"] = resource_type
     else:  # create new resource
         resource = {
-            "status": "accepted", # default to accepted
+            "status": "accepted",  # default to accepted
             "versions": [new_version],
             "id": resource_id,
             "doi": resource_doi,
@@ -107,27 +114,38 @@ def write_resource(
 
 
 def update_with_new_version(
-    new_version: dict, resource_id: str, rdf: Optional[dict], updated_resources: DefaultDict[str, List[Dict[str, str]]]
+    new_version: dict,
+    resource_id: str,
+    rdf: Optional[dict],
+    updated_resources: DefaultDict[str, List[Dict[str, str]]],
 ):
     # add more fields just
     maintainers = []
     if isinstance(rdf, dict):
         _maintainers = rdf.get("maintainers")
-        if isinstance(_maintainers, list) and all(isinstance(m, dict) for m in _maintainers):
+        if isinstance(_maintainers, list) and all(
+            isinstance(m, dict) for m in _maintainers
+        ):
             maintainers = [m.get("github_user") for m in _maintainers]
             # only expect non empty strings and prepend single '@'
-            maintainers = ["@" + m.strip("@") for m in maintainers if isinstance(m, str) and m]
+            maintainers = [
+                "@" + m.strip("@") for m in maintainers if isinstance(m, str) and m
+            ]
 
     new_version["maintainers"] = maintainers
     updated_resources[resource_id].append(new_version)
 
 
-def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]):
+def update_from_zenodo(
+    collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]
+):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
-            print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
+            print(
+                f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}"
+            )
             break
         print(f"Collecting items from zenodo: {zenodo_request}")
 
@@ -141,7 +159,11 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             created = None
             resource_path = collection_folder / resource_doi / "resource.yaml"
             version_name = f"revision {hit['revision']}"
-            rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
+            rdf_urls = [
+                file_hit["links"]["self"]
+                for file_hit in hit["files"]
+                if file_hit["key"] == "rdf.yaml"
+            ]
             rdf = None
             source = "unknown"
             name = doi
@@ -163,7 +185,7 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
                 "version_id": doi,
                 "doi": doi,
                 "created": created,
-                "status": "accepted", # default to accepted
+                "status": "accepted",  # default to accepted
                 "source": source,
                 "name": name,
                 "version_name": version_name,
@@ -178,7 +200,9 @@ def update_from_zenodo(collection_folder: Path, updated_resources: DefaultDict[s
             )
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
-                update_with_new_version(new_version, resource_doi, rdf, updated_resources)
+                update_with_new_version(
+                    new_version, resource_doi, rdf, updated_resources
+                )
 
 
 def update_from_collection(
@@ -190,7 +214,9 @@ def update_from_collection(
 ):
     req = requests.get(collection_source)
     if not req.status_code == 200:
-        raise RuntimeError(f"Could not get collection from {collection_source}: {req.status_code}: {req.reason}")
+        raise RuntimeError(
+            f"Could not get collection from {collection_source}: {req.status_code}: {req.reason}"
+        )
     print(f"Collecting items from {collection_id}: {collection_source}")
 
     c = yaml.load(req.text)
@@ -210,17 +236,22 @@ def update_from_collection(
                 rdf = None
                 githubusercontent_url = "https://raw.githubusercontent.com/"
 
-                if source and (source.startswith('http://') or source.startswith('https://')):
+                if source and (
+                    source.startswith("http://") or source.startswith("https://")
+                ):
                     try:
-                        if "//zenodo.org/record/" in source and source.split('/')[-1].isnumeric():
+                        if (
+                            "//zenodo.org/record/" in source
+                            and source.split("/")[-1].isnumeric()
+                        ):
                             # if a zenodo record is provided (e.g. https://zenodo.org/record/4034976),
                             # assuming the source is URI + '/files/rdf.yaml'
-                            source = source + '/files/rdf.yaml'
+                            source = source + "/files/rdf.yaml"
                         # TODO: resolve DOI
 
-                        if source.split('?')[0].endswith('.imjoy.html'):
-                            rdf = get_plugin_as_rdf(r['id'], source)
-                        elif source.split('?')[0].endswith('.yaml'):
+                        if source.split("?")[0].endswith(".imjoy.html"):
+                            rdf = get_plugin_as_rdf(r["id"], source)
+                        elif source.split("?")[0].endswith(".yaml"):
                             req = requests.get(source)
                             if not req.ok:
                                 raise Exception(req.reason)
@@ -230,11 +261,15 @@ def update_from_collection(
 
                     except Exception as e:
                         # TODO: create PR to remove failed items
-                        print(f"WARNING: Failed to load rdf (id: {resource_id}) from {source}: {e}")
+                        print(
+                            f"WARNING: Failed to load rdf (id: {resource_id}) from {source}: {e}"
+                        )
                         rdf = None
 
                     if source.startswith(githubusercontent_url):
-                        orga, repo, branch, *_ = source[len(githubusercontent_url) :].split("/")
+                        orga, repo, branch, *_ = source[
+                            len(githubusercontent_url) :
+                        ].split("/")
                         version_id = f"{orga}/{repo}/{branch}"
                 elif source is not None:
                     print(f"Invalid source URI: {source}")
@@ -261,7 +296,7 @@ def update_from_collection(
                     {
                         "version_id": version_id,
                         "created": created,
-                        "status": "accepted", # default to accepted
+                        "status": "accepted",  # default to accepted
                         "source": source,
                         "name": rdf.get("name", resource_id),
                     }
@@ -280,14 +315,18 @@ def update_from_collection(
                 )
                 if resource not in ("blocked", "old_hit"):
                     assert isinstance(resource, dict)
-                    update_with_new_version(new_version, resource_id, rdf, updated_resources)
+                    update_with_new_version(
+                        new_version, resource_id, rdf, updated_resources
+                    )
 
             except Exception as e:
                 # don't fail for single bad resource in collection
                 print(f"Failed to add resource: {traceback.format_exc()}")
 
 
-def update_from_github(collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]):
+def update_from_github(
+    collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, str]]]
+):
     rdf_template = yaml.load(collection_folder.parent / "collection_rdf_template.yaml")
     partners = rdf_template["config"]["partners"]
     resource_types = rdf_template["config"]["resource_types"]
@@ -296,13 +335,17 @@ def update_from_github(collection_folder: Path, updated_resources: DefaultDict[s
         try:
             p_id = p["id"]
             p_source = p["source"]
-            update_from_collection(collection_folder, p_id, p_source, updated_resources, resource_types)
+            update_from_collection(
+                collection_folder, p_id, p_source, updated_resources, resource_types
+            )
         except Exception as e:
             print(f"Failed to process collection {p_source} for {p_id} partner: {e}")
 
 
 def main(collection_folder: Path, max_resource_count: int) -> int:
-    updated_resources: DefaultDict[str, List[Dict[str, Union[dict, str]]]] = defaultdict(list)
+    updated_resources: DefaultDict[
+        str, List[Dict[str, Union[dict, str]]]
+    ] = defaultdict(list)
 
     update_from_zenodo(collection_folder, updated_resources)
     update_from_github(collection_folder, updated_resources)
@@ -328,7 +371,9 @@ def main(collection_folder: Path, max_resource_count: int) -> int:
                 ]
             ),
             "resource_name": v[0]["name"],
-            "maintainers": str(list(set(sum((vv["maintainers"] for vv in v), start=[]))))[1:-1].replace("'", "")
+            "maintainers": str(
+                list(set(sum((vv["maintainers"] for vv in v), start=[])))
+            )[1:-1].replace("'", "")
             or "none specified",
         }
         for k, v in updated_items

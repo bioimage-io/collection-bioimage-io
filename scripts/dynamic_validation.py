@@ -16,7 +16,9 @@ def main(
     branch: str,
     resource_folder: Path,
     version_id: str,
-    weight_format: Optional[str] = typer.Argument(None, help="weight format to test model with."),
+    weight_format: Optional[str] = typer.Argument(
+        None, help="weight format to test model with."
+    ),
 ) -> int:
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
@@ -28,11 +30,18 @@ def main(
         # no dynamic tests for non-model resources...
         return 0
 
-    summary_path = resource_folder / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
+    summary_path = (
+        resource_folder
+        / version_id
+        / weight_format
+        / f"validation_summary_{weight_format}.yaml"
+    )
 
     resoruce_versions = [
         v
-        for v in yaml.load(collection_folder / resource_id / "resource.yaml")["versions"]
+        for v in yaml.load(collection_folder / resource_id / "resource.yaml")[
+            "versions"
+        ]
         if v["version_id"] == version_id
     ]
     assert len(resoruce_versions) == 1

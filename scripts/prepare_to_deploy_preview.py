@@ -14,11 +14,16 @@ yaml = YAML(typ="safe")
 def main(
     collection_folder: Path,
     branch: str = typer.Argument(
-        ..., help="branch name should be 'auto-update-{resource_id} and is only used to get resource_id."
+        ...,
+        help="branch name should be 'auto-update-{resource_id} and is only used to get resource_id.",
     ),
     resources_dir: Path = typer.Argument(...),
-    pending_versions: str = typer.Argument(..., help="json string of list of pending versions_ids"),
-    artifact_dir: Path = typer.Argument(..., help="folder with validation and conda environment artifacts"),
+    pending_versions: str = typer.Argument(
+        ..., help="json string of list of pending versions_ids"
+    ),
+    artifact_dir: Path = typer.Argument(
+        ..., help="folder with validation and conda environment artifacts"
+    ),
 ) -> int:
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]

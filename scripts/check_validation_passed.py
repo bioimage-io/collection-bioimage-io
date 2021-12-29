@@ -7,7 +7,9 @@ from ruamel.yaml import YAML
 yaml = YAML(typ="safe")
 
 
-def main(artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts")):
+def main(
+    artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts")
+):
     # check validation summaries in artifact folder
     failed_val = {}
     for sp in artifact_folder.glob(f"**/validation_summary*.yaml"):

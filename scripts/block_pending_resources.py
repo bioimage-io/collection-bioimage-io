@@ -15,7 +15,9 @@ def set_gh_actions_output(name: str, output: str):
 
 def main(
     collection_folder: Path,
-    branch: str = typer.Argument(..., help="branch name should be 'auto-update-{id} and is only used to get id."),
+    branch: str = typer.Argument(
+        ..., help="branch name should be 'auto-update-{id} and is only used to get id."
+    ),
 ) -> int:
     made_changes = False
     if branch.startswith("auto-update-"):
