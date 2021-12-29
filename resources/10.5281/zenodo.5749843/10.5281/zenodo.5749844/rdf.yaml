@@ -35,7 +35,7 @@ config:
       runtime: null
 covers: ['https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/input.png',
   'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/output.png']
-created: '2021-12-29T02:04:21.569511'
+created: '2021-12-29T13:24:36.427690'
 description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
   microscopy 3D volumes.
 documentation: https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/README.md
