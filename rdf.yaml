@@ -1,6 +1,7 @@
 attachments:
   application:
   - api_version: 0.1.7
+    attachments: {}
     authors: []
     badges: []
     covers: []
@@ -8,7 +9,6 @@ attachments:
     dependencies: []
     description: Export BioImage.IO model packages for ilastik from a model description
       file
-    documentation: null
     env: ''
     icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
     id: ilastik/ilastik
@@ -1168,12 +1168,12 @@ attachments:
     validation_summaries: {}
     version_id: latest
   - api_version: 0.2.3
+    attachments: {}
     authors: []
     badges: []
     covers: []
     created: '2021-12-26T23:54:47.436310'
     description: Previewing Jupyter notebook without a Jupyter server
-    documentation: null
     icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
     id: zero/Notebook Preview
     name: Notebook Preview
@@ -1189,6 +1189,7 @@ attachments:
     version: 0.1.0
     version_id: bioimage-io/nbpreview/master
   - api_version: 0.1.0
+    attachments: {}
     authors: []
     badges: []
     covers: []
@@ -1196,7 +1197,6 @@ attachments:
     dependencies: []
     description: Export BioImage.IO model packages for deepImageJ from a model description
       file
-    documentation: null
     env: ''
     icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     id: deepimagej/deepimagej
@@ -1215,13 +1215,13 @@ attachments:
     version: 2.1.10
     version_id: deepimagej/models/master
   - api_version: 0.1.7
+    attachments: {}
     authors: []
     badges: []
     covers: []
     created: '2021-12-26T23:54:55.052403'
     dependencies: []
     description: Exporting BioImage.IO model packages from the model description file
-    documentation: null
     env: ''
     icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
     id: imjoy/BioImageIO-Packager
@@ -1240,12 +1240,12 @@ attachments:
     version: 0.3.1
     version_id: imjoy-team/bioimage-io-models/master
   - api_version: 0.2.3
+    attachments: {}
     authors: []
     badges: []
     covers: []
     created: '2021-12-26T23:54:55.509414'
     description: Previewing Jupyter notebook without a Jupyter server
-    documentation: null
     icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
     id: imjoy/Notebook Preview
     name: Notebook Preview

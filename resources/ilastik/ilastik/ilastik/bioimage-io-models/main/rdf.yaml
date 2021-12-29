@@ -1,4 +1,5 @@
 api_version: 0.1.7
+attachments: {}
 authors: []
 badges: []
 covers: []
@@ -6,7 +7,6 @@ created: '2021-12-26T23:54:58.659268'
 dependencies: []
 description: Export BioImage.IO model packages for ilastik from a model description
   file
-documentation: null
 env: ''
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
 id: ilastik

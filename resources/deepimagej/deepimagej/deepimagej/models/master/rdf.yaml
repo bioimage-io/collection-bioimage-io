@@ -1,4 +1,5 @@
 api_version: 0.1.0
+attachments: {}
 authors: []
 badges: []
 covers: []
@@ -6,7 +7,6 @@ created: '2021-12-26T23:54:53.391591'
 dependencies: []
 description: Export BioImage.IO model packages for deepImageJ from a model description
   file
-documentation: null
 env: ''
 icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
 id: deepimagej

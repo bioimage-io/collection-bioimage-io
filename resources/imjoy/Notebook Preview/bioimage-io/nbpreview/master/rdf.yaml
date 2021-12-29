@@ -1,10 +1,10 @@
 api_version: 0.2.3
+attachments: {}
 authors: []
 badges: []
 covers: []
 created: '2021-12-26T23:54:55.509414'
 description: Previewing Jupyter notebook without a Jupyter server
-documentation: null
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
 id: Notebook Preview
 name: Notebook Preview

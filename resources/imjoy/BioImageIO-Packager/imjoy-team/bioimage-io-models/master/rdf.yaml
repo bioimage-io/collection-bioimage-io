@@ -1,11 +1,11 @@
 api_version: 0.1.7
+attachments: {}
 authors: []
 badges: []
 covers: []
 created: '2021-12-26T23:54:55.052403'
 dependencies: []
 description: Exporting BioImage.IO model packages from the model description file
-documentation: null
 env: ''
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
 id: BioImageIO-Packager
