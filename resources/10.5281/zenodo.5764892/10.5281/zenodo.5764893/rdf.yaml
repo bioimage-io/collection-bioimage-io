@@ -28,7 +28,7 @@ config:
       - {name: sample_output_0.tif, size: 256 x 256 x 1 x 2, type: image}
       runtime: null
 covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
-created: '2021-12-30T02:04:14.017847'
+created: '2021-12-30T13:24:30.693992'
 description: Nucleus segmentation for fluorescence microscopy
 documentation: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
 doi: 10.5281/zenodo.5764893
