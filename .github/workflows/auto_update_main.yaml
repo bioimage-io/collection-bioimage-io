@@ -4,8 +4,8 @@ concurrency: generate-auto-update  # do not run this workflow in parallel
 on:
   push:
     branches: [ main ]
-  schedule:
-    - cron:  '0 1,13 * * *'
+#   schedule:
+#     - cron:  '0 1,13 * * *'
   workflow_dispatch: # triggered by http endpoints
 
 jobs:
