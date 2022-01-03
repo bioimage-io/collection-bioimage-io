@@ -170,8 +170,8 @@ def main(
     else:
         raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
 
-    if resource.get("type") == "application":
-        # skip static test for bioengine apps
+    if resource.get("type") == "application" and not source.split("?")[0].endswith(".yaml"):
+        # skip static test for bioengine apps if not a yaml file
         passed_static = "skipped"
         passed_latest_static = False
         dynamic_test_cases = []
