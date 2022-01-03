@@ -153,8 +153,11 @@ def main(collection_folder: Path, branch: str, resource_folder: Path, version_id
     else:
         raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
 
-    if resource.get("type") == "application" and not source.split("?")[0].endswith(".yaml"):
-        # skip static test for bioengine apps if not a yaml file
+    if (
+        resource.get("type") == "application"
+        and not isinstance(source, dict)
+        and not source.split("?")[0].endswith(".yaml")
+    ):  # skip static test for bioengine apps if not a yaml file
         passed_static = "skipped"
         passed_latest_static = False
         dynamic_test_cases = []
