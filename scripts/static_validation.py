@@ -170,7 +170,12 @@ def main(
     else:
         raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
 
-    if source.split("?")[0].endswith(".yaml"):
+    if resource.get("type") == "application":
+        # skip static test for bioengine apps
+        passed_static = "skipped"
+        passed_latest_static = False
+        dynamic_test_cases = []
+    else:
         static_summary = validate(source)
         static_summary["name"] = "bioimageio.spec static validation"
         static_summary_path = (
@@ -204,10 +209,6 @@ def main(
                 latest_static_summary,
                 static_summary_path.with_name("validation_summary_latest_static.yaml"),
             )
-    else:  # skip static test for bioengine apps
-        passed_static = "skipped"
-        passed_latest_static = False
-        dynamic_test_cases = []
 
     set_gh_actions_output("passed_static", passed_static)
     set_gh_actions_output(
