@@ -1,6 +1,0 @@
-id: ilastik/ilastik
-status: accepted
-type: application
-versions:
-- {created: '2021-12-26T23:54:58.659268', name: ilastik, source: 'https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html',
-  status: accepted, version_id: ilastik/bioimage-io-models/main}
