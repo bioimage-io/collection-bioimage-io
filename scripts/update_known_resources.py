@@ -188,7 +188,7 @@ def main(collection_folder: Path, max_resource_count: int) -> int:
     print("Found remote auto-update branches:")
     pprint(remote_branches)
     limited_updated_resources = {
-        k: v for k, v in limited_updated_resources.items() if f"origin/auto-update-{k}" in remote_branches
+        k: v for k, v in limited_updated_resources.items() if f"origin/auto-update-{k}" not in remote_branches
     }
 
     updates = [
