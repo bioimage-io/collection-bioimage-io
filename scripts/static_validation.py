@@ -10,7 +10,7 @@ from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared.raw_nodes import URI
-from utils import set_gh_actions_output
+from utils import set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
 
@@ -129,7 +129,7 @@ def prepare_dynamic_test_cases(rd: Union[Model, RDF], version_id: str, resource_
     return validation_cases
 
 
-def main(collection_folder: Path, branch: str, resource_folder: Path, version_id: str) -> int:
+def main(collection_folder: Path, branch: str, resource_folder: Path, version_id: str):
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
     else:
@@ -180,11 +180,14 @@ def main(collection_folder: Path, branch: str, resource_folder: Path, version_id
 
             yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 
-    set_gh_actions_output("passed_static", passed_static)
-    set_gh_actions_output("has_dynamic_test_cases", "yes" if passed_latest_static and dynamic_test_cases else "no")
-    set_gh_actions_output("dynamic_test_cases", {"case": dynamic_test_cases})
+    out = dict(
+        passed_static=passed_static,
+        has_dynamic_test_cases=passed_latest_static and dynamic_test_cases,
+        dynamic_test_cases={"case": dynamic_test_cases},
+    )
 
-    return 0
+    set_gh_actions_outputs(out)
+    return out
 
 
 if __name__ == "__main__":

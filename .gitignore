@@ -2,6 +2,7 @@
 node_modules
 dist
 scratch
+gh-pages
 scripts/site.config.json
 scripts/utils.js
 new-rdf.yaml
