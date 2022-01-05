@@ -146,43 +146,34 @@ def main(collection_folder: Path, branch: str, resource_folder: Path, version_id
     else:
         raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
 
-    if (
-        resource.get("type") == "application"
-        and not isinstance(source, dict)
-        and not source.split("?")[0].endswith(".yaml")
-    ):  # skip static test for bioengine apps if not a yaml file
-        passed_static = "skipped"
+    static_summary = validate(source)
+    static_summary["name"] = "bioimageio.spec static validation"
+    static_summary_path = resource_folder / version_id / "validation_summary_static.yaml"
+    static_summary_path.parent.mkdir(parents=True, exist_ok=True)
+    yaml.dump(static_summary, static_summary_path)
+    if static_summary["error"]:
+        passed_static = False
         passed_latest_static = False
         dynamic_test_cases = []
     else:
-        static_summary = validate(source)
-        static_summary["name"] = "bioimageio.spec static validation"
-        static_summary_path = resource_folder / version_id / "validation_summary_static.yaml"
-        static_summary_path.parent.mkdir(parents=True, exist_ok=True)
-        yaml.dump(static_summary, static_summary_path)
-        if static_summary["error"]:
-            passed_static = "no"
+        passed_static = True
+        latest_static_summary = validate(source, update_format=True)
+        if latest_static_summary["error"]:
             passed_latest_static = False
             dynamic_test_cases = []
         else:
-            passed_static = "yes"
-            latest_static_summary = validate(source, update_format=True)
-            if latest_static_summary["error"]:
-                passed_latest_static = False
-                dynamic_test_cases = []
-            else:
-                passed_latest_static = True
-                rd = load_raw_resource_description(source, update_to_format="latest")
-                assert isinstance(rd, RDF)
-                dynamic_test_cases = prepare_dynamic_test_cases(rd, version_id, resource_folder)
+            passed_latest_static = True
+            rd = load_raw_resource_description(source, update_to_format="latest")
+            assert isinstance(rd, RDF)
+            dynamic_test_cases = prepare_dynamic_test_cases(rd, version_id, resource_folder)
 
-            latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
+        latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
 
-            yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
+        yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 
     out = dict(
         passed_static=passed_static,
-        has_dynamic_test_cases=passed_latest_static and dynamic_test_cases,
+        has_dynamic_test_cases=bool(passed_latest_static and dynamic_test_cases),
         dynamic_test_cases={"case": dynamic_test_cases},
     )
 
