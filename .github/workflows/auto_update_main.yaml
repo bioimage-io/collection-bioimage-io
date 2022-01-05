@@ -21,7 +21,7 @@ jobs:
       run: pip install bioimageio.spec PyGithub lxml
     - name: update known resources
       id: update_known
-      run: python scripts/update_known_resources.py collection 5
+      run: python scripts/update_known_resources.py collection 0
     - name: "Upload updated collection"
       uses: actions/upload-artifact@v2
       with:
