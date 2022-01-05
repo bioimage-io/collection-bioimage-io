@@ -6,8 +6,13 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install typer
+    - id: detect_auto_updates
+      run: python scripts/detect_auto_updates.py
     - name: Delete auto-update-* branches
       uses: dawidd6/action-delete-branch@v3
       with:
-        owner: bioimageiobot
+        branches: ${{ steps.detect_auto_updates.outputs.auto-update-branches }}
         prefix: auto-update-

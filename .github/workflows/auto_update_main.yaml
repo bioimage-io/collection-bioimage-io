@@ -17,8 +17,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
     - name: install script deps
-      run: pip install bioimageio.spec PyGithub lxml
+      run: pip install bioimageio.spec
     - name: update known resources
       id: update_known
       run: python scripts/update_known_resources.py collection 0
@@ -28,11 +30,6 @@ jobs:
         name: updated-collection
         path: collection
         retention-days: 1
-    # - uses: crondaemon/close-pr@v1
-    #   with:
-    #     comment: "Clean up PR"
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   open-pr:
     needs: [collect-new-resources]
@@ -79,9 +76,6 @@ jobs:
           deployment preview (will be) available at: [gh-pages](/bioimage-io/collection-bioimage-io/tree/gh-pages/resources/${{ matrix.update.resource_id }})
           maintainers: ${{ matrix.update.maintainers }}
 
-          IMPORTANT: If new resource versions are detected this PR branch is beeing **force-pushed**.
-          Either merge any manual changes before updates to the external resource occur
-          or keep your updates safe in a separate branch and make a PR on [this PR's branch](/bioimage-io/collection-bioimage-io/tree/auto-update-${{ matrix.update.resource_id }}).
         labels: |
           auto-update
         draft: false
