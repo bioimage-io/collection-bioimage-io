@@ -1,4 +1,3 @@
-import json
 import warnings
 from pathlib import Path
 from typing import Dict, List, Union
@@ -11,15 +10,9 @@ from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared.raw_nodes import URI
+from utils import set_gh_actions_output
 
 yaml = YAML(typ="safe")
-
-
-def set_gh_actions_output(name: str, output: str):
-    """set output of a github actions workflow step calling this script"""
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
 
 
 def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name: str):
@@ -189,7 +182,7 @@ def main(collection_folder: Path, branch: str, resource_folder: Path, version_id
 
     set_gh_actions_output("passed_static", passed_static)
     set_gh_actions_output("has_dynamic_test_cases", "yes" if passed_latest_static and dynamic_test_cases else "no")
-    set_gh_actions_output("dynamic_test_cases", json.dumps({"case": dynamic_test_cases}))
+    set_gh_actions_output("dynamic_test_cases", {"case": dynamic_test_cases})
 
     return 0
 

@@ -10,14 +10,9 @@ import requests
 import typer
 from ruamel.yaml import YAML
 
+from utils import set_gh_actions_output
+
 yaml = YAML(typ="safe")
-
-
-def set_gh_actions_output(name: str, output: str):
-    """set output of a github actions workflow step calling this script"""
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
 
 
 def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
@@ -222,7 +217,7 @@ def main(collection_folder: Path, max_resource_count: int) -> int:
     updated_resources_matrix = {"update": updates}
     print("updated_resources_matrix:")
     pprint(updated_resources_matrix)
-    set_gh_actions_output("updated_resources_matrix", json.dumps(updated_resources_matrix))
+    set_gh_actions_output("updated_resources_matrix", updated_resources_matrix)
     set_gh_actions_output("found_new_resources", "yes" if limited_updated_resources else "")
 
     return 0

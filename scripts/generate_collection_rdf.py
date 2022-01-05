@@ -3,10 +3,11 @@ from datetime import datetime
 from pathlib import Path
 from pprint import pprint
 
+import requests
 import typer
 from boltons.iterutils import remap
-import requests
 from ruamel.yaml import YAML
+
 from bioimageio.spec import load_raw_resource_description
 from bioimageio.spec.io_ import serialize_raw_resource_description_to_dict
 from imjoy_plugin_parser import get_plugin_as_rdf
@@ -14,13 +15,6 @@ from imjoy_plugin_parser import get_plugin_as_rdf
 yaml = YAML(typ="safe")
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-
-
-def set_gh_actions_output(name: str, output: str):
-    """set output of a github actions workflow step calling this script"""
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
 
 
 def main() -> int:
@@ -34,10 +28,7 @@ def main() -> int:
             if partner["source"].startswith("http"):
                 response = requests.get(partner["source"])
                 if not response.ok:
-                    raise Exception(
-                        "WARNING: Failed to fetch partner config from: "
-                        + partner["source"]
-                    )
+                    raise Exception("WARNING: Failed to fetch partner config from: " + partner["source"])
                 partner_info = yaml.load(response.text)
                 if "config" in partner_info:
                     assert (
@@ -66,9 +57,7 @@ def main() -> int:
             if isinstance(v["source"], dict):
                 this_version = v["source"]
             elif v["source"].split("?")[0].endswith(".imjoy.html"):
-                this_version = dict(
-                    get_plugin_as_rdf(r["id"].split("/")[1], v["source"])
-                )
+                this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], v["source"]))
             else:
                 try:
                     rdf_node = load_raw_resource_description(v["source"])
@@ -81,9 +70,7 @@ def main() -> int:
             this_version.update(v)
             version_sub_path = Path(resource_id) / v["version_id"]
 
-            this_version[
-                "rdf_source"
-            ] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{v['version_id']}/rdf.yaml"
+            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{v['version_id']}/rdf.yaml"
             if isinstance(this_version["source"], dict):
                 this_version["source"] = this_version["rdf_source"]
 
@@ -99,9 +86,7 @@ def main() -> int:
                 if not isinstance(val_sum, dict):
                     val_sum = {"output": val_sum}
 
-                val_summaries[name] = {
-                    k: v for k, v in val_sum.items() if k != "source_name"
-                }
+                val_summaries[name] = {k: v for k, v in val_sum.items() if k != "source_name"}
 
             this_version["validation_summaries"] = val_summaries
 
@@ -122,16 +107,12 @@ def main() -> int:
                 type_list.append(latest_version)
                 n_accepted[type_] = n_accepted.get(type_, 0) + 1
                 n_accepted_versions[type_] = (
-                    n_accepted_versions.get(type_, 0)
-                    + 1
-                    + len(latest_version["previous_versions"])
+                    n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
                 )
             else:
                 print(f"ignoring resource {r_path} with type '{type_}'")
 
-    print(
-        f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources."
-    )
+    print(f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources.")
     print("accepted resources per type:")
     pprint(n_accepted)
     print("accepted resource versions per type:")

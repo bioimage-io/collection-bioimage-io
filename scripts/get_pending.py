@@ -1,21 +1,15 @@
-import json
 from pathlib import Path
 
 import requests
 import typer
 from ruamel.yaml import YAML
 
+from utils import set_gh_actions_output
+
 yaml = YAML(typ="safe")
 MAIN_BRANCH_URL = (
     "https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/main"
 )
-
-
-def set_gh_actions_output(name: str, output: str):
-    """set output of a github actions workflow step calling this script"""
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
 
 
 def main(
@@ -55,7 +49,7 @@ def main(
         # don't fail, but warn for non-auto-update branches
         print(f"called with non-auto-update branch {branch}")
 
-    set_gh_actions_output("pending_matrix", json.dumps({"version_id": pending}))
+    set_gh_actions_output("pending_matrix", {"version_id": pending})
     set_gh_actions_output("found_pending", "yes" if pending else "no")
     return 0
 

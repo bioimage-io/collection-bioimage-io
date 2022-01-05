@@ -3,21 +3,14 @@ from pathlib import Path
 import typer
 from ruamel.yaml import YAML
 
+from utils import set_gh_actions_output
+
 yaml = YAML(typ="safe")
-
-
-def set_gh_actions_output(name: str, output: str):
-    """set output of a github actions workflow step calling this script"""
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
 
 
 def main(
     collection_folder: Path,
-    branch: str = typer.Argument(
-        ..., help="branch name should be 'auto-update-{id} and is only used to get id."
-    ),
+    branch: str = typer.Argument(..., help="branch name should be 'auto-update-{id} and is only used to get id."),
 ) -> int:
     made_changes = False
     if branch.startswith("auto-update-"):
