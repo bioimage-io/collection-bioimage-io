@@ -21,106 +21,12 @@ jobs:
     - name: debug found pending ${{ steps.get_pending.outputs.found_pending }}
       run: echo ${{ steps.get_pending.outputs.pending_matrix }}
 
-  static-validation:
+  validate:
     needs: get-pending
-    if: needs.get-pending.outputs.found_pending == 'yes'
     runs-on: ubuntu-latest
-    outputs:
-      has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
-      dynamic_test_cases: ${{ steps.static_validation.outputs.dynamic_test_cases }}
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJson(needs.get-pending.outputs.pending_matrix) }}  # version_id: [...]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install requests typer ruamel.yaml bioimageio.spec
-    - name: static validation
-      id: static_validation
-      run: python scripts/static_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.version_id }}
-    - name: get artifact name wo forward slashes
-      id: artifact_name
-      run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
-    - name: "Upload validation summaries"
-      uses: actions/upload-artifact@v2
+    - uses: ./.github/workflows/validate_resources.yaml@main
       with:
-        name: ${{ steps.artifact_name.outputs.name }}
-        path: dist/resources/${{ matrix.version_id }}
-        retention-days: 1
-
-  dynamic-validation:
-    needs: static-validation
-    if: needs.static-validation.outputs.has_dynamic_test_cases == 'yes'
-    runs-on: ubuntu-latest
-    strategy:
-#      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically (or does it?)
-      fail-fast: false
-      matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # case: [{env_name: ..., version_id: ..., weight_format: ...}, ...]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: get artifact name wo forward slashes
-      id: artifact_name
-      run: echo ::set-output name=name::$(echo ${{ matrix.case.version_id }} | sed 's#/##g')static_validation_artifact
-    - name: download environment.yaml
-      uses: actions/download-artifact@v2
-      with:
-        name: ${{ steps.artifact_name.outputs.name }}
-        path: dist/resources/${{ matrix.case.version_id }}
-    - name: install validation dependencies
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        auto-update-conda: true
-        mamba-version: "*"
-        channel-priority: strict
-        activate-environment: ${{ matrix.case.env_name }}
-        environment-file: dist/resources/${{ matrix.case.version_id }}/conda_env_${{ matrix.case.weight_format }}.yaml
-    - name: dynamic validation
-      shell: bash -l {0}
-      run: python scripts/dynamic_validation.py collection ${{ github.event.pull_request.head.ref }} dist/resources ${{ matrix.case.version_id }} ${{ matrix.case.weight_format }}
-    - name: "Upload validation summary"
-      uses: actions/upload-artifact@v2
-      with:
-        name: ${{ steps.artifact_name.outputs.name }}${{ matrix.case.weight_format }}
-        path: dist/resources/${{ matrix.case.version_id }}/${{ matrix.case.weight_format }}
-        retention-days: 1
-
-
-  deploy-preview:
-    needs: [get-pending, static-validation, dynamic-validation]
-    if: always() && needs.get-pending.outputs.found_pending == 'yes' # run even if dynamic validation fails
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec
-    - name: download artifacts
-      uses: actions/download-artifact@v2
-      with:
-        path: artifacts
-    - name: prepare deployment
-      run: python scripts/prepare_to_deploy_preview.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ needs.get-pending.outputs.pending_matrix }}' artifacts
-    - name: Deploy to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.7
-      with:
-        branch: gh-pages
-        clean: false # Keeping the old files
-        folder: dist
-
-  passed-validation:
-    needs: dynamic-validation
-    if: always()
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: download artifacts
-      uses: actions/download-artifact@v2
-      with:
-        path: artifacts
-    - name: install script deps
-      run: pip install typer ruamel.yaml
-    - name: check if all validations passed
-      run: python scripts/check_validation_passed.py artifacts
+        pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
+        found_pending: ${{ needs.get-pending.outputs.found_pending == 'yes' }}
+        check_validation: true
