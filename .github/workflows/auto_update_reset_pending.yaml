@@ -1,0 +1,13 @@
+name: Reset pending auto updates
+
+on: workflow_dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Delete auto-update-* branches
+      uses: dawidd6/action-delete-branch@v3
+      with:
+        owner: bioimageiobot
+        prefix: auto-update-
