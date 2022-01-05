@@ -1,6 +1,0 @@
-id: deepimagej/deepimagej
-status: accepted
-type: application
-versions:
-- {created: '2021-12-26T23:54:53.391591', name: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html',
-  status: accepted, version_id: deepimagej/models/master}
