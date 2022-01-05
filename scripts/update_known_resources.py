@@ -246,7 +246,7 @@ def update_from_collection(
                         ):
                             # if a zenodo record is provided (e.g. https://zenodo.org/record/4034976),
                             # assuming the source is URI + '/files/rdf.yaml'
-                            source = source + "/files/rdf.yaml"
+                            source += "/files/rdf.yaml"
                         # TODO: resolve DOI
 
                         if source.split("?")[0].endswith(".imjoy.html"):

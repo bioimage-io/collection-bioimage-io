@@ -56,7 +56,7 @@ def parse_imjoy_plugin(source, overwrite_config=None):
             )
         plugin_comp[tag_type] = values
     if plugin_comp.config[0].attrs.lang == "yaml":
-        config = yaml.safe_load(plugin_comp.config[0].content)
+        config = yaml.load(plugin_comp.config[0].content)
     elif plugin_comp.config[0].attrs.lang == "json":
         config = json.loads(plugin_comp.config[0].content)
     else:

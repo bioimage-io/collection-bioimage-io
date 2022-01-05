@@ -30,9 +30,7 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
     }
     conda_env = dict(minimal_conda_env)
     if isinstance(rd, Model):
-        if weight_format in [
-            "pytorch_state_dict"
-        ]:  # weights with specified dependencies field
+        if weight_format in ["pytorch_state_dict"]:  # weights with specified dependencies field
             try:
                 # planned future version:
                 deps = rd.weights["pytorch_state_dict"].dependencies
@@ -43,9 +41,7 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
             try:
                 if deps.manager in ["conda", "pip"]:
                     if isinstance(deps.file, Path):
-                        raise TypeError(
-                            f"File path for remote source? {deps.file} should be a url"
-                        )
+                        raise TypeError(f"File path for remote source? {deps.file} should be a url")
                     elif not isinstance(deps.file, URI):
                         raise TypeError(deps.file)
 
@@ -67,11 +63,7 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
                         if not any(d.startswith("bioimageio.core") for d in deps):
                             conda_env["dependencies"] = deps + ["bioimageio.core"]
                     elif deps.manager == "pip":
-                        pip_req = [
-                            d
-                            for d in dep_file_content.split("\n")
-                            if not d.strip().startswith("#")
-                        ]
+                        pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
                         conda_env["dependencies"].append("bioimageio.core")
                         conda_env["dependencies"].append("pip")
                         conda_env["dependencies"].append({"pip": pip_req})
@@ -125,9 +117,7 @@ def ensure_valid_conda_env_name(name: str) -> str:
     return name or "empty"
 
 
-def prepare_dynamic_test_cases(
-    rd: Union[Model, RDF], version_id: str, resource_folder: Path
-) -> List[Dict[str, str]]:
+def prepare_dynamic_test_cases(rd: Union[Model, RDF], version_id: str, resource_folder: Path) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
     if isinstance(rd, Model):
@@ -135,14 +125,9 @@ def prepare_dynamic_test_cases(
         for wf in rd.weights:
             env_name = ensure_valid_conda_env_name(version_id)
             write_conda_env_file(
-                rd=rd,
-                weight_format=wf,
-                path=resource_folder / version_id / f"conda_env_{wf}.yaml",
-                env_name=env_name,
+                rd=rd, weight_format=wf, path=resource_folder / version_id / f"conda_env_{wf}.yaml", env_name=env_name
             )
-            validation_cases.append(
-                {"env_name": env_name, "version_id": version_id, "weight_format": wf}
-            )
+            validation_cases.append({"env_name": env_name, "version_id": version_id, "weight_format": wf})
     elif isinstance(rd, RDF):
         pass
     else:
@@ -151,9 +136,7 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-def main(
-    collection_folder: Path, branch: str, resource_folder: Path, version_id: str
-) -> int:
+def main(collection_folder: Path, branch: str, resource_folder: Path, version_id: str) -> int:
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
     else:
@@ -170,12 +153,18 @@ def main(
     else:
         raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
 
-    if source.split("?")[0].endswith(".yaml"):
+    if (
+        resource.get("type") == "application"
+        and not isinstance(source, dict)
+        and not source.split("?")[0].endswith(".yaml")
+    ):  # skip static test for bioengine apps if not a yaml file
+        passed_static = "skipped"
+        passed_latest_static = False
+        dynamic_test_cases = []
+    else:
         static_summary = validate(source)
         static_summary["name"] = "bioimageio.spec static validation"
-        static_summary_path = (
-            resource_folder / version_id / "validation_summary_static.yaml"
-        )
+        static_summary_path = resource_folder / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if static_summary["error"]:
@@ -192,31 +181,15 @@ def main(
                 passed_latest_static = True
                 rd = load_raw_resource_description(source, update_to_format="latest")
                 assert isinstance(rd, RDF)
-                dynamic_test_cases = prepare_dynamic_test_cases(
-                    rd, version_id, resource_folder
-                )
+                dynamic_test_cases = prepare_dynamic_test_cases(rd, version_id, resource_folder)
 
-            latest_static_summary[
-                "name"
-            ] = "bioimageio.spec static validation with auto-conversion to latest format"
+            latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
 
-            yaml.dump(
-                latest_static_summary,
-                static_summary_path.with_name("validation_summary_latest_static.yaml"),
-            )
-    else:  # skip static test for bioengine apps
-        passed_static = "skipped"
-        passed_latest_static = False
-        dynamic_test_cases = []
+            yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 
     set_gh_actions_output("passed_static", passed_static)
-    set_gh_actions_output(
-        "has_dynamic_test_cases",
-        "yes" if passed_latest_static and dynamic_test_cases else "no",
-    )
-    set_gh_actions_output(
-        "dynamic_test_cases", json.dumps({"case": dynamic_test_cases})
-    )
+    set_gh_actions_output("has_dynamic_test_cases", "yes" if passed_latest_static and dynamic_test_cases else "no")
+    set_gh_actions_output("dynamic_test_cases", json.dumps({"case": dynamic_test_cases}))
 
     return 0
 
