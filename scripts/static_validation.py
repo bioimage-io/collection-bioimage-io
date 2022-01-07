@@ -10,7 +10,7 @@ from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared.raw_nodes import URI
-from utils import set_gh_actions_outputs
+from utils import iterate_over_gh_matrix, set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
 
@@ -24,13 +24,7 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
     conda_env = dict(minimal_conda_env)
     if isinstance(rd, Model):
         if weight_format in ["pytorch_state_dict"]:  # weights with specified dependencies field
-            try:
-                # planned future version:
-                deps = rd.weights["pytorch_state_dict"].dependencies
-            except AttributeError:
-                # current version (0.4.0)
-                deps = rd.dependencies
-
+            deps = rd.weights["pytorch_state_dict"].dependencies
             try:
                 if deps.manager in ["conda", "pip"]:
                     if isinstance(deps.file, Path):
@@ -110,7 +104,9 @@ def ensure_valid_conda_env_name(name: str) -> str:
     return name or "empty"
 
 
-def prepare_dynamic_test_cases(rd: Union[Model, RDF], version_id: str, resource_folder: Path) -> List[Dict[str, str]]:
+def prepare_dynamic_test_cases(
+    rd: Union[Model, RDF], resource_id: str, version_id: str, resource_folder: Path
+) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
     if isinstance(rd, Model):
@@ -120,7 +116,9 @@ def prepare_dynamic_test_cases(rd: Union[Model, RDF], version_id: str, resource_
             write_conda_env_file(
                 rd=rd, weight_format=wf, path=resource_folder / version_id / f"conda_env_{wf}.yaml", env_name=env_name
             )
-            validation_cases.append({"env_name": env_name, "version_id": version_id, "weight_format": wf})
+            validation_cases.append(
+                {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
+            )
     elif isinstance(rd, RDF):
         pass
     else:
@@ -129,54 +127,39 @@ def prepare_dynamic_test_cases(rd: Union[Model, RDF], version_id: str, resource_
     return validation_cases
 
 
-def main(collection_folder: Path, branch: str, resource_folder: Path, version_id: str):
-    if branch.startswith("auto-update-"):
-        resource_id = branch[len("auto-update-") :]
-    else:
-        warnings.warn(f"called with non-auto-update branch {branch}")
-        return 0
+def main(collection_folder: Path, resource_folder: Path, pending_matrix: str):
+    dynamic_test_cases = []
+    for matrix in iterate_over_gh_matrix(pending_matrix):
+        resource_id = matrix["resource_id"]
+        version_id = matrix["version_id"]
 
-    resource_path = collection_folder / resource_id / "resource.yaml"
-    resource = yaml.load(resource_path)
+        resource_path = collection_folder / resource_id / "resource.yaml"
+        resource = yaml.load(resource_path)
 
-    for v in resource["versions"]:
-        if v["version_id"] == version_id:
-            source = v["source"]
-            break
-    else:
-        raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
-
-    static_summary = validate(source)
-    static_summary["name"] = "bioimageio.spec static validation"
-    static_summary_path = resource_folder / version_id / "validation_summary_static.yaml"
-    static_summary_path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(static_summary, static_summary_path)
-    if static_summary["error"]:
-        passed_static = False
-        passed_latest_static = False
-        dynamic_test_cases = []
-    else:
-        passed_static = True
-        latest_static_summary = validate(source, update_format=True)
-        if latest_static_summary["error"]:
-            passed_latest_static = False
-            dynamic_test_cases = []
+        for v in resource["versions"]:
+            if v["version_id"] == version_id:
+                source = v["source"]
+                break
         else:
-            passed_latest_static = True
-            rd = load_raw_resource_description(source, update_to_format="latest")
-            assert isinstance(rd, RDF)
-            dynamic_test_cases = prepare_dynamic_test_cases(rd, version_id, resource_folder)
+            raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
 
-        latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
+        static_summary = validate(source)
+        static_summary["name"] = "bioimageio.spec static validation"
+        static_summary_path = resource_folder / version_id / "validation_summary_static.yaml"
+        static_summary_path.parent.mkdir(parents=True, exist_ok=True)
+        yaml.dump(static_summary, static_summary_path)
+        if not static_summary["error"]:
+            latest_static_summary = validate(source, update_format=True)
+            if not latest_static_summary["error"]:
+                rd = load_raw_resource_description(source, update_to_format="latest")
+                assert isinstance(rd, RDF)
+                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, resource_folder)
 
-        yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
+            latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
 
-    out = dict(
-        passed_static=passed_static,
-        has_dynamic_test_cases=bool(passed_latest_static and dynamic_test_cases),
-        dynamic_test_cases={"case": dynamic_test_cases},
-    )
+            yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 
+    out = dict(has_dynamic_test_cases=bool(dynamic_test_cases), dynamic_test_cases={"include": dynamic_test_cases})
     set_gh_actions_outputs(out)
     return out
 

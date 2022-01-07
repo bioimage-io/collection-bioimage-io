@@ -5,9 +5,10 @@ from pprint import pprint
 
 import typer
 
+from dynamic_validation import main as dynamic_validation
 from get_pending import main as get_pending
 from static_validation import main as static_validation
-from utils import iterate_over_gh_marix
+from utils import iterate_over_gh_matrix
 
 
 def main(
@@ -23,19 +24,29 @@ def main(
     print("\npending:")
     pprint(pending)
 
+    if not pending["has_pending_matrix"]:
+        return
+
     # perform static validation for pending resources
     resource_folder = gh_pages / "resources"
-    for matrix in iterate_over_gh_marix(pending["pending_matrix"]):
-        assert pending["found_pending"]
-        static_out = static_validation(
-            collection_folder=collection,
-            branch=branch,
-            resource_folder=resource_folder,
-            version_id=matrix["version_id"],
-        )
-        print("\nstatic validation:")
-        pprint(static_out)
+    static_out = static_validation(
+        collection_folder=collection, resource_folder=resource_folder, pending_matrix=pending["pending_matrix"]
+    )
+    print("\nstatic validation:")
+    pprint(static_out)
 
+    if not static_out["has_dynamic_test_cases"]:
+        return
+
+    for matrix in iterate_over_gh_matrix(static_out["dynamic_test_cases"]):
+        print(f"\ndynamic validation (r: {matrix['resource_id']}, v: {matrix['version_id']}):")
+        dynamic_validation(
+            collection_folder=collection,
+            resource_folder=resource_folder,
+            resource_id=matrix["resource_id"],
+            version_id=matrix["version_id"],
+            weight_format=matrix["weight_format"],
+        )
 
 
 if __name__ == "__main__":

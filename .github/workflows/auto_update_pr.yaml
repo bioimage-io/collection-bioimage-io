@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
-      found_pending: ${{ steps.get_pending.outputs.found_pending }}
+      has_pending_matrix: ${{ steps.get_pending.outputs.has_pending_matrix }}
 
     steps:
     - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
     - name: get pending
       id: get_pending
       run: python scripts/get_pending.py collection ${{ github.event.pull_request.head.ref }}
-    - name: debug found pending ${{ steps.get_pending.outputs.found_pending }}
+    - name: debug found pending ${{ steps.get_pending.outputs.has_pending_matrix }}
       run: echo ${{ steps.get_pending.outputs.pending_matrix }}
 
   validate:
@@ -28,5 +28,5 @@ jobs:
     - uses: ./.github/workflows/validate_resources.yaml@main
       with:
         pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
-        found_pending: ${{ needs.get-pending.outputs.found_pending == 'yes' }}
+        has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix == 'yes' }}
         check_validation: true
