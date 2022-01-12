@@ -35,7 +35,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer ruamel.yaml
+      run: pip install typer ruamel.yaml bioimageio.spec
     - name: get pending validations
       id: get_pending
       run: python scripts/get_pending_validations.py
