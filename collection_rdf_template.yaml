@@ -2,7 +2,7 @@ name: BioImage.IO
 type: collection
 description: BioImage.IO collection RDF
 tags: []
-version: 0.2.1
+version: 0.2.2
 authors:
   - name: BioImgae.IO Team
 documentation: README.md
@@ -48,7 +48,5 @@ config:
     - id: hpa
       source: >-
         https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-attachments:
-  model: []
-  application: []
-  dataset: []
+
+collection: []

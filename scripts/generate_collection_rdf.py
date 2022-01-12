@@ -3,10 +3,11 @@ from datetime import datetime
 from pathlib import Path
 from pprint import pprint
 
+import requests
 import typer
 from boltons.iterutils import remap
-import requests
 from ruamel.yaml import YAML
+
 from bioimageio.spec import load_raw_resource_description
 from bioimageio.spec.io_ import serialize_raw_resource_description_to_dict
 from imjoy_plugin_parser import get_plugin_as_rdf
@@ -16,16 +17,13 @@ yaml = YAML(typ="safe")
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
 
-def set_gh_actions_output(name: str, output: str):
-    """set output of a github actions workflow step calling this script"""
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
-
-
-def main() -> int:
-    collection_path = Path("collection")
-    rdf = yaml.load(Path("collection_rdf_template.yaml"))
+def main(
+    collection_dir: Path = Path(__file__).parent / "../collection",
+    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
+    dist_dir: Path = Path(__file__).parent / "../gh-pages",
+):
+    rdf = yaml.load(rdf_template_path)
+    resources_dir = dist_dir / "resources"
     # resolve partners
     if "partners" in rdf["config"]:
         partners = rdf["config"]["partners"]
@@ -34,10 +32,7 @@ def main() -> int:
             if partner["source"].startswith("http"):
                 response = requests.get(partner["source"])
                 if not response.ok:
-                    raise Exception(
-                        "WARNING: Failed to fetch partner config from: "
-                        + partner["source"]
-                    )
+                    raise Exception("WARNING: Failed to fetch partner config from: " + partner["source"])
                 partner_info = yaml.load(response.text)
                 if "config" in partner_info:
                     assert (
@@ -46,14 +41,13 @@ def main() -> int:
                     partners[idx].update(partner_info["config"])
         print(f"partners updated: {len(partners)}")
 
-    rdf["attachments"] = rdf.get("attachments", {})
-    attachments = rdf["attachments"]
-
-    resources_dir = Path("dist/gh-pages/resources")
+    rdf["collection"] = rdf.get("collection", [])
+    collection = rdf["collection"]
+    assert isinstance(collection, list), type(collection)
 
     n_accepted = {}
     n_accepted_versions = {}
-    known_resources = list(collection_path.glob("**/resource.yaml"))
+    known_resources = list(collection_dir.glob("**/resource.yaml"))
     for r_path in known_resources:
         r = yaml.load(r_path)
         if r["status"] != "accepted":
@@ -66,9 +60,7 @@ def main() -> int:
             if isinstance(v["source"], dict):
                 this_version = v["source"]
             elif v["source"].split("?")[0].endswith(".imjoy.html"):
-                this_version = dict(
-                    get_plugin_as_rdf(r["id"].split("/")[1], v["source"])
-                )
+                this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], v["source"]))
             else:
                 try:
                     rdf_node = load_raw_resource_description(v["source"])
@@ -81,14 +73,12 @@ def main() -> int:
             this_version.update(v)
             version_sub_path = Path(resource_id) / v["version_id"]
 
-            this_version[
-                "rdf_source"
-            ] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{v['version_id']}/rdf.yaml"
+            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{v['version_id']}/rdf.yaml"
             if isinstance(this_version["source"], dict):
                 this_version["source"] = this_version["rdf_source"]
 
-            (resources_dir / version_sub_path).mkdir(parents=True, exist_ok=True)
             v_path = resources_dir / version_sub_path / "rdf.yaml"
+            v_path.parent.mkdir(parents=True, exist_ok=True)
             yaml.dump(this_version, v_path)
 
             # add validation summaries
@@ -99,9 +89,7 @@ def main() -> int:
                 if not isinstance(val_sum, dict):
                     val_sum = {"output": val_sum}
 
-                val_summaries[name] = {
-                    k: v for k, v in val_sum.items() if k != "source_name"
-                }
+                val_summaries[name] = {k: v for k, v in val_sum.items() if k != "source_name"}
 
             this_version["validation_summaries"] = val_summaries
 
@@ -115,23 +103,14 @@ def main() -> int:
         if latest_version is None:
             print(f"Ignoring resource at {r_path} without any accepted versions")
         else:
+            collection.append(latest_version)
             type_ = latest_version.get("type", "unknown")
-            attachments[type_] = attachments.get(type_)
-            type_list = attachments[type_]
-            if isinstance(type_list, list):
-                type_list.append(latest_version)
-                n_accepted[type_] = n_accepted.get(type_, 0) + 1
-                n_accepted_versions[type_] = (
-                    n_accepted_versions.get(type_, 0)
-                    + 1
-                    + len(latest_version["previous_versions"])
-                )
-            else:
-                print(f"ignoring resource {r_path} with type '{type_}'")
+            n_accepted[type_] = n_accepted.get(type_, 0) + 1
+            n_accepted_versions[type_] = (
+                n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
+            )
 
-    print(
-        f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources."
-    )
+    print(f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources.")
     print("accepted resources per type:")
     pprint(n_accepted)
     print("accepted resource versions per type:")
@@ -140,7 +119,7 @@ def main() -> int:
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
-    rdf_path = Path("dist/gh-pages/rdf.yaml")
+    rdf_path = dist_dir / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
 
@@ -160,8 +139,6 @@ def main() -> int:
     rdf = remap(rdf, convert_for_json)
     with open(rdf_path.with_suffix(".json"), "w") as f:
         json.dump(rdf, f, allow_nan=False)
-
-    return 0
 
 
 if __name__ == "__main__":

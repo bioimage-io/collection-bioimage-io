@@ -1,0 +1,119 @@
+name: validate resources
+
+on:
+  workflow_call:
+    inputs:
+      pending_matrix:
+        required: true
+        type: string
+      has_pending_matrix:
+        required: true
+        type: boolean
+      check_validation:
+        required: false
+        default: false
+        type: boolean
+      deploy:
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  static-validation:
+    if: inputs.has_pending_matrix
+    runs-on: ubuntu-latest
+    outputs:
+      has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
+      dynamic_test_cases: ${{ steps.static_validation.outputs.dynamic_test_cases }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install requests typer ruamel.yaml bioimageio.spec
+    - name: static validation
+      id: static_validation
+      run: python scripts/static_validation.py collection dist/resources ${{ inputs.pending_matrix }}
+    - name: get artifact name wo forward slashes
+      id: artifact_name
+      run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
+    - name: "Upload validation summaries"
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.artifact_name.outputs.name }}
+        path: dist/resources/${{ matrix.version_id }}
+        retention-days: 1
+
+  dynamic-validation:
+    needs: static-validation
+    if: needs.static-validation.outputs.has_dynamic_test_cases == 'yes'
+    runs-on: ubuntu-latest
+    strategy:
+#      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically (or does it?)
+      fail-fast: false
+      matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # [{env_name: ..., resource_id: ..., version_id: ..., weight_format: ...}, ...]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: get artifact name wo forward slashes
+      id: artifact_name
+      run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
+    - name: download environment.yaml
+      uses: actions/download-artifact@v2
+      with:
+        name: ${{ steps.artifact_name.outputs.name }}
+        path: dist/resources/${{ matrix.version_id }}
+    - name: install validation dependencies
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        mamba-version: "*"
+        channel-priority: strict
+        activate-environment: ${{ matrix.env_name }}
+        environment-file: dist/resources/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+    - name: dynamic validation
+      shell: bash -l {0}
+      run: python scripts/dynamic_validation.py collection dist/resources ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
+    - name: "Upload validation summary"
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.artifact_name.outputs.name }}${{ matrix.weight_format }}
+        path: dist/resources/${{ matrix.version_id }}/${{ matrix.weight_format }}
+        retention-days: 1
+
+  passed-validation:
+    needs: dynamic-validation
+    if: always()  && inputs.check_validation
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        path: artifacts
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: check if all validations passed
+      run: python scripts/check_validation_passed.py artifacts
+
+  deploy:
+    needs: [get-pending, static-validation, dynamic-validation]
+    if: always() && inputs.deploy && inputs.has_pending_matrix  # run even if dynamic validation fails
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec
+    - name: download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        path: artifacts
+    - name: prepare deployment
+      run: python scripts/prepare_to_deploy_preview.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ inputs.pending_matrix }}' artifacts
+    - name: Deploy to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+        branch: gh-pages
+        clean: false  # Keeping the old files
+        folder: dist

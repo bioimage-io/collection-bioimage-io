@@ -8,11 +8,11 @@ yaml = YAML(typ="safe")
 
 
 def main(
-    artifact_folder: Path = typer.Argument(..., help="folder with validation artifacts")
+    artifact_dir: Path = typer.Argument(..., help="folder with validation artifacts")
 ):
     # check validation summaries in artifact folder
     failed_val = {}
-    for sp in artifact_folder.glob(f"**/validation_summary*.yaml"):
+    for sp in artifact_dir.glob(f"**/validation_summary*.yaml"):
         summary = yaml.load(sp)
         if summary["error"]:
             failed_val[sp.stem] = summary

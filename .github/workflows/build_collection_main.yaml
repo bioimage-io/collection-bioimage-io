@@ -21,3 +21,52 @@ jobs:
         clean: false
         branch: gh-pages
         folder: dist/gh-pages
+
+  get-pending-validation:
+    runs-on: ubuntu-latest
+    outputs:
+      pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
+      has_pending_matrix: ${{ steps.get_pending.outputs.has_pending_matrix }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: install script deps
+      run: pip install typer ruamel.yaml
+    - name: get pending validations
+      id: get_pending
+      run: python scripts/get_pending_validations.py collection gh-pages
+    - name: debug found pending ${{ steps.get_pending.outputs.has_pending_matrix }}
+      run: echo ${{ steps.get_pending.outputs.pending_matrix }}
+
+  validate:
+    needs: get-pending-validation
+    if: needs.get-pending-validation.outputs.has_pending_matrix
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./.github/workflows/validate_resources.yaml@main
+      with:
+        pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
+        has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix == 'yes' }}
+        deploy: true
+
+  build-collection-again:
+    needs: [get-pending-validation, validate]
+    if: needs.get-pending-validation.outputs.has_pending_matrix
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec boltons lxml requests
+    - name: generate collection rdf
+      run: python scripts/generate_collection_rdf.py
+    - name: Deploy collection rdf to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist/gh-pages
