@@ -58,12 +58,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
+      run: echo ::set-output name=name::$(echo ${{ matrix.resource_id }}${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
     - name: download environment.yaml
       uses: actions/download-artifact@v2
       with:
         name: ${{ steps.artifact_name.outputs.name }}
-        path: dist/resources/${{ matrix.version_id }}
+        path: dist/resources/${{ matrix.resource_id }}/${{ matrix.version_id }}
     - name: install validation dependencies
       uses: conda-incubator/setup-miniconda@v2
       with:
@@ -71,7 +71,7 @@ jobs:
         mamba-version: "*"
         channel-priority: strict
         activate-environment: ${{ matrix.env_name }}
-        environment-file: dist/resources/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+        environment-file: dist/resources/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
     - name: dynamic validation
       shell: bash -l {0}
       run: python scripts/dynamic_validation.py collection dist/resources ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
@@ -79,7 +79,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ${{ steps.artifact_name.outputs.name }}${{ matrix.weight_format }}
-        path: dist/resources/${{ matrix.version_id }}/${{ matrix.weight_format }}
+        path: dist/resources/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
 
   passed-validation:
