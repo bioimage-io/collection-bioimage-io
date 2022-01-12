@@ -23,10 +23,8 @@ jobs:
 
   validate:
     needs: get-pending
-    runs-on: ubuntu-latest
-    steps:
-    - uses: bioimage-io/collection-bioimage-io/.github/workflows/validate_resources.yaml@main
-      with:
-        pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
-        has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix == 'yes' }}
-        check_validation: true
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/validate_resources.yaml@main
+    with:
+      pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
+      has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix == 'yes' }}
+      check_validation: true
