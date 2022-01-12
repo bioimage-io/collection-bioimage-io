@@ -108,7 +108,7 @@ def update_with_new_version(
 
 
 def update_from_zenodo(
-    collection_folder: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
+    collection_dir: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
 ):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
@@ -127,7 +127,7 @@ def update_from_zenodo(
             doi = hit["doi"]  # "version" doi
             created = datetime.fromisoformat(hit["created"])
             assert isinstance(created, datetime), created
-            resource_path = collection_folder / resource_doi / "resource.yaml"
+            resource_path = collection_dir / resource_doi / "resource.yaml"
             version_name = f"revision {hit['revision']}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
@@ -169,11 +169,10 @@ def update_from_zenodo(
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
 
 
-def main(collection_folder: Path, max_resource_count: int) -> int:
+def main(collection_dir: Path, max_resource_count: int) -> int:
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
 
-    update_from_zenodo(collection_folder, updated_resources)
-    # update_from_github(collection_folder, updated_resources)
+    update_from_zenodo(collection_dir, updated_resources)
 
     # limit the number of PRs created
     oldest_updated_resources: List[Tuple[str, List[Dict[str, str]]]] = sorted(  # type: ignore

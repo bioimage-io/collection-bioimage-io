@@ -12,7 +12,7 @@ yaml = YAML(typ="safe")
 
 
 def main(
-    collection_folder: Path,
+    collection_dir: Path,
     branch: str = typer.Argument(
         ...,
         help="branch name should be 'auto-update-{resource_id} and is only used to get resource_id.",
@@ -31,7 +31,7 @@ def main(
         print(f"called with non-auto-update branch {branch}")
         return 0
 
-    resource_path = collection_folder / resource_id / "resource.yaml"
+    resource_path = collection_dir / resource_id / "resource.yaml"
     resource = yaml.load(resource_path)
     resource_folder = resources_dir / resource["id"]
     pending_versions = json.loads(pending_versions)["version_id"]

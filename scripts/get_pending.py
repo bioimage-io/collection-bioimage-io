@@ -11,14 +11,14 @@ MAIN_BRANCH_URL = "https://raw.githubusercontent.com/bioimage-io/collection-bioi
 
 
 def main(
-    collection_folder: Path,
+    collection_dir: Path,
     branch: str = typer.Argument(
         ..., help="branch name should be 'auto-update-{resource_id} and is only used to get resource_id."
     ),
 ):
     if branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
-        resource_path = collection_folder / resource_id / "resource.yaml"
+        resource_path = collection_dir / resource_id / "resource.yaml"
         response = requests.get(f"{MAIN_BRANCH_URL}/{resource_path}")
         if response.ok:
             previous_resource = yaml.load(response.text)

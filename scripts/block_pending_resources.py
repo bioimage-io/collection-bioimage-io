@@ -9,14 +9,14 @@ yaml = YAML(typ="safe")
 
 
 def main(
-    collection_folder: Path,
+    collection_dir: Path,
     branch: str = typer.Argument(..., help="branch name should be 'auto-update-{id} and is only used to get id."),
 ) -> int:
     made_changes = False
     if branch.startswith("auto-update-"):
         id_ = branch[len("auto-update-") :]
 
-        resource_path = collection_folder / id_ / "resource.yaml"
+        resource_path = collection_dir / id_ / "resource.yaml"
         resource = yaml.load(resource_path)
         for v in resource["versions"]:
             if v["status"] == "pending":
