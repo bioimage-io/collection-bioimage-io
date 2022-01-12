@@ -33,6 +33,8 @@ jobs:
     - name: static validation
       id: static_validation
       run: python scripts/static_validation.py collection dist/resources '${{ inputs.pending_matrix }}'
+    - name: debug has_dynamic_test_cases ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
+      run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
@@ -110,7 +112,7 @@ jobs:
       with:
         path: artifacts
     - name: prepare deployment
-      run: python scripts/prepare_to_deploy_preview.py collection ${{ github.event.pull_request.head.ref }} dist/resources '${{ inputs.pending_matrix }}' artifacts
+      run: python scripts/prepare_to_deploy_preview.py dist/resources '${{ inputs.pending_matrix }}' artifacts
     - name: Deploy to gh-pages 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
