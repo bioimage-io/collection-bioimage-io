@@ -2,16 +2,36 @@ authors:
 - {name: Constantin Pape}
 cite:
 - {doi: 'https://doi.org/10.1038/s41592-021-01249-6', text: Edlund et al.}
+config:
+  background_image: static/img/zoo-background.svg
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  id: ilastik
+  logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  name: ilastik
+  resource_types: [application]
+  splash_feature_list: null
+  splash_subtitle: the interactive learning and segmentation toolkit
+  splash_title: ilastik
+  tags: [ilastik]
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
 covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg']
-created: '2021-12-26T23:42:31.005555'
 description: LIVECell—A large-scale dataset for label-free live cell segmentation
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
 format_version: 0.2.1
+id: ilastik/livecell_dataset
 license: CC-BY-NC-4.0
+maintainers:
+- {affiliation: EMBL Heidelberg, github_user: fynnbe, name: Fynn Beuttenmüller, orcid: 0000-0002-8567-6389}
+- {affiliation: EMBL Heidelberg, github_user: constantinpape, name: Constantin Pape,
+  orcid: 0000-0001-6562-7187}
 name: LIVECell
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/livecell_dataset/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
 source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/livecell_dataset/latest/rdf.yaml
 status: accepted
 tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
 type: dataset
 version_id: latest
+version_name: latest

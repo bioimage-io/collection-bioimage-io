@@ -3,18 +3,38 @@ authors:
 cite:
 - {doi: 'https://doi.org/10.1016/j.cell.2021.07.017', text: 'Vergara, Pape, Meechan
     et al.'}
+config:
+  background_image: static/img/zoo-background.svg
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  id: ilastik
+  logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  name: ilastik
+  resource_types: [application]
+  splash_feature_list: null
+  splash_subtitle: the interactive learning and segmentation toolkit
+  splash_title: ilastik
+  tags: [ilastik]
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
 covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png']
-created: '2021-12-26T23:42:31.057816'
 description: Training data for EM segmentation of cellular membranes, nuclei, cuticle
   and cilia in Platynereis.
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
 format_version: 0.2.1
+id: ilastik/platynereis_em_training_data
 license: CC-BY-4.0
+maintainers:
+- {affiliation: EMBL Heidelberg, github_user: fynnbe, name: Fynn Beuttenmüller, orcid: 0000-0002-8567-6389}
+- {affiliation: EMBL Heidelberg, github_user: constantinpape, name: Constantin Pape,
+  orcid: 0000-0001-6562-7187}
 name: Platynereis EM Traning Data
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/platynereis_em_training_data/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
 source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/platynereis_em_training_data/latest/rdf.yaml
 status: accepted
 tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
   3D]
 type: dataset
 version_id: latest
+version_name: latest

@@ -1,0 +1,47 @@
+api_version: 0.1.7
+attachments: {}
+authors:
+- {name: ilastik Team}
+badges: []
+cite:
+- {doi: 10.1038/s41592-019-0582-9, text: 'Berg, S., Kutra, D., Kroeger, T. et al.
+    ilastik: interactive machine learning for (bio)image analysis. Nat Methods 16,
+    1226-1232 (2019).'}
+config:
+  background_image: static/img/zoo-background.svg
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  id: ilastik
+  logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  name: ilastik
+  resource_types: [application]
+  splash_feature_list: null
+  splash_subtitle: the interactive learning and segmentation toolkit
+  splash_title: ilastik
+  tags: [ilastik]
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+covers: []
+dependencies: []
+description: Resources for BioImgage.IO curated by the ilastik team.
+documentation: https://ilastik.org
+env: ''
+format_version: 0.2.2
+icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
+id: ilastik/ilastik
+maintainers:
+- {github_user: ilastik, name: ilastik Team}
+name: Ilastik Collection
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/ilastik/latest/rdf.yaml
+requirements: ['https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js', 'https://static.imjoy.io/spectre.css/spectre.min.css',
+  'https://static.imjoy.io/spectre.css/spectre-exp.min.css', 'https://static.imjoy.io/spectre.css/spectre-icons.min.css',
+  'https://static.imjoy.io/js/UZIP.js', 'https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js']
+root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
+source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/ilastik/latest/rdf.yaml
+status: accepted
+tags: [ilastik, bioimage.io]
+type: application
+version: 0.2.1
+version_id: latest
+version_name: latest
