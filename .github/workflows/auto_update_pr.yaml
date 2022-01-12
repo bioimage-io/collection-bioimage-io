@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: ./.github/actions/validate_resources.yaml
+    - uses: ./.github/actions/validate_resources
       with:
         pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
         has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix == 'yes' }}
