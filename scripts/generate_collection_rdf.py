@@ -37,8 +37,9 @@ def main() -> int:
                     partners[idx].update(partner_info["config"])
         print(f"partners updated: {len(partners)}")
 
-    rdf["attachments"] = rdf.get("attachments", {})
-    attachments = rdf["attachments"]
+    rdf["collection"] = rdf.get("collection", [])
+    collection = rdf["collection"]
+    assert isinstance(collection, list), type(collection)
 
     resources_dir = Path("dist/gh-pages/resources")
 
@@ -100,17 +101,12 @@ def main() -> int:
         if latest_version is None:
             print(f"Ignoring resource at {r_path} without any accepted versions")
         else:
+            collection.append(latest_version)
             type_ = latest_version.get("type", "unknown")
-            attachments[type_] = attachments.get(type_)
-            type_list = attachments[type_]
-            if isinstance(type_list, list):
-                type_list.append(latest_version)
-                n_accepted[type_] = n_accepted.get(type_, 0) + 1
-                n_accepted_versions[type_] = (
-                    n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
-                )
-            else:
-                print(f"ignoring resource {r_path} with type '{type_}'")
+            n_accepted[type_] = n_accepted.get(type_, 0) + 1
+            n_accepted_versions[type_] = (
+                n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
+            )
 
     print(f"new collection rdf contains {sum(n_accepted.values())} accepted of {len(known_resources)} known resources.")
     print("accepted resources per type:")
