@@ -97,7 +97,7 @@ jobs:
       run: python scripts/check_validation_passed.py artifacts
 
   deploy:
-    needs: [get-pending, static-validation, dynamic-validation]
+    needs: [static-validation, dynamic-validation]
     if: always() && inputs.deploy && inputs.has_pending_matrix  # run even if dynamic validation fails
     runs-on: ubuntu-latest
 
