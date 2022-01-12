@@ -17,9 +17,13 @@ yaml = YAML(typ="safe")
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
 
-def main() -> int:
-    collection_path = Path("collection")
-    rdf = yaml.load(Path("collection_rdf_template.yaml"))
+def main(
+    collection_dir: Path = Path(__file__).parent / "../collection",
+    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
+    dist_dir: Path = Path(__file__).parent / "../gh-pages",
+):
+    rdf = yaml.load(rdf_template_path)
+    resources_dir = dist_dir / "resources"
     # resolve partners
     if "partners" in rdf["config"]:
         partners = rdf["config"]["partners"]
@@ -41,11 +45,9 @@ def main() -> int:
     collection = rdf["collection"]
     assert isinstance(collection, list), type(collection)
 
-    resources_dir = Path("dist/gh-pages/resources")
-
     n_accepted = {}
     n_accepted_versions = {}
-    known_resources = list(collection_path.glob("**/resource.yaml"))
+    known_resources = list(collection_dir.glob("**/resource.yaml"))
     for r_path in known_resources:
         r = yaml.load(r_path)
         if r["status"] != "accepted":
@@ -75,8 +77,8 @@ def main() -> int:
             if isinstance(this_version["source"], dict):
                 this_version["source"] = this_version["rdf_source"]
 
-            (resources_dir / version_sub_path).mkdir(parents=True, exist_ok=True)
             v_path = resources_dir / version_sub_path / "rdf.yaml"
+            v_path.parent.mkdir(parents=True, exist_ok=True)
             yaml.dump(this_version, v_path)
 
             # add validation summaries
@@ -117,7 +119,7 @@ def main() -> int:
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
-    rdf_path = Path("dist/gh-pages/rdf.yaml")
+    rdf_path = dist_dir / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
 
@@ -137,8 +139,6 @@ def main() -> int:
     rdf = remap(rdf, convert_for_json)
     with open(rdf_path.with_suffix(".json"), "w") as f:
         json.dump(rdf, f, allow_nan=False)
-
-    return 0
 
 
 if __name__ == "__main__":
