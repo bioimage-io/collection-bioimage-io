@@ -105,7 +105,7 @@ def ensure_valid_conda_env_name(name: str) -> str:
 
 
 def prepare_dynamic_test_cases(
-    rd: Union[Model, RDF], resource_id: str, version_id: str, resource_folder: Path
+    rd: Union[Model, RDF], resource_id: str, version_id: str, resources_folder: Path
 ) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
@@ -114,7 +114,7 @@ def prepare_dynamic_test_cases(
         for wf in rd.weights:
             env_name = ensure_valid_conda_env_name(version_id)
             write_conda_env_file(
-                rd=rd, weight_format=wf, path=resource_folder / version_id / f"conda_env_{wf}.yaml", env_name=env_name
+                rd=rd, weight_format=wf, path=resources_folder / resource_id / version_id / f"conda_env_{wf}.yaml", env_name=env_name
             )
             validation_cases.append(
                 {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
@@ -127,7 +127,7 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-def main(collection_folder: Path, resource_folder: Path, pending_matrix: str):
+def main(collection_folder: Path, resources_folder: Path, pending_matrix: str):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
         resource_id = matrix["resource_id"]
@@ -145,7 +145,7 @@ def main(collection_folder: Path, resource_folder: Path, pending_matrix: str):
 
         static_summary = validate(source)
         static_summary["name"] = "bioimageio.spec static validation"
-        static_summary_path = resource_folder / version_id / "validation_summary_static.yaml"
+        static_summary_path = resources_folder / resource_id / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if not static_summary["error"]:
@@ -153,7 +153,7 @@ def main(collection_folder: Path, resource_folder: Path, pending_matrix: str):
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(source, update_to_format="latest")
                 assert isinstance(rd, RDF)
-                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, resource_folder)
+                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, resources_folder)
 
             latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
 

@@ -50,12 +50,13 @@ def main(
 
         rdf_data.update(v)
 
-        (resource_folder / version_id).mkdir(parents=True, exist_ok=True)
-        yaml.dump(rdf_data, resource_folder / version_id / "rdf.yaml")
+        version_folder = resource_folder / version_id
+        version_folder.mkdir(parents=True, exist_ok=True)
+        yaml.dump(rdf_data, version_folder / "rdf.yaml")
 
         # move validation summaries and conda env yaml files from artifact to version_id folder
         for sp in artifact_dir.glob(f"**/{version_id.replace('/', '')}*/**/*.yaml"):
-            shutil.move(str(sp), str(resource_folder / version_id))
+            shutil.move(str(sp), str(version_folder))
 
     return 0
 

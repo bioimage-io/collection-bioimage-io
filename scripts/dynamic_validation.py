@@ -15,7 +15,7 @@ except ImportError:
 
 def main(
     collection_folder: Path,
-    resource_folder: Path,
+    resources_folder: Path,
     resource_id: str,
     version_id: str,
     weight_format: Optional[str] = typer.Argument(None, help="weight format to test model with."),
@@ -24,7 +24,7 @@ def main(
         # no dynamic tests for non-model resources...
         return
 
-    summary_path = resource_folder / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
+    summary_path = resources_folder / resource_id / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
 
     resource_versions = [
         v
