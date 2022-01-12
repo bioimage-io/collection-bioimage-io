@@ -38,7 +38,7 @@ jobs:
       run: pip install typer ruamel.yaml
     - name: get pending validations
       id: get_pending
-      run: python scripts/get_pending_validations.py collection gh-pages
+      run: python scripts/get_pending_validations.py
     - name: debug found pending ${{ steps.get_pending.outputs.has_pending_matrix }}
       run: echo ${{ steps.get_pending.outputs.pending_matrix }}
 
