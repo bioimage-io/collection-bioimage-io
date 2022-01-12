@@ -3,7 +3,7 @@ from pathlib import Path
 import typer
 from ruamel.yaml import YAML
 
-from utils import set_gh_actions_outputs
+from utils import resolve_partners, set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
 MAIN_BRANCH_URL = "https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/main"
@@ -12,16 +12,19 @@ MAIN_BRANCH_URL = "https://raw.githubusercontent.com/bioimage-io/collection-bioi
 def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
     gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
+    collection_rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
 ):
     """output all accepted resource versions that are missing (static) validation"""
     resources_dir = gh_pages_dir / "resources"
 
     pending = []
-    for r_path in collection_dir.glob("**/resource.yaml"):
-        r = yaml.load(r_path)
-        if r["status"] != "accepted":
-            continue
-
+    collection_resources = [yaml.load(r_path) for r_path in collection_dir.glob("**/resource.yaml")]
+    collection_resources = [r for r in collection_resources if r["status"] == "accepted"]
+    partners, partner_resources, updated_partners, ignored_partners = resolve_partners(
+        yaml.load(collection_rdf_template_path)
+    )
+    known_resources = partner_resources + collection_resources
+    for r in known_resources:
         resource_id = r["id"]
         for v in r["versions"]:
             if v["status"] != "accepted":

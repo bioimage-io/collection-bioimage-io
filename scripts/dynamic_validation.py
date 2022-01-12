@@ -26,14 +26,16 @@ def main(
 
     summary_path = resources_dir / resource_id / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
 
-    resource_versions = [
-        v
-        for v in yaml.load(collection_dir / resource_id / "resource.yaml")["versions"]
-        if v["version_id"] == version_id
-    ]
-    assert len(resource_versions) == 1
-    resource_version = resource_versions[0]
-    source = resource_version["source"]
+    resource_path = collection_dir / resource_id / "resource.yaml"
+    if resource_path.exists():
+        # resource from collection folder
+        resource_versions = [v for v in yaml.load(resource_path)["versions"] if v["version_id"] == version_id]
+        assert len(resource_versions) == 1
+        resource_version = resource_versions[0]
+        source = resource_version["source"]
+    else:
+        # resource from partner
+        source = resource_path / resource_id / version_id
 
     summary = test_resource(source, weight_format=weight_format)
     summary["name"] = "reproduced test outputs"

@@ -1,6 +1,8 @@
+import copy
 import json
+import warnings
 from itertools import product
-from typing import Any, Dict, Union
+from typing import Any, Dict, List, Tuple, Union
 
 
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
@@ -39,3 +41,66 @@ def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
         keys = list(matrix)
         for vals in product(*[matrix[k] for k in keys]):
             yield dict(zip(keys, vals))
+
+
+def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
+    from bioimageio.spec import load_raw_resource_description
+    from bioimageio.spec.collection.v0_2.raw_nodes import Collection
+    from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
+
+    current_format = "0.2.2"
+
+    partners = []
+    partner_resources = []
+    updated_partners = set()
+    ignored_partners = set()
+    if "partners" in rdf["config"]:
+        partners = copy.deepcopy(rdf["config"]["partners"])
+        for idx in range(len(partners)):
+            partner = partners[idx]
+            try:
+                partner_collection = load_raw_resource_description(partner["source"], update_to_format=current_format)
+                assert isinstance(partner_collection, Collection)
+            except Exception as e:
+                warnings.warn(
+                    f"Invalid partner source {partner['source']} (Cannot update to format {current_format}): {e}"
+                )
+                ignored_partners.add(f"partner[{idx}]")
+                continue
+
+            partner_id = partner.get("id") or partner_collection.id
+            if not partner_id:
+                warnings.warn(f"Missing partner id for partner {idx}: {partner}")
+                ignored_partners.add(f"partner[{idx}]")
+                continue
+
+            if partner_collection.config:
+                partners[idx].update(partner_collection.config)
+
+            partners[idx]["id"] = partner_id
+
+            for entry_rdf, entry_error in resolve_collection_entries(partner_collection, collection_id=partner_id):
+                if entry_error:
+                    warnings.warn(f"partner[{idx}] {partner_id}: {entry_error}")
+                    ignored_partners.add(f"partner[{idx}]: {partner_id}")
+                    continue
+
+                updated_partners.add(f"partner[{idx}]: {partner_id}")
+                partner_resources.append(
+                    dict(
+                        status="accepted",
+                        id=entry_rdf["id"],
+                        type=entry_rdf.get("type", "unknown"),
+                        versions=[
+                            dict(
+                                name=entry_rdf.get("name", "unknown"),
+                                version_id="latest",
+                                version_name="latest",
+                                status="accepted",
+                                source=entry_rdf,
+                            )
+                        ],
+                    )
+                )
+
+    return partners, partner_resources, updated_partners, ignored_partners

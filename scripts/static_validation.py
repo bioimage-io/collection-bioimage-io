@@ -114,7 +114,10 @@ def prepare_dynamic_test_cases(
         for wf in rd.weights:
             env_name = ensure_valid_conda_env_name(version_id)
             write_conda_env_file(
-                rd=rd, weight_format=wf, path=resources_dir / resource_id / version_id / f"conda_env_{wf}.yaml", env_name=env_name
+                rd=rd,
+                weight_format=wf,
+                path=resources_dir / resource_id / version_id / f"conda_env_{wf}.yaml",
+                env_name=env_name,
             )
             validation_cases.append(
                 {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
@@ -134,14 +137,18 @@ def main(collection_dir: Path, resources_dir: Path, pending_matrix: str):
         version_id = matrix["version_id"]
 
         resource_path = collection_dir / resource_id / "resource.yaml"
-        resource = yaml.load(resource_path)
-
-        for v in resource["versions"]:
-            if v["version_id"] == version_id:
-                source = v["source"]
-                break
+        if resource_path.exists():
+            # resource from collection folder
+            resource = yaml.load(resource_path)
+            for v in resource["versions"]:
+                if v["version_id"] == version_id:
+                    source = v["source"]
+                    break
+            else:
+                raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
         else:
-            raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
+            # resource from partner
+            source = resources_dir / resource_id / version_id / "rdf.yaml"
 
         static_summary = validate(source)
         static_summary["name"] = "bioimageio.spec static validation"
