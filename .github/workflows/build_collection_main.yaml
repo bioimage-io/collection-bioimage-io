@@ -51,7 +51,7 @@ jobs:
       with:
         pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
         has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix == 'yes' }}
-        check_validation: true
+        deploy: true
 
   build-collection-again:
     needs: [get-pending-validation, validate]
