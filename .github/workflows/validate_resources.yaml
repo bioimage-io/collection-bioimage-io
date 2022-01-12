@@ -32,7 +32,7 @@ jobs:
       run: pip install requests typer ruamel.yaml bioimageio.spec
     - name: static validation
       id: static_validation
-      run: python scripts/static_validation.py collection dist/resources ${{ inputs.pending_matrix }}
+      run: python scripts/static_validation.py collection dist/resources '${{ inputs.pending_matrix }}'
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::$(echo ${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
