@@ -20,7 +20,7 @@ jobs:
       with:
         clean: false
         branch: gh-pages
-        folder: dist/gh-pages
+        folder: gh-pages
 
   get-pending-validation:
     runs-on: ubuntu-latest
@@ -69,4 +69,4 @@ jobs:
       with:
         clean: false
         branch: gh-pages
-        folder: dist/gh-pages
+        folder: gh-pages
