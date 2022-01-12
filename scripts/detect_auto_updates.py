@@ -6,18 +6,19 @@ import typer
 from utils import set_gh_actions_output
 
 
-def main():
+def main(
+    prefix: str):
     subprocess.run(["git", "fetch"])
     remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
     remote_branches = [
-        rb[len("origin/auto-update-") :]
+        rb[len(f"origin/{prefix}") :]
         for rb in remote_branch_proc.stdout.split()
-        if rb.startswith("origin/auto-update-")
+        if rb.startswith(f"origin/{prefix}")
     ]
-    print("Found remote auto-update branches of:")
+    print(f"Found remote {prefix} branches of:")
     pprint(remote_branches)
 
-    set_gh_actions_output("auto-update-branches", ",".join(remote_branches))
+    set_gh_actions_output("branches", ",".join(remote_branches))
 
 
 if __name__ == "__main__":
