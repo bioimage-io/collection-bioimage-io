@@ -8,19 +8,19 @@ on:
         type: string
       has_pending_matrix:
         required: true
-        type: boolean
+        type: string
       check_validation:
         required: false
-        default: false
-        type: boolean
+        default: 'no'
+        type: string
       deploy:
         required: false
-        default: false
-        type: boolean
+        default: 'no'
+        type: string
 
 jobs:
   static-validation:
-    if: inputs.has_pending_matrix
+    if: inputs.has_pending_matrix == 'yes'
     runs-on: ubuntu-latest
     outputs:
       has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
@@ -82,7 +82,7 @@ jobs:
 
   passed-validation:
     needs: dynamic-validation
-    if: always()  && inputs.check_validation
+    if: always()  && inputs.check_validation == 'yes'
     runs-on: ubuntu-latest
 
     steps:
@@ -98,7 +98,7 @@ jobs:
 
   deploy:
     needs: [static-validation, dynamic-validation]
-    if: always() && inputs.deploy && inputs.has_pending_matrix  # run even if dynamic validation fails
+    if: always() && inputs.deploy == 'yes' && inputs.has_pending_matrix == 'yes'  # run even if dynamic validation fails
     runs-on: ubuntu-latest
 
     steps:
