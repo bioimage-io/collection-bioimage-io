@@ -1,5 +1,4 @@
 import json
-import warnings
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
@@ -10,11 +9,9 @@ from marshmallow import missing
 from ruamel.yaml import YAML
 
 from bioimageio.spec import load_raw_resource_description
-from bioimageio.spec.collection.v0_2.raw_nodes import Collection
-from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 from bioimageio.spec.io_ import serialize_raw_resource_description_to_dict
 from imjoy_plugin_parser import get_plugin_as_rdf
-from scripts.utils import resolve_partners
+from utils import resolve_partners
 
 yaml = YAML(typ="safe")
 
