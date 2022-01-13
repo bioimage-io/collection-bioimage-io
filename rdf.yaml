@@ -48,7 +48,21 @@ collection:
   status: accepted
   tags: [ilastik, bioimage.io]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/ilastik/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version: 0.2.1
   version_id: latest
   version_name: latest
@@ -93,7 +107,21 @@ collection:
   tags: [high-content-imaging, fluorescence-light-microscopy, 2D, cells, nuclei, covid19,
     semantic-segmentation, instance-segmentation]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/covid_if_training_data/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors:
@@ -137,7 +165,21 @@ collection:
   tags: [electron-microscopy, brain, neurons, instance-segmentation, cremi-challenge,
     3D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/cremi_training_data/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors:
@@ -179,7 +221,21 @@ collection:
   tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
     2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/stradist_dsb_training_data/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors:
@@ -219,7 +275,21 @@ collection:
   status: accepted
   tags: [electron-microscopy, brain, neurons, instance-segmentation, 2D, isbi2012-challenge]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors:
@@ -259,7 +329,21 @@ collection:
   status: accepted
   tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/livecell_dataset/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors:
@@ -299,7 +383,21 @@ collection:
   status: accepted
   tags: [mitochondria, electron-microscopy, 3D, mito-em-challenge, instance-segmentation]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/mitoem_segmentation_challenge/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors:
@@ -342,7 +440,21 @@ collection:
   tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
     3D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/platynereis_em_training_data/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 config:
