@@ -23,7 +23,7 @@ jobs:
       run: pip install bioimageio.spec
     - name: update known resources
       id: update_known
-      run: python scripts/update_known_resources.py collection 1
+      run: python scripts/update_known_resources.py collection 3
     - name: "Upload updated collection"
       uses: actions/upload-artifact@v2
       with:
