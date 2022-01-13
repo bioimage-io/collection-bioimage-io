@@ -22,6 +22,7 @@ def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
+    dist: Path = Path(__file__).parent / "../gh-pages",
 ):
     rdf = yaml.load(rdf_template_path)
     resources_dir = gh_pages_dir / "resources"
@@ -114,7 +115,7 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
-    rdf_path = gh_pages_dir / "rdf.yaml"
+    rdf_path = dist / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
 
