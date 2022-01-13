@@ -35,7 +35,7 @@ def main(
         source = resource_version["source"]
     else:
         # resource from partner
-        source = resource_path / resource_id / version_id
+        source = resources_dir / resource_id / version_id
 
     summary = test_resource(source, weight_format=weight_format)
     summary["name"] = "reproduced test outputs"
