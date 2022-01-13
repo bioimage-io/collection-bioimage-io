@@ -31,6 +31,7 @@ def main(
             for subdir in tgt_subdirs[::-1]:
                 tgt /= subdir
 
+            tgt.mkdir(parents=True, exist_ok=True)
             shutil.move(str(sp), str(tgt))
             print('moved', tgt / sp.name)
 
