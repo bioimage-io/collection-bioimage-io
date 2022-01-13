@@ -23,6 +23,7 @@ def main(
         version_folder.mkdir(parents=True, exist_ok=True)
         for sp in artifact_dir.glob(f"**/{resource_id.replace('/', '')}{version_id.replace('/', '')}*/**/*.yaml"):
             shutil.move(str(sp), str(version_folder))
+            print('moved', version_folder / sp.name)
 
 
 if __name__ == "__main__":
