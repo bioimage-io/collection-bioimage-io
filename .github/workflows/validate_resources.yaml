@@ -37,12 +37,12 @@ jobs:
       run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::$(echo ${{ matrix.resource_id }}${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
+      run: echo ::set-output name=name::static_validation_artifact
     - name: "Upload validation summaries"
       uses: actions/upload-artifact@v2
       with:
         name: ${{ steps.artifact_name.outputs.name }}
-        path: dist/resources/${{ matrix.resource_id }}/${{ matrix.version_id }}
+        path: dist/resources
         retention-days: 1
 
   dynamic-validation:
@@ -58,7 +58,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::$(echo ${{ matrix.resource_id }}${{ matrix.version_id }} | sed 's#/##g')static_validation_artifact
+      run: echo ::set-output name=name::$(echo ${{ matrix.resource_id }}${{ matrix.version_id }} | sed 's#/##g')dynamic_validation_artifact
     - name: download environment.yaml
       uses: actions/download-artifact@v2
       with:

@@ -18,7 +18,23 @@ def main(
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
 
-        # move validation summaries and conda env yaml files from artifact to version_id folder
+        # move static validation summaries to resource_dir
+        resources_dir.mkdir(parents=True, exist_ok=True)
+        for sp in artifact_dir.glob(f"static_validation_artifact/**/*.yaml"):
+            tgt_subdirs = []
+            tgt_part = Path(sp.parent)
+            while tgt_part != tgt_part.parent and tgt_part.name != "static_validation_artifact":
+                tgt_subdirs.append(tgt_part.name)
+                tgt_part = tgt_part.parent
+
+            tgt = Path(resources_dir)
+            for subdir in tgt_subdirs[::-1]:
+                tgt /= subdir
+
+            shutil.move(str(sp), str(tgt))
+            print('moved', tgt / sp.name)
+
+        # move dynamic validation summaries and conda env yaml files from artifact to version_id folder
         version_folder = resources_dir / resource_id / version_id
         version_folder.mkdir(parents=True, exist_ok=True)
         for sp in artifact_dir.glob(f"**/{resource_id.replace('/', '')}{version_id.replace('/', '')}*/**/*.yaml"):
