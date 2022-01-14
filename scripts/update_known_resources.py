@@ -125,7 +125,7 @@ def update_from_zenodo(
         for hit in hits:
             resource_doi = hit["conceptdoi"]
             doi = hit["doi"]  # "version" doi
-            created = datetime.fromisoformat(hit["created"])
+            created = datetime.fromisoformat(hit["created"]).replace(tzinfo=None)
             assert isinstance(created, datetime), created
             resource_path = collection_dir / resource_doi / "resource.yaml"
             version_name = f"revision {hit['revision']}"
