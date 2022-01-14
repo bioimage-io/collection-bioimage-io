@@ -23,15 +23,6 @@ def main(
                 v["status"] = "blocked"
                 made_changes = True
 
-        if any(v["status"] == "accepted" for v in resource["versions"]):
-            resource_status = "accepted"
-        else:
-            resource_status = "blocked"
-
-        if resource["status"] != resource_status:
-            resource["status"] = resource_status
-            made_changes = True
-
         if made_changes:
             yaml.dump(resource, resource_path)
 

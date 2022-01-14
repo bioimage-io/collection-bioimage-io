@@ -60,6 +60,9 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
             except Exception as e:
                 warnings.warn(f"Failed to resolve weight dependencies: {e}")
                 conda_env = dict(minimal_conda_env)
+                conda_env["channels"].insert(0, "pytorch")
+                conda_env["dependencies"].append("pytorch")
+                conda_env["dependencies"].append("cpuonly")
 
         elif weight_format == "torchscript":
             conda_env["channels"].insert(0, "pytorch")
@@ -71,14 +74,14 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
             if not tf_version:
                 # todo: document default tf version
                 tf_version = "1.15"
-            conda_env["dependencies"].append(f"pip")
+            conda_env["dependencies"].append("pip")
             conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "keras_hdf5":
             tf_version = rd.weights["keras_hdf5"].tensorflow_version
             if not tf_version:
                 # todo: document default tf version
                 tf_version = "1.15"
-            conda_env["dependencies"].append(f"pip")
+            conda_env["dependencies"].append("pip")
             conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "onnx":
             conda_env["dependencies"].append("onnxruntime")
