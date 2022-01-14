@@ -20,7 +20,8 @@ def get_tf_dep(tf_version):
     if tf_patch:
         warnings.warn(f"Tensorflow patch version {tf_patch} in {tf_version} will be ignored")
     # we pin the whole range between tf_minor and tf_minor + 1 to make condas job easier
-    return f"tensorflow >={tf_major}.{tf_minor},<{tf_major}.{tf_minor + 1}"
+    next_minor = int(tf_minor) + 1
+    return f"tensorflow >={tf_major}.{tf_minor},<{tf_major}.{next_minor}"
 
 
 def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name: str):
