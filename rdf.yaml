@@ -39,7 +39,21 @@ collection:
   status: accepted
   tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Aki Stubb, Guillaume Jacquemet, Johanna Ivaska]
@@ -78,7 +92,21 @@ collection:
   status: accepted
   tags: [Noise2Void, denoising, ZeroCostDL4Mic, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -117,7 +145,21 @@ collection:
   status: accepted
   tags: [Noise2Void, denoising, ZeroCostDL4Mic, 3D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -156,7 +198,21 @@ collection:
   status: accepted
   tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -195,7 +251,21 @@ collection:
   status: accepted
   tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn]
@@ -234,7 +304,21 @@ collection:
   status: accepted
   tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christophe Leterrier, Romain F. Laine]
@@ -275,7 +359,21 @@ collection:
   status: accepted
   tags: [SMLM, Deep-STORM, ZeroCostDL4Mic, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -315,7 +413,21 @@ collection:
   status: accepted
   tags: [CycleGAN, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_CycleGAN_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -354,7 +466,21 @@ collection:
   status: accepted
   tags: [pix2pix, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_pix2pix_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet, Lucas von Chamier]
@@ -394,7 +520,21 @@ collection:
   status: accepted
   tags: [YOLOv2, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -438,7 +578,21 @@ collection:
   status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Nathan H. Roy, Guillaume Jacquemet]
@@ -481,7 +635,21 @@ collection:
   status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Gautier Follain, Guillaume Jacquemet]
@@ -524,7 +692,21 @@ collection:
   status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Hussein Al-Akhrass, Johanna Ivaska, Guillaume Jacquemet]
@@ -568,7 +750,21 @@ collection:
   status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet]
@@ -612,7 +808,21 @@ collection:
   status: accepted
   tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Mia Conduit, Séamus Holden]
@@ -654,7 +864,21 @@ collection:
   status: accepted
   tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Spahn Christoph, Heilemann Mike]
@@ -696,7 +920,21 @@ collection:
   status: accepted
   tags: [U-Net, segmentation, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_U-Net_2D_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann, Mia Conduit, Séamus Holden, Pedro Matos
@@ -739,7 +977,21 @@ collection:
   status: accepted
   tags: [StarDist, segmentation, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_StarDist_2D_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
@@ -781,7 +1033,21 @@ collection:
   status: accepted
   tags: [StarDist, segmentation, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_SplineDist_2D_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Mia Conduit, Séamus Holden]
@@ -823,7 +1089,21 @@ collection:
   status: accepted
   tags: [Noise2Void, denoising, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_Noise2Void_2D_subtilis_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
@@ -865,7 +1145,21 @@ collection:
   status: accepted
   tags: [Noise2Void, CARE, denoising, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_CARE_2D_coli_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
@@ -908,7 +1202,21 @@ collection:
   status: accepted
   tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
@@ -950,7 +1258,21 @@ collection:
   status: accepted
   tags: [YOLOv2, object detection, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_YOLOv2_coli_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
@@ -992,7 +1314,21 @@ collection:
   status: accepted
   tags: [YOLOv2, object detection, DeepBacs, 2D]
   type: dataset
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Dataset_YOLOv2_antibiotic_DeepBacs/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - api_version: 0.2.3
@@ -1037,7 +1373,22 @@ collection:
   status: accepted
   tags: [zero, bioimage.io]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook
+        Preview/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version: 0.1.0
   version_id: latest
   version_name: latest
@@ -1091,7 +1442,21 @@ collection:
   status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_U-Net_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Daniel Krentzel and the ZeroCostDL4Mic Team]
@@ -1142,7 +1507,21 @@ collection:
   status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -1197,7 +1576,21 @@ collection:
   status: accepted
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_StarDist_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -1247,7 +1640,21 @@ collection:
   status: accepted
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_StarDist_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
@@ -1301,7 +1708,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
@@ -1354,7 +1775,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -1412,7 +1847,21 @@ collection:
   status: accepted
   tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -1467,7 +1916,21 @@ collection:
   status: accepted
   tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -1522,7 +1985,21 @@ collection:
   status: accepted
   tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -1577,7 +2054,21 @@ collection:
   status: accepted
   tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_fnet_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
@@ -1636,7 +2127,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -1689,7 +2194,21 @@ collection:
   status: accepted
   tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -1744,7 +2263,21 @@ collection:
   status: accepted
   tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -1798,7 +2331,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Augmentor_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -1853,7 +2400,21 @@ collection:
   status: accepted
   tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
@@ -1914,7 +2475,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
@@ -1967,7 +2542,21 @@ collection:
   status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
@@ -2021,7 +2610,21 @@ collection:
   status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams]
@@ -2076,7 +2679,21 @@ collection:
   tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel,
     ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
@@ -2133,7 +2750,21 @@ collection:
   status: accepted
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -2188,7 +2819,21 @@ collection:
   status: accepted
   tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_RCAN_3D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Romain F. Laine and the ZeroCostDL4Mic Team]
@@ -2242,7 +2887,21 @@ collection:
   status: accepted
   tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_SplineDist_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -2293,7 +2952,21 @@ collection:
   status: accepted
   tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -2343,7 +3016,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Detectron2_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -2393,7 +3080,21 @@ collection:
   status: accepted
   tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_DRMIME_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -2447,7 +3148,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Cellpose_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: ['Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team']
@@ -2496,7 +3211,21 @@ collection:
   status: accepted
   tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_RetinaNet_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -2548,7 +3277,21 @@ collection:
   status: accepted
   tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: ['Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team']
@@ -2600,7 +3343,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
@@ -2648,7 +3405,21 @@ collection:
   status: accepted
   tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_MaskRCNN_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
@@ -2695,7 +3466,21 @@ collection:
   status: accepted
   tags: [colab, notebook, Quality Control, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_Quality_Control_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: ['Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team']
@@ -2748,7 +3533,21 @@ collection:
   status: accepted
   tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_DFCAN_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - authors: ['Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team']
@@ -2798,7 +3597,21 @@ collection:
   status: accepted
   tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
   type: application
-  validation_summaries: {}
+  validation_summaries:
+    static:
+      error: '[Errno 2] No such file or directory: ''dist/resources/zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic/latest/rdf.yaml'''
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+          line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
+        "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
+          line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
+          \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
+          line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
+          line 1222, in open\n    return io.open(self, mode, buffering, encoding,
+          errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
+          in _opener\n    return self._accessor.open(self, flags, mode)\n"]
+      warnings: {}
   version_id: latest
   version_name: latest
 - api_version: 0.1.7
