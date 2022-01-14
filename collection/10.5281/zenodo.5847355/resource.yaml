@@ -5,4 +5,4 @@ type: model
 versions:
 - {created: ! '2022-01-13 21:13:49.264581+00:00', doi: 10.5281/zenodo.5847356, name: CovidIFCellSegmentationBoundaryModel,
   source: 'https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/rdf.yaml',
-  status: blocked, version_id: 10.5281/zenodo.5847356, version_name: revision 1}
+  status: accepted, version_id: 10.5281/zenodo.5847356, version_name: revision 1}
