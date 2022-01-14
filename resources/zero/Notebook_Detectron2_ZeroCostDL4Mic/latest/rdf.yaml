@@ -8,21 +8,41 @@ cite:
     Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
 - {doi: 'https://github.com/facebookresearch/detectron2', text: 'Yuxin Wu and Alexander
     Kirillov and Francisco Massa and Wan-Yen Lo and Ross Girshick. Detectron2. https://github.com/facebookresearch/detectron2'}
+config:
+  background_image: static/img/zoo-background.svg
+  default_type: application
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  id: zero
+  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  name: ZeroCostDL4Mic
+  resource_types: [model, application, dataset]
+  splash_feature_list: []
+  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
+    Microscopy
+  splash_title: ZeroCostDL4Mic
+  tags: [ZeroCostDL4Mic]
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  version: 1.7.1
 covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png',
   'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png']
-created: '2021-12-26T23:42:20.578632'
 description: Object detection of 2D images. Detectron2 is an object detection network
   developed by Facebook AI Research, which identifies objects in images and draws
   bounding boxes around them.
 documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
 download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
+format_version: 0.2.2
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-links: [zero/Notebook Preview, zero/Dataset_YOLOv2_ZeroCostDL4Mic, zero/Dataset_YOLOv2_coli_DeepBacs,
-  zero/Dataset_YOLOv2_antibiotic_DeepBacs]
+id: zero/Notebook_Detectron2_ZeroCostDL4Mic
+links: [Notebook Preview, Dataset_YOLOv2_ZeroCostDL4Mic, Dataset_YOLOv2_coli_DeepBacs,
+  Dataset_YOLOv2_antibiotic_DeepBacs]
+maintainers: []
 name: Detectron2 - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Detectron2_ZeroCostDL4Mic/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Detectron2_ZeroCostDL4Mic/latest/rdf.yaml
 status: accepted
 tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
 type: application
 version_id: latest
+version_name: latest

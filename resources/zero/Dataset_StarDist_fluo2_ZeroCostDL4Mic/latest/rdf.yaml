@@ -7,16 +7,36 @@ cite:
     recruitment in clathrin- and dynamin-independent endocytosis. Nat Cell Biol. 2021
     Oct;23(10):1073-1084. doi: 10.1038/s41556-021-00767-x. Epub 2021 Oct 6. PMID:
     34616024.'}
+config:
+  background_image: static/img/zoo-background.svg
+  default_type: application
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  id: zero
+  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  name: ZeroCostDL4Mic
+  resource_types: [model, application, dataset]
+  splash_feature_list: []
+  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
+    Microscopy
+  splash_title: ZeroCostDL4Mic
+  tags: [ZeroCostDL4Mic]
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  version: 1.7.1
 covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png']
-created: '2021-12-26T23:42:20.796678'
 description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual
   segmentation
 documentation: https://zenodo.org/record/4811213
 download_url: https://zenodo.org/record/4811213
+format_version: 0.2.2
+id: zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
+maintainers: []
 name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest/rdf.yaml
 status: accepted
 tags: [StarDist, ZeroCostDL4Mic]
 type: dataset
 version_id: latest
+version_name: latest
