@@ -1,6 +1,5 @@
 attachments:
   files: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/zero_mean_unit_variance.ijm']
-  unknown: {}
 authors:
 - {affiliation: EMBL Heidelberg, name: Constantin Pape}
 cite:
@@ -28,11 +27,11 @@ config:
       - {name: sample_output_0.tif, size: 256 x 256 x 1 x 2, type: image}
       runtime: null
 covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
-created: '2022-01-03T12:50:21.301492'
+created: 2021-12-07 18:02:09.736653
 description: Nucleus segmentation for fluorescence microscopy
 documentation: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
 doi: 10.5281/zenodo.5764893
-format_version: 0.4.1
+format_version: 0.4.2
 inputs:
 - axes: bcyx
   data_range: [0.0, 255.0]
@@ -60,6 +59,7 @@ outputs:
     offset: [0.0, 0.0, 0.0, 0.0]
     reference_tensor: input0
     scale: [1.0, 2.0, 1.0, 1.0]
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
 source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
