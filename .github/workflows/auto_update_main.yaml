@@ -4,8 +4,8 @@ concurrency: generate-auto-update  # do not run this workflow in parallel
 on:
   push:
     branches: [ main ]
-#   schedule:
-#     - cron:  '0 1,13 * * *'
+  schedule:
+    - cron:  '0 1,13 * * *'
   workflow_dispatch: # triggered by http endpoints
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       run: pip install bioimageio.spec
     - name: update known resources
       id: update_known
-      run: python scripts/update_known_resources.py collection 3
+      run: python scripts/update_known_resources.py collection 15
     - name: "Upload updated collection"
       uses: actions/upload-artifact@v2
       with:

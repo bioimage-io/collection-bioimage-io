@@ -22,9 +22,9 @@ def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
+    dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
-    resources_dir = gh_pages_dir / "resources"
 
     partners, partner_resources, updated_partners, ignored_partners = resolve_partners(rdf)
     if "partners" in rdf["config"]:
@@ -46,6 +46,7 @@ def main(
         for v in r["versions"]:
             if v["status"] != "accepted":
                 continue
+
             if isinstance(v["source"], dict):
                 if v["source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
                     this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], v["source"]["source"]))
@@ -71,14 +72,15 @@ def main(
             if isinstance(this_version["source"], dict):
                 this_version["source"] = this_version["rdf_source"]
 
-            v_path = resources_dir / resource_id / v["version_id"] / "rdf.yaml"
-            v_path.parent.mkdir(parents=True, exist_ok=True)
-            with v_path.open("wt", encoding="utf-8") as f:
+            v_deploy_path = dist / "resources" / resource_id / v["version_id"] / "rdf.yaml"
+            v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
+            with v_deploy_path.open("wt", encoding="utf-8") as f:
                 yaml.dump(this_version, f)
 
-            # add validation summaries to this version in the collection
+            # add validation summaries to this version in the collection rdf
             val_summaries = {}
-            for val_path in v_path.parent.glob("validation_summary_*.yaml"):
+            v_folder = gh_pages_dir / "resources" / resource_id / v["version_id"]
+            for val_path in v_folder.glob("validation_summary_*.yaml"):
                 name = val_path.stem.replace("validation_summary_", "")
                 val_sum = yaml.load(val_path)
                 if not isinstance(val_sum, dict):
@@ -114,7 +116,7 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
-    rdf_path = gh_pages_dir / "rdf.yaml"
+    rdf_path = dist / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rdf, rdf_path)
 
