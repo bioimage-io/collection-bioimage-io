@@ -15,6 +15,14 @@ from utils import iterate_over_gh_matrix, set_gh_actions_outputs
 yaml = YAML(typ="safe")
 
 
+def get_tf_dep(tf_version):
+    tf_major, tf_minor, *tf_patch = tf_version.split(".")
+    if tf_patch:
+        warnings.warn(f"Tensorflow patch version {tf_patch} in {tf_version} will be ignored")
+    # we pin the whole range between tf_minor and tf_minor + 1 to make condas job easier
+    return f"tensorflow >={tf_major}.{tf_minor},<{tf_major}.{tf_minor + 1}"
+
+
 def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name: str):
     # minimal env for invalid model rdf to be checked with bioimageio.spec for validation errors only
     minimal_conda_env: Dict[str, List[Union[str, Dict[str, List[str]]]]] = {
@@ -60,6 +68,9 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
             except Exception as e:
                 warnings.warn(f"Failed to resolve weight dependencies: {e}")
                 conda_env = dict(minimal_conda_env)
+                conda_env["channels"].insert(0, "pytorch")
+                conda_env["dependencies"].append("pytorch")
+                conda_env["dependencies"].append("cpuonly")
 
         elif weight_format == "torchscript":
             conda_env["channels"].insert(0, "pytorch")
@@ -71,15 +82,19 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
             if not tf_version:
                 # todo: document default tf version
                 tf_version = "1.15"
-            conda_env["dependencies"].append(f"pip")
-            conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
+            conda_env["dependencies"].append(get_tf_dep(tf_version))
+            # installing tf via pip with hard pin fails, so instead I have switched to conda with a softer pin
+            # conda_env["dependencies"].append("pip")
+            # conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "keras_hdf5":
             tf_version = rd.weights["keras_hdf5"].tensorflow_version
             if not tf_version:
                 # todo: document default tf version
                 tf_version = "1.15"
-            conda_env["dependencies"].append(f"pip")
-            conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
+            conda_env["dependencies"].append(get_tf_dep(tf_version))
+            # installing tf via pip with hard pin fails, so instead I have switched to conda with a softer pin
+            # conda_env["dependencies"].append("pip")
+            # conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "onnx":
             conda_env["dependencies"].append("onnxruntime")
             # note: we should not need to worry about the opset version,
