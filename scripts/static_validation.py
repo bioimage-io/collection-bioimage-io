@@ -88,17 +88,14 @@ def write_conda_env_file(*, rd: Model, weight_format: str, path: Path, env_name:
             # conda_env["dependencies"].append("pip")
             # conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "keras_hdf5":
-            # we skip the keras validation for now, see
-            # https://github.com/bioimage-io/collection-bioimage-io/issues/16
-            warnings.warn("keras weights are currently not validated")
-            # tf_version = str(rd.weights["keras_hdf5"].tensorflow_version)
-            # if not tf_version:
-            #     # todo: document default tf version
-            #     tf_version = "1.15"
-            # conda_env["dependencies"].append(get_tf_dep(tf_version))
-            # # installing tf via pip with hard pin fails, so instead I have switched to conda with a softer pin
-            # # conda_env["dependencies"].append("pip")
-            # # conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
+            tf_version = str(rd.weights["keras_hdf5"].tensorflow_version)
+            if not tf_version:
+                # todo: document default tf version
+                tf_version = "1.15"
+            conda_env["dependencies"].append(get_tf_dep(tf_version))
+            # installing tf via pip with hard pin fails, so instead I have switched to conda with a softer pin
+            # conda_env["dependencies"].append("pip")
+            # conda_env["dependencies"].append({"pip": [f"tensorflow=={tf_version}"]})
         elif weight_format == "onnx":
             conda_env["dependencies"].append("onnxruntime")
             # note: we should not need to worry about the opset version,
@@ -131,6 +128,11 @@ def prepare_dynamic_test_cases(
     if isinstance(rd, Model):
         # generate validation cases per weight format
         for wf in rd.weights:
+            # we skip the keras validation for now, see
+            # https://github.com/bioimage-io/collection-bioimage-io/issues/16
+            if wf == "keras_hdf5":
+                warnings.warn("keras weights are currently not validated")
+                continue
             env_name = ensure_valid_conda_env_name(version_id)
             write_conda_env_file(
                 rd=rd,
