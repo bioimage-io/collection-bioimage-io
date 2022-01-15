@@ -43,43 +43,47 @@ def main(
     for r in known_resources:
         resource_id = r["id"]
         latest_version = None
-        for v in r["versions"]:
-            if v["status"] != "accepted":
+        for version_info in r["versions"]:
+            if version_info["status"] != "accepted":
                 continue
 
-            if isinstance(v["source"], dict):
-                if v["source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
-                    this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], v["source"]["source"]))
-                else:
-                    this_version = {}
+            # Ignore the name in the version info
+            del version_info["name"]
 
-                this_version.update(v["source"])
+            if isinstance(version_info["source"], dict):
+                if version_info["source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
+                    rdf_info = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["source"]["source"]))
+                else:
+                    rdf_info = {}
+
+                # Inherit the info from e.g. the collection
+                this_version = version_info["source"].copy()
+                this_version.update(rdf_info)
                 assert missing not in this_version.values(), this_version
-            elif v["source"].split("?")[0].endswith(".imjoy.html"):
-                this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], v["source"]))
+            elif version_info["source"].split("?")[0].endswith(".imjoy.html"):
+                this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["source"]))
                 assert missing not in this_version.values(), this_version
             else:
                 try:
-                    rdf_node = load_raw_resource_description(v["source"])
+                    rdf_node = load_raw_resource_description(version_info["source"])
                 except Exception as e:
-                    print(f"Failed to interpret {v['source']} as rdf: {e}")
+                    print(f"Failed to interpret {version_info['source']} as rdf: {e}")
                     continue
                 else:
                     this_version = serialize_raw_resource_description_to_dict(rdf_node)
-
-            this_version.update(v)
-            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{v['version_id']}/rdf.yaml"
+            this_version.update(version_info)
+            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
             if isinstance(this_version["source"], dict):
                 this_version["source"] = this_version["rdf_source"]
 
-            v_deploy_path = dist / "resources" / resource_id / v["version_id"] / "rdf.yaml"
+            v_deploy_path = dist / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
             v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
             with v_deploy_path.open("wt", encoding="utf-8") as f:
                 yaml.dump(this_version, f)
 
             # add validation summaries to this version in the collection rdf
             val_summaries = {}
-            v_folder = gh_pages_dir / "resources" / resource_id / v["version_id"]
+            v_folder = gh_pages_dir / "resources" / resource_id / version_info["version_id"]
             for val_path in v_folder.glob("validation_summary_*.yaml"):
                 name = val_path.stem.replace("validation_summary_", "")
                 val_sum = yaml.load(val_path)
