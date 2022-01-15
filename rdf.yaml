@@ -4069,6 +4069,90 @@ collection:
   version_id: latest
   version_name: latest
 - attachments:
+    files: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/per_sample_scale_range.ijm',
+      'https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/binarize.ijm']
+    unknown: {}
+  authors:
+  - {affiliation: '', name: ZeroCostDL4Mic team}
+  - {name: Constantin Pape}
+  - {name: DeepImageJ team}
+  cite:
+  - {text: Falk et al. Nature Methods 2019, url: 'https://doi.org/10.1038/s41592-018-0261-2'}
+  - {text: Ronneberger et al. arXiv in 2015, url: 'https://doi.org/10.1007/978-3-319-24574-4_28'}
+  - {text: Lucas von Chamier et al. biorXiv 2020, url: 'https://doi.org/10.1101/2020.03.20.000133'}
+  config:
+    deepimagej:
+      allow_tiling: true
+      model_keys: null
+      prediction:
+        postprocess:
+        - {kwargs: binarize.ijm, spec: 'ij.IJ::runMacroFile'}
+        preprocess:
+        - {kwargs: per_sample_scale_range.ijm, spec: 'ij.IJ::runMacroFile'}
+      pyramidal_model: false
+      test_information:
+        inputs:
+        - name: sample_input_0.tif
+          pixel_size: {x: 0.0004, y: 0.0004, z: 1}
+          size: 512 x 512 x 1 x 1
+        memory_peak: null
+        outputs:
+        - {name: sample_output_0.tif, size: 512 x 512 x 1 x 1, type: image}
+        runtime: null
+  covers: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/cover.png']
+  created: 2022-01-14 15:26:42.112259
+  description: 2D UNet trained on data from ISBI Challenge for Mitchondria segmentation
+    in Transmission Electron Microscopy images using ZeroCostDL4Mic notebooks.
+  documentation: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/README.md
+  doi: 10.5281/zenodo.5850574
+  format_version: 0.4.2
+  id: 10.5281/zenodo.5817052
+  inputs:
+  - axes: bxyc
+    data_range: [0.0, 255.0]
+    data_type: uint8
+    name: input0
+    preprocessing:
+    - kwargs: {axes: xyc, max_percentile: 99.8, min_percentile: 1, mode: per_sample}
+      name: scale_range
+    shape: [1, 512, 512, 1]
+  license: MIT
+  links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
+    deepimagej/deepimagej]
+  name: Mitochondria segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  outputs:
+  - axes: bxyc
+    data_range: [0.0, 1.0]
+    data_type: bool
+    name: output0
+    postprocessing:
+    - kwargs: {threshold: 0.4}
+      name: binarize
+    shape: [1, 512, 512, 1]
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
+  sample_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_input_0.tif']
+  sample_outputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_output_0.tif']
+  source: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/rdf.yaml
+  status: accepted
+  tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
+    mitochondria, bondary-segmentation, 2d]
+  test_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/test_input.npy']
+  test_outputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/test_output.npy']
+  timestamp: '2021-12-09T15:03:20.680270'
+  type: model
+  validation_summaries: {}
+  version: '0.1'
+  version_id: 10.5281/zenodo.5850574
+  version_name: revision 1
+  weights:
+    keras_hdf5: {sha256: cdc0cfcc13d01f75a93b25599167bf7cf1572c0c276ea415dccbbe1d143b1489,
+      source: 'https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/keras_weights.hdf5',
+      tensorflow_version: '1.15'}
+    tensorflow_saved_model_bundle: {sha256: 34269e6da7caf38a604bb68f2aaa39662f306064f9a35e7cc81bc42049db87af,
+      source: 'https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/tf_weights.zip',
+      tensorflow_version: '1.15'}
+- attachments:
     files: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/zero_mean_unit_variance.ijm']
   authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
@@ -4311,8 +4395,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 35, dataset: 31, model: 2}
-  n_resources: {application: 35, dataset: 31, model: 2}
+  n_resource_versions: {application: 35, dataset: 31, model: 3}
+  n_resources: {application: 35, dataset: 31, model: 3}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
