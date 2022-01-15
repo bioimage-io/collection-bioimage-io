@@ -4141,7 +4141,19 @@ collection:
   test_outputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/test_output.npy']
   timestamp: '2021-12-09T15:03:20.680270'
   type: model
-  validation_summaries: {}
+  validation_summaries:
+    latest_static:
+      error: null
+      name: bioimageio.spec static validation with auto-conversion to latest format
+      nested_errors: {}
+      traceback: null
+      warnings: {}
+    static:
+      error: null
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: null
+      warnings: {}
   version: '0.1'
   version_id: 10.5281/zenodo.5850574
   version_name: revision 1
