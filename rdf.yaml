@@ -1356,13 +1356,13 @@ collection:
     url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     version: 1.7.1
   covers: []
-  description: Resources for BioImgage.IO curated by the ZeroCost4Mic team.
+  description: Previewing Jupyter notebook without a Jupyter server
   documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
   format_version: 0.2.2
   icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
   id: zero/Notebook Preview
   maintainers: []
-  name: ZeroCost4Mic Collection
+  name: Notebook Preview
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook
     Preview/latest/rdf.yaml
@@ -1371,7 +1371,7 @@ collection:
   source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook
     Preview/latest/rdf.yaml
   status: accepted
-  tags: [zero, bioimage.io]
+  tags: [imjoy, notebook, jupyter, bioengine]
   type: application
   validation_summaries:
     static:
@@ -3616,8 +3616,7 @@ collection:
   version_name: latest
 - api_version: 0.1.7
   attachments: {}
-  authors:
-  - {name: ilastik Team}
+  authors: []
   badges: []
   cite:
   - {doi: 10.1038/s41592-019-0582-9, text: 'Berg, S., Kutra, D., Kroeger, T. et al.
@@ -3639,7 +3638,8 @@ collection:
     url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
   covers: []
   dependencies: []
-  description: Resources for BioImgage.IO curated by the ilastik team.
+  description: Export BioImage.IO model packages for ilastik from a model description
+    file
   documentation: https://ilastik.org
   env: ''
   format_version: 0.2.2
@@ -3647,7 +3647,7 @@ collection:
   id: ilastik/ilastik
   maintainers:
   - {github_user: ilastik, name: ilastik Team}
-  name: Ilastik Collection
+  name: ilastik
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/ilastik/latest/rdf.yaml
   requirements: ['https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js', 'https://static.imjoy.io/spectre.css/spectre.min.css',
@@ -3657,7 +3657,7 @@ collection:
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/ilastik/latest/rdf.yaml
   status: accepted
-  tags: [ilastik, bioimage.io]
+  tags: [software, bioengine]
   type: application
   validation_summaries:
     static:
