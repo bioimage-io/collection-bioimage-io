@@ -5527,6 +5527,7 @@ collection:
       offset: [0.0, 0.0, 0.0, 0.0]
       reference_tensor: input0
       scale: [1.0, 2.0, 1.0, 1.0]
+  owners: [77626]
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif']
