@@ -33,9 +33,6 @@ name: Covid-IF Training Data
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/covid_if_training_data/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
 source: https://zenodo.org/record/5092850
-status: accepted
 tags: [high-content-imaging, fluorescence-light-microscopy, 2D, cells, nuclei, covid19,
   semantic-segmentation, instance-segmentation]
 type: dataset
-version_id: latest
-version_name: latest

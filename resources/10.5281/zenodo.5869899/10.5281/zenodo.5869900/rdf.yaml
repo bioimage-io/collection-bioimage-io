@@ -27,10 +27,8 @@ config:
       - {name: sample_output_0.tif, size: 512 x 512 x 1 x 2, type: image}
       runtime: null
 covers: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png']
-created: 2022-01-18 10:03:26.939252
 description: Cell segmentation for phase-contrast microscopy.
 documentation: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/documentation.md
-doi: 10.5281/zenodo.5869900
 format_version: 0.4.2
 inputs:
 - axes: bcyx
@@ -61,8 +59,6 @@ outputs:
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_output_0.tif']
-source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
-status: accepted
 tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
   unet]
 test_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_input_0.npy']
@@ -70,8 +66,6 @@ test_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec92
 timestamp: '2022-01-16T20:02:19.833552'
 type: model
 version: '0.1'
-version_id: 10.5281/zenodo.5869900
-version_name: revision 1
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/unet.py:UNet2d

@@ -31,9 +31,6 @@ name: DSB Nucleus Segmentation Training Data
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/stradist_dsb_training_data/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
 source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
-status: accepted
 tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
   2D]
 type: dataset
-version_id: latest
-version_name: latest

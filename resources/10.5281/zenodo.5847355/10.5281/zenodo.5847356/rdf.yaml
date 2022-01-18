@@ -27,10 +27,8 @@ config:
       - {name: sample_output_0.tif, size: 512 x 512 x 1 x 2, type: image}
       runtime: null
 covers: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/cover.png']
-created: 2022-01-13 21:13:49.264581
 description: Cell segmentation for immunofluorescence microscopy.
 documentation: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/documentation.md
-doi: 10.5281/zenodo.5847356
 format_version: 0.4.2
 inputs:
 - axes: bcyx
@@ -61,16 +59,12 @@ outputs:
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5847356/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_output_0.tif']
-source: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/rdf.yaml
-status: accepted
 tags: [a]
 test_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/test_input_0.npy']
 test_outputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/test_output_0.npy']
 timestamp: '2022-01-13T15:42:14.922537'
 type: model
 version: '0.1'
-version_id: 10.5281/zenodo.5847356
-version_name: revision 1
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/unet.py:UNet2d

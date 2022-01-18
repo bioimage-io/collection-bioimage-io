@@ -32,8 +32,5 @@ maintainers: []
 name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-status: accepted
 tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
 type: dataset
-version_id: latest
-version_name: latest

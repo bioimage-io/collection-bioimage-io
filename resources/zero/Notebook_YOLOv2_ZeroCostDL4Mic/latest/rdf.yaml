@@ -41,8 +41,5 @@ maintainers: []
 name: YOLOv2 - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-status: accepted
 tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
 type: application
-version_id: latest
-version_name: latest

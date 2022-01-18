@@ -40,9 +40,6 @@ name: Small extracellular vesicle instance segmentation (FRU-Net)
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
 source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
-status: accepted
 tags: [extracellular-vesicles, segmentation, TEM, notebook, model-inference, google-colab,
   workflow, pipeline]
 type: application
-version_id: latest
-version_name: latest

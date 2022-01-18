@@ -33,8 +33,5 @@ maintainers: []
 name: Artificial labeling of E. coli membranes dataset - DeepBacs
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-status: accepted
 tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
 type: dataset
-version_id: latest
-version_name: latest

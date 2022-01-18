@@ -30,8 +30,5 @@ maintainers: []
 name: CycleGAN example training and test dataset - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_CycleGAN_ZeroCostDL4Mic/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-status: accepted
 tags: [CycleGAN, ZeroCostDL4Mic]
 type: dataset
-version_id: latest
-version_name: latest

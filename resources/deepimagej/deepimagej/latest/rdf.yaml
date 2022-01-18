@@ -38,9 +38,6 @@ requirements: ['https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js', '
   'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js']
 root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
 source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
-status: accepted
 tags: [software, bioengine]
 type: application
-version: 2.1.10
-version_id: latest
-version_name: latest
+version: 2.1.11

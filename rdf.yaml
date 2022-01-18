@@ -35,7 +35,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
   type: dataset
   validation_summaries:
@@ -53,8 +52,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Aki Stubb, Guillaume Jacquemet, Johanna Ivaska]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -87,7 +84,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [Noise2Void, denoising, ZeroCostDL4Mic, 2D]
   type: dataset
   validation_summaries:
@@ -105,8 +101,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -139,7 +133,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [Noise2Void, denoising, ZeroCostDL4Mic, 3D]
   type: dataset
   validation_summaries:
@@ -157,8 +150,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -191,7 +182,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
   type: dataset
   validation_summaries:
@@ -209,8 +199,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -243,7 +231,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
   type: dataset
   validation_summaries:
@@ -261,8 +248,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -295,7 +280,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
   type: dataset
   validation_summaries:
@@ -313,8 +297,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christophe Leterrier, Romain F. Laine]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -349,7 +331,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [SMLM, Deep-STORM, ZeroCostDL4Mic, 2D]
   type: dataset
   validation_summaries:
@@ -367,8 +348,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -402,7 +381,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_CycleGAN_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [CycleGAN, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -420,8 +398,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -454,7 +430,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_pix2pix_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [pix2pix, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -472,8 +447,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet, Lucas von Chamier]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -507,7 +480,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [YOLOv2, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -525,8 +497,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -564,7 +534,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -582,8 +551,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Nathan H. Roy, Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -620,7 +587,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -638,8 +604,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Gautier Follain, Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
@@ -676,7 +640,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -694,8 +657,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Hussein Al-Akhrass, Johanna Ivaska, Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41556-021-00767-x', text: 'Moreno-Layseca P, Jäntti
@@ -733,7 +694,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -751,8 +711,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet]
   cite:
   - {doi: 'https://doi.org/10.1038/s41592-021-01284-3', text: 'Laine RF, Arganda-Carreras
@@ -790,7 +748,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
   type: dataset
   validation_summaries:
@@ -808,8 +765,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Mia Conduit, Séamus Holden]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -845,7 +800,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -863,8 +817,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Spahn Christoph, Heilemann Mike]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -900,7 +852,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_U-Net_2D_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [U-Net, segmentation, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -918,8 +869,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann, Mia Conduit, Séamus Holden, Pedro Matos
       Pereira, Mariana Pinho]
   cite:
@@ -956,7 +905,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_StarDist_2D_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, segmentation, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -974,8 +922,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -1011,7 +957,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_SplineDist_2D_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [StarDist, segmentation, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -1029,8 +974,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Mia Conduit, Séamus Holden]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -1066,7 +1009,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noise2Void_2D_subtilis_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [Noise2Void, denoising, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -1084,8 +1026,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -1121,7 +1061,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_CARE_2D_coli_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [Noise2Void, CARE, denoising, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -1139,8 +1078,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -1177,7 +1114,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -1195,8 +1131,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -1232,7 +1166,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_YOLOv2_coli_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [YOLOv2, object detection, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -1250,8 +1183,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Christoph Spahn, Mike Heilemann]
   cite:
   - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
@@ -1287,7 +1218,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_YOLOv2_antibiotic_DeepBacs/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [YOLOv2, object detection, DeepBacs, 2D]
   type: dataset
   validation_summaries:
@@ -1305,8 +1235,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - api_version: 0.2.3
   attachments: {}
   authors: []
@@ -1345,7 +1273,6 @@ collection:
   requirements: []
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
-  status: accepted
   tags: [imjoy, notebook, jupyter, bioengine]
   type: application
   validation_summaries:
@@ -1365,8 +1292,6 @@ collection:
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
   version: 0.1.0
-  version_id: latest
-  version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1413,7 +1338,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -1431,8 +1355,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Daniel Krentzel and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1477,7 +1399,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D]
   type: application
   validation_summaries:
@@ -1495,8 +1416,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1545,7 +1464,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_StarDist_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -1563,8 +1481,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1608,7 +1524,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_StarDist_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
   type: application
   validation_summaries:
@@ -1626,8 +1541,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1675,7 +1588,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -1693,8 +1605,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1741,7 +1651,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D]
   type: application
   validation_summaries:
@@ -1759,8 +1668,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1812,7 +1719,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -1830,8 +1736,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1880,7 +1784,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
   type: application
   validation_summaries:
@@ -1898,8 +1801,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -1948,7 +1849,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
   type: application
   validation_summaries:
@@ -1966,8 +1866,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2016,7 +1914,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_fnet_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -2034,8 +1931,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Romain Laine and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2088,7 +1983,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -2106,8 +2000,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2154,7 +2046,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -2172,8 +2063,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2222,7 +2111,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -2240,8 +2128,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2289,7 +2175,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Augmentor_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -2307,8 +2192,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2357,7 +2240,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -2375,8 +2257,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
       teams]
   badges:
@@ -2431,7 +2311,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
   type: application
   validation_summaries:
@@ -2449,8 +2328,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
       teams]
   badges:
@@ -2497,7 +2374,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
   type: application
   validation_summaries:
@@ -2515,8 +2391,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
       teams]
   badges:
@@ -2564,7 +2438,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
   type: application
   validation_summaries:
@@ -2582,8 +2455,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2631,7 +2502,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel,
     ZeroCostDL4Mic, 2D]
   type: application
@@ -2650,8 +2520,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic
       teams]
   badges:
@@ -2702,7 +2570,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
   type: application
   validation_summaries:
@@ -2720,8 +2587,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2770,7 +2635,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_RCAN_3D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D]
   type: application
   validation_summaries:
@@ -2788,8 +2652,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Romain F. Laine and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2837,7 +2699,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_SplineDist_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -2855,8 +2716,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2901,7 +2760,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -2919,8 +2777,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2964,7 +2820,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Detectron2_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -2982,8 +2837,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3027,7 +2880,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DRMIME_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3045,8 +2897,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3094,7 +2944,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Cellpose_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3112,8 +2961,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: ['Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team']
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3156,7 +3003,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_RetinaNet_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3174,8 +3020,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3221,7 +3065,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
   type: application
   validation_summaries:
@@ -3239,8 +3082,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: ['Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team']
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3286,7 +3127,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3304,8 +3144,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Lucas von Chamier and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3347,7 +3185,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_MaskRCNN_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3365,8 +3202,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: [Guillaume Jacquemet and the ZeroCostDL4Mic Team]
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3407,7 +3242,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Quality_Control_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, Quality Control, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3425,8 +3259,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: ['Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team']
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3473,7 +3305,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DFCAN_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3491,8 +3322,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: ['Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team']
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -3536,7 +3365,6 @@ collection:
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  status: accepted
   tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
   type: application
   validation_summaries:
@@ -3554,8 +3382,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   cite: {doi: 'https://doi.org/10.1101/799270', text: 'Gómez-de-Mariscal, E., García-López-de-Haro,
@@ -3578,7 +3404,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej-web/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://deepimagej.github.io/deepimagej/index.html
-  status: accepted
   tags: [deepimagej, software]
   type: application
   validation_summaries:
@@ -3596,8 +3421,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - api_version: 0.1.0
   attachments: {}
   authors: []
@@ -3639,7 +3462,6 @@ collection:
     'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js']
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
-  status: accepted
   tags: [software, bioengine]
   type: application
   validation_summaries:
@@ -3657,9 +3479,7 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version: 2.1.10
-  version_id: latest
-  version_name: latest
+  version: 2.1.11
 - authors:
   - {affiliation: 'EPFL, UC3M', name: Ignacio Arganda-Carreras}
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -3697,7 +3517,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/unet-pancreaticcellsegmentation/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
-  status: accepted
   tags: [unet, segmentation, deepimagej, notebook, training, cell-segmentation]
   type: application
   validation_summaries:
@@ -3715,8 +3534,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   cite:
@@ -3753,7 +3570,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/smlm-deepimagej/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
-  status: accepted
   tags: [deepimagej, smlm, macro, deepstorm, thunderstorm, workflow, pipeline, superresolution]
   type: application
   validation_summaries:
@@ -3771,8 +3587,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
   - {affiliation: Masaryk University, name: Martin Maška}
@@ -3816,7 +3630,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
-  status: accepted
   tags: [extracellular-vesicles, segmentation, TEM, notebook, model-inference, google-colab,
     workflow, pipeline]
   type: application
@@ -3835,8 +3648,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   cite:
@@ -3869,7 +3680,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MoNuSeg_digital_pathology_miccai2018/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://monuseg.grand-challenge.org/Data/
-  status: accepted
   tags: [StarDist, segmentation, pathology, H&E, histology, 2D, nuclei segmentation,
     digital pathology]
   type: dataset
@@ -3888,8 +3698,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -3921,7 +3729,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -3939,8 +3746,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -3972,7 +3777,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -3990,8 +3794,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4023,7 +3825,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4041,8 +3842,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4074,7 +3873,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4092,8 +3890,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4125,7 +3921,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/defcon_density_map_estimation/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4143,8 +3938,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4176,7 +3969,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/DeepSTORMZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4194,8 +3986,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4227,7 +4017,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/2DUNetZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/2du-net_zerocostdl4mic/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4245,8 +4034,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4278,7 +4065,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4296,8 +4082,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4329,7 +4113,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4347,8 +4130,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4380,7 +4161,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldDapiSuperResolution/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4398,8 +4178,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4431,7 +4209,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldFitcSuperResolution/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4449,8 +4226,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4482,7 +4257,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/JonesVirtualStaining/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4500,8 +4274,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4533,7 +4305,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4551,8 +4322,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4584,7 +4353,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Usiigaci/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4602,8 +4370,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4635,7 +4401,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SkinLesionClassification/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4653,8 +4418,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4686,7 +4449,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/3du-net_zerocostdl4mic/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4704,8 +4466,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors: []
   cite:
   - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
@@ -4737,7 +4497,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/stardist2D_zerocostdl4mic/model.yaml
-  status: accepted
   tags: [deepimagej, bioimage.io]
   type: collection
   validation_summaries:
@@ -4755,8 +4514,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - api_version: 0.1.7
   attachments: {}
   authors: []
@@ -4799,7 +4556,6 @@ collection:
     'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js']
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
-  status: accepted
   tags: [software, bioengine]
   type: application
   validation_summaries:
@@ -4817,9 +4573,7 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version: 0.2.1
-  version_id: latest
-  version_name: latest
+  version: 0.2.2
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -4857,7 +4611,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/covid_if_training_data/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://zenodo.org/record/5092850
-  status: accepted
   tags: [high-content-imaging, fluorescence-light-microscopy, 2D, cells, nuclei, covid19,
     semantic-segmentation, instance-segmentation]
   type: dataset
@@ -4876,8 +4629,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -4915,7 +4666,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/cremi_training_data/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://cremi.org/
-  status: accepted
   tags: [electron-microscopy, brain, neurons, instance-segmentation, cremi-challenge,
     3D]
   type: dataset
@@ -4934,8 +4684,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -4971,7 +4719,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/stradist_dsb_training_data/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
-  status: accepted
   tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
     2D]
   type: dataset
@@ -4990,8 +4737,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -5026,7 +4771,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
-  status: accepted
   tags: [electron-microscopy, brain, neurons, instance-segmentation, 2D, isbi2012-challenge]
   type: dataset
   validation_summaries:
@@ -5044,8 +4788,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -5080,7 +4822,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/livecell_dataset/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://sartorius-research.github.io/LIVECell/
-  status: accepted
   tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
   type: dataset
   validation_summaries:
@@ -5098,8 +4839,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -5134,7 +4873,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/mitoem_segmentation_challenge/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://mitoem.grand-challenge.org/
-  status: accepted
   tags: [mitochondria, electron-microscopy, 3D, mito-em-challenge, instance-segmentation]
   type: dataset
   validation_summaries:
@@ -5152,8 +4890,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - authors:
   - {name: Constantin Pape}
   cite:
@@ -5190,7 +4926,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/platynereis_em_training_data/latest/rdf.yaml
   root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
   source: https://doi.org/10.5281/zenodo.3675220
-  status: accepted
   tags: [electron-microscopy, platynereis, cells, cilia, nuclei, instance-segmentation,
     3D]
   type: dataset
@@ -5209,8 +4944,6 @@ collection:
           errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
           in _opener\n    return self._accessor.open(self, flags, mode)\n"]
       warnings: {}
-  version_id: latest
-  version_name: latest
 - attachments:
     files: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/per_sample_scale_range.ijm',
       'https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/binarize.ijm']
@@ -5243,11 +4976,9 @@ collection:
         - {name: sample_output_0.tif, size: 512 x 512 x 1 x 1, type: image}
         runtime: null
   covers: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/cover.png']
-  created: 2022-01-14 15:26:42.112259
   description: 2D UNet trained on data from ISBI Challenge for Mitchondria segmentation
     in Transmission Electron Microscopy images using ZeroCostDL4Mic notebooks.
   documentation: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/README.md
-  doi: 10.5281/zenodo.5850574
   format_version: 0.4.2
   id: 10.5281/zenodo.5817052
   inputs:
@@ -5277,8 +5008,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_output_0.tif']
-  source: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/rdf.yaml
-  status: accepted
   tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
     mitochondria, bondary-segmentation, 2d]
   test_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/test_input.npy']
@@ -5299,8 +5028,6 @@ collection:
       traceback: null
       warnings: {}
   version: '0.1'
-  version_id: 10.5281/zenodo.5850574
-  version_name: revision 1
   weights:
     keras_hdf5: {sha256: cdc0cfcc13d01f75a93b25599167bf7cf1572c0c276ea415dccbbe1d143b1489,
       source: 'https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/keras_weights.hdf5',
@@ -5337,10 +5064,8 @@ collection:
         - {name: sample_output_0.tif, size: 512 x 512 x 1 x 2, type: image}
         runtime: null
   covers: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/cover.png']
-  created: 2022-01-13 21:13:49.264581
   description: Cell segmentation for immunofluorescence microscopy.
   documentation: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/documentation.md
-  doi: 10.5281/zenodo.5847356
   format_version: 0.4.2
   id: 10.5281/zenodo.5847355
   inputs:
@@ -5375,8 +5100,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5847356/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_output_0.tif']
-  source: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/rdf.yaml
-  status: accepted
   tags: [a]
   test_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/test_input_0.npy']
   test_outputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/test_output_0.npy']
@@ -5396,8 +5119,6 @@ collection:
       traceback: null
       warnings: {}
   version: '0.1'
-  version_id: 10.5281/zenodo.5847356
-  version_name: revision 1
   weights:
     pytorch_state_dict:
       architecture: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/unet.py:UNet2d
@@ -5437,10 +5158,8 @@ collection:
         - {name: sample_output_0.tif, size: 512 x 512 x 1 x 2, type: image}
         runtime: null
   covers: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png']
-  created: 2022-01-18 10:03:26.939252
   description: Cell segmentation for phase-contrast microscopy.
   documentation: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/documentation.md
-  doi: 10.5281/zenodo.5869900
   format_version: 0.4.2
   id: 10.5281/zenodo.5869899
   inputs:
@@ -5474,8 +5193,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_output_0.tif']
-  source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
-  status: accepted
   tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
     unet]
   test_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_input_0.npy']
@@ -5496,8 +5213,6 @@ collection:
       traceback: null
       warnings: {}
   version: '0.1'
-  version_id: 10.5281/zenodo.5869900
-  version_name: revision 1
   weights:
     pytorch_state_dict:
       architecture: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/unet.py:UNet2d
@@ -5537,10 +5252,8 @@ collection:
         - {name: sample_output_0.tif, size: 256 x 256 x 1 x 2, type: image}
         runtime: null
   covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
-  created: 2021-12-07 18:02:09.736653
   description: Nucleus segmentation for fluorescence microscopy
   documentation: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
-  doi: 10.5281/zenodo.5764893
   format_version: 0.4.2
   id: 10.5281/zenodo.5764892
   inputs:
@@ -5575,8 +5288,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
-  source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
-  status: accepted
   tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
   test_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_input_0.npy']
   test_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_output_0.npy']
@@ -5634,8 +5345,6 @@ collection:
       warnings: {}
     torchscript: {error: null, name: reproduced test outputs, traceback: null}
   version: '0.1'
-  version_id: 10.5281/zenodo.5764893
-  version_name: revision 1
   weights:
     onnx: {opset_version: 12, sha256: df913b85947f5132bcdaf81d91af0963f60d44f4caf8a4fec672d96a2f327b44,
       source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/weights.onnx'}

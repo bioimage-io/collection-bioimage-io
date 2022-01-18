@@ -44,9 +44,6 @@ maintainers: []
 name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-status: accepted
 tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel, ZeroCostDL4Mic,
   2D]
 type: application
-version_id: latest
-version_name: latest

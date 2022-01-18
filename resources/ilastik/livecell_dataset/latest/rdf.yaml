@@ -30,8 +30,5 @@ name: LIVECell
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/livecell_dataset/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
 source: https://sartorius-research.github.io/LIVECell/
-status: accepted
 tags: [2D, transmission-light-microscopy, label-free, cells, instance-segmentation]
 type: dataset
-version_id: latest
-version_name: latest

@@ -35,9 +35,6 @@ rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/
 requirements: []
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
-status: accepted
 tags: [imjoy, notebook, jupyter, bioengine]
 type: application
 version: 0.1.0
-version_id: latest
-version_name: latest

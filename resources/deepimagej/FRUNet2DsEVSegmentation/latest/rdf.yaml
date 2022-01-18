@@ -28,8 +28,5 @@ name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
 source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
-status: accepted
 tags: [deepimagej, bioimage.io]
 type: collection
-version_id: latest
-version_name: latest
