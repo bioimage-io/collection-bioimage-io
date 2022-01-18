@@ -1,11 +1,11 @@
-authors: &id001 [Mia Conduit, Séamus Holden]
-cite: &id002
+authors: [Mia Conduit, Séamus Holden]
+cite:
 - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
     F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier,
     Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike
     Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source
     deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152'}
-config: &id003
+config:
   background_image: static/img/zoo-background.svg
   default_type: application
   explore_button_text: Start Exploring
@@ -21,35 +21,19 @@ config: &id003
   tags: [ZeroCostDL4Mic]
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
-covers: &id004 ['https://zenodo.org/api/iiif/v2/8ba101cf-97ac-4e68-9fff-4cc130b5ea81:93b67447-8b0a-4053-a522-9c141623ca6f:A_Multilabel_U-Net_example_B.subtilis.png/full/750,/0/default.png']
+covers: ['https://zenodo.org/api/iiif/v2/8ba101cf-97ac-4e68-9fff-4cc130b5ea81:93b67447-8b0a-4053-a522-9c141623ca6f:A_Multilabel_U-Net_example_B.subtilis.png/full/750,/0/default.png']
 description: Paired bright field images and segmented binary masks of live E. coli
   cells.
 documentation: https://github.com/HenriquesLab/DeepBacs/wiki
 download_url: https://zenodo.org/record/5639253
 format_version: 0.2.2
 id: zero/Dataset_U-Net_2D_multilabel_DeepBacs
-maintainers: &id005 []
+maintainers: []
 name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-source:
-  authors: *id001
-  cite: *id002
-  config: *id003
-  covers: *id004
-  description: Paired bright field images and segmented binary masks of live E. coli
-    cells.
-  documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-  download_url: https://zenodo.org/record/5639253
-  format_version: 0.2.2
-  id: zero/Dataset_U-Net_2D_multilabel_DeepBacs
-  maintainers: *id005
-  name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
-  root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  tags: &id006 [U-Net, multilabel, segmentation, DeepBacs, 2D]
-  type: dataset
 status: accepted
-tags: *id006
+tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
 type: dataset
 version_id: latest
 version_name: latest

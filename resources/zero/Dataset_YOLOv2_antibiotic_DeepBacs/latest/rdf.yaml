@@ -1,11 +1,11 @@
-authors: &id001 [Christoph Spahn, Mike Heilemann]
-cite: &id002
+authors: [Christoph Spahn, Mike Heilemann]
+cite:
 - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
     F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier,
     Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike
     Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source
     deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152'}
-config: &id003
+config:
   background_image: static/img/zoo-background.svg
   default_type: application
   explore_button_text: Start Exploring
@@ -21,35 +21,19 @@ config: &id003
   tags: [ZeroCostDL4Mic]
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
-covers: &id004 ['https://zenodo.org/api/iiif/v2/5b4a4304-ea44-47ce-9c75-4a069bfc9536:e3c27642-4605-42c3-ad3c-1e120917b97e:Antibiotic_profiling_examples.png/full/750,/0/default.png']
+covers: ['https://zenodo.org/api/iiif/v2/5b4a4304-ea44-47ce-9c75-4a069bfc9536:e3c27642-4605-42c3-ad3c-1e120917b97e:Antibiotic_profiling_examples.png/full/750,/0/default.png']
 description: Training and test images of E. coli cells treated with different antibiotics
   for antibiotic phenotyping.
 documentation: https://github.com/HenriquesLab/DeepBacs/wiki
 download_url: https://zenodo.org/record/5551057
 format_version: 0.2.2
 id: zero/Dataset_YOLOv2_antibiotic_DeepBacs
-maintainers: &id005 []
+maintainers: []
 name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_YOLOv2_antibiotic_DeepBacs/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-source:
-  authors: *id001
-  cite: *id002
-  config: *id003
-  covers: *id004
-  description: Training and test images of E. coli cells treated with different antibiotics
-    for antibiotic phenotyping.
-  documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-  download_url: https://zenodo.org/record/5551057
-  format_version: 0.2.2
-  id: zero/Dataset_YOLOv2_antibiotic_DeepBacs
-  maintainers: *id005
-  name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
-  root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  tags: &id006 [YOLOv2, object detection, DeepBacs, 2D]
-  type: dataset
 status: accepted
-tags: *id006
+tags: [YOLOv2, object detection, DeepBacs, 2D]
 type: dataset
 version_id: latest
 version_name: latest

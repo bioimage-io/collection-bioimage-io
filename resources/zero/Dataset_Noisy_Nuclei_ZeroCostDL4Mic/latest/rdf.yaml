@@ -1,10 +1,10 @@
-authors: &id001 [Guillaume Jacquemet]
-cite: &id002
+authors: [Guillaume Jacquemet]
+cite:
 - {doi: 'https://doi.org/10.1038/s41592-021-01284-3', text: 'Laine RF, Arganda-Carreras
     I, Henriques R, Jacquemet G. Avoiding a replication crisis in deep-learning-based
     bioimage analysis. Nat Methods. 2021 Oct;18(10):1136-1144. doi: 10.1038/s41592-021-01284-3.
     PMID: 34608322; PMCID: PMC7611896. '}
-config: &id003
+config:
   background_image: static/img/zoo-background.svg
   default_type: application
   explore_button_text: Start Exploring
@@ -20,7 +20,7 @@ config: &id003
   tags: [ZeroCostDL4Mic]
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
-covers: &id004 ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png']
+covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png']
 description: This dataset contains a denoising training and test dataset for deep
   learning applications. The training dataset comprises 20 paired matching noisy and
   high signal-to-noise images. The test dataset contains five paired matching noisy
@@ -30,31 +30,12 @@ documentation: https://zenodo.org/record/5750174
 download_url: https://zenodo.org/record/5750174
 format_version: 0.2.2
 id: zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic
-maintainers: &id005 []
+maintainers: []
 name: Noisy nuclei dataset.
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-source:
-  authors: *id001
-  cite: *id002
-  config: *id003
-  covers: *id004
-  description: This dataset contains a denoising training and test dataset for deep
-    learning applications. The training dataset comprises 20 paired matching noisy
-    and high signal-to-noise images. The test dataset contains five paired matching
-    noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA)
-    images acquired using a spinning disk confocal microscope with a 20x 0.8 NA objective.
-  documentation: https://zenodo.org/record/5750174
-  download_url: https://zenodo.org/record/5750174
-  format_version: 0.2.2
-  id: zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic
-  maintainers: *id005
-  name: Noisy nuclei dataset.
-  root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-  tags: &id006 [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
-  type: dataset
 status: accepted
-tags: *id006
+tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
 type: dataset
 version_id: latest
 version_name: latest
