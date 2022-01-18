@@ -3614,6 +3614,885 @@ collection:
       warnings: {}
   version_id: latest
   version_name: latest
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  cite: {doi: 'https://doi.org/10.1101/799270', text: 'Gómez-de-Mariscal, E., García-López-de-Haro,
+      C., Ouyang, W., Donati, L., Lundberg E., Unser, M., Muñoz-Barrutia, A. and Sage,
+      D. DeepImageJ: A user-friendly plugin to run deep learning models in ImageJ,
+      BioRxiv, 2019'}
+  config:
+    supported_weight_formats: [tensorflow_saved_model_bundle]
+  description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
+    deep learning models in ImageJ and Fiji.
+  documentation: https://deepimagej.github.io/deepimagej/index.html
+  format_version: 0.2.2
+  git_repo: https://github.com/deepimagej/deepimagej-plugin
+  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+  id: deepimagej/deepimagej-web
+  maintainers: []
+  name: DeepImageJ
+  passive: true
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej-web/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej-web/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, software]
+  type: application
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- api_version: 0.1.0
+  attachments: {}
+  authors: []
+  badges: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  covers: []
+  dependencies: []
+  description: Export BioImage.IO model packages for deepImageJ from a model description
+    file
+  documentation: https://deepimagej.github.io/deepimagej/
+  env: ''
+  format_version: 0.2.2
+  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+  id: deepimagej/deepimagej
+  maintainers: []
+  name: deepimagej
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej/latest/rdf.yaml
+  requirements: ['https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js', 'https://static.imjoy.io/spectre.css/spectre.min.css',
+    'https://static.imjoy.io/spectre.css/spectre-exp.min.css', 'https://static.imjoy.io/spectre.css/spectre-icons.min.css',
+    'https://static.imjoy.io/js/UZIP.js', 'https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js']
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej/latest/rdf.yaml
+  status: accepted
+  tags: [software, bioengine]
+  type: application
+  validation_summaries: {}
+  version: 2.1.10
+  version_id: latest
+  version_name: latest
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: Ignacio Arganda-Carreras}
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  badges:
+  - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
+      in Colab, url: 'https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb'}
+  cite:
+  - {doi: 'https://doi.org/10.1038/s41592-018-0261-2', text: 'Falk, T., Mai, D., Bensch,
+      R. et al. U-Net: deep learning for cell counting, detection, and morphometry.
+      Nat Methods 16, 67–70 (2019).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png']
+  description: Easy example to define a 2D U-Net for segmentation with Keras and import
+    it into DeepImageJ format
+  documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+  format_version: 0.2.2
+  id: deepimagej/unet-pancreaticcellsegmentation
+  links: [UNet2DPancreaticSegmentation]
+  maintainers: []
+  name: 2D U-Net for binary segmentation
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/unet-pancreaticcellsegmentation/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/unet-pancreaticcellsegmentation/latest/rdf.yaml
+  status: accepted
+  tags: [unet, segmentation, deepimagej, notebook, training, cell-segmentation]
+  type: application
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  cite:
+  - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'Lucas von Chamier et
+      al., Nature Communications 2021'}
+  - {doi: 'https://doi.org/10.1101/799270', text: Gómez de Mariscal et al. bioRxiv
+      2019}
+  - {doi: 'https://doi.org/10.1093/bioinformatics/btu202', text: 'M. Ovesný, et al.,
+      Bioinformatics 2014'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/cover.png']
+  description: Single molecule localization microscopy (SMLM) processing using deepImageJ
+    and ThunderSTORM in an ImageJ macro.
+  documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
+  download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+  format_version: 0.2.2
+  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+  id: deepimagej/smlm-deepimagej
+  maintainers: []
+  name: SMLM-superresolution
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/smlm-deepimagej/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/smlm-deepimagej/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, smlm, macro, deepstorm, thunderstorm, workflow, pipeline, superresolution]
+  type: application
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors:
+  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
+  - {affiliation: Masaryk University, name: Martin Maška}
+  - {affiliation: Masaryk University, name: Anna Kotrbová}
+  - {affiliation: Masaryk University, name: Vendula Pospíchalová}
+  - {affiliation: Masaryk University, name: Pavel Matula}
+  - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
+  badges:
+  - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
+      in Colab, url: 'https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb'}
+  cite:
+  - {doi: 'https://doi.org/10.1038/s41598-019-49431-3', text: 'Gómez-de-Mariscal,
+      E. et al., Deep-Learning-Based Segmentation of SmallExtracellular Vesicles in
+      Transmission Electron Microscopy Images Scientific Reports, (2019)'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  covers: ['https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-019-49431-3/MediaObjects/41598_2019_49431_Fig1_HTML.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg']
+  description: Ready to use notebook for the segmentation of small extrcaellular vesicles
+    in transmission electron microscopy (TEM) images. The notebook is optimized to
+    use it in Google Colaboratory. It will download the original code and dataset,
+    and make the inference connecting with Google's GPU.
+  documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+  format_version: 0.2.2
+  id: deepimagej/EVsTEMsegmentationFRUNet
+  links: [FRUNet2DsEVSegmentation]
+  maintainers: []
+  name: Small extracellular vesicle instance segmentation (FRU-Net)
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
+  status: accepted
+  tags: [extracellular-vesicles, segmentation, TEM, notebook, model-inference, google-colab,
+    workflow, pipeline]
+  type: application
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  cite:
+  - {doi: 'https://doi.org/10.1109/TMI.2019.2947628', text: Neeraj Kumar et al. Transactions
+      on medical imaging 2020}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg1.jpg',
+    'https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg2.jpg',
+    'https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg3.jpg']
+  description: Labelled images for instance segmentation of cell nuclei in digital
+    pathology datasets (MoNuSeg 2018 Challenge).
+  documentation: https://monuseg.grand-challenge.org/
+  format_version: 0.2.2
+  id: deepimagej/MoNuSeg_digital_pathology_miccai2018
+  maintainers: []
+  name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MoNuSeg_digital_pathology_miccai2018/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MoNuSeg_digital_pathology_miccai2018/latest/rdf.yaml
+  status: accepted
+  tags: [StarDist, segmentation, pathology, H&E, histology, 2D, nuclei segmentation,
+    digital pathology]
+  type: dataset
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
+  format_version: 0.2.2
+  id: deepimagej/FRUNet2DsEVSegmentation
+  links: [deepimagej, EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
+  format_version: 0.2.2
+  id: deepimagej/UNet2DHeLaSegmentation
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/UNet2DPancreaticSegmentation
+  links: [deepimagej, unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
+  format_version: 0.2.2
+  id: deepimagej/UNet2DGlioblastomaSegmentation
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/SMLMDensityMapEstimationDEFCoN
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/DeepSTORMZeroCostDL4Mic
+  links: [zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/DeepSTORMZeroCostDL4Mic/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/DeepSTORMZeroCostDL4Mic/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
+  format_version: 0.2.2
+  id: deepimagej/2DUNetZeroCostDL4Mic
+  links: [zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/2DUNetZeroCostDL4Mic/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/2DUNetZeroCostDL4Mic/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
+  format_version: 0.2.2
+  id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
+  format_version: 0.2.2
+  id: deepimagej/WidefieldTxredSuperResolution
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip
+  format_version: 0.2.2
+  id: deepimagej/WidefieldDapiSuperResolution
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldDapiSuperResolution/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldDapiSuperResolution/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
+  format_version: 0.2.2
+  id: deepimagej/WidefieldFitcSuperResolution
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldFitcSuperResolution/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldFitcSuperResolution/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/JonesVirtualStaining
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/JonesVirtualStaining/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/JonesVirtualStaining/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/Mt3VirtualStaining
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/Usiigaci
+  links: [deepimagej, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Usiigaci/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Usiigaci/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/SkinLesionClassification
+  links: [deepimagej]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SkinLesionClassification/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SkinLesionClassification/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/3DUNetZeroCostDL4Mic
+  links: [deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ, imjoy/BioImageIO-Packager]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
+- authors: []
+  cite:
+  - {doi: 10.1038/s41592-021-01262-9, text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro,
+      W. Ouyang, L. Donati, E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ:
+      A user-friendly environment to run deep learning models in ImageJ", Nat Methods
+      18, 1192–1195 (2021).'}
+  config:
+    background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  description: Resources for BioImgage.IO curated by the deepImageJ team.
+  documentation: https://deepimagej.github.io/deepimagej/
+  download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
+  format_version: 0.2.2
+  id: deepimagej/Stardist2DZeroCostDL4Mic
+  links: [deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ, MoNuSeg_digital_pathology_miccai2018]
+  maintainers: []
+  name: deepImageJ Collection
+  previous_versions: []
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml
+  root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+  source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml
+  status: accepted
+  tags: [deepimagej, bioimage.io]
+  type: collection
+  validation_summaries: {}
+  version_id: latest
+  version_name: latest
 - api_version: 0.1.7
   attachments: {}
   authors: []
@@ -4129,6 +5008,7 @@ collection:
     - kwargs: {threshold: 0.4}
       name: binarize
     shape: [1, 512, 512, 1]
+  owners: [271523]
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_input_0.tif']
@@ -4226,6 +5106,7 @@ collection:
       offset: [0.0, 0.0, 0.0, 0.0]
       reference_tensor: input0
       scale: [1.0, 2.0, 1.0, 1.0]
+  owners: [77626]
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5847356/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_input_0.tif']
@@ -4325,6 +5206,7 @@ collection:
       offset: [0.0, 0.0, 0.0, 0.0]
       reference_tensor: input0
       scale: [1.0, 2.0, 1.0, 1.0]
+  owners: [77626]
   previous_versions: []
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
@@ -4407,8 +5289,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 35, dataset: 31, model: 3}
-  n_resources: {application: 35, dataset: 31, model: 3}
+  n_resource_versions: {application: 40, collection: 17, dataset: 32, model: 3}
+  n_resources: {application: 40, collection: 17, dataset: 32, model: 3}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
@@ -4426,7 +5308,19 @@ config:
     tags: [ZeroCostDL4Mic]
     url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     version: 1.7.1
-  - {id: deepimagej, source: 'https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml'}
+  - background_image: static/img/zoo-background.svg
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    id: deepimagej
+    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
+    name: DeepImageJ
+    resource_types: [model, notebook, application]
+    source: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    splash_feature_list: null
+    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
+    splash_title: deepImageJ
+    tags: [deepimagej]
+    url_root: https://raw.githubusercontent.com/deepimagej/models/master
   - {id: fiji, source: 'https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml'}
   - {id: imjoy, source: 'https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml'}
   - background_image: static/img/zoo-background.svg
