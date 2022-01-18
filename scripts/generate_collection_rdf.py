@@ -94,6 +94,9 @@ def main(
 
             this_version["validation_summaries"] = val_summaries
 
+            if "owners" in r:
+                this_version["owners"] = r["owners"]
+
             if latest_version is None:
                 latest_version = this_version
                 latest_version["id"] = r["id"]
