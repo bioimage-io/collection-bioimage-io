@@ -79,6 +79,10 @@ def write_resource(
             "type": resource_type,
         }
 
+    if "owners" in new_version:
+        resource["owners"] = new_version["owners"]
+        del new_version["owners"]
+
     if "doi" in resource and not resource["doi"]:
         del resource["doi"]
 
@@ -150,6 +154,7 @@ def update_from_zenodo(
             new_version = {
                 "version_id": doi,
                 "doi": doi,
+                "owners": hit["owners"],
                 "created": created,
                 "status": "accepted",  # default to accepted
                 "source": source,
