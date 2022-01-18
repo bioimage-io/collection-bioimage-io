@@ -72,9 +72,13 @@ def main(
                 else:
                     this_version = serialize_raw_resource_description_to_dict(rdf_node)
             original_source = this_version.get("source")
-            this_version.update(version_info)
+            # this_version.update(version_info)
+            for k in version_info:
+                if k not in ["created", "doi", "source", "status", "version_id", "version_name"]:
+                    this_version[k] = version_info[k]
+                    
             this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
-            if isinstance(this_version["source"], dict):
+            if "source" in this_version and isinstance(this_version["source"], dict):
                 if original_source:
                     this_version["source"] = original_source
                 elif "source" in this_version:
