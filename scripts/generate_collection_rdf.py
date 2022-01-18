@@ -71,10 +71,11 @@ def main(
                     continue
                 else:
                     this_version = serialize_raw_resource_description_to_dict(rdf_node)
+            original_source = this_version.get("source")
             this_version.update(version_info)
             this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
-            if isinstance(this_version["source"], dict):
-                this_version["source"] = this_version["rdf_source"]
+            if isinstance(this_version["source"], dict) and original_source:
+                this_version["source"] = original_source
 
             v_deploy_path = dist / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
             v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
