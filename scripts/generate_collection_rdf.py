@@ -74,7 +74,7 @@ def main(
             original_source = this_version.get("source")
             # this_version.update(version_info)
             for k in version_info:
-                if k not in ["created", "doi", "source", "status", "version_id", "version_name"]:
+                if k not in ["created", "doi", "status", "version_id", "version_name"]:
                     this_version[k] = version_info[k]
                     
             this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
