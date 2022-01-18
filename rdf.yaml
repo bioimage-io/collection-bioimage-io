@@ -5467,93 +5467,6 @@ collection:
     torchscript: {sha256: 4e568fd81c0ffa06ce13061327c3f673e1bac808891135badd3b0fcdacee086b,
       source: 'https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/weights-torchscript.pt'}
 - attachments:
-    files: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/zero_mean_unit_variance.ijm']
-  authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  cite:
-  - {text: training library, url: 'https://doi.org/10.5281/zenodo.5108853'}
-  - {text: architecture, url: 'https://doi.org/10.1007/978-3-319-24574-4_28'}
-  - {text: segmentation algorithm, url: 'https://doi.org/10.1038/nmeth.4151'}
-  - {text: data, url: 'https://www.nature.com/articles/s41592-021-01249-6'}
-  config:
-    deepimagej:
-      allow_tiling: true
-      model_keys: null
-      prediction:
-        postprocess:
-        - {spec: null}
-        preprocess:
-        - {kwargs: zero_mean_unit_variance.ijm, spec: 'ij.IJ::runMacroFile'}
-      pyramidal_model: false
-      test_information:
-        inputs:
-        - name: sample_input_0.tif
-          pixel_size: {x: 1, y: 1, z: 1}
-          size: 512 x 512 x 1 x 1
-        memory_peak: null
-        outputs:
-        - {name: sample_output_0.tif, size: 512 x 512 x 1 x 2, type: image}
-        runtime: null
-  covers: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png']
-  created: 2022-01-18 10:03:26.939252
-  description: Cell segmentation for phase-contrast microscopy.
-  documentation: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/documentation.md
-  doi: 10.5281/zenodo.5869900
-  format_version: 0.4.2
-  id: 10.5281/zenodo.5869899
-  inputs:
-  - axes: bcyx
-    data_range: [0.0, 255.0]
-    data_type: uint8
-    name: input0
-    preprocessing:
-    - kwargs: {axes: cyx, mode: per_sample}
-      name: zero_mean_unit_variance
-    shape:
-      min: [1, 1, 32, 32]
-      step: [0, 0, 16, 16]
-  license: CC-BY-4.0
-  links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  maintainers:
-  - {github_user: constantinpape, name: Constantin Pape}
-  name: LiveCellSegmentationBoundaryModel
-  outputs:
-  - axes: bcyx
-    data_range: [-.inf, .inf]
-    data_type: float32
-    halo: [0, 0, 8, 8]
-    name: output0
-    shape:
-      offset: [0.0, 0.0, 0.0, 0.0]
-      reference_tensor: input0
-      scale: [1.0, 2.0, 1.0, 1.0]
-  previous_versions: []
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
-  sample_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif']
-  sample_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_output_0.tif']
-  source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
-  status: accepted
-  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
-    unet]
-  test_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_input_0.npy']
-  test_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_output_0.npy']
-  timestamp: '2022-01-16T20:02:19.833552'
-  type: model
-  validation_summaries: {}
-  version: '0.1'
-  version_id: 10.5281/zenodo.5869900
-  version_name: revision 1
-  weights:
-    pytorch_state_dict:
-      architecture: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/unet.py:UNet2d
-      architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
-      kwargs: {depth: 4, final_activation: Sigmoid, gain: 2, in_channels: 1, initial_features: 64,
-        out_channels: 2, postprocessing: null, return_side_outputs: false}
-      sha256: 39c61381dd63e7152ecae132ff17b3189b515ae6ac23f8450777003fbbec722c
-      source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/weights.pt
-    torchscript: {sha256: 4453051c9604d68390b1a61b24a8d947f5af380e4f90c6065d8430b89150ef5c,
-      source: 'https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/weights-torchscript.pt'}
-- attachments:
     files: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/zero_mean_unit_variance.ijm']
   authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
@@ -5698,8 +5611,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 40, collection: 17, dataset: 32, model: 4}
-  n_resources: {application: 40, collection: 17, dataset: 32, model: 4}
+  n_resource_versions: {application: 40, collection: 17, dataset: 32, model: 3}
+  n_resources: {application: 40, collection: 17, dataset: 32, model: 3}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
