@@ -1,0 +1,6 @@
+error: null
+name: bioimageio.spec static validation
+nested_errors: {}
+source_name: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml...
+traceback: null
+warnings: {}
