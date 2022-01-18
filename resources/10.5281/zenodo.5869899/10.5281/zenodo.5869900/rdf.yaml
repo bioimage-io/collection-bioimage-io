@@ -59,6 +59,7 @@ outputs:
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_output_0.tif']
+source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
 tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
   unet]
 test_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_input_0.npy']

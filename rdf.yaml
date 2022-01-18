@@ -5008,6 +5008,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874741/10.5281/zenodo.5874742/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_output_0.tif']
+  source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml
   tags: [unet, neurons, instance-segmentation, electron-microscopy, cremi, connectomics,
     3d, affinity-prediction]
   test_inputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_input_0.npy']
@@ -5115,6 +5116,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_output_0.tif']
+  source: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
     mitochondria, bondary-segmentation, 2d]
   test_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/test_input.npy']
@@ -5269,6 +5271,7 @@ collection:
     rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5847356/rdf.yaml
     sample_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_input_0.tif']
     sample_outputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/sample_output_0.tif']
+    source: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/rdf.yaml
     tags: [a]
     test_inputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/test_input_0.npy']
     test_outputs: ['https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/test_output_0.npy']
@@ -5301,6 +5304,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5874728/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/sample_output_0.tif']
+  source: https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/rdf.yaml
   tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence,
     instance-segmentation]
   test_inputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/test_input_0.npy']
@@ -5395,6 +5399,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_output_0.tif']
+  source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
   tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
     unet]
   test_inputs: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_input_0.npy']
@@ -5490,6 +5495,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
+  source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
   tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
   test_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_input_0.npy']
   test_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_output_0.npy']
@@ -5625,6 +5631,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
   sample_inputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/sample_input_0.tif']
   sample_outputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/sample_output_0.tif']
+  source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
   test_inputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_input_0.npy']
   test_outputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_output_0.npy']

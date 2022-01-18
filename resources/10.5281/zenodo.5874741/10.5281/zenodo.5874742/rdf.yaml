@@ -59,6 +59,7 @@ outputs:
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874741/10.5281/zenodo.5874742/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_output_0.tif']
+source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml
 tags: [unet, neurons, instance-segmentation, electron-microscopy, cremi, connectomics,
   3d, affinity-prediction]
 test_inputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_input_0.npy']

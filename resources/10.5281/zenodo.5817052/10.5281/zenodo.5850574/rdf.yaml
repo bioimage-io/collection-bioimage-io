@@ -59,6 +59,7 @@ outputs:
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/sample_output_0.tif']
+source: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/rdf.yaml
 tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge, mitochondria,
   bondary-segmentation, 2d]
 test_inputs: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/test_input.npy']

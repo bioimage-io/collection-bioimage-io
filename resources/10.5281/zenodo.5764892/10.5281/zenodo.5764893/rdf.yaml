@@ -60,6 +60,7 @@ outputs:
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/sample_output_0.tif']
+source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
 tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
 test_inputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_input_0.npy']
 test_outputs: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/test_output_0.npy']
