@@ -5014,7 +5014,19 @@ collection:
   test_outputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_output_0.npy']
   timestamp: '2022-01-15T20:27:01.644120'
   type: model
-  validation_summaries: {}
+  validation_summaries:
+    latest_static:
+      error: null
+      name: bioimageio.spec static validation with auto-conversion to latest format
+      nested_errors: {}
+      traceback: null
+      warnings: {}
+    static:
+      error: null
+      name: bioimageio.spec static validation
+      nested_errors: {}
+      traceback: null
+      warnings: {}
   version: '0.1'
   weights:
     pytorch_state_dict:
