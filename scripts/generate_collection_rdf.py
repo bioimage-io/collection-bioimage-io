@@ -74,8 +74,11 @@ def main(
             original_source = this_version.get("source")
             this_version.update(version_info)
             this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
-            if isinstance(this_version["source"], dict) and original_source:
-                this_version["source"] = original_source
+            if isinstance(this_version["source"], dict):
+                if original_source:
+                    this_version["source"] = original_source
+                elif "source" in this_version:
+                    del this_version["source"]
 
             v_deploy_path = dist / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
             v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
