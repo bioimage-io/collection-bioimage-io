@@ -1,9 +1,9 @@
-authors: [Guillaume Jacquemet, Lucas von Chamier]
-cite:
+authors: &id001 [Guillaume Jacquemet, Lucas von Chamier]
+cite: &id002
 - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
     R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic.
     Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
-config:
+config: &id003
   background_image: static/img/zoo-background.svg
   default_type: application
   explore_button_text: Start Exploring
@@ -19,20 +19,35 @@ config:
   tags: [ZeroCostDL4Mic]
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
-covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png']
+covers: &id004 ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png']
 description: 2D grayscale .png images with corresponding bounding box annotations
   in .xml  PASCAL Voc format.
 documentation: https://doi.org/10.5281/zenodo.3941908
 download_url: https://doi.org/10.5281/zenodo.3941908
 format_version: 0.2.2
 id: zero/Dataset_YOLOv2_ZeroCostDL4Mic
-maintainers: []
+maintainers: &id005 []
 name: YoloV2 example training and test dataset - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
+source:
+  authors: *id001
+  cite: *id002
+  config: *id003
+  covers: *id004
+  description: 2D grayscale .png images with corresponding bounding box annotations
+    in .xml  PASCAL Voc format.
+  documentation: https://doi.org/10.5281/zenodo.3941908
+  download_url: https://doi.org/10.5281/zenodo.3941908
+  format_version: 0.2.2
+  id: zero/Dataset_YOLOv2_ZeroCostDL4Mic
+  maintainers: *id005
+  name: YoloV2 example training and test dataset - ZeroCostDL4Mic
+  root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+  tags: &id006 [YOLOv2, ZeroCostDL4Mic]
+  type: dataset
 status: accepted
-tags: [YOLOv2, ZeroCostDL4Mic]
+tags: *id006
 type: dataset
 version_id: latest
 version_name: latest

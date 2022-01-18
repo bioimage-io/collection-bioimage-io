@@ -1,8 +1,8 @@
-authors: [Romain Laine and the ZeroCostDL4Mic Team]
-badges:
+authors: &id001 [Romain Laine and the ZeroCostDL4Mic Team]
+badges: &id002
 - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open in
     Colab, url: 'https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb'}
-cite:
+cite: &id003
 - {doi: 'https://doi.org/10.1038/s41467-021-22518-0', text: 'von Chamier, L., Laine,
     R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic.
     Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
@@ -10,7 +10,7 @@ cite:
     F. Jug, Noise2Void Learning Denoising From Single Noisy Images. 2019 IEEE/CVF
     Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132,
     https://doi.org/10.1109/CVPR.2019.00223.'}
-config:
+config: &id004
   background_image: static/img/zoo-background.svg
   default_type: application
   explore_button_text: Start Exploring
@@ -26,7 +26,7 @@ config:
   tags: [ZeroCostDL4Mic]
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
-covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_2D_notebook.png',
+covers: &id005 ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_2D_notebook.png',
   'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V2D_notebook_3.png']
 description: self-supervised denoising of 2D images. Noise2Void 2D is deep-learning
   method that can be used to denoise 2D microscopy images. By running this notebook,
@@ -38,15 +38,36 @@ download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/mast
 format_version: 0.2.2
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic
-links: [Notebook Preview, Dataset_Noise2Void_2D_ZeroCostDL4Mic, Dataset_Noise2Void_2D_subtilis_DeepBacs,
+links: &id006 [Notebook Preview, Dataset_Noise2Void_2D_ZeroCostDL4Mic, Dataset_Noise2Void_2D_subtilis_DeepBacs,
   Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
-maintainers: []
+maintainers: &id007 []
 name: Noise2Void (2D) - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
+source:
+  authors: *id001
+  badges: *id002
+  cite: *id003
+  config: *id004
+  covers: *id005
+  description: self-supervised denoising of 2D images. Noise2Void 2D is deep-learning
+    method that can be used to denoise 2D microscopy images. By running this notebook,
+    you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic
+    wiki to check the original publications this network is based on and make sure
+    you cite these.
+  documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+  download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
+  format_version: 0.2.2
+  git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+  id: zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic
+  links: *id006
+  maintainers: *id007
+  name: Noise2Void (2D) - ZeroCostDL4Mic
+  root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+  tags: &id008 [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
+  type: application
 status: accepted
-tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
+tags: *id008
 type: application
 version_id: latest
 version_name: latest

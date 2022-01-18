@@ -29,7 +29,7 @@ maintainers:
 name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
-source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml
+source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
 status: accepted
 tags: [electron-microscopy, brain, neurons, instance-segmentation, 2D, isbi2012-challenge]
 type: dataset

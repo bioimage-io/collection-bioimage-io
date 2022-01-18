@@ -1,11 +1,11 @@
-authors: [Christoph Spahn, Mike Heilemann]
-cite:
+authors: &id001 [Christoph Spahn, Mike Heilemann]
+cite: &id002
 - {doi: 'https://doi.org/10.1101/2021.11.03.467152', text: 'Christoph Spahn, Romain
     F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier,
     Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike
     Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source
     deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152'}
-config:
+config: &id003
   background_image: static/img/zoo-background.svg
   default_type: application
   explore_button_text: Start Exploring
@@ -21,7 +21,7 @@ config:
   tags: [ZeroCostDL4Mic]
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
-covers: ['https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png']
+covers: &id004 ['https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png']
 description: Training and test images of E. coli cells for artificial labeling of
   membranes in brightfield images using fnet or CARE, as well as trained models for
   prediction of super-resolution membranes.
@@ -29,13 +29,29 @@ documentation: https://github.com/HenriquesLab/DeepBacs/wiki
 download_url: https://zenodo.org/record/5551123
 format_version: 0.2.2
 id: zero/Dataset_fnet_DeepBacs
-maintainers: []
+maintainers: &id005 []
 name: Artificial labeling of E. coli membranes dataset - DeepBacs
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
+source:
+  authors: *id001
+  cite: *id002
+  config: *id003
+  covers: *id004
+  description: Training and test images of E. coli cells for artificial labeling of
+    membranes in brightfield images using fnet or CARE, as well as trained models
+    for prediction of super-resolution membranes.
+  documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+  download_url: https://zenodo.org/record/5551123
+  format_version: 0.2.2
+  id: zero/Dataset_fnet_DeepBacs
+  maintainers: *id005
+  name: Artificial labeling of E. coli membranes dataset - DeepBacs
+  root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+  tags: &id006 [fnet, CARE, artificial labelling, DeepBacs, 2D]
+  type: dataset
 status: accepted
-tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
+tags: *id006
 type: dataset
 version_id: latest
 version_name: latest

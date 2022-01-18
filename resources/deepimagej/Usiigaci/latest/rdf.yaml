@@ -27,7 +27,7 @@ maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Usiigaci/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Usiigaci/latest/rdf.yaml
+source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/model.yaml
 status: accepted
 tags: [deepimagej, bioimage.io]
 type: collection
