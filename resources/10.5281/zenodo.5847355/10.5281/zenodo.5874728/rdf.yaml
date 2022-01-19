@@ -10,6 +10,26 @@ cite:
 config:
   _conceptdoi: 10.5281/zenodo.5847355
   _doi: 10.5281/zenodo.5847356
+  bioimageio:
+    created: '2022-01-18 21:31:33.668428'
+    doi: 10.5281/zenodo.5874728
+    owners: [77626]
+    status: accepted
+    validation_summaries:
+      latest_static:
+        error: null
+        name: bioimageio.spec static validation with auto-conversion to latest format
+        nested_errors: {}
+        traceback: null
+        warnings: {}
+      static:
+        error: null
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: null
+        warnings: {}
+    version_id: 10.5281/zenodo.5874728
+    version_name: revision 1
   deepimagej:
     allow_tiling: true
     model_keys: null
@@ -58,10 +78,9 @@ outputs:
     offset: [0.0, 0.0, 0.0, 0.0]
     reference_tensor: input0
     scale: [1.0, 2.0, 1.0, 1.0]
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5874728/rdf.yaml
+rdf_source: https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/sample_output_0.tif']
-source: https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/rdf.yaml
 tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence, instance-segmentation]
 test_inputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/test_input_0.npy']
 test_outputs: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/test_output_0.npy']

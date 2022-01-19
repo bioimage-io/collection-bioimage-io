@@ -1,0 +1,37 @@
+authors: [Jun Lan]
+badges:
+- {ext: 2nd, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
+config:
+  about_url: https://www.proteinatlas.org/
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    validation_summaries: {}
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  id: hpa
+  logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  name: HPA
+  resource_types: [model, application]
+  splash_feature_list: []
+  splash_subtitle: null
+  splash_title: The Human Protein Atlas
+  tags: [hpa]
+covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
+description: Seven CNN models, using multiple different architectures, ensembled through
+  averaging.
+documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/wair/README.md
+format_version: 0.2.2
+framework: pytorch
+git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/wair
+id: hpa/HPA-WAIR
+license: MIT
+name: HPA-WAIR
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-WAIR/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+tags: [classification, densenet-121, densenet-169, ibn-densenet-121, opencv, scikit-learn,
+  se-resnext-50, xception]
+type: model

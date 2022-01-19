@@ -1,0 +1,29 @@
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    validation_summaries: {}
+    version_id: latest
+    version_name: latest
+  explore_button_text: Start Exploring
+  icon: https://fiji.sc/site/logo.png
+  id: fiji
+  logo: https://fiji.sc/site/logo.png
+  name: Fiji
+  resource_types: [model, notebook]
+  splash_feature_list: []
+  splash_subtitle: Fiji is just ImageJ
+  splash_title: Fiji
+  tags: [fiji]
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+description: Resources for BioImgage.IO curated by the fiji community.
+download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+format_version: 0.2.2
+id: fiji/N2VSEMDemo
+links: [Fiji]
+name: Fiji Collection
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/fiji/N2VSEMDemo/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
+tags: [fiji, bioimage.io]
+type: model

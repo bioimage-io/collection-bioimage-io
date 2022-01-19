@@ -8,6 +8,26 @@ cite:
 - {text: segmentation algorithm, url: 'https://doi.org/10.1038/nmeth.4151'}
 - {text: data, url: 'https://cremi.org'}
 config:
+  bioimageio:
+    created: '2022-01-18 22:01:09.315638'
+    doi: 10.5281/zenodo.5874742
+    owners: [77626]
+    status: accepted
+    validation_summaries:
+      latest_static:
+        error: null
+        name: bioimageio.spec static validation with auto-conversion to latest format
+        nested_errors: {}
+        traceback: null
+        warnings: {}
+      static:
+        error: null
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: null
+        warnings: {}
+    version_id: 10.5281/zenodo.5874742
+    version_name: revision 1
   deepimagej:
     allow_tiling: true
     model_keys: null
@@ -56,10 +76,9 @@ outputs:
     offset: [0.0, 0.0, 0.0, 0.0, 0.0]
     reference_tensor: input0
     scale: [1.0, 1.0, 1.0, 1.0, 1.0]
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874741/10.5281/zenodo.5874742/rdf.yaml
+rdf_source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_output_0.tif']
-source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml
 tags: [unet, neurons, instance-segmentation, electron-microscopy, cremi, connectomics,
   3d, affinity-prediction]
 test_inputs: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_input_0.npy']

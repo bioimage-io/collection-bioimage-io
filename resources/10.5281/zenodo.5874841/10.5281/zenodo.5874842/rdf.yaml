@@ -8,6 +8,26 @@ cite:
 - {text: segmentation algorithm, url: 'https://doi.org/10.1038/nmeth.4151'}
 - {text: data, url: 'https://doi.org/10.1007/978-3-030-59722-1_7'}
 config:
+  bioimageio:
+    created: '2022-01-18 23:04:49.485980'
+    doi: 10.5281/zenodo.5874842
+    owners: [77626]
+    status: accepted
+    validation_summaries:
+      latest_static:
+        error: null
+        name: bioimageio.spec static validation with auto-conversion to latest format
+        nested_errors: {}
+        traceback: null
+        warnings: {}
+      static:
+        error: null
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: null
+        warnings: {}
+    version_id: 10.5281/zenodo.5874842
+    version_name: revision 1
   deepimagej:
     allow_tiling: true
     model_keys: null
@@ -57,10 +77,9 @@ outputs:
     offset: [0.0, 0.0, 0.0, 0.0, 0.0]
     reference_tensor: input0
     scale: [1.0, 2.0, 1.0, 1.0, 1.0]
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
+rdf_source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/sample_output_0.tif']
-source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml
 tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
 test_inputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_input_0.npy']
 test_outputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_output_0.npy']

@@ -1,0 +1,38 @@
+authors: [Shaikat Mahmood Galib, Christof Henkel, Kevin Hwang, Dmytro Poplavskiy,
+  Bojan Tunguz, Russ Wolfinger]
+badges:
+- {ext: 4th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
+config:
+  about_url: https://www.proteinatlas.org/
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    validation_summaries: {}
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  id: hpa
+  logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  name: HPA
+  resource_types: [model, application]
+  splash_feature_list: []
+  splash_subtitle: null
+  splash_title: The Human Protein Atlas
+  tags: [hpa]
+covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
+description: An ensemble of diverse and highly optimized CNN models, using hill climbing
+  and weighted voting.
+documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/wienerschnitzelgemeinschaft/README.md
+format_version: 0.2.2
+framework: pytorch
+git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/wienerschnitzelgemeinschaft
+id: hpa/HPA-wienerschnitzelgemeinschaft
+license: MIT
+name: HPA-wienerschnitzelgemeinschaft
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-wienerschnitzelgemeinschaft/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+tags: [airnet-50, airnext-50, cbam, classification, hill-climbing, inception-resnet-v2,
+  inception-v3, preresnet-50, resnet-18, resnet-34, resnet-50, resnet-101, se-resnext-50]
+type: model
