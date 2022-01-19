@@ -1162,18 +1162,6 @@ collection:
   source: https://fiji.sc/
   tags: [fiji, software]
   type: application
-- authors:
-  - {affiliation: MDC Berlin, name: Deborah Schmidt}
-  covers: [thumbnail.png]
-  description: Demo model for denoising trained on a single SEM image with Noise2Void
-  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
-  id: fiji/N2VSEMDemo
-  license: BSD-3-Clause
-  links: [fiji/Fiji]
-  name: N2V SEM Demo
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/fiji/N2VSEMDemo/latest/rdf.yaml
-  tags: [denoising, unet2d, n2v]
-  type: model
 - authors: []
   badges: []
   covers: []
@@ -1457,8 +1445,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 46, collection: 17, dataset: 33, model: 10}
-  n_resources: {application: 46, collection: 17, dataset: 33, model: 9}
+  n_resource_versions: {application: 46, collection: 17, dataset: 33, model: 9}
+  n_resources: {application: 46, collection: 17, dataset: 33, model: 8}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
