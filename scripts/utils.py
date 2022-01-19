@@ -82,10 +82,16 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
             for entry_rdf, entry_error in resolve_collection_entries(partner_collection, collection_id=partner_id):
                 if entry_error:
                     warnings.warn(f"partner[{idx}] {partner_id}: {entry_error}")
-                    ignored_partners.add(f"partner[{idx}]: {partner_id}")
+                    ignored_partners.add(partner_id)
                     continue
 
-                updated_partners.add(f"partner[{idx}]: {partner_id}")
+                # Convert relative links to absolute
+                if "links" in entry_rdf:
+                    for idx, link in enumerate(entry_rdf["links"]):
+                        if "/" not in link:
+                            entry_rdf["links"][idx] = partner_id + "/" + link
+
+                updated_partners.add(partner_id)
                 partner_resources.append(
                     dict(
                         status="accepted",

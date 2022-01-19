@@ -16,7 +16,7 @@ from utils import resolve_partners
 yaml = YAML(typ="safe")
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-SUMMARY_FIELDS = ["id", "owners", "authors", "covers", "description", "license", "links", "name", "rdf_source", "source", "tags", "type", "download_url", "badges", "github_repo"]
+SUMMARY_FIELDS = ["id", "icon", "owners", "authors", "covers", "description", "license", "links", "name", "rdf_source", "source", "tags", "type", "download_url", "badges", "github_repo"]
 
 def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
