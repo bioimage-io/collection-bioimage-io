@@ -1223,7 +1223,7 @@ collection:
   badges: []
   covers: []
   description: Run the live cell boundary model via the BioEngine
-  icon: extension
+  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
   id: ilastik/live-cell-boundary-model
   name: live-cell-boundary-model
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/live-cell-boundary-model/latest/rdf.yaml

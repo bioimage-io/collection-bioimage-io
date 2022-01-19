@@ -45,7 +45,7 @@ description: Run the live cell boundary model via the BioEngine
 documentation: https://ilastik.org
 env: ''
 format_version: 0.2.2
-icon: extension
+icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
 id: live-cell-boundary-model
 maintainers:
 - {github_user: ilastik, name: ilastik Team}
