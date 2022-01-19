@@ -244,6 +244,7 @@ collection:
   badges: []
   covers: []
   description: Previewing Jupyter notebook without a Jupyter server
+  icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
   id: zero/Notebook Preview
   name: Notebook Preview
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook
@@ -265,7 +266,7 @@ collection:
     cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_U-Net_2D_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_U-Net_2D_DeepBacs]
   name: U-Net (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D]
@@ -282,7 +283,7 @@ collection:
     is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: U-Net (3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D]
@@ -301,9 +302,9 @@ collection:
     publications this network is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_StarDist_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-    Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-    Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic, zero/Dataset_StarDist_2D_DeepBacs]
   name: StarDist (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_StarDist_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D]
@@ -319,7 +320,7 @@ collection:
     is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_StarDist_3D_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: StarDist (3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_StarDist_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
@@ -337,8 +338,8 @@ collection:
     you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_Noise2Void_2D_ZeroCostDL4Mic, Dataset_Noise2Void_2D_subtilis_DeepBacs,
-    Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic, zero/Dataset_Noise2Void_2D_subtilis_DeepBacs,
+    zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic, zero/Dataset_CARE_2D_coli_DeepBacs]
   name: Noise2Void (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
@@ -356,7 +357,7 @@ collection:
     you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_Noise2Void_3D_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic]
   name: Noise2VOID (3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D]
@@ -379,8 +380,8 @@ collection:
     on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_CARE_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_CARE_2D_ZeroCostDL4Mic, Dataset_Noisy_Nuclei_ZeroCostDL4Mic,
-    Dataset_CARE_2D_coli_DeepBacs, Dataset_fnet_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_CARE_2D_ZeroCostDL4Mic, zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic,
+    zero/Dataset_CARE_2D_coli_DeepBacs, zero/Dataset_fnet_DeepBacs]
   name: CARE (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
@@ -401,7 +402,7 @@ collection:
     on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_CARE_3D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_CARE_3D_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_CARE_3D_ZeroCostDL4Mic]
   name: CARE (3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
@@ -422,7 +423,7 @@ collection:
     is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_fnet_3D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_fnet_3D_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_fnet_3D_ZeroCostDL4Mic]
   name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
@@ -443,7 +444,7 @@ collection:
     is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_fnet_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_fnet_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_fnet_DeepBacs]
   name: Label-free Prediction - fnet - (2D) ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_fnet_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 2D]
@@ -468,7 +469,7 @@ collection:
     cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_Deep-STORM_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_Deep-STORM_ZeroCostDL4Mic]
   name: Deep-STORM (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
@@ -487,7 +488,7 @@ collection:
     is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_pix2pix_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_pix2pix_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_pix2pix_ZeroCostDL4Mic]
   name: pix2pix (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
@@ -508,7 +509,7 @@ collection:
     and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_CycleGAN_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_CycleGAN_ZeroCostDL4Mic]
   name: CycleGAN (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
@@ -528,7 +529,7 @@ collection:
     is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Augmentor_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: Augmentor - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Augmentor_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
@@ -548,7 +549,7 @@ collection:
     and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: DenoiSeg (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
@@ -575,7 +576,7 @@ collection:
     and ThunderSTORM plugin.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
   id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
-  links: [Notebook Preview, Dataset_Deep-STORM_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_Deep-STORM_ZeroCostDL4Mic]
   name: Deep-STORM (2D) - ZeroCostDL4Mic - DeepImageJ
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
@@ -594,7 +595,7 @@ collection:
     be used in Fiji via deepImageJ.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
   id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
@@ -614,7 +615,7 @@ collection:
     cite these. Networks trained in this notebook can be used in Fiji via deepImageJ.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
   id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
@@ -634,7 +635,7 @@ collection:
     on and make sure you cite these.
   download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_U-Net_2D_multilabel_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_U-Net_2D_multilabel_DeepBacs]
   name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel,
@@ -656,9 +657,9 @@ collection:
     be used in Fiji via deepImageJ and StarDist plugins for ImageJ.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
   id: zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
-  links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-    Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-    Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic, zero/Dataset_StarDist_2D_DeepBacs]
   name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
   tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
@@ -678,7 +679,7 @@ collection:
     this network is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_RCAN_3D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_CARE_3D_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_CARE_3D_ZeroCostDL4Mic]
   name: RCAN (3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_RCAN_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D]
@@ -696,9 +697,10 @@ collection:
     this network is based on and make sure you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-    Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-    Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs, Dataset_SplineDist_2D_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic, zero/Dataset_StarDist_2D_DeepBacs,
+    zero/Dataset_SplineDist_2D_DeepBacs]
   name: SplineDist (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_SplineDist_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
@@ -714,8 +716,8 @@ collection:
     boxes around them.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_YOLOv2_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_YOLOv2_ZeroCostDL4Mic, Dataset_YOLOv2_coli_DeepBacs,
-    Dataset_YOLOv2_antibiotic_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_YOLOv2_ZeroCostDL4Mic, zero/Dataset_YOLOv2_coli_DeepBacs,
+    zero/Dataset_YOLOv2_antibiotic_DeepBacs]
   name: YOLOv2 - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
@@ -731,8 +733,8 @@ collection:
     bounding boxes around them.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Detectron2_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_YOLOv2_ZeroCostDL4Mic, Dataset_YOLOv2_coli_DeepBacs,
-    Dataset_YOLOv2_antibiotic_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_YOLOv2_ZeroCostDL4Mic, zero/Dataset_YOLOv2_coli_DeepBacs,
+    zero/Dataset_YOLOv2_antibiotic_DeepBacs]
   name: Detectron2 - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Detectron2_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
@@ -746,7 +748,7 @@ collection:
     (affine and perspective registration).
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_DRMIME_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: DRMIME - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DRMIME_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
@@ -764,9 +766,9 @@ collection:
     algorithm for cellular segmentation.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Cellpose_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-    Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-    Dataset_StarDist_fluo2_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic]
   name: Cellpose (2D and 3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Cellpose_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
@@ -781,8 +783,8 @@ collection:
     network, which identifies objects in images and draws bounding boxes around them.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_RetinaNet_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_YOLOv2_ZeroCostDL4Mic, Dataset_YOLOv2_coli_DeepBacs,
-    Dataset_YOLOv2_antibiotic_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_YOLOv2_ZeroCostDL4Mic, zero/Dataset_YOLOv2_coli_DeepBacs,
+    zero/Dataset_YOLOv2_antibiotic_DeepBacs]
   name: RetinaNet - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_RetinaNet_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
@@ -799,8 +801,8 @@ collection:
     you cite these.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_Noise2Void_2D_ZeroCostDL4Mic, Dataset_Noise2Void_2D_subtilis_DeepBacs,
-    Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
+  links: [zero/Notebook Preview, zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic, zero/Dataset_Noise2Void_2D_subtilis_DeepBacs,
+    zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic, zero/Dataset_CARE_2D_coli_DeepBacs]
   name: DecoNoising (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
@@ -817,7 +819,7 @@ collection:
   description: Interactive instance segmentation using Kaibu and Cellpose.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
   id: zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
@@ -832,7 +834,7 @@ collection:
     boxes around them.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_MaskRCNN_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: MaskRCNN - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_MaskRCNN_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
@@ -845,7 +847,7 @@ collection:
   description: Error mapping and quality metrics estimation.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_Quality_Control_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: Quality Control - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Quality_Control_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, Quality Control, ZeroCostDL4Mic]
@@ -863,7 +865,7 @@ collection:
     as close to SR as posible.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_DFCAN_ZeroCostDL4Mic
-  links: [Notebook Preview]
+  links: [zero/Notebook Preview]
   name: DFCAN - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_DFCAN_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic]
@@ -878,9 +880,9 @@ collection:
     by Lalit et al. in 2021, on arXiv.
   download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
   id: zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic
-  links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-    Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-    Dataset_StarDist_fluo2_ZeroCostDL4Mic]
+  links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
+    zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic]
   name: EmbedSeg (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
@@ -889,6 +891,7 @@ collection:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
     deep learning models in ImageJ and Fiji.
+  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej/deepimagej-web
   name: DeepImageJ
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej-web/latest/rdf.yaml
@@ -900,6 +903,7 @@ collection:
   covers: []
   description: Export BioImage.IO model packages for deepImageJ from a model description
     file
+  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej/deepimagej
   name: deepimagej
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/deepimagej/latest/rdf.yaml
@@ -917,7 +921,7 @@ collection:
   description: Easy example to define a 2D U-Net for segmentation with Keras and import
     it into DeepImageJ format
   id: deepimagej/unet-pancreaticcellsegmentation
-  links: [UNet2DPancreaticSegmentation]
+  links: [deepimagej/UNet2DPancreaticSegmentation]
   name: 2D U-Net for binary segmentation
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/unet-pancreaticcellsegmentation/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
@@ -929,6 +933,7 @@ collection:
   description: Single molecule localization microscopy (SMLM) processing using deepImageJ
     and ThunderSTORM in an ImageJ macro.
   download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej/smlm-deepimagej
   name: SMLM-superresolution
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/smlm-deepimagej/latest/rdf.yaml
@@ -952,7 +957,7 @@ collection:
     use it in Google Colaboratory. It will download the original code and dataset,
     and make the inference connecting with Google's GPU.
   id: deepimagej/EVsTEMsegmentationFRUNet
-  links: [FRUNet2DsEVSegmentation]
+  links: [deepimagej/FRUNet2DsEVSegmentation]
   name: Small extracellular vesicle instance segmentation (FRU-Net)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
   source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
@@ -977,7 +982,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
   id: deepimagej/FRUNet2DsEVSegmentation
-  links: [deepimagej, EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, deepimagej/EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
@@ -987,7 +992,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
   id: deepimagej/UNet2DHeLaSegmentation
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml
@@ -997,7 +1002,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
   id: deepimagej/UNet2DPancreaticSegmentation
-  links: [deepimagej, unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, deepimagej/unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
@@ -1007,7 +1012,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
   id: deepimagej/UNet2DGlioblastomaSegmentation
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/model.yaml
@@ -1017,7 +1022,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip
   id: deepimagej/SMLMDensityMapEstimationDEFCoN
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/defcon_density_map_estimation/model.yaml
@@ -1027,7 +1032,8 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
   id: deepimagej/DeepSTORMZeroCostDL4Mic
-  links: [zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej, imjoy/BioImageIO-Packager]
+  links: [zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej/deepimagej,
+    imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/DeepSTORMZeroCostDL4Mic/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/model.yaml
@@ -1037,7 +1043,8 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
   id: deepimagej/2DUNetZeroCostDL4Mic
-  links: [zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej, imjoy/BioImageIO-Packager]
+  links: [zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej/deepimagej,
+    imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/2DUNetZeroCostDL4Mic/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/2du-net_zerocostdl4mic/model.yaml
@@ -1047,7 +1054,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
   id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
@@ -1057,7 +1064,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
   id: deepimagej/WidefieldTxredSuperResolution
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/model.yaml
@@ -1067,7 +1074,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip
   id: deepimagej/WidefieldDapiSuperResolution
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldDapiSuperResolution/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/model.yaml
@@ -1077,7 +1084,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
   id: deepimagej/WidefieldFitcSuperResolution
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/WidefieldFitcSuperResolution/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/model.yaml
@@ -1087,7 +1094,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
   id: deepimagej/JonesVirtualStaining
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/JonesVirtualStaining/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/model.yaml
@@ -1097,7 +1104,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
   id: deepimagej/Mt3VirtualStaining
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/model.yaml
@@ -1107,7 +1114,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
   id: deepimagej/Usiigaci
-  links: [deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Usiigaci/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/model.yaml
@@ -1117,7 +1124,7 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
   id: deepimagej/SkinLesionClassification
-  links: [deepimagej]
+  links: [deepimagej/deepimagej]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SkinLesionClassification/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/model.yaml
@@ -1127,7 +1134,8 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
   id: deepimagej/3DUNetZeroCostDL4Mic
-  links: [deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ,
+    imjoy/BioImageIO-Packager]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/3du-net_zerocostdl4mic/model.yaml
@@ -1137,7 +1145,8 @@ collection:
   description: Resources for BioImgage.IO curated by the deepImageJ team.
   download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
   id: deepimagej/Stardist2DZeroCostDL4Mic
-  links: [deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ, MoNuSeg_digital_pathology_miccai2018]
+  links: [deepimagej/deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ,
+    deepimagej/MoNuSeg_digital_pathology_miccai2018]
   name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/stardist2D_zerocostdl4mic/model.yaml
@@ -1146,6 +1155,7 @@ collection:
 - authors: [Fiji community]
   description: Fiji is an image processing package — a "batteries-included" distribution
     of ImageJ, bundling many plugins which facilitate scientific image analysis.
+  icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
   id: fiji/Fiji
   name: Fiji
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/fiji/Fiji/latest/rdf.yaml
@@ -1155,7 +1165,7 @@ collection:
 - description: Resources for BioImgage.IO curated by the fiji community.
   download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
   id: fiji/N2VSEMDemo
-  links: [Fiji]
+  links: [fiji/Fiji]
   name: Fiji Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/fiji/N2VSEMDemo/latest/rdf.yaml
   source: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/model.yaml
@@ -1165,6 +1175,7 @@ collection:
   badges: []
   covers: []
   description: Exporting BioImage.IO model packages from the model description file
+  icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
   id: imjoy/BioImageIO-Packager
   name: BioImageIO-Packager
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/BioImageIO-Packager/latest/rdf.yaml
@@ -1175,6 +1186,7 @@ collection:
   badges: []
   covers: []
   description: 'ImJoy: Supercharging interactivity and scalability!'
+  icon: https://imjoy.io/static/img/imjoy-icon.png
   id: imjoy/ImJoy
   name: ImJoy
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/ImJoy/latest/rdf.yaml
@@ -1185,6 +1197,7 @@ collection:
   badges: []
   covers: []
   description: ImageJ running in the browser
+  icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
   id: imjoy/ImageJ.JS
   name: ImageJ.JS
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/ImageJ.JS/latest/rdf.yaml
@@ -1197,7 +1210,7 @@ collection:
   download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
   id: imjoy/LuCa-7color
   license: CC-BY 4.0
-  links: [vizarr]
+  links: [imjoy/vizarr]
   name: LuCa-7color
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/LuCa-7color/latest/rdf.yaml
   source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
@@ -1208,6 +1221,7 @@ collection:
   covers: []
   description: Export BioImage.IO model packages for ilastik from a model description
     file
+  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
   id: ilastik/ilastik
   name: ilastik
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/ilastik/ilastik/latest/rdf.yaml
@@ -1307,6 +1321,7 @@ collection:
   badges: []
   covers: ['https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif']
   description: ShuffleNetV2 for HPA.
+  icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
   id: hpa/HPA-Classification
   name: HPA-Classification
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-Classification/latest/rdf.yaml
@@ -1321,7 +1336,7 @@ collection:
   description: A light-weight model for HPA image classification competition
   id: hpa/HPAShuffleNetV2
   license: Apache 2.0
-  links: [HPA-Classification]
+  links: [hpa/HPA-Classification]
   name: HPA ShuffleNetV2
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPAShuffleNetV2/latest/rdf.yaml
   source: https://raw.githubusercontent.com/oeway/Anet-Model-Zoo/master/4_hpa_shufflenet_v2/model.json

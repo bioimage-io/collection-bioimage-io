@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
 format_version: 0.2.2
 id: deepimagej/UNet2DPancreaticSegmentation
-links: [deepimagej, unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, deepimagej/unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml

@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip
 format_version: 0.2.2
 id: deepimagej/SMLMDensityMapEstimationDEFCoN
-links: [deepimagej, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml

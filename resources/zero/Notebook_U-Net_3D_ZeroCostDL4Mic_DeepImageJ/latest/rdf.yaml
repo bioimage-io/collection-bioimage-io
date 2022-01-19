@@ -56,7 +56,7 @@ download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/mast
 format_version: 0.2.2
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
-links: [Notebook Preview]
+links: [zero/Notebook Preview]
 maintainers: []
 name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml

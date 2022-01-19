@@ -57,8 +57,8 @@ download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/mast
 format_version: 0.2.2
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic
-links: [Notebook Preview, Dataset_Noise2Void_2D_ZeroCostDL4Mic, Dataset_Noise2Void_2D_subtilis_DeepBacs,
-  Dataset_Noisy_Nuclei_ZeroCostDL4Mic, Dataset_CARE_2D_coli_DeepBacs]
+links: [zero/Notebook Preview, zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic, zero/Dataset_Noise2Void_2D_subtilis_DeepBacs,
+  zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic, zero/Dataset_CARE_2D_coli_DeepBacs]
 maintainers: []
 name: Noise2Void (2D) - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml

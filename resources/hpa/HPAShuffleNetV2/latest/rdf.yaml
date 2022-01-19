@@ -51,7 +51,7 @@ inputs:
   shape: [1, 512, 512, 3]
 language: javascript
 license: Apache 2.0
-links: [HPA-Classification]
+links: [hpa/HPA-Classification]
 name: HPA ShuffleNetV2
 optional_kwargs: {}
 outputs:

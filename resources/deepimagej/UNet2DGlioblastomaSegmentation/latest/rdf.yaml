@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
 format_version: 0.2.2
 id: deepimagej/UNet2DGlioblastomaSegmentation
-links: [deepimagej, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml

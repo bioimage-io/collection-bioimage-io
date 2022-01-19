@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
 format_version: 0.2.2
 id: deepimagej/3DUNetZeroCostDL4Mic
-links: [deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml

@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
 format_version: 0.2.2
 id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
-links: [deepimagej, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml

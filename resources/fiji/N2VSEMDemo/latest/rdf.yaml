@@ -34,7 +34,7 @@ description: Resources for BioImgage.IO curated by the fiji community.
 download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
 format_version: 0.2.2
 id: fiji/N2VSEMDemo
-links: [Fiji]
+links: [fiji/Fiji]
 name: Fiji Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/fiji/N2VSEMDemo/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml

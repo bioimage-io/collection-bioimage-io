@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
 format_version: 0.2.2
 id: deepimagej/SkinLesionClassification
-links: [deepimagej]
+links: [deepimagej/deepimagej]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/SkinLesionClassification/latest/rdf.yaml

@@ -47,7 +47,7 @@ description: Easy example to define a 2D U-Net for segmentation with Keras and i
 documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
 format_version: 0.2.2
 id: deepimagej/unet-pancreaticcellsegmentation
-links: [UNet2DPancreaticSegmentation]
+links: [deepimagej/UNet2DPancreaticSegmentation]
 maintainers: []
 name: 2D U-Net for binary segmentation
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/unet-pancreaticcellsegmentation/latest/rdf.yaml

@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
 format_version: 0.2.2
 id: deepimagej/UNet2DHeLaSegmentation
-links: [deepimagej, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml

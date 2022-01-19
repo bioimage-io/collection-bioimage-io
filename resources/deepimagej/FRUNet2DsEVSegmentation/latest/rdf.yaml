@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
 format_version: 0.2.2
 id: deepimagej/FRUNet2DsEVSegmentation
-links: [deepimagej, EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, deepimagej/EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml

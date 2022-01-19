@@ -41,7 +41,8 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
 format_version: 0.2.2
 id: deepimagej/Stardist2DZeroCostDL4Mic
-links: [deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ, MoNuSeg_digital_pathology_miccai2018]
+links: [deepimagej/deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ,
+  deepimagej/MoNuSeg_digital_pathology_miccai2018]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml

@@ -56,7 +56,7 @@ download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/mast
 format_version: 0.2.2
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic
-links: [Notebook Preview]
+links: [zero/Notebook Preview]
 maintainers: []
 name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest/rdf.yaml

@@ -56,9 +56,9 @@ download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/mast
 format_version: 0.2.2
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic
-links: [Notebook Preview, Dataset_StarDist_2D_ZeroCostDL4Mic_2D, Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-  Dataset_StarDist_brightfield_ZeroCostDL4Mic, Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-  Dataset_StarDist_fluo2_ZeroCostDL4Mic, Dataset_StarDist_2D_DeepBacs, Dataset_SplineDist_2D_DeepBacs]
+links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
+  zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
+  zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic, zero/Dataset_StarDist_2D_DeepBacs, zero/Dataset_SplineDist_2D_DeepBacs]
 maintainers: []
 name: SplineDist (2D) - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/zero/Notebook_SplineDist_2D_ZeroCostDL4Mic/latest/rdf.yaml

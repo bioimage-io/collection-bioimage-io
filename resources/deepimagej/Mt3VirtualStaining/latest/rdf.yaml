@@ -41,7 +41,7 @@ documentation: https://deepimagej.github.io/deepimagej/
 download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
 format_version: 0.2.2
 id: deepimagej/Mt3VirtualStaining
-links: [deepimagej, imjoy/BioImageIO-Packager]
+links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
 maintainers: []
 name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/deepimagej/Mt3VirtualStaining/latest/rdf.yaml

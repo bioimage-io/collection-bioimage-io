@@ -41,7 +41,7 @@ download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinel
 format_version: 0.2.2
 id: imjoy/LuCa-7color
 license: CC-BY 4.0
-links: [vizarr]
+links: [imjoy/vizarr]
 name: LuCa-7color
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/LuCa-7color/latest/rdf.yaml
 root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
