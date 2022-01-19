@@ -1237,97 +1237,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-bestfitting/latest/rdf.yaml
   tags: [classification, densenet-121, inception-v3, resnet-34, resnet-50]
   type: model
-- authors: [Jun Lan]
-  badges:
-  - {ext: 2nd, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: Seven CNN models, using multiple different architectures, ensembled
-    through averaging.
-  license: MIT
-  name: HPA-WAIR
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-WAIR/latest/rdf.yaml
-  tags: [classification, densenet-121, densenet-169, ibn-densenet-121, opencv, scikit-learn,
-    se-resnext-50, xception]
-  type: model
-- authors: [Park Jinmo]
-  badges:
-  - {ext: 3rd, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: An ensemble using focal loss, per image normalization and spatial attention.
-  license: BSD-2-Clause
-  name: HPA-pudae
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-pudae/latest/rdf.yaml
-  tags: [classification, inception-v3, resnet-34, se-resnext-50]
-  type: model
-- authors: [Shaikat Mahmood Galib, Christof Henkel, Kevin Hwang, Dmytro Poplavskiy,
-    Bojan Tunguz, Russ Wolfinger]
-  badges:
-  - {ext: 4th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: An ensemble of diverse and highly optimized CNN models, using hill
-    climbing and weighted voting.
-  license: MIT
-  name: HPA-wienerschnitzelgemeinschaft
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-wienerschnitzelgemeinschaft/latest/rdf.yaml
-  tags: [airnet-50, airnext-50, cbam, classification, hill-climbing, inception-resnet-v2,
-    inception-v3, preresnet-50, resnet-18, resnet-34, resnet-50, resnet-101, se-resnext-50]
-  type: model
-- authors: [Yinzheng Gu, Chuanpeng Li, Jinbin Xie]
-  badges:
-  - {ext: 5th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: An ensemble of seven CNN models and a multi-layer perceptron network,
-    using image augmentation, multi scales, weighted sampling and MultiLabelSoftMargin
-    loss.
-  license: MIT
-  name: HPA-vpp
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-vpp/latest/rdf.yaml
-  tags: [classification, inception-v3, inception-v4, multilayer-perceptron, xception]
-  type: model
-- authors: [Dmitry Buslov, Sergei Fironov, Alexander Kiselev, Dmytro Panchenko]
-  badges:
-  - {ext: 8th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: 14 CNN models ensembled via LightGBM stacking, optimized with Wadam,
-    using focal and LSEP loss.
-  license: MIT
-  name: HPA-One More Layer Of Stacking
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-One-More/latest/rdf.yaml
-  tags: [bn-inception, classification, inception-v4, lightgbm, se-resnext-50, xception]
-  type: model
-- authors: [Xuan Cao, Runmin Wei, Yuanhao Wu, Xun Zhu]
-  badges:
-  - {ext: 10th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: An ensemble of a cropping window CNN based on Xception, and two conventional
-    CNNs based on SE-ResNext50 and InceptionV3.
-  license: MIT
-  name: HPA-conv is all you need
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-conv/latest/rdf.yaml
-  tags: [classification, inception-v3, se-resnext-50, xception]
-  type: model
-- authors: [Kuan-Lun Tseng]
-  badges:
-  - {ext: 16th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: A CNN with large input size (1024 ⨉ 1024 px) using fixed batch-normalization
-    and data distillation.
-  license: MIT
-  name: HPA-NTU_MiRA
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-NTU_MiRA/latest/rdf.yaml
-  tags: [classification, resnet-34]
-  type: model
-- authors: [Zhifeng Gao, Cheng Ju, Xiaohan Yi, Hongdong Zheng]
-  badges:
-  - {ext: 38th, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png']
-  description: An ensemble model of three different resolutions based on single attention
-    gated network.
-  license: MIT
-  name: HPA-Random Walk
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/hpa/HPA-Random-Walk/latest/rdf.yaml
-  tags: [attention-gate, classification, resnet-18]
-  type: model
 - authors:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
@@ -1409,8 +1318,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 45, collection: 17, dataset: 33, model: 18}
-  n_resources: {application: 45, collection: 17, dataset: 33, model: 17}
+  n_resource_versions: {application: 45, collection: 17, dataset: 33, model: 10}
+  n_resources: {application: 45, collection: 17, dataset: 33, model: 9}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
