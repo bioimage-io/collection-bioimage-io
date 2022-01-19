@@ -155,7 +155,7 @@ def update_from_zenodo(
                 "version_id": doi,
                 "doi": doi,
                 "owners": hit["owners"],
-                "created": created,
+                "created": str(created),
                 "status": "accepted",  # default to accepted
                 "source": source,
                 "name": name,

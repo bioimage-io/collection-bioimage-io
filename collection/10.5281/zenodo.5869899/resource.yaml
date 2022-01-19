@@ -4,6 +4,6 @@ owners: [77626]
 status: accepted
 type: model
 versions:
-- {created: ! '2022-01-18 10:03:26.939252', doi: 10.5281/zenodo.5869900, name: LiveCellSegmentationBoundaryModel,
+- {created: '2022-01-18 10:03:26.939252', doi: 10.5281/zenodo.5869900, name: LiveCellSegmentationBoundaryModel,
   source: 'https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml',
   status: accepted, version_id: 10.5281/zenodo.5869900, version_name: revision 1}

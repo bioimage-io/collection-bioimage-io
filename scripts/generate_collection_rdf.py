@@ -16,7 +16,7 @@ from utils import resolve_partners
 yaml = YAML(typ="safe")
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-
+SUMMARY_FIELDS = ["owners", "authors", "covers", "description", "license", "links", "name", "rdf_source", "source", "tags", "type", "download_url", "badges", "github_repo"]
 
 def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
@@ -72,22 +72,35 @@ def main(
                 else:
                     this_version = serialize_raw_resource_description_to_dict(rdf_node)
             original_source = this_version.get("source")
-            # this_version.update(version_info)
+
+            if "config" not in this_version:
+                this_version["config"] = {}
+            if "bioimageio" not in this_version["config"]:
+                this_version["config"]["bioimageio"] = {}
+
+            # Allowing override fields
             for k in version_info:
-                if k not in ["created", "doi", "status", "version_id", "version_name"]:
+                # Place these fields under config.bioimageio
+                if k in ["created", "doi", "status", "version_id", "version_name"]:
+                    this_version["config"]["bioimageio"][k] = version_info[k]
+                else:
                     this_version[k] = version_info[k]
                     
-            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
-            if "source" in this_version and isinstance(this_version["source"], dict):
-                if original_source:
-                    this_version["source"] = original_source
-                elif "source" in this_version:
-                    del this_version["source"]
+            
+            if original_source:
+                this_version["source"] = original_source
 
-            v_deploy_path = dist / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
-            v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
-            with v_deploy_path.open("wt", encoding="utf-8") as f:
-                yaml.dump(this_version, f)
+            if "source" in this_version and isinstance(this_version["source"], dict):
+                del this_version["source"]
+            
+            # rename source to rdf_source to make it valid for models
+            if "source" in this_version:
+                if this_version["source"].split("?")[0].endswith("rdf.yaml"):
+                    this_version["rdf_source"] = this_version["source"]
+                    del this_version["source"]
+            
+            if "rdf_source" not in this_version:
+                this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
             # add validation summaries to this version in the collection rdf
             val_summaries = {}
@@ -100,10 +113,17 @@ def main(
 
                 val_summaries[name] = {k: v for k, v in val_sum.items() if k != "source_name"}
 
-            this_version["validation_summaries"] = val_summaries
+            this_version["config"]["bioimageio"]["validation_summaries"] = val_summaries
 
             if "owners" in r:
-                this_version["owners"] = r["owners"]
+                this_version["config"]["bioimageio"]["owners"] = r["owners"]
+
+            v_deploy_path = dist / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
+            v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
+            with v_deploy_path.open("wt", encoding="utf-8") as f:
+                yaml.dump(this_version, f)
+            
+            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
             if latest_version is None:
                 latest_version = this_version
@@ -115,7 +135,10 @@ def main(
         if latest_version is None:
             print(f"Ignoring resource {resource_id} without any accepted versions")
         else:
-            collection.append(latest_version)
+            summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
+            if latest_version["config"]["bioimageio"].get("owners"):
+                summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
+            collection.append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1
             n_accepted_versions[type_] = (
