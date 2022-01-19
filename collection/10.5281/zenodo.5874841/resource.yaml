@@ -4,6 +4,6 @@ owners: [77626]
 status: accepted
 type: model
 versions:
-- {created: ! '2022-01-18 23:04:49.485980', doi: 10.5281/zenodo.5874842, name: MitochondriaEMSegmentationBoundaryModel,
+- {created: '2022-01-18 23:04:49.485980', doi: 10.5281/zenodo.5874842, name: MitochondriaEMSegmentationBoundaryModel,
   source: 'https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml',
   status: accepted, version_id: 10.5281/zenodo.5874842, version_name: revision 1}
