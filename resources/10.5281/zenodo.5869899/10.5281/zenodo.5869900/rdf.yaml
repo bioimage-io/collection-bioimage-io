@@ -62,7 +62,8 @@ inputs:
     min: [1, 1, 32, 32]
     step: [0, 0, 16, 16]
 license: CC-BY-4.0
-links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+links: [ilastik/live-cell-boundary-model, ilastik/livecell_dataset, ilastik/ilastik,
+  deepimagej/deepimagej, imjoy/BioImageIO-Packager]
 maintainers:
 - {github_user: constantinpape, name: Constantin Pape}
 name: LiveCellSegmentationBoundaryModel
