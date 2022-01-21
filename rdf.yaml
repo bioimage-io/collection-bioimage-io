@@ -1371,6 +1371,19 @@ collection:
     3d, affinity-prediction]
   type: model
 - authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
+  description: Nucleus segmentation for fluorescence microscopy
+  id: 10.5281/zenodo.5764892
+  license: CC-BY-4.0
+  links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
+    imjoy/BioImageIO-Packager]
+  name: NucleiSegmentationBoundaryModel
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
+  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
+  type: model
+- authors:
   - {affiliation: '', name: ZeroCostDL4Mic team}
   - {name: Constantin Pape}
   - {name: DeepImageJ team}
@@ -1386,6 +1399,19 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
     mitochondria, bondary-segmentation, 2d]
+  type: model
+- authors:
+  - {name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png']
+  description: Mitochondria segmentation for electron microscopy.
+  id: 10.5281/zenodo.5874841
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
+    imjoy/BioImageIO-Packager]
+  name: MitochondriaEMSegmentationBoundaryModel
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
+  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
   type: model
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
@@ -1414,32 +1440,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
   tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
     unet]
-  type: model
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
-  description: Nucleus segmentation for fluorescence microscopy
-  id: 10.5281/zenodo.5764892
-  license: CC-BY-4.0
-  links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
-  name: NucleiSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
-  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
-  type: model
-- authors:
-  - {name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png']
-  description: Mitochondria segmentation for electron microscopy.
-  id: 10.5281/zenodo.5874841
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
-    imjoy/BioImageIO-Packager]
-  name: MitochondriaEMSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
-  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
   type: model
 config:
   background_image: static/img/zoo-background.svg

@@ -56,4 +56,4 @@ root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/col
 source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
 tags: [bioengine]
 type: application
-version: 0.1.0
+version: 0.1.1
