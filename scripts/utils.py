@@ -103,7 +103,7 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
                                 version_id="latest",
                                 version_name="latest",
                                 status="accepted",
-                                source=entry_rdf,
+                                rdf_source=entry_rdf,
                             )
                         ],
                     )
