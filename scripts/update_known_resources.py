@@ -61,7 +61,7 @@ def write_resource(
             raise ValueError(resource["status"])
 
         for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id or new_version.get("source") == known_version.get("source"):
+            if known_version["version_id"] == version_id and new_version.get("rdf_source") == known_version.get("rdf_source"):
                 # fetched resource is known
                 return "old_hit"
 
@@ -135,16 +135,16 @@ def update_from_zenodo(
             version_name = f"revision {hit['revision']}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
-            source = "unknown"
+            rdf_source = "unknown"
             name = doi
             resource_type = "unknown"
             if len(rdf_urls) > 0:
                 if len(rdf_urls) > 1:
                     print("found multiple 'rdf.yaml' sources?!?")
 
-                source = sorted(rdf_urls)[0]
+                rdf_source = sorted(rdf_urls)[0]
                 try:
-                    r = requests.get(source)
+                    r = requests.get(rdf_source)
                     rdf = yaml.load(r.text)
                     name = rdf.get("name", doi)
                     resource_type = rdf.get("type")
@@ -157,7 +157,7 @@ def update_from_zenodo(
                 "owners": hit["owners"],
                 "created": str(created),
                 "status": "accepted",  # default to accepted
-                "source": source,
+                "rdf_source": rdf_source,
                 "name": name,
                 "version_name": version_name,
             }
@@ -200,14 +200,14 @@ def main(collection_dir: Path, max_resource_count: int) -> int:
             "resource_id": k,
             "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
             "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
-            "new_version_sources": json.dumps([(vv.get("source") or None) for vv in v]),
+            "new_version_sources": json.dumps([(vv.get("rdf_source") or None) for vv in v]),
             "new_version_sources_md": "\n".join(
                 [
                     "  - "
                     + (
-                        f"dict(name={vv['source'].get('name')}, ...)"
-                        if isinstance(vv["source"], dict)
-                        else vv["source"]
+                        f"dict(name={vv['rdf_source'].get('name')}, ...)"
+                        if isinstance(vv["rdf_source"], dict)
+                        else vv["rdf_source"]
                     )
                     for vv in v
                 ]

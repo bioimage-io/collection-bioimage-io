@@ -115,7 +115,7 @@ def parse_imjoy_plugin(source, overwrite_config=None):
     return config
 
 
-def convert_config_to_rdf(plugin_config, plugin_id, source_url=None):
+def convert_config_to_rdf(plugin_config, plugin_id, source_url=None):  # todo: remove special source treatment now that we use rdf_source
     """Convert imjoy plugin config to RDF format."""
     rdf = dotdict(
         {

@@ -5,5 +5,5 @@ status: accepted
 type: model
 versions:
 - {created: '2022-01-18 22:01:09.315638', doi: 10.5281/zenodo.5874742, name: NeuronEMSegmentationBoundaryModel,
-  source: 'https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml',
+  rdf_source: 'https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml',
   status: accepted, version_id: 10.5281/zenodo.5874742, version_name: revision 1}
