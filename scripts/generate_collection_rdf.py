@@ -50,54 +50,43 @@ def main(
             # Ignore the name in the version info
             del version_info["name"]
 
-            if isinstance(version_info["source"], dict):
-                if version_info["source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
-                    rdf_info = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["source"]["source"]))
+            if isinstance(version_info["rdf_source"], dict):
+                if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
+                    rdf_info = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["rdf_source"]["source"]))
                 else:
                     rdf_info = {}
 
                 # Inherit the info from e.g. the collection
-                this_version = version_info["source"].copy()
+                this_version = version_info["rdf_source"].copy()
                 this_version.update(rdf_info)
                 assert missing not in this_version.values(), this_version
-            elif version_info["source"].split("?")[0].endswith(".imjoy.html"):
-                this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["source"]))
+            elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
+                this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["rdf_source"]))
                 assert missing not in this_version.values(), this_version
             else:
                 try:
-                    rdf_node = load_raw_resource_description(version_info["source"])
+                    rdf_node = load_raw_resource_description(version_info["rdf_source"])
                 except Exception as e:
-                    print(f"Failed to interpret {version_info['source']} as rdf: {e}")
+                    print(f"Failed to interpret {version_info['rdf_source']} as rdf: {e}")
                     continue
                 else:
                     this_version = serialize_raw_resource_description_to_dict(rdf_node)
-            original_source = this_version.get("source")
 
             if "config" not in this_version:
                 this_version["config"] = {}
             if "bioimageio" not in this_version["config"]:
                 this_version["config"]["bioimageio"] = {}
 
-            # Allowing override fields
+            # Allowing to override fields
             for k in version_info:
                 # Place these fields under config.bioimageio
                 if k in ["created", "doi", "status", "version_id", "version_name"]:
                     this_version["config"]["bioimageio"][k] = version_info[k]
                 else:
                     this_version[k] = version_info[k]
-                    
-            
-            if original_source:
-                this_version["source"] = original_source
 
-            if "source" in this_version and isinstance(this_version["source"], dict):
-                del this_version["source"]
-            
-            # rename source to rdf_source to make it valid for models
-            if "source" in this_version:
-                if this_version["source"].split("?")[0].endswith("rdf.yaml"):
-                    this_version["rdf_source"] = this_version["source"]
-                    del this_version["source"]
+            if "rdf_source" in this_version and isinstance(this_version["rdf_source"], dict):
+                del this_version["rdf_source"]
             
             if "rdf_source" not in this_version:
                 this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"

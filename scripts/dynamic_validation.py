@@ -32,12 +32,12 @@ def main(
         resource_versions = [v for v in yaml.load(resource_path)["versions"] if v["version_id"] == version_id]
         assert len(resource_versions) == 1
         resource_version = resource_versions[0]
-        source = resource_version["source"]
+        rdf_source = resource_version["rdf_source"]
     else:
         # resource from partner
-        source = resources_dir / resource_id / version_id
+        rdf_source = resources_dir / resource_id / version_id
 
-    summary = test_resource(source, weight_format=weight_format)
+    summary = test_resource(rdf_source, weight_format=weight_format)
     summary["name"] = "reproduced test outputs"
 
     summary_path.parent.mkdir(parents=True, exist_ok=True)

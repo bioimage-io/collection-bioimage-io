@@ -163,23 +163,23 @@ def main(collection_dir: Path, resources_dir: Path, pending_matrix: str):
             resource = yaml.load(resource_path)
             for v in resource["versions"]:
                 if v["version_id"] == version_id:
-                    source = v["source"]
+                    rdf_source = v["rdf_source"]
                     break
             else:
                 raise RuntimeError(f"version_id {version_id} not found in {resource_path}")
         else:
             # resource from partner
-            source = resources_dir / resource_id / version_id / "rdf.yaml"
+            rdf_source = resources_dir / resource_id / version_id / "rdf.yaml"
 
-        static_summary = validate(source)
+        static_summary = validate(rdf_source)
         static_summary["name"] = "bioimageio.spec static validation"
         static_summary_path = resources_dir / resource_id / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if not static_summary["error"]:
-            latest_static_summary = validate(source, update_format=True)
+            latest_static_summary = validate(rdf_source, update_format=True)
             if not latest_static_summary["error"]:
-                rd = load_raw_resource_description(source, update_to_format="latest")
+                rd = load_raw_resource_description(rdf_source, update_to_format="latest")
                 assert isinstance(rd, RDF)
                 dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, resources_dir)
 
