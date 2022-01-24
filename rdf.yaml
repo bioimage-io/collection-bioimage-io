@@ -1414,6 +1414,22 @@ collection:
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
   type: model
 - authors:
+  - {affiliation: 'UC3M, EPFL', name: DeepImageJ}
+  - {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
+  covers: ['https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png',
+    'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
+  description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
+    microscopy 3D volumes.
+  id: 10.5281/zenodo.5749843
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+  owners: [252845]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5749843/10.5281/zenodo.5888237/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, 3dunet, 3d, unet, super-resolution-microscopy,
+    plant, tensorflow]
+  type: model
+- authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/cover.png']
   description: Cell segmentation for immunofluorescence microscopy.
@@ -1445,8 +1461,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 46, collection: 17, dataset: 33, model: 9}
-  n_resources: {application: 46, collection: 17, dataset: 33, model: 8}
+  n_resource_versions: {application: 46, collection: 17, dataset: 33, model: 11}
+  n_resources: {application: 46, collection: 17, dataset: 33, model: 9}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
