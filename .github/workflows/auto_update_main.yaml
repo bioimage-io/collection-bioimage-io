@@ -66,15 +66,31 @@ jobs:
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
         title: 'Update ${{ matrix.update.resource_name }}'
         body: |
-          resource id: ${{ matrix.update.resource_id }}
-          new versions:
+          This is a automatic PR created by the @bioimageiobot regarding changes for the following resource item (id: ${{ matrix.update.resource_id }}).
+          The following version(s) will be added:
           ${{ matrix.update.new_version_ids_md }}
 
-          sources of new versions:
+          You can find their corresponding RDF files here:
           ${{ matrix.update.new_version_sources_md }}
 
-          deployment preview (will be) available at: [gh-pages](/bioimage-io/collection-bioimage-io/tree/gh-pages/resources/${{ matrix.update.resource_id }})
-          maintainers: ${{ matrix.update.maintainers }}
+          The corresponding deployment preview (will be) available at: [gh-pages](/bioimage-io/collection-bioimage-io/tree/gh-pages/resources/${{ matrix.update.resource_id }})
+          
+          Please review the changes and make sure the new item or version(s) pass the following:
+          - [ ] Passed the BioImage.IO Spec validator (static validation)
+          - [ ] Passed the BioImage.IO CI tests (dynamic validations)
+          - [ ] The meta information for the RDF item is complete
+            - [ ] The tags is complete and describes the model
+            - [ ] Naming is intuitive and descriptive, example:  Multi-Organ Nucleus Segmentation (StarDist 2D)
+            - [ ] Authors are provided
+            - [ ] Documentation is complete
+              * For models, include an overview, describe how the model is trained, what is the training data, how to use the model, how to validate the results and list the references. TODO: Model documentation template.
+          - [ ] Approved by at least one of the BioImage.IO admin team member
+
+          Maintainers: ${{ matrix.update.maintainers }}
+          
+          Note: If you updated or re-uploaded another version for the current item on Zenodo, this PR won't be changed automatically. To proceed, you can do the following:
+           1. Edit the current resource.yaml and mark the top-level `status` field as `accepted`, but change the `status` under the current version to `blocked`.
+           2. Merge this PR for now, wait until the CI on the main branch to complete. It should detect the new versions and create another PR for the new version. You can take it from there instead.
 
         labels: |
           auto-update
