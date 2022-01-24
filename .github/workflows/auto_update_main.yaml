@@ -66,7 +66,7 @@ jobs:
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
         title: 'Update ${{ matrix.update.resource_name }}'
         body: |
-          This is a automatic PR created by the @bioimageiobot regarding changes for the following resource item (id: ${{ matrix.update.resource_id }}).
+          This is an automatic PR created by the @bioimageiobot regarding changes to the resource item ${{ matrix.update.resource_id }}.
           The following version(s) will be added:
           ${{ matrix.update.new_version_ids_md }}
 
