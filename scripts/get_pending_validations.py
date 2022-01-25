@@ -32,11 +32,11 @@ def main(
 
             version_id = v["version_id"]
             rdf_path = resources_dir / resource_id / version_id / "rdf.yaml"
-            is_pending = True
             if rdf_path.exists():
-                rdf = yaml.load(rdf_path)
-                if "test_summary" in rdf.get("config", {}).get("bioimageio", {}):
-                    is_pending = False
+                rdf = yaml.load(rdf_path)  # deployed RDF may already have test_summary
+                is_pending = "test_summary" not in rdf.get("config", {}).get("bioimageio", {})
+            else:
+                is_pending = False  # RDF not yet deployed
 
             if is_pending:
                 pending.append((resource_id, version_id))

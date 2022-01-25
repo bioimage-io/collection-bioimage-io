@@ -42,7 +42,7 @@ def main(
         version_id = matrix["version_id"]
 
         rdf_path = resources_dir / resource_id / version_id / "rdf.yaml"
-        assert rdf_path.exists()
+        assert rdf_path.exists(), rdf_path
         rdf = yaml.load(rdf_path)
         reset_test_summary_in_rdf(rdf)
 
