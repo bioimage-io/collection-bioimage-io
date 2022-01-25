@@ -16,12 +16,29 @@ from utils import resolve_partners
 yaml = YAML(typ="safe")
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-SUMMARY_FIELDS = ["id", "icon", "owners", "authors", "covers", "description", "license", "links", "name", "rdf_source", "source", "tags", "type", "download_url", "badges", "github_repo"]
+SUMMARY_FIELDS = [
+    "id",
+    "icon",
+    "owners",
+    "authors",
+    "covers",
+    "description",
+    "license",
+    "links",
+    "name",
+    "rdf_source",
+    "source",
+    "tags",
+    "type",
+    "download_url",
+    "badges",
+    "github_repo",
+]
+
 
 def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
-    gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
     dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
@@ -87,22 +104,11 @@ def main(
 
             if "rdf_source" in this_version and isinstance(this_version["rdf_source"], dict):
                 del this_version["rdf_source"]
-            
+
             if "rdf_source" not in this_version:
-                this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
-
-            # add validation summaries to this version in the collection rdf
-            val_summaries = {}
-            v_folder = gh_pages_dir / "resources" / resource_id / version_info["version_id"]
-            for val_path in v_folder.glob("validation_summary_*.yaml"):
-                name = val_path.stem.replace("validation_summary_", "")
-                val_sum = yaml.load(val_path)
-                if not isinstance(val_sum, dict):
-                    val_sum = {"output": val_sum}
-
-                val_summaries[name] = {k: v for k, v in val_sum.items() if k != "source_name"}
-
-            this_version["config"]["bioimageio"]["validation_summaries"] = val_summaries
+                this_version[
+                    "rdf_source"
+                ] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
             if "owners" in r:
                 this_version["config"]["bioimageio"]["owners"] = r["owners"]
@@ -111,8 +117,10 @@ def main(
             v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
             with v_deploy_path.open("wt", encoding="utf-8") as f:
                 yaml.dump(this_version, f)
-            
-            this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
+
+            this_version[
+                "rdf_source"
+            ] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
             if latest_version is None:
                 latest_version = this_version

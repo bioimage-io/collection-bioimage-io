@@ -12,10 +12,11 @@ try:
 except ImportError:
     from typing_extensions import get_args  # type: ignore
 
+SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
+
 
 def main(
-    collection_dir: Path,
-    resources_dir: Path,
+    dist: Path,
     resource_id: str,
     version_id: str,
     weight_format: Optional[str] = typer.Argument(None, help="weight format to test model with."),
@@ -24,21 +25,12 @@ def main(
         # no dynamic tests for non-model resources...
         return
 
-    summary_path = resources_dir / resource_id / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
-
-    resource_path = collection_dir / resource_id / "resource.yaml"
-    if resource_path.exists():
-        # resource from collection folder
-        resource_versions = [v for v in yaml.load(resource_path)["versions"] if v["version_id"] == version_id]
-        assert len(resource_versions) == 1
-        resource_version = resource_versions[0]
-        rdf_source = resource_version["rdf_source"]
-    else:
-        # resource from partner
-        rdf_source = resources_dir / resource_id / version_id
+    summary_path = dist / resource_id / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
+    rdf_source = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_id}/rdf.yaml"
 
     summary = test_resource(rdf_source, weight_format=weight_format)
-    summary["name"] = "reproduced test outputs"
+    if "name" not in summary:  # todo: remove, summaries of the future always have a name
+        summary["name"] = "reproduced test outputs from test inputs"
 
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     yaml.dump(summary, summary_path)
