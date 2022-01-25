@@ -1195,6 +1195,18 @@ collection:
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
   tags: [software, bioengine]
   type: application
+- authors: []
+  badges: []
+  covers: []
+  description: A minimal, purely client-side program for viewing Zarr-based images
+    with Viv & ImJoy
+  icon: https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png
+  id: imjoy/vizarr
+  name: vizarr
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/imjoy/vizarr/latest/rdf.yaml
+  source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html
+  tags: [bioengine]
+  type: application
 - authors: [Perkin Elmer]
   covers: ['https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png']
   description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
@@ -1461,8 +1473,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 46, collection: 17, dataset: 33, model: 11}
-  n_resources: {application: 46, collection: 17, dataset: 33, model: 9}
+  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 11}
+  n_resources: {application: 47, collection: 17, dataset: 33, model: 9}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
