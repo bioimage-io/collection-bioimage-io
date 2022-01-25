@@ -67,14 +67,6 @@ def main(
         dist_rdf_path.parent.mkdir(exist_ok=True, parents=True)
         yaml.dump(rdf, dist_rdf_path)
 
-        # move conda envs from artifact to dist
-        version_folder = dist_rdf_path.parent
-        for sp in artifact_dir.glob(
-            f"{resource_id.replace('/', '')}{version_id.replace('/', '')}*/**/conda_env_*.yaml"
-        ):
-            shutil.move(str(sp), str(version_folder))
-            print("moved", version_folder / sp.name)
-
 
 if __name__ == "__main__":
     typer.run(main)
