@@ -31,8 +31,14 @@ def main(
                 continue
 
             version_id = v["version_id"]
-            val_path = resources_dir / resource_id / version_id / "validation_summary_static.yaml"
-            if not val_path.exists():
+            rdf_path = resources_dir / resource_id / version_id / "rdf.yaml"
+            is_pending = True
+            if rdf_path.exists():
+                rdf = yaml.load(rdf_path)
+                if "test_summary" in rdf.get("config", {}).get("bioimageio", {}):
+                    is_pending = False
+
+            if is_pending:
                 pending.append((resource_id, version_id))
 
     out = dict(

@@ -35,13 +35,10 @@ jobs:
       run: python scripts/static_validation.py collection dist/resources '${{ inputs.pending_matrix }}'
     - name: debug has_dynamic_test_cases ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
       run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
-    - name: get artifact name wo forward slashes
-      id: artifact_name
-      run: echo ::set-output name=name::static_validation_artifact
-    - name: "Upload validation summaries"
+    - name: "Upload static validation summaries and conda envs"
       uses: actions/upload-artifact@v2
       with:
-        name: ${{ steps.artifact_name.outputs.name }}
+        name: static_validation_artifact
         path: dist/resources
         retention-days: 1
 
@@ -56,13 +53,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: get artifact name wo forward slashes
-      id: artifact_name
-      run: echo ::set-output name=name::static_validation_artifact
     - name: download environment.yaml
       uses: actions/download-artifact@v2
       with:
-        name: ${{ steps.artifact_name.outputs.name }}
+        name: static_validation_artifact
         path: dist/static_resources
     - name: install validation dependencies
       uses: conda-incubator/setup-miniconda@v2
@@ -72,13 +66,16 @@ jobs:
         channel-priority: strict
         activate-environment: ${{ matrix.env_name }}
         environment-file: dist/static_resources/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+    - name: get artifact name wo forward slashes
+      id: artifact_name
+      run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.version_id }}${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
       run: python scripts/dynamic_validation.py collection dist/resources ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
     - name: "Upload validation summary"
       uses: actions/upload-artifact@v2
       with:
-        name: ${{ steps.artifact_name.outputs.name }}${{ matrix.weight_format }}
+        name: ${{ steps.artifact_name.outputs.name }}
         path: dist/resources/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
 
@@ -112,7 +109,7 @@ jobs:
       with:
         path: artifacts
     - name: prepare deployment
-      run: python scripts/prepare_to_deploy_preview.py dist/resources '${{ inputs.pending_matrix }}' artifacts
+      run: python scripts/deploy_test_summaries.py dist gh-pages '${{ inputs.pending_matrix }}' artifacts
     - name: Deploy to gh-pages 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
