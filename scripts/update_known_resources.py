@@ -10,7 +10,7 @@ import requests
 import typer
 from ruamel.yaml import YAML
 
-from utils import set_gh_actions_output
+from utils import set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
 
@@ -61,7 +61,9 @@ def write_resource(
             raise ValueError(resource["status"])
 
         for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id and new_version.get("rdf_source") == known_version.get("rdf_source"):
+            if known_version["version_id"] == version_id and new_version.get("rdf_source") == known_version.get(
+                "rdf_source"
+            ):
                 # fetched resource is known
                 return "old_hit"
 
@@ -174,7 +176,7 @@ def update_from_zenodo(
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
 
 
-def main(collection_dir: Path, max_resource_count: int) -> int:
+def main(collection_dir: Path = Path(__file__).parent / "../collection", max_resource_count: int = 3):
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
 
     update_from_zenodo(collection_dir, updated_resources)
@@ -218,13 +220,10 @@ def main(collection_dir: Path, max_resource_count: int) -> int:
         }
         for k, v in limited_updated_resources.items()
     ]
-    updated_resources_matrix = {"update": updates}
-    print("updated_resources_matrix:")
-    pprint(updated_resources_matrix)
-    set_gh_actions_output("updated_resources_matrix", updated_resources_matrix)
-    set_gh_actions_output("found_new_resources", "yes" if limited_updated_resources else "")
 
-    return 0
+    output = dict(updated_resources_matrix={"update": updates}, found_new_resources=bool(limited_updated_resources))
+    set_gh_actions_outputs(output)
+    return output
 
 
 if __name__ == "__main__":
