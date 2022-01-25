@@ -13,19 +13,6 @@ config:
     doi: 10.5281/zenodo.5847356
     owners: [77626]
     status: accepted
-    validation_summaries:
-      latest_static:
-        error: null
-        name: bioimageio.spec static validation with auto-conversion to latest format
-        nested_errors: {}
-        traceback: null
-        warnings: {}
-      static:
-        error: null
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: null
-        warnings: {}
     version_id: 10.5281/zenodo.5847356
     version_name: revision 1
   deepimagej:

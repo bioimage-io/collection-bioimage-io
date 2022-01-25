@@ -4,25 +4,7 @@ cite:
 - {doi: 'https://doi.org/10.1038/s41592-019-0612-7', text: Caicedo et al.}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    validation_summaries:
-      static:
-        error: '[Errno 2] No such file or directory: ''dist/resources/ilastik/stradist_dsb_training_data/latest/rdf.yaml'''
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
-            line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
-          "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
-            line 150, in resolve_rdf_source\n    source = yaml.load(source)\n", "  File
-            \"/home/runner/.local/lib/python3.8/site-packages/ruamel/yaml/main.py\",
-            line 430, in load\n    with stream.open('rb') as fp:\n", "  File \"/usr/lib/python3.8/pathlib.py\",
-            line 1222, in open\n    return io.open(self, mode, buffering, encoding,
-            errors, newline,\n", "  File \"/usr/lib/python3.8/pathlib.py\", line 1078,
-            in _opener\n    return self._accessor.open(self, flags, mode)\n"]
-        warnings: {}
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: model
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
