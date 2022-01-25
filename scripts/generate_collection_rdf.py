@@ -91,19 +91,6 @@ def main(
             if "rdf_source" not in this_version:
                 this_version["rdf_source"] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
-            # add validation summaries to this version in the collection rdf
-            val_summaries = {}
-            v_folder = gh_pages_dir / "resources" / resource_id / version_info["version_id"]
-            for val_path in v_folder.glob("validation_summary_*.yaml"):
-                name = val_path.stem.replace("validation_summary_", "")
-                val_sum = yaml.load(val_path)
-                if not isinstance(val_sum, dict):
-                    val_sum = {"output": val_sum}
-
-                val_summaries[name] = {k: v for k, v in val_sum.items() if k != "source_name"}
-
-            this_version["config"]["bioimageio"]["validation_summaries"] = val_summaries
-
             if "owners" in r:
                 this_version["config"]["bioimageio"]["owners"] = r["owners"]
 

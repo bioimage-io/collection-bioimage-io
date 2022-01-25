@@ -26,7 +26,7 @@ def add_test_summary_to_rdf(rdf: dict, summary_path: Path):
     if new_summary["error"] is not None:
         test_summary["status"] = "failed"
 
-    test_summary["tests"].append(new_summary)
+    test_summary["tests"].append({k: v for k, v in new_summary.items() if k != "source_name"})
     print(f"\tadded {new_summary['name']} to test_summary")
 
 
