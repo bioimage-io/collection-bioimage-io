@@ -1,4 +1,5 @@
 import shutil
+import warnings
 from pathlib import Path
 
 import typer
@@ -42,7 +43,10 @@ def main(
         version_id = matrix["version_id"]
 
         rdf_path = resources_dir / resource_id / version_id / "rdf.yaml"
-        assert rdf_path.exists(), rdf_path
+        if not rdf_path.exists():
+            warnings.warn(f"missing rdf: {rdf_path}")
+            continue
+
         rdf = yaml.load(rdf_path)
         reset_test_summary_in_rdf(rdf)
 
