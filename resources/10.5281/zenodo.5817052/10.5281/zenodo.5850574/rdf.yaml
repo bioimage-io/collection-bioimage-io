@@ -40,7 +40,7 @@ covers: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/cove
 description: 2D UNet trained on data from ISBI Challenge for Mitchondria segmentation
   in Transmission Electron Microscopy images using ZeroCostDL4Mic notebooks.
 documentation: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/README.md
-format_version: 0.4.2
+format_version: 0.4.3
 inputs:
 - axes: bxyc
   data_range: [0.0, 255.0]

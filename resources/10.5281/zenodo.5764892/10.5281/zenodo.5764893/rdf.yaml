@@ -36,7 +36,7 @@ config:
 covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
 description: Nucleus segmentation for fluorescence microscopy
 documentation: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/documentation.md
-format_version: 0.4.2
+format_version: 0.4.3
 inputs:
 - axes: bcyx
   data_range: [0.0, 255.0]

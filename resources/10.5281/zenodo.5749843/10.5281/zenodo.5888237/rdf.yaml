@@ -44,7 +44,7 @@ covers: ['https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/inpu
 description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
   microscopy 3D volumes.
 documentation: https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/README.md
-format_version: 0.4.2
+format_version: 0.4.3
 inputs:
 - axes: byxzc
   data_range: [-.inf, .inf]
