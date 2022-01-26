@@ -1,4 +1,5 @@
 name: build-collection
+concurrency: build-collection  # do not run this workflow in parallel
 
 on:
   push:
