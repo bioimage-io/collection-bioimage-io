@@ -13,6 +13,23 @@ config:
     doi: 10.5281/zenodo.5847356
     owners: [77626]
     status: accepted
+    test_summary:
+      status: passed
+      tests:
+      - error: null
+        name: bioimageio.spec static validation with auto-conversion to latest format
+        nested_errors: {}
+        traceback: null
+        warnings:
+          weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+              'pytorch_version'}
+      - error: null
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: null
+        warnings:
+          weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+              'pytorch_version'}
     version_id: 10.5281/zenodo.5847356
     version_name: revision 1
   deepimagej:
