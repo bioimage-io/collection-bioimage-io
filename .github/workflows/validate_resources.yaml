@@ -102,12 +102,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
     - name: download artifacts
       uses: actions/download-artifact@v2
       with:
         path: artifacts
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec
     - name: prepare deployment
       run: python scripts/deploy_test_summaries.py dist gh-pages '${{ inputs.pending_matrix }}' artifacts
     - name: Deploy to gh-pages 🚀
