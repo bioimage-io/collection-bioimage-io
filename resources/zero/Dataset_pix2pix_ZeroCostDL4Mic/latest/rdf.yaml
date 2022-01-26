@@ -5,23 +5,7 @@ cite:
     Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: passed
-      tests:
-      - error: null
-        name: bioimageio.spec static validation with auto-conversion to latest format
-        nested_errors: {}
-        traceback: null
-        warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
-      - error: null
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: null
-        warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: application
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png

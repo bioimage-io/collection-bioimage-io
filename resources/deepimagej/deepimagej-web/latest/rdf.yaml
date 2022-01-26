@@ -5,19 +5,7 @@ cite: {doi: 'https://doi.org/10.1101/799270', text: 'Gómez-de-Mariscal, E., Gar
     D. DeepImageJ: A user-friendly plugin to run deep learning models in ImageJ, BioRxiv,
     2019'}
 config:
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: failed
-      tests:
-      - error:
-          cite: [Not a valid list.]
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: null
-        warnings: {type: Unrecognized type 'application'. Validating as rdf.}
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   supported_weight_formats: [tensorflow_saved_model_bundle]
 description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
   deep learning models in ImageJ and Fiji.

@@ -8,40 +8,7 @@ cite:
     Commun 12, 2276 (2021)'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: failed
-      tests:
-      - error: URL can't contain control characters. '/collection-bioimage-io/resources/zero/Notebook
-          Preview/latest/rdf.yaml' (found at least ' ')
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
-            line 55, in validate\n    rdf_source, source_name, root = resolve_rdf_source(rdf_source)\n",
-          "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/utils/_resolve_source.py\",
-            line 117, in resolve_rdf_source\n    source, resp = urlretrieve(source)\n",
-          "  File \"/usr/lib/python3.8/urllib/request.py\", line 247, in urlretrieve\n
-            \   with contextlib.closing(urlopen(url, data)) as fp:\n", "  File \"/usr/lib/python3.8/urllib/request.py\",
-            line 222, in urlopen\n    return opener.open(url, data, timeout)\n", "  File
-            \"/usr/lib/python3.8/urllib/request.py\", line 525, in open\n    response
-            = self._open(req, data)\n", "  File \"/usr/lib/python3.8/urllib/request.py\",
-            line 542, in _open\n    result = self._call_chain(self.handle_open, protocol,
-            protocol +\n", "  File \"/usr/lib/python3.8/urllib/request.py\", line
-            502, in _call_chain\n    result = func(*args)\n", "  File \"/usr/lib/python3.8/urllib/request.py\",
-            line 1397, in https_open\n    return self.do_open(http.client.HTTPSConnection,
-            req,\n", "  File \"/usr/lib/python3.8/urllib/request.py\", line 1354,
-            in do_open\n    h.request(req.get_method(), req.selector, req.data, headers,\n",
-          "  File \"/usr/lib/python3.8/http/client.py\", line 1256, in request\n    self._send_request(method,
-            url, body, headers, encode_chunked)\n", "  File \"/usr/lib/python3.8/http/client.py\",
-            line 1267, in _send_request\n    self.putrequest(method, url, **skips)\n",
-          "  File \"/usr/lib/python3.8/http/client.py\", line 1101, in putrequest\n
-            \   self._validate_path(url)\n", "  File \"/usr/lib/python3.8/http/client.py\",
-            line 1201, in _validate_path\n    raise InvalidURL(f\"URL can't contain
-            control characters. {url!r} \"\n"]
-        warnings: {}
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: application
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
