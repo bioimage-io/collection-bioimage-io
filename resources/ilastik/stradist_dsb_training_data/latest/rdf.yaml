@@ -4,7 +4,23 @@ cite:
 - {doi: 'https://doi.org/10.1038/s41592-019-0612-7', text: Caicedo et al.}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio: {status: accepted, version_id: latest, version_name: latest}
+  bioimageio:
+    status: accepted
+    test_summary:
+      status: passed
+      tests:
+      - error: null
+        name: bioimageio.spec static validation with auto-conversion to latest format
+        nested_errors: {}
+        traceback: null
+        warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
+      - error: null
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: null
+        warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
+    version_id: latest
+    version_name: latest
   default_type: model
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png

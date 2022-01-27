@@ -5,7 +5,26 @@ cite: null
 config:
   about_url: https://www.proteinatlas.org/
   background_image: static/img/zoo-background.svg
-  bioimageio: {status: accepted, version_id: latest, version_name: latest}
+  bioimageio:
+    status: accepted
+    test_summary:
+      status: failed
+      tests:
+      - error: Invalid RDF format version 0.2.2 for RDF type model. Submodule bioimageio.spec.model.v0_2
+          does not exist.
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
+            line 73, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
+            update_to_format=\"latest\" if update_format else None)\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+            line 191, in load_raw_resource_description\n    sub_spec = _get_spec_submodule(type_,
+            data_version)\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+            line 74, in _get_spec_submodule\n    sub_spec = get_format_version_module(type_,
+            data_version)\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/common.py\",
+            line 82, in get_format_version_module\n    raise ValueError(\n"]
+        warnings: {}
+    version_id: latest
+    version_name: latest
   default_type: model
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif

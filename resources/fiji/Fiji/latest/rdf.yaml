@@ -4,7 +4,19 @@ cite: {doi: 'https://doi.org/10.1038/nmeth.2019', text: 'Schindelin, J., Arganda
     Nat Methods 9, 676–682 (2012).'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio: {status: accepted, version_id: latest, version_name: latest}
+  bioimageio:
+    status: accepted
+    test_summary:
+      status: failed
+      tests:
+      - error:
+          cite: [Not a valid list.]
+        name: bioimageio.spec static validation
+        nested_errors: {}
+        traceback: null
+        warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+    version_id: latest
+    version_name: latest
   explore_button_text: Start Exploring
   icon: https://fiji.sc/site/logo.png
   id: fiji
