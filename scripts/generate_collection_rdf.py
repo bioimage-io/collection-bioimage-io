@@ -55,13 +55,13 @@ def main(
     n_accepted = {}
     n_accepted_versions = {}
     collection_resources = [yaml.load(r_path) for r_path in collection_dir.glob("**/resource.yaml")]
-    collection_resources = [r for r in collection_resources if r["status"] == "accepted"]
+    collection_resources = [r for r in collection_resources if r["status"] != "blocked"]
     known_resources = partner_resources + collection_resources
     for r in known_resources:
         resource_id = r["id"]
         latest_version = None
         for version_info in r["versions"]:
-            if version_info["status"] != "accepted":
+            if version_info["status"] == "blocked":
                 continue
 
             # Ignore the name in the version info
@@ -113,14 +113,17 @@ def main(
             if "owners" in r:
                 this_version["config"]["bioimageio"]["owners"] = r["owners"]
 
+            this_version[
+                "rdf_source"
+            ] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
+
             v_deploy_path = dist / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
             v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
             with v_deploy_path.open("wt", encoding="utf-8") as f:
                 yaml.dump(this_version, f)
 
-            this_version[
-                "rdf_source"
-            ] = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_info['version_id']}/rdf.yaml"
+            if version_info["status"] != "accepted":
+                continue
 
             if latest_version is None:
                 latest_version = this_version
