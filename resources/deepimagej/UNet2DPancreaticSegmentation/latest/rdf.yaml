@@ -6,35 +6,7 @@ cite:
     18, 1192–1195 (2021).'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: failed
-      tests:
-      - error: '("__init__() missing 1 required keyword-only argument: ''collection''",
-          "when initializing <class ''bioimageio.spec.collection.v0_2.raw_nodes.Collection''>
-          from <Collection(many=False)>")'
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/commands.py\",
-            line 73, in validate\n    raw_rd = load_raw_resource_description(rdf_source,
-            update_to_format=\"latest\" if update_format else None)\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
-            line 195, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-          "  File \"/home/runner/.local/lib/python3.8/site-packages/marshmallow/schema.py\",
-            line 719, in load\n    return self._do_load(\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/marshmallow/schema.py\",
-            line 892, in _do_load\n    result = self._invoke_load_processors(\n",
-          "  File \"/home/runner/.local/lib/python3.8/site-packages/marshmallow/schema.py\",
-            line 1090, in _invoke_load_processors\n    data = self._invoke_processors(\n",
-          "  File \"/home/runner/.local/lib/python3.8/site-packages/marshmallow/schema.py\",
-            line 1220, in _invoke_processors\n    data = processor(data, many=many,
-            **kwargs)\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/schema.py\",
-            line 67, in make_object\n    obj = super().make_object(data, **kwargs)\n",
-          "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/schema.py\",
-            line 34, in make_object\n    raise e\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/spec/shared/schema.py\",
-            line 31, in make_object\n    return this_type(**data)\n"]
-        warnings: {}
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej

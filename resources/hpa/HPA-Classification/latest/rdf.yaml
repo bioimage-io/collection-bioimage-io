@@ -5,37 +5,7 @@ badges: []
 config:
   about_url: https://www.proteinatlas.org/
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: failed
-      tests:
-      - error:
-          documentation:
-          - 'Errors in all options for this field. Fix any of the following errors:'
-          - [Empty URI scheme component]
-          - ["Invalid suffix (\n\nThis plugin allows to predict the subcellular protein
-              localization pattern for a provided image. \n\n## Main features\n* Prediction
-              is performed with the winner of the special price of the 2018 Kaggle
-              challenge (https:/github.com/CellProfiling/HPA-Special-Prize). \n* Annotated
-              localization classes are from the **HPA cell atlas**. \n* The plugin
-              uses a trained **ShuffleNet (v2)** to perform the prediction directly
-              in the browser. \n* Class Activation Map: https:/arxiv.org/pdf/1512.04150.pdf
-              \ \n\n): Replacement index 0 out of range for positional args tuple",
-            "Invalid as_posix (\n\nThis plugin allows to predict the subcellular protein
-              localization pattern for a provided image. \n\n## Main features\n* Prediction
-              is performed with the winner of the special price of the 2018 Kaggle
-              challenge (https:/github.com/CellProfiling/HPA-Special-Prize). \n* Annotated
-              localization classes are from the **HPA cell atlas**. \n* The plugin
-              uses a trained **ShuffleNet (v2)** to perform the prediction directly
-              in the browser. \n* Class Activation Map: https:/arxiv.org/pdf/1512.04150.pdf
-              \ \n\n): expected local, relative file path."]
-        name: bioimageio.spec static validation
-        nested_errors: {}
-        traceback: null
-        warnings: {type: Unrecognized type 'application'. Validating as rdf.}
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: model
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
