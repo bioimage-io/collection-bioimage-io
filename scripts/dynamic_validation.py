@@ -12,8 +12,6 @@ try:
 except ImportError:
     from typing_extensions import get_args  # type: ignore
 
-SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-
 
 def main(
     dist: Path,

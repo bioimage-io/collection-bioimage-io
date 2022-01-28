@@ -156,9 +156,6 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-
-
 def main(dist: Path, pending_matrix: str, collection_dir: Path = Path(__file__).parent / "../collection"):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
