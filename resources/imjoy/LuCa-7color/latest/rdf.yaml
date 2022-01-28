@@ -1,13 +1,7 @@
 authors: [Perkin Elmer]
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: pending
-      tests: []
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: application
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg

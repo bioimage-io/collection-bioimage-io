@@ -4,13 +4,7 @@ cite:
 - {doi: 'https://doi.org/10.1007/978-3-030-59722-1_7', text: Donglai Wei et al.}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: pending
-      tests: []
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: model
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
