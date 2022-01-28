@@ -1,0 +1,170 @@
+name: build collection and generate auto-update PRs
+concurrency: main  # do not run this workflow in parallel
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron:  '0 1,13 * * *'
+  workflow_dispatch: # triggered by http endpoints
+  workflow_call:  # triggered by other workflow
+
+jobs:
+  update-known-resources:
+    runs-on: ubuntu-latest
+    outputs:
+      updated_resources_matrix: ${{ steps.update_known.outputs.updated_resources_matrix }}
+      found_new_resources: ${{ steps.update_known.outputs.found_new_resources }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
+    - name: install script deps
+      run: pip install bioimageio.spec
+    - name: update known resources
+      id: update_known
+      run: python scripts/update_known_resources.py --collection-dir collection --max-resource-count 15 --dist dist
+    - name: "Upload updated collection"
+      uses: actions/upload-artifact@v2
+      with:
+        name: updated-collection
+        path: collection
+        retention-days: 1
+
+  build-collection:  # deploy collection rdf to gh-pages
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec boltons lxml requests
+    - name: generate collection rdf
+      run: python scripts/generate_collection_rdf.py
+    - name: Deploy collection rdf to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist
+
+  get-pending-validation:
+    needs: build-collection
+    runs-on: ubuntu-latest
+    outputs:
+      pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
+      has_pending_matrix: ${{ steps.get_pending.outputs.has_pending_matrix }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec
+    - name: get pending validations
+      id: get_pending
+      run: python scripts/get_pending_validations.py
+    - name: debug found pending ${{ steps.get_pending.outputs.has_pending_matrix }}
+      run: echo ${{ steps.get_pending.outputs.pending_matrix }}
+
+  validate:
+    needs: get-pending-validation
+    if: needs.get-pending-validation.outputs.has_pending_matrix == 'yes'
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/validate_resources.yaml@main
+    with:
+      pending_matrix: ${{ needs.get-pending-validation.outputs.pending_matrix }}
+      has_pending_matrix: ${{ needs.get-pending-validation.outputs.has_pending_matrix }}
+      deploy: 'yes'
+
+  build-collection-again:
+    needs: [collect-new-resources, get-pending-validation, validate]
+    if: always() && needs.get-pending-validation.outputs.has_pending_matrix == 'yes'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: install script deps
+      run: pip install typer ruamel.yaml bioimageio.spec boltons lxml requests
+    - name: generate collection rdf
+      run: python scripts/generate_collection_rdf.py
+    - name: Deploy collection rdf to gh-pages 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist
+
+  open-pr:
+    needs: [collect-new-resources]
+    if: needs.collect-new-resources.outputs.found_new_resources == 'yes'
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1  # to limit content creation (PRs) on github to avoid getting temporary blocked
+      fail-fast: false
+      # matrix: update: [{resource_id:..., resource_name:..., new_version_ids:..., new_version_sources:..., maintainers: ...}, ...]
+      matrix: ${{ fromJson(needs.collect-new-resources.outputs.updated_resources_matrix) }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: download new collection
+      uses: actions/download-artifact@v2
+      with:
+        name: updated-collection
+        path: updated-collection
+    - name: replace resource item folder
+      run: |
+        mkdir -p "collection/${{ matrix.update.resource_id }}"
+        cp -r "updated-collection/${{ matrix.update.resource_id }}"/* "collection/${{ matrix.update.resource_id }}"
+        rm -rf updated-collection
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
+        commit-message: 'Update ${{ matrix.update.resource_id }}'
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: auto-update-${{ matrix.update.resource_id }}
+        delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
+        title: 'Update ${{ matrix.update.resource_name }}'
+        body: |
+          This is an automatic PR created by the @bioimageiobot regarding changes to the resource item ${{ matrix.update.resource_id }}.
+          The following version(s) will be added:
+          ${{ matrix.update.new_version_ids_md }}
+
+          You can find their corresponding RDF files here:
+          ${{ matrix.update.new_version_sources_md }}
+
+          The corresponding deployment preview (will be) available at: [gh-pages](/bioimage-io/collection-bioimage-io/tree/gh-pages/resources/${{ matrix.update.resource_id }})
+          
+          Please review the changes and make sure the new item or version(s) pass the following check list:
+          - [ ] Passed the BioImage.IO Spec validator (static validation);
+          - [ ] Passed the BioImage.IO CI tests (dynamic validations);
+          - [ ] The meta information for the RDF item is complete;
+            - [ ] The tags is complete and describes the model;
+            - [ ] Naming is intuitive and descriptive, example:  Multi-Organ Nucleus Segmentation (StarDist 2D);
+            - [ ] Authors are provided;
+            - [ ] Documentation is complete;
+              * For models, include an overview, describe how the model is trained, what is the training data, how to use the model, how to validate the results and list the references. TODO: Model documentation template.
+          - [ ] Approved by at least one of the BioImage.IO admin team member.
+
+          Maintainers: ${{ matrix.update.maintainers }}
+          
+          Note: If you updated or re-uploaded another version for the current item on Zenodo, this PR won't be changed automatically. To proceed, you can do the following:
+           1. Edit the current resource.yaml and mark the top-level `status` field as `accepted`, but change the `status` under the current version to `blocked`.
+           2. Merge this PR for now, wait until the CI on the main branch to complete. It should detect the new versions and create another PR for the new version. You can take it from there instead.
+
+        labels: |
+          auto-update
+        draft: false

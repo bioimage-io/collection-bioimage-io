@@ -1,8 +1,20 @@
 import copy
 import json
 import warnings
+from distutils.version import StrictVersion
 from itertools import product
+from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
+
+from marshmallow import missing
+from ruamel.yaml import YAML
+
+from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
+from scripts.imjoy_plugin_parser import get_plugin_as_rdf
+
+yaml = YAML(typ="safe")
+
+SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
 
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
@@ -43,16 +55,16 @@ def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
             yield dict(zip(keys, vals))
 
 
-def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
+def resolve_partners(
+    rdf: dict, *, current_format: str, partner_versions: Dict[str, StrictVersion]
+) -> Tuple[List[dict], List[dict], Dict[str, StrictVersion], set]:
     from bioimageio.spec import load_raw_resource_description
     from bioimageio.spec.collection.v0_2.raw_nodes import Collection
     from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 
-    current_format = "0.2.2"
-
     partners = []
-    partner_resources = []
-    updated_partners = set()
+    updated_partner_resources = []
+    updated_partner_versions = {}
     ignored_partners = set()
     if "partners" in rdf["config"]:
         partners = copy.deepcopy(rdf["config"]["partners"])
@@ -79,20 +91,27 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
 
             partners[idx]["id"] = partner_id
 
-            for entry_rdf, entry_error in resolve_collection_entries(partner_collection, collection_id=partner_id):
+            partner_version = partner_collection.version or StrictVersion("0.0")
+            if partner_versions.get(partner_id) == partner_version:
+                # skip partner collection as it has a known version
+                continue
+
+            updated_partner_versions[partner_id] = partner_version
+
+            for entry_idx, (entry_rdf, entry_error) in enumerate(
+                resolve_collection_entries(partner_collection, collection_id=partner_id)
+            ):
                 if entry_error:
-                    warnings.warn(f"partner[{idx}] {partner_id}: {entry_error}")
-                    ignored_partners.add(partner_id)
+                    warnings.warn(f"{partner_id}[{entry_idx}]: {entry_error}")
                     continue
 
-                # Convert relative links to absolute
+                # Convert relative links to absolute  # todo: move to resolve_collection_entries
                 if "links" in entry_rdf:
                     for idx, link in enumerate(entry_rdf["links"]):
                         if "/" not in link:
                             entry_rdf["links"][idx] = partner_id + "/" + link
 
-                updated_partners.add(partner_id)
-                partner_resources.append(
+                updated_partner_resources.append(
                     dict(
                         status="accepted",
                         id=entry_rdf["id"],
@@ -109,4 +128,62 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
                     )
                 )
 
-    return partners, partner_resources, updated_partners, ignored_partners
+    return partners, updated_partner_resources, updated_partner_versions, ignored_partners
+
+
+def update_resource_rdfs(dist: Path, r: dict):
+    resource_id = r["id"]
+    for version_info in r["versions"]:
+        if version_info["status"] == "blocked":
+            continue
+
+        # Ignore the name in the version info
+        del version_info["name"]
+
+        if isinstance(version_info["rdf_source"], dict):
+            if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
+                rdf_info = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["rdf_source"]["source"]))
+            else:
+                rdf_info = {}
+
+            # Inherit the info from e.g. the collection
+            this_version = version_info["rdf_source"].copy()
+            this_version.update(rdf_info)
+            assert missing not in this_version.values(), this_version
+        elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
+            this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["rdf_source"]))
+            assert missing not in this_version.values(), this_version
+        else:
+            try:
+                rdf_node = load_raw_resource_description(version_info["rdf_source"])
+            except Exception as e:
+                print(f"Failed to interpret {version_info['rdf_source']} as rdf: {e}")
+                continue
+            else:
+                this_version = serialize_raw_resource_description_to_dict(rdf_node)
+
+        if "config" not in this_version:
+            this_version["config"] = {}
+        if "bioimageio" not in this_version["config"]:
+            this_version["config"]["bioimageio"] = {}
+
+        # Allowing to override fields
+        for k in version_info:
+            # Place these fields under config.bioimageio
+            if k in ["created", "doi", "status", "version_id", "version_name"]:
+                this_version["config"]["bioimageio"][k] = version_info[k]
+            else:
+                this_version[k] = version_info[k]
+
+        if "rdf_source" in this_version and isinstance(this_version["rdf_source"], dict):
+            del this_version["rdf_source"]
+
+        if "owners" in r:
+            this_version["config"]["bioimageio"]["owners"] = r["owners"]
+
+        this_version["rdf_source"] = f"{SOURCE_BASE_URL}/rdfs/{resource_id}/{version_info['version_id']}/rdf.yaml"
+
+        v_deploy_path = dist / "rdfs" / resource_id / version_info["version_id"] / "rdf.yaml"
+        v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
+        with v_deploy_path.open("wt", encoding="utf-8") as f:
+            yaml.dump(this_version, f)

@@ -1,18 +1,24 @@
 import json
 import subprocess
+import warnings
 from collections import defaultdict
 from datetime import datetime
+from distutils.version import StrictVersion
 from pathlib import Path
 from pprint import pprint
 from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 
 import requests
 import typer
+from marshmallow import missing
 from ruamel.yaml import YAML
 
-from utils import set_gh_actions_outputs
+from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
+from imjoy_plugin_parser import get_plugin_as_rdf
+from utils import resolve_partners, set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
+
 
 
 def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
@@ -176,7 +182,14 @@ def update_from_zenodo(
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
 
 
-def main(collection_dir: Path = Path(__file__).parent / "../collection", max_resource_count: int = 3):
+
+
+
+def main(
+    collection_dir: Path = Path(__file__).parent / "../collection",
+    max_resource_count: int = 3,
+    dist: Path = Path(__file__).parent / "../dist",
+):
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
 
     update_from_zenodo(collection_dir, updated_resources)

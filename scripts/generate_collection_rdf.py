@@ -61,9 +61,6 @@ def main(
         resource_id = r["id"]
         latest_version = None
         for version_info in r["versions"]:
-            if version_info["status"] == "blocked":
-                continue
-
             # Ignore the name in the version info
             del version_info["name"]
 
