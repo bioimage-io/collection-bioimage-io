@@ -13,7 +13,7 @@ from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import iterate_over_gh_matrix, set_gh_actions_outputs
+from utils import get_rdf_source, iterate_over_gh_matrix, set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
 
@@ -156,16 +156,13 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
-
-
-def main(dist: Path, pending_matrix: str):
+def main(dist: Path, pending_matrix: str, collection_dir: Path = Path(__file__).parent / "../collection"):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
 
-        rdf_source = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_id}/rdf.yaml"
+        rdf_source = get_rdf_source(collection_dir=collection_dir, resource_id=resource_id, version_id=version_id)
 
         static_summary = validate(rdf_source)
         static_summary["name"] = "bioimageio.spec static validation"
