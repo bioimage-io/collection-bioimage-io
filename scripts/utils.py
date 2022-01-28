@@ -6,7 +6,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 
 import requests
-import yaml
+from ruamel.yaml import YAML
+
+yaml = YAML(typ="safe")
 
 
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
