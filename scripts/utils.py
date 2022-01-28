@@ -2,7 +2,11 @@ import copy
 import json
 import warnings
 from itertools import product
+from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
+
+import requests
+import yaml
 
 
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
@@ -110,3 +114,25 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
                 )
 
     return partners, partner_resources, updated_partners, ignored_partners
+
+
+SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
+
+
+def get_rdf_source(collection_dir: Path, resource_id: str, version_id: str):
+    updated_rdf_source = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_id}/rdf.yaml"
+    try:
+        rdf_source = yaml.load(requests.get(updated_rdf_source).text)
+    except Exception as e:
+        warnings.warn(f"failed to validate updated rdf (falling back to original rdf): {e}")
+
+        # get original rdf source
+        resource = yaml.load(collection_dir / resource_id / "resource.yaml")
+        for v in resource["versions"]:
+            if v["id"] == version_id:
+                rdf_source = v["rdf_source"]
+                break
+        else:
+            raise ValueError(version_id)
+
+    return rdf_source
