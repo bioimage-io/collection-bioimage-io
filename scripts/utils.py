@@ -131,7 +131,7 @@ def get_rdf_source(collection_dir: Path, resource_id: str, version_id: str):
         # get original rdf source
         resource = yaml.load(collection_dir / resource_id / "resource.yaml")
         for v in resource["versions"]:
-            if v["id"] == version_id:
+            if v["version_id"] == version_id:
                 rdf_source = v["rdf_source"]
                 break
         else:
