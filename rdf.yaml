@@ -1399,16 +1399,16 @@ collection:
   - {affiliation: '', name: ZeroCostDL4Mic team}
   - {name: Constantin Pape}
   - {name: DeepImageJ team}
-  covers: ['https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/cover.png']
-  description: 2D UNet trained on data from ISBI Challenge for Mitchondria segmentation
-    in Transmission Electron Microscopy images using ZeroCostDL4Mic notebooks.
+  covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
+  description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
+    for neuron segmentation in Transmission Electron Microscopy images.
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
     deepimagej/deepimagej]
-  name: Mitochondria segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  name: Neurons segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
   owners: [271523]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5850574/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5906839/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
     mitochondria, bondary-segmentation, 2d]
   type: model
@@ -1473,7 +1473,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 11}
+  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 12}
   n_resources: {application: 47, collection: 17, dataset: 33, model: 9}
   partners:
   - background_image: static/img/zoo-background.svg
