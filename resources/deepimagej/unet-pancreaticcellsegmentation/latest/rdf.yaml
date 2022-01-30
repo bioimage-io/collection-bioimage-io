@@ -10,13 +10,7 @@ cite:
     Nat Methods 16, 67–70 (2019).'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: pending
-      tests: []
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej
