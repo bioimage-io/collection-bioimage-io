@@ -13,7 +13,7 @@ from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import get_rdf_source, iterate_over_gh_matrix, set_gh_actions_outputs
+from utils import iterate_over_gh_matrix, set_gh_actions_outputs
 
 yaml = YAML(typ="safe")
 
@@ -156,16 +156,15 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-def main(dist: Path, pending_matrix: str, collection_dir: Path = Path(__file__).parent / "../collection"):
+def main(dist: Path, pending_matrix: str):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
-
-        rdf_source = get_rdf_source(collection_dir=collection_dir, resource_id=resource_id, version_id=version_id)
+        rdf_source = Path(matrix["rdf_path"])
 
         static_summary = validate(rdf_source)
-        static_summary["name"] = "bioimageio.spec static validation"
+
         static_summary_path = dist / resource_id / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
@@ -176,7 +175,10 @@ def main(dist: Path, pending_matrix: str, collection_dir: Path = Path(__file__).
                 assert isinstance(rd, RDF)
                 dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)
 
-            latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
+            if "name" not in latest_static_summary:
+                latest_static_summary[
+                    "name"
+                ] = "bioimageio.spec static validation with auto-conversion to latest format"
 
             yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 

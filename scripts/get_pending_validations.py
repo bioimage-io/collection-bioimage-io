@@ -30,7 +30,7 @@ def main(
     ]
     known_resources = [r for r in collection_resources + partner_resources if r["status"] == "accepted"]
 
-    pending = []
+    include_pending = []
     for r in known_resources:
         resource_id = r["id"]
         for v in r["versions"]:
@@ -42,17 +42,23 @@ def main(
             if rdf_path.exists():
                 rdf = yaml.load(rdf_path)  # deployed RDF may already have test_summary
                 is_pending = "test_summary" not in rdf.get("config", {}).get("bioimageio", {})
+                # todo: check bioimageio version
             else:
-                # in PR RDF is not deployed (yet)
+                # not deployed (yet)
                 is_pending = True
+                rdf_path = None
 
             if is_pending:
-                pending.append((resource_id, version_id))
+                include_pending.append(
+                    {
+                        "resource_id": resource_id,
+                        "version_id": version_id,
+                        "rdf_path": rdf_path and str(rdf_path),
+                        "rdf_source": v["rdf_source"],
+                    }
+                )
 
-    out = dict(
-        pending_matrix=dict(include=[{"resource_id": rid, "version_id": vid} for rid, vid in pending]),
-        has_pending_matrix=bool(pending),
-    )
+    out = dict(pending_matrix=dict(include=include_pending), has_pending_matrix=bool(include_pending))
     set_gh_actions_outputs(out)
     return out
 
