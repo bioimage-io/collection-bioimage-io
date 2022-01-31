@@ -40,6 +40,10 @@ def main(
     collection = rdf["collection"]
     assert isinstance(collection, list), type(collection)
 
+    if "partners" in rdf["config"]:
+        # load resolved partner details
+        rdf["config"]["partners"] = yaml.load(gh_pages_dir / "partner_details.yaml")
+
     n_accepted = {}
     n_accepted_versions = {}
     collection_resources = [yaml.load(r_path) for r_path in collection_dir.glob("**/resource.yaml")]
