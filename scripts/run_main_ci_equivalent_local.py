@@ -1,4 +1,4 @@
-"""script to run a rough equivalent of the github actions workflow 'auto_update_pr.yaml' locally"""
+"""script to run a rough equivalent of the github actions workflow 'collection_main.yaml' locally"""
 import subprocess
 from pathlib import Path
 from pprint import pprint
@@ -6,7 +6,6 @@ from pprint import pprint
 import typer
 
 from dynamic_validation import main as dynamic_validation
-from get_pending import main as get_pending
 from get_pending_validations import main as get_pending_validations
 from generate_collection_rdf import main as generate_collection_rdf
 from update_known_resources import main as update_known_resources
@@ -16,7 +15,6 @@ from utils import iterate_over_gh_matrix
 
 
 def main(
-    resource_id: str = "all_pending",
     collection_dir: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
     dist: Path = Path(__file__).parent / "../dist",
@@ -32,11 +30,7 @@ def main(
 
     generate_collection_rdf(collection_dir=collection_dir, dist=dist)
 
-    if resource_id == "all_pending":
-        pending = get_pending_validations(collection_dir=collection_dir, gh_pages_dir=gh_pages)
-    else:
-        branch = f"auto-update-{resource_id}"
-        pending = get_pending(collection_dir=collection_dir, branch=branch)
+    pending = get_pending_validations(collection_dir=collection_dir, gh_pages_dir=gh_pages)
 
     print("\npending:")
     pprint(pending)
