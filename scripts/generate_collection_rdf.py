@@ -1,4 +1,5 @@
 import json
+import warnings
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
@@ -31,7 +32,7 @@ SUMMARY_FIELDS = [
 
 def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
-    gh_pages_dir: Path = Path(__file__).parent / "../gh_pages",
+    gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     dist: Path = Path(__file__).parent / "../dist",
 ):
@@ -42,7 +43,11 @@ def main(
 
     if "partners" in rdf["config"]:
         # load resolved partner details
-        rdf["config"]["partners"] = yaml.load(gh_pages_dir / "partner_details.yaml")
+        partner_details_path = gh_pages_dir / "partner_details.yaml"
+        if partner_details_path.exists():
+            rdf["config"]["partners"] = yaml.load(partner_details_path)
+        else:
+            warnings.warn(f"Missing evaluated partner details at {partner_details_path}")
 
     n_accepted = {}
     n_accepted_versions = {}
@@ -56,7 +61,12 @@ def main(
             if version_info["status"] != "accepted":
                 continue
 
-            this_version = yaml.load(gh_pages_dir / "resources" / resource_id / version_info["version_id"] / "rdf.yaml")
+            updated_rdf_source = gh_pages_dir / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
+            if not updated_rdf_source.exists():
+                warnings.warn(f"skipping undeployed rdf {updated_rdf_source}")
+                continue
+
+            this_version = yaml.load(updated_rdf_source)
 
             if latest_version is None:
                 latest_version = this_version
