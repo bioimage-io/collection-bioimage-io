@@ -56,15 +56,15 @@ def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
 
 
 def resolve_partners(
-    rdf: dict, *, current_format: str, partner_versions: Dict[str, StrictVersion]
-) -> Tuple[List[dict], List[dict], Dict[str, StrictVersion], set]:
+    rdf: dict, *, current_format: str, previous_partner_collections: Dict[str, dict]
+) -> Tuple[List[dict], List[dict], Dict[str, dict], set]:
     from bioimageio.spec import load_raw_resource_description
     from bioimageio.spec.collection.v0_2.raw_nodes import Collection
     from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 
     partners = []
     updated_partner_resources = []
-    updated_partner_versions = {}
+    updated_partner_collections = {}
     ignored_partners = set()
     if "partners" in rdf["config"]:
         partners = copy.deepcopy(rdf["config"]["partners"])
@@ -80,23 +80,23 @@ def resolve_partners(
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
-            partner_id = partner.get("id") or partner_collection.id
+            partner_id: str = partner.get("id") or partner_collection.id
             if not partner_id:
                 warnings.warn(f"Missing partner id for partner {idx}: {partner}")
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
+            serialized_partner_collection = serialize_raw_resource_description_to_dict(partner_collection)
+
+            # option to skip based on partner collection diff
+            # if serialized_partner_collection == previous_partner_collections.get(partner_id):
+            #     continue  # no change in partner collection
+
+            updated_partner_collections[partner_id] = serialized_partner_collection
             if partner_collection.config:
                 partners[idx].update(partner_collection.config)
 
             partners[idx]["id"] = partner_id
-
-            partner_version = partner_collection.version or StrictVersion("0.0")
-            if partner_versions.get(partner_id) == partner_version:
-                # skip partner collection as it has a known version
-                continue
-
-            updated_partner_versions[partner_id] = partner_version
 
             for entry_idx, (entry_rdf, entry_error) in enumerate(
                 resolve_collection_entries(partner_collection, collection_id=partner_id)
@@ -128,7 +128,7 @@ def resolve_partners(
                     )
                 )
 
-    return partners, updated_partner_resources, updated_partner_versions, ignored_partners
+    return partners, updated_partner_resources, updated_partner_collections, ignored_partners
 
 
 def update_resource_rdfs(dist: Path, r: dict):

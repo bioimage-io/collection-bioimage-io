@@ -1,5 +1,4 @@
 import warnings
-from distutils.version import StrictVersion
 from pathlib import Path
 
 import typer
@@ -16,29 +15,24 @@ def main(
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     current_collection_format: str = "0.2.2",
 ):
-    partner_versions_path = gh_pages / "partner_versions.yaml"
-    if partner_versions_path.exists():
-        partner_versions = {k: StrictVersion(v) for k, v in yaml.load(partner_versions_path).items()}
-    else:
-        partner_versions = {}
-
     rdf = yaml.load(rdf_template_path)
 
-    partners, updated_partner_resources, updated_partner_versions, ignored_partners = resolve_partners(
-        rdf, current_format=current_collection_format, partner_versions=partner_versions
+    partner_collections_path = gh_pages / "partner_collection_snapshots.yaml"
+    previous_partner_collections = yaml.load(partner_collections_path) if partner_collections_path.exists() else {}
+
+    partners, updated_partner_resources, updated_partner_collections, ignored_partners = resolve_partners(
+        rdf, current_format=current_collection_format, previous_partner_collections=previous_partner_collections
     )
-    if "partners" in rdf["config"]:
-        rdf["config"]["partners"] = partners
-        print(f"{len(updated_partner_versions)}/{len(partners)} partners updated")
+    print(f"{len(updated_partner_collections)}/{len(partners)} partners updated")
 
     if ignored_partners:
         warnings.warn(f"ignored invalid partners: {ignored_partners}")  # todo: raise instead of warning?
 
+    yaml.dump(updated_partner_collections, partner_collections_path)
     for r in updated_partner_resources:
         yaml.dump(r, dist / "partner_collection" / r["id"] / "resource.yaml")
         update_resource_rdfs(dist, r)
 
-    yaml.dump({k: str(v) for k, v in updated_partner_versions.items()}, partner_versions_path)
     yaml.dump(partners, dist / "partner_details.yaml")
 
 
