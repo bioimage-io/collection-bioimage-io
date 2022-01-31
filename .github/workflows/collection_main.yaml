@@ -1,4 +1,4 @@
-                                                                                                                   name: build collection and generate auto-update PRs
+name: build collection and generate auto-update PRs
 concurrency: main  # do not run this workflow in parallel
 
 on:

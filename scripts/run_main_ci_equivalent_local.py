@@ -8,7 +8,7 @@ import typer
 from dynamic_validation import main as dynamic_validation
 from get_pending_validations import main as get_pending_validations
 from generate_collection_rdf import main as generate_collection_rdf
-from update_known_resources import main as update_known_resources
+from update_known_external_resources import main as update_known_external_resources
 from deploy_test_summaries import main as deploy_test_summaries
 from static_validation import main as static_validation
 from utils import iterate_over_gh_matrix
@@ -24,7 +24,7 @@ def main(
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", str(gh_pages), "gh-pages"], check=True)
 
-    updates = update_known_resources(collection_dir=collection_dir)
+    updates = update_known_external_resources(collection_dir=collection_dir)
     print("would open auto-update PRs for:")
     pprint(updates)
 

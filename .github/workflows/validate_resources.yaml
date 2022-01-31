@@ -47,7 +47,6 @@ jobs:
     if: needs.static-validation.outputs.has_dynamic_test_cases == 'yes'
     runs-on: ubuntu-latest
     strategy:
-#      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically (or does it?)
       fail-fast: false
       matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # [{env_name: ..., resource_id: ..., version_id: ..., weight_format: ...}, ...]
 
