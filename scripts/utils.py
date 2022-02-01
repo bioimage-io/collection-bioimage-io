@@ -9,7 +9,7 @@ from marshmallow import missing
 
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.shared import yaml
-from scripts.imjoy_plugin_parser import get_plugin_as_rdf
+from imjoy_plugin_parser import get_plugin_as_rdf
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
