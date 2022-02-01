@@ -59,7 +59,7 @@ jobs:
       run: echo ${{ steps.update_pending.outputs.pending_matrix }}
     - name: Deploy updated rdfs to gh-pages 🚀
       if: steps.update_pending.outputs.has_pending_matrix == 'yes'
-      uses: JamesIves/github-pages-deploy-action@4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
         branch: gh-pages
@@ -90,7 +90,7 @@ jobs:
     - name: generate collection rdf
       run: python scripts/generate_collection_rdf.py
     - name: Deploy collection rdf to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
         branch: gh-pages
