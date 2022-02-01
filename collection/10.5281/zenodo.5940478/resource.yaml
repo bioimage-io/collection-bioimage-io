@@ -1,0 +1,9 @@
+doi: 10.5281/zenodo.5940478
+id: 10.5281/zenodo.5940478
+owners: [147356]
+status: accepted
+type: model
+versions:
+- {created: '2022-02-01 16:27:42.327446', doi: 10.5281/zenodo.5940479, name: 3D U-Net
+    - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/92c3196a-02c6-4ebe-8b5c-326737e9d9d0/rdf.yaml',
+  status: accepted, version_id: 10.5281/zenodo.5940479, version_name: revision 1}
