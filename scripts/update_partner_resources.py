@@ -26,11 +26,15 @@ def main(
     if ignored_partners:
         warnings.warn(f"ignored invalid partners: {ignored_partners}")  # todo: raise instead of warning?
 
+    partner_collections_path.parent.mkdir(exist_ok=True, parents=True)
     yaml.dump(updated_partner_collections, partner_collections_path)
     for r in updated_partner_resources:
-        yaml.dump(r, dist / "partner_collection" / r["id"] / "resource.yaml")
+        r_path = dist / "partner_collection" / r["id"] / "resource.yaml"
+        r_path.parent.mkdir(exist_ok=True, parents=True)
+        yaml.dump(r, r_path)
         update_resource_rdfs(dist, r)
 
+    dist.mkdir(exist_ok=True, parents=True)
     yaml.dump(partners, dist / "partner_details.yaml")
 
 
