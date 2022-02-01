@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from pprint import pprint
 
@@ -12,7 +13,7 @@ def main(
 ):
     # check validation summaries in artifact folder
     failed_val = []
-    for sp in artifact_dir.glob(f"**/validation_summary*.yaml"):
+    for sp in sorted(artifact_dir.glob(f"**/validation_summary*.yaml"), key=os.path.getmtime):
         summary = yaml.load(sp)
         if summary["error"]:
             summary["id"] = sp.stem
