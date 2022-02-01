@@ -8,18 +8,27 @@ jobs:
   get-pending:
     runs-on: ubuntu-latest
     outputs:
-      pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
-      has_pending_matrix: ${{ steps.get_pending.outputs.has_pending_matrix }}
+      pending_matrix: ${{ steps.update_pending.outputs.pending_matrix }}
+      has_pending_matrix: ${{ steps.update_pending.outputs.has_pending_matrix }}
 
     steps:
     - uses: actions/checkout@v2
     - name: install script deps
-      run: pip install typer ruamel.yaml requests
+      run: pip install typer bioimageio.spec requests
     - name: get pending
       id: get_pending
       run: python scripts/get_pending_validations.py --branch ${{ github.event.pull_request.head.ref }}
-    - name: debug found pending ${{ steps.get_pending.outputs.has_pending_matrix }}
-      run: echo ${{ steps.get_pending.outputs.pending_matrix }}
+    - name: update rdfs
+      id: update_pending
+      run: python scripts/update_resource_rdfs.py --pending_matrix '${{ steps.get_pending.outputs.pending_matrix }}' --future-deployed-path dist/updated_rdfs
+    - name: "Upload updated rdfs as 'updated_rdfs'"
+      uses: actions/upload-artifact@v2
+      with:
+        name: updated_rdfs
+        path: dist
+        retention-days: 1
+    - name: debug found pending ${{ steps.update_pending.outputs.has_pending_matrix }}
+      run: echo ${{ steps.update_pending.outputs.pending_matrix }}
 
   validate:
     needs: get-pending
@@ -28,3 +37,4 @@ jobs:
       pending_matrix: ${{ needs.get-pending.outputs.pending_matrix }}
       has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix }}
       check_validation: 'yes'
+      download_updated_rdfs: 'yes'

@@ -17,6 +17,10 @@ on:
         required: false
         default: 'no'
         type: string
+      download_updated_rdfs:  # download artifact 'updated_rdfs' to dist/updated_rdfs
+        required: false
+        default: 'no'
+        type: string
 
 jobs:
   static-validation:
@@ -28,6 +32,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: download updated rdfs
+      if: inputs.download_updated_rdfs == 'yes'
+      uses: actions/download-artifact@v2
+      with:
+        name: updated_rdfs
+        path: dist/updated_rdfs
     - name: install script deps
       run: pip install requests typer ruamel.yaml bioimageio.spec
     - name: static validation
@@ -52,6 +62,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: download updated rdfs
+      if: inputs.download_updated_rdfs == 'yes'
+      uses: actions/download-artifact@v2
+      with:
+        name: updated_rdfs
+        path: dist/updated_rdfs
     - name: download environment.yaml
       uses: actions/download-artifact@v2
       with:

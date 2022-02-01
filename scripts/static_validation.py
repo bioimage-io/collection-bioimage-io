@@ -7,15 +7,13 @@ import requests
 import typer
 from marshmallow import missing
 from marshmallow.utils import _Missing
-from ruamel.yaml import YAML
 
 from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
+from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
 from utils import iterate_over_gh_matrix, set_gh_actions_outputs
-
-yaml = YAML(typ="safe")
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
@@ -125,7 +123,7 @@ def ensure_valid_conda_env_name(name: str) -> str:
 
 
 def prepare_dynamic_test_cases(
-    rd: Union[Model, RDF], resource_id: str, version_id: str, dist: Path
+    rd: Union[Model, RDF], resource_id: str, version_id: str, dist: Path, rdf_path: Path
 ) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
@@ -146,7 +144,13 @@ def prepare_dynamic_test_cases(
                 env_name=env_name,
             )
             validation_cases.append(
-                {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
+                {
+                    "env_name": env_name,
+                    "resource_id": resource_id,
+                    "version_id": version_id,
+                    "weight_format": wf,
+                    "rdf_path": str(rdf_path),
+                }
             )
     elif isinstance(rd, RDF):
         pass
@@ -173,7 +177,7 @@ def main(dist: Path, pending_matrix: str):
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(rdf_source, update_to_format="latest")
                 assert isinstance(rd, RDF)
-                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)
+                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist, rdf_path=rdf_source)
 
             if "name" not in latest_static_summary:
                 latest_static_summary[

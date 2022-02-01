@@ -2,9 +2,8 @@ from pathlib import Path
 from pprint import pprint
 
 import typer
-from ruamel.yaml import YAML
 
-yaml = YAML(typ="safe")
+from bioimageio.spec.shared import yaml
 
 
 def main(

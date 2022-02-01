@@ -6,9 +6,8 @@ from pprint import pprint
 
 import typer
 from boltons.iterutils import remap
-from ruamel.yaml import YAML
 
-yaml = YAML(typ="safe")
+from bioimageio.spec.shared import yaml
 
 SUMMARY_FIELDS = [
     "id",

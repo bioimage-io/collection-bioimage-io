@@ -2,11 +2,9 @@ import warnings
 from pathlib import Path
 
 import typer
-from ruamel.yaml import YAML
 
+from bioimageio.spec.shared import yaml
 from utils import resolve_partners, update_resource_rdfs
-
-yaml = YAML(typ="safe")
 
 
 def main(

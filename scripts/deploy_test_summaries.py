@@ -1,13 +1,10 @@
-import shutil
 import warnings
 from pathlib import Path
 
 import typer
-from ruamel.yaml import YAML
 
+from bioimageio.spec.shared import yaml
 from utils import iterate_over_gh_matrix
-
-yaml = YAML(typ="safe")
 
 
 def reset_test_summary_in_rdf(rdf: dict):

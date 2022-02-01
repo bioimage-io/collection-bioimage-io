@@ -1,18 +1,15 @@
 import copy
 import json
 import warnings
-from distutils.version import StrictVersion
 from itertools import product
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 
 from marshmallow import missing
-from ruamel.yaml import YAML
 
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
+from bioimageio.spec.shared import yaml
 from scripts.imjoy_plugin_parser import get_plugin_as_rdf
-
-yaml = YAML(typ="safe")
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
@@ -131,9 +128,11 @@ def resolve_partners(
     return partners, updated_partner_resources, updated_partner_collections, ignored_partners
 
 
-def update_resource_rdfs(dist: Path, r: dict):
-    resource_id = r["id"]
-    for version_info in r["versions"]:
+def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
+    """write an updated rdf per version to dist for the given resource"""
+    resource_id = resource["id"]
+    updated_version_rdfs = {}
+    for version_info in resource["versions"]:
         if version_info["status"] == "blocked":
             continue
 
@@ -142,7 +141,7 @@ def update_resource_rdfs(dist: Path, r: dict):
 
         if isinstance(version_info["rdf_source"], dict):
             if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
-                rdf_info = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["rdf_source"]["source"]))
+                rdf_info = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]["source"]))
             else:
                 rdf_info = {}
 
@@ -151,7 +150,7 @@ def update_resource_rdfs(dist: Path, r: dict):
             this_version.update(rdf_info)
             assert missing not in this_version.values(), this_version
         elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
-            this_version = dict(get_plugin_as_rdf(r["id"].split("/")[1], version_info["rdf_source"]))
+            this_version = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]))
             assert missing not in this_version.values(), this_version
         else:
             try:
@@ -178,12 +177,15 @@ def update_resource_rdfs(dist: Path, r: dict):
         if "rdf_source" in this_version and isinstance(this_version["rdf_source"], dict):
             del this_version["rdf_source"]
 
-        if "owners" in r:
-            this_version["config"]["bioimageio"]["owners"] = r["owners"]
+        if "owners" in resource:
+            this_version["config"]["bioimageio"]["owners"] = resource["owners"]
 
         this_version["rdf_source"] = f"{SOURCE_BASE_URL}/rdfs/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
         v_deploy_path = dist / "rdfs" / resource_id / version_info["version_id"] / "rdf.yaml"
         v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
-        with v_deploy_path.open("wt", encoding="utf-8") as f:
-            yaml.dump(this_version, f)
+        yaml.dump(this_version, v_deploy_path)
+
+        updated_version_rdfs[version_info["version_id"]] = v_deploy_path
+
+    return updated_version_rdfs

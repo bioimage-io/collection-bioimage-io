@@ -2,23 +2,25 @@ from pathlib import Path
 from typing import Optional
 
 import typer
-from ruamel.yaml import YAML
 
+from bioimageio.spec.shared import yaml
 from utils import set_gh_actions_outputs
-
-yaml = YAML(typ="safe")
 
 
 def main(
     collection_dir: Path = Path(__file__).parent / "../collection",
     gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
-    branch: Optional[str] = typer.Option(
-        None,
-        help="(used in auto-update PR) If branch is 'auto-update-{resource_id} it is used to get resource_id and limit validation to unvalidated versions of that resource.",
-    ),
-):
-    """output all accepted resource versions that are missing validation"""
+    branch: Optional[str] = None,
+) -> dict:
+    """determine all accepted resource versions that are missing validation
 
+    Args:
+        collection_dir: collection directory that holds resources as <resource_id>/resource.yaml
+        gh_pages_dir: directory with gh-pages checked out
+        branch: (used in auto-update PR) If branch is 'auto-update-{resource_id} it is used to get resource_id
+                and limit validation to unvalidated versions of that resource.
+
+    """
     if branch is not None and branch.startswith("auto-update-"):
         resource_id = branch[len("auto-update-") :]
     else:
@@ -45,17 +47,13 @@ def main(
                 # todo: check bioimageio version
             else:
                 # not deployed (yet)
+                # cannot be from partner as collection and rdfs are deployed simultaneously for partners
                 is_pending = True
                 rdf_path = None
 
             if is_pending:
                 include_pending.append(
-                    {
-                        "resource_id": resource_id,
-                        "version_id": version_id,
-                        "rdf_path": rdf_path and str(rdf_path),
-                        "rdf_source": v["rdf_source"],
-                    }
+                    {"resource_id": resource_id, "version_id": version_id, "rdf_path": rdf_path and str(rdf_path)}
                 )
 
     out = dict(pending_matrix=dict(include=include_pending), has_pending_matrix=bool(include_pending))

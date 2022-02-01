@@ -8,11 +8,9 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 
 import requests
 import typer
-from ruamel.yaml import YAML
 
+from bioimageio.spec.shared import yaml
 from utils import set_gh_actions_outputs
-
-yaml = YAML(typ="safe")
 
 
 def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
@@ -47,6 +45,7 @@ def write_resource(
     resource_doi: Optional[str],
     version_id: str,
     new_version: dict,
+    resource_output_path: Path,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if resource_path.exists():
         resource = yaml.load(resource_path)
@@ -89,8 +88,8 @@ def write_resource(
         del resource["doi"]
 
     assert isinstance(resource, dict)
-    resource_path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(resource, resource_path)
+    resource_output_path.parent.mkdir(parents=True, exist_ok=True)
+    yaml.dump(resource, resource_output_path)
     return resource
 
 
@@ -114,7 +113,7 @@ def update_with_new_version(
 
 
 def update_from_zenodo(
-    collection_dir: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
+    collection_dir: Path, dist: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
 ):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
@@ -134,6 +133,7 @@ def update_from_zenodo(
             created = datetime.fromisoformat(hit["created"]).replace(tzinfo=None)
             assert isinstance(created, datetime), created
             resource_path = collection_dir / resource_doi / "resource.yaml"
+            resource_output_path = dist / resource_doi / "resource.yaml"
             version_name = f"revision {hit['revision']}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
@@ -170,16 +170,21 @@ def update_from_zenodo(
                 resource_doi=resource_doi,
                 version_id=doi,
                 new_version=new_version,
+                resource_output_path=resource_output_path,
             )
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
 
 
-def main(collection_dir: Path = Path(__file__).parent / "../collection", max_resource_count: int = 3):
+def main(
+    collection_dir: Path = Path(__file__).parent / "../collection",
+    dist: Path = Path(__file__).parent / "../dist",
+    max_resource_count: int = 3,
+):
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
 
-    update_from_zenodo(collection_dir, updated_resources)
+    update_from_zenodo(collection_dir, dist, updated_resources)
 
     # limit the number of PRs created
     oldest_updated_resources: List[Tuple[str, List[Dict[str, str]]]] = sorted(  # type: ignore
