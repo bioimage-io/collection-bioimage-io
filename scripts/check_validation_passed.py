@@ -11,11 +11,12 @@ def main(
     artifact_dir: Path = typer.Argument(..., help="folder with validation artifacts")
 ):
     # check validation summaries in artifact folder
-    failed_val = {}
+    failed_val = []
     for sp in artifact_dir.glob(f"**/validation_summary*.yaml"):
         summary = yaml.load(sp)
         if summary["error"]:
-            failed_val[sp.stem] = summary
+            summary["id"] = sp.stem
+            failed_val.append(summary)
 
     if failed_val:
         pprint(failed_val)
