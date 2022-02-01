@@ -1370,6 +1370,63 @@ collection:
   tags: [classification, densenet-121, inception-v3, resnet-34, resnet-50]
   type: model
 - authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png']
+  description: Cell segmentation for phase-contrast microscopy.
+  id: 10.5281/zenodo.5869899
+  license: CC-BY-4.0
+  links: [ilastik/live-cell-boundary-model, ilastik/livecell_dataset, ilastik/ilastik,
+    deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: LiveCellSegmentationBoundaryModel
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
+  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
+    unet]
+  type: model
+- authors:
+  - {affiliation: 'UC3M, EPFL', name: DeepImageJ}
+  - {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
+  covers: ['https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png',
+    'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
+  description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
+    microscopy 3D volumes.
+  id: 10.5281/zenodo.5749843
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+  owners: [252845]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5749843/10.5281/zenodo.5888237/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, 3dunet, 3d, unet, super-resolution-microscopy,
+    plant, tensorflow]
+  type: model
+- authors:
+  - {name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png']
+  description: Mitochondria segmentation for electron microscopy.
+  id: 10.5281/zenodo.5874841
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
+    imjoy/BioImageIO-Packager]
+  name: MitochondriaEMSegmentationBoundaryModel
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
+  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
+  type: model
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/cover.png']
+  description: Cell segmentation for immunofluorescence microscopy.
+  id: 10.5281/zenodo.5847355
+  license: CC-BY-4.0
+  links: [ilastik/covid_if_training_data, ilastik/ilastik, deepimagej/deepimagej,
+    imjoy/BioImageIO-Packager]
+  name: CovidIFCellSegmentationBoundaryModel
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5874728/rdf.yaml
+  tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence,
+    instance-segmentation]
+  type: model
+- authors:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
@@ -1411,63 +1468,6 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5906839/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
     mitochondria, bondary-segmentation, 2d]
-  type: model
-- authors:
-  - {name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png']
-  description: Mitochondria segmentation for electron microscopy.
-  id: 10.5281/zenodo.5874841
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
-    imjoy/BioImageIO-Packager]
-  name: MitochondriaEMSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
-  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
-  type: model
-- authors:
-  - {affiliation: 'UC3M, EPFL', name: DeepImageJ}
-  - {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
-  covers: ['https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png',
-    'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
-  description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
-    microscopy 3D volumes.
-  id: 10.5281/zenodo.5749843
-  license: MIT
-  links: [imjoy/BioImageIO-Packager]
-  name: 3D UNet - arabidopsis - ZeroCostDL4Mic
-  owners: [252845]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5749843/10.5281/zenodo.5888237/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, 3dunet, 3d, unet, super-resolution-microscopy,
-    plant, tensorflow]
-  type: model
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/cover.png']
-  description: Cell segmentation for immunofluorescence microscopy.
-  id: 10.5281/zenodo.5847355
-  license: CC-BY-4.0
-  links: [ilastik/covid_if_training_data, ilastik/ilastik, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
-  name: CovidIFCellSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5874728/rdf.yaml
-  tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence,
-    instance-segmentation]
-  type: model
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png']
-  description: Cell segmentation for phase-contrast microscopy.
-  id: 10.5281/zenodo.5869899
-  license: CC-BY-4.0
-  links: [ilastik/live-cell-boundary-model, ilastik/livecell_dataset, ilastik/ilastik,
-    deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: LiveCellSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5869899/10.5281/zenodo.5869900/rdf.yaml
-  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
-    unet]
   type: model
 config:
   background_image: static/img/zoo-background.svg
