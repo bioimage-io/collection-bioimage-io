@@ -54,10 +54,11 @@ jobs:
       run: python scripts/get_pending_validations.py
     - name: update rdfs
       id: update_pending
-      run: python scripts/update_resource_rdfs.py --pending-matrix '${{ steps.get_pending.outputs.pending_matrix }}'
+      run: python scripts/update_resource_rdfs.py --dist dist --pending-matrix '${{ steps.get_pending.outputs.pending_matrix }}'
     - name: (debug) has_pending ${{ steps.update_pending.outputs.has_pending_matrix }}
       run: echo ${{ steps.update_pending.outputs.pending_matrix }}
     - name: Deploy updated rdfs to gh-pages 🚀
+      if: steps.update_pending.outputs.has_pending_matrix == 'yes'
       uses: JamesIves/github-pages-deploy-action@4.2.3
       with:
         clean: false
