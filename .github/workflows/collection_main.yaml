@@ -21,7 +21,7 @@ jobs:
       with:
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
     - name: install script deps
-      run: pip install requests typer bioimageio.spec
+      run: pip install requests typer bioimageio.spec lxml
     - name: update external resources
       id: update_external
       run: python scripts/update_external_resources.py --max-resource-count 15
@@ -48,7 +48,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer bioimageio.spec
+      run: pip install typer bioimageio.spec lxml
     - name: get pending validations
       id: get_pending
       run: python scripts/get_pending_validations.py
