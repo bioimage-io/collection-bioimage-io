@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install script deps
-      run: pip install typer bioimageio.spec requests
+      run: pip install typer bioimageio.spec requests lxml
     - name: get pending
       id: get_pending
       run: python scripts/get_pending_validations.py --branch ${{ github.event.pull_request.head.ref }}
