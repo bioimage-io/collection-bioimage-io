@@ -40,7 +40,7 @@ def main(
                 continue
 
             version_id = v["version_id"]
-            rdf_path = gh_pages_dir / "resources" / resource_id / version_id / "rdf.yaml"
+            rdf_path = gh_pages_dir / "rdfs" / resource_id / version_id / "rdf.yaml"
             if rdf_path.exists():
                 rdf = yaml.load(rdf_path)  # deployed RDF may already have test_summary
                 is_pending = "test_summary" not in rdf.get("config", {}).get("bioimageio", {})

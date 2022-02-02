@@ -60,7 +60,7 @@ def main(
             if version_info["status"] != "accepted":
                 continue
 
-            updated_rdf_source = gh_pages_dir / "resources" / resource_id / version_info["version_id"] / "rdf.yaml"
+            updated_rdf_source = gh_pages_dir / "rdfs" / resource_id / version_info["version_id"] / "rdf.yaml"
             if not updated_rdf_source.exists():
                 warnings.warn(f"skipping undeployed rdf {updated_rdf_source}")
                 continue
