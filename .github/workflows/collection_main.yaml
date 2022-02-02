@@ -49,6 +49,7 @@ jobs:
         path: gh-pages
     - name: install script deps
       run: pip install typer bioimageio.spec lxml
+    - run: mkdir dist  # make sure dist folder exists for deployment step
     - name: get pending validations
       id: get_pending
       run: python scripts/get_pending_validations.py
