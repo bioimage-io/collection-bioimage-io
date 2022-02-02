@@ -4,7 +4,7 @@ from pathlib import Path
 import typer
 
 from bioimageio.spec.shared import yaml
-from utils import resolve_partners, update_resource_rdfs
+from utils import enforce_block_style, resolve_partners, update_resource_rdfs
 
 
 def main(
@@ -34,7 +34,7 @@ def main(
     for r in updated_partner_resources:
         r_path = dist / "partner_collection" / r["id"] / "resource.yaml"
         r_path.parent.mkdir(exist_ok=True, parents=True)
-        yaml.dump(r, r_path)
+        yaml.dump(enforce_block_style(r), r_path)
         update_resource_rdfs(dist, r)
 
     dist.mkdir(exist_ok=True, parents=True)

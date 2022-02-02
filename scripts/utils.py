@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 
 from marshmallow import missing
+from ruamel.yaml import comments
 
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.shared import yaml
@@ -200,3 +201,16 @@ def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
         updated_version_rdfs[version_info["version_id"]] = v_deploy_path
 
     return updated_version_rdfs
+
+
+def enforce_block_style(data):
+    """enforce block style in yaml data dump. Does not work with YAML(typ='safe')"""
+    if isinstance(data, list):
+        converted = comments.CommentedSeq([enforce_block_style(d) for d in data])
+    elif isinstance(data, dict):
+        converted = comments.CommentedMap({enforce_block_style(k): enforce_block_style(v) for k, v in data.items()})
+    else:
+        return data
+
+    converted.fa.set_block_style()
+    return converted

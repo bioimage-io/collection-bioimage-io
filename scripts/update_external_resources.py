@@ -10,7 +10,7 @@ import requests
 import typer
 
 from bioimageio.spec.shared import yaml
-from utils import set_gh_actions_outputs
+from utils import enforce_block_style, set_gh_actions_outputs
 
 
 def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
@@ -89,7 +89,7 @@ def write_resource(
 
     assert isinstance(resource, dict)
     resource_output_path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(resource, resource_output_path)
+    yaml.dump(enforce_block_style(resource), resource_output_path)
     return resource
 
 
