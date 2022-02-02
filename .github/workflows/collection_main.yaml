@@ -35,7 +35,6 @@ jobs:
     - name: update partner resources
       run: python scripts/update_partner_resources.py
     - name: Deploy updated partner resources to gh-pages 🚀
-      if: steps.update_pending.outputs.has_pending_matrix == 'yes'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
