@@ -5,7 +5,17 @@ on:
     types: [completed]
 
 jobs:
+  hide-comments:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: kanga333/comment-hider@master
+      name: Hide bot comments
+      with:
+        github_token: ${{ secrets.PAT }}
+        hide_user_name: bioimageiobot
+
   artifacts-url-comments:
+    needs: delete-comments
     name: add artifact links to pull request and related issues job
     runs-on: windows-2019
     steps:
