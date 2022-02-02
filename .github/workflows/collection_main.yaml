@@ -167,4 +167,5 @@ jobs:
 
         labels: |
           auto-update
+          ${{ matrix.update.resource_id }}
         draft: false
