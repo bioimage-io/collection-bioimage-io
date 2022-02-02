@@ -36,7 +36,7 @@ def main(
     for matrix in iterate_over_gh_matrix(pending_versions):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
-        rdf_path = matrix["rdf_path"]
+        rdf_path = Path(matrix["rdf_path"])
         assert rdf_path.exists()
 
         rdf = yaml.load(rdf_path)
