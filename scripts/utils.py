@@ -9,7 +9,6 @@ from marshmallow import missing
 
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.shared import yaml
-from imjoy_plugin_parser import get_plugin_as_rdf
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
@@ -130,6 +129,8 @@ def resolve_partners(
 
 def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
     """write an updated rdf per version to dist for the given resource"""
+    from imjoy_plugin_parser import get_plugin_as_rdf
+
     resource_id = resource["id"]
     updated_version_rdfs = {}
     for version_info in resource["versions"]:
