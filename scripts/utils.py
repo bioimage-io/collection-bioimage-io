@@ -8,29 +8,15 @@ from typing import Any, Dict, List, Tuple, Union
 from marshmallow import missing
 from ruamel.yaml import comments
 
+from bare_utils import set_gh_actions_output, set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.utils import resolve_source
 
 SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
-
-def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
-    for name, out in outputs.items():
-        set_gh_actions_output(name, out)
-
-
-def set_gh_actions_output(name: str, output: Union[str, Any]):
-    """set output of a github actions workflow step calling this script"""
-    if isinstance(output, bool):
-        output = "yes" if output else "no"
-
-    if not isinstance(output, str):
-        output = json.dumps(output)
-
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
+set_gh_actions_output = set_gh_actions_output
+set_gh_actions_outputs = set_gh_actions_outputs
 
 
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
