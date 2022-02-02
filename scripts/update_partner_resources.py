@@ -22,12 +22,15 @@ def main(
         rdf, current_format=current_collection_format, previous_partner_collections=previous_partner_collections
     )
     print(f"{len(updated_partner_collections)}/{len(partners)} partners updated")
+    print("updated_partner_resources:")
+    print(updated_partner_resources)
 
     if ignored_partners:
         warnings.warn(f"ignored invalid partners: {ignored_partners}")  # todo: raise instead of warning?
 
-    partner_collections_path.parent.mkdir(exist_ok=True, parents=True)
-    yaml.dump(updated_partner_collections, partner_collections_path)
+    deploy_partner_collections_path = dist / partner_collections_path.name
+    deploy_partner_collections_path.parent.mkdir(exist_ok=True, parents=True)
+    yaml.dump(updated_partner_collections, deploy_partner_collections_path)
     for r in updated_partner_resources:
         r_path = dist / "partner_collection" / r["id"] / "resource.yaml"
         r_path.parent.mkdir(exist_ok=True, parents=True)
