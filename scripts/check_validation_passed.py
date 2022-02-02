@@ -17,7 +17,7 @@ def main(
             failed_val[sp.stem] = summary
 
     if failed_val:
-        pprint(failed_val)
+        pprint(failed_val, width=120)
         raise typer.Exit(code=1)
 
 
