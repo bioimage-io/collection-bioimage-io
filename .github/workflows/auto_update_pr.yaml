@@ -38,3 +38,4 @@ jobs:
       has_pending_matrix: ${{ needs.get-pending.outputs.has_pending_matrix }}
       check_validation: 'yes'
       download_updated_rdfs: 'yes'
+      deploy_to: 'preview'

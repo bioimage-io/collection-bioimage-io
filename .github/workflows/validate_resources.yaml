@@ -13,9 +13,9 @@ on:
         required: false
         default: 'no'
         type: string
-      deploy:
+      deploy_to:  # may contain 'gh-pages' and/or 'preview'
         required: false
-        default: 'no'
+        default: 'gh-pages'
         type: string
       download_updated_rdfs:  # download artifact 'updated_rdfs' to dist/updated_rdfs
         required: false
@@ -45,7 +45,7 @@ jobs:
       run: python scripts/static_validation.py dist/static_validation_artifact '${{ inputs.pending_matrix }}'
     - name: debug has_dynamic_test_cases ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
       run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
-    - name: "Upload static validation summaries and conda envs"
+    - name: Upload static validation summaries and conda envs
       uses: actions/upload-artifact@v2
       with:
         name: static_validation_artifact
@@ -90,8 +90,7 @@ jobs:
     - name: dynamic validation
       shell: bash -l {0}
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.rdf_path }} ${{ matrix.weight_format }}
-    - name: "Upload validation summary"
-      if: inputs.deploy == 'yes'
+    - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
         name: ${{ steps.artifact_name.outputs.name }}
@@ -105,7 +104,7 @@ jobs:
 
   deploy:
     needs: [static-validation, dynamic-validation]
-    if: always() && inputs.deploy == 'yes' && inputs.has_pending_matrix == 'yes'  # run even if validation fails
+    if: always() && inputs.has_pending_matrix == 'yes'  # run even if validation fails
     runs-on: ubuntu-latest
 
     steps:
@@ -114,8 +113,6 @@ jobs:
       with:
         ref: gh-pages
         path: gh-pages
-    - run: ls gh-pages
-    - run: ls gh-pages/rdfs
     - name: download artifacts
       uses: actions/download-artifact@v2
       with:
@@ -124,7 +121,15 @@ jobs:
       run: pip install typer bioimageio.spec
     - name: prepare deployment
       run: python scripts/deploy_test_summaries.py dist gh-pages '${{ inputs.pending_matrix }}' artifacts
+    - name: Upload preview
+      if: contains(inputs.deploy_to, 'preview')
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview
+        path: dist
+        retention-days: 90
     - name: Deploy to gh-pages 🚀
+      if: contains(inputs.deploy_to, 'gh-pages')
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         branch: gh-pages

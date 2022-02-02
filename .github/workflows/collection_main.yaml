@@ -62,8 +62,6 @@ jobs:
     - name: update rdfs
       id: update_pending
       run: python scripts/update_resource_rdfs.py --pending-matrix '${{ steps.get_pending.outputs.pending_matrix }}'
-    - name: (debug) has_pending ${{ steps.update_pending.outputs.has_pending_matrix }}
-      run: echo ${{ steps.update_pending.outputs.pending_matrix }}
     - name: Deploy updated rdfs to gh-pages 🚀
       if: steps.update_pending.outputs.has_pending_matrix == 'yes'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
@@ -146,8 +144,6 @@ jobs:
 
           You can find their corresponding RDF files here:
           ${{ matrix.update.new_version_sources_md }}
-
-          The corresponding deployment preview (will be) available at: [gh-pages](/bioimage-io/collection-bioimage-io/tree/gh-pages/resources/${{ matrix.update.resource_id }})
 
           Please review the changes and make sure the new item or version(s) pass the following check list:
           - [ ] Passed the BioImage.IO Spec validator (static validation);
