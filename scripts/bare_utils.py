@@ -2,6 +2,9 @@ import json
 from typing import Any, Dict, Union
 
 
+SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
+
+
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
     for name, out in outputs.items():
         set_gh_actions_output(name, out)

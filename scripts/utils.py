@@ -8,12 +8,10 @@ from typing import Any, Dict, List, Tuple, Union
 from marshmallow import missing
 from ruamel.yaml import comments
 
-from bare_utils import set_gh_actions_output, set_gh_actions_outputs
+from bare_utils import SOURCE_BASE_URL, set_gh_actions_output, set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.utils import resolve_source
-
-SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
 
 set_gh_actions_output = set_gh_actions_output
 set_gh_actions_outputs = set_gh_actions_outputs
