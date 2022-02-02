@@ -24,7 +24,6 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
-            suffix: " of updated RDFs is now available."
-            format: name
+            format: ({name} of updated RDFs)[{url}]
             addTo: pullandissues
             includes: preview
