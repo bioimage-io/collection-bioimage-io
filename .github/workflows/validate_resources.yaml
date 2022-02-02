@@ -39,7 +39,7 @@ jobs:
         name: updated_rdfs
         path: dist/updated_rdfs
     - name: install script deps
-      run: pip install requests typer ruamel.yaml bioimageio.spec
+      run: pip install typer bioimageio.spec
     - name: static validation
       id: static_validation
       run: python scripts/static_validation.py dist/static_validation_artifact '${{ inputs.pending_matrix }}'
@@ -106,7 +106,7 @@ jobs:
       with:
         path: artifacts
     - name: install script deps
-      run: pip install typer ruamel.yaml
+      run: pip install typer bioimageio.spec
     - name: check if all validations passed
       run: python scripts/check_validation_passed.py artifacts
 
@@ -126,7 +126,7 @@ jobs:
       with:
         path: artifacts
     - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec
+      run: pip install typer bioimageio.spec
     - name: prepare deployment
       run: python scripts/deploy_test_summaries.py dist gh-pages '${{ inputs.pending_matrix }}' artifacts
     - name: Deploy to gh-pages 🚀
