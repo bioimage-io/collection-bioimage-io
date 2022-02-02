@@ -30,18 +30,14 @@ def add_test_summary_to_rdf(rdf: dict, summary_path: Path):
 
 def main(
     dist: Path,
-    gh_pages_dir: Path,
     pending_versions: str = typer.Argument(..., help="json string of list of pending versions_ids"),
     artifact_dir: Path = typer.Argument(..., help="folder with validation and conda environment artifacts"),
 ):
     for matrix in iterate_over_gh_matrix(pending_versions):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
-
-        rdf_path = gh_pages_dir / "rdfs" / resource_id / version_id / "rdf.yaml"
-        if not rdf_path.exists():
-            warnings.warn(f"missing rdf: {rdf_path}")
-            continue
+        rdf_path = matrix["rdf_path"]
+        assert rdf_path.exists()
 
         rdf = yaml.load(rdf_path)
         reset_test_summary_in_rdf(rdf)

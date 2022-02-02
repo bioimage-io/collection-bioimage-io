@@ -117,10 +117,17 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: artifacts
+    - name: move updated rdfs artifact
+      if: inputs.download_updated_rdfs == 'yes'
+      run: |
+        mkdir dist
+        mv artifacts/updated_rdfs dist/updated_rdfs
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare deployment
-      run: python scripts/deploy_test_summaries.py dist gh-pages '${{ inputs.pending_matrix }}' artifacts
+      run: python scripts/deploy_test_summaries.py dist '${{ inputs.pending_matrix }}' artifacts
+    - run: rm -r dist/updated_rdfs
+      if: inputs.download_updated_rdfs == 'yes'
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2
