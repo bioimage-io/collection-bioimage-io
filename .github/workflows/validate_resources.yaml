@@ -121,6 +121,8 @@ jobs:
       with:
         ref: gh-pages
         path: gh-pages
+    - run: ls gh-pages
+    - run: ls gh-pages/rdfs
     - name: download artifacts
       uses: actions/download-artifact@v2
       with:
