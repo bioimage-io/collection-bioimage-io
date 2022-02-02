@@ -85,6 +85,7 @@ jobs:
 
   build-collection:  # deploy collection rdf to gh-pages
     needs: [update-resources, get-pending-validations, validate]
+    if: always()
     runs-on: ubuntu-latest
 
     steps:
