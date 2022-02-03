@@ -1,8 +1,9 @@
 import json
+import os
 from typing import Any, Dict, Union
 
 
-SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
+SOURCE_BASE_URL = f"https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'bioimage-io')}.github.io/collection-bioimage-io"
 
 
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
