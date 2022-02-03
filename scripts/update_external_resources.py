@@ -168,18 +168,20 @@ def main(
     print(f"{len(oldest_updated_resources)} resources to update:")
     pprint(list(map(lambda kv: kv[0], oldest_updated_resources)))
     limited_updated_resources = dict(oldest_updated_resources[:max_resource_count])
-    print(f"limited to max {max_resource_count} of resources to update (starting with oldest):")
+    print(f"limited to max {max_resource_count} of resources with auto-update branches (starting with oldest):")
     pprint(list(limited_updated_resources.keys()))
 
     # remove pending resources (resources for which an auto-update-<resource_id> branch already exists)
     subprocess.run(["git", "fetch"])
     remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
     remote_branches = [rb for rb in remote_branch_proc.stdout.split() if rb.startswith("origin/auto-update-")]
-    print("Found remote auto-update branches:")
+    print("Found existing auto-update branches:")
     pprint(remote_branches)
     limited_updated_resources = {
         k: v for k, v in limited_updated_resources.items() if f"origin/auto-update-{k}" not in remote_branches
     }
+    print("Resources to open a new PR for:")
+    pprint(list(limited_updated_resources.keys()))
 
     updates = [
         {
