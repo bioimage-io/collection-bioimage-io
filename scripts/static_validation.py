@@ -60,7 +60,7 @@ def get_env_from_deps(deps: Dependencies):
 
 
 def get_version_range(v: StrictVersion) -> str:
-    v_major, v_minor, v_path = v.version
+    v_major, v_minor, v_patch = v.version
     return f">={v_major}.{v_minor},<{v_major}.{v_minor + 1}"
 
 
@@ -82,7 +82,14 @@ def get_default_env(
         conda_env["dependencies"].append("cpuonly")
 
     if tensorflow_version is not None:
-        conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
+        tf_major, tf_minor, tf_patch = tensorflow_version.version
+
+        # tensorflow 1.15 is not available on conda, so we need to inject this as a pip dependency
+        if (tf_major, tf_minor) == (1, 15):
+            conda_env["dependencies"].append("pip")
+            conda_env["dependencies"].append({"pip": [f"tensorflow {get_version_range(tensorflow_version)}"]})
+        else:  # use conda otherwise
+            conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
 
     return conda_env
 
