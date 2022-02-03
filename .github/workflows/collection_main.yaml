@@ -102,7 +102,7 @@ jobs:
 
 
   open-pr:
-    needs: [update-resources]
+    needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
     if: needs.update-resources.outputs.found_new_resources == 'yes'
     runs-on: ubuntu-latest
     strategy:
