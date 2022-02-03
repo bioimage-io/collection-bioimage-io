@@ -37,4 +37,4 @@ if __name__ == "__main__":
     parser.add_argument("resource_id", type=str)
     args = parser.parse_args()
 
-    main(args.resource_id, args.url)
+    main(args.resource_id)
