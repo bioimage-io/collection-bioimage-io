@@ -22,8 +22,8 @@ def fake_deploy(dist: Path, deploy_to: Path):
     shutil.rmtree(str(dist))
 
 
-def end_of_step():
-    if input("Continue?([y]/n)").lower().startswith("n"):
+def end_of_step(always_continue: bool):
+    if not always_continue and input("Continue?([y]/n)").lower().startswith("n"):
         raise RuntimeError("abort")
 
 
@@ -34,6 +34,7 @@ def main(
     artifacts: Path = Path(__file__).parent / "../artifacts",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     current_collection_format: str = "0.2.2",
+    always_continue: bool = True,
 ):
     if not gh_pages.exists():
         subprocess.run(["git", "worktree", "prune"], check=True)
@@ -56,7 +57,7 @@ def main(
 
     fake_deploy(dist, collection_dir)
 
-    end_of_step()
+    end_of_step(always_continue)
     #########################
     # get pending validations
     #########################
@@ -81,7 +82,7 @@ def main(
 
     fake_deploy(dist, gh_pages)
 
-    end_of_step()
+    end_of_step(always_continue)
     ############################
     # validate/static-validation
     ############################
@@ -95,7 +96,7 @@ def main(
     if not static_out["has_dynamic_test_cases"]:
         return
 
-    end_of_step()
+    end_of_step(always_continue)
     #############################
     # validate/dynamic-validation
     #############################
@@ -111,7 +112,7 @@ def main(
             weight_format=matrix["weight_format"],
         )
 
-    end_of_step()
+    end_of_step(always_continue)
     #################
     # validate/deploy
     #################
@@ -121,7 +122,7 @@ def main(
 
     fake_deploy(dist, gh_pages)
 
-    end_of_step()
+    end_of_step(always_continue)
     ##################
     # build-collection
     ##################
