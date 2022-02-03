@@ -91,8 +91,8 @@ def resolve_partners(
             serialized_partner_collection = serialize_raw_resource_description_to_dict(partner_collection)
 
             # option to skip based on partner collection diff
-            # if serialized_partner_collection == previous_partner_collections.get(partner_id):
-            #     continue  # no change in partner collection
+            if serialized_partner_collection == previous_partner_collections.get(partner_id):
+                continue  # no change in partner collection
 
             updated_partner_collections[partner_id] = serialized_partner_collection
             if partner_collection.config:
