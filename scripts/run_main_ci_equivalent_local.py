@@ -118,7 +118,7 @@ def main(
     # validate/deploy
     #################
     deploy_test_summaries_script(
-        dist=dist, gh_pages_dir=gh_pages, pending_versions=pending["pending_matrix"], artifact_dir=artifacts
+        dist=dist, pending_versions=pending["pending_matrix"], artifact_dir=artifacts
     )
 
     fake_deploy(dist, gh_pages)
