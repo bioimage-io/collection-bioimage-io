@@ -174,7 +174,7 @@ jobs:
         draft: false
     - name: save PR url
       run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
-    - name: Save PR url to gh-pages 🚀
+    - name: deploy PR url to gh-pages 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
