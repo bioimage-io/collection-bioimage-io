@@ -207,6 +207,19 @@ def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
     return updated_version_rdfs
 
 
+def enforce_block_style_resource(resource: dict):
+    """enforce block style except for version:rdf_source, which might be an rdf dict"""
+    resource = copy.deepcopy(resource)
+
+    rdf_sources = [v.pop("rdf_source") for v in resource.get("versions", [])]
+    resource = enforce_block_style(resource)
+    assert len(rdf_sources) == len(resource["versions"])
+    for i in range(len(rdf_sources)):
+        resource["versions"][i]["rdf_source"] = rdf_sources[i]
+
+    return resource
+
+
 def enforce_block_style(data):
     """enforce block style in yaml data dump. Does not work with YAML(typ='safe')"""
     if isinstance(data, list):

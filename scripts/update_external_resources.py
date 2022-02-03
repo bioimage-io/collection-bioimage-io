@@ -9,7 +9,7 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 import requests
 import typer
 
-from utils import enforce_block_style, set_gh_actions_outputs, yaml
+from utils import enforce_block_style_resource, set_gh_actions_outputs, yaml
 
 
 def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
@@ -88,7 +88,7 @@ def write_resource(
 
     assert isinstance(resource, dict)
     resource_output_path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(enforce_block_style(resource), resource_output_path)
+    yaml.dump(enforce_block_style_resource(resource), resource_output_path)
     return resource
 
 
