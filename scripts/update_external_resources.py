@@ -165,7 +165,11 @@ def main(
     oldest_updated_resources: List[Tuple[str, List[Dict[str, str]]]] = sorted(  # type: ignore
         updated_resources.items(), key=lambda kv: (min([vv["created"] for vv in kv[1]]), kv[0])
     )
+    print(f"{len(oldest_updated_resources)} resources to update:")
+    pprint(list(map(lambda kv: kv[0], oldest_updated_resources)))
     limited_updated_resources = dict(oldest_updated_resources[:max_resource_count])
+    print(f"limited to max {max_resource_count} of resources to update (starting with oldest):")
+    pprint(list(limited_updated_resources.keys()))
 
     # remove pending resources (resources for which an auto-update-<resource_id> branch already exists)
     subprocess.run(["git", "fetch"])
