@@ -20,6 +20,7 @@ def main(resource_id: str, pr_urls_path: Path = Path(__file__).parent / "../dist
     pr_urls = json.loads(raw)
 
     # save pr_urls for adding new pr url in a following step
+    pr_urls_path.parent.mkdir(parents=True, exist_ok=True)
     with pr_urls_path.open("w", encoding="utf-8") as f:
         json.dump(pr_urls, f, ensure_ascii=False, indent=4)
 
