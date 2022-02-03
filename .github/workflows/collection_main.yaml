@@ -93,7 +93,7 @@ jobs:
   validate:
     needs: get-pending-validations
     if: needs.get-pending-validations.outputs.has_pending_matrix == 'yes'
-    uses: ./.github/workflows/validate_resources.yaml
+    uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.get-pending-validations.outputs.pending_matrix }}
       has_pending_matrix: ${{ needs.get-pending-validations.outputs.has_pending_matrix }}
