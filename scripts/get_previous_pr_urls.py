@@ -24,7 +24,7 @@ def main(resource_id: str, pr_urls_path: Path = Path(__file__).parent / "../dist
 
     pr_urls_here = pr_urls.get(resource_id)
     if pr_urls_here:
-        pr_urls_md = "\n" + "\n - ".join(pr_urls_here)
+        pr_urls_md = ", ".join(pr_urls_here)
     else:
         pr_urls_md = "none"
 
