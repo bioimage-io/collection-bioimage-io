@@ -1452,19 +1452,6 @@ collection:
     3d, affinity-prediction]
   type: model
 - authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
-  description: Nucleus segmentation for fluorescence microscopy
-  id: 10.5281/zenodo.5764892
-  license: CC-BY-4.0
-  links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
-  name: NucleiSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
-  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
-  type: model
-- authors:
   - {affiliation: '', name: ZeroCostDL4Mic team}
   - {name: Constantin Pape}
   - {name: DeepImageJ team}
@@ -1485,8 +1472,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 13}
-  n_resources: {application: 47, collection: 17, dataset: 33, model: 10}
+  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 12}
+  n_resources: {application: 47, collection: 17, dataset: 33, model: 9}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
