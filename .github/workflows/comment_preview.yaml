@@ -15,7 +15,7 @@ jobs:
         hide_user_name: bioimageiobot
 
   artifacts-url-comments:
-    needs: delete-comments
+    needs: hide-comments
     name: add artifact links to pull request and related issues job
     runs-on: windows-2019
     steps:
