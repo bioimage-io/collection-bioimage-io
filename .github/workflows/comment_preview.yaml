@@ -10,12 +10,14 @@ jobs:
     steps:
     - uses: kanga333/comment-hider@master
       name: Hide bot comments
+      continue-on-error: true  # there might not be a comment yet
       with:
         github_token: ${{ secrets.PAT }}
         hide_user_name: bioimageiobot
 
   artifacts-url-comments:
     needs: hide-comments
+    if: always()
     name: add artifact links to pull request and related issues job
     runs-on: windows-2019
     steps:
