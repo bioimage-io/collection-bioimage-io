@@ -8,4 +8,4 @@ on:
 jobs:
   check_for_new_resources:
     if: github.event.pull_request.merged == false  # if true we trigger via merge commit
-    uses: bioimage-io/collection-bioimage-io/.github/workflows/auto_update_main.yaml@main
+    uses: ./.github/workflows/auto_update_main.yaml
