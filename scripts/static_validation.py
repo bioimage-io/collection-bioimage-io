@@ -82,11 +82,13 @@ def get_default_env(
         conda_env["dependencies"].append("cpuonly")
 
     if tensorflow_version is not None:
-        tf_major, tf_minor, *_ = v.version
+        tf_major, tf_minor, tf_patch = tensorflow_version.version
+
         # tensorflow 1.15 is not available on conda, so we need to inject this as a pip dependency
-        if int(tf_major) == 1 and int(tf_minor) == 15:
-            conda_env["dependencies"].append(f"-pip: -tensorflow {get_version_range(tensorflow_version)}")
-        else:
+        if (tf_major, tf_minor) == (1, 15):
+            conda_env["dependencies"].append("pip")
+            conda_env["dependencies"].append({"pip": [f"tensorflow {get_version_range(tensorflow_version)}"]})
+        else:  # use conda otherwise
             conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
 
     return conda_env
