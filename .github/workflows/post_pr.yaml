@@ -8,4 +8,4 @@ on:
 jobs:
   check_for_new_resources:
     if: github.event.pull_request.merged == false  # if true we trigger via merge commit
-    uses: ./.github/workflows/auto_update_main.yaml
+    uses: ./.github/workflows/collection_main.yaml
