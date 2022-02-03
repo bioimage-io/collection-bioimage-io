@@ -12,30 +12,6 @@ import typer
 from utils import enforce_block_style_resource, set_gh_actions_outputs, yaml
 
 
-def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
-    if len(rdf_urls) == 1:
-        r = requests.get(rdf_urls[0])
-        if r.status_code != 200:
-            print(
-                f"Could not get rdf.yaml for new version {doi} of {concept_doi} ({r.status_code}: {r.reason}); "
-                "skipping update"
-            )
-            rdf = {}
-        else:
-            rdf = yaml.load(r.text)
-            if not isinstance(rdf, dict):
-                print(
-                    f"Found invalid rdf.yaml (not a dict) for new version {doi} of {concept_doi}; "
-                    "writing empty rdf.yaml"
-                )
-                rdf = {}
-    else:
-        print(f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; " "writing empty rdf.yaml")
-        rdf = {}
-
-    return rdf
-
-
 def write_resource(
     *,
     resource_path: Path,
