@@ -54,7 +54,7 @@ jobs:
 
   validate:
     needs: update-resources
-    uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/validate_resources.yaml@main
     with:
       check_validation: ${{ github.event_name == 'pull_request' && 'yes' || 'no' }}
       deploy_to: ${{ github.event_name == 'pull_request' && 'preview' || 'gh-pages' }}
@@ -62,7 +62,7 @@ jobs:
   trigger-partner-validation:
     needs: validate
     if: github.event_name != 'pull_request' && needs.validate.outputs.has_pending_matrices == 'yes'
-    uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main
     with:
       pending_matrices: ${{ needs.validate.outputs.pending_matrices }}
     secrets:
