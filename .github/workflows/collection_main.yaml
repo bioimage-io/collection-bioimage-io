@@ -4,6 +4,9 @@ concurrency: main  # do not run this workflow in parallel
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
   schedule:
     - cron:  '0 1,13 * * *'
   workflow_dispatch: # triggered by http endpoints
