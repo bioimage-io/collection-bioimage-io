@@ -12,12 +12,10 @@ def main(resource_id: str, pr_urls_path: Path = Path(__file__).parent / "../dist
     try:
         r = requests.get(f"{SOURCE_BASE_URL}/pr_urls.json")
         r.raise_for_status()
-        raw = r.json
+        pr_urls = r.json()
     except Exception as e:
         warnings.warn(str(e))
-        raw = "{}"
-
-    pr_urls = json.loads(raw)
+        pr_urls = {}
 
     # save pr_urls for adding new pr url in a following step
     pr_urls_path.parent.mkdir(parents=True, exist_ok=True)
