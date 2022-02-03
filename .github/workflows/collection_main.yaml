@@ -39,6 +39,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        ref: main
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
     - name: install script deps
       run: pip install requests typer bioimageio.spec lxml
@@ -69,6 +70,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: main
     - uses: actions/checkout@v2
       with:
         ref: gh-pages
@@ -97,6 +100,7 @@ jobs:
     with:
       pending_matrix: ${{ needs.get-pending-validations.outputs.pending_matrix }}
       has_pending_matrix: ${{ needs.get-pending-validations.outputs.has_pending_matrix }}
+      ref: main
 
   build-collection:  # deploy collection rdf to gh-pages
     needs: [update-resources, get-pending-validations, validate]
@@ -105,6 +109,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: main
     - uses: actions/checkout@v2
       with:
         ref: gh-pages
@@ -133,6 +139,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: main
     - name: download new collection
       uses: actions/download-artifact@v2
       with:
