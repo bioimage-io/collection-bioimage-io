@@ -39,3 +39,29 @@ jobs:
       check_validation: 'yes'
       download_updated_rdfs: 'yes'
       deploy_to: 'preview'
+
+  hide-comments:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: kanga333/comment-hider@master
+      name: Hide bot comments
+      continue-on-error: true  # there might not be a comment yet
+      with:
+        github_token: ${{ secrets.PAT }}
+        hide_user_name: bioimageiobot
+        issue_number: ${{ workflow.event.number  }}
+
+  artifacts-url-comments:
+    needs: [hide-comments, validate]
+    if: always()
+    name: add artifact links to pull request and related issues job
+    runs-on: windows-2019
+    steps:
+      - name: add artifact links to pull request and related issues step
+        uses: tonyhallett/artifacts-url-comments@v1.1.0
+        env:
+            GITHUB_TOKEN: ${{ secrets.PAT }}
+        with:
+            format: "[download {name} of updated RDFs]({url})"
+            addTo: pullandissues
+            includes: preview
