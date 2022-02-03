@@ -10,6 +10,21 @@ on:
   workflow_call:  # triggered by other workflow
 
 jobs:
+  post-unmerged-auto-update-pr:
+    # merged prs trigger via push event and delete branch via gh settings
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check if remote still exists
+        id: ls-remote
+        run: |
+          out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
+          echo "::set-output name=out::$out"
+      - name: delete PR branch ${{ github.event.pull_request.head.ref }}
+        if: contains(steps.ls-remote.outputs.out, 'auto-update-')  # only delete existing auto-update- branches
+        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
+
   update-resources:
     runs-on: ubuntu-latest
     outputs:
