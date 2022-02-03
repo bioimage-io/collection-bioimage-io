@@ -3,8 +3,7 @@ from pathlib import Path
 
 import typer
 
-from bioimageio.spec.shared import yaml
-from utils import enforce_block_style, resolve_partners, update_resource_rdfs
+from utils import enforce_block_style, resolve_partners, update_resource_rdfs, yaml
 
 
 def main(

@@ -1,20 +1,40 @@
 import copy
 import json
+import pathlib
 import warnings
 from itertools import product
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 
 from marshmallow import missing
-from ruamel.yaml import comments
+from ruamel.yaml import YAML, comments
 
 from bare_utils import SOURCE_BASE_URL, set_gh_actions_output, set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
-from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.utils import resolve_source
 
 set_gh_actions_output = set_gh_actions_output
 set_gh_actions_outputs = set_gh_actions_outputs
+
+
+# todo: use MyYAML from bioimageio.spec. see comment below
+class MyYAML(YAML):
+    """add convenient improvements over YAML
+    improve dump:
+        - make sure to dump with utf-8 encoding. on windows encoding 'windows-1252' may otherwise be used
+        - expose indentation kwargs for dump
+    """
+
+    def dump(self, data, stream=None, *, transform=None):
+        if isinstance(stream, pathlib.Path):
+            with stream.open("wt", encoding="utf-8") as f:
+                return super().dump(data, f, transform=transform)
+        else:
+            return super().dump(data, stream, transform=transform)
+
+
+# todo: clean up difference to bioimageio.spec.shared.yaml (diff is typ='safe'), but with 'safe' enforce_block_style does not work
+yaml = MyYAML()
 
 
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):

@@ -9,8 +9,7 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 import requests
 import typer
 
-from bioimageio.spec.shared import yaml
-from utils import enforce_block_style, set_gh_actions_outputs
+from utils import enforce_block_style, set_gh_actions_outputs, yaml
 
 
 def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
