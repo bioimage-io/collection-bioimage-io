@@ -26,6 +26,8 @@ jobs:
         run: git push origin --delete ${{ github.event.pull_request.head.ref }}
 
   update-resources:
+    needs: post-unmerged-auto-update-pr
+    if: always()
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
