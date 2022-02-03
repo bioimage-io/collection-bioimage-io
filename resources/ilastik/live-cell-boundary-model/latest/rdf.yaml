@@ -8,7 +8,13 @@ cite:
     1226-1232 (2019).'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio: {status: accepted, version_id: latest, version_name: latest}
+  bioimageio:
+    status: accepted
+    test_summary:
+      status: pending
+      tests: []
+    version_id: latest
+    version_name: latest
   default_type: model
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
