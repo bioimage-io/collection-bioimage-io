@@ -6,7 +6,7 @@ on:
       pending_matrix:
         type: string
         required: false
-        default: '{"resource_id": "r_id", "version_id": "v_id"}'
+        default: '{"include": [{"resource_id": "rid", "version_id": "vid"}]}'
 
 jobs:
   trigger_partners:
