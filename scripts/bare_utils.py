@@ -3,7 +3,8 @@ import os
 from typing import Any, Dict, Union
 
 
-SOURCE_BASE_URL = f"https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'bioimage-io')}.github.io/collection-bioimage-io"
+DEPLOYED_BASE_URL = f"https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'bioimage-io')}.github.io/collection-bioimage-io"
+RAW_BASE_URL = f"https://raw.githubusercontent.com/{os.getenv('GITHUB_REPOSITORY_OWNER', 'bioimage-io')}/collection-bioimage-io/main"
 
 
 def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):

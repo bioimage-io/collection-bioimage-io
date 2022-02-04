@@ -5,12 +5,12 @@ from pathlib import Path
 
 import requests
 
-from bare_utils import SOURCE_BASE_URL, set_gh_actions_outputs
+from bare_utils import RAW_BASE_URL, set_gh_actions_outputs
 
 
 def main(resource_id: str, pr_urls_path: Path = Path(__file__).parent / "../dist/pr_urls.json"):
     try:
-        r = requests.get(f"{SOURCE_BASE_URL}/pr_urls.json")
+        r = requests.get(f"{RAW_BASE_URL}/pr_urls.json")
         r.raise_for_status()
         pr_urls = r.json()
     except Exception as e:

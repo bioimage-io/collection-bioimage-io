@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Tuple, Union
 from marshmallow import missing
 from ruamel.yaml import YAML, comments
 
-from bare_utils import SOURCE_BASE_URL, set_gh_actions_output, set_gh_actions_outputs
+from bare_utils import DEPLOYED_BASE_URL, set_gh_actions_output, set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.shared.utils import resolve_source
 
@@ -196,7 +196,7 @@ def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
         if "owners" in resource:
             this_version["config"]["bioimageio"]["owners"] = resource["owners"]
 
-        this_version["rdf_source"] = f"{SOURCE_BASE_URL}/rdfs/{resource_id}/{version_info['version_id']}/rdf.yaml"
+        this_version["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_info['version_id']}/rdf.yaml"
 
         v_deploy_path = dist / "rdfs" / resource_id / version_info["version_id"] / "rdf.yaml"
         v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
