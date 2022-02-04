@@ -62,5 +62,5 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
             format: "[download {name} of updated RDFs]({url})"
-            addTo: pullandissues
+            addTo: pull
             includes: preview
