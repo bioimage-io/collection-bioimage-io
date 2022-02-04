@@ -27,4 +27,4 @@ jobs:
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: token ${{ secrets.PAT }}" \
         https://api.github.com/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches \
-        -d '{"client_payload": {"pending_matrix": ${{ github.event.inputs.pending_matrix }}}}'
+        -d '{"ref": "main", "inputs": {"pending_matrix": ${{ github.event.inputs.pending_matrix }}}}'
