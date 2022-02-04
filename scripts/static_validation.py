@@ -1,3 +1,4 @@
+import shutil
 import warnings
 from distutils.version import StrictVersion
 from pathlib import Path
@@ -128,6 +129,11 @@ def prepare_dynamic_test_cases(
     validation_cases = []
     # construct test cases based on resource type
     if isinstance(rd, Model):
+        # add rdf to artifact
+        rdf_in_artifact_path = dist/"static_validation_artifact"/resource_id/version_id/"rdf.yaml"
+        rdf_in_artifact_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(rdf_path, rdf_in_artifact_path)
+
         # generate validation cases per weight format
         for wf in rd.weights:
             # we skip the keras validation for now, see
@@ -149,7 +155,7 @@ def prepare_dynamic_test_cases(
                     "resource_id": resource_id,
                     "version_id": version_id,
                     "weight_format": wf,
-                    "rdf_path": str(rdf_path),
+                    "rdf_path": str(rdf_in_artifact_path),
                 }
             )
     elif isinstance(rd, RDF):
