@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       pending_matrix:
+        description: json string of gh matrix (to be used with fromJson())
         type: string
         required: false
         default: '{"include": [{"resource_id": "rid", "version_id": "vid"}]}'
