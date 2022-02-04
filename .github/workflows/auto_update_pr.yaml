@@ -50,7 +50,7 @@ jobs:
         github_token: ${{ secrets.PAT }}
         hide_user_name: bioimageiobot
 
-  artifacts-url-comments:
+  comment-preview:
     needs: [hide-comments, validate]
     if: always()
     name: add artifact links to pull request and related issues job
@@ -61,6 +61,6 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
-            format: "[download {name} of updated RDFs]({url})"
+            format: name
             addTo: pull
             includes: preview
