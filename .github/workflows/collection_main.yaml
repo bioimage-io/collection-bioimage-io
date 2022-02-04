@@ -4,30 +4,14 @@ concurrency: main  # do not run this workflow in parallel
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-    types: [ closed ]
   schedule:
     - cron:  '0 1,13 * * *'
   workflow_dispatch: # triggered by http endpoints
-  workflow_call:  # triggered by other workflow
+  workflow_run:
+    workflows: [post-PR]
+    types: [completed]
 
 jobs:
-  post-unmerged-auto-update-pr:
-    # merged prs trigger via push event and delete branch via gh settings
-    if: github.event_name == 'pull_request' && github.event.pull_request.merged == false
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: check if remote still exists
-        id: ls-remote
-        run: |
-          out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
-          echo "::set-output name=out::$out"
-      - name: delete PR branch ${{ github.event.pull_request.head.ref }}
-        if: contains(steps.ls-remote.outputs.out, 'auto-update-')  # only delete existing auto-update- branches
-        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
-
   update-resources:
     needs: post-unmerged-auto-update-pr
     if: always()
