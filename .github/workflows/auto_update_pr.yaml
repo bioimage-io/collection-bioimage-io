@@ -49,18 +49,3 @@ jobs:
       with:
         github_token: ${{ secrets.PAT }}
         hide_user_name: bioimageiobot
-
-  comment-preview:
-    needs: [hide-comments, validate]
-    if: always()
-    name: add artifact links to pull request and related issues job
-    runs-on: windows-2019
-    steps:
-      - name: add artifact links to pull request and related issues step
-        uses: tonyhallett/artifacts-url-comments@v1.1.0
-        env:
-            GITHUB_TOKEN: ${{ secrets.PAT }}
-        with:
-            format: name
-            addTo: pull
-            includes: preview
