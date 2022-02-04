@@ -1,0 +1,30 @@
+name: test trigger partner wf
+
+on:
+  workflow_dispatch:
+    inputs:
+      pending_matrix:
+        type: string
+        required: false
+        default: '{"resource_id": "r_id", "version_id": "v_id"}'
+
+jobs:
+  trigger_partners:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - owner: ilastik
+            repo: bioimage-io-resources
+            workflow: validate_bioimageio_resources.yaml
+
+    steps:
+    - name: trigger ${{ matrix.owner }}
+      run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization": token ${{ secrets.PAT }}" \
+        https://api.github.com/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches \
+        -d '{"event_type":"pending_validations", "pending_matrix": ${{ inputs.pending_matrix }}}'
