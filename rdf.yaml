@@ -1413,6 +1413,22 @@ collection:
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
   type: model
 - authors:
+  - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  covers: ['https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/input.png',
+    'https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/output.png']
+  description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
+    images of pancreatic stem cells on a 2D polystyrene substrate.
+  id: 10.5281/zenodo.5914248
+  license: BSD-2-Clause
+  links: [imjoy/BioImageIO-Packager]
+  name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+  owners: [147356]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5914248/10.5281/zenodo.5914249/rdf.yaml
+  tags: [deepimagej, pancreatic-stem-cells, segmentation, phase-contrast, unet, neubias,
+    cell-tracking-challenge, 2d, tensorflow]
+  type: model
+- authors:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
@@ -1485,8 +1501,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 13}
-  n_resources: {application: 47, collection: 17, dataset: 33, model: 10}
+  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 14}
+  n_resources: {application: 47, collection: 17, dataset: 33, model: 11}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
