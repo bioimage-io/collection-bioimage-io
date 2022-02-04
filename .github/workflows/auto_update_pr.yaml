@@ -49,7 +49,6 @@ jobs:
       with:
         github_token: ${{ secrets.PAT }}
         hide_user_name: bioimageiobot
-        issue_number: ${{ workflow.event.number  }}
 
   artifacts-url-comments:
     needs: [hide-comments, validate]
