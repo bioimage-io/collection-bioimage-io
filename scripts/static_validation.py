@@ -87,6 +87,7 @@ def get_default_env(
         # tensorflow 1.15 is not available on conda, so we need to inject this as a pip dependency
         if (tf_major, tf_minor) == (1, 15):
             conda_env["dependencies"].append("pip")
+            conda_env["dependencies"].append("python >=3.7,<3.8")  # tf 1.15 not available for py>=3.8
             conda_env["dependencies"].append({"pip": [f"tensorflow {get_version_range(tensorflow_version)}"]})
         else:  # use conda otherwise
             conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
