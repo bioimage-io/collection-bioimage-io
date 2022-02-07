@@ -16,16 +16,26 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - owner: ilastik
-            repo: bioimage-io-resources
-            workflow: validate_bioimageio_resources.yaml
+        - owner: ilastik
+          repo: bioimage-io-resources
+          workflow: validate_bioimageio_resources.yaml
 
     steps:
-    - name: trigger ${{ matrix.owner }}
+    - name: escape json matrix string
       run: |
-        curl \
-        -X POST \
-        -H "Accept: application/vnd.github.v3+json" \
-        -H "Authorization: token ${{ secrets.PAT }}" \
-        https://api.github.com/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches \
-        -d '{"ref": "main", "inputs": {"pending_matrix": "$(${{ github.event.inputs.pending_matrix }} | sed 's/"/\\"/g')"}}'
+        python -c 'import json;s='"'"'{"pending_matrix": {"include": [{"resource_id": "rid", "version_id": "vid"}]}}'"'"';print(f"::set-output name=escaped::{json.dumps(s)}")'
+    - name: trigger ${{ matrix.owner }}
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: validate BioImage.IO resources
+        repo: ${{ matrix.owner }}/${{ matrix.repo }}
+        token: ${{ secrets.PAT }}
+        inputs: '{"pending_matrix": "${{ steps.escape_matrix.outputs.escaped }}"'
+
+#      run: |
+#        curl \
+#        -X POST \
+#        -H "Accept: application/vnd.github.v3+json" \
+#        -H "Authorization: token ${{ secrets.PAT }}" \
+#        https://api.github.com/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches \
+#        -d '{"ref": "main", "inputs": {"pending_matrix": "$(${{ github.event.inputs.pending_matrix }} | sed 's/"/\\"/g')"}}'
