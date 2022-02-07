@@ -3,7 +3,7 @@ from pathlib import Path
 
 import typer
 
-from utils import enforce_block_style_resource, resolve_partners, update_resource_rdfs, yaml
+from utils import enforce_block_style_resource, resolve_partners, write_updated_resource_rdfs, yaml
 
 
 def main(
@@ -34,7 +34,7 @@ def main(
         r_path = dist / "partner_collection" / r["id"] / "resource.yaml"
         r_path.parent.mkdir(exist_ok=True, parents=True)
         yaml.dump(enforce_block_style_resource(r), r_path)
-        update_resource_rdfs(dist, r)
+        write_updated_resource_rdfs(dist, r)
 
     dist.mkdir(exist_ok=True, parents=True)
     yaml.dump(partners, dist / "partner_details.yaml")

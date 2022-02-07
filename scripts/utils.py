@@ -133,12 +133,11 @@ def resolve_partners(
     return partners, updated_partner_resources, updated_partner_collections, ignored_partners
 
 
-def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
-    """write an updated rdf per version to dist for the given resource"""
+def write_updated_resource_rdfs(dist: Path, resource: dict) -> None:
+    """write an updated rdf per version to dist/rdfs/<resource_id>/<version_id>/rdf.yaml for the given resource"""
     from imjoy_plugin_parser import get_plugin_as_rdf
 
     resource_id = resource["id"]
-    updated_version_rdfs = {}
     for version_info in resource["versions"]:
         if version_info["status"] == "blocked":
             continue
@@ -146,7 +145,6 @@ def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
         # Ignore the name in the version info
         del version_info["name"]
 
-        invalid_source = False
         if isinstance(version_info["rdf_source"], dict):
             if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
                 rdf_info = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]["source"]))
@@ -201,10 +199,6 @@ def update_resource_rdfs(dist: Path, resource: dict) -> Dict[str, Any]:
         v_deploy_path = dist / "rdfs" / resource_id / version_info["version_id"] / "rdf.yaml"
         v_deploy_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(this_version, v_deploy_path)
-
-        updated_version_rdfs[version_info["version_id"]] = v_deploy_path
-
-    return updated_version_rdfs
 
 
 def enforce_block_style_resource(resource: dict):
