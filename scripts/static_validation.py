@@ -9,12 +9,13 @@ import typer
 from marshmallow import missing
 from marshmallow.utils import _Missing
 
+from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import iterate_over_gh_matrix, set_gh_actions_outputs
+from utils import iterate_over_gh_matrix
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
@@ -130,7 +131,7 @@ def prepare_dynamic_test_cases(
     # construct test cases based on resource type
     if isinstance(rd, Model):
         # add rdf to artifact
-        rdf_in_artifact_path = dist/"static_validation_artifact"/resource_id/version_id/"rdf.yaml"
+        rdf_in_artifact_path = dist / "static_validation_artifact" / resource_id / version_id / "rdf.yaml"
         rdf_in_artifact_path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(rdf_path, rdf_in_artifact_path)
 
@@ -166,24 +167,30 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-def main(dist: Path, pending_matrix: str):
+def main(dist: Path, pending_matrix: str, rdf_dirs: List[Path] = (Path(__file__).parent / "../gh-pages/rdfs",)):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
-        rdf_source = Path(matrix["rdf_path"])
 
-        static_summary = validate(rdf_source)
+        for root in rdf_dirs:
+            rdf_path = root / resource_id / version_id / "rdf.yaml"
+            if rdf_path.exists():
+                break
+        else:
+            raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
+
+        static_summary = validate(rdf_path)
 
         static_summary_path = dist / resource_id / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if not static_summary["error"]:
-            latest_static_summary = validate(rdf_source, update_format=True)
+            latest_static_summary = validate(rdf_path, update_format=True)
             if not latest_static_summary["error"]:
-                rd = load_raw_resource_description(rdf_source, update_to_format="latest")
+                rd = load_raw_resource_description(rdf_path, update_to_format="latest")
                 assert isinstance(rd, RDF)
-                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist, rdf_path=rdf_source)
+                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist, rdf_path=rdf_path)
 
             if "name" not in latest_static_summary:
                 latest_static_summary[

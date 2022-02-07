@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import List
 
 import typer
 
@@ -35,11 +36,9 @@ def main(
     for matrix in iterate_over_gh_matrix(pending_versions):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
-        rdf_path = Path(matrix["rdf_path"])
-        assert rdf_path.exists()
 
-        rdf = yaml.load(rdf_path)
-        reset_test_summary_in_rdf(rdf)
+        existing_test_summary_path = dist / resource_id  / version_id / "test_summary.yaml"
+        test_summary_path = dist / resource_id  / version_id / "test_summary.yaml"
 
         print(f"insert test summaries for {resource_id}/{version_id}")
         # insert static validation summaries from artifact into rdf

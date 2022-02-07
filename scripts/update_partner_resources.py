@@ -1,9 +1,10 @@
+import json
 import warnings
 from pathlib import Path
 
 import typer
 
-from utils import enforce_block_style_resource, resolve_partners, write_updated_resource_rdfs, yaml
+from utils import enforce_block_style_resource, resolve_partners, write_rdfs_for_resource, yaml
 
 
 def main(
@@ -14,30 +15,30 @@ def main(
 ):
     rdf = yaml.load(rdf_template_path)
 
-    partner_collections_path = gh_pages / "partner_collection_snapshots.yaml"
-    previous_partner_collections = yaml.load(partner_collections_path) if partner_collections_path.exists() else {}
+    partner_hashes_path = gh_pages / "partner_collection_hashes.json"
+    partner_hashes = json.loads(partner_hashes_path.read_text(encoding="utf-8")) if partner_hashes_path.exists() else {}
 
-    partners, updated_partner_resources, updated_partner_collections, ignored_partners = resolve_partners(
-        rdf, current_format=current_collection_format, previous_partner_collections=previous_partner_collections
+    partners, updated_partner_resources, new_partner_hashes, ignored_partners = resolve_partners(
+        rdf, current_format=current_collection_format, previous_partner_hashes=partner_hashes
     )
-    print(f"{len(updated_partner_collections)}/{len(partners)} partners updated")
-    print("updated_partner_resources:")
-    print(updated_partner_resources)
+    print(f"{len(new_partner_hashes)}/{len(partners)} partners updated")
 
+    partner_hashes.update(new_partner_hashes)
     if ignored_partners:
         warnings.warn(f"ignored invalid partners: {ignored_partners}")  # todo: raise instead of warning?
 
-    deploy_partner_collections_path = dist / partner_collections_path.name
-    deploy_partner_collections_path.parent.mkdir(exist_ok=True, parents=True)
-    yaml.dump(updated_partner_collections, deploy_partner_collections_path)
     for r in updated_partner_resources:
         r_path = dist / "partner_collection" / r["id"] / "resource.yaml"
         r_path.parent.mkdir(exist_ok=True, parents=True)
         yaml.dump(enforce_block_style_resource(r), r_path)
-        write_updated_resource_rdfs(dist, r)
+        write_rdfs_for_resource(resource=r, dist=dist)
 
     dist.mkdir(exist_ok=True, parents=True)
     yaml.dump(partners, dist / "partner_details.yaml")
+
+    partner_hashes_path = dist / partner_hashes_path.relative_to(gh_pages)
+    partner_hashes_path.parent.mkdir(exist_ok=True, parents=True)
+    partner_hashes_path.write_text(json.dumps(partner_hashes, indent=2, sort_keys=True), encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 """script to run a rough equivalent of the github actions workflow 'collection_main.yaml' locally"""
+import json
 import shutil
 import subprocess
 from pathlib import Path
@@ -9,11 +10,10 @@ import typer
 from deploy_test_summaries import main as deploy_test_summaries_script
 from dynamic_validation import main as dynamic_validation_script
 from generate_collection_rdf import main as generate_collection_rdf_script
-from get_pending_validations import main as get_pending_validations_script
 from static_validation import main as static_validation_script
 from update_external_resources import main as update_external_resources_script
 from update_partner_resources import main as update_partner_resources_script
-from update_resource_rdfs import main as update_resource_rdfs_script
+from update_rdfs import main as update_rdfs_script
 from utils import iterate_over_gh_matrix
 
 
@@ -29,7 +29,7 @@ def end_of_step(always_continue: bool):
 
 
 def main(
-    collection_dir: Path = Path(__file__).parent / "../collection",
+    collection: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
     dist: Path = Path(__file__).parent / "../dist",
     artifacts: Path = Path(__file__).parent / "../artifacts",
@@ -52,31 +52,17 @@ def main(
     )
     fake_deploy(dist, gh_pages)
 
-    updates = update_external_resources_script(collection_dir=collection_dir)
-    print("would open auto-update PRs with:")
-    pprint(updates)
-
-    fake_deploy(dist, collection_dir)
+    # updates = update_external_resources_script(collection=collection)
+    # print("would open auto-update PRs with:")
+    # pprint(updates)
+    #
+    # fake_deploy(dist, collection)
 
     end_of_step(always_continue)
     #########################
-    # get pending validations
+    # update rdfs
     #########################
-    pending = get_pending_validations_script(collection_dir=collection_dir, gh_pages_dir=gh_pages)
-
-    print("\npending:")
-    pprint(pending)
-
-    if not pending["has_pending_matrix"]:
-        return
-
-    # create updated rdfs that don't exist yet
-    pending = update_resource_rdfs_script(
-        dist=dist,
-        pending_matrix=pending["pending_matrix"],
-        collection_dir=collection_dir,
-        future_deployed_path=gh_pages,
-    )
+    pending = update_rdfs_script(dist=dist, collection=collection, gh_pages=gh_pages, branch=None)
 
     print("\npending (updated):")
     pprint(pending)
@@ -89,7 +75,13 @@ def main(
     ############################
     # perform static validation for pending resources
     static_out = static_validation_script(
-        dist=artifacts / "static_validation_artifact", pending_matrix=pending["pending_matrix"]
+        dist=artifacts / "static_validation_artifact",
+        pending_matrix=json.dumps(
+            dict(
+                include=pending["pending_matrix"].get("include", [])
+                + pending["pending_matrix_only_bioimageio"].get("include", [])
+            )
+        ),
     )
     print("\nstatic validation:")
     pprint(static_out)
@@ -109,7 +101,7 @@ def main(
             dist=artifacts / "dynamic_validation_artifacts",
             resource_id=matrix["resource_id"],
             version_id=matrix["version_id"],
-            rdf_path=matrix["rdf_path"],
+            rdf_dirs=[gh_pages / "rdfs"],
             weight_format=matrix["weight_format"],
         )
 
@@ -117,9 +109,7 @@ def main(
     #################
     # validate/deploy
     #################
-    deploy_test_summaries_script(
-        dist=dist, pending_versions=pending["pending_matrix"], artifact_dir=artifacts
-    )
+    deploy_test_summaries_script(dist=dist, pending_versions=pending["pending_matrix"], artifact_dir=artifacts)
 
     fake_deploy(dist, gh_pages)
 
@@ -127,7 +117,7 @@ def main(
     ##################
     # build-collection
     ##################
-    generate_collection_rdf_script(collection_dir=collection_dir, dist=dist)
+    generate_collection_rdf_script(collection=collection, dist=dist)
 
     fake_deploy(dist, gh_pages)
 

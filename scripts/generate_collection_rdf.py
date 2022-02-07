@@ -30,15 +30,15 @@ SUMMARY_FIELDS = [
 
 
 def main(
-    collection_dir: Path = Path(__file__).parent / "../collection",
+    collection: Path = Path(__file__).parent / "../collection",
     gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
     rdf["collection"] = rdf.get("collection", [])
-    collection = rdf["collection"]
-    assert isinstance(collection, list), type(collection)
+    rdf_collection = rdf["collection"]
+    assert isinstance(rdf_collection, list), type(rdf_collection)
 
     if "partners" in rdf["config"]:
         # load resolved partner details
@@ -50,7 +50,7 @@ def main(
 
     n_accepted = {}
     n_accepted_versions = {}
-    collection_resources = [yaml.load(r_path) for r_path in collection_dir.glob("**/resource.yaml")]
+    collection_resources = [yaml.load(r_path) for r_path in collection.glob("**/resource.yaml")]
     partner_resources = [yaml.load(r_path) for r_path in (gh_pages_dir / "partner_collection").glob("**/resource.yaml")]
     known_resources = [r for r in partner_resources + collection_resources if r["status"] == "accepted"]
     for r in known_resources:
@@ -80,7 +80,7 @@ def main(
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
             if latest_version["config"]["bioimageio"].get("owners"):
                 summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
-            collection.append(summary)
+            rdf_collection.append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1
             n_accepted_versions[type_] = (
