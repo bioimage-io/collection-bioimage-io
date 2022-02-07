@@ -32,11 +32,3 @@ jobs:
         repo: ${{ matrix.owner }}/${{ matrix.repo }}
         token: ${{ secrets.PAT }}
         inputs: '{"pending_matrix": ${{ steps.escape_json.outputs.escaped }}}'
-
-#      run: |
-#        curl \
-#        -X POST \
-#        -H "Accept: application/vnd.github.v3+json" \
-#        -H "Authorization: token ${{ secrets.PAT }}" \
-#        https://api.github.com/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches \
-#        -d '{"ref": "main", "inputs": {"pending_matrix": "$(${{ github.event.inputs.pending_matrix }} | sed 's/"/\\"/g')"}}'
