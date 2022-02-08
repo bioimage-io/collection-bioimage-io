@@ -33,10 +33,16 @@ def main(
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
     dist: Path = Path(__file__).parent / "../dist",
     artifacts: Path = Path(__file__).parent / "../artifacts",
+    partner_test_summaries: Path = Path(__file__).parent / "../partner_test_summaries",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     current_collection_format: str = "0.2.2",
     always_continue: bool = True,
 ):
+    # local setup
+    if not partner_test_summaries.exists():
+        partner_test_summaries.mkdir(parents=True)
+        # todo: download partner_test_summaries
+
     if not gh_pages.exists():
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
@@ -86,9 +92,6 @@ def main(
     print("\nstatic validation:")
     pprint(static_out)
 
-    if not static_out["has_dynamic_test_cases"]:
-        return
-
     end_of_step(always_continue)
     #############################
     # validate/dynamic-validation
@@ -109,7 +112,13 @@ def main(
     #################
     # validate/deploy
     #################
-    deploy_test_summaries_script(dist=dist, pending_versions=pending["pending_matrix"], artifact_dir=artifacts)
+    deploy_test_summaries_script(
+        dist=dist,
+        collection=collection,
+        gh_pages=gh_pages,
+        artifact_dir=artifacts,
+        partner_test_summaries=partner_test_summaries,
+    )
 
     fake_deploy(dist, gh_pages)
 

@@ -5,10 +5,10 @@ from typing import List, Optional, Tuple
 import typer
 
 from bare_utils import set_gh_actions_outputs
-from bioimageio.core import __version__ as bioimageio_core_version
-from bioimageio.spec import __version__ as bioimageio_spec_version
+from bioimageio.core import __version__ as core_version
+from bioimageio.spec import __version__ as spec_version
 from bioimageio.spec.shared import yaml
-from utils import write_rdfs_for_resource
+from utils import iterate_known_resources, write_rdfs_for_resource
 
 
 def main(
@@ -28,63 +28,52 @@ def main(
 
     """
     if branch is not None and branch.startswith("auto-update-"):
-        resource_id = branch[len("auto-update-") :]
+        resource_id_pattern = branch[len("auto-update-") :]
     else:
-        resource_id = "**"
-
-    collection_resource_b = [r_path.open("rb").read() for r_path in collection.glob(f"{resource_id}/resource.yaml")]
-    collection_resources = [(sha256(rb).hexdigest(), yaml.load(rb.decode("utf-8"))) for rb in collection_resource_b]
-    partner_resources: List[Tuple[Optional[str], dict]] = [
-        (None, yaml.load(r_path)) for r_path in (gh_pages / "partner_collection").glob(f"{resource_id}/resource.yaml")
-    ]
-    known_resources: List[Tuple[Optional[str], dict]] = [
-        (h, r) for h, r in collection_resources + partner_resources if r["status"] == "accepted"
-    ]
+        resource_id_pattern = "**"
 
     include_pending = []
     include_pending_bioimageio_only = []
-    for r_hash, r in known_resources:
-        resource_id = r["id"]
-        if r_hash is None:
+    for r in iterate_known_resources(
+        collection=collection, gh_pages=gh_pages, resource_id=resource_id_pattern, status="accepted"
+    ):
+        if r.info_sha256 is None:
             update_resource = False
         else:
             # check if resource and thus potentially updates to resource versions have changed
-            r_hash_path = gh_pages / "rdfs" / resource_id / "resource_hash.txt"
+            r_hash_path = gh_pages / "rdfs" / r.resource_id / "resource_hash.txt"
             if r_hash_path.exists():
                 last_r_hash = r_hash_path.read_text()
             else:
                 last_r_hash = None
 
-            update_resource = r_hash != last_r_hash
+            update_resource = r.info_sha256 != last_r_hash
             if update_resource:
                 r_hash_path = dist / r_hash_path.relative_to(gh_pages)
                 r_hash_path.parent.mkdir(parents=True, exist_ok=True)
-                r_hash_path.write_text(r_hash)
+                r_hash_path.write_text(r.info_sha256)
 
         update_only_bioimageio_validation = []
-        for v in r["versions"]:
+        for v in r.info["versions"]:
             if v["status"] != "accepted":
                 continue
 
             version_id = v["version_id"]
 
-            rdf_path = gh_pages / "rdfs" / resource_id / version_id / "rdf.yaml"
+            rdf_path = gh_pages / "rdfs" / r.resource_id / version_id / "rdf.yaml"
             test_summary_path = rdf_path.with_name("test_summary.yaml")
 
             if not update_resource and rdf_path.exists() and test_summary_path.exists():
                 # check bioimageio versions
                 test_summary = yaml.load(test_summary_path)
                 if "bioimageio" not in test_summary:
-                    test_summary["bioimageio"] = {}
-
-                last_spec_version = test_summary["bioimageio"].get("bioimageio_spec_version")
-                last_core_version = test_summary["bioimageio"].get("bioimageio_core_version")
-                if last_spec_version != bioimageio_spec_version or last_core_version != bioimageio_core_version:
-                    test_summary["bioimageio"]["bioimageio_spec_version"] = bioimageio_spec_version
-                    test_summary["bioimageio"]["bioimageio_core_version"] = bioimageio_core_version
                     bioimageio_validation_pending = True
                 else:
-                    bioimageio_validation_pending = False
+                    last_spec_version = test_summary["bioimageio"].get("spec_version")
+                    last_core_version = test_summary["bioimageio"].get("core_version")
+                    bioimageio_validation_pending = (
+                        last_spec_version != spec_version or last_core_version != core_version
+                    )
             else:
                 update_resource = True
                 bioimageio_validation_pending = True
@@ -94,15 +83,15 @@ def main(
 
         if update_resource:
             update_only_bioimageio_validation = []
-            updated_versions = write_rdfs_for_resource(resource=r, dist=dist)
+            updated_versions = write_rdfs_for_resource(resource=r.info, dist=dist)
         else:
             updated_versions = []
 
         for v_id in updated_versions:
-            include_pending.append({"resource_id": resource_id, "version_id": v_id})
+            include_pending.append({"resource_id": r.resource_id, "version_id": v_id})
 
         for v_id in update_only_bioimageio_validation:
-            include_pending_bioimageio_only.append({"resource_id": resource_id, "version_id": v_id})
+            include_pending_bioimageio_only.append({"resource_id": r.resource_id, "version_id": v_id})
 
     out = dict(
         pending_matrix=dict(include=include_pending),

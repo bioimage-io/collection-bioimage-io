@@ -1,12 +1,12 @@
 import copy
+import dataclasses
 import json
 import pathlib
 import warnings
 from hashlib import sha256
-from io import StringIO
 from itertools import product
 from pathlib import Path
-from typing import Any, Dict, List, Tuple, Union
+from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
 from marshmallow import missing
 from ruamel.yaml import YAML, comments
@@ -208,18 +208,6 @@ def write_rdfs_for_resource(resource: dict, dist: Path) -> List[str]:
         rdf_deploy_path = dist / "rdfs" / resource_id / version_id / "rdf.yaml"
         rdf_deploy_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(rdf, rdf_deploy_path)
-        rdf_hash = get_sha256(rdf_deploy_path)
-        ts_deploy_path = rdf_deploy_path.with_name("test_summary.yaml")
-        yaml.dump(
-            {
-                "bioimageio": dict(
-                    rdf_hash=rdf_hash,
-                    bioimageio_spec_version=bioimageio_spec_version,
-                    bioimageio_core_version=bioimageio_core_version,
-                )
-            },
-            ts_deploy_path,
-        )
 
     return updated_versions
 
@@ -248,3 +236,63 @@ def enforce_block_style(data):
 
     converted.fa.set_block_style()
     return converted
+
+
+@dataclasses.dataclass
+class KnownResource:
+    resource_id: str
+    path: Path
+    info: Dict[str, Any]
+    info_sha256: Optional[str]  # None if from partner
+
+
+@dataclasses.dataclass
+class KnownResourceVersion:
+    resource: KnownResource
+    resource_id: str
+    version_id: str
+    info: Dict[str, Any]
+    rdf: Path
+    rdf_sha256: Optional[str]
+
+
+def get_sha256_and_yaml(p: Path):
+    rb = p.open("rb").read()
+    return sha256(rb).hexdigest(), yaml.load(rb.decode("utf-8"))
+
+
+def iterate_known_resources(
+    collection: Path, gh_pages: Path, resource_id: str = "**", status: Optional[str] = None
+) -> Generator[KnownResource, None, None]:
+    for p in (gh_pages / "partner_collection").glob(f"{resource_id}/resource.yaml"):
+        info = yaml.load(p)
+        yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=None)
+
+    for p in collection.glob(f"{resource_id}/resource.yaml"):
+        info_sha256, info = get_sha256_and_yaml(p)
+        if status is None or info["status"] == status:
+            yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=info_sha256)
+
+
+def iterate_known_resource_versions(
+    collection: Path, gh_pages: Path, resource_id: str = "**", status: Optional[str] = None
+) -> Generator[KnownResourceVersion, None, None]:
+    for known_r in iterate_known_resources(
+        collection=collection, gh_pages=gh_pages, resource_id=resource_id, status=status
+    ):
+        for v_info in known_r.info["versions"]:
+            if status is None or v_info["status"] == status:
+                v_id = v_info["version_id"]
+                rdf_path = gh_pages / "rdfs" / known_r.resource_id / v_id / "rdf.yaml"
+                if rdf_path.exists():
+                    rdf_sha256, rdf = get_sha256_and_yaml(rdf_path)
+                    yield KnownResourceVersion(
+                        resource=known_r,
+                        resource_id=known_r.resource_id,
+                        version_id=v_id,
+                        info=v_info,
+                        rdf=rdf,
+                        rdf_sha256=rdf_sha256,
+                    )
+                else:
+                    warnings.warn(f"skipping undeployed r: {known_r.resource_id} v: {v_id}")
