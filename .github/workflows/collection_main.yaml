@@ -80,7 +80,6 @@ jobs:
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix_bioimageio }}
-      has_pending_matrix: ${{ needs.update-rdfs.outputs.has_pending_matrix_bioimageio }}
       ref: main
 
   trigger-partner-validation:
