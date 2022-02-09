@@ -167,7 +167,14 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-def main(dist: Path, pending_matrix: str, rdf_dirs: List[Path] = (Path(__file__).parent / "../gh-pages/rdfs", Path(__file__).parent / "../dist/updated_rdfs")):
+def main(
+    dist: Path,
+    pending_matrix: str,
+    rdf_dirs: List[Path] = (
+        Path(__file__).parent / "../gh-pages/rdfs",
+        Path(__file__).parent / "../dist/updated_rdfs/rdfs",
+    ),
+):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
         resource_id = matrix["resource_id"]
