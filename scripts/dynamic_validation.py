@@ -17,7 +17,7 @@ def main(
     resource_id: str,
     version_id: str,
     weight_format: Optional[str] = typer.Argument(..., help="weight format to test model with."),
-    rdf_dirs: List[Path] = (Path(__file__).parent / "../gh-pages/rdfs", Path(__file__).parent / "../dist/updated_rdfs/rdfs"),
+    rdf_dirs: List[Path] = (Path(__file__).parent / "../dist/static_validation_artifact",),
 ):
     if weight_format is None:
         # no dynamic tests for non-model resources...
