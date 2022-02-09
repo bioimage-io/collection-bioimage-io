@@ -4,6 +4,9 @@ owners: [77626]
 status: accepted
 type: model
 versions:
+- {created: '2022-02-09 20:56:44.509499', doi: 10.5281/zenodo.6028056, name: NucleiSegmentationBoundaryModel,
+  rdf_source: 'https://zenodo.org/api/files/50a4c576-db4c-49a6-a691-59f9d96e6d5f/rdf.yaml',
+  status: accepted, version_id: 10.5281/zenodo.6028056, version_name: revision 1}
 - {created: '2021-12-07 18:02:09.736653+00:00', doi: 10.5281/zenodo.5764893, name: NucleiSegmentationBoundaryModel,
   rdf_source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml',
   status: accepted, version_id: 10.5281/zenodo.5764893, version_name: revision 1}
