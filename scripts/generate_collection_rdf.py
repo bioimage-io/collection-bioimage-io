@@ -115,7 +115,7 @@ def main(
 
     rdf = remap(rdf, convert_for_json)
     with open(rdf_path.with_suffix(".json"), "w") as f:
-        json.dump(rdf, f, allow_nan=False, indent=2)
+        json.dump(rdf, f, allow_nan=False, indent=2,sort_keys=True)
 
 
 if __name__ == "__main__":

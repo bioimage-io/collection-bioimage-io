@@ -14,7 +14,7 @@ def main(resource_id: str, url: str, pr_urls_path: Path = Path(__file__).parent 
     pr_urls[resource_id].append(url)
 
     with pr_urls_path.open("w", encoding="utf-8") as f:
-        json.dump(pr_urls, f, ensure_ascii=False, indent=4)
+        json.dump(pr_urls, f, ensure_ascii=False, indent=4, sort_keys=True)
 
 
 if __name__ == "__main__":
