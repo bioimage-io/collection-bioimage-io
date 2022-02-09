@@ -1,7 +1,7 @@
-name: test trigger partner wf
+name: Trigger partner workflows
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       pending_matrix:
         description: json string of gh matrix (to be used with fromJson())
@@ -24,7 +24,7 @@ jobs:
     - name: escape json matrix string
       id: escape_json
       run: |
-        python -c 'import json;s='"'"'${{ github.event.inputs.pending_matrix }}'"'"';print(f"::set-output name=escaped::{json.dumps(s)}")'
+        python -c 'import json;s='"'"'${{ inputs.pending_matrix }}'"'"';print(f"::set-output name=escaped::{json.dumps(s)}")'
     - name: trigger ${{ matrix.owner }}
       uses: benc-uk/workflow-dispatch@v1
       with:

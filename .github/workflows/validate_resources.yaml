@@ -6,9 +6,6 @@ on:
       pending_matrix:
         required: true
         type: string
-      has_pending_matrix:
-        required: true
-        type: string
       check_validation:
         required: false
         default: 'no'

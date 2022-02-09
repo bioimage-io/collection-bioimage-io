@@ -33,7 +33,7 @@ def main(
 
     retrigger = False
     include_pending = []
-    include_pending_bioimageio_only = []
+    include_pending_bioimageio = []
     for r in iterate_known_resources(
         collection=collection, gh_pages=gh_pages, resource_id=resource_id_pattern, status="accepted"
     ):
@@ -53,7 +53,7 @@ def main(
                 r_hash_path.parent.mkdir(parents=True, exist_ok=True)
                 r_hash_path.write_text(r.info_sha256)
 
-        update_only_bioimageio_validation = []
+        update_bioimageio_validation = []
         for v in r.info["versions"]:
             if v["status"] != "accepted":
                 continue
@@ -79,29 +79,32 @@ def main(
                 bioimageio_validation_pending = True
 
             if bioimageio_validation_pending:
-                update_only_bioimageio_validation.append(version_id)
+                update_bioimageio_validation.append(version_id)
 
         if update_resource:
-            update_only_bioimageio_validation = []
+            update_bioimageio_validation = []
             updated_versions = write_rdfs_for_resource(resource=r.info, dist=dist)
         else:
             updated_versions = []
 
         for v_id in updated_versions:
-            include_pending.append({"resource_id": r.resource_id, "version_id": v_id})
+            entry = {"resource_id": r.resource_id, "version_id": v_id}
+            include_pending.append(entry)
+            include_pending_bioimageio.append(entry)
 
-        for v_id in update_only_bioimageio_validation:
-            include_pending_bioimageio_only.append({"resource_id": r.resource_id, "version_id": v_id})
+        for v_id in update_bioimageio_validation:
+            entry = {"resource_id": r.resource_id, "version_id": v_id}
+            include_pending_bioimageio.append(entry)
 
-        if len(include_pending) > 100 or len(include_pending_bioimageio_only) > 100:
+        if len(include_pending_bioimageio) > 100:
             retrigger = True
             break
 
     out = dict(
         pending_matrix=dict(include=include_pending),
         has_pending_matrix=bool(include_pending),
-        pending_matrix_only_bioimageio=dict(include=include_pending_bioimageio_only),
-        has_pending_matrix_only_bioimageio=bool(include_pending_bioimageio_only),
+        pending_matrix_bioimageio=dict(include=include_pending_bioimageio),
+        has_pending_matrix_bioimageio=bool(include_pending_bioimageio),
         retrigger=retrigger,
     )
     set_gh_actions_outputs(out)

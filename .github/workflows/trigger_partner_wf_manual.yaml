@@ -1,0 +1,16 @@
+name: Trigger partner workflows manually
+
+on:
+  workflow_dispatch:
+    inputs:
+      pending_matrix:
+        description: json string of gh matrix (to be used with fromJson())
+        type: string
+        required: false
+        default: '{"include": [{"resource_id": "rid", "version_id": "vid"}]}'
+
+jobs:
+  impl:
+    uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf_impl.yaml@main  # todo: change orga to bioimage-io
+    with:
+      pending_matrix: ${{ github.event.inputs.pending_matrix }}

@@ -49,6 +49,8 @@ jobs:
     outputs:
       pending_matrix: ${{ steps.pending.outputs.pending_matrix }}
       has_pending_matrix: ${{ steps.pending.outputs.has_pending_matrix }}
+      pending_matrix_bioimageio: ${{ steps.pending.outputs.pending_matrix_bioimageio }}
+      has_pending_matrix_bioimageio: ${{ steps.pending.outputs.has_pending_matrix_bioimageio }}
 
     steps:
     - uses: actions/checkout@v2
@@ -63,9 +65,9 @@ jobs:
     - run: mkdir dist  # make sure dist folder exists for deployment step
     - name: update resource rdfs
       id: pending
-      run: python scripts/update_rdfs.py  # todo: retrigger main ci if outputs.retrigger == 'yes'
+      run: python scripts/update_rdfs.py  # todo: retrigger main ci if outputs.retrigger == 'yes'; maybe no need for this due to retrigger after partner validation?
     - name: Deploy updated rdfs to gh-pages 🚀
-      if: steps.pending.outputs.has_pending_matrix == 'yes'
+      if: steps.pending.outputs.has_pending_matrix_bioimageio == 'yes'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
@@ -74,12 +76,19 @@ jobs:
 
   validate:
     needs: update-rdfs
-    if: needs.update-rdfs.outputs.has_pending_matrix == 'yes'
+    if: needs.update-rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix }}
-      has_pending_matrix: ${{ needs.update-rdfs.outputs.has_pending_matrix }}
+      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix_bioimageio }}
+      has_pending_matrix: ${{ needs.update-rdfs.outputs.has_pending_matrix_bioimageio }}
       ref: main
+
+  trigger-partner-validation:
+    needs: update-rdfs
+    if: needs.update-rdfs.outputs.has_pending_matrix == 'yes'
+    uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
+    with:
+      pending_matrix: ${{ needs.update-rdfs.outputs.pending }}
 
   build-collection:  # deploy collection rdf to gh-pages
     needs: [update-resources, update-rdfs, validate]
