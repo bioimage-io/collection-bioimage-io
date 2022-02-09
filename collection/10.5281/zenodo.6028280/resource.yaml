@@ -1,0 +1,9 @@
+doi: 10.5281/zenodo.6028280
+id: 10.5281/zenodo.6028280
+owners: [77626]
+status: accepted
+type: model
+versions:
+- {created: '2022-02-09 21:42:30.280535', doi: 10.5281/zenodo.6028281, name: PlatynereisEMcellsSegmentationBoundaryModel,
+  rdf_source: 'https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/rdf.yaml',
+  status: accepted, version_id: 10.5281/zenodo.6028281, version_name: revision 1}
