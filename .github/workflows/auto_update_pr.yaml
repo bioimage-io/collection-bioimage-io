@@ -8,20 +8,18 @@ jobs:
   get-pending:
     runs-on: ubuntu-latest
     outputs:
-      pending_matrix: ${{ steps.get_pending.outputs.pending_matrix }}
-      has_pending_matrix: ${{ steps.get_pending.outputs.has_pending_matrix }}
+      pending_matrix: ${{ steps.pending.outputs.pending_matrix }}
+      has_pending_matrix: ${{ steps.pending.outputs.has_pending_matrix }}
 
     steps:
     - uses: actions/checkout@v2
     - name: install script deps
       run: pip install typer bioimageio.spec requests lxml
-    - name: get pending
-      id: get_pending
-      run: python scripts/get_pending_validations.py --branch ${{ github.event.pull_request.head.ref }}
-    - name: debug found pending ${{ steps.get_pending.outputs.has_pending_matrix }}
-      run: echo ${{ steps.get_pending.outputs.pending_matrix }}
     - name: update rdfs
-      run: python scripts/update_resource_rdfs.py --pending-matrix '${{ steps.get_pending.outputs.pending_matrix }}'
+      id: pending
+      run: python scripts/update_rdfs.py --branch ${{ github.event.pull_request.head.ref }}
+    - name: debug found pending ${{ steps.pending.outputs.has_pending_matrix }}
+      run: echo ${{ steps.pending.outputs.pending_matrix }}
     - name: "Upload updated rdfs as 'updated_rdfs'"
       uses: actions/upload-artifact@v2
       with:

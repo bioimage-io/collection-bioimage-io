@@ -11,13 +11,8 @@ from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 from marshmallow import missing
 from ruamel.yaml import YAML, comments
 
-from bare_utils import DEPLOYED_BASE_URL, get_sha256
-from bioimageio.core import __version__ as bioimageio_core_version
-from bioimageio.spec import (
-    __version__ as bioimageio_spec_version,
-    load_raw_resource_description,
-    serialize_raw_resource_description_to_dict,
-)
+from bare_utils import DEPLOYED_BASE_URL
+from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.io_ import serialize_raw_resource_description
 from bioimageio.spec.shared.utils import resolve_source
 
