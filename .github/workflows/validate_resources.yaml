@@ -25,7 +25,6 @@ on:
 
 jobs:
   static-validation:
-    if: inputs.has_pending_matrix == 'yes'
     runs-on: ubuntu-latest
     outputs:
       has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
@@ -117,7 +116,7 @@ jobs:
 
   deploy:
     needs: [static-validation, dynamic-validation]
-    if: always() && inputs.has_pending_matrix == 'yes'  # run even if validation fails
+    if: always()
     runs-on: ubuntu-latest
 
     steps:
