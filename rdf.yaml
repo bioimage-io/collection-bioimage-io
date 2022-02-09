@@ -1410,7 +1410,7 @@ collection:
   name: MitochondriaEMSegmentationBoundaryModel
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5874841/10.5281/zenodo.5874842/rdf.yaml
-  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
+  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
   type: model
 - authors:
   - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}

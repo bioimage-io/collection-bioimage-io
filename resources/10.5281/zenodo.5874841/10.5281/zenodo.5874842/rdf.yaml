@@ -67,7 +67,7 @@ outputs:
 rdf_source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/sample_output_0.tif']
-tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
+tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
 test_inputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_input_0.npy']
 test_outputs: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_output_0.npy']
 timestamp: '2022-01-18T23:04:36.427352'
