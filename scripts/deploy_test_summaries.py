@@ -91,14 +91,14 @@ def main(
         )
 
         # set partner test summaries
-        assert partner_test_summaries.exists()
-        for partner_folder in partner_test_summaries.iterdir():
-            assert partner_folder.is_dir()
-            partner_id = partner_folder.name
-            assert partner_id != "bioimageio"
-            test_summary["tests"][partner_id] = []
-            for sp in (partner_folder / krv.resource_id / krv.version_id).glob("*test_summary*.yaml"):
-                test_summary["tests"][partner_id].append(get_sub_summary(sp))
+        if partner_test_summaries.exists():
+            for partner_folder in partner_test_summaries.iterdir():
+                assert partner_folder.is_dir()
+                partner_id = partner_folder.name
+                assert partner_id != "bioimageio"
+                test_summary["tests"][partner_id] = []
+                for sp in (partner_folder / krv.resource_id / krv.version_id).glob("*test_summary*.yaml"):
+                    test_summary["tests"][partner_id].append(get_sub_summary(sp))
 
         # write updated test summary
         if test_summary != previous_test_summary:

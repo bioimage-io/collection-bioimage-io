@@ -47,9 +47,9 @@ def main(
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
 
-    ##################
-    # update resources
-    ##################
+    ###################################
+    # update resources (resource infos)
+    ###################################
     update_partner_resources_script(
         dist=dist,
         gh_pages=gh_pages,
@@ -65,9 +65,9 @@ def main(
     fake_deploy(dist, collection)
 
     end_of_step(always_continue)
-    #########################
-    # update rdfs
-    #########################
+    #################################
+    # update rdfs (resource versions)
+    #################################
     pending = update_rdfs_script(dist=dist, collection=collection, gh_pages=gh_pages, branch=None)
 
     print("\npending (updated):")
