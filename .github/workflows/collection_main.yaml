@@ -63,7 +63,7 @@ jobs:
     - run: mkdir dist  # make sure dist folder exists for deployment step
     - name: update resource rdfs
       id: pending
-      run: python scripts/update_rdfs.py
+      run: python scripts/update_rdfs.py  # todo: retrigger main ci if outputs.retrigger == 'yes'
     - name: Deploy updated rdfs to gh-pages 🚀
       if: steps.pending.outputs.has_pending_matrix == 'yes'
       uses: JamesIves/github-pages-deploy-action@v4.2.3

@@ -26,6 +26,11 @@ jobs:
         name: updated_rdfs
         path: dist
         retention-days: 1
+    - name: check version limit
+      if: steps.pending.outputs.retrigger == 'yes'
+      run: |
+        echo "::error file=scripts/update_rdfs.py,line=96,endline=97,title=Cannot retrigger in PR::Exceeding version validation limit"
+        exit 1
 
   validate:
     needs: get-pending

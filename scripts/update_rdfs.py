@@ -31,6 +31,7 @@ def main(
     else:
         resource_id_pattern = "**"
 
+    retrigger = False
     include_pending = []
     include_pending_bioimageio_only = []
     for r in iterate_known_resources(
@@ -92,11 +93,16 @@ def main(
         for v_id in update_only_bioimageio_validation:
             include_pending_bioimageio_only.append({"resource_id": r.resource_id, "version_id": v_id})
 
+        if len(include_pending) > 100 or len(include_pending_bioimageio_only) > 100:
+            retrigger = True
+            break
+
     out = dict(
         pending_matrix=dict(include=include_pending),
         has_pending_matrix=bool(include_pending),
         pending_matrix_only_bioimageio=dict(include=include_pending_bioimageio_only),
         has_pending_matrix_only_bioimageio=bool(include_pending_bioimageio_only),
+        retrigger=retrigger,
     )
     set_gh_actions_outputs(out)
     return out
