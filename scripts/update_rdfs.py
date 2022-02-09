@@ -1,6 +1,5 @@
-from hashlib import sha256
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Optional
 
 import typer
 

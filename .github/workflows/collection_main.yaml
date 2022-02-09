@@ -59,7 +59,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer bioimageio.spec lxml
+      run: pip install typer bioimageio.spec lxml bioimageio.core
     - run: mkdir dist  # make sure dist folder exists for deployment step
     - name: update resource rdfs
       id: pending
