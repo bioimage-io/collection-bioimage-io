@@ -11,7 +11,13 @@ cite:
     Networks. arXiv:1611.07004.'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio: {status: accepted, version_id: latest, version_name: latest}
+  bioimageio:
+    status: accepted
+    test_summary:
+      status: pending
+      tests: []
+    version_id: latest
+    version_name: latest
   default_type: application
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
