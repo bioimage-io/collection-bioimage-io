@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  get-pending:
+  update-rdfs:
     runs-on: ubuntu-latest
     outputs:
       pending_matrix_bioimageio: ${{ steps.pending.outputs.pending_matrix_bioimageio }}
@@ -33,11 +33,11 @@ jobs:
         exit 1
 
   validate:
-    needs: get-pending
-    if: ${{ needs.get-pending.outputs.has_pending_matrix_bioimageio }} == 'yes'
+    needs: update-rdfs
+    if: needs.update-rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.get-pending.outputs.pending_matrix_bioimageio }}
+      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix_bioimageio }}
       check_validation: 'yes'
       download_updated_rdfs: 'yes'
       deploy_to: 'preview'
