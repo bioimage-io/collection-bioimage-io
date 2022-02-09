@@ -58,11 +58,11 @@ def main(
     )
     fake_deploy(dist, gh_pages)
 
-    # updates = update_external_resources_script(collection=collection)
-    # print("would open auto-update PRs with:")
-    # pprint(updates)
-    #
-    # fake_deploy(dist, collection)
+    updates = update_external_resources_script(collection=collection)
+    print("would open auto-update PRs with:")
+    pprint(updates)
+
+    fake_deploy(dist, collection)
 
     end_of_step(always_continue)
     #########################

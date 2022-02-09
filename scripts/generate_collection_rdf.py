@@ -1,5 +1,4 @@
 import json
-import warnings
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
@@ -46,7 +45,7 @@ def main(
         if partner_details_path.exists():
             rdf["config"]["partners"] = yaml.load(partner_details_path)
         else:
-            warnings.warn(f"Missing evaluated partner details at {partner_details_path}")
+            print(f"Missing evaluated partner details at {partner_details_path}")
 
     n_accepted = {}
     n_accepted_versions = {}
@@ -60,9 +59,10 @@ def main(
             if version_info["status"] != "accepted":
                 continue
 
-            updated_rdf_source = gh_pages_dir / "rdfs" / resource_id / version_info["version_id"] / "rdf.yaml"
+            version_id = version_info["version_id"]
+            updated_rdf_source = gh_pages_dir / "rdfs" / resource_id / version_id / "rdf.yaml"
             if not updated_rdf_source.exists():
-                warnings.warn(f"skipping undeployed rdf {updated_rdf_source}")
+                print(f"skipping undeployed rdf: {resource_id}/{version_id}")
                 continue
 
             this_version = yaml.load(updated_rdf_source)
@@ -75,7 +75,7 @@ def main(
                 latest_version["previous_versions"].append(this_version)
 
         if latest_version is None:
-            print(f"Ignoring resource {resource_id} without any accepted versions")
+            print(f"Ignoring resource {resource_id} without any accepted/deployed versions")
         else:
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
             if latest_version["config"]["bioimageio"].get("owners"):

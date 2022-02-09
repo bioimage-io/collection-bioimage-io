@@ -44,7 +44,7 @@ jobs:
         branch: gh-pages
         folder: dist
 
-  get-pending-validations:
+  update-rdfs:
     runs-on: ubuntu-latest
     outputs:
       pending_matrix: ${{ steps.pending.outputs.pending_matrix }}
@@ -63,7 +63,7 @@ jobs:
     - run: mkdir dist  # make sure dist folder exists for deployment step
     - name: update resource rdfs
       id: pending
-      run: python scripts/update_resource_rdfs.py
+      run: python scripts/update_rdfs.py
     - name: Deploy updated rdfs to gh-pages 🚀
       if: steps.pending.outputs.has_pending_matrix == 'yes'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
@@ -73,16 +73,16 @@ jobs:
         folder: dist
 
   validate:
-    needs: get-pending-validations
-    if: needs.get-pending-validations.outputs.has_pending_matrix == 'yes'
+    needs: update-rdfs
+    if: needs.update-rdfs.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.get-pending-validations.outputs.pending_matrix }}
-      has_pending_matrix: ${{ needs.get-pending-validations.outputs.has_pending_matrix }}
+      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix }}
+      has_pending_matrix: ${{ needs.update-rdfs.outputs.has_pending_matrix }}
       ref: main
 
   build-collection:  # deploy collection rdf to gh-pages
-    needs: [update-resources, get-pending-validations, validate]
+    needs: [update-resources, update-rdfs, validate]
     if: always()
     runs-on: ubuntu-latest
 
