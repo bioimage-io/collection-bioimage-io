@@ -7,6 +7,7 @@ import typer
 from boltons.iterutils import remap
 
 from bioimageio.spec.shared import yaml
+from utils import iterate_known_resources
 
 SUMMARY_FIELDS = [
     "id",
@@ -30,18 +31,17 @@ SUMMARY_FIELDS = [
 
 def main(
     collection: Path = Path(__file__).parent / "../collection",
-    gh_pages_dir: Path = Path(__file__).parent / "../gh-pages",
+    gh_pages: Path = Path(__file__).parent / "../gh-pages",
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
     rdf["collection"] = rdf.get("collection", [])
-    rdf_collection = rdf["collection"]
-    assert isinstance(rdf_collection, list), type(rdf_collection)
+    assert isinstance(rdf["collection"], list), type(rdf["collection"])
 
     if "partners" in rdf["config"]:
         # load resolved partner details
-        partner_details_path = gh_pages_dir / "partner_details.yaml"
+        partner_details_path = gh_pages / "partner_details.yaml"
         if partner_details_path.exists():
             rdf["config"]["partners"] = yaml.load(partner_details_path)
         else:
@@ -49,38 +49,34 @@ def main(
 
     n_accepted = {}
     n_accepted_versions = {}
-    collection_resources = [yaml.load(r_path) for r_path in collection.glob("**/resource.yaml")]
-    partner_resources = [yaml.load(r_path) for r_path in (gh_pages_dir / "partner_collection").glob("**/resource.yaml")]
-    known_resources = [r for r in partner_resources + collection_resources if r["status"] == "accepted"]
-    for r in known_resources:
-        resource_id = r["id"]
+    for r in iterate_known_resources(collection=collection, gh_pages=gh_pages):
         latest_version = None
-        for version_info in r["versions"]:
+        for version_info in r.info["versions"]:
             if version_info["status"] != "accepted":
                 continue
 
             version_id = version_info["version_id"]
-            updated_rdf_source = gh_pages_dir / "rdfs" / resource_id / version_id / "rdf.yaml"
+            updated_rdf_source = gh_pages / "rdfs" / r.resource_id / version_id / "rdf.yaml"
             if not updated_rdf_source.exists():
-                print(f"skipping undeployed rdf: {resource_id}/{version_id}")
+                print(f"skipping undeployed rdf: {r.resource_id}/{version_id}")
                 continue
 
             this_version = yaml.load(updated_rdf_source)
 
             if latest_version is None:
                 latest_version = this_version
-                latest_version["id"] = r["id"]
+                latest_version["id"] = f"{r.resource_id}/{version_id}"  # todo: do we need to set this here?
                 latest_version["previous_versions"] = []
             else:
                 latest_version["previous_versions"].append(this_version)
 
         if latest_version is None:
-            print(f"Ignoring resource {resource_id} without any accepted/deployed versions")
+            print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
         else:
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
             if latest_version["config"]["bioimageio"].get("owners"):
                 summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
-            rdf_collection.append(summary)
+            rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1
             n_accepted_versions[type_] = (
@@ -115,7 +111,7 @@ def main(
 
     rdf = remap(rdf, convert_for_json)
     with open(rdf_path.with_suffix(".json"), "w") as f:
-        json.dump(rdf, f, allow_nan=False, indent=2,sort_keys=True)
+        json.dump(rdf, f, allow_nan=False, indent=2, sort_keys=True)
 
 
 if __name__ == "__main__":

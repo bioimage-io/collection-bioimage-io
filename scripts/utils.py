@@ -259,11 +259,11 @@ def get_sha256_and_yaml(p: Path):
 def iterate_known_resources(
     collection: Path, gh_pages: Path, resource_id: str = "**", status: Optional[str] = None
 ) -> Generator[KnownResource, None, None]:
-    for p in (gh_pages / "partner_collection").glob(f"{resource_id}/resource.yaml"):
+    for p in sorted((gh_pages / "partner_collection").glob(f"{resource_id}/resource.yaml")):
         info = yaml.load(p)
         yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=None)
 
-    for p in collection.glob(f"{resource_id}/resource.yaml"):
+    for p in sorted(collection.glob(f"{resource_id}/resource.yaml")):
         info_sha256, info = get_sha256_and_yaml(p)
         if status is None or info["status"] == status:
             yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=info_sha256)
