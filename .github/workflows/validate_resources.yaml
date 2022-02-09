@@ -135,22 +135,22 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: artifacts
-    - run: mkdir dist
+    - run: |
+        mkdir dist
+        mkdir dist/gh-pages-update
     - name: move updated rdfs artifact
       if: inputs.download_updated_rdfs == 'yes'
       run: mv artifacts/updated_rdfs dist/updated_rdfs
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare deployment
-      run: python scripts/deploy_test_summaries.py dist '${{ inputs.pending_matrix }}' artifacts
-    - run: rm -r dist/updated_rdfs
-      if: inputs.download_updated_rdfs == 'yes'
+      run: python scripts/deploy_test_summaries.py dist/gh-pages-update
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2
       with:
         name: preview
-        path: dist
+        path: dist/gh-pages-update
         retention-days: 90
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
@@ -158,4 +158,4 @@ jobs:
       with:
         branch: gh-pages
         clean: false  # Keeping the old files
-        folder: dist
+        folder: dist/gh-pages-update

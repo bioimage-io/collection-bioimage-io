@@ -13,8 +13,8 @@ def get_sub_summary(path: Path):
 
 def main(
     dist: Path,
-    collection: Path,
-    gh_pages: Path,
+    collection: Path = Path(__file__).parent / "../collection",
+    gh_pages: Path = Path(__file__).parent / "../gh-pages",
     artifact_dir: Path = Path(__file__).parent / "../artifacts",  # folder with bioimageio test summary artifacts
     partner_test_summaries: Path = Path(__file__).parent
     / "../partner_test_summaries",  # folder with partner test summaries
