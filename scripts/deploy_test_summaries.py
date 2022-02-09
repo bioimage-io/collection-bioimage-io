@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Optional
 
 import typer
 
@@ -18,8 +19,16 @@ def main(
     artifact_dir: Path = Path(__file__).parent / "../artifacts",  # folder with bioimageio test summary artifacts
     partner_test_summaries: Path = Path(__file__).parent
     / "../partner_test_summaries",  # folder with partner test summaries
+    branch: Optional[str] = None,
 ):
-    for krv in iterate_known_resource_versions(collection=collection, gh_pages=gh_pages, status="accepted"):
+    if branch is not None and branch.startswith("auto-update-"):
+        resource_id_pattern = branch[len("auto-update-") :]
+    else:
+        resource_id_pattern = "**"
+
+    for krv in iterate_known_resource_versions(
+        collection=collection, gh_pages=gh_pages, resource_id=resource_id_pattern, status="accepted"
+    ):
         print(f"updating test summary for {krv.resource_id}/{krv.version_id}")
         previous_test_summary_path = gh_pages / "rdfs" / krv.resource_id / krv.version_id / "test_summary.yaml"
         if previous_test_summary_path.exists():

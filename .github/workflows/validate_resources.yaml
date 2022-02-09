@@ -19,8 +19,7 @@ on:
         default: 'no'
         type: string
       ref:
-        required: false
-        default: ''
+        required: true
         type: string
 
 jobs:
@@ -140,7 +139,7 @@ jobs:
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare deployment
-      run: python scripts/deploy_test_summaries.py dist/gh-pages-update
+      run: python scripts/deploy_test_summaries.py dist/gh-pages-update --branch ${{ inputs.ref }}
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2

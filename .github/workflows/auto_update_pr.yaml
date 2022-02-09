@@ -41,6 +41,7 @@ jobs:
       check_validation: 'yes'
       download_updated_rdfs: 'yes'
       deploy_to: 'preview'
+      ref: ${{ github.event.pull_request.head.ref }}
 
   delete-bot-comments:
     runs-on: ubuntu-latest
