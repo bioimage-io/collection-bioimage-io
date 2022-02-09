@@ -77,6 +77,16 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: ${{ inputs.ref }}
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: download updated rdfs
+      if: inputs.download_updated_rdfs == 'yes'
+      uses: actions/download-artifact@v2
+      with:
+        name: updated_rdfs
+        path: dist/updated_rdfs
     - name: download environment.yaml
       uses: actions/download-artifact@v2
       with:
@@ -95,7 +105,7 @@ jobs:
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.version_id }}${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
-      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.rdf_path }} ${{ matrix.weight_format }}
+      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
     - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
@@ -125,11 +135,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: artifacts
+    - run: mkdir dist
     - name: move updated rdfs artifact
       if: inputs.download_updated_rdfs == 'yes'
-      run: |
-        mkdir dist
-        mv artifacts/updated_rdfs dist/updated_rdfs
+      run: mv artifacts/updated_rdfs dist/updated_rdfs
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare deployment
