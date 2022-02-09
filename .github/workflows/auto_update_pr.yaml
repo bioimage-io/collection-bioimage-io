@@ -42,12 +42,12 @@ jobs:
       download_updated_rdfs: 'yes'
       deploy_to: 'preview'
 
-  hide-comments:
+  delete-bot-comments:
     runs-on: ubuntu-latest
     steps:
-    - uses: kanga333/comment-hider@master
-      name: Hide bot comments
+    - uses: izhangzhihao/delete-comment@master
       continue-on-error: true  # there might not be a comment yet
       with:
         github_token: ${{ secrets.PAT }}
-        hide_user_name: bioimageiobot
+        delete_user_name: bioimageiobot
+        issue_number: ${{ github.event.number }}
