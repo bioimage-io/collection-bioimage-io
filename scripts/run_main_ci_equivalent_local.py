@@ -30,6 +30,7 @@ def end_of_step(always_continue: bool):
 
 def main(
     collection: Path = Path(__file__).parent / "../collection",
+    last_collection: Path = Path(__file__).parent / "../last_ci_run/collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
     dist: Path = Path(__file__).parent / "../dist",
     artifacts: Path = Path(__file__).parent / "../artifacts",
@@ -46,6 +47,10 @@ def main(
     if not gh_pages.exists():
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
+
+    if not last_collection.exists():
+        subprocess.run(["git", "worktree", "prune"], check=True)
+        subprocess.run(["git", "worktree", "add", "--detach", str(last_collection), "last_collection"], check=True)
 
     ###################################
     # update resources (resource infos)
@@ -68,7 +73,9 @@ def main(
     #################################
     # update rdfs (resource versions)
     #################################
-    pending = update_rdfs_script(dist=dist, collection=collection, gh_pages=gh_pages, branch=None)
+    pending = update_rdfs_script(
+        dist=dist, collection=collection, last_collection=last_collection, gh_pages=gh_pages, branch=None
+    )
 
     print("\npending (updated):")
     pprint(pending)
@@ -85,7 +92,7 @@ def main(
         pending_matrix=json.dumps(
             dict(
                 include=pending["pending_matrix"].get("include", [])
-                + pending["pending_matrix_only_bioimageio"].get("include", [])
+                + pending["pending_matrix_bioimageio"].get("include", [])
             )
         ),
     )
