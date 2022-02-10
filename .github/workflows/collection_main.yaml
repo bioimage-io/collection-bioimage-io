@@ -116,7 +116,11 @@ jobs:
         clean: false
         branch: gh-pages
         folder: dist
-
+    - name: tag main commit
+      uses: hole19/git-tag-action@master
+      env:
+        TAG: last_ci_run
+        GITHUB_TOKEN: ${{ secrets.PAT }}
 
   open-pr:
     needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel

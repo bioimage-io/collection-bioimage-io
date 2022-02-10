@@ -239,6 +239,7 @@ class KnownResource:
     path: Path
     info: Dict[str, Any]
     info_sha256: Optional[str]  # None if from partner
+    partner_resource: bool
 
 
 @dataclasses.dataclass
@@ -261,12 +262,14 @@ def iterate_known_resources(
 ) -> Generator[KnownResource, None, None]:
     for p in sorted((gh_pages / "partner_collection").glob(f"{resource_id}/resource.yaml")):
         info = yaml.load(p)
-        yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=None)
+        yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=None, partner_resource=True)
 
     for p in sorted(collection.glob(f"{resource_id}/resource.yaml")):
         info_sha256, info = get_sha256_and_yaml(p)
         if status is None or info["status"] == status:
-            yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=info_sha256)
+            yield KnownResource(
+                resource_id=info["id"], path=p, info=info, info_sha256=info_sha256, partner_resource=False
+            )
 
 
 def iterate_known_resource_versions(
