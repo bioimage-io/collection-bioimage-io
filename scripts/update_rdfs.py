@@ -1,5 +1,6 @@
+from collections import defaultdict
 from pathlib import Path
-from typing import Optional
+from typing import Dict, List, Optional
 
 import typer
 
@@ -14,6 +15,9 @@ def dict_eq_wo_keys(a: dict, b: dict, *ignore_keys):
     a_filtered = {k: v for k, v in a.items() if k not in ignore_keys}
     b_filtered = {k: v for k, v in b.items() if k not in ignore_keys}
     return a_filtered == b_filtered
+
+
+PARTNERS_TEST_TYPES: Dict[str, List[str]] = dict(ilastik=["model"])
 
 
 def main(
@@ -58,7 +62,7 @@ def main(
             updated_resource_info = True
             old_r_info = {"versions": []}
 
-        versions_only_reeval = []
+        limited_reeval = defaultdict(list)
         if updated_resource_info:
             updated_versions = write_rdfs_for_resource(resource=r.info, dist=dist)
         else:
@@ -72,39 +76,47 @@ def main(
                 rdf_path = gh_pages / "rdfs" / r.resource_id / version_id / "rdf.yaml"
                 test_summary_path = rdf_path.with_name("test_summary.yaml")
 
-                version_has_update = True
-                version_needs_reeval = True  # because of bioimageio library update
                 if rdf_path.exists() and test_summary_path.exists():
                     # check if version info has changed
                     matching_old_versions = [
                         old_v for old_v in old_r_info["versions"] if old_v["version_id"] == version_id
                     ]
                     version_has_update = not matching_old_versions or matching_old_versions[0] != v
-                    if version_has_update:
+                    if not version_has_update:
                         # check bioimageio library versions in test summary
                         test_summary = yaml.load(test_summary_path)
                         if "bioimageio" in test_summary:
                             last_spec_version = test_summary["bioimageio"].get("spec_version")
                             last_core_version = test_summary["bioimageio"].get("core_version")
-                            version_needs_reeval = (
-                                last_spec_version != spec_version or last_core_version != core_version
-                            )
+                            if last_spec_version != spec_version or last_core_version != core_version:
+                                limited_reeval["bioimageio"].append(version_id)
+
+                        # check if partner test is present if it should be
+                        for partner_id, partner_val_types in PARTNERS_TEST_TYPES.items():
+                            if partner_id not in test_summary:
+                                if r.info.get("type", "general") in partner_val_types:
+                                    limited_reeval[partner_id].append(version_id)
+                else:
+                    version_has_update = True
 
                 if version_has_update:
                     updated_versions.append(version_id)
-                elif version_needs_reeval:
-                    versions_only_reeval.append(version_id)
 
         for v_id in updated_versions:
             entry = {"resource_id": r.resource_id, "version_id": v_id}
+            include_pending_bioimageio.append(dict(entry))
+            entry["partner_id"] = "all"
             include_pending.append(entry)
-            include_pending_bioimageio.append(entry)
 
-        for v_id in versions_only_reeval:
+        for v_id in limited_reeval.pop("bioimageio"):
             entry = {"resource_id": r.resource_id, "version_id": v_id}
             include_pending_bioimageio.append(entry)
 
-        if len(include_pending_bioimageio) > 100:
+        for partner_id, v_id in limited_reeval.items():
+            entry = {"resource_id": r.resource_id, "version_id": v_id, "partner_id": partner_id}
+            include_pending.append(entry)
+
+        if len(include_pending_bioimageio) > 100 or any(len(pnr) > 100 for pnr in limited_reeval.values()):
             retrigger = True
             break
 

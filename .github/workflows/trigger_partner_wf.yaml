@@ -7,7 +7,8 @@ on:
         description: json string of gh matrix (to be used with fromJson())
         type: string
         required: false
-        default: '{"include": [{"resource_id": "rid", "version_id": "vid"}]}'
+        default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
+
 
 jobs:
   trigger_partners:
@@ -22,10 +23,12 @@ jobs:
 
     steps:
     - name: escape json matrix string
+      if: matrix.partner_id == 'all' || matrix.partner_id == matrix.owner
       id: escape_json
       run: |
         python -c 'import json;s='"'"'${{ inputs.pending_matrix }}'"'"';print(f"::set-output name=escaped::{json.dumps(s)}")'
     - name: trigger ${{ matrix.owner }}
+      if: matrix.partner_id == 'all' || matrix.partner_id == matrix.owner
       uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: validate BioImage.IO resources

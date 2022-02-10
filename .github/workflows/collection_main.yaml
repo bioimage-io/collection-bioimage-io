@@ -91,7 +91,7 @@ jobs:
     if: needs.update-rdfs.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.update-rdfs.outputs.pending }}
+      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix }}
 
   build-collection:  # deploy collection rdf to gh-pages
     needs: [update-resources, update-rdfs, validate]
