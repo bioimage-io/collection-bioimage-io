@@ -8,7 +8,7 @@ on:
     - cron:  '0 1,13 * * *'
   workflow_dispatch: # triggered by http endpoints
   workflow_run:
-    workflows: [post-PR]
+    workflows: ["post-PR", "Reset partner test summaries"]
     types: [completed]
 
 jobs:

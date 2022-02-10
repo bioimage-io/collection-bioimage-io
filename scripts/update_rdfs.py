@@ -108,7 +108,7 @@ def main(
             entry["partner_id"] = "all"
             include_pending.append(entry)
 
-        for v_id in limited_reeval.pop("bioimageio"):
+        for v_id in limited_reeval.pop("bioimageio", []):
             entry = {"resource_id": r.resource_id, "version_id": v_id}
             include_pending_bioimageio.append(entry)
 
