@@ -18,7 +18,7 @@ jobs:
         include:
         - owner: ilastik
           repo: bioimage-io-resources
-          workflow: validate_bioimageio_resources.yaml
+          workflow: test_bioimageio_resources.yaml
 
     steps:
     - name: escape json matrix string
