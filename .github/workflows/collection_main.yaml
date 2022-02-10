@@ -58,6 +58,10 @@ jobs:
         ref: main
     - uses: actions/checkout@v2
       with:
+        ref: last_ci_run
+        path: last_ci_run
+    - uses: actions/checkout@v2
+      with:
         ref: gh-pages
         path: gh-pages
     - name: install script deps

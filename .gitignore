@@ -1,9 +1,10 @@
 .DS_Store
+__pycache__
 artifacts
 dist
 gh-pages
+last_ci_run
 partner_test_summaries
-__pycache__
 
 # local env files
 .env.local

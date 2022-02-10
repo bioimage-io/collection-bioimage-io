@@ -13,6 +13,7 @@ from utils import iterate_known_resources, write_rdfs_for_resource
 def main(
     dist: Path = Path(__file__).parent / "../dist",
     collection: Path = Path(__file__).parent / "../collection",
+    last_collection: Path = Path(__file__).parent / "../last_ci_run/collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
     branch: Optional[str] = None,
 ):
@@ -21,6 +22,7 @@ def main(
     Args:
         dist: output folder
         collection: collection directory that holds resources as <resource_id>/resource.yaml
+        last_collection: collection directory at commit of last successful main ci run
         gh_pages: directory with gh-pages checked out
         branch: (used in auto-update PR) If branch is 'auto-update-{resource_id} it is used to get resource_id
                 and limit the update process to that resource.
