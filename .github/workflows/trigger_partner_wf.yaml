@@ -24,6 +24,7 @@ jobs:
 
     steps:
     - name: debug partner_id ${{ inputs.partner_id }} matrix.partner_id ${{ matrix.partner_id }}
+      run: echo debug partner_id ${{ inputs.partner_id }} matrix.partner_id ${{ matrix.partner_id }}
     - name: escape json matrix string
       if: inputs.partner_id == 'all' || inputs.partner_id == matrix.partner_id
       id: escape_json
