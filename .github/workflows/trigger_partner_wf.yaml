@@ -9,7 +9,6 @@ on:
         required: false
         default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
 
-
 jobs:
   trigger_partners:
     runs-on: ubuntu-latest
@@ -23,15 +22,17 @@ jobs:
           workflow: test_bioimageio_resources.yaml
 
     steps:
-    - name: debug partner_id ${{ inputs.partner_id }} matrix.partner_id ${{ matrix.partner_id }}
-      run: echo debug partner_id ${{ inputs.partner_id }} matrix.partner_id ${{ matrix.partner_id }}
+    - name: find partner ids
+      id: prep
+      run: |
+        python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print("::set-output name=partner_ids::{list(set([ic["partner_id"] for ic in incl]))}")'
     - name: escape json matrix string
-      if: inputs.partner_id == 'all' || inputs.partner_id == matrix.partner_id
+      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       id: escape_json
       run: |
         python -c 'import json;s='"'"'${{ inputs.pending_matrix }}'"'"';print(f"::set-output name=escaped::{json.dumps(s)}")'
     - name: trigger ${{ matrix.partner_id }}
-      if: inputs.partner_id == 'all' || inputs.partner_id == matrix.partner_id
+      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: validate BioImage.IO resources
