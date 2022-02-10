@@ -25,7 +25,7 @@ jobs:
     - name: find partner ids
       id: prep
       run: |
-        python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print("::set-output name=partner_ids::{list(set([ic["partner_id"] for ic in incl]))}")'
+        python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print(f"::set-output name=partner_ids::{list(set([ic['"'"'partner_id'"'"'] for ic in incl]))}")'
     - name: escape json matrix string
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       id: escape_json
