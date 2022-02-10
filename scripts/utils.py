@@ -248,8 +248,9 @@ class KnownResourceVersion:
     resource_id: str
     version_id: str
     info: Dict[str, Any]
-    rdf: Path
+    rdf: dict
     rdf_sha256: Optional[str]
+    rdf_path: Path
 
 
 def get_sha256_and_yaml(p: Path):
@@ -283,7 +284,7 @@ def iterate_known_resource_versions(
                 v_id = v_info["version_id"]
                 rdf_path = gh_pages / "rdfs" / known_r.resource_id / v_id / "rdf.yaml"
                 if rdf_path.exists():
-                    rdf_sha256, rdf = get_sha256_and_yaml(rdf_path)
+                    rdf_sha256, rdf = get_sha256_and_yaml(rdf_path)  # todo: do we really need to load rdf?
                     yield KnownResourceVersion(
                         resource=known_r,
                         resource_id=known_r.resource_id,
@@ -291,6 +292,7 @@ def iterate_known_resource_versions(
                         info=v_info,
                         rdf=rdf,
                         rdf_sha256=rdf_sha256,
+                        rdf_path=rdf_path,
                     )
                 else:
                     warnings.warn(f"skipping undeployed r: {known_r.resource_id} v: {v_id}")

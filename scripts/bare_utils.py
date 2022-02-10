@@ -1,3 +1,4 @@
+"""standard lib only utils"""
 import hashlib
 import json
 import os
