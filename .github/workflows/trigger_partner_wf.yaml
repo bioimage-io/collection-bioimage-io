@@ -19,7 +19,7 @@ jobs:
         - partner_id: ilastik
           owner: ilastik
           repo: bioimage-io-resources
-          workflow: test_bioimageio_resources.yaml
+          workflow: test BioImage.IO resources
 
     steps:
     - name: find partner ids
@@ -35,7 +35,7 @@ jobs:
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       uses: benc-uk/workflow-dispatch@v1
       with:
-        workflow: test BioImage.IO resources
+        workflow: ${{ matrix.workflow }}
         repo: ${{ matrix.owner }}/${{ matrix.repo }}
         token: ${{ secrets.PAT }}
         inputs: '{"pending_matrix": ${{ steps.escape_json.outputs.escaped }}}'
