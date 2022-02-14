@@ -26,16 +26,15 @@ jobs:
       id: prep
       run: |
         python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print(f"::set-output name=partner_ids::{list(set([ic['"'"'partner_id'"'"'] for ic in incl]))}")'
-    - name: escape json matrix string
+    - name: debug partner ids
+      run: echo '${{ steps.prep.outputs.partner_ids }}'
+    - name: install script deps
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-      id: escape_json
-      run: |
-        python -c 'import json;s='"'"'${{ inputs.pending_matrix }}'"'"';print(f"::set-output name=escaped::{json.dumps(s)}")'
+      run: pip install typer PyGithub
     - name: trigger ${{ matrix.partner_id }}
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-      uses: benc-uk/workflow-dispatch@v1
-      with:
-        workflow: ${{ matrix.workflow }}
-        repo: ${{ matrix.owner }}/${{ matrix.repo }}
-        token: ${{ secrets.PAT }}
-        inputs: '{"pending_matrix": ${{ steps.escape_json.outputs.escaped }}}'
+      run: python scripts/trigger_partner_wf.py '${{ inputs.pending_matrix }}' --owner ${{ matrix.owner }}
+    - name: gh or?
+      run: |
+        echo '1 ${{ matrix.nothing || matrix.partner_id }}'
+        echo '2 ${{ matrix.owner || matrix.partner_id }}'
