@@ -83,7 +83,7 @@ jobs:
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.version_id }}${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
-      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --
+      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
     - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
@@ -120,7 +120,7 @@ jobs:
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare deployment
-      run: python scripts/deploy_test_summaries.py dist/gh-pages-update --branch ${{ inputs.ref }}
+      run: python scripts/deploy_test_summaries.py dist/gh-pages-update --branch ${{ github.ref_name }}
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2
