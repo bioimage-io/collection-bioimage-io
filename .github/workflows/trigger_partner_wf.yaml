@@ -22,6 +22,7 @@ jobs:
           workflow: test BioImage.IO resources
 
     steps:
+    - uses: actions/checkout@v2
     - name: find partner ids
       id: prep
       run: |
