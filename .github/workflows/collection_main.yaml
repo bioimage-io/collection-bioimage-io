@@ -21,7 +21,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: main
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
     - name: install script deps
       run: pip install requests typer bioimageio.spec lxml
@@ -54,8 +53,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: main
     - uses: actions/checkout@v2
       with:
         ref: last_ci_run
@@ -84,7 +81,6 @@ jobs:
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix_bioimageio }}
-      ref: main
 
   trigger-partner-validation:
     needs: update-rdfs
@@ -100,8 +96,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: main
     - uses: actions/checkout@v2
       with:
         ref: gh-pages
@@ -134,8 +128,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: main
     - name: download new collection
       uses: actions/download-artifact@v2
       with:
