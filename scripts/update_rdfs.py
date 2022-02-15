@@ -100,7 +100,9 @@ def main(
                     version_has_update = True
 
                 if version_has_update:
-                    updated_versions.append(version_id)
+                    updated_versions += write_rdfs_for_resource(
+                        resource=r.info, dist=dist, only_for_version_id=version_id
+                    )
 
         for v_id in updated_versions:
             entry = {"resource_id": r.resource_id, "version_id": v_id}

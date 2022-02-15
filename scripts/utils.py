@@ -133,14 +133,24 @@ def resolve_partners(
     return partners, updated_partner_resources, new_partner_hashes, ignored_partners
 
 
-def write_rdfs_for_resource(resource: dict, dist: Path) -> List[str]:
-    """write updated version rdfs for the given resource to dist"""
+def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Optional[str] = None) -> List[str]:
+    """write updated version rdfs for the given resource to dist
+
+    Args:
+        resource: resource info
+        dist: output path
+        version_id: (if not None) only write rdf for specific version
+
+    Returns: list of updated version_ids
+
+    """
     from imjoy_plugin_parser import get_plugin_as_rdf
 
     resource_id = resource["id"]
     updated_versions = []
     for version_info in resource["versions"]:
-        if version_info["status"] == "blocked":
+        version_id = version_info["version_id"]
+        if version_info["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
             continue
 
         # Ignore the name in the version info
@@ -188,8 +198,6 @@ def write_rdfs_for_resource(resource: dict, dist: Path) -> List[str]:
                 rdf["config"]["bioimageio"][k] = version_info[k]
             else:
                 rdf[k] = version_info[k]
-
-        version_id = version_info["version_id"]
 
         if "rdf_source" in rdf and isinstance(rdf["rdf_source"], dict):
             del rdf["rdf_source"]
