@@ -50,7 +50,7 @@ def main(
 
     if not last_collection.exists():
         subprocess.run(["git", "worktree", "prune"], check=True)
-        subprocess.run(["git", "worktree", "add", "--detach", str(last_collection), "last_collection"], check=True)
+        subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
 
     ###################################
     # update resources (resource infos)
