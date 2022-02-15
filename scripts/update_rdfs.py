@@ -112,9 +112,10 @@ def main(
             entry = {"resource_id": r.resource_id, "version_id": v_id}
             include_pending_bioimageio.append(entry)
 
-        for partner_id, v_id in limited_reeval.items():
-            entry = {"resource_id": r.resource_id, "version_id": v_id, "partner_id": partner_id}
-            include_pending.append(entry)
+        for partner_id, v_ids in limited_reeval.items():
+            for v_id in v_ids:
+                entry = {"resource_id": r.resource_id, "version_id": v_id, "partner_id": partner_id}
+                include_pending.append(entry)
 
         if len(include_pending_bioimageio) > 100 or any(len(pnr) > 100 for pnr in limited_reeval.values()):
             retrigger = True
