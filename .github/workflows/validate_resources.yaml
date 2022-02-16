@@ -21,7 +21,6 @@ on:
 
 jobs:
   static-validation:  # + update rdfs
-    needs: update-rdfs
     runs-on: ubuntu-latest
     outputs:
       pending_matrix: ${{ steps.update_rdfs.outputs.pending_matrix }}
