@@ -179,8 +179,8 @@ def main(
     dist: Path,
     pending_matrix: str,
     rdf_dirs: List[Path] = (
-        Path(__file__).parent / "../gh-pages/rdfs",
         Path(__file__).parent / "../dist/updated_rdfs/rdfs",
+        Path(__file__).parent / "../gh-pages/rdfs",
     ),
 ):
     dynamic_test_cases = []

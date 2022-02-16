@@ -3,56 +3,65 @@ name: validate resources
 on:
   workflow_call:
     inputs:
-      pending_matrix:
-        required: true
-        type: string
       check_validation:
-        required: false
-        default: 'no'
+        description: "if 'yes' fail ci on test fail"
+        required: true
         type: string
       deploy_to:  # may contain 'gh-pages' and/or 'preview'
         required: false
-        default: 'gh-pages'
+        default: ''
         type: string
-      download_updated_rdfs:  # download artifact 'updated_rdfs' to dist/updated_rdfs
-        required: false
-        default: 'no'
-        type: string
+    outputs:
+      pending_matrix:
+        description: "resources pending partner testing"
+        value: ${{ jobs.static-validation.outputs.pending_matrix }}
+      has_pending_matrix:
+        description: "yes/no if pending resources exist"
+        value: ${{ jobs.static-validation.outputs.has_pending_matrix }}
 
 jobs:
-  static-validation:
+  static-validation:  # + update rdfs
+    needs: update-rdfs
     runs-on: ubuntu-latest
     outputs:
-      has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
+      pending_matrix: ${{ steps.update_rdfs.outputs.pending_matrix }}
+      has_pending_matrix: ${{ steps.update_rdfs.outputs.has_pending_matrix }}
       dynamic_test_cases: ${{ steps.static_validation.outputs.dynamic_test_cases }}
+      has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/checkout@v2
       with:
+        ref: last_ci_run
+        path: last_ci_run
+    - uses: actions/checkout@v2
+      with:
         ref: gh-pages
         path: gh-pages
-    - name: download updated rdfs
-      if: inputs.download_updated_rdfs == 'yes'
-      uses: actions/download-artifact@v2
-      with:
-        name: updated_rdfs
-        path: dist/updated_rdfs
     - name: install script deps
-      run: pip install typer bioimageio.spec
+      run: pip install typer bioimageio.spec lxml bioimageio.core
+    - name: update RDFs
+      id: update_rdfs
+      run: python scripts/update_rdfs.py
+    - name: check pending versions limit
+      if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
+      run: |
+        echo "::error file=scripts/update_rdfs.py,line=99,endline=100,title=Cannot retrigger in PR::Exceeding version validation limit"
+        exit 1
     - name: static validation
+      if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       id: static_validation
-      run: python scripts/static_validation.py dist/static_validation_artifact '${{ inputs.pending_matrix }}'
-    - name: debug has_dynamic_test_cases ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
-      run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
+      run: python scripts/static_validation.py dist/static_validation_artifact '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
     - name: Upload static validation summaries and conda envs
+      if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       uses: actions/upload-artifact@v2
       with:
         name: static_validation_artifact
         path: dist/static_validation_artifact
         retention-days: 1
     - name: check if validation passed
-      if: inputs.check_validation == 'yes'
+      if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes' && inputs.check_validation == 'yes'
       run: python scripts/check_validation_passed.py dist/static_validation_artifact
 
   dynamic-validation:
@@ -97,7 +106,7 @@ jobs:
       run: python scripts/check_validation_passed.py dist/dynamic_validation_artifacts/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
 
   deploy:
-    needs: [static-validation, dynamic-validation]
+    needs: dynamic-validation
     if: always()
     runs-on: ubuntu-latest
 
@@ -111,16 +120,11 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: artifacts
-    - run: |
-        mkdir dist
-        mkdir dist/gh-pages-update
-    - name: move updated rdfs artifact
-      if: inputs.download_updated_rdfs == 'yes'
-      run: mv artifacts/updated_rdfs dist/updated_rdfs
+    # todo: checkout partner gh-pages for their test summaries
     - name: install script deps
       run: pip install typer bioimageio.spec
-    - name: prepare deployment
-      run: python scripts/deploy_test_summaries.py dist/gh-pages-update --branch ${{ github.ref_name }}
+    - name: prepare to deploy
+      run: python scripts/prepare_to_deploy.py dist/gh-pages-update --branch ${{ github.ref_name }}
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2

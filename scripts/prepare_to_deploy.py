@@ -1,3 +1,4 @@
+import shutil
 from pathlib import Path
 from typing import Optional
 
@@ -21,6 +22,7 @@ def main(
     / "../partner_test_summaries",  # folder with partner test summaries
     branch: Optional[str] = None,
 ):
+    dist.mkdir(parents=True, exist_ok=True)
     if branch is not None and branch.startswith("auto-update-"):
         resource_id_pattern = branch[len("auto-update-") :]
     else:
@@ -29,6 +31,14 @@ def main(
     for krv in iterate_known_resource_versions(
         collection=collection, gh_pages=gh_pages, resource_id=resource_id_pattern, status="accepted"
     ):
+        static_validation_artifact_dir = artifact_dir / "static_validation_artifact"
+        updated_rdf_path = static_validation_artifact_dir / krv.resource_id / krv.version_id / "rdf.yaml"
+        if updated_rdf_path.exists():
+            # write updated rdf to dist
+            updated_rdf_deploy_path = dist / updated_rdf_path.relative_to(static_validation_artifact_dir)
+            updated_rdf_deploy_path.parent.mkdir(exist_ok=True, parents=True)
+            shutil.copy(str(updated_rdf_path), str(updated_rdf_deploy_path))
+
         print(f"updating test summary for {krv.resource_id}/{krv.version_id}")
         previous_test_summary_path = gh_pages / "rdfs" / krv.resource_id / krv.version_id / "test_summary.yaml"
         if previous_test_summary_path.exists():
@@ -43,10 +53,9 @@ def main(
 
         # if a static validation summary exists in the artifact, update bioimageio test summaries
         static_validation_summaries = sorted(
-            artifact_dir.glob(
-                f"static_validation_artifact/{krv.resource_id}/{krv.version_id}/validation_summary_*static.yaml"
-            )
+            static_validation_artifact_dir.glob(f"{krv.resource_id}/{krv.version_id}/validation_summary_*static.yaml")
         )
+
         print("static_validation_summaries", static_validation_summaries)
         if static_validation_summaries:
             # reset bioimageio test summaries
@@ -60,6 +69,7 @@ def main(
                 test_summary["tests"]["bioimageio"].append(sub_summary)
                 spec_versions.add(sub_summary.get("bioimageio_spec_version"))
                 success &= sub_summary.get("status") == "passed"
+
             print(
                 "dyn sums",
                 sorted(
@@ -94,12 +104,12 @@ def main(
             test_summary["status"] = "passed" if success else "failed"
 
         # update partner test summaries (blindly)
-        # remove partner test summaries
+        #   remove partner test summaries
         test_summary["tests"] = (
             {"bioimageio": test_summary["tests"]["bioimageio"]} if "bioimageio" in test_summary["tests"] else {}
         )
 
-        # set partner test summaries
+        #   set partner test summaries
         if partner_test_summaries.exists():
             for partner_folder in partner_test_summaries.iterdir():
                 assert partner_folder.is_dir()

@@ -21,7 +21,7 @@ PARTNERS_TEST_TYPES: Dict[str, List[str]] = dict(ilastik=["model"])
 
 
 def main(
-    dist: Path = Path(__file__).parent / "../dist",
+    dist: Path = Path(__file__).parent / "../dist/updated_rdfs",
     collection: Path = Path(__file__).parent / "../collection",
     last_collection: Path = Path(__file__).parent / "../last_ci_run/collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
@@ -42,6 +42,8 @@ def main(
         resource_id_pattern = branch[len("auto-update-") :]
     else:
         resource_id_pattern = "**"
+
+    dist.mkdir(parents=True, exist_ok=True)
 
     retrigger = False
     include_pending = []  # update to rdf version

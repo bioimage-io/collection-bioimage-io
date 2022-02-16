@@ -1,4 +1,4 @@
-name: build collection and generate auto-update PRs
+name: update collection
 concurrency: main  # do not run this workflow in parallel
 
 on:
@@ -17,6 +17,7 @@ jobs:
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
       found_new_resources: ${{ steps.update_external.outputs.found_new_resources }}
+      deploy_to: ${{ steps.get_deploy_to.outputs.deploy_to }}
 
     steps:
     - uses: actions/checkout@v2
@@ -36,39 +37,20 @@ jobs:
     - run: rm -r dist
     - name: update partner resources
       run: python scripts/update_partner_resources.py
+    - name: determine where to deploy to  # in pr: preview; otherwise (on main): gh-pages
+      id: deploy_to
+      run: |
+        if [[ -n '${{ github.event.pull_request.head.ref }}' ]]; then deploy_to=preview; else deploy_to=gh-pages; fi
+        echo "::set-output name=deploy_to:$deploy_to"
+    - name: Upload preview of updated partner resources
+      if: contains( steps.get_deploy_to.outputs.deploy_to, 'preview')
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview-partner-resources
+        path: dist
+        retention-days: 90
     - name: Deploy updated partner resources to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
-      with:
-        clean: false
-        branch: gh-pages
-        folder: dist
-
-  update-rdfs:
-    runs-on: ubuntu-latest
-    outputs:
-      pending_matrix: ${{ steps.pending.outputs.pending_matrix }}
-      has_pending_matrix: ${{ steps.pending.outputs.has_pending_matrix }}
-      pending_matrix_bioimageio: ${{ steps.pending.outputs.pending_matrix_bioimageio }}
-      has_pending_matrix_bioimageio: ${{ steps.pending.outputs.has_pending_matrix_bioimageio }}
-
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
-      with:
-        ref: last_ci_run
-        path: last_ci_run
-    - uses: actions/checkout@v2
-      with:
-        ref: gh-pages
-        path: gh-pages
-    - name: install script deps
-      run: pip install typer bioimageio.spec lxml bioimageio.core
-    - run: mkdir dist  # make sure dist folder exists for deployment step
-    - name: update resource rdfs
-      id: pending
-      run: python scripts/update_rdfs.py  # todo: retrigger main ci if outputs.retrigger == 'yes'; maybe no need for this due to retrigger after partner validation?
-    - name: Deploy updated rdfs to gh-pages 🚀
-      if: steps.pending.outputs.has_pending_matrix_bioimageio == 'yes'
+      if: contains( steps.get_deploy_to.outputs.deploy_to, 'gh-pages')
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
@@ -76,15 +58,16 @@ jobs:
         folder: dist
 
   validate:
-    needs: update-rdfs
+    needs: update-resources
     if: needs.update-rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix_bioimageio }}
+      check_validation: 'no'
+      deploy_to: 'gh-pages'
 
   trigger-partner-validation:
-    needs: update-rdfs
-    if: needs.update-rdfs.outputs.has_pending_matrix == 'yes'
+    needs: validate
+    if: needs.validate.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix }}
@@ -121,7 +104,7 @@ jobs:
     if: always() && needs.update-resources.outputs.found_new_resources == 'yes'
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 1  # to limit content creation (PRs) on github to avoid getting temporary blocked
+      max-parallel: 1  # to limit content creation (PRs) on GitHub to avoid getting temporary blocked
       fail-fast: false
       # matrix: update: [{resource_id:..., resource_name:..., new_version_ids:..., new_version_sources:..., maintainers: ...}, ...]
       matrix: ${{ fromJson(needs.update-resources.outputs.updated_resources_matrix) }}
@@ -144,6 +127,7 @@ jobs:
       id: pr_urls
       run: python scripts/get_previous_pr_urls.py ${{ matrix.update.resource_id }}
     - name: Create Pull Request
+      if: github.ref_name == 'main'
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
@@ -188,8 +172,10 @@ jobs:
           auto-update
         draft: false
     - name: save PR url
+      if: github.ref_name == 'main'
       run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
     - name: deploy PR url to gh-pages 🚀
+      if: github.ref_name == 'main'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false

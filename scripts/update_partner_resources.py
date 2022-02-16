@@ -13,6 +13,7 @@ def main(
     rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
     current_collection_format: str = "0.2.2",
 ):
+    dist.mkdir(parents=True, exist_ok=True)
     rdf = yaml.load(rdf_template_path)
 
     partner_hashes_path = gh_pages / "partner_collection_hashes.json"

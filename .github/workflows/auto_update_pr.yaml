@@ -5,45 +5,11 @@ on:
     branches: [ main ]
 
 jobs:
-  update-rdfs:
-    runs-on: ubuntu-latest
-    outputs:
-      pending_matrix_bioimageio: ${{ steps.pending.outputs.pending_matrix_bioimageio }}
-      has_pending_matrix_bioimageio: ${{ steps.pending.outputs.has_pending_matrix_bioimageio }}
-
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
-      with:
-        ref: main
-        path: last_ci_run
-    - name: install script deps
-      run: pip install typer bioimageio.spec requests lxml bioimageio.core
-    - name: update rdfs
-      id: pending
-      run: python scripts/update_rdfs.py --branch ${{ github.event.pull_request.head.ref }}
-    - name: debug found pending ${{ steps.pending.outputs.has_pending_matrix_bioimageio }}
-      run: echo ${{ steps.pending.outputs.pending_matrix_bioimageio }}
-    - name: "Upload updated rdfs as 'updated_rdfs'"
-      uses: actions/upload-artifact@v2
-      with:
-        name: updated_rdfs
-        path: dist
-        retention-days: 1
-    - name: check version limit
-      if: steps.pending.outputs.retrigger == 'yes'
-      run: |
-        echo "::error file=scripts/update_rdfs.py,line=99,endline=100,title=Cannot retrigger in PR::Exceeding version validation limit"
-        exit 1
-
   validate:
-    needs: update-rdfs
     if: needs.update-rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix_bioimageio }}
       check_validation: 'yes'
-      download_updated_rdfs: 'yes'
       deploy_to: 'preview'
 
   delete-bot-comments:
