@@ -78,6 +78,7 @@ jobs:
 
   validate:
     needs: update-resources
+    if: always()
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
       check_validation: 'no'
@@ -85,7 +86,7 @@ jobs:
 
   trigger-partner-validation:
     needs: validate
-    if: needs.validate.outputs.has_pending_matrix == 'yes'
+    if: always() && needs.validate.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.validate.outputs.pending_matrix }}
