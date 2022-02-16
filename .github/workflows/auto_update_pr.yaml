@@ -12,12 +12,3 @@ jobs:
       check_validation: 'yes'
       deploy_to: 'preview'
 
-  delete-bot-comments:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: izhangzhihao/delete-comment@master
-      continue-on-error: true  # there might not be a comment yet
-      with:
-        github_token: ${{ secrets.PAT }}
-        delete_user_name: bioimageiobot
-        issue_number: ${{ github.event.number }}

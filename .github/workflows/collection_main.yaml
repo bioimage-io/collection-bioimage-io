@@ -1,18 +1,37 @@
 name: update collection
-concurrency: main  # do not run this workflow in parallel
+concurrency: ${{ github.ref }}  # do not run this workflow in parallel for the same branch (in particular main)
 
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened, closed ]
   schedule:
     - cron:  '0 1,13 * * *'
-  workflow_dispatch: # triggered by http endpoints
-  workflow_run:
-    workflows: ["post-PR", "Reset partner test summaries"]
-    types: [completed]
+  workflow_dispatch:  # triggered by http endpoints (ref should be refs/head/main)
+
 
 jobs:
+  # if an auto-update-pr was closed (and not merged) we delete the branch to detect the resource anew and reopen a new pr
+  # (if any pr was merged the branch is deleted via gh settings)
+  delete-auto-update-branch:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check if remote still exists
+        id: ls-remote
+        run: |
+          out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
+          echo "::set-output name=out::$out"
+      - name: delete PR branch ${{ github.event.pull_request.head.ref }}
+        if: contains(steps.ls-remote.outputs.out, 'auto-update-')  # only delete existing auto-update- branches
+        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
+
   update-resources:
+    needs: delete-auto-update-branch
+    if: always()
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
@@ -59,7 +78,6 @@ jobs:
 
   validate:
     needs: update-resources
-    if: needs.update-rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
       check_validation: 'no'
@@ -70,10 +88,10 @@ jobs:
     if: needs.validate.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
-      pending_matrix: ${{ needs.update-rdfs.outputs.pending_matrix }}
+      pending_matrix: ${{ needs.validate.outputs.pending_matrix }}
 
   build-collection:  # deploy collection rdf to gh-pages
-    needs: [update-resources, update-rdfs, validate]
+    needs: validate
     if: always()
     runs-on: ubuntu-latest
 
@@ -127,7 +145,7 @@ jobs:
       id: pr_urls
       run: python scripts/get_previous_pr_urls.py ${{ matrix.update.resource_id }}
     - name: Create Pull Request
-      if: github.ref_name == 'main'
+      if: github.ref == 'refs/heads/main'
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
@@ -172,10 +190,10 @@ jobs:
           auto-update
         draft: false
     - name: save PR url
-      if: github.ref_name == 'main'
+      if: github.ref == 'refs/heads/main'
       run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
     - name: deploy PR url to gh-pages 🚀
-      if: github.ref_name == 'main'
+      if: github.ref == 'refs/heads/main'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
