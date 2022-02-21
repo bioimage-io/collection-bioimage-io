@@ -14,7 +14,7 @@ from ruamel.yaml import YAML, comments
 from bare_utils import DEPLOYED_BASE_URL
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.io_ import serialize_raw_resource_description
-from bioimageio.spec.shared.utils import resolve_source
+from bioimageio.spec.shared import resolve_source
 
 
 # todo: use MyYAML from bioimageio.spec. see comment below
