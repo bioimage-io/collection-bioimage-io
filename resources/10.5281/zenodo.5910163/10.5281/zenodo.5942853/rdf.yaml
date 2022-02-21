@@ -12,9 +12,6 @@ config:
     doi: 10.5281/zenodo.5942853
     owners: [47882]
     status: accepted
-    test_summary:
-      status: pending
-      tests: []
     version_id: 10.5281/zenodo.5942853
     version_name: revision 1
 covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
