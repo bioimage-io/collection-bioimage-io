@@ -19,6 +19,9 @@ config:
     doi: 10.5281/zenodo.5888237
     owners: [252845]
     status: accepted
+    test_summary:
+      status: pending
+      tests: []
     version_id: 10.5281/zenodo.5888237
     version_name: revision 1
   deepimagej:
