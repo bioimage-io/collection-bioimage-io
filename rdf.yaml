@@ -1162,6 +1162,18 @@ collection:
   source: https://fiji.sc/
   tags: [fiji, software]
   type: application
+- authors:
+  - {affiliation: MDC Berlin, name: Deborah Schmidt}
+  covers: ['https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png']
+  description: Demo model for denoising trained on a single SEM image with Noise2Void
+  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+  id: fiji/N2VSEMDemo
+  license: BSD-3-Clause
+  links: [fiji/Fiji]
+  name: N2V SEM Demo
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/fiji/N2VSEMDemo/latest/rdf.yaml
+  tags: [denoising, unet2d, n2v]
+  type: model
 - authors: []
   badges: []
   covers: []
@@ -1413,22 +1425,6 @@ collection:
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
   type: model
 - authors:
-  - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/input.png',
-    'https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/output.png']
-  description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
-    images of pancreatic stem cells on a 2D polystyrene substrate.
-  id: 10.5281/zenodo.5914248
-  license: BSD-2-Clause
-  links: [imjoy/BioImageIO-Packager]
-  name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
-  owners: [147356]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5914248/10.5281/zenodo.5914249/rdf.yaml
-  tags: [deepimagej, pancreatic-stem-cells, segmentation, phase-contrast, unet, neubias,
-    cell-tracking-challenge, 2d, tensorflow]
-  type: model
-- authors:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
@@ -1439,20 +1435,6 @@ collection:
   owners: [47882]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5910163/10.5281/zenodo.5942853/rdf.yaml
   tags: [classification, densenet-121, hpa, onnx, cells, protein-localization]
-  type: model
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/cover.png']
-  description: Cell segmentation for immunofluorescence microscopy.
-  id: 10.5281/zenodo.5847355
-  license: CC-BY-4.0
-  links: [ilastik/covid_if_training_data, ilastik/ilastik, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
-  name: CovidIFCellSegmentationBoundaryModel
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5847355/10.5281/zenodo.5874728/rdf.yaml
-  tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence,
-    instance-segmentation]
   type: model
 - authors:
   - {name: Constantin Pape}
@@ -1468,17 +1450,17 @@ collection:
     3d, affinity-prediction]
   type: model
 - authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/cover.png']
-  description: Nucleus segmentation for fluorescence microscopy
-  id: 10.5281/zenodo.5764892
+  - {name: Constantin Pape; @constantinpape}
+  covers: ['https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png']
+  description: Cell segmentation in EM of platynereis.
+  id: 10.5281/zenodo.6028280
   license: CC-BY-4.0
-  links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
+  links: [deepimagej/deepimagej, ilastik/platynereis_em_training_data, ilastik/ilastik,
     imjoy/BioImageIO-Packager]
-  name: NucleiSegmentationBoundaryModel
+  name: PlatynereisEMcellsSegmentationBoundaryModel
   owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5764892/10.5281/zenodo.5764893/rdf.yaml
-  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.6028280/10.5281/zenodo.6028281/rdf.yaml
+  tags: [unet, cells, instance-segmentation, electron-microscopy, platynereis]
   type: model
 - authors:
   - {affiliation: '', name: ZeroCostDL4Mic team}
@@ -1501,8 +1483,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 14}
-  n_resources: {application: 47, collection: 17, dataset: 33, model: 11}
+  n_resource_versions: {application: 47, collection: 17, dataset: 33, model: 12}
+  n_resources: {application: 47, collection: 17, dataset: 33, model: 10}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
