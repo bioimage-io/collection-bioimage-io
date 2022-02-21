@@ -1494,8 +1494,8 @@ collection:
   name: Neurons segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
   owners: [271523]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/resources/10.5281/zenodo.5817052/10.5281/zenodo.5906839/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge,
-    mitochondria, bondary-segmentation, 2d]
+  tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
+    neurons, brain, boundary-segmentation, 2d]
   type: model
 config:
   background_image: static/img/zoo-background.svg

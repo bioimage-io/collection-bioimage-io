@@ -68,8 +68,8 @@ outputs:
 rdf_source: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/rdf.yaml
 sample_inputs: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/sample_input_0.tif']
 sample_outputs: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/sample_output_0.tif']
-tags: [zerocostdl4mic, deepimagej, segmentation, tem, unet, isbi2012-challenge, mitochondria,
-  bondary-segmentation, 2d]
+tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
+  neurons, brain, boundary-segmentation, 2d]
 test_inputs: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_input.npy']
 test_outputs: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_output.npy']
 timestamp: '2021-12-09T15:03:20.680270'
