@@ -1,0 +1,9 @@
+doi: 10.5281/zenodo.6200999
+id: 10.5281/zenodo.6200999
+owners: [240881]
+status: accepted
+type: model
+versions:
+- {created: '2022-02-21 10:58:25.147491', doi: 10.5281/zenodo.6201000, name: HPA Nuclei
+    Segmentation (DPNUnet), rdf_source: 'https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/rdf.yaml',
+  status: accepted, version_id: 10.5281/zenodo.6201000, version_name: revision 1}
