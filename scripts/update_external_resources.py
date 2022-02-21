@@ -129,8 +129,11 @@ def update_from_zenodo(
                 except Exception as e:
                     print(f"Failed to obtain version name: {e}")
 
+            # remove (sandbox.)zenodo prefix from version doi
+            version_id = doi.replace("10.5281/zenodo.", "").replace("10.5281/zenodo.", "")
+
             new_version = {
-                "version_id": doi,
+                "version_id": version_id,
                 "doi": doi,
                 "owners": hit["owners"],
                 "created": str(created),
@@ -144,7 +147,7 @@ def update_from_zenodo(
                 resource_id=resource_doi,
                 resource_type=resource_type,
                 resource_doi=resource_doi,
-                version_id=doi,
+                version_id=version_id,
                 new_version=new_version,
                 resource_output_path=resource_output_path,
             )
