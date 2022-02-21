@@ -175,7 +175,8 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
             except Exception as e:
                 warnings.warn(f"Failed to interpret {version_info['rdf_source']} as rdf: {e}")
                 try:
-                    rdf = resolve_source(version_info["rdf_source"])
+                    rdf_path = resolve_source(version_info["rdf_source"])
+                    rdf = yaml.load(rdf_path)
                     if not isinstance(rdf, dict):
                         raise TypeError(type(rdf))
                 except Exception as e:
