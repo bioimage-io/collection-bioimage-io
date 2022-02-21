@@ -206,6 +206,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         if "owners" in resource:
             rdf["config"]["bioimageio"]["owners"] = resource["owners"]
 
+        rdf["id"] = f"{resource_id}/{version_id}"
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
 
         updated_versions.append(version_id)
