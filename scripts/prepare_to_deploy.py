@@ -34,8 +34,8 @@ def main(
         static_validation_artifact_dir = artifact_dir / "static_validation_artifact"
         updated_rdf_path = static_validation_artifact_dir / krv.resource_id / krv.version_id / "rdf.yaml"
         if updated_rdf_path.exists():
-            # write updated rdf to dist
-            updated_rdf_deploy_path = dist / updated_rdf_path.relative_to(static_validation_artifact_dir)
+            # write updated rdf to dist/rdfs
+            updated_rdf_deploy_path = dist / "rdfs" / updated_rdf_path.relative_to(static_validation_artifact_dir)
             updated_rdf_deploy_path.parent.mkdir(exist_ok=True, parents=True)
             shutil.copy(str(updated_rdf_path), str(updated_rdf_deploy_path))
 

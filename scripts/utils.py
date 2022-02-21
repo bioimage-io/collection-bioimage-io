@@ -154,7 +154,8 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
             continue
 
         # Ignore the name in the version info
-        del version_info["name"]
+        if "name" in version_info:
+            del version_info["name"]
 
         if isinstance(version_info["rdf_source"], dict):
             if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
