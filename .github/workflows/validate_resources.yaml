@@ -79,6 +79,8 @@ jobs:
         name: static_validation_artifact
         path: dist/static_validation_artifact
     - name: install validation dependencies
+      id: create_env
+      continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
@@ -86,12 +88,15 @@ jobs:
         channel-priority: strict
         activate-environment: ${{ matrix.env_name }}
         environment-file: dist/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+    - name: install minimal script deps
+      if: steps.create_env.outcome != 'success'
+      run: pip install typer bioimageio.spec
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.version_id }}${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
-      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
+      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }}
     - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
@@ -99,6 +104,7 @@ jobs:
         path: dist/dynamic_validation_artifacts/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
     - name: install script deps
+      if: steps.create_env.outcome == 'success'
       run: pip install typer bioimageio.spec
     - name: check if validation passed
       if: inputs.check_validation == 'yes'

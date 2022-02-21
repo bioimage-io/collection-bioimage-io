@@ -3,13 +3,7 @@ from typing import List, Optional
 
 import typer
 
-from bioimageio.core.resource_tests import test_resource
 from bioimageio.spec.shared import yaml
-
-try:
-    from typing import get_args
-except ImportError:
-    from typing_extensions import get_args  # type: ignore
 
 
 def main(
@@ -18,6 +12,7 @@ def main(
     version_id: str,
     weight_format: Optional[str] = typer.Argument(..., help="weight format to test model with."),
     rdf_dirs: List[Path] = (Path(__file__).parent / "../dist/static_validation_artifact",),
+    create_env_outcome: str = "success",
 ):
     if weight_format is None:
         # no dynamic tests for non-model resources...
@@ -30,9 +25,20 @@ def main(
     else:
         raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
 
-    summary = test_resource(rdf_path, weight_format=weight_format)
-    if "name" not in summary:  # todo: remove, summaries of the future always have a name
-        summary["name"] = "reproduced test outputs from test inputs"
+    if create_env_outcome == "success":
+        from bioimageio.core.resource_tests import test_resource
+
+        summary = test_resource(rdf_path, weight_format=weight_format)
+        if "name" not in summary:  # todo: remove, summaries of the future always have a name
+            summary["name"] = "reproduced test outputs from test inputs"
+    else:
+        env_path = dist / "static_validation_artifact" / resource_id / version_id / f"conda_env_{weight_format}.yaml"
+        if env_path.exists():
+            error = "Failed to install conda environment:\n" + env_path.read_text()
+        else:
+            error = f"Conda environment yaml file not found: {env_path}"
+
+        summary = dict(name="install test environment", status="failed", error=error)
 
     summary_path = dist / resource_id / version_id / weight_format / f"validation_summary_{weight_format}.yaml"
     summary_path.parent.mkdir(parents=True, exist_ok=True)
