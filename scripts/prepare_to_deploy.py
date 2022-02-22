@@ -17,7 +17,8 @@ def main(
     dist: Path,
     collection: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
-    artifact_dir: Path = Path(__file__).parent / "../artifacts",  # folder with bioimageio test summary artifacts
+    artifact_dir: Path = Path(__file__).parent
+    / "../artifacts",  # folder with bioimageio test summary artifacts and updated rdfs
     partner_test_summaries: Path = Path(__file__).parent
     / "../partner_test_summaries",  # folder with partner test summaries
     branch: Optional[str] = None,
@@ -28,17 +29,20 @@ def main(
     else:
         resource_id_pattern = "**"
 
+    # copy updated rdfs to gh_pages/rdfs (to iterate over below) and to dist/rdfs (to be deployed to gh-pages)
+    static_validation_artifact_dir = artifact_dir / "static_validation_artifact"
+    for updated_rdf_path in static_validation_artifact_dir.glob(f"{resource_id_pattern}/*/rdf.yaml"):
+        updated_rdf_gh_pages_path = gh_pages / "rdfs" / updated_rdf_path.relative_to(static_validation_artifact_dir)
+        updated_rdf_gh_pages_path.parent.mkdir(exist_ok=True, parents=True)
+        shutil.copy(str(updated_rdf_path), str(updated_rdf_gh_pages_path))
+
+        updated_rdf_deploy_path = dist / "rdfs" / updated_rdf_path.relative_to(static_validation_artifact_dir)
+        updated_rdf_deploy_path.parent.mkdir(exist_ok=True, parents=True)
+        shutil.move(str(updated_rdf_path), str(updated_rdf_deploy_path))
+
     for krv in iterate_known_resource_versions(
         collection=collection, gh_pages=gh_pages, resource_id=resource_id_pattern, status="accepted"
     ):
-        static_validation_artifact_dir = artifact_dir / "static_validation_artifact"
-        updated_rdf_path = static_validation_artifact_dir / krv.resource_id / krv.version_id / "rdf.yaml"
-        if updated_rdf_path.exists():
-            # write updated rdf to dist/rdfs
-            updated_rdf_deploy_path = dist / "rdfs" / updated_rdf_path.relative_to(static_validation_artifact_dir)
-            updated_rdf_deploy_path.parent.mkdir(exist_ok=True, parents=True)
-            shutil.copy(str(updated_rdf_path), str(updated_rdf_deploy_path))
-
         print(f"updating test summary for {krv.resource_id}/{krv.version_id}")
         previous_test_summary_path = gh_pages / "rdfs" / krv.resource_id / krv.version_id / "test_summary.yaml"
         if previous_test_summary_path.exists():
