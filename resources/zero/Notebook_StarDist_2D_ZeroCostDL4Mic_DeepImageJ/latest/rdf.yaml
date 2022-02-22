@@ -11,13 +11,7 @@ cite:
     MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30'}
 config:
   background_image: static/img/zoo-background.svg
-  bioimageio:
-    status: accepted
-    test_summary:
-      status: pending
-      tests: []
-    version_id: latest
-    version_name: latest
+  bioimageio: {status: accepted, version_id: latest, version_name: latest}
   default_type: application
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
