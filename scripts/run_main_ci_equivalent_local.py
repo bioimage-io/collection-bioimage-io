@@ -48,7 +48,7 @@ def main(
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
 
-    if not last_collection.exists():
+    if not last_collection.parent.exists():
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
 

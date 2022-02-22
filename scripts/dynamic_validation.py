@@ -1,3 +1,4 @@
+import traceback
 from pathlib import Path
 from typing import List, Optional
 
@@ -26,11 +27,19 @@ def main(
         raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
 
     if create_env_outcome == "success":
-        from bioimageio.core.resource_tests import test_resource
-
-        summary = test_resource(rdf_path, weight_format=weight_format)
-        if "name" not in summary:  # todo: remove, summaries of the future always have a name
-            summary["name"] = "reproduced test outputs from test inputs"
+        try:
+            from bioimageio.core.resource_tests import test_resource
+        except Exception as e:
+            summary = dict(
+                name="import test_resource from test environment",
+                status="failed",
+                error=str(e),
+                traceback=traceback.format_tb(e.__traceback__),
+            )
+        else:
+            summary = test_resource(rdf_path, weight_format=weight_format)
+            if "name" not in summary:  # todo: remove, summaries of the future always have a name
+                summary["name"] = "reproduced test outputs from test inputs"
     else:
         env_path = dist / "static_validation_artifact" / resource_id / version_id / f"conda_env_{weight_format}.yaml"
         if env_path.exists():
