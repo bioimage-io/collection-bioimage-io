@@ -52,6 +52,12 @@ def main(
         subprocess.run(["git", "worktree", "prune"], check=True)
         subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
 
+    if dist.exists():
+        shutil.rmtree(str(dist))
+
+    if artifacts.exists():
+        shutil.rmtree(str(artifacts))
+
     ###################################
     # update resources (resource infos)
     ###################################
