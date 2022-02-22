@@ -5,7 +5,13 @@ cite:
     Content-aware image restoration for electron microscopy. Methods in Cell Biology,
     Volume 152 p.277-289, ISSN 0091-679X (2019)'}
 config:
-  bioimageio: {status: accepted, version_id: latest, version_name: latest}
+  bioimageio:
+    status: accepted
+    test_summary:
+      status: pending
+      tests: []
+    version_id: latest
+    version_name: latest
   fiji: {batchDimLength: 180, batchSize: 64, neighborhoodRadius: 5, numEpochs: 100,
     numStepsPerEpoch: 300, patchDimLength: 60, stepsFinished: 30000, trainDimensions: 2}
 covers: ['https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png']
