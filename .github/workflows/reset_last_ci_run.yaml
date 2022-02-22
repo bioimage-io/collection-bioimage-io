@@ -1,0 +1,14 @@
+name: Reset last_ci_run tag
+
+on: workflow_dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: b440f5c1dfdfc3eddb4d07e919ff2dd44c7aa710
+    - run: |
+        git tag --force last_ci_run
+        git push --force origin last_ci_run
