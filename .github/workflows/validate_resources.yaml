@@ -81,6 +81,7 @@ jobs:
     - name: install validation dependencies
       id: create_env
       continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
+      timeout-minutes: 30
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
@@ -96,6 +97,7 @@ jobs:
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.version_id }}${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
+      timeout-minutes: 30
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }}
     - name: Upload validation summary
       uses: actions/upload-artifact@v2
