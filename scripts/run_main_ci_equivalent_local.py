@@ -80,7 +80,11 @@ def main(
     # update rdfs (resource versions)
     #################################
     pending = update_rdfs_script(
-        dist=dist, collection=collection, last_collection=last_collection, gh_pages=gh_pages, branch=None
+        dist=dist / "updated_rdfs",
+        collection=collection,
+        last_collection=last_collection,
+        gh_pages=gh_pages,
+        branch=None,
     )
 
     print("\npending (updated):")
@@ -99,6 +103,7 @@ def main(
                 + pending["pending_matrix_bioimageio"].get("include", [])
             )
         ),
+        rdf_dirs=[dist / "updated_rdfs/rdfs", gh_pages / "rdfs"],
     )
     print("\nstatic validation:")
     pprint(static_out)
