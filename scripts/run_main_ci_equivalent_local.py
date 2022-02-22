@@ -147,6 +147,8 @@ def main(
     generate_collection_rdf_script(collection=collection, dist=dist)
 
     fake_deploy(dist, gh_pages)
+    if pending["retrigger"]:
+        print("incomplete collection update. needs additional run(s).")
 
 
 if __name__ == "__main__":
