@@ -55,6 +55,12 @@ def main(
     ###################################
     # update resources (resource infos)
     ###################################
+    updates = update_external_resources_script(collection=collection)
+    print("would open auto-update PRs with:")
+    pprint(updates)
+
+    fake_deploy(dist, collection)  # in CI done via PRs
+
     update_partner_resources_script(
         dist=dist,
         gh_pages=gh_pages,
@@ -62,12 +68,6 @@ def main(
         current_collection_format=current_collection_format,
     )
     fake_deploy(dist, gh_pages)
-
-    updates = update_external_resources_script(collection=collection)
-    print("would open auto-update PRs with:")
-    pprint(updates)
-
-    fake_deploy(dist, collection)
 
     end_of_step(always_continue)
     #################################
@@ -79,8 +79,6 @@ def main(
 
     print("\npending (updated):")
     pprint(pending)
-
-    fake_deploy(dist, gh_pages)
 
     end_of_step(always_continue)
     ############################
