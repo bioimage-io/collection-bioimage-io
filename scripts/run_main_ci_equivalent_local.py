@@ -53,9 +53,11 @@ def main(
         subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
 
     if dist.exists():
+        print(f"rm dist {dist}")
         shutil.rmtree(str(dist))
 
     if artifacts.exists():
+        print(f"rm artifacts {artifacts}")
         shutil.rmtree(str(artifacts))
 
     ###################################
@@ -120,7 +122,7 @@ def main(
             dist=artifacts / "dynamic_validation_artifacts",
             resource_id=matrix["resource_id"],
             version_id=matrix["version_id"],
-            rdf_dirs=[gh_pages / "rdfs"],
+            rdf_dirs=[artifacts / "static_validation_artifact"],
             weight_format=matrix["weight_format"],
         )
 
