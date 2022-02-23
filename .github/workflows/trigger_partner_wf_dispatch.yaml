@@ -7,7 +7,7 @@ on:
         description: json string of gh matrix (to be used with fromJson())
         type: string
         required: false
-        default: '{"include": [{"partner_id": "ilastik", "owner": "ilastik", "repo": "bioimage-io-resources", "workflow": "test_bioimageio_resources.yaml"}]}'
+        default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
 
 jobs:
   impl:
