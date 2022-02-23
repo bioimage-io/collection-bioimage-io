@@ -18,7 +18,8 @@ def main(
     g = Github(login_or_token=pat)
     repo = g.get_repo(f"{owner}/{repo}")
     wf = repo.get_workflow(workflow)
-    wf.create_dispatch(ref, inputs=inputs)
+    success = wf.create_dispatch(ref, inputs=inputs)
+    print("success" if success else "failed")
 
 
 if __name__ == "__main__":
