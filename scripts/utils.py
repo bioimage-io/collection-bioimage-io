@@ -8,6 +8,7 @@ from itertools import product
 from pathlib import Path
 from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
+from boltons.iterutils import remap
 from marshmallow import missing
 from ruamel.yaml import YAML, comments
 
@@ -133,6 +134,15 @@ def resolve_partners(
     return partners, updated_partner_resources, new_partner_hashes, ignored_partners
 
 
+def sort_visit(p, k, v):
+    if isinstance(v, dict):
+        return {kk: v[kk] for kk in sorted(v)}
+    elif isinstance(v, (list, tuple)):
+        return type(v)(sorted(v))
+    else:
+        return True
+
+
 def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Optional[str] = None) -> List[str]:
     """write updated version rdfs for the given resource to dist
 
@@ -209,6 +219,9 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
         rdf["id"] = f"{resource_id}/{version_id}"
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
+
+        # sort rdf
+        rdf = remap(rdf, visit=sort_visit)
 
         updated_versions.append(version_id)
         rdf_deploy_path = dist / "rdfs" / resource_id / version_id / "rdf.yaml"
