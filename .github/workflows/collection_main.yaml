@@ -43,7 +43,7 @@ jobs:
       with:
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
     - name: install script deps
-      run: pip install requests typer bioimageio.spec lxml
+      run: pip install requests typer bioimageio.spec lxml boltons
     - name: update external resources
       id: update_external
       run: python scripts/update_external_resources.py --max-resource-count 15
