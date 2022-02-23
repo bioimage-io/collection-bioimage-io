@@ -57,7 +57,7 @@ jobs:
     - name: update partner resources
       run: python scripts/update_partner_resources.py
     - name: determine where to deploy to  # in pr: preview; otherwise (on main): gh-pages
-      id: deploy_to
+      id: get_deploy_to
       run: |
         if [[ -n '${{ github.event.pull_request.head.ref }}' ]]; then deploy_to=preview; else deploy_to=gh-pages; fi
         echo "::set-output name=deploy_to:$deploy_to"
