@@ -11,6 +11,6 @@ on:
 
 jobs:
   impl:
-    uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf_impl.yaml@main  # todo: change orga to bioimage-io
+    uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ github.event.inputs.pending_matrix }}
