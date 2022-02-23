@@ -141,6 +141,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - run: mkdir dist
+    - run: cp gh-pages/pr_urls.json dist
+      continue-on-error: true
     - name: download new collection
       uses: actions/download-artifact@v2
       with:
