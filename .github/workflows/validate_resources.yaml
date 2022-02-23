@@ -42,7 +42,7 @@ jobs:
       run: pip install typer bioimageio.spec lxml bioimageio.core
     - name: update RDFs
       id: update_rdfs
-      run: python scripts/update_rdfs.py
+      run: python scripts/update_rdfs.py --branch ${{ github.ref_name }}
     - name: check pending versions limit
       if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
       run: |
