@@ -58,9 +58,14 @@ jobs:
       run: python scripts/update_partner_resources.py
     - name: determine where to deploy to  # in pr: preview; otherwise (on main): gh-pages
       id: get_deploy_to
+      shell: python
       run: |
-        if [[ -n '${{ github.event.pull_request.head.ref }}' ]]; then deploy_to=preview; else deploy_to=gh-pages; fi
-        echo "::set-output name=deploy_to:$deploy_to"
+        if "${{ github.event_name }}" == "pull_request" and "${{ github.event.action }}" != "closed":
+          deploy_to = preview
+        else:
+          deploy_to = gh-pages
+
+        print(f"::set-output name=deploy_to:{deploy_to}")
     - name: Upload preview of updated partner resources
       if: contains( steps.get_deploy_to.outputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2
