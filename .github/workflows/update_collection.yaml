@@ -13,6 +13,7 @@ on:
 
 jobs:
   update-resources:
+    if: !startsWith(github.ref_name, 'auto-update-')
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
@@ -25,11 +26,9 @@ jobs:
     - name: install script deps
       run: pip install requests typer bioimageio.spec lxml
     - name: update external resources
-      if: github.event_name != 'pull_request'
       id: update_external
       run: python scripts/update_external_resources.py --max-resource-count 15
     - name: "Upload collection update"
-      if: github.event_name != 'pull_request'
       uses: actions/upload-artifact@v2
       with:
         name: collection-update
@@ -62,7 +61,7 @@ jobs:
 
   trigger-partner-validation:
     needs: validate
-    if: needs.validate.outputs.has_pending_matrix == 'yes'
+    if: github.event_name != 'pull_request' && needs.validate.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.validate.outputs.pending_matrix }}
@@ -106,7 +105,7 @@ jobs:
 
   open-pr:
     needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
-    if: needs.update-resources.outputs.found_new_resources == 'yes'
+    if: !startsWith(github.ref_name, 'auto-update-') && needs.update-resources.outputs.found_new_resources == 'yes'
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1  # to limit content creation (PRs) on GitHub to avoid getting temporary blocked
@@ -139,7 +138,7 @@ jobs:
       id: pr_urls
       run: python scripts/get_previous_pr_urls.py ${{ matrix.update.resource_id }}
     - name: Create Pull Request
-      if: github.ref == 'refs/heads/main'
+      if: github.event_name != 'pull_request'
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
@@ -187,7 +186,7 @@ jobs:
       if: github.ref == 'refs/heads/main'
       run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
     - name: deploy PR url to gh-pages 🚀
-      if: github.ref == 'refs/heads/main'
+      if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
