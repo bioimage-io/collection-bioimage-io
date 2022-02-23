@@ -23,5 +23,5 @@ jobs:
       uses: octokit/request-action@v2.x
       with:
         route: POST /repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+        token: ${{ secrets.PAT }}
         ref: refs/heads/main
