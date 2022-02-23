@@ -34,15 +34,18 @@ jobs:
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       shell: python
       run: |
-        import json
-
         import requests
 
-        inp = json.dumps({"pending_matrix": '${{ inputs.pending_matrix }}'})
         r = requests.post(
           "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
-          headers={"Accept": "application/vnd.github.v3+json", "Authorization": "token ${{ secrets.PAT }}"},
-          data={"ref": "refs/heads/main", "inputs": inp},
+          headers=dict(
+            Accept="application/vnd.github.v3+json",
+            Authorization="token ${{ secrets.PAT }}",
+          ),
+          json=dict(
+            ref="refs/heads/main",
+            inputs=dict(pending_matrix='${{ inputs.pending_matrix }}'),
+          ),
         )
         r.raise_for_status()
 
