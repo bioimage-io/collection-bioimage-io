@@ -164,7 +164,6 @@ def prepare_dynamic_test_cases(
                     "resource_id": resource_id,
                     "version_id": version_id,
                     "weight_format": wf,
-                    "rdf_path": str(rdf_in_artifact_path),
                 }
             )
     elif isinstance(rd, RDF):

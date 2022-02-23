@@ -67,7 +67,7 @@ jobs:
       pending_matrix: ${{ needs.validate.outputs.pending_matrix }}
 
   build-collection:  # deploy collection.json
-    needs: [update-resources, validate]
+    needs: validate
     runs-on: ubuntu-latest
 
     steps:

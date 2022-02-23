@@ -33,19 +33,8 @@ jobs:
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       uses: octokit/request-action@v2.x
       with:
-        route: POST  /repos/${{ matrix.owner || matrix.partner_id }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
+        route: POST  /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
         ref: main
         pending_matrix: '${{ inputs.pending_matrix }}'
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
-#    - name: install script deps
-#      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-#      run: pip install typer PyGithub
-#    - name: trigger ${{ matrix.partner_id }}
-#      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-#      env:
-#        PAT: ${{ secrets.PAT }}
-#      run: python scripts/trigger_partner_wf.py '${{ inputs.pending_matrix }}' --owner  --repo ${{ matrix.repo }} --workflow '${{ matrix.workflow }}'
-    - name: debug
-      run: |
-        echo '1 ${{ matrix.nothing || 'my string' }}'
