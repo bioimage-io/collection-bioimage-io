@@ -113,10 +113,13 @@ jobs:
         branch: gh-pages
         folder: dist
     - name: tag main commit
-      uses: hole19/git-tag-action@master
-      env:
-        TAG: last_ci_run
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+    - run: |
+        curl \
+        -X POST \
+        -H "Accept: application/vnd.github.v3+json" \
+        https://api.github.com/repos/fynnbe/collection-bioimage-io/git/refs \
+        -d '{"ref":"refs/tags/last_ci_run","sha":"${{ github.sha }}"}'
+
 
   open-pr:
     needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
