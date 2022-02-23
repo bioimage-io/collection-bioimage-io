@@ -1,4 +1,5 @@
 import json
+import shutil
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
@@ -92,9 +93,6 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
-    rdf_path = dist / "rdf.yaml"
-    rdf_path.parent.mkdir(exist_ok=True)
-    yaml.dump(rdf, rdf_path)
 
     def convert_for_json(p, k, v):
         """convert anything not json compatible"""
@@ -109,9 +107,13 @@ def main(
 
         return True
 
+    rdf_path = dist / "collection.json"
     rdf = remap(rdf, convert_for_json)
-    with open(rdf_path.with_suffix(".json"), "w") as f:
+    rdf_path.parent.mkdir(exist_ok=True)
+    with open(rdf_path, "w") as f:
         json.dump(rdf, f, allow_nan=False, indent=2, sort_keys=True)
+
+    shutil.copy(str(rdf_path), str(rdf_path.with_name("rdf.json")))  # deprecated; todo: remove
 
 
 if __name__ == "__main__":
