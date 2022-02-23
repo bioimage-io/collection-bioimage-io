@@ -82,17 +82,17 @@ jobs:
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
       check_validation: 'no'
-      deploy_to: 'gh-pages'
+      deploy_to: ${{ needs.update-resources.outputs.deploy_to }}
 
   trigger-partner-validation:
     needs: validate
-    if: always() && needs.validate.outputs.has_pending_matrix == 'yes'
+    if: always() && github.event_name != 'pull_request' && needs.validate.outputs.has_pending_matrix == 'yes'
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.validate.outputs.pending_matrix }}
 
-  build-collection:  # deploy collection rdf to gh-pages
-    needs: validate
+  build-collection:  # deploy collection.json
+    needs: [update-resources, validate]
     if: always()
     runs-on: ubuntu-latest
 
@@ -106,19 +106,29 @@ jobs:
       run: pip install typer bioimageio.spec boltons lxml requests
     - name: generate collection rdf
       run: python scripts/generate_collection_rdf.py
+    - name: Upload preview of collection.json
+      if: contains( needs.update-resources.outputs.deploy_to, 'preview')
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview-final-collection
+        path: dist
+        retention-days: 90
     - name: Deploy collection rdf to gh-pages 🚀
+      if: contains( needs.update-resources.outputs.deploy_to, 'gh-pages')
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
         branch: gh-pages
         folder: dist
-    - name: tag main commit
-    - run: |
+    - name: update last_ci_run tag
+      if: contains( needs.update-resources.outputs.deploy_to, 'gh-pages')
+      run: |
         curl \
         -X POST \
         -H "Accept: application/vnd.github.v3+json" \
-        https://api.github.com/repos/fynnbe/collection-bioimage-io/git/refs \
-        -d '{"ref":"refs/tags/last_ci_run","sha":"${{ github.sha }}"}'
+        -H "Authorization: token ${{ secrets.PAT }}" \
+        ${{ github.api_url }}/repos/${{ github.repository }}/git/refs/tags/last_ci_run \
+        -d '{"sha":"${{ github.sha }}"}'
 
 
   open-pr:

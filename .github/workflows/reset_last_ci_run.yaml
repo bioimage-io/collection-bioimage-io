@@ -6,11 +6,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - name: github.api_url
-      run: echo ${{ github.api_url }}
     - run: |
         curl \
         -X POST \
         -H "Accept: application/vnd.github.v3+json" \
-        https://api.github.com/repos/fynnbe/collection-bioimage-io/git/refs \
+        -H "Authorization: token ${{ secrets.PAT }}" \
+        ${{ github.api_url }}/repos/${{ github.repository }}/git/refs \
         -d '{"ref":"refs/tags/last_ci_run","sha":"b440f5c1dfdfc3eddb4d07e919ff2dd44c7aa710"}'
