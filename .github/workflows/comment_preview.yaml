@@ -11,6 +11,8 @@ jobs:
     name: comment links to previews in pull request
     runs-on: windows-2019
     steps:
+      - name: debug ref_name
+        run: echo ${{ github.ref_name }}
       - uses: tonyhallett/artifacts-url-comments@v1.1.0
         env:
             GITHUB_TOKEN: ${{ secrets.PAT }}

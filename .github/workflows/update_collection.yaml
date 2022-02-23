@@ -61,9 +61,9 @@ jobs:
       shell: python
       run: |
         if "${{ github.event_name }}" == "pull_request" and "${{ github.event.action }}" != "closed":
-          deploy_to = preview
+          deploy_to = "preview"
         else:
-          deploy_to = gh-pages
+          deploy_to = "gh-pages"
 
         print(f"::set-output name=deploy_to:{deploy_to}")
     - name: Upload preview of updated partner resources
