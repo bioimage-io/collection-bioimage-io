@@ -9,6 +9,9 @@ on:
         required: false
         default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
 
+env:
+  GITHUB_TOKEN: ${{ secrets.PAT }}
+
 jobs:
   trigger_partners:
     runs-on: ubuntu-latest
@@ -32,8 +35,9 @@ jobs:
     - name: trigger ${{ matrix.partner_id }}
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       uses: octokit/request-action@v2.x
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
         route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
-        token: ${{ secrets.PAT }}
         ref: refs/heads/main
         pending_matrix: '${{ inputs.pending_matrix }}'
