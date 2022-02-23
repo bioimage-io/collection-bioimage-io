@@ -19,13 +19,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
 
-
-    - name: delete tag last_ci_run
-      uses: octokit/request-action@v2.x
-      with:
-        route: DELETE /repos/${{ github.repository }}/git/refs/tags/last_ci_run
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+#    - name: delete tag last_ci_run
+#      uses: octokit/request-action@v2.x
+#      with:
+#        route: DELETE /repos/${{ github.repository }}/git/refs/tags/last_ci_run
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.PAT }}
     - name: reset gh-pages
       uses: octokit/request-action@v2.x
       with:
@@ -34,11 +33,20 @@ jobs:
         force: true
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
-    - name: set tag last_ci_run
+
+    - name: reset tag last_ci_run
       uses: octokit/request-action@v2.x
       with:
-        route: POST /repos/${{ github.repository }}/git/refs
-        ref: refs/tags/last_ci_run
-        sha: 'b440f5c1dfdfc3eddb4d07e919ff2dd44c7aa710'
+        route: POST /repos/${{ github.repository }}/git/refs/tags/last_ci_run
+        sha: '389b803e1637dd9720ec93cf5d6ca8f8bd5eadf0'
+        force: true
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
+#    - name: set tag last_ci_run
+#      uses: octokit/request-action@v2.x
+#      with:
+#        route: POST /repos/${{ github.repository }}/git/refs
+#        ref: refs/tags/last_ci_run
+#        sha: '389b803e1637dd9720ec93cf5d6ca8f8bd5eadf0'
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.PAT }}
