@@ -1,4 +1,4 @@
-name: Trigger partner workflows vis dispatch
+name: Trigger partner workflows via dispatch
 
 on:
   workflow_dispatch:
