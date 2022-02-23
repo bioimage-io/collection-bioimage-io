@@ -9,7 +9,7 @@ jobs:
     - name: reset gh-pages
       uses: octokit/request-action@v2.x
       with:
-        route: POST /repos/${{ github.repository }}/git/refs/head/gh-pages
+        route: POST /repos/${{ github.repository }}/git/refs/heads/gh-pages
         sha: '67cd99e400dc6e776e628c201299edae0734f2ff'
         force: true
       env:
