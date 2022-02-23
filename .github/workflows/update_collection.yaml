@@ -105,7 +105,7 @@ jobs:
 
   open-pr:
     needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
-    if: ${{ !startsWith(github.ref_name, 'auto-update-') && needs.update-resources.outputs.found_new_resources == 'yes' }}
+    if: ${{ (!startsWith(github.ref_name, 'auto-update-')) && needs.update-resources.outputs.found_new_resources == 'yes' }}
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1  # to limit content creation (PRs) on GitHub to avoid getting temporary blocked
@@ -114,6 +114,11 @@ jobs:
       matrix: ${{ fromJson(needs.update-resources.outputs.updated_resources_matrix) }}
 
     steps:
+    - name: debug !startsWith(github.ref_name, 'auto-update-')
+      run: |
+        echo github.ref_name  ${{ github.ref_name }}
+        echo startsWith(github.ref_name, 'auto-update-')  ${{ startsWith(github.ref_name, 'auto-update-') }}
+        echo !startsWith(github.ref_name, 'auto-update-')  ${{ !startsWith(github.ref_name, 'auto-update-') }}
     - uses: actions/checkout@v2
     - uses: actions/checkout@v2
       with:
