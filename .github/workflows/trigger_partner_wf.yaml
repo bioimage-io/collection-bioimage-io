@@ -33,14 +33,18 @@ jobs:
     - name: trigger ${{ matrix.partner_id }}
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       shell: python
+      env:
+        PAT: ${{ secrets.PAT }}
       run: |
+        import os
+
         import requests
 
         r = requests.post(
           "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
           headers=dict(
             Accept="application/vnd.github.v3+json",
-            Authorization="token ${{ secrets.PAT }}",
+            Authorization=f"token { os.environ['PAT'] }",
           ),
           json=dict(
             ref="refs/heads/main",
