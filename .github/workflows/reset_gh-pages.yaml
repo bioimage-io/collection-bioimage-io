@@ -3,19 +3,21 @@ name: Reset gh-pages
 on: workflow_dispatch
 
 jobs:
-  run:
+  reset-gh-pages:
     runs-on: ubuntu-latest
     steps:
-    - name: reset gh-pages
-      uses: octokit/request-action@v2.x
+    - uses: octokit/request-action@v2.x
       with:
         route: POST /repos/${{ github.repository }}/git/refs/heads/gh-pages
         sha: '67cd99e400dc6e776e628c201299edae0734f2ff'
         force: true
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
-    - name: reset tag last_ci_run
-      uses: octokit/request-action@v2.x
+
+  reset-tag-last_ci_run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: octokit/request-action@v2.x
       with:
         route: POST /repos/${{ github.repository }}/git/refs/tags/last_ci_run
         sha: 'b440f5c1dfdfc3eddb4d07e919ff2dd44c7aa710'
