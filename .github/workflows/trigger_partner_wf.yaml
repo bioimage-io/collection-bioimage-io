@@ -35,8 +35,7 @@ jobs:
       with:
         route: POST  /repos/${{ matrix.owner || matrix.partner_id }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
         ref: main
-        inputs:
-          pending_matrix: '${{ inputs.pending_matrix }}'
+        pending_matrix: '${{ inputs.pending_matrix }}'
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
 #    - name: install script deps
