@@ -13,7 +13,7 @@ on:
 
 jobs:
   update-resources:
-    if: !startsWith(github.ref_name, 'auto-update-')
+    if: ${{ !startsWith(github.ref_name, 'auto-update-') }}
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
@@ -105,7 +105,7 @@ jobs:
 
   open-pr:
     needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
-    if: !startsWith(github.ref_name, 'auto-update-') && needs.update-resources.outputs.found_new_resources == 'yes'
+    if: ${{ !startsWith(github.ref_name, 'auto-update-') && needs.update-resources.outputs.found_new_resources == 'yes' }}
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1  # to limit content creation (PRs) on GitHub to avoid getting temporary blocked
