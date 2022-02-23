@@ -29,12 +29,24 @@ jobs:
         python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print(f"::set-output name=partner_ids::{list(set([ic['"'"'partner_id'"'"'] for ic in incl]))}")'
     - name: debug partner ids
       run: echo '${{ steps.prep.outputs.partner_ids }}'
+    - run: pip install requests
     - name: trigger ${{ matrix.partner_id }}
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-      uses: octokit/request-action@v2.x
-      env:
-        GITHUB_TOKEN: ${{secrets.PAT}}
-      with:
-        route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
-        ref: refs/heads/main
-        pending_matrix: '${{ inputs.pending_matrix }}'
+      shell: python
+      run: |
+        import requests
+
+        inp = {"pending_matrix": '${{ inputs.pending_matrix }}'}
+        r = requests.post(
+          "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
+          data={"ref": "refs/heads/main", "inputs": inp}
+        )
+        r.raise_for_status()
+
+#      uses: octokit/request-action@v2.x
+#      env:
+#        GITHUB_TOKEN: ${{secrets.PAT}}
+#      with:
+#        route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
+#        ref: refs/heads/main
+#        pending_matrix: '${{ inputs.pending_matrix }}'
