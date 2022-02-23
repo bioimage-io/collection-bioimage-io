@@ -16,8 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
-      found_new_resources: ${{ steps.update_external.outputs.found_new_resources }}
-      deploy_to: ${{ steps.get_deploy_to.outputs.deploy_to }}
+      found_new_resources: ${{ steps.update_external.outputs.found_new_resources || 'no' }}
 
     steps:
     - uses: actions/checkout@v2
@@ -26,9 +25,11 @@ jobs:
     - name: install script deps
       run: pip install requests typer bioimageio.spec lxml
     - name: update external resources
+      if: github.event_name != 'pull_request'
       id: update_external
       run: python scripts/update_external_resources.py --max-resource-count 15
     - name: "Upload collection update"
+      if: github.event_name != 'pull_request'
       uses: actions/upload-artifact@v2
       with:
         name: collection-update
@@ -37,25 +38,15 @@ jobs:
     - run: rm -r dist
     - name: update partner resources
       run: python scripts/update_partner_resources.py
-    - name: determine where to deploy to  # in pr: preview; otherwise (on main): gh-pages
-      id: get_deploy_to
-      shell: python
-      run: |
-        if "${{ github.event_name }}" == "pull_request" and "${{ github.event.action }}" != "closed":
-          deploy_to = "preview"
-        else:
-          deploy_to = "gh-pages"
-
-        print(f"::set-output name=deploy_to:{deploy_to}")
     - name: Upload preview of updated partner resources
-      if: contains( steps.get_deploy_to.outputs.deploy_to, 'preview')
+      if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v2
       with:
         name: preview-partner-resources
         path: dist
         retention-days: 90
     - name: Deploy updated partner resources to gh-pages 🚀
-      if: contains( steps.get_deploy_to.outputs.deploy_to, 'gh-pages')
+      if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
@@ -66,8 +57,8 @@ jobs:
     needs: update-resources
     uses: fynnbe/collection-bioimage-io/.github/workflows/validate_resources.yaml@main  # todo: change orga to bioimage-io
     with:
-      check_validation: 'no'
-      deploy_to: ${{ needs.update-resources.outputs.deploy_to }}
+      check_validation: ${{ github.event_name == 'pull_request' && 'yes' || 'no' }}
+      deploy_to: ${{ github.event_name == 'pull_request' && 'preview' || 'gh-pages' }}
 
   trigger-partner-validation:
     needs: validate
@@ -91,21 +82,21 @@ jobs:
     - name: generate collection rdf
       run: python scripts/generate_collection_rdf.py
     - name: Upload preview of collection.json
-      if: contains( needs.update-resources.outputs.deploy_to, 'preview')
+      if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v2
       with:
-        name: preview-final-collection
+        name: preview-collection-json
         path: dist
         retention-days: 90
-    - name: Deploy collection rdf to gh-pages 🚀
-      if: contains( needs.update-resources.outputs.deploy_to, 'gh-pages')
+    - name: Deploy collection.json to gh-pages 🚀
+      if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         clean: false
         branch: gh-pages
         folder: dist
     - name: update last_ci_run tag
-      if: contains( needs.update-resources.outputs.deploy_to, 'gh-pages')
+      if: github.event_name != 'pull_request'
       uses: octokit/request-action@v2.x
       with:
         route: POST /repos/${{ github.repository }}/git/refs/tags/last_ci_run
