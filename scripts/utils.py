@@ -136,9 +136,9 @@ def resolve_partners(
 
 def sort_visit(p, k, v):
     if isinstance(v, dict):
-        return {kk: v[kk] for kk in sorted(v)}
+        return k, {kk: v[kk] for kk in sorted(v)}
     elif isinstance(v, (list, tuple)):
-        return type(v)(sorted(v))
+        return k, type(v)(sorted(v))
     else:
         return True
 
