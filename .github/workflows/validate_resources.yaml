@@ -46,7 +46,7 @@ jobs:
     - name: check pending versions limit
       if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
       run: |
-        echo "::error file=scripts/update_rdfs.py,line=99,endline=100,title=Cannot retrigger in PR::Exceeding version validation limit"
+        echo "::error file=scripts/update_rdfs.py,line=124,endline=125,title=Cannot retrigger in PR::Exceeding version validation limit"
         exit 1
     - name: static validation
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'

@@ -22,7 +22,7 @@ jobs:
     - name: trigger collection update
       uses: octokit/request-action@v2.x
       with:
-        route: POST  /repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches
-        ref: main
+        route: POST /repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches
+        ref: refs/heads/main
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
