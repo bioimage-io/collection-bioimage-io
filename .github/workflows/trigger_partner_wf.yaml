@@ -33,8 +33,10 @@ jobs:
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       run: pip install typer PyGithub
     - name: trigger ${{ matrix.partner_id }}
+      env:
+        PAT: ${{ secrets.PAT }}
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-      run: python scripts/trigger_partner_wf.py '${{ inputs.pending_matrix }}' --owner ${{ matrix.owner || matrix.partner_id }} --repo ${{ matrix.repo }} --workflow '${{ matrix.workflow }}' --pat ${{ secrets.PAT }}
+      run: python scripts/trigger_partner_wf.py '${{ inputs.pending_matrix }}' --owner ${{ matrix.owner || matrix.partner_id }} --repo ${{ matrix.repo }} --workflow '${{ matrix.workflow }}'
     - name: debug
       run: |
         echo '1 ${{ matrix.nothing || 'my string' }}'
