@@ -9,8 +9,12 @@ on:
         required: false
         default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
 
+env:
+  PAT: ${{ secrets.PAT }}
+
 jobs:
   trigger_partners:
+    environment: production
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -46,6 +50,27 @@ jobs:
           headers=dict(
             Accept="application/vnd.github.v3+json",
             Authorization=f"token { os.environ['PAT'] }",
+          ),
+          json=dict(
+            ref="refs/heads/main",
+            inputs=dict(pending_matrix='${{ inputs.pending_matrix }}'),
+          ),
+        )
+        r.raise_for_status()
+    - name: trigger ${{ matrix.partner_id }}
+      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
+      shell: python
+      run: |
+        import os
+
+        import requests
+
+        print("len pat", len(${{ secrets.PAT }}))
+        r = requests.post(
+          "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
+          headers=dict(
+            Accept="application/vnd.github.v3+json",
+            Authorization="token ${{ secrets.PAT }}",
           ),
           json=dict(
             ref="refs/heads/main",
