@@ -6,6 +6,19 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+    - name: debug
+      uses: octokit/request-action@v2.x
+      with:
+        route: GET /repos/${{ github.repository }}/git/ref/heads/gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+    - name: debug
+      uses: octokit/request-action@v2.x
+      with:
+        route: GET /repos/${{ github.repository }}/git/ref/tags/last_ci_run
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+
     - name: reset gh-pages
       uses: octokit/request-action@v2.x
       with:
