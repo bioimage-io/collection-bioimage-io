@@ -8,9 +8,9 @@ on:
         type: string
         required: false
         default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
-
-env:
-  PAT: ${{ secrets.PAT }}
+    secrets:
+      PAT:
+        required: true
 
 jobs:
   trigger_partners:
@@ -33,51 +33,6 @@ jobs:
         python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print(f"::set-output name=partner_ids::{list(set([ic['"'"'partner_id'"'"'] for ic in incl]))}")'
     - name: debug partner ids
       run: echo '${{ steps.prep.outputs.partner_ids }}'
-#    - run: pip install requests
-#    - name: trigger ${{ matrix.partner_id }}
-#      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-#      shell: python
-#      env:
-#        PAT: ${{ secrets.PAT }}
-#      run: |
-#        import os
-#
-#        import requests
-#
-#        print("len pat", len(os.environ['PAT']))
-#        r = requests.post(
-#          "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
-#          headers=dict(
-#            Accept="application/vnd.github.v3+json",
-#            Authorization=f"token { os.environ['PAT'] }",
-#          ),
-#          json=dict(
-#            ref="refs/heads/main",
-#            inputs=dict(pending_matrix='${{ inputs.pending_matrix }}'),
-#          ),
-#        )
-#        r.raise_for_status()
-#    - name: trigger ${{ matrix.partner_id }}
-#      if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
-#      shell: python
-#      run: |
-#        import os
-#
-#        import requests
-#
-#        print("len pat", len(${{ secrets.PAT }}))
-#        r = requests.post(
-#          "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
-#          headers=dict(
-#            Accept="application/vnd.github.v3+json",
-#            Authorization="token ${{ secrets.PAT }}",
-#          ),
-#          json=dict(
-#            ref="refs/heads/main",
-#            inputs=dict(pending_matrix='${{ inputs.pending_matrix }}'),
-#          ),
-#        )
-#        r.raise_for_status()
     - uses: octokit/request-action@v2.x
       with:
         route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
