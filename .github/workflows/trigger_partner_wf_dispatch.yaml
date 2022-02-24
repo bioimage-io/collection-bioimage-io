@@ -7,7 +7,8 @@ on:
         description: json string of gh matrix (to be used with fromJson())
         type: string
         required: false
-        default: '{"partner_id": "ilastik", "pending_matrix": "{\"include\": [{\"resource_id\": \"**\", \"version_id\": \"*\"}]}"}'
+        default: |
+          {"partner_id": "ilastik", "pending_matrix": "{\"include\": [{\"resource_id\": \"**\", \"version_id\": \"*\"}]}"}
 
 jobs:
   impl:
