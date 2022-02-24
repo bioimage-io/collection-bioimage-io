@@ -20,8 +20,18 @@ jobs:
       if: contains(steps.ls-remote.outputs.out, 'auto-update-')  # only delete existing auto-update- branches
       run: git push origin --delete ${{ github.event.pull_request.head.ref }}
     - name: trigger collection update
-      uses: octokit/request-action@v2.x
-      with:
-        route: POST /repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches
-        token: ${{ secrets.PAT }}
-        ref: refs/heads/main
+      shell: python
+      run: |
+        import os
+
+        import requests
+
+        r = requests.post(
+          "${{ github.api_url }}/repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches",
+          headers=dict(
+            Accept="application/vnd.github.v3+json",
+            Authorization="token ${{ secrets.PAT }}",
+          ),
+          json=dict(ref="refs/heads/main"),
+        )
+        r.raise_for_status()
