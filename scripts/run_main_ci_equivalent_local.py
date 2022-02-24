@@ -20,7 +20,6 @@ from utils import iterate_over_gh_matrix
 def fake_deploy(dist: Path, deploy_to: Path):
     if dist.exists():
         shutil.copytree(str(dist), str(deploy_to), dirs_exist_ok=True)
-        shutil.rmtree(str(dist))
 
 
 def end_of_job(dist: Path, always_continue: bool):
