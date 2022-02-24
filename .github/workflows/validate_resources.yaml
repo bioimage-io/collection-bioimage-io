@@ -42,11 +42,11 @@ jobs:
       run: pip install typer bioimageio.spec lxml bioimageio.core
     - name: update RDFs
       id: update_rdfs
-      run: python scripts/update_rdfs.py --branch ${{ github.ref_name }}
+      run: python scripts/update_rdfs.py --branch ${{ github.head_ref || github.ref }}
     - name: check pending versions limit
       if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
       run: |
-        echo "::error file=scripts/update_rdfs.py,line=124,endline=125,title=Cannot retrigger in PR::Exceeding version validation limit"
+        echo "::error file=scripts/update_rdfs.py,line=125,endline=126,title=Cannot retrigger in PR::Exceeding version validation limit"
         exit 1
     - name: static validation
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
@@ -131,7 +131,7 @@ jobs:
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare to deploy
-      run: python scripts/prepare_to_deploy.py dist/gh-pages-update --branch ${{ github.ref_name }}
+      run: python scripts/prepare_to_deploy.py dist/gh-pages-update --branch ${{ github.head_ref || github.ref }}
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2

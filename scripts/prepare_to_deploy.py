@@ -21,10 +21,11 @@ def main(
     / "../artifacts",  # folder with bioimageio test summary artifacts and updated rdfs
     partner_test_summaries: Path = Path(__file__).parent
     / "../partner_test_summaries",  # folder with partner test summaries
-    branch: Optional[str] = None,
+    branch: str = "",
 ):
     dist.mkdir(parents=True, exist_ok=True)
-    if branch is not None and branch.startswith("auto-update-"):
+    branch = branch.replace("refs/heads/", "")
+    if branch.startswith("auto-update-"):
         resource_id_pattern = branch[len("auto-update-") :]
     else:
         resource_id_pattern = "**"

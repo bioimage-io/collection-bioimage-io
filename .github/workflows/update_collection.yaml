@@ -13,13 +13,29 @@ on:
 
 jobs:
   update-resources:
-    if: ${{ !startsWith(github.ref_name, 'auto-update-') }}
+    if: ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
     runs-on: ubuntu-latest
     outputs:
       updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
       found_new_resources: ${{ steps.update_external.outputs.found_new_resources || 'no' }}
 
     steps:
+    - name: debug !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')
+      run: |
+        echo github.ref_name  ${{ github.ref_name }}
+        echo ref_name
+        echo startsWith(github.ref_name, 'auto-update-')  ${{ startsWith(github.ref_name, 'auto-update-') }}
+        echo !startsWith(github.ref_name, 'auto-update-')  ${{ !startsWith(github.ref_name, 'auto-update-') }}
+        echo ref
+        echo startsWith(github.ref, 'auto-update-')  ${{ startsWith(github.ref, 'auto-update-') }}
+        echo !startsWith(github.ref, 'auto-update-')  ${{ !startsWith(github.ref, 'auto-update-') }}
+        echo head_ref
+        echo startsWith(github.head_ref, 'auto-update-')  ${{ startsWith(github.head_ref, 'auto-update-') }}
+        echo !startsWith(github.head_ref, 'auto-update-')  ${{ !startsWith(github.head_ref, 'auto-update-') }}
+        echo final
+        echo startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')  ${{ startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
+        echo !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')  ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
+
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
@@ -107,7 +123,7 @@ jobs:
 
   open-pr:
     needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
-    if: ${{ (!startsWith(github.ref_name, 'auto-update-')) && needs.update-resources.outputs.found_new_resources == 'yes' }}
+    if: ${{ (!startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')) && needs.update-resources.outputs.found_new_resources == 'yes' }}
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1  # to limit content creation (PRs) on GitHub to avoid getting temporary blocked
@@ -116,11 +132,6 @@ jobs:
       matrix: ${{ fromJson(needs.update-resources.outputs.updated_resources_matrix) }}
 
     steps:
-    - name: debug !startsWith(github.ref_name, 'auto-update-')
-      run: |
-        echo github.ref_name  ${{ github.ref_name }}
-        echo startsWith(github.ref_name, 'auto-update-')  ${{ startsWith(github.ref_name, 'auto-update-') }}
-        echo !startsWith(github.ref_name, 'auto-update-')  ${{ !startsWith(github.ref_name, 'auto-update-') }}
     - uses: actions/checkout@v2
     - uses: actions/checkout@v2
       with:

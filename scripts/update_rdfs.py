@@ -25,7 +25,7 @@ def main(
     collection: Path = Path(__file__).parent / "../collection",
     last_collection: Path = Path(__file__).parent / "../last_ci_run/collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
-    branch: Optional[str] = None,
+    branch: str = "",
 ):
     """write updated rdfs to dist
 
@@ -38,7 +38,8 @@ def main(
                 and limit the update process to that resource.
 
     """
-    if branch is not None and branch.startswith("auto-update-"):
+    branch = branch.replace("refs/heads/", "")
+    if branch.startswith("auto-update-"):
         resource_id_pattern = branch[len("auto-update-") :]
     else:
         resource_id_pattern = "**"
