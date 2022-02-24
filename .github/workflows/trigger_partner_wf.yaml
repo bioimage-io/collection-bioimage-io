@@ -29,10 +29,13 @@ jobs:
     - uses: actions/checkout@v2
     - name: find partner ids
       id: prep
+      shell: python
       run: |
-        python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print(f"::set-output name=partner_ids::{list(set([ic['"'"'partner_id'"'"'] for ic in incl]))}")'
-    - name: debug
-      run: echo ${{ secrets.PAT }}
+        import json
+
+        incl=json.loads('${{ inputs.pending_matrix }}')["include"]
+        unique_partner_ids = set([ic['partner_id'] for ic in incl])
+        print(f"::set-output name=partner_ids::{list(unique_partner_ids)}")
     - name: trigger ${{ matrix.partner_id }}
       if: contains(steps.prep.outputs.partner_ids, matrix.partner_id) || contains(steps.prep.outputs.partner_ids, 'all')
       shell: python
@@ -41,7 +44,6 @@ jobs:
 
         import requests
 
-        print("len pat", len("${{ secrets.PAT }}"))
         r = requests.post(
           "${{ github.api_url }}/repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches",
           headers=dict(
@@ -54,11 +56,11 @@ jobs:
           ),
         )
         r.raise_for_status()
-#    - uses: octokit/request-action@v2.x
+#    - uses: octokit/request-action@v2.x  # should work, but doesn't: 'GITHUB_TOIKEN' not specified!?
 #      env:
 #        GITHUB_TOIKEN: ${{ secrets.PAT }}
 #      with:
 #        route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
 #        ref: refs/heads/main
 #        inputs: '{"pending_matrix": ''${{ inputs.pending_matrix }}'''
-#        GITHUB_TOIKEN: ${{ secrets.PAT }}
+
