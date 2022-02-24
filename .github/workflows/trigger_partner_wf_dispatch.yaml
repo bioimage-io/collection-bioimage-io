@@ -14,3 +14,11 @@ jobs:
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ github.event.inputs.pending_matrix }}
+    secrets:
+      PAT: ${{ secrets.PAT }}
+
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ secrets.PAT }}
+      - run: echo ${{ secrets.nothing }}
