@@ -86,7 +86,6 @@ def main(
         collection=collection,
         last_collection=last_collection,
         gh_pages=gh_pages,
-        branch=None,
     )
 
     print("\npending (updated):")
