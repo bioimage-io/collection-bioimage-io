@@ -65,6 +65,8 @@ jobs:
     uses: fynnbe/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main  # todo: change orga to bioimage-io
     with:
       pending_matrix: ${{ needs.validate.outputs.pending_matrix }}
+    secrets:
+      PAT: ${{ secrets.PAT }}
 
   build-collection:  # deploy collection.json
     needs: validate

@@ -16,9 +16,3 @@ jobs:
       pending_matrix: ${{ github.event.inputs.pending_matrix }}
     secrets:
       PAT: ${{ secrets.PAT }}
-
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{ secrets.PAT }}
-      - run: echo ${{ secrets.nothing }}

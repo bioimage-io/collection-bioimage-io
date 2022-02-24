@@ -36,6 +36,7 @@ jobs:
     - uses: octokit/request-action@v2.x
       with:
         route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
-        token: ${{secrets.PAT}}
         ref: refs/heads/main
-        pending_matrix: '${{ inputs.pending_matrix }}'
+        inputs: '{"pending_matrix": ''${{ inputs.pending_matrix }}'''
+      env:
+        GITHUB_TOIKEN: ${{ secrets.PAT }}
