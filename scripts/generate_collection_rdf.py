@@ -42,9 +42,10 @@ def main(
 
     if "partners" in rdf["config"]:
         # load resolved partner details
-        partner_details_path = gh_pages / "partner_details.yaml"
+        partner_details_path = gh_pages / "partner_details.json"
         if partner_details_path.exists():
-            rdf["config"]["partners"] = yaml.load(partner_details_path)
+            with partner_details_path.open() as f:
+                rdf["config"]["partners"] = json.load(f)
         else:
             print(f"Missing evaluated partner details at {partner_details_path}")
 

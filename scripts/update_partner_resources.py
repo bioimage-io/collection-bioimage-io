@@ -35,7 +35,8 @@ def main(
         write_rdfs_for_resource(resource=r, dist=dist)
 
     dist.mkdir(exist_ok=True, parents=True)
-    yaml.dump(partners, dist / "partner_details.yaml")
+    with (dist / "partner_details.json").open("w", encoding="utf-8") as f:
+        json.dump(partners, f, ensure_ascii=False, indent=4, sort_keys=True)
 
     partner_hashes_path = dist / partner_hashes_path.relative_to(gh_pages)
     partner_hashes_path.parent.mkdir(exist_ok=True, parents=True)
