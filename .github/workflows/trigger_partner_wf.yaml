@@ -51,6 +51,6 @@ jobs:
             f"${{ github.api_url }}/repos/{ partner_config['repository'] }/actions/workflows/"
             f"{ partner_config['workflow'] }/dispatches",
             headers=dict(Accept="application/vnd.github.v3+json", Authorization="token ${{ secrets.PAT }}"),
-            json=dict(ref=partner_config["workflow_ref"], inputs=dict(pending_matrix="${{ matrix.pending_matrix }}")),
+            json=dict(ref=partner_config["workflow_ref"], inputs=dict(pending_matrix='${{ matrix.pending_matrix }}')),
         )
         r.raise_for_status()

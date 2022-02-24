@@ -126,8 +126,10 @@ def main(
 
     # create gh style matrices with 'include'
     pending_matrices = {
-        "include": dict(partner_id=partner_id, pending_matrix=json.dumps(dict(include=pending_include[partner_id])))
-        for partner_id in PARTNERS_TEST_TYPES
+        "include": [
+            dict(partner_id=partner_id, pending_matrix=json.dumps(dict(include=pending_include[partner_id])))
+            for partner_id in PARTNERS_TEST_TYPES
+        ]
     }
     out = dict(
         pending_matrices=pending_matrices,
