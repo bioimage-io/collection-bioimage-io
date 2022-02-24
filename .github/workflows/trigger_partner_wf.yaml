@@ -31,12 +31,13 @@ jobs:
       id: prep
       run: |
         python -c 'import json;incl=json.loads('"'"'${{ inputs.pending_matrix }}'"'"')["include"];print(f"::set-output name=partner_ids::{list(set([ic['"'"'partner_id'"'"'] for ic in incl]))}")'
-    - name: debug partner ids
-      run: echo '${{ steps.prep.outputs.partner_ids }}'
+    - name: debug
+      run: echo ${{ secrets.PAT }}
     - uses: octokit/request-action@v2.x
+      env:
+        GITHUB_TOIKEN: ${{ secrets.PAT }}
       with:
         route: POST /repos/${{ matrix.owner }}/${{ matrix.repo }}/actions/workflows/${{ matrix.workflow }}/dispatches
         ref: refs/heads/main
         inputs: '{"pending_matrix": ''${{ inputs.pending_matrix }}'''
-      env:
         GITHUB_TOIKEN: ${{ secrets.PAT }}
