@@ -1,6 +1,7 @@
+import json
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 import typer
 
@@ -125,7 +126,7 @@ def main(
 
     # create gh style matrices with 'include'
     pending_matrices = {
-        "include": dict(partner_id=partner_id, pending_matrix=dict(include=pending_include[partner_id]))
+        "include": dict(partner_id=partner_id, pending_matrix=json.dumps(dict(include=pending_include[partner_id])))
         for partner_id in PARTNERS_TEST_TYPES
     }
     out = dict(
