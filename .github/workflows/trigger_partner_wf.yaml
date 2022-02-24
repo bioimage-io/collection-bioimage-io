@@ -6,8 +6,7 @@ on:
       pending_matrices:
         description: json string of gh matrix (to be used with fromJson())
         type: string
-        required: false
-        default: '{"include": [{"resource_id": "rid", "version_id": "vid", "partner_id": "all"}]}'
+        required: true
     secrets:
       PAT:
         required: true
