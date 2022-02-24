@@ -20,22 +20,6 @@ jobs:
       found_new_resources: ${{ steps.update_external.outputs.found_new_resources || 'no' }}
 
     steps:
-    - name: debug !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')
-      run: |
-        echo github.ref_name  ${{ github.ref_name }}
-        echo ref_name
-        echo startsWith(github.ref_name, 'auto-update-')  ${{ startsWith(github.ref_name, 'auto-update-') }}
-        echo !startsWith(github.ref_name, 'auto-update-')  ${{ !startsWith(github.ref_name, 'auto-update-') }}
-        echo ref
-        echo startsWith(github.ref, 'auto-update-')  ${{ startsWith(github.ref, 'auto-update-') }}
-        echo !startsWith(github.ref, 'auto-update-')  ${{ !startsWith(github.ref, 'auto-update-') }}
-        echo head_ref
-        echo startsWith(github.head_ref, 'auto-update-')  ${{ startsWith(github.head_ref, 'auto-update-') }}
-        echo !startsWith(github.head_ref, 'auto-update-')  ${{ !startsWith(github.head_ref, 'auto-update-') }}
-        echo final
-        echo startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')  ${{ startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
-        echo !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')  ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
-
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
