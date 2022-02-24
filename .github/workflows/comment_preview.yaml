@@ -17,6 +17,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
-        include: preview,preview-collection-json
+        includes: preview,preview-collection-json
         format: name
         addTo: pull
