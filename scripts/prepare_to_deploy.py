@@ -14,7 +14,7 @@ def get_sub_summary(path: Path):
 
 
 def main(
-    dist: Path,
+    dist: Path = Path(__file__).parent / "../dist/gh_pages_update",
     collection: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
     artifact_dir: Path = Path(__file__).parent

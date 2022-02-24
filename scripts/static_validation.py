@@ -133,16 +133,11 @@ def ensure_valid_conda_env_name(name: str) -> str:
 
 
 def prepare_dynamic_test_cases(
-    rd: Union[Model, RDF], resource_id: str, version_id: str, dist: Path, rdf_path: Path
+    rd: Union[Model, RDF], resource_id: str, version_id: str, dist: Path
 ) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
     if isinstance(rd, Model):
-        # add rdf to artifact
-        rdf_in_artifact_path = dist / resource_id / version_id / "rdf.yaml"
-        rdf_in_artifact_path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy(rdf_path, rdf_in_artifact_path)
-
         # generate validation cases per weight format
         for wf in rd.weights:
             # we skip the keras validation for now, see
@@ -159,12 +154,7 @@ def prepare_dynamic_test_cases(
                 env_name=env_name,
             )
             validation_cases.append(
-                {
-                    "env_name": env_name,
-                    "resource_id": resource_id,
-                    "version_id": version_id,
-                    "weight_format": wf,
-                }
+                {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
             )
     elif isinstance(rd, RDF):
         pass
@@ -175,8 +165,8 @@ def prepare_dynamic_test_cases(
 
 
 def main(
-    dist: Path,
     pending_matrix: str,
+    dist: Path = Path(__file__).parent / "../dist/static_validation_artifact",
     rdf_dirs: List[Path] = (
         Path(__file__).parent / "../dist/updated_rdfs/rdfs",
         Path(__file__).parent / "../gh-pages/rdfs",
@@ -194,6 +184,11 @@ def main(
         else:
             raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
 
+        # add rdf to dist (future static_validation_artifact)
+        deploy_rdf_path = dist / resource_id / version_id / "rdf.yaml"
+        deploy_rdf_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(rdf_path, deploy_rdf_path)
+
         static_summary = validate(rdf_path)
 
         static_summary_path = dist / resource_id / version_id / "validation_summary_static.yaml"
@@ -204,7 +199,7 @@ def main(
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(rdf_path, update_to_format="latest")
                 assert isinstance(rd, RDF)
-                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist, rdf_path=rdf_path)
+                dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)
 
             if "name" not in latest_static_summary:
                 latest_static_summary[

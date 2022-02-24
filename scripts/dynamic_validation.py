@@ -12,7 +12,7 @@ def main(
     resource_id: str,
     version_id: str,
     weight_format: Optional[str] = typer.Argument(..., help="weight format to test model with."),
-    rdf_dirs: List[Path] = (Path(__file__).parent / "../dist/static_validation_artifact",),
+    rdf_dirs: List[Path] = (Path(__file__).parent / "../artifacts/static_validation_artifact",),
     create_env_outcome: str = "success",
 ):
     if weight_format is None:

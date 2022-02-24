@@ -12,19 +12,19 @@ on:
         default: ''
         type: string
     outputs:
-      pending_matrix:
-        description: "resources pending partner testing"
-        value: ${{ jobs.static-validation.outputs.pending_matrix }}
-      has_pending_matrix:
-        description: "yes/no if pending resources exist"
-        value: ${{ jobs.static-validation.outputs.has_pending_matrix }}
+      pending_matrices:
+        description: "for each partner a matrix of resources that lack test summaries"
+        value: ${{ jobs.static-validation.outputs.pending_matrices }}
+      has_pending_matrices:
+        description: "yes/no if pending matrices are not empty"
+        value: ${{ jobs.static-validation.outputs.has_pending_matrices }}
 
 jobs:
   static-validation:  # + update rdfs
     runs-on: ubuntu-latest
     outputs:
-      pending_matrix: ${{ steps.update_rdfs.outputs.pending_matrix }}
-      has_pending_matrix: ${{ steps.update_rdfs.outputs.has_pending_matrix }}
+      pending_matrices: ${{ steps.update_rdfs.outputs.pending_matrices }}
+      has_pending_matrices: ${{ steps.update_rdfs.outputs.has_pending_matrices }}
       dynamic_test_cases: ${{ steps.static_validation.outputs.dynamic_test_cases }}
       has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
 
@@ -51,7 +51,7 @@ jobs:
     - name: static validation
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       id: static_validation
-      run: python scripts/static_validation.py dist/static_validation_artifact '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
+      run: python scripts/static_validation.py '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
     - name: Upload static validation summaries and conda envs
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       uses: actions/upload-artifact@v2
@@ -77,7 +77,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: static_validation_artifact
-        path: dist/static_validation_artifact
+        path: artifacts/static_validation_artifact
     - name: install validation dependencies
       id: create_env
       continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
@@ -98,19 +98,19 @@ jobs:
     - name: dynamic validation
       shell: bash -l {0}
       timeout-minutes: 30
-      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }}
+      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }}
     - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
         name: ${{ steps.artifact_name.outputs.name }}
-        path: dist/dynamic_validation_artifacts/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
+        path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
     - name: install script deps
       if: steps.create_env.outcome == 'success'
       run: pip install typer bioimageio.spec
     - name: check if validation passed
       if: inputs.check_validation == 'yes'
-      run: python scripts/check_validation_passed.py dist/dynamic_validation_artifacts/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
+      run: python scripts/check_validation_passed.py dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
 
   deploy:
     needs: dynamic-validation
@@ -131,13 +131,13 @@ jobs:
     - name: install script deps
       run: pip install typer bioimageio.spec
     - name: prepare to deploy
-      run: python scripts/prepare_to_deploy.py dist/gh-pages-update --branch ${{ github.head_ref || github.ref }}
+      run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
       uses: actions/upload-artifact@v2
       with:
         name: preview
-        path: dist/gh-pages-update
+        path: dist/gh_pages_update
         retention-days: 90
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
@@ -145,4 +145,4 @@ jobs:
       with:
         branch: gh-pages
         clean: false  # Keeping the old files
-        folder: dist/gh-pages-update
+        folder: dist/gh_pages_update

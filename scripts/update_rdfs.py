@@ -47,8 +47,7 @@ def main(
     dist.mkdir(parents=True, exist_ok=True)
 
     retrigger = False
-    include_pending = []  # update to rdf version
-    include_pending_bioimageio = []  # either update to version or a bioimageio library
+    pending_include = defaultdict(list)  # include section of gh style matrix for each partner and bioimageio
     for r in iterate_known_resources(
         collection=collection, gh_pages=gh_pages, resource_id=resource_id_pattern, status="accepted"
     ):
@@ -70,6 +69,7 @@ def main(
             updated_versions = write_rdfs_for_resource(resource=r.info, dist=dist)
         else:
             updated_versions = []
+            # check for each version if an update occurred or if only specific partners need to reevaluate
             for v in r.info["versions"]:
                 if v["status"] != "accepted":
                     continue
@@ -107,30 +107,32 @@ def main(
                         resource=r.info, dist=dist, only_for_version_id=version_id
                     )
 
+        # add to 'include' value of a gh style matrix
         for v_id in updated_versions:
             entry = {"resource_id": r.resource_id, "version_id": v_id}
-            include_pending_bioimageio.append(dict(entry))
-            entry["partner_id"] = "all"
-            include_pending.append(entry)
-
-        for v_id in limited_reeval.pop("bioimageio", []):
-            entry = {"resource_id": r.resource_id, "version_id": v_id}
-            include_pending_bioimageio.append(entry)
+            pending_include["bioimageio"].append(entry)
+            for partner_id in PARTNERS_TEST_TYPES:
+                pending_include[partner_id].append(entry)
 
         for partner_id, v_ids in limited_reeval.items():
             for v_id in v_ids:
-                entry = {"resource_id": r.resource_id, "version_id": v_id, "partner_id": partner_id}
-                include_pending.append(entry)
+                entry = {"resource_id": r.resource_id, "version_id": v_id}
+                pending_include[partner_id].append(entry)
 
-        if len(include_pending_bioimageio) > 100 or any(len(pnr) > 100 for pnr in limited_reeval.values()):
+        if any(len(entries) > 100 for entries in pending_include.values()):
             retrigger = True
             break
 
+    # create gh style matrices with 'include'
+    pending_matrices = {
+        "include": dict(partner_id=partner_id, pending_matrix=dict(include=pending_include[partner_id]))
+        for partner_id in PARTNERS_TEST_TYPES
+    }
     out = dict(
-        pending_matrix=dict(include=include_pending),
-        has_pending_matrix=bool(include_pending),
-        pending_matrix_bioimageio=dict(include=include_pending_bioimageio),
-        has_pending_matrix_bioimageio=bool(include_pending_bioimageio),
+        pending_matrices=pending_matrices,
+        has_pending_matrices=bool(pending_matrices),
+        pending_matrix_bioimageio=dict(include=pending_include["bioimageio"]),
+        has_pending_matrix_bioimageio=bool(pending_include["bioimageio"]),
         retrigger=retrigger,
     )
     set_gh_actions_outputs(out)
