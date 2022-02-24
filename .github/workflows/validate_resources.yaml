@@ -88,7 +88,7 @@ jobs:
         mamba-version: "*"
         channel-priority: strict
         activate-environment: ${{ matrix.env_name }}
-        environment-file: dist/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+        environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
     - name: install minimal script deps
       if: steps.create_env.outcome != 'success'
       run: pip install typer bioimageio.spec
