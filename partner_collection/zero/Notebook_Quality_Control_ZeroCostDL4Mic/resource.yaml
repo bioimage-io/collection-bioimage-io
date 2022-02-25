@@ -8,6 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    maintainers: []
+    description: Error mapping and quality metrics estimation.
+    tags:
+    - colab
+    - notebook
+    - Quality Control
+    - ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -16,19 +24,10 @@ versions:
         crisis in deep-learning-based bioimage analysis. Nat Methods 18, 1136–1144
         (2021). https://doi.org/10.1038/s41592-021-01284-3
       doi: https://doi.org/10.1038/s41592-021-01284-3
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags:
-    - colab
-    - notebook
-    - Quality Control
-    - ZeroCostDL4Mic
-    format_version: 0.2.2
-    description: Error mapping and quality metrics estimation.
+    type: application
     name: Quality Control - ZeroCostDL4Mic
     authors:
     - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    type: application
-    maintainers: []
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -49,14 +48,15 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    format_version: 0.2.2
+    links:
+    - zero/Notebook Preview
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/QC_notebook.png
-    links:
-    - zero/Notebook Preview
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_Quality_Control_ZeroCostDL4Mic

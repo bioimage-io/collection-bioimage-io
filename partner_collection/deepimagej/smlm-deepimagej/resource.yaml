@@ -8,14 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    cite:
-    - text: Lucas von Chamier et al., Nature Communications 2021
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: Gómez de Mariscal et al. bioRxiv 2019
-      doi: https://doi.org/10.1101/799270
-    - text: M. Ovesný, et al., Bioinformatics 2014
-      doi: https://doi.org/10.1093/bioinformatics/btu202
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
+    maintainers: []
+    description: Single molecule localization microscopy (SMLM) processing using deepImageJ
+      and ThunderSTORM in an ImageJ macro.
     tags:
     - deepimagej
     - smlm
@@ -25,15 +20,19 @@ versions:
     - workflow
     - pipeline
     - superresolution
-    format_version: 0.2.2
-    description: Single molecule localization microscopy (SMLM) processing using deepImageJ
-      and ThunderSTORM in an ImageJ macro.
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
+    cite:
+    - text: Lucas von Chamier et al., Nature Communications 2021
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: Gómez de Mariscal et al. bioRxiv 2019
+      doi: https://doi.org/10.1101/799270
+    - text: M. Ovesný, et al., Bioinformatics 2014
+      doi: https://doi.org/10.1093/bioinformatics/btu202
+    type: application
     name: SMLM-superresolution
     authors:
     - name: DeepImageJ
       affiliation: EPFL, UC3M
-    type: application
-    maintainers: []
     config:
       id: deepimagej
       name: DeepImageJ
@@ -51,9 +50,10 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    format_version: 0.2.2
     source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
-    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     covers:
     - https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/cover.png
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     id: deepimagej/smlm-deepimagej
