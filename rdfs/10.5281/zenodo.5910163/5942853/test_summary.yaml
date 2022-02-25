@@ -1,0 +1,25 @@
+bioimageio_spec_version: 0.4.4
+rdf_sha256: 7fd1d75f605364cde60ed75cd1d42e5a2192ba2fee764c2b32fc51b7d9ca3580
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.4
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [''modality'', ''dims'', ''framework'',
+        ''software'', ''network'', ''task'']'
+      weights: {onnx: missing 'opset_version'}
+  - bioimageio_spec_version: 0.4.4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.4
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [''modality'', ''dims'', ''framework'',
+        ''software'', ''network'', ''task'']'
+      weights: {onnx: missing 'opset_version'}

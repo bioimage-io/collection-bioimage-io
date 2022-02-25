@@ -1,0 +1,25 @@
+bioimageio_spec_version: 0.4.4
+rdf_sha256: 2b0f57027eaa2276222cc21d7578e92f7fbb374d1fce69e462ebe89f5294d17a
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [''framework'', ''software'']'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}
+  - bioimageio_spec_version: 0.4.4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [''framework'', ''software'']'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}

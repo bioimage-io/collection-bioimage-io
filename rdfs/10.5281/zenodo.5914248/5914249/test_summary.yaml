@@ -1,0 +1,16 @@
+bioimageio_spec_version: 0.4.4
+rdf_sha256: 89c1c54deedd4eee2f9c97ba26f1f4cde8a02138311eb4b1834f89a82db5ac83
+status: failed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.4
+    error:
+      _schema: ['Minimal shape [1. 8. 8. 1.] of output output is too small for halo
+          [0, 47, 47, 0].']
+    name: 'bioimageio.spec static validation of  RDF '
+    nested_errors: {}
+    status: failed
+    traceback: null
+    warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
+        Free/libre., tags: 'Missing tags for categories: [''modality'', ''content'',
+        ''task'']'}

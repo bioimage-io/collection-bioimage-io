@@ -1,0 +1,19 @@
+bioimageio_spec_version: 0.4.4
+rdf_sha256: 74a6845d86e8857b180bb0f6d23cc19525d8632d57b228a7e4e101882c8c18de
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.4
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags for categories: [''framework'', ''task'']'}
+  - bioimageio_spec_version: 0.4.4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.4
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags for categories: [''framework'', ''task'']'}
