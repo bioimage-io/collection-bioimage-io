@@ -8,21 +8,21 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    maintainers: []
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    tags:
-    - deepimagej
-    - bioimage.io
-    documentation: https://deepimagej.github.io/deepimagej/
     cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
-      doi: 10.1038/s41592-021-01262-9
     type: collection
     name: deepImageJ Collection
+    format_version: 0.2.2
+    tags:
+    - deepimagej
+    - bioimage.io
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     authors: []
+    documentation: https://deepimagej.github.io/deepimagej/
     config:
       id: deepimagej
       name: DeepImageJ
@@ -40,11 +40,11 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    format_version: 0.2.2
-    source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/model.yaml
+    maintainers: []
     links:
     - zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
     download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/model.yaml
     id: deepimagej/DeepSTORMZeroCostDL4Mic
