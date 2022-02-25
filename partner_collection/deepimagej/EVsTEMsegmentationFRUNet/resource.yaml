@@ -8,13 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    cite:
-    - text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
-        Vesicles in Transmission Electron Microscopy Images Scientific Reports, (2019)
-      doi: https://doi.org/10.1038/s41598-019-49431-3
-    type: application
     name: Small extracellular vesicle instance segmentation (FRU-Net)
-    format_version: 0.2.2
     tags:
     - extracellular-vesicles
     - segmentation
@@ -41,7 +35,11 @@ versions:
       affiliation: Masaryk University
     - name: Arrate Muñoz-Barrutia
       affiliation: Universidad Carlos III de Madrid
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+    type: application
+    cite:
+    - text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
+        Vesicles in Transmission Electron Microscopy Images Scientific Reports, (2019)
+      doi: https://doi.org/10.1038/s41598-019-49431-3
     config:
       id: deepimagej
       name: DeepImageJ
@@ -60,14 +58,16 @@ versions:
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
     maintainers: []
-    links:
-    - deepimagej/FRUNet2DsEVSegmentation
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+    format_version: 0.2.2
+    source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
+    covers:
+    - https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-019-49431-3/MediaObjects/41598_2019_49431_Fig1_HTML.png
+    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb
-    covers:
-    - https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-019-49431-3/MediaObjects/41598_2019_49431_Fig1_HTML.png
-    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg
-    source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
+    links:
+    - deepimagej/FRUNet2DsEVSegmentation
     id: deepimagej/EVsTEMsegmentationFRUNet
