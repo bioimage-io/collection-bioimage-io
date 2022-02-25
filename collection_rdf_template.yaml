@@ -44,7 +44,12 @@ config:
         https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
     - id: ilastik
       source: >-
-        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/collection.yaml
+        https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+      test_summaries:
+        repository: ilastik/bioimage-io-resources
+        deploy_branch: gh-pages
+        workflow: test_bioimageio_resources.yaml
+        workflow_ref: refs/heads/main
     - id: hpa
       source: >-
         https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml

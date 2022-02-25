@@ -1,0 +1,196 @@
+name: update collection
+concurrency: ${{ github.ref }}  # do not run this workflow in parallel for the same branch (in particular main)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron:  '0 1,13 * * *'
+  workflow_dispatch:  # triggered by http endpoints (ref should be refs/head/main)
+
+
+jobs:
+  update-resources:
+    if: ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
+    runs-on: ubuntu-latest
+    outputs:
+      updated_resources_matrix: ${{ steps.update_external.outputs.updated_resources_matrix }}
+      found_new_resources: ${{ steps.update_external.outputs.found_new_resources || 'no' }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
+    - name: install script deps
+      run: pip install requests typer bioimageio.spec lxml
+    - name: update external resources
+      id: update_external
+      run: python scripts/update_external_resources.py --max-resource-count 15
+    - name: "Upload collection update"
+      uses: actions/upload-artifact@v2
+      with:
+        name: collection-update
+        path: dist
+        retention-days: 1
+    - run: rm -r dist
+    - name: update partner resources
+      run: python scripts/update_partner_resources.py
+    - name: Upload preview of updated partner resources
+      if: github.event_name == 'pull_request'
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview-partner-resources
+        path: dist
+        retention-days: 90
+    - name: Deploy updated partner resources to gh-pages 🚀
+      if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist
+
+  validate:
+    needs: update-resources
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/validate_resources.yaml@main
+    with:
+      check_validation: ${{ github.event_name == 'pull_request' && 'yes' || 'no' }}
+      deploy_to: ${{ github.event_name == 'pull_request' && 'preview' || 'gh-pages' }}
+
+  trigger-partner-validation:
+    needs: validate
+    if: github.event_name != 'pull_request' && needs.validate.outputs.has_pending_matrices == 'yes'
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main
+    with:
+      pending_matrices: ${{ needs.validate.outputs.pending_matrices }}
+    secrets:
+      PAT: ${{ secrets.PAT }}
+
+  build-collection:  # deploy collection.json
+    needs: validate
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: install script deps
+      run: pip install typer bioimageio.spec boltons lxml requests
+    - name: generate collection rdf
+      run: python scripts/generate_collection_rdf.py
+    - name: Upload preview of collection.json
+      if: github.event_name == 'pull_request'
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview-collection-json
+        path: dist/collection.json
+        retention-days: 90
+    - name: Deploy collection.json to gh-pages 🚀
+      if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist
+    - name: update last_ci_run tag
+      if: github.event_name != 'pull_request'
+      uses: octokit/request-action@v2.x
+      with:
+        route: POST /repos/${{ github.repository }}/git/refs/tags/last_ci_run
+        sha: ${{ github.sha }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+
+  open-pr:
+    needs: [update-resources, build-collection]  # run after build-collection to not deploy to gh-pages in parallel
+    if: ${{ (!startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-')) && needs.update-resources.outputs.found_new_resources == 'yes' }}
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1  # to limit content creation (PRs) on GitHub to avoid getting temporary blocked
+      fail-fast: false
+      # matrix: update: [{resource_id:..., resource_name:..., new_version_ids:..., new_version_sources:..., maintainers: ...}, ...]
+      matrix: ${{ fromJson(needs.update-resources.outputs.updated_resources_matrix) }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - run: mkdir dist
+    - run: cp gh-pages/pr_urls.json dist
+      continue-on-error: true
+    - name: download new collection
+      uses: actions/download-artifact@v2
+      with:
+        name: collection-update
+        path: collection-update
+    - name: replace resource item folder
+      run: |
+        mkdir -p "collection/${{ matrix.update.resource_id }}"
+        cp -r "collection-update/${{ matrix.update.resource_id }}"/* "collection/${{ matrix.update.resource_id }}"
+        rm -rf collection-update
+    - name: install script deps
+      run: pip install requests
+    - name: get urls of previous PRs
+      id: pr_urls
+      run: python scripts/get_previous_pr_urls.py ${{ matrix.update.resource_id }}
+    - name: Create Pull Request
+      if: github.event_name != 'pull_request'
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
+        commit-message: 'Update ${{ matrix.update.resource_id }}'
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: auto-update-${{ matrix.update.resource_id }}
+        delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
+        title: 'Update ${{ matrix.update.resource_name }}'
+        body: |
+          This is an automatic PR created by the @bioimageiobot regarding changes to the resource item ${{ matrix.update.resource_id }}.
+          The following version(s) will be added:
+          ${{ matrix.update.new_version_ids_md }}
+
+          You can find their corresponding RDF files here:
+          ${{ matrix.update.new_version_sources_md }}
+
+          Please review the changes and make sure the new item or version(s) pass the following check list:
+          - [ ] Passed the BioImage.IO Spec validator (static validation);
+          - [ ] Passed the BioImage.IO CI tests (dynamic validations);
+          - [ ] The meta information for the RDF item is complete;
+            - [ ] The tags is complete and describes the model;
+            - [ ] Naming is intuitive and descriptive, example:  Multi-Organ Nucleus Segmentation (StarDist 2D);
+            - [ ] Authors are provided;
+            - [ ] Documentation is complete;
+              * For models, include an overview, describe how the model is trained, what is the training data, how to use the model, how to validate the results and list the references. TODO: Model documentation template.
+          - [ ] Approved by at least one of the BioImage.IO admin team member.
+
+          Maintainers: ${{ matrix.update.maintainers }}
+
+          Note: If you updated or re-uploaded another version for the current item on Zenodo, this PR won't be changed automatically. To proceed, you can do the following:
+           1. Block this version, but keep looking for future versions: Edit the current resource.yaml and keep the top-level `status` field as `accepted`, but change the `status` under the current version to `blocked`.
+           2. Accept this version and keep looking for future versions: Merge this PR for now.
+           3. Keep proposed version(s) (and this resource in general if it is new) as pending: Close this PR without merging.
+
+           Then wait for the CI on the main branch to complete. It should detect the new version(s) and create another PR for the new version(s).
+
+          Previous PRs of this resource: ${{ steps.pr_urls.outputs.previous_prs }}
+        labels: |
+          auto-update
+        draft: false
+    - name: save PR url
+      if: github.ref == 'refs/heads/main'
+      run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
+    - name: deploy PR url to gh-pages 🚀
+      if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      with:
+        clean: false
+        branch: gh-pages
+        folder: dist

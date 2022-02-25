@@ -1,13 +1,10 @@
 .DS_Store
-node_modules
+__pycache__
 artifacts
 dist
-scratch
 gh-pages
-scripts/site.config.json
-scripts/utils.js
-new-rdf.yaml
-__pycache__
+last_ci_run
+partner_test_summaries
 
 # local env files
 .env.local

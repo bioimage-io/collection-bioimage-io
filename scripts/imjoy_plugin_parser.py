@@ -1,14 +1,12 @@
 """ImJoy plugin parser module."""
+import copy
 import json
 import uuid
 
+import requests
 from lxml import etree
 
-import copy
-import requests
-from ruamel.yaml import YAML
-
-yaml = YAML(typ="safe")
+from bioimageio.spec.shared import yaml
 
 tag_types = ["config", "script", "link", "window", "style", "docs", "attachment"]
 

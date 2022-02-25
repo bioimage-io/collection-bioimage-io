@@ -1,0 +1,18 @@
+name: Trigger partner workflows via dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      pending_matrices:
+        description: json string of gh matrix (to be used with fromJson())
+        type: string
+        required: false
+        default: '{"include": [{"partner_id": "ilastik", "pending_matrix": "{\"include\": [{\"resource_id\": \"**\", \"version_id\": \"*\"}]}"}]}'
+
+jobs:
+  impl:
+    uses: bioimage-io/collection-bioimage-io/.github/workflows/trigger_partner_wf.yaml@main
+    with:
+      pending_matrices: ${{ github.event.inputs.pending_matrices }}
+    secrets:
+      PAT: ${{ secrets.PAT }}

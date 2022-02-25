@@ -1,32 +1,40 @@
 import copy
+import dataclasses
 import json
+import pathlib
 import warnings
+from hashlib import sha256
 from itertools import product
 from pathlib import Path
-from typing import Any, Dict, List, Tuple, Union
+from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
-import requests
-from ruamel.yaml import YAML
+from marshmallow import missing
+from ruamel.yaml import YAML, comments
 
-yaml = YAML(typ="safe")
-
-
-def set_gh_actions_outputs(outputs: Dict[str, Union[str, Any]]):
-    for name, out in outputs.items():
-        set_gh_actions_output(name, out)
+from bare_utils import DEPLOYED_BASE_URL
+from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
+from bioimageio.spec.io_ import serialize_raw_resource_description
+from bioimageio.spec.shared import resolve_source
 
 
-def set_gh_actions_output(name: str, output: Union[str, Any]):
-    """set output of a github actions workflow step calling this script"""
-    if isinstance(output, bool):
-        output = "yes" if output else "no"
+# todo: use MyYAML from bioimageio.spec. see comment below
+class MyYAML(YAML):
+    """add convenient improvements over YAML
+    improve dump:
+        - make sure to dump with utf-8 encoding. on windows encoding 'windows-1252' may otherwise be used
+        - expose indentation kwargs for dump
+    """
 
-    if not isinstance(output, str):
-        output = json.dumps(output)
+    def dump(self, data, stream=None, *, transform=None):
+        if isinstance(stream, pathlib.Path):
+            with stream.open("wt", encoding="utf-8") as f:
+                return super().dump(data, f, transform=transform)
+        else:
+            return super().dump(data, stream, transform=transform)
 
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
+
+# todo: clean up difference to bioimageio.spec.shared.yaml (diff is typ='safe'), but with 'safe' enforce_block_style does not work
+yaml = MyYAML()
 
 
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
@@ -49,16 +57,16 @@ def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
             yield dict(zip(keys, vals))
 
 
-def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
+def resolve_partners(
+    rdf: dict, *, current_format: str, previous_partner_hashes: Dict[str, str]
+) -> Tuple[List[dict], List[dict], Dict[str, str], set]:
     from bioimageio.spec import load_raw_resource_description
     from bioimageio.spec.collection.v0_2.raw_nodes import Collection
     from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 
-    current_format = "0.2.2"
-
     partners = []
-    partner_resources = []
-    updated_partners = set()
+    updated_partner_resources = []
+    new_partner_hashes = {}
     ignored_partners = set()
     if "partners" in rdf["config"]:
         partners = copy.deepcopy(rdf["config"]["partners"])
@@ -74,31 +82,38 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
-            partner_id = partner.get("id") or partner_collection.id
+            partner_id: str = partner.get("id") or partner_collection.id
             if not partner_id:
                 warnings.warn(f"Missing partner id for partner {idx}: {partner}")
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
+            serialized_partner_collection: str = serialize_raw_resource_description(partner_collection)
+            partner_hash = sha256(serialized_partner_collection.encode("utf-8")).hexdigest()
+            # option to skip based on partner collection diff
+            if partner_hash == previous_partner_hashes.get(partner_id):
+                continue  # no change in partner collection
+
+            new_partner_hashes[partner_id] = partner_hash
             if partner_collection.config:
                 partners[idx].update(partner_collection.config)
 
             partners[idx]["id"] = partner_id
 
-            for entry_rdf, entry_error in resolve_collection_entries(partner_collection, collection_id=partner_id):
+            for entry_idx, (entry_rdf, entry_error) in enumerate(
+                resolve_collection_entries(partner_collection, collection_id=partner_id)
+            ):
                 if entry_error:
-                    warnings.warn(f"partner[{idx}] {partner_id}: {entry_error}")
-                    ignored_partners.add(partner_id)
+                    warnings.warn(f"{partner_id}[{entry_idx}]: {entry_error}")
                     continue
 
-                # Convert relative links to absolute
+                # Convert relative links to absolute  # todo: move to resolve_collection_entries
                 if "links" in entry_rdf:
                     for idx, link in enumerate(entry_rdf["links"]):
                         if "/" not in link:
                             entry_rdf["links"][idx] = partner_id + "/" + link
 
-                updated_partners.add(partner_id)
-                partner_resources.append(
+                updated_partner_resources.append(
                     dict(
                         status="accepted",
                         id=entry_rdf["id"],
@@ -115,26 +130,192 @@ def resolve_partners(rdf: dict) -> Tuple[List[dict], List[dict], set, set]:
                     )
                 )
 
-    return partners, partner_resources, updated_partners, ignored_partners
+    return partners, updated_partner_resources, new_partner_hashes, ignored_partners
 
 
-SOURCE_BASE_URL = "https://bioimage-io.github.io/collection-bioimage-io"
+def rec_sort(obj):
+    if isinstance(obj, dict):
+        return {k: rec_sort(obj[k]) for k in sorted(obj)}
+    elif isinstance(obj, (list, tuple)):
+        return type(obj)([rec_sort(v) for v in obj])
+    else:
+        return obj
 
 
-def get_rdf_source(collection_dir: Path, resource_id: str, version_id: str):
-    updated_rdf_source = f"{SOURCE_BASE_URL}/resources/{resource_id}/{version_id}/rdf.yaml"
-    try:
-        rdf_source = yaml.load(requests.get(updated_rdf_source).text)
-    except Exception as e:
-        warnings.warn(f"failed to validate updated rdf (falling back to original rdf): {e}")
+def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Optional[str] = None) -> List[str]:
+    """write updated version rdfs for the given resource to dist
 
-        # get original rdf source
-        resource = yaml.load(collection_dir / resource_id / "resource.yaml")
-        for v in resource["versions"]:
-            if v["version_id"] == version_id:
-                rdf_source = v["rdf_source"]
-                break
+    Args:
+        resource: resource info
+        dist: output path
+        version_id: (if not None) only write rdf for specific version
+
+    Returns: list of updated version_ids
+
+    """
+    from imjoy_plugin_parser import get_plugin_as_rdf
+
+    resource_id = resource["id"]
+    updated_versions = []
+    for version_info in resource["versions"]:
+        version_id = version_info["version_id"]
+        if version_info["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
+            continue
+
+        # Ignore the name in the version info
+        if "name" in version_info:
+            del version_info["name"]
+
+        if isinstance(version_info["rdf_source"], dict):
+            if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
+                rdf_info = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]["source"]))
+            else:
+                rdf_info = {}
+
+            # Inherit the info from e.g. the collection
+            rdf = version_info["rdf_source"].copy()
+            rdf.update(rdf_info)
+            assert missing not in rdf.values(), rdf
+        elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
+            rdf = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]))
+            assert missing not in rdf.values(), rdf
         else:
-            raise ValueError(version_id)
+            try:
+                rdf_node = load_raw_resource_description(version_info["rdf_source"])
+            except Exception as e:
+                warnings.warn(f"Failed to interpret {version_info['rdf_source']} as rdf: {e}")
+                try:
+                    rdf_path = resolve_source(version_info["rdf_source"])
+                    rdf = yaml.load(rdf_path)
+                    if not isinstance(rdf, dict):
+                        raise TypeError(type(rdf))
+                except Exception as e:
+                    rdf = {
+                        "invalid_original_rdf_source": version_info["rdf_source"],
+                        "invalid_original_rdf_source_error": str(e),
+                    }
+            else:
+                rdf = serialize_raw_resource_description_to_dict(rdf_node)
 
-    return rdf_source
+        if "config" not in rdf:
+            rdf["config"] = {}
+        if "bioimageio" not in rdf["config"]:
+            rdf["config"]["bioimageio"] = {}
+
+        # Allowing to override fields
+        for k in version_info:
+            # Place these fields under config.bioimageio
+            if k in ["created", "doi", "status", "version_id", "version_name"]:
+                rdf["config"]["bioimageio"][k] = version_info[k]
+            else:
+                rdf[k] = version_info[k]
+
+        if "rdf_source" in rdf and isinstance(rdf["rdf_source"], dict):
+            del rdf["rdf_source"]
+
+        if "owners" in resource:
+            rdf["config"]["bioimageio"]["owners"] = resource["owners"]
+
+        rdf["id"] = f"{resource_id}/{version_id}"
+        rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
+
+        # sort rdf
+        rdf = rec_sort(rdf)
+
+        updated_versions.append(version_id)
+        rdf_deploy_path = dist / "rdfs" / resource_id / version_id / "rdf.yaml"
+        rdf_deploy_path.parent.mkdir(parents=True, exist_ok=True)
+        yaml.dump(rdf, rdf_deploy_path)
+
+    return updated_versions
+
+
+def enforce_block_style_resource(resource: dict):
+    """enforce block style except for version:rdf_source, which might be an rdf dict"""
+    resource = copy.deepcopy(resource)
+
+    rdf_sources = [v.pop("rdf_source") for v in resource.get("versions", [])]
+    resource = enforce_block_style(resource)
+    assert len(rdf_sources) == len(resource["versions"])
+    for i in range(len(rdf_sources)):
+        resource["versions"][i]["rdf_source"] = rdf_sources[i]
+
+    return resource
+
+
+def enforce_block_style(data):
+    """enforce block style in yaml data dump. Does not work with YAML(typ='safe')"""
+    if isinstance(data, list):
+        converted = comments.CommentedSeq([enforce_block_style(d) for d in data])
+    elif isinstance(data, dict):
+        converted = comments.CommentedMap({enforce_block_style(k): enforce_block_style(v) for k, v in data.items()})
+    else:
+        return data
+
+    converted.fa.set_block_style()
+    return converted
+
+
+@dataclasses.dataclass
+class KnownResource:
+    resource_id: str
+    path: Path
+    info: Dict[str, Any]
+    info_sha256: Optional[str]  # None if from partner
+    partner_resource: bool
+
+
+@dataclasses.dataclass
+class KnownResourceVersion:
+    resource: KnownResource
+    resource_id: str
+    version_id: str
+    info: Dict[str, Any]
+    rdf: dict
+    rdf_sha256: Optional[str]
+    rdf_path: Path
+
+
+def get_sha256_and_yaml(p: Path):
+    rb = p.open("rb").read()
+    return sha256(rb).hexdigest(), yaml.load(rb.decode("utf-8"))
+
+
+def iterate_known_resources(
+    collection: Path, gh_pages: Path, resource_id: str = "**", status: Optional[str] = None
+) -> Generator[KnownResource, None, None]:
+    for p in sorted((gh_pages / "partner_collection").glob(f"{resource_id}/resource.yaml")):
+        info = yaml.load(p)
+        yield KnownResource(resource_id=info["id"], path=p, info=info, info_sha256=None, partner_resource=True)
+
+    for p in sorted(collection.glob(f"{resource_id}/resource.yaml")):
+        info_sha256, info = get_sha256_and_yaml(p)
+        if status is None or info["status"] == status:
+            yield KnownResource(
+                resource_id=info["id"], path=p, info=info, info_sha256=info_sha256, partner_resource=False
+            )
+
+
+def iterate_known_resource_versions(
+    collection: Path, gh_pages: Path, resource_id: str = "**", status: Optional[str] = None
+) -> Generator[KnownResourceVersion, None, None]:
+    for known_r in iterate_known_resources(
+        collection=collection, gh_pages=gh_pages, resource_id=resource_id, status=status
+    ):
+        for v_info in known_r.info["versions"]:
+            if status is None or v_info["status"] == status:
+                v_id = v_info["version_id"]
+                rdf_path = gh_pages / "rdfs" / known_r.resource_id / v_id / "rdf.yaml"
+                if rdf_path.exists():
+                    rdf_sha256, rdf = get_sha256_and_yaml(rdf_path)  # todo: do we really need to load rdf?
+                    yield KnownResourceVersion(
+                        resource=known_r,
+                        resource_id=known_r.resource_id,
+                        version_id=v_id,
+                        info=v_info,
+                        rdf=rdf,
+                        rdf_sha256=rdf_sha256,
+                        rdf_path=rdf_path,
+                    )
+                else:
+                    warnings.warn(f"skipping undeployed r: {known_r.resource_id} v: {v_id}")

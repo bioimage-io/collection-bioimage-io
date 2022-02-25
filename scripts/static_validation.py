@@ -1,3 +1,4 @@
+import shutil
 import warnings
 from distutils.version import StrictVersion
 from pathlib import Path
@@ -7,15 +8,14 @@ import requests
 import typer
 from marshmallow import missing
 from marshmallow.utils import _Missing
-from ruamel.yaml import YAML
 
+from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
+from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import get_rdf_source, iterate_over_gh_matrix, set_gh_actions_outputs
-
-yaml = YAML(typ="safe")
+from utils import iterate_over_gh_matrix
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
@@ -164,27 +164,47 @@ def prepare_dynamic_test_cases(
     return validation_cases
 
 
-def main(dist: Path, pending_matrix: str, collection_dir: Path = Path(__file__).parent / "../collection"):
+def main(
+    pending_matrix: str,
+    dist: Path = Path(__file__).parent / "../dist/static_validation_artifact",
+    rdf_dirs: List[Path] = (
+        Path(__file__).parent / "../dist/updated_rdfs/rdfs",
+        Path(__file__).parent / "../gh-pages/rdfs",
+    ),
+):
     dynamic_test_cases = []
     for matrix in iterate_over_gh_matrix(pending_matrix):
         resource_id = matrix["resource_id"]
         version_id = matrix["version_id"]
 
-        rdf_source = get_rdf_source(collection_dir=collection_dir, resource_id=resource_id, version_id=version_id)
+        for root in rdf_dirs:
+            rdf_path = root / resource_id / version_id / "rdf.yaml"
+            if rdf_path.exists():
+                break
+        else:
+            raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
 
-        static_summary = validate(rdf_source)
-        static_summary["name"] = "bioimageio.spec static validation"
+        # add rdf to dist (future static_validation_artifact)
+        deploy_rdf_path = dist / resource_id / version_id / "rdf.yaml"
+        deploy_rdf_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(rdf_path, deploy_rdf_path)
+
+        static_summary = validate(rdf_path)
+
         static_summary_path = dist / resource_id / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if not static_summary["error"]:
-            latest_static_summary = validate(rdf_source, update_format=True)
+            latest_static_summary = validate(rdf_path, update_format=True)
             if not latest_static_summary["error"]:
-                rd = load_raw_resource_description(rdf_source, update_to_format="latest")
+                rd = load_raw_resource_description(rdf_path, update_to_format="latest")
                 assert isinstance(rd, RDF)
                 dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)
 
-            latest_static_summary["name"] = "bioimageio.spec static validation with auto-conversion to latest format"
+            if "name" not in latest_static_summary:
+                latest_static_summary[
+                    "name"
+                ] = "bioimageio.spec static validation with auto-conversion to latest format"
 
             yaml.dump(latest_static_summary, static_summary_path.with_name("validation_summary_latest_static.yaml"))
 

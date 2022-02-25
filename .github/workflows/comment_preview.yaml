@@ -1,0 +1,22 @@
+name: comment preview
+
+on:
+  workflow_run:
+    workflows: ['update collection']
+    types: [completed]
+    branches-ignore: [main]
+
+jobs:
+  comment-preview:
+    name: comment links to previews in pull request
+    runs-on: windows-2019
+    steps:
+    - name: debug ref_name
+      run: echo ${{ github.ref_name }}
+    - uses: tonyhallett/artifacts-url-comments@v1.1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+      with:
+        includes: preview,preview-collection-json
+        format: name
+        addTo: pull

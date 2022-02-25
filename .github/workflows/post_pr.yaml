@@ -1,11 +1,37 @@
-name: post PR
-
+# if an auto-update-pr was closed (and not merged) we delete the branch to detect the resource anew
+# and reopen a new, potentially updated pr
 on:
   pull_request:
     branches: [ main ]
     types: [ closed ]
 
 jobs:
-  check_for_new_resources:
-    if: github.event.pull_request.merged == false  # if true we trigger via merge commit
-    uses: bioimage-io/collection-bioimage-io/.github/workflows/auto_update_main.yaml@main
+  run:
+    if: github.event.pull_request.merged == false  # if pr was merged the branch is deleted via gh settings
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: check if remote still exists
+      id: ls-remote
+      run: |
+        out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
+        echo "::set-output name=out::$out"
+    - name: delete PR branch ${{ github.event.pull_request.head.ref }}
+      if: contains(steps.ls-remote.outputs.out, 'auto-update-')  # only delete existing auto-update- branches
+      run: git push origin --delete ${{ github.event.pull_request.head.ref }}
+    - name: trigger collection update
+      shell: python
+      run: |
+        import os
+
+        import requests
+
+        r = requests.post(
+          "${{ github.api_url }}/repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches",
+          headers=dict(
+            Accept="application/vnd.github.v3+json",
+            Authorization="token ${{ secrets.PAT }}",
+          ),
+          json=dict(ref="refs/heads/main"),
+        )
+        r.raise_for_status()

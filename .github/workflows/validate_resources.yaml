@@ -3,51 +3,71 @@ name: validate resources
 on:
   workflow_call:
     inputs:
-      pending_matrix:
-        required: true
-        type: string
-      has_pending_matrix:
-        required: true
-        type: string
       check_validation:
-        required: false
-        default: 'no'
+        description: "if 'yes' fail ci on test fail"
+        required: true
         type: string
-      deploy:
+      deploy_to:  # may contain 'gh-pages' and/or 'preview'
         required: false
-        default: 'no'
+        default: ''
         type: string
+    outputs:
+      pending_matrices:
+        description: "for each partner a matrix of resources that lack test summaries"
+        value: ${{ jobs.static-validation.outputs.pending_matrices }}
+      has_pending_matrices:
+        description: "yes/no if pending matrices are not empty"
+        value: ${{ jobs.static-validation.outputs.has_pending_matrices }}
 
 jobs:
-  static-validation:
-    if: inputs.has_pending_matrix == 'yes'
+  static-validation:  # + update rdfs
     runs-on: ubuntu-latest
     outputs:
-      has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
+      pending_matrices: ${{ steps.update_rdfs.outputs.pending_matrices }}
+      has_pending_matrices: ${{ steps.update_rdfs.outputs.has_pending_matrices }}
       dynamic_test_cases: ${{ steps.static_validation.outputs.dynamic_test_cases }}
+      has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        ref: last_ci_run
+        path: last_ci_run
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
     - name: install script deps
-      run: pip install requests typer ruamel.yaml bioimageio.spec
+      run: pip install typer bioimageio.spec lxml bioimageio.core
+    - name: update RDFs
+      id: update_rdfs
+      run: python scripts/update_rdfs.py --branch ${{ github.head_ref || github.ref }}
+    - name: check pending versions limit
+      if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
+      run: |
+        echo "::error file=scripts/update_rdfs.py,line=123,endline=124,title=Cannot retrigger in PR::Exceeding version validation limit"
+        exit 1
     - name: static validation
+      if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       id: static_validation
-      run: python scripts/static_validation.py dist/static_validation_artifact '${{ inputs.pending_matrix }}'
-    - name: debug has_dynamic_test_cases ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
-      run: echo ${{ steps.static_validation.outputs.dynamic_test_cases }}
-    - name: "Upload static validation summaries and conda envs"
+      run: python scripts/static_validation.py '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
+    - name: Upload static validation summaries and conda envs
+      if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       uses: actions/upload-artifact@v2
       with:
         name: static_validation_artifact
         path: dist/static_validation_artifact
         retention-days: 1
+    - name: check if validation passed
+      if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes' && inputs.check_validation == 'yes'
+      run: python scripts/check_validation_passed.py dist/static_validation_artifact
 
   dynamic-validation:
     needs: static-validation
     if: needs.static-validation.outputs.has_dynamic_test_cases == 'yes'
     runs-on: ubuntu-latest
     strategy:
-#      max-parallel: 1  # installing conda environments in parallel seems to fail sporadically (or does it?)
       fail-fast: false
       matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # [{env_name: ..., resource_id: ..., version_id: ..., weight_format: ...}, ...]
 
@@ -57,47 +77,44 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: static_validation_artifact
-        path: dist/static_resources
+        path: artifacts/static_validation_artifact
     - name: install validation dependencies
+      id: create_env
+      continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
+      timeout-minutes: 30
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
         mamba-version: "*"
         channel-priority: strict
         activate-environment: ${{ matrix.env_name }}
-        environment-file: dist/static_resources/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+        environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+    - name: install minimal script deps
+      if: steps.create_env.outcome != 'success'
+      run: pip install typer bioimageio.spec
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.version_id }}${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
-      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifacts ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }}
-    - name: "Upload validation summary"
+      timeout-minutes: 30
+      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }}
+    - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
         name: ${{ steps.artifact_name.outputs.name }}
-        path: dist/dynamic_validation_artifacts/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
+        path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
-
-  passed-validation:
-    needs: dynamic-validation
-    if: always()  && inputs.check_validation == 'yes'
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: download artifacts
-      uses: actions/download-artifact@v2
-      with:
-        path: artifacts
     - name: install script deps
-      run: pip install typer ruamel.yaml
-    - name: check if all validations passed
-      run: python scripts/check_validation_passed.py artifacts
+      if: steps.create_env.outcome == 'success'
+      run: pip install typer bioimageio.spec
+    - name: check if validation passed
+      if: inputs.check_validation == 'yes'
+      run: python scripts/check_validation_passed.py dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
 
   deploy:
-    needs: [static-validation, dynamic-validation]
-    if: always() && inputs.deploy == 'yes' && inputs.has_pending_matrix == 'yes'  # run even if dynamic validation fails
+    needs: dynamic-validation
+    if: always()
     runs-on: ubuntu-latest
 
     steps:
@@ -110,13 +127,22 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: artifacts
+    # todo: checkout partner gh-pages for their test summaries
     - name: install script deps
-      run: pip install typer ruamel.yaml bioimageio.spec
-    - name: prepare deployment
-      run: python scripts/deploy_test_summaries.py dist gh-pages '${{ inputs.pending_matrix }}' artifacts
+      run: pip install typer bioimageio.spec
+    - name: prepare to deploy
+      run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
+    - name: Upload preview
+      if: contains(inputs.deploy_to, 'preview')
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview
+        path: dist/gh_pages_update
+        retention-days: 90
     - name: Deploy to gh-pages 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.7
+      if: contains(inputs.deploy_to, 'gh-pages')
+      uses: JamesIves/github-pages-deploy-action@v4.2.3
       with:
         branch: gh-pages
         clean: false  # Keeping the old files
-        folder: dist
+        folder: dist/gh_pages_update

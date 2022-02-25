@@ -8,35 +8,9 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 
 import requests
 import typer
-from ruamel.yaml import YAML
 
-from utils import set_gh_actions_outputs
-
-yaml = YAML(typ="safe")
-
-
-def get_rdf_source(*, rdf_urls: List[str], doi, concept_doi) -> dict:
-    if len(rdf_urls) == 1:
-        r = requests.get(rdf_urls[0])
-        if r.status_code != 200:
-            print(
-                f"Could not get rdf.yaml for new version {doi} of {concept_doi} ({r.status_code}: {r.reason}); "
-                "skipping update"
-            )
-            rdf = {}
-        else:
-            rdf = yaml.load(r.text)
-            if not isinstance(rdf, dict):
-                print(
-                    f"Found invalid rdf.yaml (not a dict) for new version {doi} of {concept_doi}; "
-                    "writing empty rdf.yaml"
-                )
-                rdf = {}
-    else:
-        print(f"Found {len(rdf_urls)} rdf.yaml files for new version {doi} of {concept_doi}; " "writing empty rdf.yaml")
-        rdf = {}
-
-    return rdf
+from bare_utils import set_gh_actions_outputs
+from utils import enforce_block_style_resource, yaml
 
 
 def write_resource(
@@ -47,6 +21,7 @@ def write_resource(
     resource_doi: Optional[str],
     version_id: str,
     new_version: dict,
+    resource_output_path: Path,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if resource_path.exists():
         resource = yaml.load(resource_path)
@@ -89,8 +64,8 @@ def write_resource(
         del resource["doi"]
 
     assert isinstance(resource, dict)
-    resource_path.parent.mkdir(parents=True, exist_ok=True)
-    yaml.dump(resource, resource_path)
+    resource_output_path.parent.mkdir(parents=True, exist_ok=True)
+    yaml.dump(enforce_block_style_resource(resource), resource_output_path)
     return resource
 
 
@@ -114,7 +89,7 @@ def update_with_new_version(
 
 
 def update_from_zenodo(
-    collection_dir: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
+    collection: Path, dist: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
 ):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
@@ -133,7 +108,8 @@ def update_from_zenodo(
             doi = hit["doi"]  # "version" doi
             created = datetime.fromisoformat(hit["created"]).replace(tzinfo=None)
             assert isinstance(created, datetime), created
-            resource_path = collection_dir / resource_doi / "resource.yaml"
+            resource_path = collection / resource_doi / "resource.yaml"
+            resource_output_path = dist / resource_doi / "resource.yaml"
             version_name = f"revision {hit['revision']}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
@@ -153,8 +129,11 @@ def update_from_zenodo(
                 except Exception as e:
                     print(f"Failed to obtain version name: {e}")
 
+            # remove (sandbox.)zenodo prefix from version doi
+            version_id = doi.replace("10.5281/zenodo.", "").replace("10.5281/zenodo.", "")
+
             new_version = {
-                "version_id": doi,
+                "version_id": version_id,
                 "doi": doi,
                 "owners": hit["owners"],
                 "created": str(created),
@@ -168,34 +147,45 @@ def update_from_zenodo(
                 resource_id=resource_doi,
                 resource_type=resource_type,
                 resource_doi=resource_doi,
-                version_id=doi,
+                version_id=version_id,
                 new_version=new_version,
+                resource_output_path=resource_output_path,
             )
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
 
 
-def main(collection_dir: Path = Path(__file__).parent / "../collection", max_resource_count: int = 3):
+def main(
+    collection: Path = Path(__file__).parent / "../collection",
+    dist: Path = Path(__file__).parent / "../dist",
+    max_resource_count: int = 3,
+):
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
 
-    update_from_zenodo(collection_dir, updated_resources)
+    update_from_zenodo(collection, dist, updated_resources)
 
     # limit the number of PRs created
     oldest_updated_resources: List[Tuple[str, List[Dict[str, str]]]] = sorted(  # type: ignore
         updated_resources.items(), key=lambda kv: (min([vv["created"] for vv in kv[1]]), kv[0])
     )
+    print(f"{len(oldest_updated_resources)} resources to update:")
+    pprint(list(map(lambda kv: kv[0], oldest_updated_resources)))
     limited_updated_resources = dict(oldest_updated_resources[:max_resource_count])
+    print(f"limited to max {max_resource_count} of resources with auto-update branches (starting with oldest):")
+    pprint(list(limited_updated_resources.keys()))
 
     # remove pending resources (resources for which an auto-update-<resource_id> branch already exists)
     subprocess.run(["git", "fetch"])
     remote_branch_proc = subprocess.run(["git", "branch", "-r"], capture_output=True, text=True)
     remote_branches = [rb for rb in remote_branch_proc.stdout.split() if rb.startswith("origin/auto-update-")]
-    print("Found remote auto-update branches:")
+    print("Found existing auto-update branches:")
     pprint(remote_branches)
     limited_updated_resources = {
         k: v for k, v in limited_updated_resources.items() if f"origin/auto-update-{k}" not in remote_branches
     }
+    print("Resources to open a new PR for:")
+    pprint(list(limited_updated_resources.keys()))
 
     updates = [
         {

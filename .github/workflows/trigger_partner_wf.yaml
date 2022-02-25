@@ -1,0 +1,58 @@
+name: Trigger partner workflows
+
+on:
+  workflow_call:
+    inputs:
+      pending_matrices:
+        description: json string of gh matrix (to be used with fromJson())
+        type: string
+        required: true
+    secrets:
+      PAT:
+        required: true
+
+jobs:
+  trigger_partners:
+    environment: production
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(inputs.pending_matrices) }}
+        # inputs.pending_matrices looks like:
+#        include:
+#        - partner_id: ilastik
+#          pending_matrix: "... json gh style matrix"
+#        - ...
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: trigger ${{ matrix.partner_id }}
+      shell: python
+      run: |
+        import json
+        import os
+        from pathlib import Path
+
+        import requests
+
+        # load partner config
+        partner_details_path = Path("partner_details.json")
+        with partner_details_path.open() as f:
+            partner_details = json.load(f)
+
+        for config in partner_details:
+            if config["id"] == "${{ matrix.partner_id }}":
+                config = config["test_summaries"]
+                break
+        else:
+            raise RuntimeError(f"Missing partner '${{ matrix.partner_id }}' in {partner_details_path}")
+
+        r = requests.post(
+            f"${{ github.api_url }}/repos/{ config['repository'] }/actions/workflows/"
+            f"{ config['workflow'] }/dispatches",
+            headers=dict(Accept="application/vnd.github.v3+json", Authorization="token ${{ secrets.PAT }}"),
+            json=dict(ref=config["workflow_ref"], inputs=dict(pending_matrix='${{ matrix.pending_matrix }}')),
+        )
+        r.raise_for_status()
