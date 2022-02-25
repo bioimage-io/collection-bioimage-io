@@ -6,4 +6,4 @@ type: model
 versions:
 - {created: '2022-01-27 14:38:36.287116', doi: 10.5281/zenodo.5910855, name: HPA Bestfitting
     InceptionV3, rdf_source: 'https://zenodo.org/api/files/474cde37-dc44-46f3-8343-aed6bafdd0bb/rdf.yaml',
-  status: blocked, version_id: 10.5281/zenodo.5910855, version_name: revision 1}
+  status: blocked, version_id: '5910855', version_name: revision 1}

@@ -3,9 +3,8 @@ from pathlib import Path
 from pprint import pprint
 
 import typer
-from ruamel.yaml import YAML
 
-yaml = YAML(typ="safe")
+from bioimageio.spec.shared import yaml
 
 
 def main(
@@ -20,7 +19,7 @@ def main(
             failed_val.append(summary)
 
     if failed_val:
-        pprint(failed_val)
+        pprint(failed_val, width=120)
         raise typer.Exit(code=1)
 
 
