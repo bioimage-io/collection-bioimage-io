@@ -1,0 +1,14 @@
+status: accepted
+versions:
+- version_id: '6028098'
+  doi: 10.5281/zenodo.6028098
+  created: '2022-02-09 21:14:46.430029'
+  status: accepted
+  name: PlatynereisEMnucleiSegmentationBoundaryModel
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/rdf.yaml
+id: 10.5281/zenodo.6028097
+doi: 10.5281/zenodo.6028097
+type: model
+owners:
+- 77626
