@@ -13,7 +13,6 @@ versions:
     - denoising
     - unet2d
     - n2v
-    description: Demo model for denoising trained on a single SEM image with Noise2Void
     config:
       fiji:
         batchDimLength: 180
@@ -25,6 +24,7 @@ versions:
         patchDimLength: 60
         stepsFinished: 30000
     name: N2V SEM Demo
+    description: Demo model for denoising trained on a single SEM image with Noise2Void
     format_version: 0.3.2
     cite:
     - text: Buchholz, T. et al. - Content-aware image restoration for electron microscopy.

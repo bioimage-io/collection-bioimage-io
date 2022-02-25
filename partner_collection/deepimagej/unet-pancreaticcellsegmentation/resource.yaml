@@ -8,8 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
-    maintainers: []
     type: application
     tags:
     - unet
@@ -23,8 +21,6 @@ versions:
       affiliation: EPFL, UC3M
     - name: DeepImageJ
       affiliation: EPFL, UC3M
-    description: Easy example to define a 2D U-Net for segmentation with Keras and
-      import it into DeepImageJ format
     cite:
     - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
         detection, and morphometry. Nat Methods 16, 67–70 (2019).'
@@ -47,7 +43,12 @@ versions:
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
     name: 2D U-Net for binary segmentation
+    description: Easy example to define a 2D U-Net for segmentation with Keras and
+      import it into DeepImageJ format
     format_version: 0.2.2
+    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+    maintainers: []
+    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     links:
     - deepimagej/UNet2DPancreaticSegmentation
     badges:
@@ -57,5 +58,4 @@ versions:
     covers:
     - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
     - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
-    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     id: deepimagej/unet-pancreaticcellsegmentation

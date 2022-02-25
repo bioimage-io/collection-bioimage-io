@@ -8,8 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    maintainers: []
     type: application
     tags:
     - colab
@@ -20,15 +18,6 @@ versions:
     - 2D
     authors:
     - Lucas von Chamier and the ZeroCostDL4Mic Team
-    description: Supervised restoration of 2D images. CARE is a neural network capable
-      of image restoration from corrupted bio-images, first published in 2018 by Weigert
-      et al. in Nature Methods. The network allows image denoising and resolution
-      improvement in 2D and 3D images, in a supervised training manner. The function
-      of the network is essentially determined by the set of images provided in the
-      training dataset. For instance, if noisy images are provided as input and high
-      signal-to-noise ratio images are provided as targets, the network will perform
-      denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications
-      this network is based on and make sure you cite these.
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -58,8 +47,19 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     name: CARE (2D) - ZeroCostDL4Mic
+    description: Supervised restoration of 2D images. CARE is a neural network capable
+      of image restoration from corrupted bio-images, first published in 2018 by Weigert
+      et al. in Nature Methods. The network allows image denoising and resolution
+      improvement in 2D and 3D images, in a supervised training manner. The function
+      of the network is essentially determined by the set of images provided in the
+      training dataset. For instance, if noisy images are provided as input and high
+      signal-to-noise ratio images are provided as targets, the network will perform
+      denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications
+      this network is based on and make sure you cite these.
     format_version: 0.2.2
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    maintainers: []
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_CARE_2D_ZeroCostDL4Mic
@@ -74,5 +74,5 @@ versions:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/CARE2D_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/CARE2D_notebook_2.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/CARE2D_notebook_3.png
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_CARE_2D_ZeroCostDL4Mic

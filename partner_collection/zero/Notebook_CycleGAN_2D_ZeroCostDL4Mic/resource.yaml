@@ -8,8 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    maintainers: []
     type: application
     tags:
     - colab
@@ -19,15 +17,6 @@ versions:
     - 2D
     authors:
     - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    description: Unpaired image-to-image translation of 2D images. CycleGAN is a method
-      that can capture the characteristics of one image domain and figure out how
-      these characteristics could be translated into another image domain, all in
-      the absence of any paired training examples (ie transform a horse into zebra
-      or apples into oranges). While CycleGAN can potentially be used for any type
-      of image-to-image translation, we illustrate that it can be used to predict
-      what a fluorescent label would look like when imaged using another imaging modalities.
-      Note - visit the ZeroCostDL4Mic wiki to check the original publications this
-      network is based on and make sure you cite these.
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -56,8 +45,19 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     name: CycleGAN (2D) - ZeroCostDL4Mic
+    description: Unpaired image-to-image translation of 2D images. CycleGAN is a method
+      that can capture the characteristics of one image domain and figure out how
+      these characteristics could be translated into another image domain, all in
+      the absence of any paired training examples (ie transform a horse into zebra
+      or apples into oranges). While CycleGAN can potentially be used for any type
+      of image-to-image translation, we illustrate that it can be used to predict
+      what a fluorescent label would look like when imaged using another imaging modalities.
+      Note - visit the ZeroCostDL4Mic wiki to check the original publications this
+      network is based on and make sure you cite these.
     format_version: 0.2.2
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    maintainers: []
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_CycleGAN_ZeroCostDL4Mic
@@ -67,5 +67,5 @@ versions:
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cycleGAN_notebook.png
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic

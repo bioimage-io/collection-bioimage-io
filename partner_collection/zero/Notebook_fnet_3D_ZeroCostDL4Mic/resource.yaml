@@ -8,8 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    maintainers: []
     type: application
     tags:
     - colab
@@ -20,15 +18,6 @@ versions:
     - 3D
     authors:
     - Lucas von Chamier and the ZeroCostDL4Mic Team
-    description: Paired image-to-image translation of 3D images. Label-free Prediction
-      (fnet) is a neural network used to infer the features of cellular structures
-      from brightfield or EM images without coloured labels. The network is trained
-      using paired training images from the same field of view, imaged in a label-free
-      (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained,
-      this allows the user to identify certain structures from brightfield images
-      alone. The performance of fnet may depend significantly on the structure at
-      hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications
-      this network is based on and make sure you cite these.
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -58,8 +47,19 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
+    description: Paired image-to-image translation of 3D images. Label-free Prediction
+      (fnet) is a neural network used to infer the features of cellular structures
+      from brightfield or EM images without coloured labels. The network is trained
+      using paired training images from the same field of view, imaged in a label-free
+      (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained,
+      this allows the user to identify certain structures from brightfield images
+      alone. The performance of fnet may depend significantly on the structure at
+      hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications
+      this network is based on and make sure you cite these.
     format_version: 0.2.2
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    maintainers: []
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_fnet_3D_ZeroCostDL4Mic
@@ -69,5 +69,5 @@ versions:
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/fnet_notebook.png
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_fnet_3D_ZeroCostDL4Mic
