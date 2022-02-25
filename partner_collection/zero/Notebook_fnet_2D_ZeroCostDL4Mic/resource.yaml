@@ -8,7 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    name: Label-free Prediction - fnet - (2D) ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    maintainers: []
+    type: application
     tags:
     - colab
     - notebook
@@ -16,6 +18,8 @@ versions:
     - labelling
     - ZeroCostDL4Mic
     - 2D
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
     description: Paired image-to-image translation of 2D images. Label-free Prediction
       (fnet) is a neural network used to infer the features of cellular structures
       from brightfield or EM images without coloured labels. The network is trained
@@ -25,9 +29,6 @@ versions:
       alone. The performance of fnet may depend significantly on the structure at
       hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications
       this network is based on and make sure you cite these.
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
-    type: application
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -56,18 +57,17 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: Label-free Prediction - fnet - (2D) ZeroCostDL4Mic
     format_version: 0.2.2
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/fnet_notebook.png
+    links:
+    - zero/Notebook Preview
+    - zero/Dataset_fnet_DeepBacs
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
-    links:
-    - zero/Notebook Preview
-    - zero/Dataset_fnet_DeepBacs
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/fnet_notebook.png
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_fnet_2D_ZeroCostDL4Mic
