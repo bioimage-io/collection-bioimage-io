@@ -1,0 +1,46 @@
+status: accepted
+id: fiji/Fiji
+type: application
+versions:
+- name: Fiji
+  version_id: latest
+  version_name: latest
+  status: accepted
+  rdf_source:
+    root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+    tags:
+    - fiji
+    - software
+    format_version: 0.2.2
+    description: Fiji is an image processing package — a "batteries-included" distribution
+      of ImageJ, bundling many plugins which facilitate scientific image analysis.
+    name: Fiji
+    type: application
+    config:
+      id: fiji
+      name: Fiji
+      tags:
+      - fiji
+      logo: https://fiji.sc/site/logo.png
+      icon: https://fiji.sc/site/logo.png
+      splash_title: Fiji
+      splash_subtitle: Fiji is just ImageJ
+      splash_feature_list: []
+      explore_button_text: Start Exploring
+      background_image: static/img/zoo-background.svg
+      resource_types:
+      - model
+      - notebook
+      url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    source: https://fiji.sc/
+    cite:
+      text: 'Schindelin, J., Arganda-Carreras, I., Frise, E. et al. Fiji: an open-source
+        platform for biological-image analysis. Nat Methods 9, 676–682 (2012).'
+      doi: https://doi.org/10.1038/nmeth.2019
+    passive: true
+    icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
+    git_repo: https://github.com/fiji/fiji,
+    authors:
+    - Fiji community
+    documentation: https://fiji.sc/
+    id: fiji/Fiji

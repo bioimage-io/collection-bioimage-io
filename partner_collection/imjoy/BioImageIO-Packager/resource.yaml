@@ -1,0 +1,40 @@
+status: accepted
+id: imjoy/BioImageIO-Packager
+type: application
+versions:
+- name: ImJoy Collection
+  version_id: latest
+  version_name: latest
+  status: accepted
+  rdf_source:
+    root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+    documentation: https://imjoy.io/docs
+    tags:
+    - imjoy
+    - bioimage.io
+    format_version: 0.2.2
+    description: Resources for BioImgage.IO curated by the ImJoy Team.
+    name: ImJoy Collection
+    type: application
+    config:
+      id: imjoy
+      name: ImJoy
+      tags:
+      - imjoy
+      logo: https://imjoy.io/static/img/imjoy-icon.svg
+      icon: https://imjoy.io/static/img/imjoy-icon.svg
+      splash_title: ImJoy
+      splash_subtitle: Deep Learning Made Easy!
+      splash_feature_list:
+      - Minimal and flexible plugin powered web application
+      - Server-less progressive web application with offline support
+      - Rich and interactive user interface powered by web technologies
+      explore_button_text: Start Exploring
+      background_image: static/img/zoo-background.svg
+      resource_types:
+      - notebook
+      - application
+      default_type: application
+      url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
+    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
+    id: imjoy/BioImageIO-Packager

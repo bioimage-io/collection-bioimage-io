@@ -1,0 +1,71 @@
+status: accepted
+id: zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic
+type: application
+versions:
+- name: DenoiSeg (2D) - ZeroCostDL4Mic
+  version_id: latest
+  version_name: latest
+  status: accepted
+  rdf_source:
+    root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Buchholz TO., Prakash M., Schmidt D., Krull A., Jug F. (2020) DenoiSeg:
+        Joint Denoising and Segmentation. In: Bartoli A., Fusiello A. (eds) Computer
+        Vision – ECCV 2020 Workshops. ECCV 2020. Lecture Notes in Computer Science,
+        vol 12535. Springer, Cham. https://doi.org/10.1007/978-3-030-66415-2_21'
+      doi: https://doi.org/10.1007/978-3-030-66415-2_21
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    tags:
+    - colab
+    - notebook
+    - CycleGAN
+    - ZeroCostDL4Mic
+    - 2D
+    format_version: 0.2.2
+    description: Joint denoising and binary segmentation of 2D images. DenoiSeg 2D
+      is deep-learning method that can be used to jointly denoise and segment 2D microscopy
+      images. The benefits of using DenoiSeg (compared to other Deep Learning-based
+      segmentation methods) are more prononced when only a few annotated images are
+      available. However, the denoising part requires many images to perform well.
+      All the noisy images don't need to be labeled to train DenoiSeg. Note - visit
+      the ZeroCostDL4Mic wiki to check the original publications this network is based
+      on and make sure you cite these.
+    name: DenoiSeg (2D) - ZeroCostDL4Mic
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    type: application
+    maintainers: []
+    config:
+      id: zero
+      name: ZeroCostDL4Mic
+      version: 1.7.1
+      tags:
+      - ZeroCostDL4Mic
+      logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      splash_title: ZeroCostDL4Mic
+      splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
+        in Microscopy
+      splash_feature_list: []
+      explore_button_text: Start Exploring
+      background_image: static/img/zoo-background.svg
+      resource_types:
+      - model
+      - application
+      - dataset
+      default_type: application
+      url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Denoiseg_notebook.png
+    links:
+    - zero/Notebook Preview
+    id: zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic

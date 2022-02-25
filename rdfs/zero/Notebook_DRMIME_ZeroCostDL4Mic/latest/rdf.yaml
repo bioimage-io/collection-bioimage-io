@@ -1,0 +1,61 @@
+authors:
+- Guillaume Jacquemet and the ZeroCostDL4Mic Team
+badges:
+- icon: https://colab.research.google.com/assets/colab-badge.svg
+  label: Open in Colab
+  url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+cite:
+- doi: https://doi.org/10.1038/s41467-021-22518-0
+  text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+    for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+- doi: http://proceedings.mlr.press/v121/nan20a.html
+  text: 'Abhishek Nan, Matthew Tennant, Uriel Rubin, Nilanjan Ray. DRMIME: Differentiable
+    Mutual Information and Matrix Exponential for Multi-Resolution Image Registration.
+    Proceedings of the Third Conference on Medical Imaging with Deep Learning, PMLR
+    121:527-543, 2020.'
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: application
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  id: zero
+  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  name: ZeroCostDL4Mic
+  resource_types:
+  - model
+  - application
+  - dataset
+  splash_feature_list: []
+  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
+    Microscopy
+  splash_title: ZeroCostDL4Mic
+  tags:
+  - ZeroCostDL4Mic
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  version: 1.7.1
+covers:
+- https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DrMIME_notebook.png
+description: DRMIME is an network that can be used to register microscopy images (affine
+  and perspective registration).
+documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+format_version: 0.2.2
+git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+id: zero/Notebook_DRMIME_ZeroCostDL4Mic/latest
+links:
+- zero/Notebook Preview
+maintainers: []
+name: DRMIME - ZeroCostDL4Mic
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_DRMIME_ZeroCostDL4Mic/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+tags:
+- colab
+- notebook
+- DRMIME
+- image registration
+- ZeroCostDL4Mic
+type: application

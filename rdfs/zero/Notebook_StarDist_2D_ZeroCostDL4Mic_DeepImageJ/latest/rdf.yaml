@@ -1,0 +1,73 @@
+authors:
+- Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
+badges:
+- icon: https://colab.research.google.com/assets/colab-badge.svg
+  label: Open in Colab
+  url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+cite:
+- doi: https://doi.org/10.1038/s41467-021-22518-0
+  text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+    for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+- doi: https://doi.org/10.1007/978-3-030-00934-2_30
+  text: Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection
+    with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: application
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  id: zero
+  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  name: ZeroCostDL4Mic
+  resource_types:
+  - model
+  - application
+  - dataset
+  splash_feature_list: []
+  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
+    Microscopy
+  splash_title: ZeroCostDL4Mic
+  tags:
+  - ZeroCostDL4Mic
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  version: 1.7.1
+covers:
+- https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
+- https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
+- https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
+- https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
+description: 2D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning
+  method that can be used to segment cell nuclei in 2D (xy) images. Note - visit the
+  ZeroCostDL4Mic wiki to check the original publications this network is based on
+  and make sure you cite these. Networks trained in this notebook can be used in Fiji
+  via deepImageJ and StarDist plugins for ImageJ.
+documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+format_version: 0.2.2
+git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+id: zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest
+links:
+- zero/Notebook Preview
+- zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+- zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic
+- zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic
+- zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+- zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
+- zero/Dataset_StarDist_2D_DeepBacs
+maintainers: []
+name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
+root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+tags:
+- colab
+- notebook
+- StarDist
+- segmentation
+- ZeroCostDL4Mic
+- 2D
+- deepimagej
+type: application

@@ -1,0 +1,37 @@
+status: accepted
+id: hpa/HPA-Classification
+type: application
+versions:
+- name: HPA Collection
+  version_id: latest
+  version_name: latest
+  status: accepted
+  rdf_source:
+    root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    tags:
+    - hpa
+    - bioimage.io
+    format_version: 0.2.2
+    description: Resources for BioImgage.IO curated by the the cellprofiling group
+      at HPA.
+    name: HPA Collection
+    type: application
+    config:
+      id: hpa
+      name: HPA
+      tags:
+      - hpa
+      logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      about_url: https://www.proteinatlas.org/
+      splash_title: The Human Protein Atlas
+      splash_subtitle:
+      splash_feature_list: []
+      explore_button_text: Start Exploring
+      background_image: static/img/zoo-background.svg
+      resource_types:
+      - model
+      - application
+      default_type: model
+    source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
+    id: hpa/HPA-Classification

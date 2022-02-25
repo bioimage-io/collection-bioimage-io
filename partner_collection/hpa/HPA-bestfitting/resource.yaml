@@ -1,0 +1,53 @@
+status: accepted
+id: hpa/HPA-bestfitting
+type: model
+versions:
+- name: HPA-bestfitting
+  version_id: latest
+  version_name: latest
+  status: accepted
+  rdf_source:
+    root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    tags:
+    - classification
+    - densenet-121
+    - inception-v3
+    - resnet-34
+    - resnet-50
+    format_version: 0.2.2
+    description: A CNN model using focal loss and image augmentation, optimized with
+      Adam optimizer.
+    name: HPA-bestfitting
+    type: model
+    config:
+      id: hpa
+      name: HPA
+      tags:
+      - hpa
+      logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      about_url: https://www.proteinatlas.org/
+      splash_title: The Human Protein Atlas
+      splash_subtitle:
+      splash_feature_list: []
+      explore_button_text: Start Exploring
+      background_image: static/img/zoo-background.svg
+      resource_types:
+      - model
+      - application
+      default_type: model
+    license: MIT
+    cite:
+    badges:
+    - label: HPA Competition
+      ext: 1st
+      url: https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard
+    framework: pytorch
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
+    covers:
+    - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
+    - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
+    authors:
+    - Shubin Dai
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
+    id: hpa/HPA-bestfitting
