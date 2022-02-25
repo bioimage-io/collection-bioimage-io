@@ -1,0 +1,14 @@
+status: accepted
+versions:
+- version_id: '6079315'
+  doi: 10.5281/zenodo.6079315
+  created: '2022-02-14 17:05:09.708440'
+  status: accepted
+  name: EpitheliaAffinityModel
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/rdf.yaml
+id: 10.5281/zenodo.6079314
+doi: 10.5281/zenodo.6079314
+type: model
+owners:
+- 77626
