@@ -8,6 +8,27 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    maintainers: []
+    authors:
+    - Christoph Spahn
+    - Mike Heilemann
+    format_version: 0.2.2
+    tags:
+    - YOLOv2
+    - object detection
+    - DeepBacs
+    - 2D
+    description: Training and test images of E. coli cells for object detection and
+      classification.
+    cite:
+    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
+        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
+        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
+        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
+        doi: https://doi.org/10.1101/2021.11.03.467152'
+      doi: https://doi.org/10.1101/2021.11.03.467152
+    type: dataset
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -29,27 +50,6 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     name: Escherichia coli growth stage object detection dataset - DeepBacs
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-    maintainers: []
-    cite:
-    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
-        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
-        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
-        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
-        doi: https://doi.org/10.1101/2021.11.03.467152'
-      doi: https://doi.org/10.1101/2021.11.03.467152
-    authors:
-    - Christoph Spahn
-    - Mike Heilemann
-    format_version: 0.2.2
-    type: dataset
-    tags:
-    - YOLOv2
-    - object detection
-    - DeepBacs
-    - 2D
-    description: Training and test images of E. coli cells for object detection and
-      classification.
     download_url: https://zenodo.org/record/5551016
     covers:
     - https://zenodo.org/api/iiif/v2/e30f5766-cc61-4a7c-9d36-30681f2dcbc2:677b2046-5d0b-49df-b231-b5470b6fcbc8:A_Object_detection_cell_cycle.png/full/750,/0/default.png
