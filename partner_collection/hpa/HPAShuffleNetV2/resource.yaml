@@ -8,7 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-    format_version: 0.1.0
+    type: model
     config:
       id: hpa
       name: HPA
@@ -32,8 +32,8 @@ versions:
     - classification
     - imjoy
     description: A light-weight model for HPA image classification competition
-    type: model
     name: HPA ShuffleNetV2
+    format_version: 0.1.0
     cite:
     authors:
     - Moshe Livne
