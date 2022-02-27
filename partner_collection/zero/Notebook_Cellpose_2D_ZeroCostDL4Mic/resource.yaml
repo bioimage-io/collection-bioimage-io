@@ -8,7 +8,22 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: application
+    description: Instance segmentation of 2D and 3D images. Cellpose is a generalist
+      algorithm for cellular segmentation.
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Stringer, C., Wang, T., Michaelos, M. et al. Cellpose: a generalist algorithm
+        for cellular segmentation. Nat Methods 18, 100–106 (2021). https://doi.org/10.1038/s41592-020-01018-x'
+      doi: https://doi.org/10.1038/s41592-020-01018-x
+    format_version: 0.2.2
+    tags:
+    - colab
+    - notebook
+    - Cellpose
+    - Segmentation
+    - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -30,37 +45,18 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags:
-    - colab
-    - notebook
-    - Cellpose
-    - Segmentation
-    - ZeroCostDL4Mic
-    maintainers: []
+    name: Cellpose (2D and 3D) - ZeroCostDL4Mic
+    type: application
     authors:
     - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    description: Instance segmentation of 2D and 3D images. Cellpose is a generalist
-      algorithm for cellular segmentation.
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Stringer, C., Wang, T., Michaelos, M. et al. Cellpose: a generalist algorithm
-        for cellular segmentation. Nat Methods 18, 100–106 (2021). https://doi.org/10.1038/s41592-020-01018-x'
-      doi: https://doi.org/10.1038/s41592-020-01018-x
-    name: Cellpose (2D and 3D) - ZeroCostDL4Mic
-    format_version: 0.2.2
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    maintainers: []
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_2.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_3.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_4.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_5.png
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
@@ -69,4 +65,8 @@ versions:
     - zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic
     - zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
     - zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_Cellpose_2D_ZeroCostDL4Mic

@@ -8,7 +8,15 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    type: application
+    description: Resources for BioImgage.IO curated by the ilastik team.
+    cite:
+    - doi: 10.1038/s41592-019-0582-9
+      text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
+        learning for (bio)image analysis. Nat Methods 16, 1226-1232 (2019).'
+    format_version: 0.2.2
+    tags:
+    - ilastik
+    - bioimage.io
     config:
       id: ilastik
       name: ilastik
@@ -26,21 +34,13 @@ versions:
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
     documentation: https://ilastik.org
-    tags:
-    - ilastik
-    - bioimage.io
-    maintainers:
-    - name: ilastik Team
-      github_user: ilastik
+    name: Ilastik Collection
+    type: application
     authors:
     - name: ImJoy Team
     - name: ilastik Team
-    description: Resources for BioImgage.IO curated by the ilastik team.
-    cite:
-    - doi: 10.1038/s41592-019-0582-9
-      text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
-        learning for (bio)image analysis. Nat Methods 16, 1226-1232 (2019).'
-    name: Ilastik Collection
-    format_version: 0.2.2
+    maintainers:
+    - name: ilastik Team
+      github_user: ilastik
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
     id: ilastik/live-cell-boundary-model
