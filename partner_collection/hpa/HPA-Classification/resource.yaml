@@ -28,10 +28,10 @@ versions:
       - model
       - application
       default_type: model
-    format_version: 0.2.2
+    name: HPA Collection
     description: Resources for BioImgage.IO curated by the the cellprofiling group
       at HPA.
+    format_version: 0.2.2
     type: application
-    name: HPA Collection
     source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
     id: hpa/HPA-Classification

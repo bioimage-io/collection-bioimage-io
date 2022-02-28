@@ -29,22 +29,22 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    format_version: 0.2.2
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    authors: []
-    documentation: https://deepimagej.github.io/deepimagej/
-    type: collection
+    name: deepImageJ Collection
     cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
-    name: deepImageJ Collection
-    download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
+      doi: 10.1038/s41592-021-01262-9
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    format_version: 0.2.2
+    documentation: https://deepimagej.github.io/deepimagej/
+    authors: []
+    type: collection
     source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
     links:
     - deepimagej/deepimagej
     - deepimagej/EVsTEMsegmentationFRUNet
     - imjoy/BioImageIO-Packager
+    download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
     id: deepimagej/FRUNet2DsEVSegmentation

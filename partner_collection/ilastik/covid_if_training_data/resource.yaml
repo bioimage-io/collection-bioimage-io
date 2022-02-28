@@ -19,13 +19,13 @@ versions:
     - instance-segmentation
     maintainers:
     - orcid: 0000-0002-8567-6389
+      name: Fynn Beuttenmüller
       affiliation: EMBL Heidelberg
       github_user: fynnbe
-      name: Fynn Beuttenmüller
     - orcid: 0000-0001-6562-7187
+      name: Constantin Pape
       affiliation: EMBL Heidelberg
       github_user: constantinpape
-      name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -42,21 +42,21 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    format_version: 0.2.1
-    description: Training data for cell and nucleus segmentation as well as infection
-      classification in IF data of Covid-19 infected cells.
-    authors:
-    - name: Constantin Pape
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
-    type: dataset
+    name: Covid-IF Training Data
     cite:
     - doi: https://doi.org/10.1002/bies.202000257
       text: Pape, Remme et al.
-    name: Covid-IF Training Data
+    description: Training data for cell and nucleus segmentation as well as infection
+      classification in IF data of Covid-19 infected cells.
+    format_version: 0.2.1
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
+    authors:
+    - name: Constantin Pape
+    type: dataset
+    license: CC-BY-4.0
     source: https://zenodo.org/record/5092850
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover1.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover2.jpg
-    license: CC-BY-4.0
     id: ilastik/covid_if_training_data

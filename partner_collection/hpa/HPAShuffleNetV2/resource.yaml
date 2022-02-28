@@ -30,10 +30,10 @@ versions:
       - model
       - application
       default_type: model
-    format_version: 0.1.0
-    description: A light-weight model for HPA image classification competition
-    type: model
     name: HPA ShuffleNetV2
+    description: A light-weight model for HPA image classification competition
+    format_version: 0.1.0
+    type: model
     cite:
     authors:
     - Moshe Livne

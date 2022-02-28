@@ -31,14 +31,18 @@ versions:
       - model
       - application
       default_type: model
-    format_version: 0.2.2
+    name: HPA-bestfitting
     description: A CNN model using focal loss and image augmentation, optimized with
       Adam optimizer.
+    format_version: 0.2.2
     type: model
-    name: HPA-bestfitting
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     framework: pytorch
-    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
     cite:
+    authors:
+    - Shubin Dai
+    license: MIT
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
     badges:
     - label: HPA Competition
       ext: 1st
@@ -46,8 +50,4 @@ versions:
     covers:
     - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
     - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
-    license: MIT
-    authors:
-    - Shubin Dai
-    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     id: hpa/HPA-bestfitting
