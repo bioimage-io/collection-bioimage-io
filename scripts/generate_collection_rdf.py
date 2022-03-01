@@ -11,23 +11,23 @@ from bioimageio.spec.shared import yaml
 from utils import iterate_known_resources
 
 SUMMARY_FIELDS = [
-    "id",
-    "icon",
-    "owners",
     "authors",
+    "badges",
     "covers",
     "description",
+    "download_url",
+    "github_repo",
+    "icon",
+    "id",
     "license",
     "links",
     "name",
+    "owners",
     "previous_versions",
     "rdf_source",
     "source",
     "tags",
     "type",
-    "download_url",
-    "badges",
-    "github_repo",
 ]
 
 
