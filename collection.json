@@ -2896,6 +2896,39 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
+      ],
+      "description": "{organelle} segmentation in EM of platynereis.",
+      "id": "10.5281/zenodo.6028097/6028098",
+      "license": "CC-BY-4.0",
+      "links": [
+        "ilastik/platynereis_em_training_data",
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "PlatynereisEMnucleiSegmentationBoundaryModel",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028097/6028098/rdf.yaml",
+      "tags": [
+        "unet",
+        "nuclei",
+        "instance-segmentation",
+        "electron-microscopy",
+        "platynereis",
+        "affinity-prediction"
+      ],
+      "type": "model"
+    },
+    {
+      "authors": [
+        {
+          "name": "Constantin Pape; @constantinpape"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
@@ -2930,13 +2963,13 @@
       "application": 47,
       "collection": 17,
       "dataset": 33,
-      "model": 16
+      "model": 17
     },
     "n_resources": {
       "application": 47,
       "collection": 17,
       "dataset": 33,
-      "model": 13
+      "model": 14
     },
     "partners": [
       {
