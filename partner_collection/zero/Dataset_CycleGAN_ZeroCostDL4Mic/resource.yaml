@@ -8,8 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk
+      and SRRF reconstructed images)
+    type: dataset
+    maintainers: []
+    name: CycleGAN example training and test dataset - ZeroCostDL4Mic
     authors:
     - Guillaume Jacquemet
+    format_version: 0.2.2
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    documentation: https://doi.org/10.5281/zenodo.3941884
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -33,17 +44,6 @@ versions:
     tags:
     - CycleGAN
     - ZeroCostDL4Mic
-    type: dataset
-    name: CycleGAN example training and test dataset - ZeroCostDL4Mic
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    documentation: https://doi.org/10.5281/zenodo.3941884
-    format_version: 0.2.2
-    maintainers: []
-    description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk
-      and SRRF reconstructed images)
     download_url: https://doi.org/10.5281/zenodo.3941884
     covers:
     - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png

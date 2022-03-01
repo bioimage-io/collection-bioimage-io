@@ -9,8 +9,27 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    description: Training data from the challenge on 3d EM segmentation on neuronal
+      processes.
+    type: dataset
+    maintainers:
+    - affiliation: EMBL Heidelberg
+      github_user: fynnbe
+      orcid: 0000-0002-8567-6389
+      name: Fynn Beuttenmüller
+    - affiliation: EMBL Heidelberg
+      github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+      name: Constantin Pape
+    name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
+      Images'
     authors:
     - name: Constantin Pape
+    format_version: 0.2.1
+    cite:
+    - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
+      url: https://cremi.org/
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
     config:
       id: ilastik
       name: ilastik
@@ -34,25 +53,6 @@ versions:
     - instance-segmentation
     - cremi-challenge
     - 3D
-    type: dataset
-    name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
-      Images'
-    cite:
-    - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
-      url: https://cremi.org/
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
-    format_version: 0.2.1
-    maintainers:
-    - name: Fynn Beuttenmüller
-      github_user: fynnbe
-      orcid: 0000-0002-8567-6389
-      affiliation: EMBL Heidelberg
-    - name: Constantin Pape
-      github_user: constantinpape
-      orcid: 0000-0001-6562-7187
-      affiliation: EMBL Heidelberg
-    description: Training data from the challenge on 3d EM segmentation on neuronal
-      processes.
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png

@@ -8,8 +8,20 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    description: Resources for BioImgage.IO curated by the ilastik team.
+    type: application
+    maintainers:
+    - name: ilastik Team
+      github_user: ilastik
+    name: Ilastik Collection
     authors:
     - name: ilastik Team
+    format_version: 0.2.2
+    cite:
+    - text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
+        learning for (bio)image analysis. Nat Methods 16, 1226-1232 (2019).'
+      doi: 10.1038/s41592-019-0582-9
+    documentation: https://ilastik.org
     config:
       id: ilastik
       name: ilastik
@@ -29,17 +41,5 @@ versions:
     tags:
     - ilastik
     - bioimage.io
-    type: application
-    name: Ilastik Collection
-    cite:
-    - text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
-        learning for (bio)image analysis. Nat Methods 16, 1226-1232 (2019).'
-      doi: 10.1038/s41592-019-0582-9
-    documentation: https://ilastik.org
-    format_version: 0.2.2
-    maintainers:
-    - name: ilastik Team
-      github_user: ilastik
-    description: Resources for BioImgage.IO curated by the ilastik team.
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
     id: ilastik/ilastik
