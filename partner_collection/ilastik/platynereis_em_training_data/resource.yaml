@@ -8,28 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    name: Platynereis EM Traning Data
-    maintainers:
-    - name: Fynn Beuttenmüller
-      affiliation: EMBL Heidelberg
-      orcid: 0000-0002-8567-6389
-      github_user: fynnbe
-    - name: Constantin Pape
-      affiliation: EMBL Heidelberg
-      orcid: 0000-0001-6562-7187
-      github_user: constantinpape
-    tags:
-    - electron-microscopy
-    - platynereis
-    - cells
-    - cilia
-    - nuclei
-    - instance-segmentation
-    - 3D
-    authors:
-    - name: Constantin Pape
-    description: Training data for EM segmentation of cellular membranes, nuclei,
-      cuticle and cilia in Platynereis.
     config:
       id: ilastik
       name: ilastik
@@ -46,14 +24,36 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    tags:
+    - electron-microscopy
+    - platynereis
+    - cells
+    - cilia
+    - nuclei
+    - instance-segmentation
+    - 3D
+    format_version: 0.2.1
+    maintainers:
+    - name: Fynn Beuttenmüller
+      affiliation: EMBL Heidelberg
+      github_user: fynnbe
+      orcid: 0000-0002-8567-6389
+    - name: Constantin Pape
+      affiliation: EMBL Heidelberg
+      github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+    authors:
+    - name: Constantin Pape
+    name: Platynereis EM Traning Data
+    description: Training data for EM segmentation of cellular membranes, nuclei,
+      cuticle and cilia in Platynereis.
     cite:
     - doi: https://doi.org/10.1016/j.cell.2021.07.017
       text: Vergara, Pape, Meechan et al.
     type: dataset
-    format_version: 0.2.1
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
-    license: CC-BY-4.0
-    source: https://doi.org/10.5281/zenodo.3675220
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png
+    license: CC-BY-4.0
+    source: https://doi.org/10.5281/zenodo.3675220
     id: ilastik/platynereis_em_training_data
