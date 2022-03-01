@@ -23,11 +23,11 @@ SUMMARY_FIELDS = [
     "links",
     "name",
     "owners",
-    "previous_versions",
     "rdf_source",
     "source",
     "tags",
     "type",
+    "versions",
 ]
 
 
@@ -69,9 +69,9 @@ def main(
             if latest_version is None:
                 latest_version = this_version
                 latest_version["id"] = f"{r.resource_id}/{version_id}"  # todo: do we need to set this here?
-                latest_version["previous_versions"] = []
+                latest_version["versions"] = [this_version["id"].split("/")[-1]]
             else:
-                latest_version["previous_versions"].append(this_version["id"])
+                latest_version["versions"].append(this_version["id"].split("/")[-1])
 
         if latest_version is None:
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
@@ -82,9 +82,7 @@ def main(
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1
-            n_accepted_versions[type_] = (
-                n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
-            )
+            n_accepted_versions[type_] = n_accepted_versions.get(type_, 0) + 1 + len(latest_version["versions"])
 
     print(f"new collection rdf contains {sum(n_accepted.values())} accepted resources.")
     print("accepted resources per type:")
