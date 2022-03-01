@@ -8,13 +8,22 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
     maintainers: []
-    description: Paired bright field images and segmented binary masks of live E.
-      coli cells.
+    type: dataset
+    tags:
+    - U-Net
+    - multilabel
+    - segmentation
+    - DeepBacs
+    - 2D
     authors:
     - Mia Conduit
     - Séamus Holden
+    description: Paired bright field images and segmented binary masks of live E.
+      coli cells.
+    format_version: 0.2.2
+    name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -35,15 +44,6 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-    tags:
-    - U-Net
-    - multilabel
-    - segmentation
-    - DeepBacs
-    - 2D
-    format_version: 0.2.2
-    type: dataset
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,

@@ -8,13 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    name: Ilastik Collection
+    documentation: https://ilastik.org
     maintainers:
     - name: ilastik Team
       github_user: ilastik
-    description: Resources for BioImgage.IO curated by the ilastik team.
+    type: application
+    tags:
+    - ilastik
+    - bioimage.io
     authors:
     - name: ilastik Team
+    description: Resources for BioImgage.IO curated by the ilastik team.
+    format_version: 0.2.2
+    name: Ilastik Collection
     config:
       id: ilastik
       name: ilastik
@@ -31,12 +37,6 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    documentation: https://ilastik.org
-    tags:
-    - ilastik
-    - bioimage.io
-    format_version: 0.2.2
-    type: application
     cite:
     - doi: 10.1038/s41592-019-0582-9
       text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
