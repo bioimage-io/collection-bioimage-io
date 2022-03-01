@@ -8,10 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    tags:
-    - StarDist
-    - ZeroCostDL4Mic
-    maintainers: []
+    authors:
+    - Gautier Follain
+    - Guillaume Jacquemet
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -32,6 +31,10 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    tags:
+    - StarDist
+    - ZeroCostDL4Mic
+    type: dataset
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -42,13 +45,10 @@ versions:
         Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv,
         2020. DOI: https://doi.org/10.1101/2020.09.22.306233'
       doi: https://doi.org/10.1101/2020.09.22.306233
-    description: Paired brightfield images of cancer cells and corresponding masks
-    format_version: 0.2.2
     documentation: https://zenodo.org/record/4034939
-    authors:
-    - Gautier Follain
-    - Guillaume Jacquemet
-    type: dataset
+    format_version: 0.2.2
+    maintainers: []
+    description: Paired brightfield images of cancer cells and corresponding masks
     download_url: https://zenodo.org/record/4034939
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png

@@ -9,22 +9,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    tags:
-    - electron-microscopy
-    - brain
-    - neurons
-    - instance-segmentation
-    - cremi-challenge
-    - 3D
-    maintainers:
-    - orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
-      affiliation: EMBL Heidelberg
-      github_user: fynnbe
-    - orcid: 0000-0001-6562-7187
-      name: Constantin Pape
-      affiliation: EMBL Heidelberg
-      github_user: constantinpape
+    authors:
+    - name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -41,21 +27,35 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    tags:
+    - electron-microscopy
+    - brain
+    - neurons
+    - instance-segmentation
+    - cremi-challenge
+    - 3D
+    type: dataset
     name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
       Images'
     cite:
     - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
       url: https://cremi.org/
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
+    format_version: 0.2.1
+    maintainers:
+    - name: Fynn Beuttenmüller
+      github_user: fynnbe
+      orcid: 0000-0002-8567-6389
+      affiliation: EMBL Heidelberg
+    - name: Constantin Pape
+      github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+      affiliation: EMBL Heidelberg
     description: Training data from the challenge on 3d EM segmentation on neuronal
       processes.
-    format_version: 0.2.1
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
-    authors:
-    - name: Constantin Pape
-    type: dataset
-    source: https://cremi.org/
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png
+    source: https://cremi.org/
     id: ilastik/cremi_training_data
