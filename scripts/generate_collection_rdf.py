@@ -71,7 +71,7 @@ def main(
                 latest_version["id"] = f"{r.resource_id}/{version_id}"  # todo: do we need to set this here?
                 latest_version["previous_versions"] = []
             else:
-                latest_version["previous_versions"].append(this_version)
+                latest_version["previous_versions"].append(this_version["id"])
 
         if latest_version is None:
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
