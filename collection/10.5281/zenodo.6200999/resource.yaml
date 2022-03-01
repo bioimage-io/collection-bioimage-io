@@ -30,6 +30,6 @@ versions:
   doi: 10.5281/zenodo.6201000
   name: HPA Nuclei Segmentation (DPNUnet)
   status: blocked
-  version_id: 10.5281/zenodo.6201000
+  version_id: '6201000'
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/rdf.yaml
