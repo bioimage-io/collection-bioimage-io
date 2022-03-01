@@ -8,31 +8,25 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    authors:
+    name: LIVECell
+    maintainers:
+    - name: Fynn Beuttenmüller
+      affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
+      github_user: fynnbe
     - name: Constantin Pape
-    format_version: 0.2.1
-    cite:
-    - doi: https://doi.org/10.1038/s41592-021-01249-6
-      text: Edlund et al.
+      affiliation: EMBL Heidelberg
+      orcid: 0000-0001-6562-7187
+      github_user: constantinpape
     tags:
     - 2D
     - transmission-light-microscopy
     - label-free
     - cells
     - instance-segmentation
-    name: LIVECell
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
-    maintainers:
-    - affiliation: EMBL Heidelberg
-      name: Fynn Beuttenmüller
-      github_user: fynnbe
-      orcid: 0000-0002-8567-6389
-    - affiliation: EMBL Heidelberg
-      name: Constantin Pape
-      github_user: constantinpape
-      orcid: 0000-0001-6562-7187
+    authors:
+    - name: Constantin Pape
     description: LIVECell—A large-scale dataset for label-free live cell segmentation
-    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -49,8 +43,14 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg
+    cite:
+    - doi: https://doi.org/10.1038/s41592-021-01249-6
+      text: Edlund et al.
+    type: dataset
+    format_version: 0.2.1
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
     license: CC-BY-NC-4.0
     source: https://sartorius-research.github.io/LIVECell/
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg
     id: ilastik/livecell_dataset
