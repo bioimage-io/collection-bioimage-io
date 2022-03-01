@@ -8,11 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    type: application
-    maintainers: []
     authors:
     - name: DeepImageJ
       affiliation: EPFL, UC3M
+    format_version: 0.2.2
     cite:
     - text: Lucas von Chamier et al., Nature Communications 2021
       doi: https://doi.org/10.1038/s41467-021-22518-0
@@ -29,11 +28,12 @@ versions:
     - workflow
     - pipeline
     - superresolution
+    name: SMLM-superresolution
     documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
+    maintainers: []
     description: Single molecule localization microscopy (SMLM) processing using deepImageJ
       and ThunderSTORM in an ImageJ macro.
-    format_version: 0.2.2
-    name: SMLM-superresolution
+    type: application
     config:
       id: deepimagej
       name: DeepImageJ

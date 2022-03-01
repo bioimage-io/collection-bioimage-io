@@ -8,11 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    maintainers: []
     authors:
     - Mia Conduit
     - Séamus Holden
+    format_version: 0.2.2
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
@@ -25,11 +24,12 @@ versions:
     - denoising
     - DeepBacs
     - 2D
+    name: Bacillus subtilis denoising dataset - DeepBacs
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    maintainers: []
     description: Live-cell time series of vertically aligned B. subtilis cells expressing
       FtsZ-GFP protein fusion.
-    format_version: 0.2.2
-    name: Bacillus subtilis denoising dataset - DeepBacs
+    type: dataset
     config:
       id: zero
       name: ZeroCostDL4Mic

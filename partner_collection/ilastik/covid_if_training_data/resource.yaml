@@ -8,18 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    type: dataset
-    maintainers:
-    - name: Fynn Beuttenmüller
-      affiliation: EMBL Heidelberg
-      orcid: 0000-0002-8567-6389
-      github_user: fynnbe
-    - name: Constantin Pape
-      affiliation: EMBL Heidelberg
-      orcid: 0000-0001-6562-7187
-      github_user: constantinpape
     authors:
     - name: Constantin Pape
+    format_version: 0.2.1
     cite:
     - doi: https://doi.org/10.1002/bies.202000257
       text: Pape, Remme et al.
@@ -32,11 +23,20 @@ versions:
     - covid19
     - semantic-segmentation
     - instance-segmentation
+    name: Covid-IF Training Data
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
+    maintainers:
+    - affiliation: EMBL Heidelberg
+      name: Fynn Beuttenmüller
+      github_user: fynnbe
+      orcid: 0000-0002-8567-6389
+    - affiliation: EMBL Heidelberg
+      name: Constantin Pape
+      github_user: constantinpape
+      orcid: 0000-0001-6562-7187
     description: Training data for cell and nucleus segmentation as well as infection
       classification in IF data of Covid-19 infected cells.
-    format_version: 0.2.1
-    name: Covid-IF Training Data
+    type: dataset
     config:
       id: ilastik
       name: ilastik

@@ -8,11 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    maintainers: []
     authors:
     - Gautier Follain
     - Guillaume Jacquemet
+    format_version: 0.2.2
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -25,10 +24,11 @@ versions:
     tags:
     - StarDist
     - ZeroCostDL4Mic
-    documentation: https://zenodo.org/record/4034939
-    description: Paired brightfield images of cancer cells and corresponding masks
-    format_version: 0.2.2
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
+    documentation: https://zenodo.org/record/4034939
+    maintainers: []
+    description: Paired brightfield images of cancer cells and corresponding masks
+    type: dataset
     config:
       id: zero
       name: ZeroCostDL4Mic

@@ -8,10 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: application
-    maintainers: []
     authors:
     - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
+    format_version: 0.2.2
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -27,7 +26,9 @@ versions:
     - ZeroCostDL4Mic
     - 2D
     - deepimagej
+    name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    maintainers: []
     description: 2D binary segmentation. U-Net is an encoder-decoder architecture
       originally used for image segmentation. The first half of the U-Net architecture
       is a downsampling convolutional neural network which acts as a feature extractor
@@ -36,8 +37,7 @@ versions:
       the ZeroCostDL4Mic wiki to check the original publications this network is based
       on and make sure you cite these. Networks trained in this notebook can be used
       in Fiji via deepImageJ.
-    format_version: 0.2.2
-    name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
+    type: application
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -58,14 +58,14 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-    - zero/Notebook Preview
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    links:
+    - zero/Notebook Preview
     id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ

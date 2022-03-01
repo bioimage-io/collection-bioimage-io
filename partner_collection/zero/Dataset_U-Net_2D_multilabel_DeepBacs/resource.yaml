@@ -8,11 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    maintainers: []
     authors:
     - Mia Conduit
     - Séamus Holden
+    format_version: 0.2.2
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
@@ -26,11 +25,12 @@ versions:
     - segmentation
     - DeepBacs
     - 2D
+    name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    maintainers: []
     description: Paired bright field images and segmented binary masks of live E.
       coli cells.
-    format_version: 0.2.2
-    name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
+    type: dataset
     config:
       id: zero
       name: ZeroCostDL4Mic

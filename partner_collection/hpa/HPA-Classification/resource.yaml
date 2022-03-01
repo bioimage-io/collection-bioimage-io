@@ -8,14 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-    type: application
+    format_version: 0.2.2
     tags:
     - hpa
     - bioimage.io
+    name: HPA Collection
     description: Resources for BioImgage.IO curated by the the cellprofiling group
       at HPA.
-    format_version: 0.2.2
-    name: HPA Collection
+    type: application
     config:
       id: hpa
       name: HPA

@@ -8,20 +8,20 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: application
-    maintainers: []
     authors: []
+    format_version: 0.2.2
     cite:
-    - doi: 10.1038/s41467-021-22518-0
-      text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021)
+      doi: 10.1038/s41467-021-22518-0
     tags:
     - zero
     - bioimage.io
-    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    description: Resources for BioImgage.IO curated by the ZeroCost4Mic team.
-    format_version: 0.2.2
     name: ZeroCost4Mic Collection
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    maintainers: []
+    description: Resources for BioImgage.IO curated by the ZeroCost4Mic team.
+    type: application
     config:
       id: zero
       name: ZeroCostDL4Mic
