@@ -9,17 +9,21 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
+    type: dataset
     maintainers:
     - name: Fynn Beuttenmüller
-      orcid: 0000-0002-8567-6389
       affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
       github_user: fynnbe
     - name: Constantin Pape
-      orcid: 0000-0001-6562-7187
       affiliation: EMBL Heidelberg
+      orcid: 0000-0001-6562-7187
       github_user: constantinpape
-    type: dataset
+    authors:
+    - name: Constantin Pape
+    cite:
+    - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
+      url: https://cremi.org/
     tags:
     - electron-microscopy
     - brain
@@ -27,8 +31,7 @@ versions:
     - instance-segmentation
     - cremi-challenge
     - 3D
-    authors:
-    - name: Constantin Pape
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
     description: Training data from the challenge on 3d EM segmentation on neuronal
       processes.
     format_version: 0.2.1
@@ -50,12 +53,9 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    cite:
-    - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
-      url: https://cremi.org/
-    source: https://cremi.org/
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png
+    source: https://cremi.org/
     id: ilastik/cremi_training_data

@@ -36,18 +36,18 @@ versions:
       - model
       - application
       default_type: model
-    cite:
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     badges:
     - label: HPA Competition
       ext: 1st
       url: https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard
-    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     authors:
     - Shubin Dai
-    license: MIT
-    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
-    framework: pytorch
     covers:
     - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
     - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
+    framework: pytorch
+    cite:
+    license: MIT
     id: hpa/HPA-bestfitting
