@@ -8,12 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    name: Deep-STORM training and example dataset - ZeroCostDL4Mic
     maintainers: []
-    tags:
-    - SMLM
-    - Deep-STORM
-    - ZeroCostDL4Mic
-    - 2D
+    description: Time-series of simulated, randomly distributed single-molecule localization
+      (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition
+      of Glial cells stained with phalloidin for actin (Example dataset).
+    authors:
+    - Christophe Leterrier
+    - Romain F. Laine
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -35,20 +37,18 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     documentation: https://doi.org/10.5281/zenodo.3959089
+    tags:
+    - SMLM
+    - Deep-STORM
+    - ZeroCostDL4Mic
+    - 2D
+    format_version: 0.2.2
+    type: dataset
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
       doi: https://doi.org/10.1038/s41467-021-22518-0
-    authors:
-    - Christophe Leterrier
-    - Romain F. Laine
-    name: Deep-STORM training and example dataset - ZeroCostDL4Mic
-    format_version: 0.2.2
-    type: dataset
-    description: Time-series of simulated, randomly distributed single-molecule localization
-      (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition
-      of Glial cells stained with phalloidin for actin (Example dataset).
-    download_url: https://doi.org/10.5281/zenodo.3959089
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_dataset.png
+    download_url: https://doi.org/10.5281/zenodo.3959089
     id: zero/Dataset_Deep-STORM_ZeroCostDL4Mic
