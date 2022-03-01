@@ -77,6 +77,9 @@ def main(
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
         else:
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
+            if "id" in summary and len(summary["id"].split("/")) >=3:
+                # convert to short resource id without version_id
+                summary["id"] = "/".join(summary["id"].split("/")[:2])
             if latest_version["config"]["bioimageio"].get("owners"):
                 summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
             rdf["collection"].append(summary)
