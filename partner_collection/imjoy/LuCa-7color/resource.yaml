@@ -11,7 +11,7 @@ versions:
     tags:
     - OME-TIFF
     description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
-    name: LuCa-7color
+    type: dataset
     config:
       id: imjoy
       name: ImJoy
@@ -32,16 +32,16 @@ versions:
       - application
       default_type: application
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
-    documentation: https://imjoy.io/docs
+    name: LuCa-7color
     format_version: 0.2.2
-    type: dataset
+    documentation: https://imjoy.io/docs
+    source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
+    covers:
+    - https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png
+    links:
+    - imjoy/vizarr
     download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
     authors:
     - Perkin Elmer
     license: CC-BY 4.0
-    covers:
-    - https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png
-    source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
-    links:
-    - imjoy/vizarr
     id: imjoy/LuCa-7color
