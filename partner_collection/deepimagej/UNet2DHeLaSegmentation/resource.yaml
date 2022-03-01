@@ -8,19 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    type: collection
-    maintainers: []
-    name: deepImageJ Collection
-    authors: []
-    format_version: 0.2.2
     cite:
     - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
       doi: 10.1038/s41592-021-01262-9
-    documentation: https://deepimagej.github.io/deepimagej/
+    tags:
+    - deepimagej
+    - bioimage.io
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    maintainers: []
+    name: deepImageJ Collection
+    authors: []
     config:
       id: deepimagej
       name: DeepImageJ
@@ -38,12 +38,12 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    tags:
-    - deepimagej
-    - bioimage.io
-    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml
+    documentation: https://deepimagej.github.io/deepimagej/
+    format_version: 0.2.2
+    type: collection
+    download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
-    download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml
     id: deepimagej/UNet2DHeLaSegmentation
