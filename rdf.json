@@ -15,7 +15,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip",
-      "id": "deepimagej/2DUNetZeroCostDL4Mic/latest",
+      "id": "deepimagej/2DUNetZeroCostDL4Mic",
       "links": [
         "zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ",
         "deepimagej/deepimagej",
@@ -37,7 +37,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip",
-      "id": "deepimagej/3DUNetZeroCostDL4Mic/latest",
+      "id": "deepimagej/3DUNetZeroCostDL4Mic",
       "links": [
         "deepimagej/deepimagej",
         "zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ",
@@ -59,7 +59,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip",
-      "id": "deepimagej/DeepSTORMZeroCostDL4Mic/latest",
+      "id": "deepimagej/DeepSTORMZeroCostDL4Mic",
       "links": [
         "zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ",
         "deepimagej/deepimagej",
@@ -116,7 +116,7 @@
         "https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg"
       ],
       "description": "Ready to use notebook for the segmentation of small extrcaellular vesicles in transmission electron microscopy (TEM) images. The notebook is optimized to use it in Google Colaboratory. It will download the original code and dataset, and make the inference connecting with Google's GPU.",
-      "id": "deepimagej/EVsTEMsegmentationFRUNet/latest",
+      "id": "deepimagej/EVsTEMsegmentationFRUNet",
       "links": [
         "deepimagej/FRUNet2DsEVSegmentation"
       ],
@@ -142,7 +142,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip",
-      "id": "deepimagej/FRUNet2DsEVSegmentation/latest",
+      "id": "deepimagej/FRUNet2DsEVSegmentation",
       "links": [
         "deepimagej/deepimagej",
         "deepimagej/EVsTEMsegmentationFRUNet",
@@ -164,7 +164,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip",
-      "id": "deepimagej/JonesVirtualStaining/latest",
+      "id": "deepimagej/JonesVirtualStaining",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -185,7 +185,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip",
-      "id": "deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest",
+      "id": "deepimagej/MU-Lux_CTC_PhC-C2DL-PSC",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -215,7 +215,7 @@
         "https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg3.jpg"
       ],
       "description": "Labelled images for instance segmentation of cell nuclei in digital pathology datasets (MoNuSeg 2018 Challenge).",
-      "id": "deepimagej/MoNuSeg_digital_pathology_miccai2018/latest",
+      "id": "deepimagej/MoNuSeg_digital_pathology_miccai2018",
       "name": "Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/MoNuSeg_digital_pathology_miccai2018/latest/rdf.yaml",
       "source": "https://monuseg.grand-challenge.org/Data/",
@@ -238,7 +238,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip",
-      "id": "deepimagej/Mt3VirtualStaining/latest",
+      "id": "deepimagej/Mt3VirtualStaining",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -259,7 +259,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip",
-      "id": "deepimagej/SMLMDensityMapEstimationDEFCoN/latest",
+      "id": "deepimagej/SMLMDensityMapEstimationDEFCoN",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -280,7 +280,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip",
-      "id": "deepimagej/SkinLesionClassification/latest",
+      "id": "deepimagej/SkinLesionClassification",
       "links": [
         "deepimagej/deepimagej"
       ],
@@ -300,7 +300,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip",
-      "id": "deepimagej/Stardist2DZeroCostDL4Mic/latest",
+      "id": "deepimagej/Stardist2DZeroCostDL4Mic",
       "links": [
         "deepimagej/deepimagej",
         "zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ",
@@ -322,7 +322,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip",
-      "id": "deepimagej/UNet2DGlioblastomaSegmentation/latest",
+      "id": "deepimagej/UNet2DGlioblastomaSegmentation",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -343,7 +343,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip",
-      "id": "deepimagej/UNet2DHeLaSegmentation/latest",
+      "id": "deepimagej/UNet2DHeLaSegmentation",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -364,7 +364,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip",
-      "id": "deepimagej/UNet2DPancreaticSegmentation/latest",
+      "id": "deepimagej/UNet2DPancreaticSegmentation",
       "links": [
         "deepimagej/deepimagej",
         "deepimagej/unet-pancreaticcellsegmentation",
@@ -386,7 +386,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip",
-      "id": "deepimagej/Usiigaci/latest",
+      "id": "deepimagej/Usiigaci",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -407,7 +407,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip",
-      "id": "deepimagej/WidefieldDapiSuperResolution/latest",
+      "id": "deepimagej/WidefieldDapiSuperResolution",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -428,7 +428,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip",
-      "id": "deepimagej/WidefieldFitcSuperResolution/latest",
+      "id": "deepimagej/WidefieldFitcSuperResolution",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -449,7 +449,7 @@
       "authors": [],
       "description": "Resources for BioImgage.IO curated by the deepImageJ team.",
       "download_url": "https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip",
-      "id": "deepimagej/WidefieldTxredSuperResolution/latest",
+      "id": "deepimagej/WidefieldTxredSuperResolution",
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
@@ -472,7 +472,7 @@
       "covers": [],
       "description": "Export BioImage.IO model packages for deepImageJ from a model description file",
       "icon": "https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png",
-      "id": "deepimagej/deepimagej/latest",
+      "id": "deepimagej/deepimagej",
       "name": "deepimagej",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html",
@@ -494,7 +494,7 @@
       ],
       "description": "DeepImageJ is a user-friendly plugin that enables the use of pre-trained deep learning models in ImageJ and Fiji.",
       "icon": "https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png",
-      "id": "deepimagej/deepimagej-web/latest",
+      "id": "deepimagej/deepimagej-web",
       "name": "DeepImageJ",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej-web/latest/rdf.yaml",
       "source": "https://deepimagej.github.io/deepimagej/index.html",
@@ -520,7 +520,7 @@
       "description": "Single molecule localization microscopy (SMLM) processing using deepImageJ and ThunderSTORM in an ImageJ macro.",
       "download_url": "https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm",
       "icon": "https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png",
-      "id": "deepimagej/smlm-deepimagej/latest",
+      "id": "deepimagej/smlm-deepimagej",
       "name": "SMLM-superresolution",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/smlm-deepimagej/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm",
@@ -562,7 +562,7 @@
         "https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png"
       ],
       "description": "Easy example to define a 2D U-Net for segmentation with Keras and import it into DeepImageJ format",
-      "id": "deepimagej/unet-pancreaticcellsegmentation/latest",
+      "id": "deepimagej/unet-pancreaticcellsegmentation",
       "links": [
         "deepimagej/UNet2DPancreaticSegmentation"
       ],
@@ -588,7 +588,7 @@
       ],
       "description": "Fiji is an image processing package \u2014 a \"batteries-included\" distribution of ImageJ, bundling many plugins which facilitate scientific image analysis.",
       "icon": "https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png",
-      "id": "fiji/Fiji/latest",
+      "id": "fiji/Fiji",
       "name": "Fiji",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/Fiji/latest/rdf.yaml",
       "source": "https://fiji.sc/",
@@ -613,7 +613,7 @@
       ],
       "description": "Demo model for denoising trained on a single SEM image with Noise2Void",
       "download_url": "https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip",
-      "id": "fiji/N2VSEMDemo/latest",
+      "id": "fiji/N2VSEMDemo",
       "license": "BSD-3-Clause",
       "links": [
         "fiji/Fiji"
@@ -638,7 +638,7 @@
       ],
       "description": "ShuffleNetV2 for HPA.",
       "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
-      "id": "hpa/HPA-Classification/latest",
+      "id": "hpa/HPA-Classification",
       "name": "HPA-Classification",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html",
@@ -666,7 +666,7 @@
         "https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png"
       ],
       "description": "A CNN model using focal loss and image augmentation, optimized with Adam optimizer.",
-      "id": "hpa/HPA-bestfitting/latest",
+      "id": "hpa/HPA-bestfitting",
       "license": "MIT",
       "name": "HPA-bestfitting",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-bestfitting/latest/rdf.yaml",
@@ -698,7 +698,7 @@
         "https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif"
       ],
       "description": "A light-weight model for HPA image classification competition",
-      "id": "hpa/HPAShuffleNetV2/latest",
+      "id": "hpa/HPAShuffleNetV2",
       "license": "Apache 2.0",
       "links": [
         "hpa/HPA-Classification"
@@ -729,7 +729,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover2.jpg"
       ],
       "description": "Training data for cell and nucleus segmentation as well as infection classification in IF data of Covid-19 infected cells.",
-      "id": "ilastik/covid_if_training_data/latest",
+      "id": "ilastik/covid_if_training_data",
       "license": "CC-BY-4.0",
       "name": "Covid-IF Training Data",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/covid_if_training_data/latest/rdf.yaml",
@@ -761,7 +761,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png"
       ],
       "description": "Training data from the challenge on 3d EM segmentation on neuronal processes.",
-      "id": "ilastik/cremi_training_data/latest",
+      "id": "ilastik/cremi_training_data",
       "name": "CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy Images",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/cremi_training_data/latest/rdf.yaml",
       "source": "https://cremi.org/",
@@ -784,7 +784,7 @@
       "covers": [],
       "description": "Export BioImage.IO model packages for ilastik from a model description file",
       "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png",
-      "id": "ilastik/ilastik/latest",
+      "id": "ilastik/ilastik",
       "name": "ilastik",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/ilastik/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html",
@@ -808,7 +808,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover1.png"
       ],
       "description": "Training data from challenge on 2d EM segmentation of neuronal processes.",
-      "id": "ilastik/isbi2012_neuron_segmentation_challenge/latest",
+      "id": "ilastik/isbi2012_neuron_segmentation_challenge",
       "name": "ISBI Challenge: Segmentation of neuronal structures in EM stacks",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/isbi2012_neuron_segmentation_challenge/latest/rdf.yaml",
       "source": "https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download",
@@ -831,7 +831,7 @@
       "covers": [],
       "description": "Run the live cell boundary model via the BioEngine",
       "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png",
-      "id": "ilastik/live-cell-boundary-model/latest",
+      "id": "ilastik/live-cell-boundary-model",
       "name": "live-cell-boundary-model",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html",
@@ -853,7 +853,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg"
       ],
       "description": "LIVECell\u2014A large-scale dataset for label-free live cell segmentation",
-      "id": "ilastik/livecell_dataset/latest",
+      "id": "ilastik/livecell_dataset",
       "license": "CC-BY-NC-4.0",
       "name": "LIVECell",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/livecell_dataset/latest/rdf.yaml",
@@ -881,7 +881,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png"
       ],
       "description": "Training data for mitochondria segmentation in 3d EM.",
-      "id": "ilastik/mitoem_segmentation_challenge/latest",
+      "id": "ilastik/mitoem_segmentation_challenge",
       "name": "MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mitoem_segmentation_challenge/latest/rdf.yaml",
       "source": "https://mitoem.grand-challenge.org/",
@@ -907,7 +907,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png"
       ],
       "description": "Training data for EM segmentation of cellular membranes, nuclei, cuticle and cilia in Platynereis.",
-      "id": "ilastik/platynereis_em_training_data/latest",
+      "id": "ilastik/platynereis_em_training_data",
       "license": "CC-BY-4.0",
       "name": "Platynereis EM Traning Data",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/platynereis_em_training_data/latest/rdf.yaml",
@@ -936,7 +936,7 @@
         "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg"
       ],
       "description": "Subset of the nucleus segmentation training data from the 2018 Kaggle Data Science Bowl.",
-      "id": "ilastik/stradist_dsb_training_data/latest",
+      "id": "ilastik/stradist_dsb_training_data",
       "license": "CC0-1.0",
       "name": "DSB Nucleus Segmentation Training Data",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/stradist_dsb_training_data/latest/rdf.yaml",
@@ -959,7 +959,7 @@
       "covers": [],
       "description": "Exporting BioImage.IO model packages from the model description file",
       "icon": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png",
-      "id": "imjoy/BioImageIO-Packager/latest",
+      "id": "imjoy/BioImageIO-Packager",
       "name": "BioImageIO-Packager",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html",
@@ -977,7 +977,7 @@
       "covers": [],
       "description": "ImJoy: Supercharging interactivity and scalability!",
       "icon": "https://imjoy.io/static/img/imjoy-icon.png",
-      "id": "imjoy/ImJoy/latest",
+      "id": "imjoy/ImJoy",
       "name": "ImJoy",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html",
@@ -997,7 +997,7 @@
       "covers": [],
       "description": "ImageJ running in the browser",
       "icon": "https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png",
-      "id": "imjoy/ImageJ.JS/latest",
+      "id": "imjoy/ImageJ.JS",
       "name": "ImageJ.JS",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html",
@@ -1019,7 +1019,7 @@
       ],
       "description": "Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)",
       "download_url": "https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff",
-      "id": "imjoy/LuCa-7color/latest",
+      "id": "imjoy/LuCa-7color",
       "license": "CC-BY 4.0",
       "links": [
         "imjoy/vizarr"
@@ -1041,7 +1041,7 @@
       "covers": [],
       "description": "A minimal, purely client-side program for viewing Zarr-based images with Viv & ImJoy",
       "icon": "https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png",
-      "id": "imjoy/vizarr/latest",
+      "id": "imjoy/vizarr",
       "name": "vizarr",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html",
@@ -1062,7 +1062,7 @@
       ],
       "description": "Fluorescence microscopy (Lifeact-RFP)",
       "download_url": "https://doi.org/10.5281/zenodo.3713330",
-      "id": "zero/Dataset_CARE_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_CARE_2D_ZeroCostDL4Mic",
       "name": "CARE (2D) example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1086,7 +1086,7 @@
       ],
       "description": "Paired training and test images of H-NS-mScarlet-I expressing E. coli cells for image denoising.",
       "download_url": "https://zenodo.org/record/5551112",
-      "id": "zero/Dataset_CARE_2D_coli_DeepBacs/latest",
+      "id": "zero/Dataset_CARE_2D_coli_DeepBacs",
       "name": "Escherichia coli nucleoid denoising dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CARE_2D_coli_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1110,7 +1110,7 @@
       ],
       "description": "Fluorescence microscopy (Lifeact-RFP)",
       "download_url": "https://doi.org/10.5281/zenodo.3713337",
-      "id": "zero/Dataset_CARE_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_CARE_3D_ZeroCostDL4Mic",
       "name": "CARE (3D) example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1133,7 +1133,7 @@
       ],
       "description": "Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk and SRRF reconstructed images)",
       "download_url": "https://doi.org/10.5281/zenodo.3941884",
-      "id": "zero/Dataset_CycleGAN_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_CycleGAN_ZeroCostDL4Mic",
       "name": "CycleGAN example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CycleGAN_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1155,7 +1155,7 @@
       ],
       "description": "Time-series of simulated, randomly distributed single-molecule localization (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition of Glial cells stained with phalloidin for actin (Example dataset).",
       "download_url": "https://doi.org/10.5281/zenodo.3959089",
-      "id": "zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_Deep-STORM_ZeroCostDL4Mic",
       "name": "Deep-STORM training and example dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1180,7 +1180,7 @@
       ],
       "description": "Fluorescence microscopy (paxillin-GFP)",
       "download_url": "https://doi.org/10.5281/zenodo.3713315",
-      "id": "zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic",
       "name": "Noise2Void (2D) example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1204,7 +1204,7 @@
       ],
       "description": "Live-cell time series of vertically aligned B. subtilis cells expressing FtsZ-GFP protein fusion.",
       "download_url": "https://zenodo.org/record/5551135",
-      "id": "zero/Dataset_Noise2Void_2D_subtilis_DeepBacs/latest",
+      "id": "zero/Dataset_Noise2Void_2D_subtilis_DeepBacs",
       "name": "Bacillus subtilis denoising dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noise2Void_2D_subtilis_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1227,7 +1227,7 @@
       ],
       "description": "Fluorescence microscopy (Lifeact-RFP)",
       "download_url": "https://doi.org/10.5281/zenodo.3713326",
-      "id": "zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic",
       "name": "Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1250,7 +1250,7 @@
       ],
       "description": "This dataset contains a denoising training and test dataset for deep learning applications. The training dataset comprises 20 paired matching noisy and high signal-to-noise images. The test dataset contains five paired matching noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA) images acquired using a spinning disk confocal microscope with a 20x 0.8 NA objective.",
       "download_url": "https://zenodo.org/record/5750174",
-      "id": "zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic",
       "name": "Noisy nuclei dataset.",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1275,7 +1275,7 @@
       ],
       "description": "Training and test images of live E. coli cells imaged under bright field for the task of segmentation.",
       "download_url": "https://zenodo.org/record/5550935",
-      "id": "zero/Dataset_SplineDist_2D_DeepBacs/latest",
+      "id": "zero/Dataset_SplineDist_2D_DeepBacs",
       "name": "Escherichia coli bright field segmentation dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_SplineDist_2D_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1303,7 +1303,7 @@
       ],
       "description": "Mixed training and test images of S. aureus, E. coli and B. subtilis for cell segmentation using StarDist.",
       "download_url": "https://zenodo.org/record/5551009",
-      "id": "zero/Dataset_StarDist_2D_DeepBacs/latest",
+      "id": "zero/Dataset_StarDist_2D_DeepBacs",
       "name": "Mixed segmentation dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_2D_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1327,7 +1327,7 @@
       ],
       "description": "Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation",
       "download_url": "https://doi.org/10.5281/zenodo.3715492",
-      "id": "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest",
+      "id": "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D",
       "name": "StarDist (2D) example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest/rdf.yaml",
       "tags": [
@@ -1350,7 +1350,7 @@
       ],
       "description": "Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual segmentation",
       "download_url": "https://zenodo.org/record/4034976",
-      "id": "zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic",
       "name": "Combining StarDist and TrackMate example 1 - Breast cancer cell dataset",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1372,7 +1372,7 @@
       ],
       "description": "Paired brightfield images of cancer cells and corresponding masks",
       "download_url": "https://zenodo.org/record/4034939",
-      "id": "zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic",
       "name": "Combining StarDist and TrackMate example 3 - Flow chamber dataset",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1394,7 +1394,7 @@
       ],
       "description": "Paired brightfield images of migrating T cells and corresponding masks",
       "download_url": "https://zenodo.org/record/4034929",
-      "id": "zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic",
       "name": "Combining StarDist and TrackMate example 2 - T cell dataset",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1417,7 +1417,7 @@
       ],
       "description": "Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual segmentation",
       "download_url": "https://zenodo.org/record/4811213",
-      "id": "zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic",
       "name": "training dataset for automated tracking of MDA-MB-231 and BT20 cells",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1439,7 +1439,7 @@
       ],
       "description": "Paired bright field and segmented mask images of live E. coli cells imaged under bright field.",
       "download_url": "https://zenodo.org/record/5550935",
-      "id": "zero/Dataset_U-Net_2D_DeepBacs/latest",
+      "id": "zero/Dataset_U-Net_2D_DeepBacs",
       "name": "Escherichia coli bright field segmentation dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_U-Net_2D_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1463,7 +1463,7 @@
       ],
       "description": "Paired bright field images and segmented binary masks of live E. coli cells.",
       "download_url": "https://zenodo.org/record/5639253",
-      "id": "zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest",
+      "id": "zero/Dataset_U-Net_2D_multilabel_DeepBacs",
       "name": "Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1488,7 +1488,7 @@
       ],
       "description": "2D grayscale .png images with corresponding bounding box annotations in .xml  PASCAL Voc format.",
       "download_url": "https://doi.org/10.5281/zenodo.3941908",
-      "id": "zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_YOLOv2_ZeroCostDL4Mic",
       "name": "YoloV2 example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1510,7 +1510,7 @@
       ],
       "description": "Training and test images of E. coli cells treated with different antibiotics for antibiotic phenotyping.",
       "download_url": "https://zenodo.org/record/5551057",
-      "id": "zero/Dataset_YOLOv2_antibiotic_DeepBacs/latest",
+      "id": "zero/Dataset_YOLOv2_antibiotic_DeepBacs",
       "name": "Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_YOLOv2_antibiotic_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1534,7 +1534,7 @@
       ],
       "description": "Training and test images of E. coli cells for object detection and classification.",
       "download_url": "https://zenodo.org/record/5551016",
-      "id": "zero/Dataset_YOLOv2_coli_DeepBacs/latest",
+      "id": "zero/Dataset_YOLOv2_coli_DeepBacs",
       "name": "Escherichia coli growth stage object detection dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_YOLOv2_coli_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1557,7 +1557,7 @@
       ],
       "description": "Confocal microscopy data (TOM20 labeled with Alexa Fluor 594)",
       "download_url": "https://doi.org/10.5281/zenodo.3748967",
-      "id": "zero/Dataset_fnet_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_fnet_3D_ZeroCostDL4Mic",
       "name": "Label-free prediction (fnet) example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1581,7 +1581,7 @@
       ],
       "description": "Training and test images of E. coli cells for artificial labeling of membranes in brightfield images using fnet or CARE, as well as trained models for prediction of super-resolution membranes.",
       "download_url": "https://zenodo.org/record/5551123",
-      "id": "zero/Dataset_fnet_DeepBacs/latest",
+      "id": "zero/Dataset_fnet_DeepBacs",
       "name": "Artificial labeling of E. coli membranes dataset - DeepBacs",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml",
       "tags": [
@@ -1605,7 +1605,7 @@
       ],
       "description": "Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA",
       "download_url": "https://doi.org/10.5281/zenodo.3941889",
-      "id": "zero/Dataset_pix2pix_ZeroCostDL4Mic/latest",
+      "id": "zero/Dataset_pix2pix_ZeroCostDL4Mic",
       "name": "pix2pix example training and test dataset - ZeroCostDL4Mic",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_pix2pix_ZeroCostDL4Mic/latest/rdf.yaml",
       "tags": [
@@ -1623,7 +1623,7 @@
       "covers": [],
       "description": "Previewing Jupyter notebook without a Jupyter server",
       "icon": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png",
-      "id": "zero/Notebook Preview/latest",
+      "id": "zero/Notebook Preview",
       "name": "Notebook Preview",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook Preview/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html",
@@ -1654,7 +1654,7 @@
       ],
       "description": "Artificially increase the size of your training dataset. Augmentor is a data augmentation library. Data augmentation can improve training progress by amplifying differences in the dataset. This can be useful if the available dataset is small since, in this case, it is possible that a network could quickly learn every example in the dataset (overfitting), without augmentation. Augmentation can be especially valuable when training dataset need to be manually labelled. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Augmentor_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Augmentor_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -1690,7 +1690,7 @@
       ],
       "description": "Supervised restoration of 2D images. CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_CARE_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_CARE_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_CARE_2D_ZeroCostDL4Mic",
@@ -1729,7 +1729,7 @@
       ],
       "description": "Supervised restoration of 3D images. CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_CARE_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_CARE_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_CARE_3D_ZeroCostDL4Mic"
@@ -1769,7 +1769,7 @@
       ],
       "description": "Instance segmentation of 2D and 3D images. Cellpose is a generalist algorithm for cellular segmentation.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Cellpose_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Cellpose_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D",
@@ -1808,7 +1808,7 @@
       ],
       "description": "Unpaired image-to-image translation of 2D images. CycleGAN is a method that can capture the characteristics of one image domain and figure out how these characteristics could be translated into another image domain, all in the absence of any paired training examples (ie transform a horse into zebra or apples into oranges). While CycleGAN can potentially be used for any type of image-to-image translation, we illustrate that it can be used to predict what a fluorescent label would look like when imaged using another imaging modalities. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_CycleGAN_ZeroCostDL4Mic"
@@ -1843,7 +1843,7 @@
       ],
       "description": "Super-resolution via super-pixelisation. Deep Fourier channel attention network (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Qiao, Chang and Li, Di and Guo, Yuting and Liu, Chong and Jiang, Tao and Dai, Qionghai and Li, Dong. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_DFCAN_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_DFCAN_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -1877,7 +1877,7 @@
       ],
       "description": "DRMIME is an network that can be used to register microscopy images (affine and perspective registration).",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_DRMIME_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_DRMIME_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -1911,7 +1911,7 @@
       ],
       "description": "Self-supervised denoising of 2D images. DecoNoising 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic",
@@ -1951,7 +1951,7 @@
       ],
       "description": "Single Molecule Localization Microscopy (SMLM) image reconstruction from high-density emitter data. Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_Deep-STORM_ZeroCostDL4Mic"
@@ -1988,7 +1988,7 @@
       ],
       "description": "Single Molecule Localization Microscopy (SMLM) image reconstruction from high-density emitter data. Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ and ThunderSTORM plugin.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb",
-      "id": "zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ/latest",
+      "id": "zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_Deep-STORM_ZeroCostDL4Mic"
@@ -2025,7 +2025,7 @@
       ],
       "description": "Joint denoising and binary segmentation of 2D images. DenoiSeg 2D is deep-learning method that can be used to jointly denoise and segment 2D microscopy images. The benefits of using DenoiSeg (compared to other Deep Learning-based segmentation methods) are more prononced when only a few annotated images are available. However, the denoising part requires many images to perform well. All the noisy images don't need to be labeled to train DenoiSeg. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2060,7 +2060,7 @@
       ],
       "description": "Object detection of 2D images. Detectron2 is an object detection network developed by Facebook AI Research, which identifies objects in images and draws bounding boxes around them.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Detectron2_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Detectron2_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_YOLOv2_ZeroCostDL4Mic",
@@ -2097,7 +2097,7 @@
       ],
       "description": "Instance segmentation of 2D images. EmbedSeg 2D is a deep-learning method that can be used to segment object from bioimages and was first published by Lalit et al. in 2021, on arXiv.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D",
@@ -2140,7 +2140,7 @@
       ],
       "description": "Interactive instance segmentation using Kaibu and Cellpose.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb",
-      "id": "zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2174,7 +2174,7 @@
       ],
       "description": "Instance segmentation of 2D images. MaskRCNN is a is an object detection and segmentation network, which identifies objects in images and draws bounding boxes around them.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_MaskRCNN_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_MaskRCNN_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2209,7 +2209,7 @@
       ],
       "description": "self-supervised denoising of 2D images. Noise2Void 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Noise2Void_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic",
@@ -2249,7 +2249,7 @@
       ],
       "description": "self-supervised denoising of 3D images. Noise2VOID 3D is deep-learning method that can be used to denoise 3D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Noise2Void_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic"
@@ -2285,7 +2285,7 @@
       ],
       "description": "Error mapping and quality metrics estimation.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_Quality_Control_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_Quality_Control_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2318,7 +2318,7 @@
       ],
       "description": "Supervised restoration of 3D images. RCAN is a neural network capable of image restoration from corrupted bio-images. The network allows image denoising and resolution improvement in 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_RCAN_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_RCAN_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_CARE_3D_ZeroCostDL4Mic"
@@ -2355,7 +2355,7 @@
       ],
       "description": "Object detection of 2D images. RetinaNet is a is an object detection network, which identifies objects in images and draws bounding boxes around them.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_RetinaNet_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_RetinaNet_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_YOLOv2_ZeroCostDL4Mic",
@@ -2392,7 +2392,7 @@
       ],
       "description": "Instance segmentation of 2D images. SplineDist is a neural network inspired by StarDist, capable of performing image instance segmentation. Unlike StarDist, SplineDist uses cubic splines to describe the contour of each object and therefore can potentially segment objects of any shapes. This version is only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_SplineDist_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_SplineDist_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D",
@@ -2436,7 +2436,7 @@
       ],
       "description": "2D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) single images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_StarDist_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_StarDist_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D",
@@ -2480,7 +2480,7 @@
       ],
       "description": "2D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ and StarDist plugins for ImageJ.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb",
-      "id": "zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest",
+      "id": "zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D",
@@ -2522,7 +2522,7 @@
       ],
       "description": "3D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_StarDist_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_StarDist_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2557,7 +2557,7 @@
       ],
       "description": "2D binary segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_U-Net_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_U-Net_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_U-Net_2D_DeepBacs"
@@ -2593,7 +2593,7 @@
       ],
       "description": "2D binary segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb",
-      "id": "zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ/latest",
+      "id": "zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2630,7 +2630,7 @@
       ],
       "description": "2D semantic segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_U-Net_2D_multilabel_DeepBacs"
@@ -2668,7 +2668,7 @@
       ],
       "description": "3D binary segmentation. The 3D U-Net was first introduced by \u00c7i\u00e7ek et al for learning dense volumetric segmentations from sparsely annotated ground-truth data building upon the original U-Net architecture by Ronneberger et al. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_U-Net_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_U-Net_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2703,7 +2703,7 @@
       ],
       "description": "3D binary segmentation. The 3D U-Net was first introduced by \u00c7i\u00e7ek et al for learning dense volumetric segmentations from sparsely annotated ground-truth data building upon the original U-Net architecture by Ronneberger et al. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb",
-      "id": "zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ/latest",
+      "id": "zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ",
       "links": [
         "zero/Notebook Preview"
       ],
@@ -2740,7 +2740,7 @@
       ],
       "description": "Object detection of 2D images. YOLOv2 is an object detection network developed by Redmon & Farhadi, which identifies objects in images and draws bounding boxes around them.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_YOLOv2_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_YOLOv2_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_YOLOv2_ZeroCostDL4Mic",
@@ -2777,7 +2777,7 @@
       ],
       "description": "Paired image-to-image translation of 2D images. Label-free Prediction (fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_fnet_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_fnet_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_fnet_DeepBacs"
@@ -2813,7 +2813,7 @@
       ],
       "description": "Paired image-to-image translation of 3D images. Label-free Prediction (fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_fnet_3D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_fnet_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_fnet_3D_ZeroCostDL4Mic"
@@ -2850,7 +2850,7 @@
       ],
       "description": "Paired image-to-image translation of 2D images. pix2pix is a deep-learning method that can be used to translate one type of images into another. While pix2pix can potentially be used for any type of image-to-image translation, we demonstrate that it can be used to predict a fluorescent image from another fluorescent image. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb",
-      "id": "zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest",
+      "id": "zero/Notebook_pix2pix_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
         "zero/Dataset_pix2pix_ZeroCostDL4Mic"
@@ -2885,7 +2885,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal microscopy 3D volumes.",
-      "id": "10.5281/zenodo.5749843/5888237",
+      "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
         "imjoy/BioImageIO-Packager"
@@ -2923,7 +2923,7 @@
         "cover.png"
       ],
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "id": "10.5281/zenodo.5764892/5764893",
+      "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
         "ilastik/stardist_dsb_training_data",
@@ -2964,7 +2964,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "id": "10.5281/zenodo.5817052/5906839",
+      "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
         "imjoy/BioImageIO-Packager",
@@ -3005,7 +3005,7 @@
         "cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "id": "10.5281/zenodo.5847355/5874728",
+      "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
         "ilastik/covid_if_training_data",
@@ -3043,7 +3043,7 @@
         "https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "id": "10.5281/zenodo.5869899/5869900",
+      "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
         "ilastik/live-cell-boundary-model",
@@ -3080,7 +3080,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "id": "10.5281/zenodo.5874741/5874742",
+      "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
         "deepimagej/deepimagej",
@@ -3118,7 +3118,7 @@
         "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "id": "10.5281/zenodo.5874841/5874842",
+      "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
         "deepimagej/deepimagej",
@@ -3154,7 +3154,7 @@
         "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
       ],
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "id": "10.5281/zenodo.5910163/5942853",
+      "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
         "imjoy/BioImageIO-Packager"
@@ -3193,7 +3193,7 @@
         "./output.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "id": "10.5281/zenodo.5914248/5914249",
+      "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
         "imjoy/BioImageIO-Packager"
@@ -3229,7 +3229,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "id": "10.5281/zenodo.6028097/6028098",
+      "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
         "ilastik/platynereis_em_training_data",
@@ -3265,7 +3265,7 @@
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "id": "10.5281/zenodo.6028280/6028281",
+      "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
         "deepimagej/deepimagej",
@@ -3303,7 +3303,7 @@
         "https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "id": "10.5281/zenodo.6200635/6200636",
+      "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
         "imjoy/BioImageIO-Packager"
@@ -3334,7 +3334,7 @@
         "https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "id": "10.5281/zenodo.6200999/6201000",
+      "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
         "imjoy/BioImageIO-Packager"
