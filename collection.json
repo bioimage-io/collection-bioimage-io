@@ -2953,6 +2953,34 @@
         "platynereis"
       ],
       "type": "model"
+    },
+    {
+      "authors": [
+        {
+          "name": "Hao Xu"
+        },
+        {
+          "name": "Wei Ouyang"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png"
+      ],
+      "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
+      "id": "10.5281/zenodo.6200635/6200636",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "HPA Cell Segmentation (DPNUnet)",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6200636/rdf.yaml",
+      "tags": [
+        "nucleus-segmentation"
+      ],
+      "type": "model"
     }
   ],
   "config": {
@@ -2963,13 +2991,13 @@
       "application": 47,
       "collection": 17,
       "dataset": 33,
-      "model": 17
+      "model": 18
     },
     "n_resources": {
       "application": 47,
       "collection": 17,
       "dataset": 33,
-      "model": 14
+      "model": 15
     },
     "partners": [
       {
