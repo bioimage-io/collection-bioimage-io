@@ -2915,41 +2915,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "cover.png"
-      ],
-      "description": "Nucleus segmentation for fluorescence microscopy",
-      "id": "10.5281/zenodo.5764892",
-      "license": "CC-BY-4.0",
-      "links": [
-        "ilastik/stardist_dsb_training_data",
-        "ilastik/ilastik",
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "NucleiSegmentationBoundaryModel",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/5764893/rdf.yaml",
-      "tags": [
-        "fluorescence-light-microscopy",
-        "nuclei",
-        "instance-segmentation",
-        "unet"
-      ],
-      "type": "model",
-      "versions": [
-        "5764893"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "",
           "name": "ZeroCostDL4Mic team"
         },
@@ -3364,13 +3329,13 @@
       "application": 94,
       "collection": 34,
       "dataset": 66,
-      "model": 37
+      "model": 35
     },
     "n_resources": {
       "application": 47,
       "collection": 17,
       "dataset": 33,
-      "model": 16
+      "model": 15
     },
     "partners": [
       {
