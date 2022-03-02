@@ -5,6 +5,13 @@ owners:
 status: accepted
 type: model
 versions:
+- version_id: '6322939'
+  doi: 10.5281/zenodo.6322939
+  created: '2022-03-02 12:07:39.352008'
+  status: accepted
+  name: NucleiSegmentationBoundaryModel
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/rdf.yaml
 - version_id: '6319663'
   doi: 10.5281/zenodo.6319663
   created: '2022-03-01 09:27:03.758432'
