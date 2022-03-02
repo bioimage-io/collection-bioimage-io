@@ -8,11 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    documentation: https://zenodo.org/record/4034976
-    authors:
-    - Guillaume Jacquemet
-    name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -45,10 +40,15 @@ versions:
     tags:
     - StarDist
     - ZeroCostDL4Mic
+    authors:
+    - Guillaume Jacquemet
+    documentation: https://zenodo.org/record/4034976
+    type: dataset
     format_version: 0.2.2
-    maintainers: []
     description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
       manual segmentation
+    name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
+    maintainers: []
     download_url: https://zenodo.org/record/4034976
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png

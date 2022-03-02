@@ -8,14 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    type: application
-    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
-    authors:
-    - name: Ignacio Arganda-Carreras
-      affiliation: EPFL, UC3M
-    - name: DeepImageJ
-      affiliation: EPFL, UC3M
-    name: 2D U-Net for binary segmentation
     cite:
     - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
         detection, and morphometry. Nat Methods 16, 67–70 (2019).'
@@ -44,18 +36,26 @@ versions:
     - notebook
     - training
     - cell-segmentation
+    authors:
+    - name: Ignacio Arganda-Carreras
+      affiliation: EPFL, UC3M
+    - name: DeepImageJ
+      affiliation: EPFL, UC3M
+    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+    type: application
     format_version: 0.2.2
-    maintainers: []
     description: Easy example to define a 2D U-Net for segmentation with Keras and
       import it into DeepImageJ format
-    covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
-    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+    name: 2D U-Net for binary segmentation
+    maintainers: []
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     links:
     - deepimagej/UNet2DPancreaticSegmentation
+    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+    covers:
+    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
+    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
     id: deepimagej/unet-pancreaticcellsegmentation

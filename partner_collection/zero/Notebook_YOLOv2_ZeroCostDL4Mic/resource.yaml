@@ -8,11 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
-    name: YOLOv2 - ZeroCostDL4Mic
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -47,16 +42,16 @@ versions:
     - YOLOv2
     - object detection
     - ZeroCostDL4Mic
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    type: application
     format_version: 0.2.2
-    maintainers: []
     description: Object detection of 2D images. YOLOv2 is an object detection network
       developed by Redmon & Farhadi, which identifies objects in images and draws
       bounding boxes around them.
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    name: YOLOv2 - ZeroCostDL4Mic
+    maintainers: []
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -66,4 +61,9 @@ versions:
     - zero/Dataset_YOLOv2_ZeroCostDL4Mic
     - zero/Dataset_YOLOv2_coli_DeepBacs
     - zero/Dataset_YOLOv2_antibiotic_DeepBacs
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
     id: zero/Notebook_YOLOv2_ZeroCostDL4Mic
