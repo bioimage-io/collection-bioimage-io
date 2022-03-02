@@ -8,7 +8,15 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     type: application
+    description: Self-supervised denoising of 2D images. DecoNoising 2D is deep-learning
+      method that can be used to denoise 2D microscopy images. By running this notebook,
+      you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic
+      wiki to check the original publications this network is based on and make sure
+      you cite these.
+    format_version: 0.2.2
     maintainers: []
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -17,7 +25,14 @@ versions:
     - text: Anna S. Goncharova, Alf Honigmann, Florian Jug, Alexander Krull. Improving
         Blind Spot Denoising for Microscopy. arXiv:2008.08414
       doi: https://arxiv.org/abs/2008.08414
-    format_version: 0.2.2
+    name: DecoNoising (2D) - ZeroCostDL4Mic
+    tags:
+    - colab
+    - notebook
+    - DecoNoising
+    - denoising
+    - ZeroCostDL4Mic
+    - 2D
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -38,34 +53,19 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    tags:
-    - colab
-    - notebook
-    - DecoNoising
-    - denoising
-    - ZeroCostDL4Mic
-    - 2D
-    name: DecoNoising (2D) - ZeroCostDL4Mic
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    description: Self-supervised denoising of 2D images. DecoNoising 2D is deep-learning
-      method that can be used to denoise 2D microscopy images. By running this notebook,
-      you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic
-      wiki to check the original publications this network is based on and make sure
-      you cite these.
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DecoNoising_notebook.png
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic
     - zero/Dataset_Noise2Void_2D_subtilis_DeepBacs
     - zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic
     - zero/Dataset_CARE_2D_coli_DeepBacs
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic
