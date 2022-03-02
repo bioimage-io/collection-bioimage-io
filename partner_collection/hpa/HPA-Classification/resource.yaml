@@ -8,6 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    type: application
+    format_version: 0.2.2
     config:
       id: hpa
       name: HPA
@@ -25,13 +27,11 @@ versions:
       - model
       - application
       default_type: model
-    format_version: 0.2.2
-    name: HPA Collection
     tags:
     - hpa
     - bioimage.io
+    name: HPA Collection
     description: Resources for BioImgage.IO curated by the the cellprofiling group
       at HPA.
-    type: application
     source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
     id: hpa/HPA-Classification
