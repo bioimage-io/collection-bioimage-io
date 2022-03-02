@@ -8,22 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    format_version: 0.2.2
-    cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-      doi: 10.1038/s41592-021-01262-9
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    authors: []
-    documentation: https://deepimagej.github.io/deepimagej/
-    tags:
-    - deepimagej
-    - bioimage.io
-    type: collection
-    maintainers: []
-    name: deepImageJ Collection
     config:
       id: deepimagej
       name: DeepImageJ
@@ -41,9 +25,25 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    name: deepImageJ Collection
+    format_version: 0.2.2
+    cite:
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+      doi: 10.1038/s41592-021-01262-9
+    type: collection
+    maintainers: []
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    documentation: https://deepimagej.github.io/deepimagej/
+    tags:
+    - deepimagej
+    - bioimage.io
+    authors: []
+    download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
     source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/model.yaml
-    download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
     id: deepimagej/Usiigaci

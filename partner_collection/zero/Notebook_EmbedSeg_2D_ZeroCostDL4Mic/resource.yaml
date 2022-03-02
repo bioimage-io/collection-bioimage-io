@@ -8,29 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    format_version: 0.2.2
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: Manan Lalit, Pavel Tomancak, Florian Jug. Embedding-based Instance Segmentation
-        in Microscopy. arXiv:2101.10033.
-      doi: https://arxiv.org/abs/2101.10033
-    description: Instance segmentation of 2D images. EmbedSeg 2D is a deep-learning
-      method that can be used to segment object from bioimages and was first published
-      by Lalit et al. in 2021, on arXiv.
-    authors:
-    - Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags:
-    - colab
-    - notebook
-    - EmbedSeg
-    - Segmentation
-    - ZeroCostDL4Mic
-    type: application
-    maintainers: []
-    name: EmbedSeg (2D) - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -51,12 +28,30 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
+    name: EmbedSeg (2D) - ZeroCostDL4Mic
+    format_version: 0.2.2
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: Manan Lalit, Pavel Tomancak, Florian Jug. Embedding-based Instance Segmentation
+        in Microscopy. arXiv:2101.10033.
+      doi: https://arxiv.org/abs/2101.10033
+    type: application
+    maintainers: []
+    description: Instance segmentation of 2D images. EmbedSeg 2D is a deep-learning
+      method that can be used to segment object from bioimages and was first published
+      by Lalit et al. in 2021, on arXiv.
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    tags:
+    - colab
+    - notebook
+    - EmbedSeg
+    - Segmentation
+    - ZeroCostDL4Mic
+    authors:
+    - Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -66,4 +61,9 @@ versions:
     - zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic
