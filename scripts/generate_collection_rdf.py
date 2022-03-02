@@ -65,23 +65,23 @@ def main(
                 continue
 
             this_version = yaml.load(updated_rdf_source)
+            assert version_id == this_version["id"].split("/")[-1]
+            assert r.resource_id == this_version["id"][: -(len(version_id) + 1)]
 
             if latest_version is None:
                 latest_version = this_version
-                latest_version["id"] = f"{r.resource_id}/{version_id}"  # todo: do we need to set this here?
-                latest_version["versions"] = [this_version["id"].split("/")[-1]]
+                latest_version["id"] = r.resource_id
+                latest_version["versions"] = [version_id]
             else:
-                latest_version["versions"].append(this_version["id"].split("/")[-1])
+                latest_version["versions"].append(version_id)
 
         if latest_version is None:
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
         else:
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
-            if "id" in summary and len(summary["id"].split("/")) >=3:
-                # convert to short resource id without version_id
-                summary["id"] = "/".join(summary["id"].split("/")[:2])
             if latest_version["config"]["bioimageio"].get("owners"):
                 summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
+
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1
