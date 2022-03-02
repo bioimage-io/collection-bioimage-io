@@ -8,7 +8,7 @@ import typer
 from boltons.iterutils import remap
 
 from bioimageio.spec.shared import yaml
-from utils import iterate_known_resources
+from utils import iterate_known_resources, rec_sort
 
 SUMMARY_FIELDS = [
     "authors",
@@ -96,6 +96,10 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
+
+    rdf_path = dist / "rdf.yaml"
+    rdf_path.parent.mkdir(exist_ok=True)
+    yaml.dump(rec_sort(rdf), rdf_path)
 
     def convert_for_json(p, k, v):
         """convert anything not json compatible"""
