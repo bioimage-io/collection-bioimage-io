@@ -70,6 +70,8 @@ def main(always_continue: bool = True):
     pprint(updates)
 
     fake_deploy(dist, collection)  # in CI done via PRs
+    if dist.exists():
+        shutil.rmtree(str(dist))
 
     update_partner_resources_script()
     fake_deploy(dist, gh_pages)
