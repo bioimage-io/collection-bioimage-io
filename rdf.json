@@ -3002,7 +3002,7 @@
         }
       ],
       "covers": [
-        "cover.png"
+        "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
       "id": "10.5281/zenodo.5847355",
@@ -3017,7 +3017,7 @@
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/5874728/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6322908/rdf.yaml",
       "tags": [
         "unet",
         "cells",
@@ -3028,6 +3028,7 @@
       ],
       "type": "model",
       "versions": [
+        "6322908",
         "5874728",
         "5847356"
       ]
@@ -3363,7 +3364,7 @@
       "application": 94,
       "collection": 34,
       "dataset": 66,
-      "model": 36
+      "model": 37
     },
     "n_resources": {
       "application": 47,
