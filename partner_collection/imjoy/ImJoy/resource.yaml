@@ -28,13 +28,13 @@ versions:
       - application
       default_type: application
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
+    format_version: 0.2.2
     documentation: https://imjoy.io/docs
     name: ImJoy Collection
-    format_version: 0.2.2
     tags:
     - imjoy
     - bioimage.io
-    type: application
     description: Resources for BioImgage.IO curated by the ImJoy Team.
+    type: application
     source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
     id: imjoy/ImJoy

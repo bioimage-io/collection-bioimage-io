@@ -8,9 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    maintainers: []
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -31,6 +28,8 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    format_version: 0.2.2
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -38,32 +37,33 @@ versions:
     - text: Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, Alexei A. Efros. Image-to-Image
         Translation with Conditional Adversarial Networks. arXiv:1611.07004.
       doi: https://arxiv.org/abs/1611.07004
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     name: pix2pix (2D) - ZeroCostDL4Mic
-    format_version: 0.2.2
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    maintainers: []
     tags:
     - colab
     - notebook
     - pix2pix
     - ZeroCostDL4Mic
     - 2D
-    type: application
     description: Paired image-to-image translation of 2D images. pix2pix is a deep-learning
       method that can be used to translate one type of images into another. While
       pix2pix can potentially be used for any type of image-to-image translation,
       we demonstrate that it can be used to predict a fluorescent image from another
       fluorescent image. Note - visit the ZeroCostDL4Mic wiki to check the original
       publications this network is based on and make sure you cite these.
-    links:
-    - zero/Notebook Preview
-    - zero/Dataset_pix2pix_ZeroCostDL4Mic
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
+    type: application
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/pix2pix_notebook_2.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/pix2pix_notebook.png
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
+    links:
+    - zero/Notebook Preview
+    - zero/Dataset_pix2pix_ZeroCostDL4Mic
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_pix2pix_2D_ZeroCostDL4Mic
