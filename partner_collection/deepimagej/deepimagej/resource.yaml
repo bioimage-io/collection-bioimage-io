@@ -8,9 +8,22 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    format_version: 0.2.2
+    cite:
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+      doi: 10.1038/s41592-021-01262-9
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    authors: []
+    documentation: https://deepimagej.github.io/deepimagej/
     tags:
     - deepimagej
     - bioimage.io
+    type: collection
+    maintainers: []
+    name: deepImageJ Collection
     config:
       id: deepimagej
       name: DeepImageJ
@@ -28,18 +41,5 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-      doi: 10.1038/s41592-021-01262-9
-    maintainers: []
-    format_version: 0.2.2
-    name: deepImageJ Collection
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    type: collection
-    authors: []
-    documentation: https://deepimagej.github.io/deepimagej/
     source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
     id: deepimagej/deepimagej

@@ -8,6 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    format_version: 0.2.2
+    cite:
+    - text: Neeraj Kumar et al. Transactions on medical imaging 2020
+      doi: https://doi.org/10.1109/TMI.2019.2947628
+    description: Labelled images for instance segmentation of cell nuclei in digital
+      pathology datasets (MoNuSeg 2018 Challenge).
+    authors:
+    - name: DeepImageJ
+      affiliation: EPFL, UC3M
+    documentation: https://monuseg.grand-challenge.org/
     tags:
     - StarDist
     - segmentation
@@ -17,6 +27,9 @@ versions:
     - 2D
     - nuclei segmentation
     - digital pathology
+    type: dataset
+    maintainers: []
+    name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
     config:
       id: deepimagej
       name: DeepImageJ
@@ -34,22 +47,9 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    cite:
-    - text: Neeraj Kumar et al. Transactions on medical imaging 2020
-      doi: https://doi.org/10.1109/TMI.2019.2947628
-    maintainers: []
-    format_version: 0.2.2
-    name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
-    description: Labelled images for instance segmentation of cell nuclei in digital
-      pathology datasets (MoNuSeg 2018 Challenge).
-    type: dataset
-    authors:
-    - name: DeepImageJ
-      affiliation: EPFL, UC3M
-    documentation: https://monuseg.grand-challenge.org/
+    source: https://monuseg.grand-challenge.org/Data/
     covers:
     - https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg1.jpg
     - https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg2.jpg
     - https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg3.jpg
-    source: https://monuseg.grand-challenge.org/Data/
     id: deepimagej/MoNuSeg_digital_pathology_miccai2018
