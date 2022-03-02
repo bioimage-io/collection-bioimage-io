@@ -8,6 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    name: DenoiSeg (2D) - ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    maintainers: []
+    format_version: 0.2.2
+    type: application
+    description: Joint denoising and binary segmentation of 2D images. DenoiSeg 2D
+      is deep-learning method that can be used to jointly denoise and segment 2D microscopy
+      images. The benefits of using DenoiSeg (compared to other Deep Learning-based
+      segmentation methods) are more prononced when only a few annotated images are
+      available. However, the denoising part requires many images to perform well.
+      All the noisy images don't need to be labeled to train DenoiSeg. Note - visit
+      the ZeroCostDL4Mic wiki to check the original publications this network is based
+      on and make sure you cite these.
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -28,8 +41,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    name: DenoiSeg (2D) - ZeroCostDL4Mic
-    format_version: 0.2.2
+    tags:
+    - colab
+    - notebook
+    - CycleGAN
+    - ZeroCostDL4Mic
+    - 2D
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -39,28 +56,11 @@ versions:
         Vision – ECCV 2020 Workshops. ECCV 2020. Lecture Notes in Computer Science,
         vol 12535. Springer, Cham. https://doi.org/10.1007/978-3-030-66415-2_21'
       doi: https://doi.org/10.1007/978-3-030-66415-2_21
-    type: application
-    maintainers: []
-    description: Joint denoising and binary segmentation of 2D images. DenoiSeg 2D
-      is deep-learning method that can be used to jointly denoise and segment 2D microscopy
-      images. The benefits of using DenoiSeg (compared to other Deep Learning-based
-      segmentation methods) are more prononced when only a few annotated images are
-      available. However, the denoising part requires many images to perform well.
-      All the noisy images don't need to be labeled to train DenoiSeg. Note - visit
-      the ZeroCostDL4Mic wiki to check the original publications this network is based
-      on and make sure you cite these.
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags:
-    - colab
-    - notebook
-    - CycleGAN
-    - ZeroCostDL4Mic
-    - 2D
     authors:
     - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Denoiseg_notebook.png
     badges:

@@ -8,29 +8,29 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    name: DeepImageJ
+    documentation: https://deepimagej.github.io/deepimagej/index.html
+    maintainers: []
+    format_version: 0.2.2
+    type: application
+    description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
+      deep learning models in ImageJ and Fiji.
     config:
       supported_weight_formats:
       - tensorflow_saved_model_bundle
-    name: DeepImageJ
-    format_version: 0.2.2
+    tags:
+    - deepimagej
+    - software
     cite:
       text: 'Gómez-de-Mariscal, E., García-López-de-Haro, C., Ouyang, W., Donati,
         L., Lundberg E., Unser, M., Muñoz-Barrutia, A. and Sage, D. DeepImageJ: A
         user-friendly plugin to run deep learning models in ImageJ, BioRxiv, 2019'
       doi: https://doi.org/10.1101/799270
-    type: application
-    maintainers: []
-    description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
-      deep learning models in ImageJ and Fiji.
-    documentation: https://deepimagej.github.io/deepimagej/index.html
-    tags:
-    - deepimagej
-    - software
     authors:
     - name: DeepImageJ
       affiliation: EPFL, UC3M
     source: https://deepimagej.github.io/deepimagej/index.html
+    passive: true
     icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     git_repo: https://github.com/deepimagej/deepimagej-plugin
-    passive: true
     id: deepimagej/deepimagej-web

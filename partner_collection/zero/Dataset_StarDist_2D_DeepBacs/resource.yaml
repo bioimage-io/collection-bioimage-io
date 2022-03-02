@@ -8,6 +8,13 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    name: Mixed segmentation dataset - DeepBacs
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    maintainers: []
+    format_version: 0.2.2
+    type: dataset
+    description: Mixed training and test images of S. aureus, E. coli and B. subtilis
+      for cell segmentation using StarDist.
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -28,8 +35,11 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    name: Mixed segmentation dataset - DeepBacs
-    format_version: 0.2.2
+    tags:
+    - StarDist
+    - segmentation
+    - DeepBacs
+    - 2D
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
@@ -37,16 +47,6 @@ versions:
         analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
         doi: https://doi.org/10.1101/2021.11.03.467152'
       doi: https://doi.org/10.1101/2021.11.03.467152
-    type: dataset
-    maintainers: []
-    description: Mixed training and test images of S. aureus, E. coli and B. subtilis
-      for cell segmentation using StarDist.
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-    tags:
-    - StarDist
-    - segmentation
-    - DeepBacs
-    - 2D
     authors:
     - Christoph Spahn
     - Mike Heilemann
