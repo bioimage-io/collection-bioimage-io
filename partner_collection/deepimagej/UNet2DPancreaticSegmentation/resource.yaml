@@ -8,12 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    type: collection
-    format_version: 0.2.2
-    maintainers: []
-    name: deepImageJ Collection
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    authors: []
     tags:
     - deepimagej
     - bioimage.io
@@ -40,6 +34,12 @@ versions:
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
       doi: 10.1038/s41592-021-01262-9
+    maintainers: []
+    format_version: 0.2.2
+    name: deepImageJ Collection
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    type: collection
+    authors: []
     documentation: https://deepimagej.github.io/deepimagej/
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
     download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip

@@ -8,13 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    format_version: 0.2.2
-    maintainers: []
-    name: pix2pix example training and test dataset - ZeroCostDL4Mic
-    description: Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA
-    authors:
-    - Guillaume Jacquemet
     tags:
     - pix2pix
     - ZeroCostDL4Mic
@@ -42,6 +35,13 @@ versions:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
       doi: https://doi.org/10.1038/s41467-021-22518-0
+    maintainers: []
+    format_version: 0.2.2
+    name: pix2pix example training and test dataset - ZeroCostDL4Mic
+    description: Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA
+    type: dataset
+    authors:
+    - Guillaume Jacquemet
     documentation: https://doi.org/10.5281/zenodo.3941889
     covers:
     - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/pix2pix_dataset.png

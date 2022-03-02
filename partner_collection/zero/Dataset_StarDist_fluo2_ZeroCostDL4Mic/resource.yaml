@@ -8,16 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    format_version: 0.2.2
-    maintainers: []
-    name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
-    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
-      manual segmentation
-    authors:
-    - Hussein Al-Akhrass
-    - Johanna Ivaska
-    - Guillaume Jacquemet
     tags:
     - StarDist
     - ZeroCostDL4Mic
@@ -49,6 +39,16 @@ versions:
         dynamin-independent endocytosis. Nat Cell Biol. 2021 Oct;23(10):1073-1084.
         doi: 10.1038/s41556-021-00767-x. Epub 2021 Oct 6. PMID: 34616024.'
       doi: https://doi.org/10.1038/s41556-021-00767-x
+    maintainers: []
+    format_version: 0.2.2
+    name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
+    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
+      manual segmentation
+    type: dataset
+    authors:
+    - Hussein Al-Akhrass
+    - Johanna Ivaska
+    - Guillaume Jacquemet
     documentation: https://zenodo.org/record/4811213
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png
