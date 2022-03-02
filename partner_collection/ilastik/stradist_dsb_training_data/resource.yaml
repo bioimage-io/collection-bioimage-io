@@ -8,14 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    type: dataset
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
+    authors:
+    - name: Constantin Pape
     name: DSB Nucleus Segmentation Training Data
-    description: Subset of the nucleus segmentation training data from the 2018 Kaggle
-      Data Science Bowl.
     cite:
     - doi: https://doi.org/10.1038/s41592-019-0612-7
       text: Caicedo et al.
-    format_version: 0.2.1
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
     config:
       id: ilastik
       name: ilastik
@@ -32,26 +32,26 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    type: dataset
     tags:
     - nuclei
     - instance-segmentation
     - fluorescence-light-microscopy
     - dsb-challenge
     - 2D
-    authors:
-    - name: Constantin Pape
+    format_version: 0.2.1
     maintainers:
     - orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
       github_user: fynnbe
       affiliation: EMBL Heidelberg
+      name: Fynn Beuttenmüller
     - orcid: 0000-0001-6562-7187
-      name: Constantin Pape
       github_user: constantinpape
       affiliation: EMBL Heidelberg
-    source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
+      name: Constantin Pape
+    description: Subset of the nucleus segmentation training data from the 2018 Kaggle
+      Data Science Bowl.
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg
+    source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
     license: CC0-1.0
     id: ilastik/stradist_dsb_training_data
