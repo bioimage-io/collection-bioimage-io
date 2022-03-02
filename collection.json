@@ -3040,13 +3040,12 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png"
+        "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
-        "ilastik/live-cell-boundary-model",
         "ilastik/livecell_dataset",
         "ilastik/ilastik",
         "deepimagej/deepimagej",
@@ -3056,7 +3055,7 @@
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/5869900/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6321179/rdf.yaml",
       "tags": [
         "2d",
         "transmission-light-microscopy",
@@ -3067,6 +3066,7 @@
       ],
       "type": "model",
       "versions": [
+        "6321179",
         "5869900"
       ]
     },
@@ -3363,7 +3363,7 @@
       "application": 94,
       "collection": 34,
       "dataset": 66,
-      "model": 35
+      "model": 36
     },
     "n_resources": {
       "application": 47,
