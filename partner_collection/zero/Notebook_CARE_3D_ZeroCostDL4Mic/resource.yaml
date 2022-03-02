@@ -8,14 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Weigert, M., Schmidt, U., Boothe, T. et al. Content-aware image restoration:
-        pushing the limits of fluorescence microscopy. Nat Methods 15, 1090–1097 (2018).
-        https://doi.org/10.1038/s41592-018-0216-7'
-      doi: https://doi.org/10.1038/s41592-018-0216-7
+    type: application
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: CARE (3D) - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -43,10 +38,17 @@ versions:
     - denoising
     - ZeroCostDL4Mic
     - 3D
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Weigert, M., Schmidt, U., Boothe, T. et al. Content-aware image restoration:
+        pushing the limits of fluorescence microscopy. Nat Methods 15, 1090–1097 (2018).
+        https://doi.org/10.1038/s41592-018-0216-7'
+      doi: https://doi.org/10.1038/s41592-018-0216-7
+    maintainers: []
     authors:
     - Lucas von Chamier and the ZeroCostDL4Mic Team
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    type: application
     format_version: 0.2.2
     description: Supervised restoration of 3D images. CARE is a neural network capable
       of image restoration from corrupted bio-images, first published in 2018 by Weigert
@@ -57,8 +59,6 @@ versions:
       signal-to-noise ratio images are provided as targets, the network will perform
       denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications
       this network is based on and make sure you cite these.
-    name: CARE (3D) - ZeroCostDL4Mic
-    maintainers: []
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -66,8 +66,8 @@ versions:
     links:
     - zero/Notebook Preview
     - zero/Dataset_CARE_3D_ZeroCostDL4Mic
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_CARE_notebook.png
     id: zero/Notebook_CARE_3D_ZeroCostDL4Mic

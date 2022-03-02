@@ -8,6 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    type: model
+    name: HPA-bestfitting
     config:
       id: hpa
       name: HPA
@@ -31,23 +33,21 @@ versions:
     - inception-v3
     - resnet-34
     - resnet-50
-    type: model
     format_version: 0.2.2
     description: A CNN model using focal loss and image augmentation, optimized with
       Adam optimizer.
-    name: HPA-bestfitting
+    license: MIT
     badges:
     - label: HPA Competition
       ext: 1st
       url: https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard
-    license: MIT
-    cite:
-    framework: pytorch
-    authors:
-    - Shubin Dai
-    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
-    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     covers:
     - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
     - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
+    cite:
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
+    authors:
+    - Shubin Dai
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
+    framework: pytorch
     id: hpa/HPA-bestfitting

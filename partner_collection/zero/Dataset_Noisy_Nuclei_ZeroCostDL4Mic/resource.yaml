@@ -8,11 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    cite:
-    - text: 'Laine RF, Arganda-Carreras I, Henriques R, Jacquemet G. Avoiding a replication
-        crisis in deep-learning-based bioimage analysis. Nat Methods. 2021 Oct;18(10):1136-1144.
-        doi: 10.1038/s41592-021-01284-3. PMID: 34608322; PMCID: PMC7611896. '
-      doi: https://doi.org/10.1038/s41592-021-01284-3
+    type: dataset
+    documentation: https://zenodo.org/record/5750174
+    name: Noisy nuclei dataset.
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -39,10 +37,14 @@ versions:
     - Noise2Void
     - DecoNoising
     - ZeroCostDL4Mic
+    cite:
+    - text: 'Laine RF, Arganda-Carreras I, Henriques R, Jacquemet G. Avoiding a replication
+        crisis in deep-learning-based bioimage analysis. Nat Methods. 2021 Oct;18(10):1136-1144.
+        doi: 10.1038/s41592-021-01284-3. PMID: 34608322; PMCID: PMC7611896. '
+      doi: https://doi.org/10.1038/s41592-021-01284-3
+    maintainers: []
     authors:
     - Guillaume Jacquemet
-    documentation: https://zenodo.org/record/5750174
-    type: dataset
     format_version: 0.2.2
     description: This dataset contains a denoising training and test dataset for deep
       learning applications. The training dataset comprises 20 paired matching noisy
@@ -50,9 +52,7 @@ versions:
       noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA)
       images acquired using a spinning disk confocal microscope with a 20x 0.8 NA
       objective.
-    name: Noisy nuclei dataset.
-    maintainers: []
-    download_url: https://zenodo.org/record/5750174
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png
+    download_url: https://zenodo.org/record/5750174
     id: zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic

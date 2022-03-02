@@ -8,9 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    cite:
-    - doi: https://doi.org/10.3389/fnana.2015.00142
-      text: Arganda-Carreras et al.
+    type: dataset
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi.md
+    name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
     config:
       id: ilastik
       name: ilastik
@@ -34,22 +34,22 @@ versions:
     - instance-segmentation
     - 2D
     - isbi2012-challenge
+    cite:
+    - doi: https://doi.org/10.3389/fnana.2015.00142
+      text: Arganda-Carreras et al.
+    maintainers:
+    - orcid: 0000-0002-8567-6389
+      name: Fynn Beuttenmüller
+      github_user: fynnbe
+      affiliation: EMBL Heidelberg
+    - orcid: 0000-0001-6562-7187
+      name: Constantin Pape
+      github_user: constantinpape
+      affiliation: EMBL Heidelberg
     authors:
     - name: Constantin Pape
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi.md
-    type: dataset
     format_version: 0.2.1
     description: Training data from challenge on 2d EM segmentation of neuronal processes.
-    name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
-    maintainers:
-    - github_user: fynnbe
-      orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
-      affiliation: EMBL Heidelberg
-    - github_user: constantinpape
-      orcid: 0000-0001-6562-7187
-      name: Constantin Pape
-      affiliation: EMBL Heidelberg
     source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover0.jpg
