@@ -8,8 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    format_version: 0.2.2
+    authors:
+    - Romain Laine and the ZeroCostDL4Mic Team
+    maintainers: []
+    type: application
     tags:
     - colab
     - notebook
@@ -17,6 +19,8 @@ versions:
     - segmentation
     - ZeroCostDL4Mic
     - 2D
+    name: U-Net (2D) - ZeroCostDL4Mic
+    format_version: 0.2.2
     description: 2D binary segmentation. U-Net is an encoder-decoder architecture
       originally used for image segmentation. The first half of the U-Net architecture
       is a downsampling convolutional neural network which acts as a feature extractor
@@ -44,10 +48,6 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    name: U-Net (2D) - ZeroCostDL4Mic
-    maintainers: []
-    authors:
-    - Romain Laine and the ZeroCostDL4Mic Team
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -55,16 +55,16 @@ versions:
     - text: 'Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional
         Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597'
       doi: https://arxiv.org/abs/1505.04597
-    type: application
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     links:
     - zero/Notebook Preview
     - zero/Dataset_U-Net_2D_DeepBacs
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic
