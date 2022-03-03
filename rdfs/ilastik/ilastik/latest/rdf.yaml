@@ -30,7 +30,7 @@ covers: []
 dependencies: []
 description: Export BioImage.IO model packages for ilastik from a model description
   file
-documentation: https://ilastik.org
+documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
 env: ''
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png

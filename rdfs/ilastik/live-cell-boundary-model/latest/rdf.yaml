@@ -2,10 +2,6 @@ api_version: 0.1.8
 attachments: {}
 authors: []
 badges: []
-cite:
-- doi: 10.1038/s41592-019-0582-9
-  text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine learning
-    for (bio)image analysis. Nat Methods 16, 1226-1232 (2019).'
 config:
   background_image: static/img/zoo-background.svg
   bioimageio:
@@ -29,7 +25,6 @@ config:
 covers: []
 dependencies: []
 description: Run the live cell boundary model via the BioEngine
-documentation: https://ilastik.org
 env: ''
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png

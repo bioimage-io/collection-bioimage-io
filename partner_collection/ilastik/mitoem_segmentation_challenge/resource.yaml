@@ -8,21 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    description: Training data for mitochondria segmentation in 3d EM.
+    type: dataset
+    name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
     tags:
     - mitochondria
     - electron-microscopy
     - 3D
     - mito-em-challenge
     - instance-segmentation
-    cite:
-    - doi: https://doi.org/10.1007/978-3-030-59722-1_7
-      text: Donglai Wei et al.
-    authors:
-    - name: Constantin Pape
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
-    format_version: 0.2.1
-    name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
     config:
       id: ilastik
       name: ilastik
@@ -39,18 +32,25 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    format_version: 0.2.1
+    authors:
+    - name: Constantin Pape
+    description: Training data for mitochondria segmentation in 3d EM.
     maintainers:
     - affiliation: EMBL Heidelberg
+      github_user: fynnbe
       orcid: 0000-0002-8567-6389
       name: Fynn Beuttenmüller
-      github_user: fynnbe
     - affiliation: EMBL Heidelberg
+      github_user: constantinpape
       orcid: 0000-0001-6562-7187
       name: Constantin Pape
-      github_user: constantinpape
-    type: dataset
-    source: https://mitoem.grand-challenge.org/
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
+    source: https://mitoem.grand-challenge.org/
+    cite:
+    - doi: https://doi.org/10.1007/978-3-030-59722-1_7
+      text: Donglai Wei et al.
     id: ilastik/mitoem_segmentation_challenge
