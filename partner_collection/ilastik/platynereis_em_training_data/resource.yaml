@@ -8,26 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    type: dataset
-    description: Training data for EM segmentation of cellular membranes, nuclei,
-      cuticle and cilia in Platynereis.
-    name: Platynereis EM Traning Data
-    maintainers:
-    - name: Fynn Beuttenmüller
-      orcid: 0000-0002-8567-6389
-      github_user: fynnbe
-      affiliation: EMBL Heidelberg
-    - name: Constantin Pape
-      orcid: 0000-0001-6562-7187
-      github_user: constantinpape
-      affiliation: EMBL Heidelberg
-    format_version: 0.2.1
-    cite:
-    - doi: https://doi.org/10.1016/j.cell.2021.07.017
-      text: Vergara, Pape, Meechan et al.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
-    authors:
-    - name: Constantin Pape
+    format_version: 0.2.1
     tags:
     - electron-microscopy
     - platynereis
@@ -36,6 +18,8 @@ versions:
     - nuclei
     - instance-segmentation
     - 3D
+    description: Training data for EM segmentation of cellular membranes, nuclei,
+      cuticle and cilia in Platynereis.
     config:
       id: ilastik
       name: ilastik
@@ -52,6 +36,22 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    name: Platynereis EM Traning Data
+    maintainers:
+    - name: Fynn Beuttenmüller
+      affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
+      github_user: fynnbe
+    - name: Constantin Pape
+      affiliation: EMBL Heidelberg
+      orcid: 0000-0001-6562-7187
+      github_user: constantinpape
+    authors:
+    - name: Constantin Pape
+    cite:
+    - doi: https://doi.org/10.1016/j.cell.2021.07.017
+      text: Vergara, Pape, Meechan et al.
+    type: dataset
     license: CC-BY-4.0
     source: https://doi.org/10.5281/zenodo.3675220
     covers:
