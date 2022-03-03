@@ -451,6 +451,30 @@ collection:
   versions: [latest]
 - authors:
   - {name: Constantin Pape}
+  covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg']
+  description: Training data for cell segmentation in Arabidopsis ovules.
+  id: ilastik/plantseg_ovules
+  license: CC-BY-4.0
+  name: Arabidopsis Ovules Traning Data
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/plantseg_ovules/latest/rdf.yaml
+  source: https://osf.io/w38uf/
+  tags: [light-microscopy, arabidopsis, cells, instance-segmentation, 3D]
+  type: dataset
+  versions: [latest]
+- authors:
+  - {name: Constantin Pape}
+  covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg']
+  description: Training data for cell segmentation in Arabidopsis lateral root.
+  id: ilastik/plantseg_root
+  license: CC-BY-4.0
+  name: Arabidopsis Lateral Root Traning Data
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/plantseg_root/latest/rdf.yaml
+  source: https://osf.io/2rszy/
+  tags: [light-microscopy, arabidopsis, cells, instance-segmentation, 3D]
+  type: dataset
+  versions: [latest]
+- authors:
+  - {name: Constantin Pape}
   covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png']
   description: Training data for EM segmentation of cellular membranes, nuclei, cuticle
     and cilia in Platynereis.
@@ -1678,8 +1702,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 66, model: 37}
-  n_resources: {application: 47, collection: 17, dataset: 33, model: 16}
+  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 37}
+  n_resources: {application: 47, collection: 17, dataset: 35, model: 16}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
