@@ -8,6 +8,21 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    description: Fluorescence microscopy (Lifeact-RFP)
+    tags:
+    - Noise2Void
+    - denoising
+    - ZeroCostDL4Mic
+    - 3D
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    authors:
+    - Guillaume Jacquemet
+    documentation: https://doi.org/10.5281/zenodo.3713326
+    format_version: 0.2.2
+    name: Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -28,23 +43,8 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    format_version: 0.2.2
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    authors:
-    - Guillaume Jacquemet
     maintainers: []
     type: dataset
-    tags:
-    - Noise2Void
-    - denoising
-    - ZeroCostDL4Mic
-    - 3D
-    documentation: https://doi.org/10.5281/zenodo.3713326
-    name: Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic
-    description: Fluorescence microscopy (Lifeact-RFP)
     download_url: https://doi.org/10.5281/zenodo.3713326
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_dataset.png
