@@ -1,0 +1,19 @@
+bioimageio_spec_version: 0.4.4post1
+rdf_sha256: 4481357b708e6a0b190585b8bea6937b11bcffeb0e4821f0d9b652c566db71b5
+status: failed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.4post1
+    error:
+      _schema: ['Minimal shape [ 1.  2. 32. 32.] of output output0 is too small for
+          halo [0, 0, 16, 16].']
+    name: 'bioimageio.spec static validation of  RDF '
+    nested_errors: {}
+    status: failed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [{''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']},
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}
