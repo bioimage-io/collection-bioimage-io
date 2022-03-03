@@ -1,0 +1,20 @@
+bioimageio_spec_version: 0.4.4post1
+rdf_sha256: 57303f80e1f00548130c9545ed512c7f65c82b9c12f6a936504221dbd037a674
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.4post1
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.2 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
+  - bioimageio_spec_version: 0.4.4post1
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'dataset'. Validating as rdf.}
