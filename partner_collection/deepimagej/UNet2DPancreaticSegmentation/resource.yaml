@@ -8,15 +8,11 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    authors: []
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     maintainers: []
     type: collection
-    tags:
-    - deepimagej
-    - bioimage.io
-    name: deepImageJ Collection
-    format_version: 0.2.2
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    documentation: https://deepimagej.github.io/deepimagej/
+    authors: []
     config:
       id: deepimagej
       name: DeepImageJ
@@ -34,17 +30,21 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    format_version: 0.2.2
     cite:
     - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
       doi: 10.1038/s41592-021-01262-9
-    documentation: https://deepimagej.github.io/deepimagej/
-    download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
+    name: deepImageJ Collection
+    tags:
+    - deepimagej
+    - bioimage.io
     links:
     - deepimagej/deepimagej
     - deepimagej/unet-pancreaticcellsegmentation
     - imjoy/BioImageIO-Packager
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
+    download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
     id: deepimagej/UNet2DPancreaticSegmentation

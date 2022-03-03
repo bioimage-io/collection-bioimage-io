@@ -8,20 +8,13 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    maintainers: []
-    type: application
-    tags:
-    - colab
-    - notebook
-    - DRMIME
-    - image registration
-    - ZeroCostDL4Mic
-    name: DRMIME - ZeroCostDL4Mic
-    format_version: 0.2.2
     description: DRMIME is an network that can be used to register microscopy images
       (affine and perspective registration).
+    maintainers: []
+    type: application
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -42,6 +35,7 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    format_version: 0.2.2
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -51,15 +45,21 @@ versions:
         Proceedings of the Third Conference on Medical Imaging with Deep Learning,
         PMLR 121:527-543, 2020.'
       doi: http://proceedings.mlr.press/v121/nan20a.html
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: DRMIME - ZeroCostDL4Mic
+    tags:
+    - colab
+    - notebook
+    - DRMIME
+    - image registration
+    - ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DrMIME_notebook.png
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_DRMIME_ZeroCostDL4Mic
