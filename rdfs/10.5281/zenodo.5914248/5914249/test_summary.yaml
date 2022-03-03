@@ -1,9 +1,9 @@
-bioimageio_spec_version: 0.4.4
+bioimageio_spec_version: 0.4.4post1
 rdf_sha256: 89c1c54deedd4eee2f9c97ba26f1f4cde8a02138311eb4b1834f89a82db5ac83
 status: failed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.4post1
     error:
       _schema: ['Minimal shape [1. 8. 8. 1.] of output output is too small for halo
           [0, 47, 47, 0].']
@@ -12,5 +12,12 @@ tests:
     status: failed
     traceback: null
     warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
-        Free/libre., tags: 'Missing tags for categories: [''modality'', ''content'',
-        ''task'']'}
+        Free/libre., tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
+        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
+        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
+        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''content'':
+        [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'',
+        ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']},
+        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+        ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
+        ''in-silico-labeling'']}]'}
