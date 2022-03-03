@@ -10,8 +10,8 @@ versions:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
     type: model
     description: A light-weight model for HPA image classification competition
-    format_version: 0.1.0
     name: HPA ShuffleNetV2
+    format_version: 0.1.0
     tags:
     - shufflenet
     - tensorflow.js

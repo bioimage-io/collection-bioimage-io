@@ -8,18 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    authors: []
     type: collection
     description: Resources for BioImgage.IO curated by the deepImageJ team.
-    format_version: 0.2.2
+    name: deepImageJ Collection
     maintainers: []
+    format_version: 0.2.2
     cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
-    name: deepImageJ Collection
+      doi: 10.1038/s41592-021-01262-9
+    documentation: https://deepimagej.github.io/deepimagej/
+    authors: []
     tags:
     - deepimagej
     - bioimage.io
@@ -40,10 +41,9 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    documentation: https://deepimagej.github.io/deepimagej/
+    download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
     source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/model.yaml
-    download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
     id: deepimagej/WidefieldTxredSuperResolution
