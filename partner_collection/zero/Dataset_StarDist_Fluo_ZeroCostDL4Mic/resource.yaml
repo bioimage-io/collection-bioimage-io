@@ -8,13 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
-      manual segmentation
-    maintainers: []
-    type: dataset
-    documentation: https://zenodo.org/record/4034976
-    authors:
-    - Guillaume Jacquemet
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -45,11 +38,18 @@ versions:
         Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv,
         2020. DOI: https://doi.org/10.1101/2020.09.22.306233'
       doi: https://doi.org/10.1101/2020.09.22.306233
-    name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
+    authors:
+    - Guillaume Jacquemet
+    maintainers: []
+    type: dataset
     tags:
     - StarDist
     - ZeroCostDL4Mic
+    documentation: https://zenodo.org/record/4034976
+    name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
+    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
+      manual segmentation
+    download_url: https://zenodo.org/record/4034976
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
-    download_url: https://zenodo.org/record/4034976
     id: zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic

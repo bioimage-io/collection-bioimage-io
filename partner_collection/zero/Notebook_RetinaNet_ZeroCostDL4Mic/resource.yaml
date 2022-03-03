@@ -8,14 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    description: Object detection of 2D images. RetinaNet is a is an object detection
-      network, which identifies objects in images and draws bounding boxes around
-      them.
-    maintainers: []
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    authors:
-    - Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -44,13 +36,27 @@ versions:
     - text: Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He, Piotr Dollár. Focal
         Loss for Dense Object Detection. arXiv:1708.02002
       doi: https://arxiv.org/abs/1708.02002
-    name: RetinaNet - ZeroCostDL4Mic
+    authors:
+    - Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
+    maintainers: []
+    type: application
     tags:
     - colab
     - notebook
     - RetinaNet
     - object detection
     - ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: RetinaNet - ZeroCostDL4Mic
+    description: Object detection of 2D images. RetinaNet is a is an object detection
+      network, which identifies objects in images and draws bounding boxes around
+      them.
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_YOLOv2_ZeroCostDL4Mic
@@ -59,10 +65,4 @@ versions:
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_RetinaNet_ZeroCostDL4Mic

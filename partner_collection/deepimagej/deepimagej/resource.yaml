@@ -8,11 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    maintainers: []
-    type: collection
-    documentation: https://deepimagej.github.io/deepimagej/
-    authors: []
     config:
       id: deepimagej
       name: DeepImageJ
@@ -37,9 +32,14 @@ versions:
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
       doi: 10.1038/s41592-021-01262-9
-    name: deepImageJ Collection
+    authors: []
+    maintainers: []
+    type: collection
     tags:
     - deepimagej
     - bioimage.io
+    documentation: https://deepimagej.github.io/deepimagej/
+    name: deepImageJ Collection
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
     id: deepimagej/deepimagej

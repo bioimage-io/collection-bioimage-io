@@ -8,14 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    description: Instance segmentation of 2D images. MaskRCNN is a is an object detection
-      and segmentation network, which identifies objects in images and draws bounding
-      boxes around them.
-    maintainers: []
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -44,21 +36,29 @@ versions:
     - text: Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick. Mask R-CNN
         . arXiv:1703.06870.
       doi: https://arxiv.org/abs/1703.06870
-    name: MaskRCNN - ZeroCostDL4Mic
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
+    maintainers: []
+    type: application
     tags:
     - colab
     - notebook
     - MaskRCNN
     - object detection
     - ZeroCostDL4Mic
-    links:
-    - zero/Notebook Preview
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/maskRCNN_notebook.png
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: MaskRCNN - ZeroCostDL4Mic
+    description: Instance segmentation of 2D images. MaskRCNN is a is an object detection
+      and segmentation network, which identifies objects in images and draws bounding
+      boxes around them.
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
+    links:
+    - zero/Notebook Preview
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/maskRCNN_notebook.png
     id: zero/Notebook_MaskRCNN_ZeroCostDL4Mic
