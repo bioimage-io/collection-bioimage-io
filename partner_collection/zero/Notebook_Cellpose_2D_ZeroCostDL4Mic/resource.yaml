@@ -8,6 +8,12 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    description: Instance segmentation of 2D and 3D images. Cellpose is a generalist
+      algorithm for cellular segmentation.
+    format_version: 0.2.2
+    maintainers: []
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -28,7 +34,13 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    type: application
+    tags:
+    - colab
+    - notebook
+    - Cellpose
+    - Segmentation
+    - ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     name: Cellpose (2D and 3D) - ZeroCostDL4Mic
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -37,25 +49,19 @@ versions:
     - text: 'Stringer, C., Wang, T., Michaelos, M. et al. Cellpose: a generalist algorithm
         for cellular segmentation. Nat Methods 18, 100–106 (2021). https://doi.org/10.1038/s41592-020-01018-x'
       doi: https://doi.org/10.1038/s41592-020-01018-x
-    tags:
-    - colab
-    - notebook
-    - Cellpose
-    - Segmentation
-    - ZeroCostDL4Mic
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    description: Instance segmentation of 2D and 3D images. Cellpose is a generalist
-      algorithm for cellular segmentation.
-    maintainers: []
-    format_version: 0.2.2
+    type: application
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_2.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_3.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_4.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_5.png
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -63,10 +69,4 @@ versions:
     - zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic
     - zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
     - zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_Cellpose_2D_ZeroCostDL4Mic

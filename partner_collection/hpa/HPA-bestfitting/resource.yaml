@@ -8,6 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    description: A CNN model using focal loss and image augmentation, optimized with
+      Adam optimizer.
+    format_version: 0.2.2
     config:
       id: hpa
       name: HPA
@@ -25,29 +28,26 @@ versions:
       - model
       - application
       default_type: model
-    type: model
-    name: HPA-bestfitting
     tags:
     - classification
     - densenet-121
     - inception-v3
     - resnet-34
     - resnet-50
-    description: A CNN model using focal loss and image augmentation, optimized with
-      Adam optimizer.
-    format_version: 0.2.2
-    covers:
-    - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
-    - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
-    authors:
-    - Shubin Dai
-    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
-    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
-    framework: pytorch
-    license: MIT
+    name: HPA-bestfitting
+    type: model
     badges:
     - label: HPA Competition
       ext: 1st
       url: https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard
+    framework: pytorch
+    authors:
+    - Shubin Dai
+    license: MIT
+    covers:
+    - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
+    - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
     cite:
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     id: hpa/HPA-bestfitting
