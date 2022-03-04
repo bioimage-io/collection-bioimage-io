@@ -8,6 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    name: Deep-STORM (2D) - ZeroCostDL4Mic
     description: Single Molecule Localization Microscopy (SMLM) image reconstruction
       from high-density emitter data. Deep-STORM is a neural network capable of image
       reconstruction from high-density single-molecule localization microscopy (SMLM),
@@ -21,9 +22,9 @@ versions:
       the ZeroCostDL4Mic wiki to check the original publications this network is based
       on and make sure you cite these.
     format_version: 0.2.2
-    maintainers: []
     authors:
     - Romain Laine and the ZeroCostDL4Mic Team
+    maintainers: []
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -44,6 +45,8 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    type: application
     tags:
     - colab
     - notebook
@@ -51,8 +54,6 @@ versions:
     - labelling
     - ZeroCostDL4Mic
     - 2D
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    name: Deep-STORM (2D) - ZeroCostDL4Mic
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -61,17 +62,16 @@ versions:
         super-resolution single-molecule microscopy by deep learning. Optica 5, 458-464
         (2018)'
       doi: https://doi.org/10.1364/OPTICA.5.000458
-    type: application
+    links:
+    - zero/Notebook Preview
+    - zero/Dataset_Deep-STORM_ZeroCostDL4Mic
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook.png
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook_2.png
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook.png
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook_2.png
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-    - zero/Notebook Preview
-    - zero/Dataset_Deep-STORM_ZeroCostDL4Mic
     id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic
