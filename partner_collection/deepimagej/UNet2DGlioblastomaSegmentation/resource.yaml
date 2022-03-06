@@ -8,14 +8,11 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-    maintainers: []
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     documentation: https://deepimagej.github.io/deepimagej/
+    tags:
+    - deepimagej
+    - bioimage.io
     config:
       id: deepimagej
       name: DeepImageJ
@@ -33,17 +30,20 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    type: collection
-    tags:
-    - deepimagej
-    - bioimage.io
+    cite:
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+    maintainers: []
     authors: []
-    format_version: 0.2.2
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    type: collection
     name: deepImageJ Collection
+    format_version: 0.2.2
+    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/model.yaml
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
     download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
-    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/model.yaml
     id: deepimagej/UNet2DGlioblastomaSegmentation

@@ -8,12 +8,12 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    maintainers: []
+    description: 2D grayscale .png images with corresponding bounding box annotations
+      in .xml  PASCAL Voc format.
     documentation: https://doi.org/10.5281/zenodo.3941908
+    tags:
+    - YOLOv2
+    - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -34,17 +34,17 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    type: dataset
-    tags:
-    - YOLOv2
-    - ZeroCostDL4Mic
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    maintainers: []
     authors:
     - Guillaume Jacquemet
     - Lucas von Chamier
-    format_version: 0.2.2
-    description: 2D grayscale .png images with corresponding bounding box annotations
-      in .xml  PASCAL Voc format.
+    type: dataset
     name: YoloV2 example training and test dataset - ZeroCostDL4Mic
+    format_version: 0.2.2
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png
     download_url: https://doi.org/10.5281/zenodo.3941908
