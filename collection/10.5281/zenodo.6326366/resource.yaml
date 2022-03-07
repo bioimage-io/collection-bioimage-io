@@ -1,0 +1,14 @@
+status: accepted
+versions:
+- version_id: '6326367'
+  doi: 10.5281/zenodo.6326367
+  created: '2022-03-03 21:20:03.850168'
+  status: blocked
+  name: bioimageio_model
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/7d28f5af-90df-4219-af60-0a00045f4f0f/rdf.yaml
+id: 10.5281/zenodo.6326366
+doi: 10.5281/zenodo.6326366
+type: model
+owners:
+- 77626
