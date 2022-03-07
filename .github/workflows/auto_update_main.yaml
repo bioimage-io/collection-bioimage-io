@@ -12,6 +12,33 @@ on:
 
 
 jobs:
+  clean-up-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+    - name: delete bot comments
+      shell: python
+      run: |
+        import requests
+
+        print("len", len("${{ secrets.PAT }}"))
+        r = requests.get(
+            "${{ github.api_url }}/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments",
+            headers=dict(Accept="application/vnd.github.v3+json"),
+        )
+        r.raise_for_status()
+        bot_comment_ids = [c["id"] for c in r.json() if c.get("user", {}).get("login") == "bioimageiobot"]
+
+        for comment_id in bot_comment_ids:
+          r = requests.delete(
+              f"${{ github.api_url }}/repos/${{ github.repository }}/issues/comments/{comment_id}",
+              headers=dict(Accept="application/vnd.github.v3+json", Authorization="token ${{ secrets.PAT }}"),
+          )
+          r.raise_for_status()
+
+      continue-on-error: true
+
+
   update-resources:
     if: ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
     runs-on: ubuntu-latest
