@@ -1,0 +1,14 @@
+status: accepted
+versions:
+- version_id: '6334794'
+  doi: 10.5281/zenodo.6334794
+  created: '2022-03-07 14:24:53.324480'
+  status: accepted
+  name: 3D UNet Lateral Root Primordia Nuclei
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/d2047e55-891b-433c-b2ef-39ea7323ede1/rdf.yaml
+id: 10.5281/zenodo.6334793
+doi: 10.5281/zenodo.6334793
+type: model
+owners:
+- 66700
