@@ -8,6 +8,11 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    authors: []
+    tags:
+    - deepimagej
+    - bioimage.io
+    type: collection
     cite:
     - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
@@ -15,10 +20,10 @@ versions:
         (2021).'
       doi: 10.1038/s41592-021-01262-9
     name: deepImageJ Collection
-    type: collection
-    maintainers: []
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
     format_version: 0.2.2
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    maintainers: []
+    documentation: https://deepimagej.github.io/deepimagej/
     config:
       id: deepimagej
       name: DeepImageJ
@@ -36,14 +41,9 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    tags:
-    - deepimagej
-    - bioimage.io
-    authors: []
-    documentation: https://deepimagej.github.io/deepimagej/
-    download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
     source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/model.yaml
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
+    download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
     id: deepimagej/Usiigaci
