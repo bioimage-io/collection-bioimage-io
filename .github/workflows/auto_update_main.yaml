@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: delete bot comments
+      continue-on-error: true
       uses: izhangzhihao/delete-comment@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
