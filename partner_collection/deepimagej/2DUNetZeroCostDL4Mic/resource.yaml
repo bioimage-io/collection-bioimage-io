@@ -8,18 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    authors: []
     tags:
     - deepimagej
     - bioimage.io
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-    documentation: https://deepimagej.github.io/deepimagej/
-    type: collection
     config:
       id: deepimagej
       name: DeepImageJ
@@ -37,14 +29,22 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    authors: []
-    name: deepImageJ Collection
-    format_version: 0.2.2
     maintainers: []
+    type: collection
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    name: deepImageJ Collection
+    cite:
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+      doi: 10.1038/s41592-021-01262-9
+    documentation: https://deepimagej.github.io/deepimagej/
+    format_version: 0.2.2
+    source: https://raw.githubusercontent.com/deepimagej/models/master/2du-net_zerocostdl4mic/model.yaml
+    download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
     links:
     - zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
-    source: https://raw.githubusercontent.com/deepimagej/models/master/2du-net_zerocostdl4mic/model.yaml
-    download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
     id: deepimagej/2DUNetZeroCostDL4Mic

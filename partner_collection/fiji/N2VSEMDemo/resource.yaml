@@ -12,8 +12,6 @@ versions:
     - denoising
     - unet2d
     - n2v
-    description: Demo model for denoising trained on a single SEM image with Noise2Void
-    type: model
     config:
       fiji:
         batchDimLength: 180
@@ -24,6 +22,8 @@ versions:
         numStepsPerEpoch: 300
         patchDimLength: 60
         stepsFinished: 30000
+    type: model
+    description: Demo model for denoising trained on a single SEM image with Noise2Void
     name: N2V SEM Demo
     format_version: 0.3.2
     cite:
@@ -107,7 +107,7 @@ versions:
         - name: Deborah Schmidt
           affiliation: MDC Berlin
         tensorflow_version: 1.13.1
+    download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
     links:
     - fiji/Fiji
-    download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
     id: fiji/N2VSEMDemo

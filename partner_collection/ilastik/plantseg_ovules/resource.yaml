@@ -8,14 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    authors:
+    - name: Constantin Pape
     tags:
     - light-microscopy
     - arabidopsis
     - cells
     - instance-segmentation
     - 3D
-    description: Training data for cell segmentation in Arabidopsis ovules.
-    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -32,25 +32,25 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    authors:
-    - name: Constantin Pape
-    name: Arabidopsis Ovules Traning Data
-    format_version: 0.2.1
     maintainers:
     - orcid: 0000-0002-8567-6389
+      github_user: fynnbe
       name: Fynn Beuttenmüller
       affiliation: EMBL Heidelberg
-      github_user: fynnbe
     - orcid: 0000-0001-6562-7187
+      github_user: constantinpape
       name: Constantin Pape
       affiliation: EMBL Heidelberg
-      github_user: constantinpape
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
+    type: dataset
+    description: Training data for cell segmentation in Arabidopsis ovules.
+    name: Arabidopsis Ovules Traning Data
+    format_version: 0.2.1
+    source: https://osf.io/w38uf/
     cite:
     - doi: https://doi.org/10.7554/eLife.57613
       text: Wolny et al.
     license: CC-BY-4.0
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_ovules.md
-    source: https://osf.io/w38uf/
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
     id: ilastik/plantseg_ovules
