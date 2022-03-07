@@ -9,9 +9,25 @@ versions:
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
     type: dataset
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Elnaz Fazeli, Nathan H. Roy, Gautier Follain, Romain F. Laine, Lucas
+        von Chamier, Pekka E. Hänninen, John E. Eriksson, Jean-Yves Tinevez, Guillaume
+        Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv,
+        2020. DOI: https://doi.org/10.1101/2020.09.22.306233'
+      doi: https://doi.org/10.1101/2020.09.22.306233
+    format_version: 0.2.2
+    authors:
+    - Nathan H. Roy
+    - Guillaume Jacquemet
     description: Paired brightfield images of migrating T cells and corresponding
       masks
-    documentation: https://zenodo.org/record/4034929
+    tags:
+    - StarDist
+    - ZeroCostDL4Mic
+    name: Combining StarDist and TrackMate example 2 - T cell dataset
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -32,24 +48,8 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    name: Combining StarDist and TrackMate example 2 - T cell dataset
-    tags:
-    - StarDist
-    - ZeroCostDL4Mic
-    authors:
-    - Nathan H. Roy
-    - Guillaume Jacquemet
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Elnaz Fazeli, Nathan H. Roy, Gautier Follain, Romain F. Laine, Lucas
-        von Chamier, Pekka E. Hänninen, John E. Eriksson, Jean-Yves Tinevez, Guillaume
-        Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv,
-        2020. DOI: https://doi.org/10.1101/2020.09.22.306233'
-      doi: https://doi.org/10.1101/2020.09.22.306233
     maintainers: []
-    format_version: 0.2.2
+    documentation: https://zenodo.org/record/4034929
     download_url: https://zenodo.org/record/4034929
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
