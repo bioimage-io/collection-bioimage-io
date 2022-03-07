@@ -21,6 +21,7 @@ jobs:
       run: |
         import requests
 
+        print("len", len("${{ secrets.PAT }}"))
         r = requests.get(
             "${{ github.api_url }}/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments",
             headers=dict(Accept="application/vnd.github.v3+json"),
