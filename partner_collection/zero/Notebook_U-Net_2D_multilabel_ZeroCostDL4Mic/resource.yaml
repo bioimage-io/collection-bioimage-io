@@ -8,18 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    authors:
-    - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional
-        Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597'
-      doi: https://arxiv.org/abs/1505.04597
-    type: application
-    maintainers: []
-    name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -40,7 +28,25 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
+    authors:
+    - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
+    format_version: 0.2.2
+    maintainers: []
+    description: 2D semantic segmentation. U-Net is an encoder-decoder architecture
+      originally used for image segmentation. The first half of the U-Net architecture
+      is a downsampling convolutional neural network which acts as a feature extractor
+      from input images. The other half upsamples these results and restores an image
+      by combining results from downsampling with the upsampled images. Note - visit
+      the ZeroCostDL4Mic wiki to check the original publications this network is based
+      on and make sure you cite these.
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional
+        Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597'
+      doi: https://arxiv.org/abs/1505.04597
     tags:
     - colab
     - notebook
@@ -50,22 +56,16 @@ versions:
     - multilabel
     - ZeroCostDL4Mic
     - 2D
-    description: 2D semantic segmentation. U-Net is an encoder-decoder architecture
-      originally used for image segmentation. The first half of the U-Net architecture
-      is a downsampling convolutional neural network which acts as a feature extractor
-      from input images. The other half upsamples these results and restores an image
-      by combining results from downsampling with the upsampled images. Note - visit
-      the ZeroCostDL4Mic wiki to check the original publications this network is based
-      on and make sure you cite these.
-    format_version: 0.2.2
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    type: application
     links:
     - zero/Notebook Preview
     - zero/Dataset_U-Net_2D_multilabel_DeepBacs
-    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/UNet_Multilabel_example.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/UNet-multilabel-example-zoom.png
+    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg

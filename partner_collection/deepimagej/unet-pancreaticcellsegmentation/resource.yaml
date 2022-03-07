@@ -8,18 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    authors:
-    - name: Ignacio Arganda-Carreras
-      affiliation: EPFL, UC3M
-    - name: DeepImageJ
-      affiliation: EPFL, UC3M
-    cite:
-    - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
-        detection, and morphometry. Nat Methods 16, 67–70 (2019).'
-      doi: https://doi.org/10.1038/s41592-018-0261-2
-    type: application
-    maintainers: []
-    name: 2D U-Net for binary segmentation
     config:
       id: deepimagej
       name: DeepImageJ
@@ -37,7 +25,20 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+    name: 2D U-Net for binary segmentation
+    authors:
+    - name: Ignacio Arganda-Carreras
+      affiliation: EPFL, UC3M
+    - name: DeepImageJ
+      affiliation: EPFL, UC3M
+    format_version: 0.2.2
+    maintainers: []
+    description: Easy example to define a 2D U-Net for segmentation with Keras and
+      import it into DeepImageJ format
+    cite:
+    - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
+        detection, and morphometry. Nat Methods 16, 67–70 (2019).'
+      doi: https://doi.org/10.1038/s41592-018-0261-2
     tags:
     - unet
     - segmentation
@@ -45,9 +46,8 @@ versions:
     - notebook
     - training
     - cell-segmentation
-    description: Easy example to define a 2D U-Net for segmentation with Keras and
-      import it into DeepImageJ format
-    format_version: 0.2.2
+    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+    type: application
     links:
     - deepimagej/UNet2DPancreaticSegmentation
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb

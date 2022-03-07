@@ -8,19 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    authors:
-    - Mia Conduit
-    - Séamus Holden
-    cite:
-    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
-        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
-        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
-        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
-        doi: https://doi.org/10.1101/2021.11.03.467152'
-      doi: https://doi.org/10.1101/2021.11.03.467152
-    type: dataset
-    maintainers: []
-    name: Bacillus subtilis denoising dataset - DeepBacs
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -41,16 +28,29 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    name: Bacillus subtilis denoising dataset - DeepBacs
+    authors:
+    - Mia Conduit
+    - Séamus Holden
+    format_version: 0.2.2
+    maintainers: []
+    description: Live-cell time series of vertically aligned B. subtilis cells expressing
+      FtsZ-GFP protein fusion.
+    cite:
+    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
+        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
+        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
+        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
+        doi: https://doi.org/10.1101/2021.11.03.467152'
+      doi: https://doi.org/10.1101/2021.11.03.467152
     tags:
     - Noise2Void
     - denoising
     - DeepBacs
     - 2D
-    description: Live-cell time series of vertically aligned B. subtilis cells expressing
-      FtsZ-GFP protein fusion.
-    format_version: 0.2.2
-    download_url: https://zenodo.org/record/5551135
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    type: dataset
     covers:
     - https://zenodo.org/api/iiif/v2/effa726a-dcdb-47a5-bd2e-63a4a6648ca7:aad7cd51-d389-4cf3-a84e-2d93d1891f20:B.subtilis_VerCINI_examples.png/full/750,/0/default.png
+    download_url: https://zenodo.org/record/5551135
     id: zero/Dataset_Noise2Void_2D_subtilis_DeepBacs

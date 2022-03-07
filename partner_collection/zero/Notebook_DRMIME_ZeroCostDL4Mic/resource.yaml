@@ -8,20 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Abhishek Nan, Matthew Tennant, Uriel Rubin, Nilanjan Ray. DRMIME: Differentiable
-        Mutual Information and Matrix Exponential for Multi-Resolution Image Registration.
-        Proceedings of the Third Conference on Medical Imaging with Deep Learning,
-        PMLR 121:527-543, 2020.'
-      doi: http://proceedings.mlr.press/v121/nan20a.html
-    type: application
-    maintainers: []
-    name: DRMIME - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -42,22 +28,36 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    name: DRMIME - ZeroCostDL4Mic
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    format_version: 0.2.2
+    maintainers: []
+    description: DRMIME is an network that can be used to register microscopy images
+      (affine and perspective registration).
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Abhishek Nan, Matthew Tennant, Uriel Rubin, Nilanjan Ray. DRMIME: Differentiable
+        Mutual Information and Matrix Exponential for Multi-Resolution Image Registration.
+        Proceedings of the Third Conference on Medical Imaging with Deep Learning,
+        PMLR 121:527-543, 2020.'
+      doi: http://proceedings.mlr.press/v121/nan20a.html
     tags:
     - colab
     - notebook
     - DRMIME
     - image registration
     - ZeroCostDL4Mic
-    description: DRMIME is an network that can be used to register microscopy images
-      (affine and perspective registration).
-    format_version: 0.2.2
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    type: application
     links:
     - zero/Notebook Preview
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DrMIME_notebook.png
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
