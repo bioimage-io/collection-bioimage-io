@@ -8,20 +8,18 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    tags:
+    - colab
+    - notebook
+    - StarDist
+    - segmentation
+    - ZeroCostDL4Mic
+    - 2D
     description: 2D instance segmentation of oval objects (ie nuclei). StarDist is
       a deep-learning method that can be used to segment cell nuclei in 2D (xy) single
       images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the
       original publications this network is based on and make sure you cite these.
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection
-        with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30
-      doi: https://doi.org/10.1007/978-3-030-00934-2_30
-    type: application
-    name: StarDist (2D) - ZeroCostDL4Mic
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -42,18 +40,19 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
+    type: application
+    format_version: 0.2.2
+    name: StarDist (2D) - ZeroCostDL4Mic
     authors:
     - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    tags:
-    - colab
-    - notebook
-    - StarDist
-    - segmentation
-    - ZeroCostDL4Mic
-    - 2D
-    maintainers: []
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection
+        with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30
+      doi: https://doi.org/10.1007/978-3-030-00934-2_30
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -64,6 +63,7 @@ versions:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D

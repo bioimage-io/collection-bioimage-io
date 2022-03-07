@@ -8,16 +8,11 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    documentation: https://deepimagej.github.io/deepimagej/
+    tags:
+    - deepimagej
+    - bioimage.io
     description: Resources for BioImgage.IO curated by the deepImageJ team.
-    cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-      doi: 10.1038/s41592-021-01262-9
-    type: collection
-    name: deepImageJ Collection
-    format_version: 0.2.2
     config:
       id: deepimagej
       name: DeepImageJ
@@ -35,16 +30,21 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    authors: []
-    tags:
-    - deepimagej
-    - bioimage.io
     maintainers: []
-    documentation: https://deepimagej.github.io/deepimagej/
-    download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
+    type: collection
+    format_version: 0.2.2
+    name: deepImageJ Collection
+    authors: []
+    cite:
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
     links:
     - deepimagej/deepimagej
     - deepimagej/EVsTEMsegmentationFRUNet
     - imjoy/BioImageIO-Packager
+    download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
     source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
     id: deepimagej/FRUNet2DsEVSegmentation

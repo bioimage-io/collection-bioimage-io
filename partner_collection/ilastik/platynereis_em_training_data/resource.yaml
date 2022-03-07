@@ -8,11 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    tags:
+    - electron-microscopy
+    - platynereis
+    - cells
+    - cilia
+    - nuclei
+    - instance-segmentation
+    - 3D
     description: Training data for EM segmentation of cellular membranes, nuclei,
       cuticle and cilia in Platynereis.
-    type: dataset
-    name: Platynereis EM Traning Data
-    format_version: 0.2.1
     config:
       id: ilastik
       name: ilastik
@@ -29,31 +34,26 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    authors:
-    - name: Constantin Pape
-    tags:
-    - electron-microscopy
-    - platynereis
-    - cells
-    - cilia
-    - nuclei
-    - instance-segmentation
-    - 3D
     maintainers:
-    - github_user: fynnbe
-      name: Fynn Beuttenmüller
+    - name: Fynn Beuttenmüller
+      github_user: fynnbe
       orcid: 0000-0002-8567-6389
       affiliation: EMBL Heidelberg
-    - github_user: constantinpape
-      name: Constantin Pape
+    - name: Constantin Pape
+      github_user: constantinpape
       orcid: 0000-0001-6562-7187
       affiliation: EMBL Heidelberg
-    license: CC-BY-4.0
+    type: dataset
+    format_version: 0.2.1
+    name: Platynereis EM Traning Data
+    authors:
+    - name: Constantin Pape
+    source: https://doi.org/10.5281/zenodo.3675220
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+    license: CC-BY-4.0
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png
     cite:
     - doi: https://doi.org/10.1016/j.cell.2021.07.017
       text: Vergara, Pape, Meechan et al.
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png
-    source: https://doi.org/10.5281/zenodo.3675220
     id: ilastik/platynereis_em_training_data
