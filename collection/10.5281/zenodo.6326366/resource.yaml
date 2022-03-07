@@ -1,5 +1,12 @@
 status: accepted
 versions:
+- version_id: '6334806'
+  doi: 10.5281/zenodo.6334806
+  created: '2022-03-07 14:39:45.578852'
+  status: accepted
+  name: 10.5281/zenodo.6334806
+  version_name: revision 1
+  rdf_source: unknown
 - version_id: '6334698'
   doi: 10.5281/zenodo.6334698
   created: '2022-03-07 13:37:12.025245'
@@ -16,6 +23,6 @@ versions:
   rdf_source: https://zenodo.org/api/files/7d28f5af-90df-4219-af60-0a00045f4f0f/rdf.yaml
 id: 10.5281/zenodo.6326366
 doi: 10.5281/zenodo.6326366
-type: model
+type: unknown
 owners:
 - 77626
