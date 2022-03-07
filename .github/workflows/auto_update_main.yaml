@@ -12,6 +12,17 @@ on:
 
 
 jobs:
+  clean-up-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+    - name: delete bot comments
+      uses: izhangzhihao/delete-comment@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        delete_user_name: bioimageiobot
+        issue_number: ${{ github.event.number }}
+
   update-resources:
     if: ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
     runs-on: ubuntu-latest
