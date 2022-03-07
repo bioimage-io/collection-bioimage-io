@@ -8,20 +8,12 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
-    tags:
-    - extracellular-vesicles
-    - segmentation
-    - TEM
-    - notebook
-    - model-inference
-    - google-colab
-    - workflow
-    - pipeline
+    type: application
     description: Ready to use notebook for the segmentation of small extrcaellular
       vesicles in transmission electron microscopy (TEM) images. The notebook is optimized
       to use it in Google Colaboratory. It will download the original code and dataset,
       and make the inference connecting with Google's GPU.
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
     config:
       id: deepimagej
       name: DeepImageJ
@@ -39,10 +31,16 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    maintainers: []
-    type: application
-    format_version: 0.2.2
     name: Small extracellular vesicle instance segmentation (FRU-Net)
+    tags:
+    - extracellular-vesicles
+    - segmentation
+    - TEM
+    - notebook
+    - model-inference
+    - google-colab
+    - workflow
+    - pipeline
     authors:
     - name: Estibaliz Gómez-de-Mariscal
       affiliation: Universidad Carlos III de Madrid
@@ -60,6 +58,8 @@ versions:
     - text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
         Vesicles in Transmission Electron Microscopy Images Scientific Reports, (2019)
       doi: https://doi.org/10.1038/s41598-019-49431-3
+    maintainers: []
+    format_version: 0.2.2
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
