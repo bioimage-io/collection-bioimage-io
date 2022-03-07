@@ -30,7 +30,7 @@ jobs:
 
         for comment_id in bot_comment_ids:
           r = requests.delete(
-              f"${{ github.api_url }}/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments/{comment_id}",
+              f"${{ github.api_url }}/repos/${{ github.repository }}/issues/comments/{comment_id}",
               headers=dict(Accept="application/vnd.github.v3+json", Authorization="token ${{ secrets.PAT }}"),
           )
           r.raise_for_status()
