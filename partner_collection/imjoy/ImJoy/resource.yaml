@@ -8,6 +8,12 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+    tags:
+    - imjoy
+    - bioimage.io
+    description: Resources for BioImgage.IO curated by the ImJoy Team.
+    documentation: https://imjoy.io/docs
+    type: application
     config:
       id: imjoy
       name: ImJoy
@@ -30,11 +36,5 @@ versions:
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
     name: ImJoy Collection
     format_version: 0.2.2
-    description: Resources for BioImgage.IO curated by the ImJoy Team.
-    tags:
-    - imjoy
-    - bioimage.io
-    documentation: https://imjoy.io/docs
-    type: application
     source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
     id: imjoy/ImJoy

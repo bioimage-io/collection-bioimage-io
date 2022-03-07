@@ -8,6 +8,18 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    tags:
+    - deepimagej
+    - bioimage.io
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    cite:
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+    documentation: https://deepimagej.github.io/deepimagej/
+    type: collection
     config:
       id: deepimagej
       name: DeepImageJ
@@ -25,24 +37,12 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    name: deepImageJ Collection
     authors: []
+    name: deepImageJ Collection
     format_version: 0.2.2
     maintainers: []
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-    tags:
-    - deepimagej
-    - bioimage.io
-    documentation: https://deepimagej.github.io/deepimagej/
-    type: collection
-    download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
     links:
     - deepimagej/deepimagej
     source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/model.yaml
+    download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
     id: deepimagej/SkinLesionClassification
