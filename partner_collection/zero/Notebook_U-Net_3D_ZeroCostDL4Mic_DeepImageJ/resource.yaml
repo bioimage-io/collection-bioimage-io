@@ -8,16 +8,18 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, Olaf
+        Ronneberger. 3D U-Net: Learning Dense Volumetric Segmentation from Sparse
+        Annotation. https://arxiv.org/abs/1606.06650'
+      doi: https://arxiv.org/abs/1606.06650
+    format_version: 0.2.2
+    maintainers: []
     authors:
     - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
-    tags:
-    - colab
-    - notebook
-    - U-Net
-    - segmentation
-    - ZeroCostDL4Mic
-    - 3D
-    - deepimagej
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -38,25 +40,25 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
+    tags:
+    - colab
+    - notebook
+    - U-Net
+    - segmentation
+    - ZeroCostDL4Mic
+    - 3D
+    - deepimagej
+    name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
     type: application
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     description: 3D binary segmentation. The 3D U-Net was first introduced by Çiçek
       et al for learning dense volumetric segmentations from sparsely annotated ground-truth
       data building upon the original U-Net architecture by Ronneberger et al. Note
       - visit the ZeroCostDL4Mic wiki to check the original publications this network
       is based on and make sure you cite these. Networks trained in this notebook
       can be used in Fiji via deepImageJ.
-    name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, Olaf
-        Ronneberger. 3D U-Net: Learning Dense Volumetric Segmentation from Sparse
-        Annotation. https://arxiv.org/abs/1606.06650'
-      doi: https://arxiv.org/abs/1606.06650
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    format_version: 0.2.2
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -65,6 +67,4 @@ versions:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
     id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
