@@ -20,7 +20,7 @@ jobs:
       continue-on-error: true
       uses: izhangzhihao/delete-comment@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PAT }}
         delete_user_name: bioimageiobot
         issue_number: ${{ github.event.number }}
 
