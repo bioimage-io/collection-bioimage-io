@@ -18,11 +18,13 @@ jobs:
     steps:
     - name: delete bot comments
       continue-on-error: true
-      uses: izhangzhihao/delete-comment@master
+      uses: maheshrayas/action-pr-comment-delete@v1
       with:
-        github_token: ${{ secrets.PAT }}
-        delete_user_name: bioimageiobot
-        issue_number: ${{ github.event.number }}
+        github_token: '${{ secrets.PAT }}'
+        org: ${{ github.repository_owner }}
+        repo: collection-bioimage-io
+        user: bioimageiobot
+        issue: '${{ github.event.number }}'
 
   update-resources:
     if: ${{ !startsWith(github.head_ref || github.ref, 'refs/heads/auto-update-') }}
