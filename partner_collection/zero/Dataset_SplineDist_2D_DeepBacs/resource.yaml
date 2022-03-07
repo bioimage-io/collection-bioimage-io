@@ -8,14 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    cite:
+    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
+        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
+        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
+        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
+        doi: https://doi.org/10.1101/2021.11.03.467152'
+      doi: https://doi.org/10.1101/2021.11.03.467152
+    name: Escherichia coli bright field segmentation dataset - DeepBacs
+    type: dataset
+    maintainers: []
     description: Training and test images of live E. coli cells imaged under bright
       field for the task of segmentation.
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-    tags:
-    - StarDist
-    - segmentation
-    - DeepBacs
-    - 2D
+    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -36,21 +41,16 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    cite:
-    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
-        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
-        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
-        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
-        doi: https://doi.org/10.1101/2021.11.03.467152'
-      doi: https://doi.org/10.1101/2021.11.03.467152
-    maintainers: []
+    tags:
+    - StarDist
+    - segmentation
+    - DeepBacs
+    - 2D
     authors:
     - Christoph Spahn
     - Mike Heilemann
-    type: dataset
-    name: Escherichia coli bright field segmentation dataset - DeepBacs
-    format_version: 0.2.2
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    download_url: https://zenodo.org/record/5550935
     covers:
     - https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png
-    download_url: https://zenodo.org/record/5550935
     id: zero/Dataset_SplineDist_2D_DeepBacs
