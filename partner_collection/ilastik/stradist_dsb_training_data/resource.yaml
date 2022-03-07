@@ -8,18 +8,26 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    format_version: 0.2.1
+    type: dataset
+    description: Subset of the nucleus segmentation training data from the 2018 Kaggle
+      Data Science Bowl.
     maintainers:
-    - github_user: fynnbe
-      affiliation: EMBL Heidelberg
+    - affiliation: EMBL Heidelberg
       name: Fynn Beuttenmüller
       orcid: 0000-0002-8567-6389
-    - github_user: constantinpape
-      affiliation: EMBL Heidelberg
+      github_user: fynnbe
+    - affiliation: EMBL Heidelberg
       name: Constantin Pape
       orcid: 0000-0001-6562-7187
+      github_user: constantinpape
     authors:
     - name: Constantin Pape
+    tags:
+    - nuclei
+    - instance-segmentation
+    - fluorescence-light-microscopy
+    - dsb-challenge
+    - 2D
     config:
       id: ilastik
       name: ilastik
@@ -36,22 +44,14 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    tags:
-    - nuclei
-    - instance-segmentation
-    - fluorescence-light-microscopy
-    - dsb-challenge
-    - 2D
+    format_version: 0.2.1
     name: DSB Nucleus Segmentation Training Data
-    type: dataset
-    description: Subset of the nucleus segmentation training data from the 2018 Kaggle
-      Data Science Bowl.
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
     source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
+    license: CC0-1.0
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg
     cite:
     - doi: https://doi.org/10.1038/s41592-019-0612-7
       text: Caicedo et al.
-    license: CC0-1.0
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg
     id: ilastik/stradist_dsb_training_data

@@ -8,6 +8,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    type: application
+    description: self-supervised denoising of 3D images. Noise2VOID 3D is deep-learning
+      method that can be used to denoise 3D microscopy images. By running this notebook,
+      you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic
+      wiki to check the original publications this network is based on and make sure
+      you cite these.
+    maintainers: []
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -16,10 +24,15 @@ versions:
         Noisy Images. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition
         (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223.
       doi: https://doi.org/10.1109/CVPR.2019.00223
-    format_version: 0.2.2
-    maintainers: []
     authors:
     - Romain Laine and the ZeroCostDL4Mic Team
+    tags:
+    - colab
+    - notebook
+    - Noise2Void
+    - denoising
+    - ZeroCostDL4Mic
+    - 3D
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -40,29 +53,16 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    tags:
-    - colab
-    - notebook
-    - Noise2Void
-    - denoising
-    - ZeroCostDL4Mic
-    - 3D
+    format_version: 0.2.2
     name: Noise2VOID (3D) - ZeroCostDL4Mic
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    description: self-supervised denoising of 3D images. Noise2VOID 3D is deep-learning
-      method that can be used to denoise 3D microscopy images. By running this notebook,
-      you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic
-      wiki to check the original publications this network is based on and make sure
-      you cite these.
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_notebook.png
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_notebook_2.png
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_notebook.png
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_notebook_2.png
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg

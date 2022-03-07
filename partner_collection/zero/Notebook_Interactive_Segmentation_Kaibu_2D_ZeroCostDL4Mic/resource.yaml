@@ -8,6 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    type: application
+    description: Interactive instance segmentation using Kaibu and Cellpose.
+    maintainers: []
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     cite:
     - text: 'Ouyang W, Le T, Xu H and Lundberg E. Interactive biomedical segmentation
         tool powered by deep learning and ImJoy [version 1; peer review: 1 approved,
@@ -16,10 +20,14 @@ versions:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
       doi: https://doi.org/10.1038/s41467-021-22518-0
-    format_version: 0.2.2
-    maintainers: []
     authors:
     - Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team
+    tags:
+    - colab
+    - notebook
+    - Cellpose
+    - Segmentation
+    - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -40,26 +48,18 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    tags:
-    - colab
-    - notebook
-    - Cellpose
-    - Segmentation
-    - ZeroCostDL4Mic
+    format_version: 0.2.2
     name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    description: Interactive instance segmentation using Kaibu and Cellpose.
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
+    links:
+    - zero/Notebook Preview
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_2.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_3.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_4.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_5.png
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-    - zero/Notebook Preview
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
