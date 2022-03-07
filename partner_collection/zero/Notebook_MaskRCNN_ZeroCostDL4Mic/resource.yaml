@@ -8,15 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
-    tags:
-    - colab
-    - notebook
-    - MaskRCNN
-    - object detection
-    - ZeroCostDL4Mic
-    type: application
+    description: Instance segmentation of 2D images. MaskRCNN is a is an object detection
+      and segmentation network, which identifies objects in images and draws bounding
+      boxes around them.
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -24,13 +18,9 @@ versions:
     - text: Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick. Mask R-CNN
         . arXiv:1703.06870.
       doi: https://arxiv.org/abs/1703.06870
+    type: application
     name: MaskRCNN - ZeroCostDL4Mic
     format_version: 0.2.2
-    description: Instance segmentation of 2D images. MaskRCNN is a is an object detection
-      and segmentation network, which identifies objects in images and draws bounding
-      boxes around them.
-    maintainers: []
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -51,14 +41,24 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/maskRCNN_notebook.png
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
+    tags:
+    - colab
+    - notebook
+    - MaskRCNN
+    - object detection
+    - ZeroCostDL4Mic
+    maintainers: []
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/maskRCNN_notebook.png
     links:
     - zero/Notebook Preview
     id: zero/Notebook_MaskRCNN_ZeroCostDL4Mic
