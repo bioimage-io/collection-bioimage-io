@@ -3,7 +3,7 @@ versions:
 - version_id: '6334698'
   doi: 10.5281/zenodo.6334698
   created: '2022-03-07 13:37:12.025245'
-  status: accepted
+  status: blocked
   name: bioimageio_model
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/df674d68-b670-4153-b1fc-de812664f954/rdf.yaml
