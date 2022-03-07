@@ -8,12 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
-    tags:
-    - Noise2Void
-    - denoising
-    - DeepBacs
-    - 2D
+    format_version: 0.2.2
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -34,10 +30,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
+    authors:
+    - Mia Conduit
+    - Séamus Holden
     description: Live-cell time series of vertically aligned B. subtilis cells expressing
       FtsZ-GFP protein fusion.
-    format_version: 0.2.2
+    type: dataset
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
@@ -45,12 +43,14 @@ versions:
         analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
         doi: https://doi.org/10.1101/2021.11.03.467152'
       doi: https://doi.org/10.1101/2021.11.03.467152
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-    authors:
-    - Mia Conduit
-    - Séamus Holden
     name: Bacillus subtilis denoising dataset - DeepBacs
-    download_url: https://zenodo.org/record/5551135
+    tags:
+    - Noise2Void
+    - denoising
+    - DeepBacs
+    - 2D
+    maintainers: []
     covers:
     - https://zenodo.org/api/iiif/v2/effa726a-dcdb-47a5-bd2e-63a4a6648ca7:aad7cd51-d389-4cf3-a84e-2d93d1891f20:B.subtilis_VerCINI_examples.png/full/750,/0/default.png
+    download_url: https://zenodo.org/record/5551135
     id: zero/Dataset_Noise2Void_2D_subtilis_DeepBacs
