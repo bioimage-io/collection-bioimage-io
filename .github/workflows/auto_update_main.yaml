@@ -26,7 +26,7 @@ jobs:
             headers=dict(Accept="application/vnd.github.v3+json"),
         )
         r.raise_for_status()
-        bot_comment_ids = [c["id"] for c in r.json() if c.get["user"].get("login") == "bioimageiobot"]
+        bot_comment_ids = [c["id"] for c in r.json() if c.get("user", {}).get("login") == "bioimageiobot"]
 
         for comment_id in bot_comment_ids:
           r = requests.delete(
