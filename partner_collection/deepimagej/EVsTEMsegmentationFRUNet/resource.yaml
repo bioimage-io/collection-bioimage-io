@@ -8,24 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
-    type: application
     maintainers: []
-    format_version: 0.2.2
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
     name: Small extracellular vesicle instance segmentation (FRU-Net)
-    authors:
-    - name: Estibaliz Gómez-de-Mariscal
-      affiliation: Universidad Carlos III de Madrid
-    - name: Martin Maška
-      affiliation: Masaryk University
-    - name: Anna Kotrbová
-      affiliation: Masaryk University
-    - name: Vendula Pospíchalová
-      affiliation: Masaryk University
-    - name: Pavel Matula
-      affiliation: Masaryk University
-    - name: Arrate Muñoz-Barrutia
-      affiliation: Universidad Carlos III de Madrid
+    format_version: 0.2.2
     cite:
     - text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
         Vesicles in Transmission Electron Microscopy Images Scientific Reports, (2019)
@@ -47,6 +33,19 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    authors:
+    - name: Estibaliz Gómez-de-Mariscal
+      affiliation: Universidad Carlos III de Madrid
+    - name: Martin Maška
+      affiliation: Masaryk University
+    - name: Anna Kotrbová
+      affiliation: Masaryk University
+    - name: Vendula Pospíchalová
+      affiliation: Masaryk University
+    - name: Pavel Matula
+      affiliation: Masaryk University
+    - name: Arrate Muñoz-Barrutia
+      affiliation: Universidad Carlos III de Madrid
     tags:
     - extracellular-vesicles
     - segmentation
@@ -60,11 +59,12 @@ versions:
       vesicles in transmission electron microscopy (TEM) images. The notebook is optimized
       to use it in Google Colaboratory. It will download the original code and dataset,
       and make the inference connecting with Google's GPU.
-    source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
+    type: application
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb
+    source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
     links:
     - deepimagej/FRUNet2DsEVSegmentation
     covers:

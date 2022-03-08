@@ -8,12 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    documentation: https://deepimagej.github.io/deepimagej/
-    type: collection
     maintainers: []
-    format_version: 0.2.2
+    documentation: https://deepimagej.github.io/deepimagej/
     name: deepImageJ Collection
-    authors: []
+    format_version: 0.2.2
     cite:
     - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
@@ -37,12 +35,14 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    authors: []
     tags:
     - deepimagej
     - bioimage.io
     description: Resources for BioImgage.IO curated by the deepImageJ team.
+    type: collection
     source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/model.yaml
-    download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
     links:
     - deepimagej/deepimagej
+    download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
     id: deepimagej/SkinLesionClassification

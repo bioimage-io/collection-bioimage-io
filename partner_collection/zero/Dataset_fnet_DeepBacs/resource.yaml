@@ -8,14 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
-    type: dataset
     maintainers: []
-    format_version: 0.2.2
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
     name: Artificial labeling of E. coli membranes dataset - DeepBacs
-    authors:
-    - Christoph Spahn
-    - Mike Heilemann
+    format_version: 0.2.2
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
@@ -43,6 +39,9 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    authors:
+    - Christoph Spahn
+    - Mike Heilemann
     tags:
     - fnet
     - CARE
@@ -52,7 +51,8 @@ versions:
     description: Training and test images of E. coli cells for artificial labeling
       of membranes in brightfield images using fnet or CARE, as well as trained models
       for prediction of super-resolution membranes.
+    type: dataset
+    download_url: https://zenodo.org/record/5551123
     covers:
     - https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png
-    download_url: https://zenodo.org/record/5551123
     id: zero/Dataset_fnet_DeepBacs
