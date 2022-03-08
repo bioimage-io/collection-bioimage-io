@@ -1510,16 +1510,16 @@ collection:
   - {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
   covers: ['https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png',
     'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
-  description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
-    microscopy 3D volumes.
+  description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
+    of Arabidopsis thaliana ovules acquired on a confocal microscope.
   id: 10.5281/zenodo.5749843
   license: MIT
   links: [imjoy/BioImageIO-Packager]
   name: 3D UNet - arabidopsis - ZeroCostDL4Mic
   owners: [252845]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5888237/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, 3dunet, 3d, unet, super-resolution-microscopy,
-    plant, tensorflow]
+  tags: [zerocostdl4mic, deepimagej, segmentation, 3d, unet, fluorescence-light-microscopy,
+    cell-membrane, plant, arabidopsis, tensorflow]
   type: model
   versions: ['5888237', '5877226']
 - authors:
