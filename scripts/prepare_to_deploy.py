@@ -1,3 +1,4 @@
+import copy
 import shutil
 from pathlib import Path
 from typing import Optional
@@ -22,6 +23,7 @@ def main(
     partner_test_summaries: Path = Path(__file__).parent
     / "../partner_test_summaries",  # folder with partner test summaries
     branch: str = "",
+    local: bool = False,  # slightly different paths for dynamic summaries when running locally
 ):
     dist.mkdir(parents=True, exist_ok=True)
     branch = branch.replace("refs/heads/", "")
@@ -47,11 +49,11 @@ def main(
         print(f"updating test summary for {krv.resource_id}/{krv.version_id}")
         previous_test_summary_path = gh_pages / "rdfs" / krv.resource_id / krv.version_id / "test_summary.yaml"
         if previous_test_summary_path.exists():
-            previous_test_summary = yaml.load(previous_test_summary_path).items()
+            previous_test_summary = yaml.load(previous_test_summary_path)
         else:
             previous_test_summary = {}
 
-        test_summary = dict(previous_test_summary)
+        test_summary = copy.deepcopy(previous_test_summary)
         test_summary["rdf_sha256"] = krv.rdf_sha256
         if "tests" not in test_summary:
             test_summary["tests"] = {}
@@ -75,21 +77,23 @@ def main(
                 spec_versions.add(sub_summary.get("bioimageio_spec_version"))
                 success &= sub_summary.get("status") == "passed"
 
-            print(
-                "dyn sums",
-                sorted(
+            if local:
+                dyn_sums = sorted(
                     artifact_dir.glob(
-                        f"dynamic_validation_artifact_{krv.resource_id.replace('/', '')}{krv.version_id.replace('/', '')}*/**/validation_summary_*.yaml"
+                        f"dynamic_validation_artifact/{krv.resource_id}/{krv.version_id}/*/validation_summary_*.yaml"
                     )
-                ),
-            )
+                )
+            else:
+                dyn_sums = sorted(
+                    artifact_dir.glob(
+                        f"dynamic_validation_artifact_{krv.resource_id.replace('/', '')}_{krv.version_id.replace('/', '')}_*/validation_summary_*.yaml"
+                    )
+                )
+
+            print("dyn sums:\n", dyn_sums)
             # append dynamic validation summaries from artifact
             core_versions = set()
-            for sp in sorted(
-                artifact_dir.glob(
-                    f"dynamic_validation_artifact_{krv.resource_id.replace('/', '')}{krv.version_id.replace('/', '')}*/**/validation_summary_*.yaml"
-                )
-            ):
+            for sp in dyn_sums:
                 sub_summary = get_sub_summary(sp)
                 test_summary["tests"]["bioimageio"].append(sub_summary)
                 # spec_versions.add(sub_summary.get("bioimageio_spec_version"))  # may be behind due to pending core release

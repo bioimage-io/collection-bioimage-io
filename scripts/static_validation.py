@@ -44,7 +44,7 @@ def get_env_from_deps(deps: Dependencies):
                 deps = conda_env.get("dependencies", [])
                 if not isinstance(deps, list):
                     raise TypeError(f"expected dependencies in conda environment.yaml to be a list, but got: {deps}")
-                if not any(d.startswith("bioimageio.core") for d in deps):
+                if not any(isinstance(d, str) and d.startswith("bioimageio.core") for d in deps):
                     conda_env["dependencies"] = deps + ["bioimageio.core"]
             elif deps.manager == "pip":
                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
