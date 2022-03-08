@@ -4,12 +4,26 @@ owners: [252845]
 status: accepted
 type: model
 versions:
-- {created: '2022-01-21 14:50:48.356997', doi: 10.5281/zenodo.5888237, name: 3D UNet
-    - arabidopsis - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/rdf.yaml',
-  status: accepted, version_id: '5888237', version_name: revision 1}
-- {created: '2022-01-19 10:16:02.455027', doi: 10.5281/zenodo.5877226, name: 3D UNet
-    - arabidopsis - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/rdf.yaml',
-  status: accepted, version_id: '5877226', version_name: revision 2}
-- {created: '2021-12-02 14:27:16.753974+00:00', doi: 10.5281/zenodo.5749844, name: 3D
-    UNet - arabidopsis - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/rdf.yaml',
-  status: blocked, version_id: '5749844', version_name: revision 1}
+- created: '2022-01-21 14:50:48.356997'
+  doi: 10.5281/zenodo.5888237
+  name: 'Cell Segmentation from Membrane Staining for Plant Tissues'
+  rdf_source: 'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/rdf.yaml'
+  status: accepted
+  version_id: '5888237'
+  version_name: revision 1
+  tags: [zerocostdl4mic, deepimagej, segmentation, 3d, unet, fluorescence-light-microscopy, cell-membrane, plant, arabidopsis, tensorflow]
+  description: 'A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.'
+- created: '2022-01-19 10:16:02.455027'
+  doi: 10.5281/zenodo.5877226
+  name: '3D UNet - arabidopsis - ZeroCostDL4Mic'
+  rdf_source: 'https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/rdf.yaml'
+  status: accepted
+  version_id: '5877226' 
+  version_name: revision 2
+- created: '2021-12-02 14:27:16.753974+00:00'
+  doi: 10.5281/zenodo.5749844
+  name: '3D UNet - arabidopsis - ZeroCostDL4Mic'
+  rdf_source: 'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/rdf.yaml'
+  status: blocked
+  version_id: '5749844'
+  version_name: revision 1
