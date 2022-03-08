@@ -1698,12 +1698,29 @@ collection:
   tags: [nuclei-segmentation, hpa, unet]
   type: model
   versions: ['6201000']
+- authors:
+  - {name: Adrian Wolny}
+  - {name: Lorenzo Cerrone}
+  covers: ['https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/raw.png',
+    'https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/pred.png']
+  description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
+    of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
+  id: 10.5281/zenodo.6334777
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Lateral Root Primordia Cells
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6334778/rdf.yaml
+  tags: [unet, 3d, semantic-segmentation, arabidopsis, lateral-root, cell-membrane,
+    plant, tissue, light-sheet-fluorescence-microscopy, pytorch]
+  type: model
+  versions: ['6334778']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 37}
-  n_resources: {application: 47, collection: 17, dataset: 35, model: 16}
+  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 39}
+  n_resources: {application: 47, collection: 17, dataset: 35, model: 17}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
