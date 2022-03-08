@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: delete bot comments
+      continue-on-error: true
       shell: python
       run: |
         import requests
 
-        print("len", len("${{ secrets.PAT }}"))
         r = requests.get(
             "${{ github.api_url }}/repos/${{ github.repository }}/issues/${{ github.event.number }}/comments",
             headers=dict(Accept="application/vnd.github.v3+json"),
@@ -35,8 +35,6 @@ jobs:
               headers=dict(Accept="application/vnd.github.v3+json", Authorization="token ${{ secrets.PAT }}"),
           )
           r.raise_for_status()
-
-      continue-on-error: true
 
 
   update-resources:
