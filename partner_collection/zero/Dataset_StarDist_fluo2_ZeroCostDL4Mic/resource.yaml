@@ -8,26 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: dataset
     description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
       manual segmentation
-    maintainers: []
-    documentation: https://zenodo.org/record/4811213
-    cite:
-    - text: 'Moreno-Layseca P, Jäntti NZ, Godbole R, Sommer C, Jacquemet G, Al-Akhrass
-        H, Conway JRW, Kronqvist P, Kallionpää RE, Oliveira-Ferrer L, Cervero P, Linder
-        S, Aepfelbacher M, Zauber H, Rae J, Parton RG, Disanza A, Scita G, Mayor S,
-        Selbach M, Veltel S, Ivaska J. Cargo-specific recruitment in clathrin- and
-        dynamin-independent endocytosis. Nat Cell Biol. 2021 Oct;23(10):1073-1084.
-        doi: 10.1038/s41556-021-00767-x. Epub 2021 Oct 6. PMID: 34616024.'
-      doi: https://doi.org/10.1038/s41556-021-00767-x
-    authors:
-    - Hussein Al-Akhrass
-    - Johanna Ivaska
-    - Guillaume Jacquemet
-    tags:
-    - StarDist
-    - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -48,9 +30,27 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    format_version: 0.2.2
     name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
-    download_url: https://zenodo.org/record/4811213
+    type: dataset
+    maintainers: []
+    tags:
+    - StarDist
+    - ZeroCostDL4Mic
+    format_version: 0.2.2
+    cite:
+    - text: 'Moreno-Layseca P, Jäntti NZ, Godbole R, Sommer C, Jacquemet G, Al-Akhrass
+        H, Conway JRW, Kronqvist P, Kallionpää RE, Oliveira-Ferrer L, Cervero P, Linder
+        S, Aepfelbacher M, Zauber H, Rae J, Parton RG, Disanza A, Scita G, Mayor S,
+        Selbach M, Veltel S, Ivaska J. Cargo-specific recruitment in clathrin- and
+        dynamin-independent endocytosis. Nat Cell Biol. 2021 Oct;23(10):1073-1084.
+        doi: 10.1038/s41556-021-00767-x. Epub 2021 Oct 6. PMID: 34616024.'
+      doi: https://doi.org/10.1038/s41556-021-00767-x
+    authors:
+    - Hussein Al-Akhrass
+    - Johanna Ivaska
+    - Guillaume Jacquemet
+    documentation: https://zenodo.org/record/4811213
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png
+    download_url: https://zenodo.org/record/4811213
     id: zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
