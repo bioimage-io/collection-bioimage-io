@@ -8,25 +8,26 @@ import typer
 from boltons.iterutils import remap
 
 from bioimageio.spec.shared import yaml
-from utils import iterate_known_resources
+from utils import iterate_known_resources, rec_sort
 
 SUMMARY_FIELDS = [
-    "id",
-    "icon",
-    "owners",
     "authors",
+    "badges",
     "covers",
     "description",
+    "download_url",
+    "github_repo",
+    "icon",
+    "id",
     "license",
     "links",
     "name",
+    "owners",
     "rdf_source",
     "source",
     "tags",
     "type",
-    "download_url",
-    "badges",
-    "github_repo",
+    "versions",
 ]
 
 
@@ -64,13 +65,15 @@ def main(
                 continue
 
             this_version = yaml.load(updated_rdf_source)
+            assert version_id == this_version["id"].split("/")[-1]
+            assert r.resource_id == this_version["id"][: -(len(version_id) + 1)]
 
             if latest_version is None:
                 latest_version = this_version
-                latest_version["id"] = f"{r.resource_id}/{version_id}"  # todo: do we need to set this here?
-                latest_version["previous_versions"] = []
+                latest_version["id"] = r.resource_id
+                latest_version["versions"] = [version_id]
             else:
-                latest_version["previous_versions"].append(this_version)
+                latest_version["versions"].append(version_id)
 
         if latest_version is None:
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
@@ -78,12 +81,11 @@ def main(
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
             if latest_version["config"]["bioimageio"].get("owners"):
                 summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
+
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1
-            n_accepted_versions[type_] = (
-                n_accepted_versions.get(type_, 0) + 1 + len(latest_version["previous_versions"])
-            )
+            n_accepted_versions[type_] = n_accepted_versions.get(type_, 0) + 1 + len(latest_version["versions"])
 
     print(f"new collection rdf contains {sum(n_accepted.values())} accepted resources.")
     print("accepted resources per type:")
@@ -94,6 +96,10 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
+
+    rdf_path = dist / "rdf.yaml"
+    rdf_path.parent.mkdir(exist_ok=True)
+    yaml.dump(rec_sort(rdf), rdf_path)
 
     def convert_for_json(p, k, v):
         """convert anything not json compatible"""

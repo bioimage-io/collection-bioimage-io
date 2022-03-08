@@ -44,7 +44,7 @@ def get_env_from_deps(deps: Dependencies):
                 deps = conda_env.get("dependencies", [])
                 if not isinstance(deps, list):
                     raise TypeError(f"expected dependencies in conda environment.yaml to be a list, but got: {deps}")
-                if not any(d.startswith("bioimageio.core") for d in deps):
+                if not any(isinstance(d, str) and d.startswith("bioimageio.core") for d in deps):
                     conda_env["dependencies"] = deps + ["bioimageio.core"]
             elif deps.manager == "pip":
                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
@@ -86,9 +86,11 @@ def get_default_env(
 
         # tensorflow 1.15 is not available on conda, so we need to inject this as a pip dependency
         if (tf_major, tf_minor) == (1, 15):
-            conda_env["dependencies"].append("pip")
-            conda_env["dependencies"].append("python >=3.7,<3.8")  # tf 1.15 not available for py>=3.8
-            conda_env["dependencies"].append({"pip": [f"tensorflow {get_version_range(tensorflow_version)}"]})
+            assert opset_version is None
+            assert pytorch_version is None
+            conda_env["dependencies"] = ["pip", "python >=3.7,<3.8"]  # tf 1.15 not available for py>=3.8
+            # get bioimageio.core (and its dependencies) via pip as well to avoid conda/pip mix
+            conda_env["dependencies"].append({"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}"]})
         else:  # use conda otherwise
             conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
 
