@@ -1,0 +1,31 @@
+bioimageio_core_version: 0.5.1
+bioimageio_spec_version: 0.4.5post2
+rdf_sha256: a0635c993997a97821e4294d162596ac972ef9fb40374abd7d929a2a3038a35a
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post2
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
+        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
+        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
+        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
+  - bioimageio_spec_version: 0.4.5post2
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
+        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
+        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
+        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post2, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
