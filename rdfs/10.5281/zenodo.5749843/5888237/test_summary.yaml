@@ -1,19 +1,46 @@
-bioimageio_spec_version: 0.4.4
-rdf_sha256: b47f841db2e9eae53cf97a19e52750a02c670d3e3007ed05d69daf4b472368b9
-status: passed
+bioimageio_core_version: null
+bioimageio_spec_version: 0.4.5post2
+rdf_sha256: d22099b51296124820214b7f74a844e2c04c88882e8dca9c1d40fb134126e861
+status: failed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post2
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.4
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [''task'']'}
-  - bioimageio_spec_version: 0.4.4
+    warnings: {tags: 'Missing tags for categories: [{''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_spec_version: 0.4.5post2
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.4
+    name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [''task'']'}
+    warnings: {tags: 'Missing tags for categories: [{''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - error: No module named 'numpy.typing'
+    name: import test_resource from test environment
+    status: failed
+    traceback: ["  File \"scripts/dynamic_validation.py\", line 31, in main\n    from
+        bioimageio.core.resource_tests import test_resource\n", "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/bioimageio/core/__init__.py\",
+        line 14, in <module>\n    from .prediction import predict_image, predict_images\n",
+      "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/bioimageio/core/prediction.py\",
+        line 8, in <module>\n    import imageio\n", "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/__init__.py\",
+        line 22, in <module>\n    from .core import FormatManager, RETURN_BYTES\n",
+      "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/core/__init__.py\",
+        line 16, in <module>\n    from .format import Format, FormatManager\n", "  File
+        \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/core/format.py\",
+        line 40, in <module>\n    from ..config import known_plugins, known_extensions,
+        PluginConfig, FileExtension\n", "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/config/__init__.py\",
+        line 7, in <module>\n    from .plugins import known_plugins, PluginConfig\n",
+      "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/config/plugins.py\",
+        line 4, in <module>\n    from ..core.legacy_plugin_wrapper import LegacyPlugin\n",
+      "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/core/legacy_plugin_wrapper.py\",
+        line 6, in <module>\n    from .v3_plugin_api import PluginV3, ImageProperties\n",
+      "  File \"/usr/share/miniconda/envs/5888237/lib/python3.7/site-packages/imageio/core/v3_plugin_api.py\",
+        line 2, in <module>\n    from numpy.typing import ArrayLike\n"]

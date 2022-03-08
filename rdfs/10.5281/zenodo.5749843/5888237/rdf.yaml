@@ -57,10 +57,10 @@ config:
 covers:
 - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png
 - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png
-description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
-  microscopy 3D volumes.
+description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
+  of Arabidopsis thaliana ovules acquired on a confocal microscope.
 documentation: https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/README.md
-format_version: 0.4.4
+format_version: 0.4.5
 id: 10.5281/zenodo.5749843/5888237
 inputs:
 - axes: byxzc
@@ -130,11 +130,12 @@ tags:
 - zerocostdl4mic
 - deepimagej
 - segmentation
-- 3dunet
 - 3d
 - unet
-- super-resolution-microscopy
+- fluorescence-light-microscopy
+- cell-membrane
 - plant
+- arabidopsis
 - tensorflow
 test_inputs:
 - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/exampleImage.npy
