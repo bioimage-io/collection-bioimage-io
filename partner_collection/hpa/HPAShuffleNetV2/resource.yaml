@@ -8,8 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-    name: HPA ShuffleNetV2
     format_version: 0.1.0
+    name: HPA ShuffleNetV2
+    type: model
     config:
       id: hpa
       name: HPA
@@ -27,13 +28,12 @@ versions:
       - model
       - application
       default_type: model
+    description: A light-weight model for HPA image classification competition
     tags:
     - shufflenet
     - tensorflow.js
     - classification
     - imjoy
-    description: A light-weight model for HPA image classification competition
-    type: model
     cite:
     authors:
     - Moshe Livne

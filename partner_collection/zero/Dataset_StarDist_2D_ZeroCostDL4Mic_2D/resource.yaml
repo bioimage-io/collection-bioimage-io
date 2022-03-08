@@ -8,14 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    maintainers: []
-    documentation: https://doi.org/10.5281/zenodo.3715492
-    name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
     format_version: 0.2.2
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
+    name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
+    type: dataset
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -36,16 +31,21 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    description: Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation
     authors:
     - Johanna Jukkala
     - Guillaume Jacquemet
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
     tags:
     - StarDist
     - segmentation
     - ZeroCostDL4Mic
     - 2D
-    description: Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation
-    type: dataset
+    maintainers: []
+    documentation: https://doi.org/10.5281/zenodo.3715492
     download_url: https://doi.org/10.5281/zenodo.3715492
     covers:
     - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png

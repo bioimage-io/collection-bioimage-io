@@ -8,16 +8,9 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    maintainers: []
-    documentation: https://deepimagej.github.io/deepimagej/
-    name: deepImageJ Collection
     format_version: 0.2.2
-    cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-      doi: 10.1038/s41592-021-01262-9
+    name: deepImageJ Collection
+    type: collection
     config:
       id: deepimagej
       name: DeepImageJ
@@ -35,16 +28,23 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     authors: []
+    cite:
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
     tags:
     - deepimagej
     - bioimage.io
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    type: collection
+    maintainers: []
+    documentation: https://deepimagej.github.io/deepimagej/
+    download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
     links:
     - deepimagej/deepimagej
     - deepimagej/unet-pancreaticcellsegmentation
     - imjoy/BioImageIO-Packager
-    download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
     id: deepimagej/UNet2DPancreaticSegmentation
