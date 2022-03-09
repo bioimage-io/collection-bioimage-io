@@ -1715,12 +1715,28 @@ collection:
     plant, tissue, light-sheet-fluorescence-microscopy, pytorch]
   type: model
   versions: ['6334778']
+- authors:
+  - {github_user: uschmidt83, name: Uwe Schmidt}
+  - {github_user: maweigert, name: Martin Weigert}
+  covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
+    'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
+  description: StarDist - Object Detection with Star-convex Shapes
+  id: 10.5281/zenodo.6338614
+  license: BSD-3-Clause
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: StarDist H&E Nuclei Segmentation
+  owners: [313404]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml
+  tags: [fluorescence-light-microscopy, whole-slide-imaging, other, 2d, cells, nuclei,
+    tensorflow, fiji, unet, instance-segmentation, object-detection, stardist]
+  type: model
+  versions: ['6338615']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 39}
-  n_resources: {application: 47, collection: 17, dataset: 35, model: 17}
+  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 41}
+  n_resources: {application: 47, collection: 17, dataset: 35, model: 18}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
