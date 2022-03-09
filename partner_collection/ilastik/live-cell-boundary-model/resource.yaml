@@ -8,19 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    tags:
+    - ilastik
+    - bioimage.io
+    description: Run the live cell boundary model via the BioEngine
+    format_version: 0.2.2
     type: application
     authors:
     - name: ImJoy Team
     - name: ilastik Team
     name: Live cell boundary model preview
-    description: Run the live cell boundary model via the BioEngine
-    maintainers:
-    - name: ilastik Team
-      github_user: ilastik
-    tags:
-    - ilastik
-    - bioimage.io
-    format_version: 0.2.2
     config:
       id: ilastik
       name: ilastik
@@ -37,5 +34,8 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    maintainers:
+    - name: ilastik Team
+      github_user: ilastik
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
     id: ilastik/live-cell-boundary-model
