@@ -3558,6 +3558,12 @@
         "tags": [
           "deepimagej"
         ],
+        "test_summaries": {
+          "deploy_branch": "gh-pages",
+          "repository": "deepimagej/models",
+          "workflow": "test_bioimageio_resources.yaml",
+          "workflow_ref": "refs/heads/master"
+        },
         "url_root": "https://raw.githubusercontent.com/deepimagej/models/master"
       },
       {
