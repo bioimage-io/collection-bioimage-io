@@ -36,6 +36,11 @@ config:
     - id: deepimagej
       source: >-
         https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+      test_summaries:
+        repository: deepimagej/models
+        deploy_branch: gh-pages
+        workflow: test_bioimageio_resources.yaml
+        workflow_ref: refs/heads/master
     - id: fiji
       source: >-
         https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
