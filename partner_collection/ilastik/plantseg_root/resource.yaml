@@ -8,23 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    maintainers:
-    - orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
-      github_user: fynnbe
-      affiliation: EMBL Heidelberg
-    - orcid: 0000-0001-6562-7187
-      name: Constantin Pape
-      github_user: constantinpape
-      affiliation: EMBL Heidelberg
+    description: Training data for cell segmentation in Arabidopsis lateral root.
+    type: dataset
     tags:
     - light-microscopy
     - arabidopsis
     - cells
     - instance-segmentation
     - 3D
-    description: Training data for cell segmentation in Arabidopsis lateral root.
-    type: dataset
+    authors:
+    - name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -41,16 +34,23 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    authors:
-    - name: Constantin Pape
-    format_version: 0.2.1
     name: Arabidopsis Lateral Root Traning Data
+    maintainers:
+    - orcid: 0000-0002-8567-6389
+      name: Fynn Beuttenmüller
+      github_user: fynnbe
+      affiliation: EMBL Heidelberg
+    - orcid: 0000-0001-6562-7187
+      name: Constantin Pape
+      github_user: constantinpape
+      affiliation: EMBL Heidelberg
+    format_version: 0.2.1
+    source: https://osf.io/2rszy/
+    license: CC-BY-4.0
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_root.md
     cite:
     - doi: https://doi.org/10.7554/eLife.57613
       text: Wolny et al.
-    source: https://osf.io/2rszy/
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_root.md
-    license: CC-BY-4.0
     id: ilastik/plantseg_root
