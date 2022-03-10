@@ -8,15 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: application
-    description: 2D instance segmentation of oval objects (ie nuclei). StarDist is
-      a deep-learning method that can be used to segment cell nuclei in 2D (xy) single
-      images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the
-      original publications this network is based on and make sure you cite these.
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    format_version: 0.2.2
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -32,6 +23,12 @@ versions:
     - segmentation
     - ZeroCostDL4Mic
     - 2D
+    description: 2D instance segmentation of oval objects (ie nuclei). StarDist is
+      a deep-learning method that can be used to segment cell nuclei in 2D (xy) single
+      images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the
+      original publications this network is based on and make sure you cite these.
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    type: application
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -52,7 +49,11 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    format_version: 0.2.2
     name: StarDist (2D) - ZeroCostDL4Mic
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -67,7 +68,6 @@ versions:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg

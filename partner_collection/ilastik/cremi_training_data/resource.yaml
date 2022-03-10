@@ -9,20 +9,14 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    type: dataset
-    description: Training data from the challenge on 3d EM segmentation on neuronal
-      processes.
-    format_version: 0.2.1
-    authors:
-    - name: Constantin Pape
     maintainers:
     - orcid: 0000-0002-8567-6389
-      github_user: fynnbe
       name: Fynn Beuttenmüller
+      github_user: fynnbe
       affiliation: EMBL Heidelberg
     - orcid: 0000-0001-6562-7187
-      github_user: constantinpape
       name: Constantin Pape
+      github_user: constantinpape
       affiliation: EMBL Heidelberg
     tags:
     - electron-microscopy
@@ -31,6 +25,9 @@ versions:
     - instance-segmentation
     - cremi-challenge
     - 3D
+    description: Training data from the challenge on 3d EM segmentation on neuronal
+      processes.
+    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -47,15 +44,18 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    authors:
+    - name: Constantin Pape
+    format_version: 0.2.1
     name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
       Images'
+    cite:
+    - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
+      url: https://cremi.org/
+    source: https://cremi.org/
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png
-    cite:
-    - text: Jan Funke, Stephan Saalfeld, Davi Bock, Srini Turaga, Eric Perlman
-      url: https://cremi.org/
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
-    source: https://cremi.org/
     id: ilastik/cremi_training_data
