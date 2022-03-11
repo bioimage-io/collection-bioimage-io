@@ -1625,6 +1625,19 @@ collection:
   type: model
   versions: ['5942853']
 - authors:
+  - {name: Shubin Dai}
+  covers: ['https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/diagram-of-InceptionV3.png']
+  description: The winning model of HPA image classification 2021 by Bestfitting
+  id: 10.5281/zenodo.5910854
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: HPA Bestfitting InceptionV3
+  owners: [47882]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/5911832/rdf.yaml
+  tags: [classification, inception-v3, hpa, onnx, cells, protein-localization]
+  type: model
+  versions: ['5911832']
+- authors:
   - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   covers: [./input.png, ./output.png]
@@ -1735,8 +1748,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 41}
-  n_resources: {application: 47, collection: 17, dataset: 35, model: 18}
+  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 43}
+  n_resources: {application: 47, collection: 17, dataset: 35, model: 19}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
