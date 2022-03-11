@@ -39,7 +39,7 @@ def main(
             summary = test_summary_from_exception("import test_resource from test environment", e)
         else:
             try:
-                rdf = yaml.load(test_resource)
+                rdf = yaml.load(rdf_path)
                 test_kwargs = rdf.get("config", {}).get("bioimageio", {}).get("test_kwargs", {}).get(weight_format, {})
             except Exception as e:
                 summary = test_summary_from_exception("check for test kwargs", e)
