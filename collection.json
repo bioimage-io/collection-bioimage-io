@@ -3381,6 +3381,37 @@
     {
       "authors": [
         {
+          "name": "Hao Xu"
+        },
+        {
+          "name": "Wei Ouyang"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png"
+      ],
+      "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
+      "id": "10.5281/zenodo.6200999",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej"
+      ],
+      "name": "HPA Nucleus Segmentation (DPNUnet)",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/rdf.yaml",
+      "tags": [
+        "nucleus-segmentation"
+      ],
+      "type": "model",
+      "versions": [
+        "6224243"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Adrian Wolny"
         },
         {
@@ -3474,13 +3505,13 @@
       "application": 94,
       "collection": 34,
       "dataset": 70,
-      "model": 39
+      "model": 41
     },
     "n_resources": {
       "application": 47,
       "collection": 17,
       "dataset": 35,
-      "model": 17
+      "model": 18
     },
     "partners": [
       {

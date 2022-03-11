@@ -1684,6 +1684,21 @@ collection:
   type: model
   versions: ['6200636']
 - authors:
+  - {name: Hao Xu}
+  - {name: Wei Ouyang}
+  covers: ['https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png']
+  description: Nuclei segmentation model for segmenting images from the Human Protein
+    Atlas
+  id: 10.5281/zenodo.6200999
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej]
+  name: HPA Nucleus Segmentation (DPNUnet)
+  owners: [47882]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/rdf.yaml
+  tags: [nucleus-segmentation]
+  type: model
+  versions: ['6224243']
+- authors:
   - {name: Adrian Wolny}
   - {name: Lorenzo Cerrone}
   covers: ['https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/raw.png',
@@ -1720,8 +1735,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 39}
-  n_resources: {application: 47, collection: 17, dataset: 35, model: 17}
+  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 41}
+  n_resources: {application: 47, collection: 17, dataset: 35, model: 18}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
