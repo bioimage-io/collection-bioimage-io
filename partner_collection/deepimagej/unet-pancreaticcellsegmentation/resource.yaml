@@ -8,8 +8,18 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    type: application
-    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+    cite:
+    - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
+        detection, and morphometry. Nat Methods 16, 67–70 (2019).'
+      doi: https://doi.org/10.1038/s41592-018-0261-2
+    maintainers: []
+    tags:
+    - unet
+    - segmentation
+    - deepimagej
+    - notebook
+    - training
+    - cell-segmentation
     config:
       id: deepimagej
       name: DeepImageJ
@@ -27,14 +37,10 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    maintainers: []
-    tags:
-    - unet
-    - segmentation
-    - deepimagej
-    - notebook
-    - training
-    - cell-segmentation
+    name: 2D U-Net for binary segmentation
+    type: application
+    format_version: 0.2.2
+    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
     description: Easy example to define a 2D U-Net for segmentation with Keras and
       import it into DeepImageJ format
     authors:
@@ -42,20 +48,14 @@ versions:
       affiliation: EPFL, UC3M
     - name: DeepImageJ
       affiliation: EPFL, UC3M
-    cite:
-    - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
-        detection, and morphometry. Nat Methods 16, 67–70 (2019).'
-      doi: https://doi.org/10.1038/s41592-018-0261-2
-    format_version: 0.2.2
-    name: 2D U-Net for binary segmentation
+    links:
+    - deepimagej/UNet2DPancreaticSegmentation
+    covers:
+    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
+    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
-    covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
-    links:
-    - deepimagej/UNet2DPancreaticSegmentation
     id: deepimagej/unet-pancreaticcellsegmentation

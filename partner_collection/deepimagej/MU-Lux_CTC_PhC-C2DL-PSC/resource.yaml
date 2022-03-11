@@ -8,8 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    type: collection
-    documentation: https://deepimagej.github.io/deepimagej/
+    cite:
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+    maintainers: []
+    tags:
+    - deepimagej
+    - bioimage.io
     config:
       id: deepimagej
       name: DeepImageJ
@@ -27,23 +35,15 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    maintainers: []
-    tags:
-    - deepimagej
-    - bioimage.io
+    name: deepImageJ Collection
+    type: collection
+    format_version: 0.2.2
+    documentation: https://deepimagej.github.io/deepimagej/
     description: Resources for BioImgage.IO curated by the deepImageJ team.
     authors: []
-    cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-      doi: 10.1038/s41592-021-01262-9
-    format_version: 0.2.2
-    name: deepImageJ Collection
-    download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
-    source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
+    download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
     id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
