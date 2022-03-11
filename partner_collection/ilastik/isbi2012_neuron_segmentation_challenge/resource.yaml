@@ -8,20 +8,27 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    authors:
-    - name: Constantin Pape
-    type: dataset
+    tags:
+    - electron-microscopy
+    - brain
+    - neurons
+    - instance-segmentation
+    - 2D
+    - isbi2012-challenge
     maintainers:
-    - orcid: 0000-0002-8567-6389
-      affiliation: EMBL Heidelberg
+    - affiliation: EMBL Heidelberg
       name: Fynn Beuttenmüller
       github_user: fynnbe
-    - orcid: 0000-0001-6562-7187
-      affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
+    - affiliation: EMBL Heidelberg
       name: Constantin Pape
       github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+    type: dataset
     description: Training data from challenge on 2d EM segmentation of neuronal processes.
     format_version: 0.2.1
+    authors:
+    - name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -39,13 +46,6 @@ versions:
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
     name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
-    tags:
-    - electron-microscopy
-    - brain
-    - neurons
-    - instance-segmentation
-    - 2D
-    - isbi2012-challenge
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover1.png

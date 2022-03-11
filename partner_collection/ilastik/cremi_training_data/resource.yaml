@@ -9,21 +9,28 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    authors:
-    - name: Constantin Pape
-    type: dataset
+    tags:
+    - electron-microscopy
+    - brain
+    - neurons
+    - instance-segmentation
+    - cremi-challenge
+    - 3D
     maintainers:
-    - orcid: 0000-0002-8567-6389
-      affiliation: EMBL Heidelberg
+    - affiliation: EMBL Heidelberg
       name: Fynn Beuttenmüller
       github_user: fynnbe
-    - orcid: 0000-0001-6562-7187
-      affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
+    - affiliation: EMBL Heidelberg
       name: Constantin Pape
       github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+    type: dataset
     description: Training data from the challenge on 3d EM segmentation on neuronal
       processes.
     format_version: 0.2.1
+    authors:
+    - name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -42,13 +49,6 @@ versions:
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
     name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
       Images'
-    tags:
-    - electron-microscopy
-    - brain
-    - neurons
-    - instance-segmentation
-    - cremi-challenge
-    - 3D
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png
