@@ -25,3 +25,10 @@ versions:
   version_id: '5869900'
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
+- version_id: 5869900
+  doi: 10.5281/zenodo.5869900
+  created: '2022-01-18 10:03:26.939252'
+  status: accepted
+  name: LiveCellSegmentationBoundaryModel
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
