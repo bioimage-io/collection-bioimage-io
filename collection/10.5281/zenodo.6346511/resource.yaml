@@ -1,0 +1,14 @@
+status: accepted
+versions:
+- version_id: '6346512'
+  doi: 10.5281/zenodo.6346512
+  created: '2022-03-11 11:02:48.889495'
+  status: accepted
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/rdf.yaml
+id: 10.5281/zenodo.6346511
+doi: 10.5281/zenodo.6346511
+type: model
+owners:
+- 66700
