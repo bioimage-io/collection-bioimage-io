@@ -8,28 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    tags:
-    - unet
-    - segmentation
-    - deepimagej
-    - notebook
-    - training
-    - cell-segmentation
-    maintainers: []
-    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
-    type: application
-    description: Easy example to define a 2D U-Net for segmentation with Keras and
-      import it into DeepImageJ format
-    cite:
-    - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
-        detection, and morphometry. Nat Methods 16, 67–70 (2019).'
-      doi: https://doi.org/10.1038/s41592-018-0261-2
-    format_version: 0.2.2
-    authors:
-    - name: Ignacio Arganda-Carreras
-      affiliation: EPFL, UC3M
-    - name: DeepImageJ
-      affiliation: EPFL, UC3M
     config:
       id: deepimagej
       name: DeepImageJ
@@ -47,10 +25,29 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    format_version: 0.2.2
+    tags:
+    - unet
+    - segmentation
+    - deepimagej
+    - notebook
+    - training
+    - cell-segmentation
+    documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
+    type: application
+    cite:
+    - text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
+        detection, and morphometry. Nat Methods 16, 67–70 (2019).'
+      doi: https://doi.org/10.1038/s41592-018-0261-2
+    description: Easy example to define a 2D U-Net for segmentation with Keras and
+      import it into DeepImageJ format
+    maintainers: []
     name: 2D U-Net for binary segmentation
-    covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
+    authors:
+    - name: Ignacio Arganda-Carreras
+      affiliation: EPFL, UC3M
+    - name: DeepImageJ
+      affiliation: EPFL, UC3M
     links:
     - deepimagej/UNet2DPancreaticSegmentation
     badges:
@@ -58,4 +55,7 @@ versions:
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+    covers:
+    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/notebook_intro.png
+    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/usecase.png
     id: deepimagej/unet-pancreaticcellsegmentation
