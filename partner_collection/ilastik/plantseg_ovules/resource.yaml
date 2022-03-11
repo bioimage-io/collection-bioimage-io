@@ -8,8 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    name: Arabidopsis Ovules Traning Data
-    type: dataset
+    format_version: 0.2.1
     tags:
     - light-microscopy
     - arabidopsis
@@ -18,7 +17,18 @@ versions:
     - 3D
     authors:
     - name: Constantin Pape
-    format_version: 0.2.1
+    type: dataset
+    name: Arabidopsis Ovules Traning Data
+    description: Training data for cell segmentation in Arabidopsis ovules.
+    maintainers:
+    - affiliation: EMBL Heidelberg
+      github_user: fynnbe
+      orcid: 0000-0002-8567-6389
+      name: Fynn Beuttenmüller
+    - affiliation: EMBL Heidelberg
+      github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+      name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -35,22 +45,12 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    description: Training data for cell segmentation in Arabidopsis ovules.
-    maintainers:
-    - name: Fynn Beuttenmüller
-      github_user: fynnbe
-      orcid: 0000-0002-8567-6389
-      affiliation: EMBL Heidelberg
-    - name: Constantin Pape
-      github_user: constantinpape
-      orcid: 0000-0001-6562-7187
-      affiliation: EMBL Heidelberg
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_ovules.md
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
+    license: CC-BY-4.0
+    source: https://osf.io/w38uf/
     cite:
     - doi: https://doi.org/10.7554/eLife.57613
       text: Wolny et al.
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_ovules.md
-    source: https://osf.io/w38uf/
-    license: CC-BY-4.0
     id: ilastik/plantseg_ovules
