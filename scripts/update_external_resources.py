@@ -13,7 +13,7 @@ from bare_utils import set_gh_actions_outputs
 from utils import enforce_block_style_resource, yaml
 
 
-def write_resource(
+def update_resource(
     *,
     resource_path: Path,
     resource_id: str,
@@ -23,6 +23,10 @@ def write_resource(
     new_version: dict,
     resource_output_path: Path,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
+    if resource_output_path.exists():
+        # maybe we have more than one new versions, so we should update the resource that is already written to output
+        resource_path = resource_output_path
+
     if resource_path.exists():
         resource = yaml.load(resource_path)
         assert isinstance(resource, dict)
@@ -141,7 +145,7 @@ def update_from_zenodo(
                 "name": name,
                 "version_name": version_name,
             }
-            resource = write_resource(
+            resource = update_resource(
                 resource_path=resource_path,
                 resource_id=resource_doi,
                 resource_type=resource_type,
