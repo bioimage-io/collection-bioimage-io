@@ -9,14 +9,15 @@ versions:
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
     maintainers:
-    - orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
+    - name: Fynn Beuttenmüller
       affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
       github_user: fynnbe
-    - orcid: 0000-0001-6562-7187
-      name: Constantin Pape
+    - name: Constantin Pape
       affiliation: EMBL Heidelberg
+      orcid: 0000-0001-6562-7187
       github_user: constantinpape
+    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -33,12 +34,6 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
-    description: Training data from challenge on 2d EM segmentation of neuronal processes.
-    format_version: 0.2.1
-    authors:
-    - name: Constantin Pape
-    type: dataset
     tags:
     - electron-microscopy
     - brain
@@ -46,12 +41,17 @@ versions:
     - instance-segmentation
     - 2D
     - isbi2012-challenge
+    description: Training data from challenge on 2d EM segmentation of neuronal processes.
+    format_version: 0.2.1
+    name: 'ISBI Challenge: Segmentation of neuronal structures in EM stacks'
+    authors:
+    - name: Constantin Pape
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi.md
-    cite:
-    - doi: https://doi.org/10.3389/fnana.2015.00142
-      text: Arganda-Carreras et al.
+    source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover1.png
-    source: https://oc.embl.de/index.php/s/sXJzYVK0xEgowOz/download
+    cite:
+    - doi: https://doi.org/10.3389/fnana.2015.00142
+      text: Arganda-Carreras et al.
     id: ilastik/isbi2012_neuron_segmentation_challenge
