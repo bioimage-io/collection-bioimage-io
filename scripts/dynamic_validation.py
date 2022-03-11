@@ -40,7 +40,7 @@ def main(
         else:
             try:
                 rdf = yaml.load(test_resource)
-                test_kwargs = rdf.get("config", {}).get("bioimageio", {}).get("test_kwargs", {})
+                test_kwargs = rdf.get("config", {}).get("bioimageio", {}).get("test_kwargs", {}).get(weight_format, {})
             except Exception as e:
                 summary = test_summary_from_exception("check for test kwargs", e)
             else:
