@@ -8,12 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
-    description: Demo model for denoising trained on a single SEM image with Noise2Void
-    tags:
-    - denoising
-    - unet2d
-    - n2v
-    format_version: 0.3.2
+    type: model
     config:
       fiji:
         batchDimLength: 180
@@ -24,7 +19,12 @@ versions:
         numStepsPerEpoch: 300
         patchDimLength: 60
         stepsFinished: 30000
-    type: model
+    tags:
+    - denoising
+    - unet2d
+    - n2v
+    description: Demo model for denoising trained on a single SEM image with Noise2Void
+    format_version: 0.3.2
     name: N2V SEM Demo
     cite:
     - text: Buchholz, T. et al. - Content-aware image restoration for electron microscopy.
