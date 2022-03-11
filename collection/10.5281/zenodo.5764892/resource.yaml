@@ -47,3 +47,10 @@ versions:
   version_id: '5764893'
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+- version_id: 5764893
+  doi: 10.5281/zenodo.5764893
+  created: '2021-12-07 18:02:09.736653'
+  status: accepted
+  name: NucleiSegmentationBoundaryModel
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
