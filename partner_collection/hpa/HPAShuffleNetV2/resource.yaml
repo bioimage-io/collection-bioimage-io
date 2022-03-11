@@ -8,7 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
-    description: A light-weight model for HPA image classification competition
+    name: HPA ShuffleNetV2
+    type: model
     tags:
     - shufflenet
     - tensorflow.js
@@ -32,8 +33,7 @@ versions:
       - model
       - application
       default_type: model
-    name: HPA ShuffleNetV2
-    type: model
+    description: A light-weight model for HPA image classification competition
     cite:
     authors:
     - Moshe Livne
