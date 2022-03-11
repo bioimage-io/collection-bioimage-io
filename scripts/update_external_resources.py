@@ -129,8 +129,7 @@ def update_from_zenodo(
                 except Exception as e:
                     print(f"Failed to obtain version name: {e}")
 
-            # remove (sandbox.)zenodo prefix from version doi
-            version_id = doi.replace("10.5281/zenodo.", "").replace("10.5281/zenodo.", "")
+            version_id = hit["id"]
 
             new_version = {
                 "version_id": version_id,
