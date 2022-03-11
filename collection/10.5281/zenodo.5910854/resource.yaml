@@ -1,9 +1,26 @@
 doi: 10.5281/zenodo.5910854
 id: 10.5281/zenodo.5910854
-owners: [47882]
+owners:
+- 47882
 status: accepted
 type: model
 versions:
-- {created: '2022-01-27 14:38:36.287116', doi: 10.5281/zenodo.5910855, name: HPA Bestfitting
-    InceptionV3, rdf_source: 'https://zenodo.org/api/files/474cde37-dc44-46f3-8343-aed6bafdd0bb/rdf.yaml',
-  status: blocked, version_id: '5910855', version_name: revision 1}
+- version_id: '5911832'
+  doi: 10.5281/zenodo.5911832
+  created: '2022-01-27 20:53:33.181598'
+  status: accepted
+  name: HPA Bestfitting InceptionV3
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/rdf.yaml
+  config: 
+    bioimageio:
+      test_kwargs:
+        torchscript: {"decimal": 2}
+        onnx: {"decimal": 2}
+- created: '2022-01-27 14:38:36.287116'
+  doi: 10.5281/zenodo.5910855
+  name: HPA Bestfitting InceptionV3
+  status: blocked
+  version_id: '5910855'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/474cde37-dc44-46f3-8343-aed6bafdd0bb/rdf.yaml
