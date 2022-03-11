@@ -110,7 +110,7 @@ def update_from_zenodo(
             assert isinstance(created, datetime), created
             resource_path = collection / resource_doi / "resource.yaml"
             resource_output_path = dist / resource_doi / "resource.yaml"
-            version_name = f"revision {hit['revision']}"
+            version_name = f"version {hit['metadata']['relations']['version'][0]['index'] + 1}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
             rdf_source = "unknown"
@@ -129,8 +129,7 @@ def update_from_zenodo(
                 except Exception as e:
                     print(f"Failed to obtain version name: {e}")
 
-            # remove (sandbox.)zenodo prefix from version doi
-            version_id = doi.replace("10.5281/zenodo.", "").replace("10.5281/zenodo.", "")
+            version_id = hit["id"]
 
             new_version = {
                 "version_id": version_id,
@@ -191,7 +190,9 @@ def main(
         {
             "resource_id": k,
             "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
-            "new_version_ids_md": "\n".join(["  - " + vv["version_id"] for vv in v]),
+            "new_version_ids_md": "\n".join(
+                [f"  - [{vv['version_id']}({vv['version_name']})](https://www.doi.org/{vv['doi']})" for vv in v]
+            ),
             "new_version_sources": json.dumps([(vv.get("rdf_source") or None) for vv in v]),
             "new_version_sources_md": "\n".join(
                 [
