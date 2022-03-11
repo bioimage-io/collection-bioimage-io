@@ -8,31 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    format_version: 0.2.1
-    tags:
-    - high-content-imaging
-    - fluorescence-light-microscopy
-    - 2D
-    - cells
-    - nuclei
-    - covid19
-    - semantic-segmentation
-    - instance-segmentation
-    authors:
-    - name: Constantin Pape
-    type: dataset
-    name: Covid-IF Training Data
-    description: Training data for cell and nucleus segmentation as well as infection
-      classification in IF data of Covid-19 infected cells.
     maintainers:
-    - affiliation: EMBL Heidelberg
+    - orcid: 0000-0002-8567-6389
+      affiliation: EMBL Heidelberg
       github_user: fynnbe
-      orcid: 0000-0002-8567-6389
       name: Fynn Beuttenmüller
-    - affiliation: EMBL Heidelberg
+    - orcid: 0000-0001-6562-7187
+      affiliation: EMBL Heidelberg
       github_user: constantinpape
-      orcid: 0000-0001-6562-7187
       name: Constantin Pape
+    name: Covid-IF Training Data
     config:
       id: ilastik
       name: ilastik
@@ -49,11 +34,26 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
+    description: Training data for cell and nucleus segmentation as well as infection
+      classification in IF data of Covid-19 infected cells.
+    type: dataset
+    format_version: 0.2.1
+    tags:
+    - high-content-imaging
+    - fluorescence-light-microscopy
+    - 2D
+    - cells
+    - nuclei
+    - covid19
+    - semantic-segmentation
+    - instance-segmentation
+    authors:
+    - name: Constantin Pape
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover1.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover2.jpg
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
     license: CC-BY-4.0
     source: https://zenodo.org/record/5092850
     cite:
