@@ -133,7 +133,7 @@ def update_from_zenodo(
                 except Exception as e:
                     print(f"Failed to obtain version name: {e}")
 
-            version_id = f"'{hit['id']}'"
+            version_id = str(hit["id"])
 
             new_version = {
                 "version_id": version_id,
