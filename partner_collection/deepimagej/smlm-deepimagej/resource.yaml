@@ -8,9 +8,15 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    type: application
     documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
-    maintainers: []
     name: SMLM-superresolution
+    maintainers: []
+    authors:
+    - name: DeepImageJ
+      affiliation: EPFL, UC3M
+    description: Single molecule localization microscopy (SMLM) processing using deepImageJ
+      and ThunderSTORM in an ImageJ macro.
     config:
       id: deepimagej
       name: DeepImageJ
@@ -28,9 +34,7 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    description: Single molecule localization microscopy (SMLM) processing using deepImageJ
-      and ThunderSTORM in an ImageJ macro.
-    type: application
+    format_version: 0.2.2
     cite:
     - text: Lucas von Chamier et al., Nature Communications 2021
       doi: https://doi.org/10.1038/s41467-021-22518-0
@@ -38,7 +42,6 @@ versions:
       doi: https://doi.org/10.1101/799270
     - text: M. Ovesný, et al., Bioinformatics 2014
       doi: https://doi.org/10.1093/bioinformatics/btu202
-    format_version: 0.2.2
     tags:
     - deepimagej
     - smlm
@@ -48,12 +51,9 @@ versions:
     - workflow
     - pipeline
     - superresolution
-    authors:
-    - name: DeepImageJ
-      affiliation: EPFL, UC3M
     covers:
     - https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/cover.png
     download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
-    source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     id: deepimagej/smlm-deepimagej

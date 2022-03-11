@@ -8,9 +8,15 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    type: application
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    maintainers: []
     name: YOLOv2 - ZeroCostDL4Mic
+    maintainers: []
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
+    description: Object detection of 2D images. YOLOv2 is an object detection network
+      developed by Redmon & Farhadi, which identifies objects in images and draws
+      bounding boxes around them.
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -31,10 +37,7 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    description: Object detection of 2D images. YOLOv2 is an object detection network
-      developed by Redmon & Farhadi, which identifies objects in images and draws
-      bounding boxes around them.
-    type: application
+    format_version: 0.2.2
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -43,27 +46,24 @@ versions:
         Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 6517-6525,
         doi: 10.1109/CVPR.2017.690.'
       doi: https://doi.org/10.1109/CVPR.2017.690
-    format_version: 0.2.2
     tags:
     - colab
     - notebook
     - YOLOv2
     - object detection
     - ZeroCostDL4Mic
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_YOLOv2_ZeroCostDL4Mic
     - zero/Dataset_YOLOv2_coli_DeepBacs
     - zero/Dataset_YOLOv2_antibiotic_DeepBacs
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    badges:
+    - label: Open in Colab
+      icon: https://colab.research.google.com/assets/colab-badge.svg
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_YOLOv2_ZeroCostDL4Mic
