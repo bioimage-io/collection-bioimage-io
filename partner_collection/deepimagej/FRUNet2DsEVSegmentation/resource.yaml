@@ -8,8 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    maintainers: []
-    type: collection
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    tags:
+    - deepimagej
+    - bioimage.io
+    authors: []
+    cite:
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+      doi: 10.1038/s41592-021-01262-9
+    format_version: 0.2.2
+    documentation: https://deepimagej.github.io/deepimagej/
     config:
       id: deepimagej
       name: DeepImageJ
@@ -27,24 +38,13 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    tags:
-    - deepimagej
-    - bioimage.io
-    documentation: https://deepimagej.github.io/deepimagej/
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    format_version: 0.2.2
+    maintainers: []
     name: deepImageJ Collection
-    authors: []
-    cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-    download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
+    type: collection
     links:
     - deepimagej/deepimagej
     - deepimagej/EVsTEMsegmentationFRUNet
     - imjoy/BioImageIO-Packager
+    download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
     source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
     id: deepimagej/FRUNet2DsEVSegmentation
