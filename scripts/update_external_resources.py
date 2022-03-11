@@ -110,7 +110,7 @@ def update_from_zenodo(
             assert isinstance(created, datetime), created
             resource_path = collection / resource_doi / "resource.yaml"
             resource_output_path = dist / resource_doi / "resource.yaml"
-            version_name = f"revision {hit['revision']}"
+            version_name = f"version {hit['metadata']['relations']['version'][0]['index'] + 1}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
             rdf = None
             rdf_source = "unknown"
