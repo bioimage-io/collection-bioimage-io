@@ -1,0 +1,108 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/fixed_zero_mean_unit_variance.ijm
+authors:
+- name: Hao Xu
+- name: Wei Ouyang
+cite:
+- text: Kaimal, Jay, & Thul, Peter. (2021). HPA Cell Image Segmentation Dataset (Version
+    v2) [Data set]. Zenodo.
+  url: https://doi.org/10.5281/zenodo.4430893
+config:
+  bioimageio:
+    created: '2022-02-22 13:23:59.702632'
+    doi: 10.5281/zenodo.6224243
+    owners:
+    - 47882
+    status: accepted
+    version_id: '6224243'
+    version_name: revision 1
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: fixed_zero_mean_unit_variance.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_nuclei_input.npy
+        pixel_size:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+        size: 512 x 512 x 1 x 3
+      memory_peak:
+      outputs:
+      - name: test_nuclei_output.npy
+        size: 512 x 512 x 1 x 3
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png
+description: Nuclei segmentation model for segmenting images from the Human Protein
+  Atlas
+documentation: https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/README.md
+format_version: 0.4.5
+id: 10.5281/zenodo.6200999/6224243
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: xy
+      mean:
+      - 0.48627450980392156
+      - 0.4588235294117647
+      - 0.40784313725490196
+      mode: fixed
+      std:
+      - 0.23482446870963955
+      - 0.23482446870963955
+      - 0.23482446870963955
+    name: zero_mean_unit_variance
+  shape:
+  - 1
+  - 3
+  - 512
+  - 512
+license: CC-BY-4.0
+links:
+- deepimagej/deepimagej
+name: HPA Nucleus Segmentation (DPNUnet)
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output0
+  shape:
+  - 1
+  - 3
+  - 512
+  - 512
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/sample_output_0.tif
+tags:
+- nucleus-segmentation
+test_inputs:
+- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/test_nuclei_input.npy
+test_outputs:
+- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/test_nuclei_output.npy
+timestamp: '2022-02-21T21:35:34.392135'
+type: model
+weights:
+  torchscript:
+    sha256: 8d3af116378b12d54a15d880b942c2d7e74ba52e11421a7ba16c702d1a112ba5
+    source: https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/nuclei_model.pt
