@@ -1,28 +1,21 @@
 doi: 10.5281/zenodo.6200999
 id: 10.5281/zenodo.6200999
 owners:
-- 240881
+- 47882
 status: accepted
 type: model
 versions:
-- created: '2022-02-22 10:57:23.215355'
+- version_id: '6221443'
   doi: 10.5281/zenodo.6221443
+  created: '2022-02-22 10:57:23.215355'
+  status: blocked
   name: HPA Nucleus Segmentation (DPNUnet)
-  status: blocked
-  version_id: 10.5281/zenodo.6221443
-  version_name: revision 1
+  version_name: revision 4
   rdf_source: https://zenodo.org/api/files/cbeebc4a-df16-4013-bc52-98c1b843baa4/rdf.yaml
-- created: '2022-02-21 10:58:25.147491'
-  doi: 10.5281/zenodo.6201000
-  name: HPA Nuclei Segmentation (DPNUnet)
-  status: blocked
-  version_id: 10.5281/zenodo.6201000
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/rdf.yaml
 - version_id: '6201000'
   doi: 10.5281/zenodo.6201000
   created: '2022-02-21 10:58:25.147491'
-  status: accepted
+  status: blocked
   name: HPA Nuclei Segmentation (DPNUnet)
   version_name: revision 4
   rdf_source: https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/rdf.yaml
