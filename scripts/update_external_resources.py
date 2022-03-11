@@ -190,7 +190,9 @@ def main(
         {
             "resource_id": k,
             "new_version_ids": json.dumps([vv["version_id"] for vv in v]),
-            "new_version_ids_md": "\n".join([f"  - [{vv['version_id']}](https://www.doi.org/{vv['doi']})" for vv in v]),
+            "new_version_ids_md": "\n".join(
+                [f"  - [{vv['version_id']}({vv['version_name']})](https://www.doi.org/{vv['doi']})" for vv in v]
+            ),
             "new_version_sources": json.dumps([(vv.get("rdf_source") or None) for vv in v]),
             "new_version_sources_md": "\n".join(
                 [
