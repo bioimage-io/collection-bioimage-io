@@ -7,6 +7,13 @@ versions:
   name: HPA Cell Segmentation (DPNUnet)
   version_name: revision 2
   rdf_source: https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/rdf.yaml
+- version_id: 6200636
+  doi: 10.5281/zenodo.6200636
+  created: '2022-02-21 10:32:57.406609'
+  status: accepted
+  name: HPA Cell Segmentation (DPNUnet)
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/rdf.yaml
 id: 10.5281/zenodo.6200635
 doi: 10.5281/zenodo.6200635
 type: model
