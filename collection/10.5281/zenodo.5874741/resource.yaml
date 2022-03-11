@@ -1,9 +1,21 @@
 doi: 10.5281/zenodo.5874741
 id: 10.5281/zenodo.5874741
-owners: [77626]
+owners:
+- 77626
 status: accepted
 type: model
 versions:
-- {created: '2022-01-18 22:01:09.315638', doi: 10.5281/zenodo.5874742, name: Neuron Segmentation in EM (Membrane Prediction),
-  rdf_source: 'https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml',
-  status: accepted, version_id: '5874742', version_name: revision 1}
+- created: '2022-01-18 22:01:09.315638'
+  doi: 10.5281/zenodo.5874742
+  name: Neuron Segmentation in EM (Membrane Prediction)
+  status: accepted
+  version_id: '5874742'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml
+- version_id: 5874742
+  doi: 10.5281/zenodo.5874742
+  created: '2022-01-18 22:01:09.315638'
+  status: accepted
+  name: NeuronEMSegmentationBoundaryModel
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml
