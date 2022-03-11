@@ -8,26 +8,19 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    description: Training data for cell segmentation in Arabidopsis ovules.
-    name: Arabidopsis Ovules Traning Data
-    type: dataset
-    tags:
-    - light-microscopy
-    - arabidopsis
-    - cells
-    - instance-segmentation
-    - 3D
     authors:
     - name: Constantin Pape
+    type: dataset
     maintainers:
-    - name: Fynn Beuttenmüller
+    - orcid: 0000-0002-8567-6389
+      affiliation: EMBL Heidelberg
+      name: Fynn Beuttenmüller
       github_user: fynnbe
-      orcid: 0000-0002-8567-6389
+    - orcid: 0000-0001-6562-7187
       affiliation: EMBL Heidelberg
-    - name: Constantin Pape
+      name: Constantin Pape
       github_user: constantinpape
-      orcid: 0000-0001-6562-7187
-      affiliation: EMBL Heidelberg
+    description: Training data for cell segmentation in Arabidopsis ovules.
     format_version: 0.2.1
     config:
       id: ilastik
@@ -45,12 +38,19 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    license: CC-BY-4.0
-    source: https://osf.io/w38uf/
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_ovules.md
+    name: Arabidopsis Ovules Traning Data
+    tags:
+    - light-microscopy
+    - arabidopsis
+    - cells
+    - instance-segmentation
+    - 3D
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
     cite:
     - doi: https://doi.org/10.7554/eLife.57613
       text: Wolny et al.
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
+    source: https://osf.io/w38uf/
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_ovules.md
+    license: CC-BY-4.0
     id: ilastik/plantseg_ovules

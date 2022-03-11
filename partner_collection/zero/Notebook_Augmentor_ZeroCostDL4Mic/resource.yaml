@@ -8,6 +8,11 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    type: application
+    maintainers: []
     description: Artificially increase the size of your training dataset. Augmentor
       is a data augmentation library. Data augmentation can improve training progress
       by amplifying differences in the dataset. This can be useful if the available
@@ -16,17 +21,7 @@ versions:
       can be especially valuable when training dataset need to be manually labelled.
       Note - visit the ZeroCostDL4Mic wiki to check the original publications this
       network is based on and make sure you cite these.
-    name: Augmentor - ZeroCostDL4Mic
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    type: application
-    tags:
-    - colab
-    - notebook
-    - Augmentor
-    - Data Augmentation
-    - ZeroCostDL4Mic
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    format_version: 0.2.2
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -35,8 +30,6 @@ versions:
         using Augmentor, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages
         4522–4524, https://doi.org/10.1093/bioinformatics/btz259
       doi: https://doi.org/10.1093/bioinformatics/btz259
-    maintainers: []
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -57,14 +50,21 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    name: Augmentor - ZeroCostDL4Mic
+    tags:
+    - colab
+    - notebook
+    - Augmentor
+    - Data Augmentation
+    - ZeroCostDL4Mic
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/augmentor_notebook.png
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/augmentor_notebook.png
     id: zero/Notebook_Augmentor_ZeroCostDL4Mic
