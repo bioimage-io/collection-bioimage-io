@@ -30,7 +30,7 @@ def end_of_job(dist: Path, always_continue: bool):
         shutil.rmtree(str(dist))
 
 
-def main(always_continue: bool = True):
+def main(always_continue: bool = True, skip_update_external: bool = True):
     # local setup
     collection = Path(__file__).parent / "../collection"
 
@@ -65,11 +65,15 @@ def main(always_continue: bool = True):
     ###################################
     # update resources (resource infos)
     ###################################
-    updates = update_external_resources_script()
-    print("would open auto-update PRs with:")
-    pprint(updates)
+    if not skip_update_external:
+        updates = update_external_resources_script()
+        print("would open auto-update PRs with:")
+        pprint(updates)
 
-    fake_deploy(dist, collection)  # in CI done via PRs
+        fake_deploy(dist, collection)  # in CI done via PRs
+
+    if dist.exists():
+        shutil.rmtree(str(dist))
 
     update_partner_resources_script()
     fake_deploy(dist, gh_pages)
@@ -110,7 +114,7 @@ def main(always_continue: bool = True):
     #################
     # validate/deploy
     #################
-    prepare_to_deploy_script()
+    prepare_to_deploy_script(local=True)
 
     fake_deploy(dist / "gh_pages_update", gh_pages)
 

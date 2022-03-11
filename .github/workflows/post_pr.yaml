@@ -27,7 +27,7 @@ jobs:
         import requests
 
         r = requests.post(
-          "${{ github.api_url }}/repos/${{ github.repository }}/actions/workflows/update_collection.yaml/dispatches",
+          "${{ github.api_url }}/repos/${{ github.repository }}/actions/workflows/auto_update_main.yaml/dispatches",
           headers=dict(
             Accept="application/vnd.github.v3+json",
             Authorization="token ${{ secrets.PAT }}",

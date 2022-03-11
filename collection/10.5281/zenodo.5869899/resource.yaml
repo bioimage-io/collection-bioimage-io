@@ -1,10 +1,27 @@
 doi: 10.5281/zenodo.5869899
 id: 10.5281/zenodo.5869899
-owners: [77626]
+owners:
+- 77626
 status: accepted
 type: model
 versions:
-- {created: '2022-01-18 10:03:26.939252', doi: 10.5281/zenodo.5869900, name: LiveCellSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml',
-  links: [ilastik/live-cell-boundary-model, ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager],
-  status: accepted, version_id: '5869900', version_name: revision 1}
+- version_id: '6321179'
+  doi: 10.5281/zenodo.6321179
+  created: '2022-03-01 19:53:40.554063'
+  status: accepted
+  name: LiveCellSegmentationBoundaryModel
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/rdf.yaml
+- created: '2022-01-18 10:03:26.939252'
+  doi: 10.5281/zenodo.5869900
+  name: LiveCellSegmentationBoundaryModel
+  links:
+  - ilastik/live-cell-boundary-model
+  - ilastik/livecell_dataset
+  - ilastik/ilastik
+  - deepimagej/deepimagej
+  - imjoy/BioImageIO-Packager
+  status: accepted
+  version_id: '5869900'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/rdf.yaml
