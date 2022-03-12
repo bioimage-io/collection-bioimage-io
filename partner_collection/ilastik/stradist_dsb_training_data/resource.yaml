@@ -8,8 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    format_version: 0.2.1
-    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -26,32 +24,34 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    name: DSB Nucleus Segmentation Training Data
-    maintainers:
-    - affiliation: EMBL Heidelberg
-      github_user: fynnbe
-      orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
-    - affiliation: EMBL Heidelberg
-      github_user: constantinpape
-      orcid: 0000-0001-6562-7187
-      name: Constantin Pape
+    description: Subset of the nucleus segmentation training data from the 2018 Kaggle
+      Data Science Bowl.
     tags:
     - nuclei
     - instance-segmentation
     - fluorescence-light-microscopy
     - dsb-challenge
     - 2D
+    maintainers:
+    - name: Fynn Beuttenmüller
+      github_user: fynnbe
+      affiliation: EMBL Heidelberg
+      orcid: 0000-0002-8567-6389
+    - name: Constantin Pape
+      github_user: constantinpape
+      affiliation: EMBL Heidelberg
+      orcid: 0000-0001-6562-7187
+    format_version: 0.2.1
     authors:
     - name: Constantin Pape
-    description: Subset of the nucleus segmentation training data from the 2018 Kaggle
-      Data Science Bowl.
+    name: DSB Nucleus Segmentation Training Data
+    type: dataset
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
+    source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
+    license: CC0-1.0
     cite:
     - doi: https://doi.org/10.1038/s41592-019-0612-7
       text: Caicedo et al.
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
-    source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg
-    license: CC0-1.0
     id: ilastik/stradist_dsb_training_data
