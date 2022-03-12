@@ -3528,6 +3528,52 @@
       "versions": [
         "6338615"
       ]
+    },
+    {
+      "authors": [
+        {
+          "github_user": "uschmidt83",
+          "name": "Uwe Schmidt"
+        },
+        {
+          "github_user": "maweigert",
+          "name": "Martin Weigert"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg",
+        "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg"
+      ],
+      "description": "StarDist - Object Detection with Star-convex Shapes",
+      "id": "10.5281/zenodo.6348084",
+      "license": "BSD-3-Clause",
+      "links": [
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "StarDist Fluorescence Nuclei Segmentation",
+      "owners": [
+        313404
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml",
+      "tags": [
+        "fluorescence-light-microscopy",
+        "whole-slide-imaging",
+        "other",
+        "2d",
+        "cells",
+        "nuclei",
+        "tensorflow",
+        "fiji",
+        "unet",
+        "instance-segmentation",
+        "object-detection",
+        "stardist"
+      ],
+      "type": "model",
+      "versions": [
+        "6348085"
+      ]
     }
   ],
   "config": {
@@ -3538,13 +3584,13 @@
       "application": 94,
       "collection": 34,
       "dataset": 70,
-      "model": 43
+      "model": 45
     },
     "n_resources": {
       "application": 47,
       "collection": 17,
       "dataset": 35,
-      "model": 19
+      "model": 20
     },
     "partners": [
       {
