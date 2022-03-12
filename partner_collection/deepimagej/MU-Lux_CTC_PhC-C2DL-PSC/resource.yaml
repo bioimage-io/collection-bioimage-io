@@ -9,6 +9,7 @@ versions:
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     name: deepImageJ Collection
+    authors: []
     config:
       id: deepimagej
       name: DeepImageJ
@@ -26,24 +27,23 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
+    documentation: https://deepimagej.github.io/deepimagej/
+    type: collection
+    format_version: 0.2.2
+    tags:
+    - deepimagej
+    - bioimage.io
     cite:
     - doi: 10.1038/s41592-021-01262-9
       text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
-    tags:
-    - deepimagej
-    - bioimage.io
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
     maintainers: []
-    format_version: 0.2.2
-    type: collection
-    documentation: https://deepimagej.github.io/deepimagej/
-    authors: []
-    source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
     download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
     id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC

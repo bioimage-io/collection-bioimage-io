@@ -26,6 +26,8 @@ versions:
       - model
       - application
       default_type: model
+    type: model
+    format_version: 0.2.2
     tags:
     - classification
     - densenet-121
@@ -34,8 +36,11 @@ versions:
     - resnet-50
     description: A CNN model using focal loss and image augmentation, optimized with
       Adam optimizer.
-    format_version: 0.2.2
-    type: model
+    cite:
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
+    authors:
+    - Shubin Dai
+    license: MIT
     badges:
     - label: HPA Competition
       ext: 1st
@@ -45,9 +50,4 @@ versions:
     - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
     - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
     framework: pytorch
-    license: MIT
-    cite:
-    authors:
-    - Shubin Dai
-    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
     id: hpa/HPA-bestfitting
