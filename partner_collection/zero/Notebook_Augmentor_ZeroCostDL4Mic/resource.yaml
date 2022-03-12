@@ -8,14 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: Marcus D Bloice, Peter M Roth, Andreas Holzinger, Biomedical image augmentation
-        using Augmentor, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages
-        4522–4524, https://doi.org/10.1093/bioinformatics/btz259
-      doi: https://doi.org/10.1093/bioinformatics/btz259
+    name: Augmentor - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -36,17 +29,20 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    name: Augmentor - ZeroCostDL4Mic
-    format_version: 0.2.2
-    maintainers: []
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: Marcus D Bloice, Peter M Roth, Andreas Holzinger, Biomedical image augmentation
+        using Augmentor, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages
+        4522–4524, https://doi.org/10.1093/bioinformatics/btz259
+      doi: https://doi.org/10.1093/bioinformatics/btz259
     tags:
     - colab
     - notebook
     - Augmentor
     - Data Augmentation
     - ZeroCostDL4Mic
-    authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     description: Artificially increase the size of your training dataset. Augmentor
       is a data augmentation library. Data augmentation can improve training progress
       by amplifying differences in the dataset. This can be useful if the available
@@ -55,8 +51,12 @@ versions:
       can be especially valuable when training dataset need to be manually labelled.
       Note - visit the ZeroCostDL4Mic wiki to check the original publications this
       network is based on and make sure you cite these.
+    maintainers: []
+    format_version: 0.2.2
     type: application
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    authors:
+    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
