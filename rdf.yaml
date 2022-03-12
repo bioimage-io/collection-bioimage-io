@@ -1760,12 +1760,25 @@ collection:
     tensorflow, fiji, unet, instance-segmentation, object-detection, stardist]
   type: model
   versions: ['6348085']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
+  description: Perform leaf segmentation in light microscopy images of Arabidopsis
+  id: 10.5281/zenodo.6348728
+  license: MIT
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: Arabidopsis Leaf Segmentation
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
+  type: model
+  versions: ['6348729']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 45}
-  n_resources: {application: 47, collection: 17, dataset: 35, model: 20}
+  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 47}
+  n_resources: {application: 47, collection: 17, dataset: 35, model: 21}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
