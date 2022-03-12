@@ -1,0 +1,212 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_postprocessing.ijm
+  - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_weights.h5
+  - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/per_sample_scale_range.ijm
+authors:
+- github_user: uschmidt83
+  name: Uwe Schmidt
+- github_user: maweigert
+  name: Martin Weigert
+cite:
+- doi: https://doi.org/10.1007/978-3-030-00934-2_30
+  text: Cell Detection with Star-Convex Polygons
+- doi: https://doi.org/10.1109/WACV45572.2020.9093435
+  text: Star-convex Polyhedra for 3D Object Detection and Segmentation in Microscopy
+config:
+  bioimageio:
+    created: '2022-03-11 22:32:05.554959'
+    doi: 10.5281/zenodo.6348085
+    owners:
+    - 313404
+    status: accepted
+    version_id: '6348085'
+    version_name: version 1
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input.npy
+        pixel_size:
+          x: 1
+          y: 1
+          z: 1
+        size: 384 x 384 x 1 x 1
+      memory_peak:
+      outputs:
+      - name: test_output.npy
+        size: 384 x 384 x 1 x 33
+        type: image
+      runtime:
+  stardist:
+    config:
+      axes: YXC
+      backbone: unet
+      grid:
+      - 2
+      - 2
+      n_channel_in: 1
+      n_channel_out: 33
+      n_classes:
+      n_dim: 2
+      n_rays: 32
+      net_conv_after_unet: 128
+      net_input_shape:
+      - 
+      - 
+      - 1
+      net_mask_shape:
+      - 
+      - 
+      - 1
+      train_background_reg: 0.0001
+      train_batch_size: 8
+      train_checkpoint: weights_best.h5
+      train_checkpoint_epoch: weights_now.h5
+      train_checkpoint_last: weights_last.h5
+      train_class_weights:
+      - 1
+      - 1
+      train_completion_crop: 32
+      train_dist_loss: mae
+      train_epochs: 800
+      train_foreground_only: 0.9
+      train_learning_rate: 0.0003
+      train_loss_weights:
+      - 1
+      - 0.2
+      train_n_val_patches:
+      train_patch_size:
+      - 256
+      - 256
+      train_reduce_lr:
+        factor: 0.5
+        min_delta: 0
+        patience: 80
+      train_sample_cache: true
+      train_shape_completion: false
+      train_steps_per_epoch: 400
+      train_tensorboard: true
+      unet_activation: relu
+      unet_batch_norm: false
+      unet_dropout: 0
+      unet_kernel_size:
+      - 3
+      - 3
+      unet_last_activation: relu
+      unet_n_conv_per_depth: 2
+      unet_n_depth: 3
+      unet_n_filter_base: 32
+      unet_pool:
+      - 2
+      - 2
+      unet_prefix: ''
+      use_gpu: false
+    postprocessing_macro: stardist_postprocessing.ijm
+    python_version: 0.8.0
+    thresholds:
+      nms: 0.3
+      prob: 0.479071463157368
+    weights: stardist_weights.h5
+covers:
+- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg
+- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg
+description: StarDist - Object Detection with Star-convex Shapes
+documentation: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/README.md
+format_version: 0.4.5
+id: 10.5281/zenodo.6348084/6348085
+inputs:
+- axes: byxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input
+  preprocessing:
+  - kwargs:
+      axes: yx
+      max_percentile: 99.8
+      min_percentile: 1
+      mode: per_sample
+    name: scale_range
+  shape:
+    min:
+    - 1
+    - 208
+    - 208
+    - 1
+    step:
+    - 0
+    - 16
+    - 16
+    - 0
+license: BSD-3-Clause
+links:
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: uschmidt83
+name: StarDist Fluorescence Nuclei Segmentation
+outputs:
+- axes: byxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 96
+  - 96
+  - 0
+  name: output
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 16.5
+    reference_tensor: input
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 0.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/sample_output_0.tif
+tags:
+- fluorescence-light-microscopy
+- whole-slide-imaging
+- other
+- 2d
+- cells
+- nuclei
+- tensorflow
+- fiji
+- unet
+- instance-segmentation
+- object-detection
+- stardist
+test_inputs:
+- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/test_output.npy
+timestamp: '2022-03-11T23:26:52.248097'
+type: model
+version: '0.1'
+weights:
+  tensorflow_saved_model_bundle:
+    dependencies: conda:https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/environment.yaml
+    sha256: e4b609e0ef20f4b1daba5d0a508fc8993376cb0302e0b43f7ce3b6af7e9a3176
+    source: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/TF_SavedModel.zip
+    tensorflow_version: 1.15.3
