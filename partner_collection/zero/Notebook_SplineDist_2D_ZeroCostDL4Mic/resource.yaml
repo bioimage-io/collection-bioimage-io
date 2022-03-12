@@ -8,6 +8,13 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Soham Mandal, Virginie Uhlmann. SplineDist: Automated Cell Segmentation
+        With Spline Curves. bioRxiv 2020.10.27.357640; doi: https://doi.org/10.1101/2020.10.27.357640'
+      doi: https://doi.org/10.1101/2020.10.27.357640
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -28,38 +35,33 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Soham Mandal, Virginie Uhlmann. SplineDist: Automated Cell Segmentation
-        With Spline Curves. bioRxiv 2020.10.27.357640; doi: https://doi.org/10.1101/2020.10.27.357640'
-      doi: https://doi.org/10.1101/2020.10.27.357640
-    description: Instance segmentation of 2D images. SplineDist is a neural network
-      inspired by StarDist, capable of performing image instance segmentation. Unlike
-      StarDist, SplineDist uses cubic splines to describe the contour of each object
-      and therefore can potentially segment objects of any shapes. This version is
-      only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original
-      publications this network is based on and make sure you cite these.
+    name: SplineDist (2D) - ZeroCostDL4Mic
+    format_version: 0.2.2
+    maintainers: []
     tags:
     - colab
     - notebook
     - SplineDist
     - segmentation
     - ZeroCostDL4Mic
-    maintainers: []
-    format_version: 0.2.2
     authors:
     - Romain F. Laine and the ZeroCostDL4Mic Team
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    name: SplineDist (2D) - ZeroCostDL4Mic
+    description: Instance segmentation of 2D images. SplineDist is a neural network
+      inspired by StarDist, capable of performing image instance segmentation. Unlike
+      StarDist, SplineDist uses cubic splines to describe the contour of each object
+      and therefore can potentially segment objects of any shapes. This version is
+      only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original
+      publications this network is based on and make sure you cite these.
     type: application
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -69,6 +71,4 @@ versions:
     - zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
     - zero/Dataset_StarDist_2D_DeepBacs
     - zero/Dataset_SplineDist_2D_DeepBacs
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic

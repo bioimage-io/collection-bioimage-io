@@ -25,14 +25,14 @@ versions:
       - model
       - application
       default_type: model
-    description: A light-weight model for HPA image classification competition
+    name: HPA ShuffleNetV2
+    format_version: 0.1.0
     tags:
     - shufflenet
     - tensorflow.js
     - classification
     - imjoy
-    format_version: 0.1.0
-    name: HPA ShuffleNetV2
+    description: A light-weight model for HPA image classification competition
     type: model
     cite:
     authors:
