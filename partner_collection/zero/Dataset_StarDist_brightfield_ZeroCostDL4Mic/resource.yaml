@@ -8,17 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    description: Paired brightfield images of migrating T cells and corresponding
-      masks
-    name: Combining StarDist and TrackMate example 2 - T cell dataset
-    authors:
-    - Nathan H. Roy
-    - Guillaume Jacquemet
-    documentation: https://zenodo.org/record/4034929
-    maintainers: []
-    tags:
-    - StarDist
-    - ZeroCostDL4Mic
     format_version: 0.2.2
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -30,6 +19,13 @@ versions:
         2020. DOI: https://doi.org/10.1101/2020.09.22.306233'
       doi: https://doi.org/10.1101/2020.09.22.306233
     type: dataset
+    description: Paired brightfield images of migrating T cells and corresponding
+      masks
+    tags:
+    - StarDist
+    - ZeroCostDL4Mic
+    documentation: https://zenodo.org/record/4034929
+    name: Combining StarDist and TrackMate example 2 - T cell dataset
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -50,6 +46,10 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    authors:
+    - Nathan H. Roy
+    - Guillaume Jacquemet
+    maintainers: []
     download_url: https://zenodo.org/record/4034929
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
