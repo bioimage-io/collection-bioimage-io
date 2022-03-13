@@ -8,16 +8,26 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    format_version: 0.2.1
-    type: dataset
     description: Training data for mitochondria segmentation in 3d EM.
+    maintainers:
+    - github_user: fynnbe
+      orcid: 0000-0002-8567-6389
+      name: Fynn Beuttenmüller
+      affiliation: EMBL Heidelberg
+    - github_user: constantinpape
+      orcid: 0000-0001-6562-7187
+      name: Constantin Pape
+      affiliation: EMBL Heidelberg
     tags:
     - mitochondria
     - electron-microscopy
     - 3D
     - mito-em-challenge
     - instance-segmentation
+    type: dataset
     name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
+    authors:
+    - name: Constantin Pape
     config:
       id: ilastik
       name: ilastik
@@ -34,18 +44,7 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    authors:
-    - name: Constantin Pape
-    maintainers:
-    - orcid: 0000-0002-8567-6389
-      affiliation: EMBL Heidelberg
-      github_user: fynnbe
-      name: Fynn Beuttenmüller
-    - orcid: 0000-0001-6562-7187
-      affiliation: EMBL Heidelberg
-      github_user: constantinpape
-      name: Constantin Pape
-    source: https://mitoem.grand-challenge.org/
+    format_version: 0.2.1
     cite:
     - doi: https://doi.org/10.1007/978-3-030-59722-1_7
       text: Donglai Wei et al.
@@ -53,4 +52,5 @@ versions:
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png
+    source: https://mitoem.grand-challenge.org/
     id: ilastik/mitoem_segmentation_challenge
