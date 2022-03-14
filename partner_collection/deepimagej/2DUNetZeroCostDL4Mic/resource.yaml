@@ -9,14 +9,15 @@ versions:
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     description: Resources for BioImgage.IO curated by the deepImageJ team.
-    authors: []
-    name: deepImageJ Collection
-    type: collection
     tags:
     - deepimagej
     - bioimage.io
+    type: collection
+    maintainers: []
+    authors: []
     format_version: 0.2.2
     documentation: https://deepimagej.github.io/deepimagej/
+    name: deepImageJ Collection
     config:
       id: deepimagej
       name: DeepImageJ
@@ -34,17 +35,16 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    maintainers: []
     cite:
-    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+    - doi: 10.1038/s41592-021-01262-9
+      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
         E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
-      doi: 10.1038/s41592-021-01262-9
     source: https://raw.githubusercontent.com/deepimagej/models/master/2du-net_zerocostdl4mic/model.yaml
+    download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
     links:
     - zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
-    download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
     id: deepimagej/2DUNetZeroCostDL4Mic

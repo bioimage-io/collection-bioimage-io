@@ -10,18 +10,19 @@ versions:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
     description: Paired bright field and segmented mask images of live E. coli cells
       imaged under bright field.
-    authors:
-    - Spahn Christoph
-    - Heilemann Mike
-    name: Escherichia coli bright field segmentation dataset - DeepBacs
-    type: dataset
     tags:
     - U-Net
     - segmentation
     - DeepBacs
     - 2D
+    type: dataset
+    maintainers: []
+    authors:
+    - Spahn Christoph
+    - Heilemann Mike
     format_version: 0.2.2
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    name: Escherichia coli bright field segmentation dataset - DeepBacs
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -42,7 +43,6 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,

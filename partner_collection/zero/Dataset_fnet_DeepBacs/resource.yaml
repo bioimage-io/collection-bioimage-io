@@ -11,19 +11,20 @@ versions:
     description: Training and test images of E. coli cells for artificial labeling
       of membranes in brightfield images using fnet or CARE, as well as trained models
       for prediction of super-resolution membranes.
-    authors:
-    - Christoph Spahn
-    - Mike Heilemann
-    name: Artificial labeling of E. coli membranes dataset - DeepBacs
-    type: dataset
     tags:
     - fnet
     - CARE
     - artificial labelling
     - DeepBacs
     - 2D
+    type: dataset
+    maintainers: []
+    authors:
+    - Christoph Spahn
+    - Mike Heilemann
     format_version: 0.2.2
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    name: Artificial labeling of E. coli membranes dataset - DeepBacs
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -44,7 +45,6 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,

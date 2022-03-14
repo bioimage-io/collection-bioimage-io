@@ -9,13 +9,13 @@ versions:
   rdf_source:
     root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
     description: Demo model for denoising trained on a single SEM image with Noise2Void
-    name: N2V SEM Demo
-    type: model
     tags:
     - denoising
     - unet2d
     - n2v
+    type: model
     format_version: 0.3.2
+    name: N2V SEM Demo
     config:
       fiji:
         batchDimLength: 180

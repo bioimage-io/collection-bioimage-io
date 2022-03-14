@@ -10,12 +10,12 @@ versions:
     root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
     description: Resources for BioImgage.IO curated by the the cellprofiling group
       at HPA.
-    name: HPA Collection
-    type: application
     tags:
     - hpa
     - bioimage.io
+    type: application
     format_version: 0.2.2
+    name: HPA Collection
     config:
       id: hpa
       name: HPA

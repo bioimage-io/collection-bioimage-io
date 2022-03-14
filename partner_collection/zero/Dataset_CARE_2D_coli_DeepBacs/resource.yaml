@@ -10,19 +10,20 @@ versions:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
     description: Paired training and test images of H-NS-mScarlet-I expressing E.
       coli cells for image denoising.
-    authors:
-    - Christoph Spahn
-    - Mike Heilemann
-    name: Escherichia coli nucleoid denoising dataset - DeepBacs
-    type: dataset
     tags:
     - Noise2Void
     - CARE
     - denoising
     - DeepBacs
     - 2D
+    type: dataset
+    maintainers: []
+    authors:
+    - Christoph Spahn
+    - Mike Heilemann
     format_version: 0.2.2
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    name: Escherichia coli nucleoid denoising dataset - DeepBacs
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -43,7 +44,6 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
     cite:
     - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
         Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
