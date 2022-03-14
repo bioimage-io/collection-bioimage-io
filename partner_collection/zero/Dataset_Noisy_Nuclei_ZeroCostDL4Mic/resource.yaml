@@ -14,17 +14,18 @@ versions:
       noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA)
       images acquired using a spinning disk confocal microscope with a 20x 0.8 NA
       objective.
-    maintainers: []
+    authors:
+    - Guillaume Jacquemet
+    name: Noisy nuclei dataset.
+    type: dataset
     tags:
     - denoising
     - CARE
     - Noise2Void
     - DecoNoising
     - ZeroCostDL4Mic
-    type: dataset
-    name: Noisy nuclei dataset.
-    authors:
-    - Guillaume Jacquemet
+    format_version: 0.2.2
+    documentation: https://zenodo.org/record/5750174
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -45,13 +46,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
     cite:
     - text: 'Laine RF, Arganda-Carreras I, Henriques R, Jacquemet G. Avoiding a replication
         crisis in deep-learning-based bioimage analysis. Nat Methods. 2021 Oct;18(10):1136-1144.
         doi: 10.1038/s41592-021-01284-3. PMID: 34608322; PMCID: PMC7611896. '
       doi: https://doi.org/10.1038/s41592-021-01284-3
-    documentation: https://zenodo.org/record/5750174
-    format_version: 0.2.2
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png
     download_url: https://zenodo.org/record/5750174
