@@ -8,6 +8,7 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -24,11 +25,6 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    description: Training data for EM segmentation of cellular membranes, nuclei,
-      cuticle and cilia in Platynereis.
-    type: dataset
-    authors:
-    - name: Constantin Pape
     tags:
     - electron-microscopy
     - platynereis
@@ -42,18 +38,22 @@ versions:
     maintainers:
     - github_user: fynnbe
       orcid: 0000-0002-8567-6389
-      name: Fynn Beuttenmüller
       affiliation: EMBL Heidelberg
+      name: Fynn Beuttenmüller
     - github_user: constantinpape
       orcid: 0000-0001-6562-7187
-      name: Constantin Pape
       affiliation: EMBL Heidelberg
+      name: Constantin Pape
+    authors:
+    - name: Constantin Pape
+    description: Training data for EM segmentation of cellular membranes, nuclei,
+      cuticle and cilia in Platynereis.
+    source: https://doi.org/10.5281/zenodo.3675220
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png
     license: CC-BY-4.0
     cite:
     - doi: https://doi.org/10.1016/j.cell.2021.07.017
       text: Vergara, Pape, Meechan et al.
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
-    covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png
-    source: https://doi.org/10.5281/zenodo.3675220
     id: ilastik/platynereis_em_training_data
