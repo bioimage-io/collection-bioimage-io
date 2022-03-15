@@ -8,21 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    name: Escherichia coli nucleoid denoising dataset - DeepBacs
-    authors:
-    - Christoph Spahn
-    - Mike Heilemann
-    description: Paired training and test images of H-NS-mScarlet-I expressing E.
-      coli cells for image denoising.
-    format_version: 0.2.2
-    cite:
-    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
-        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
-        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
-        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
-        doi: https://doi.org/10.1101/2021.11.03.467152'
-      doi: https://doi.org/10.1101/2021.11.03.467152
-    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -43,13 +28,28 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+    cite:
+    - text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
+        Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet,
+        Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image
+        analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152;
+        doi: https://doi.org/10.1101/2021.11.03.467152'
+      doi: https://doi.org/10.1101/2021.11.03.467152
+    description: Paired training and test images of H-NS-mScarlet-I expressing E.
+      coli cells for image denoising.
     type: dataset
+    authors:
+    - Christoph Spahn
+    - Mike Heilemann
     tags:
     - Noise2Void
     - CARE
     - denoising
     - DeepBacs
     - 2D
+    name: Escherichia coli nucleoid denoising dataset - DeepBacs
+    format_version: 0.2.2
     maintainers: []
     covers:
     - https://zenodo.org/api/iiif/v2/0417c6d1-0fe3-4d48-bc5a-dfaee6398433:532d7c49-5961-4d61-8ba2-a040f2f19cfd:A_E.coli_H-NS_mScarlet_examples.png/full/750,/0/default.png
