@@ -8,6 +8,15 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    tags:
+    - colab
+    - notebook
+    - StarDist
+    - segmentation
+    - ZeroCostDL4Mic
+    - 3D
+    format_version: 0.2.2
+    name: StarDist (3D) - ZeroCostDL4Mic
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -18,6 +27,8 @@ versions:
       doi: https://arxiv.org/abs/1908.03636
     authors:
     - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    type: application
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -38,30 +49,19 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    format_version: 0.2.2
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    type: application
+    maintainers: []
     description: 3D instance segmentation of oval objects (ie nuclei). StarDist is
       a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images.
       Note - visit the ZeroCostDL4Mic wiki to check the original publications this
       network is based on and make sure you cite these.
-    maintainers: []
-    name: StarDist (3D) - ZeroCostDL4Mic
-    tags:
-    - colab
-    - notebook
-    - StarDist
-    - segmentation
-    - ZeroCostDL4Mic
-    - 3D
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/StarDist_3D.png
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/StarDist_3D.png
     id: zero/Notebook_StarDist_3D_ZeroCostDL4Mic

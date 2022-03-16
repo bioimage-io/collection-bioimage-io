@@ -8,8 +8,17 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    tags:
+    - mitochondria
+    - electron-microscopy
+    - 3D
+    - mito-em-challenge
+    - instance-segmentation
+    format_version: 0.2.1
+    name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
     authors:
     - name: Constantin Pape
+    type: dataset
     config:
       id: ilastik
       name: ilastik
@@ -26,31 +35,22 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    format_version: 0.2.1
-    type: dataset
-    description: Training data for mitochondria segmentation in 3d EM.
     maintainers:
-    - name: Fynn Beuttenmüller
+    - orcid: 0000-0002-8567-6389
       github_user: fynnbe
-      orcid: 0000-0002-8567-6389
       affiliation: EMBL Heidelberg
-    - name: Constantin Pape
+      name: Fynn Beuttenmüller
+    - orcid: 0000-0001-6562-7187
       github_user: constantinpape
-      orcid: 0000-0001-6562-7187
       affiliation: EMBL Heidelberg
-    name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
-    tags:
-    - mitochondria
-    - electron-microscopy
-    - 3D
-    - mito-em-challenge
-    - instance-segmentation
+      name: Constantin Pape
+    description: Training data for mitochondria segmentation in 3d EM.
+    source: https://mitoem.grand-challenge.org/
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png
     cite:
     - doi: https://doi.org/10.1007/978-3-030-59722-1_7
       text: Donglai Wei et al.
-    source: https://mitoem.grand-challenge.org/
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
     id: ilastik/mitoem_segmentation_challenge
