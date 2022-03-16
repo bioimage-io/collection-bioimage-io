@@ -8,8 +8,20 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+    name: deepImageJ Collection
+    format_version: 0.2.2
+    maintainers: []
+    authors: []
+    tags:
+    - deepimagej
+    - bioimage.io
     type: collection
-    documentation: https://deepimagej.github.io/deepimagej/
+    cite:
+    - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
+        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
+        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
+        (2021).'
+      doi: 10.1038/s41592-021-01262-9
     config:
       id: deepimagej
       name: DeepImageJ
@@ -27,23 +39,11 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
-    tags:
-    - deepimagej
-    - bioimage.io
-    name: deepImageJ Collection
-    format_version: 0.2.2
-    maintainers: []
-    authors: []
     description: Resources for BioImgage.IO curated by the deepImageJ team.
-    source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/model.yaml
-    download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
+    documentation: https://deepimagej.github.io/deepimagej/
     links:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
+    source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/model.yaml
+    download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
     id: deepimagej/WidefieldFitcSuperResolution
