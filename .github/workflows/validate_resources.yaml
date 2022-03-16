@@ -39,7 +39,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer bioimageio.spec lxml bioimageio.core
+      run: pip install typer bioimageio.spec lxml bioimageio.core packaging
     - name: update RDFs
       id: update_rdfs
       run: python scripts/update_rdfs.py --branch ${{ github.head_ref || github.ref }}
