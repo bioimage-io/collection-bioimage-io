@@ -8,15 +8,10 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    tags:
-    - colab
-    - notebook
-    - fnet
-    - labelling
-    - ZeroCostDL4Mic
-    - 3D
-    format_version: 0.2.2
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
     cite:
     - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
@@ -25,10 +20,24 @@ versions:
         of three-dimensional fluorescence images from transmitted-light microscopy.
         Nat Methods 15, 917–920 (2018). https://doi.org/10.1038/s41592-018-0111-2
       doi: https://doi.org/10.1038/s41592-018-0111-2
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    tags:
+    - colab
+    - notebook
+    - fnet
+    - labelling
+    - ZeroCostDL4Mic
+    - 3D
+    description: Paired image-to-image translation of 3D images. Label-free Prediction
+      (fnet) is a neural network used to infer the features of cellular structures
+      from brightfield or EM images without coloured labels. The network is trained
+      using paired training images from the same field of view, imaged in a label-free
+      (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained,
+      this allows the user to identify certain structures from brightfield images
+      alone. The performance of fnet may depend significantly on the structure at
+      hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications
+      this network is based on and make sure you cite these.
+    maintainers: []
+    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -49,25 +58,16 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    maintainers: []
-    description: Paired image-to-image translation of 3D images. Label-free Prediction
-      (fnet) is a neural network used to infer the features of cellular structures
-      from brightfield or EM images without coloured labels. The network is trained
-      using paired training images from the same field of view, imaged in a label-free
-      (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained,
-      this allows the user to identify certain structures from brightfield images
-      alone. The performance of fnet may depend significantly on the structure at
-      hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications
-      this network is based on and make sure you cite these.
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
+    type: application
+    links:
+    - zero/Notebook Preview
+    - zero/Dataset_fnet_3D_ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-    - zero/Notebook Preview
-    - zero/Dataset_fnet_3D_ZeroCostDL4Mic
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/fnet_notebook.png
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_fnet_3D_ZeroCostDL4Mic
