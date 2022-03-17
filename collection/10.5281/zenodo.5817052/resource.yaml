@@ -4,8 +4,8 @@ owners: [271523]
 status: accepted
 type: model
 versions:
-- {created: '2022-01-27 14:00:17.489637', doi: 10.5281/zenodo.5906839, name: Neuron
-    Segmentation in 2D EM (Membrane), rdf_source: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/rdf.yaml,
+- {created: '2022-01-27 14:00:17.489637', doi: 10.5281/zenodo.5906839, name: 'Neuron Segmentation in 2D EM (Membrane)',
+  rdf_source: 'https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/rdf.yaml',
   tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
     neurons, brain, boundary-segmentation, 2d], status: accepted, version_id: '5906839',
   version_name: revision 1}
