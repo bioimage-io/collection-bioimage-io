@@ -22,6 +22,8 @@ SUMMARY_FIELDS = [
     "license",
     "links",
     "name",
+    "nickname",
+    "nickname_icon",
     "owners",
     "rdf_source",
     "source",
