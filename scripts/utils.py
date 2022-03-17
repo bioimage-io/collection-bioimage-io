@@ -232,7 +232,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
 def enforce_block_style_resource(resource: dict):
     """enforce block style except for version:rdf_source, which might be an rdf dict"""
-    resource = copy.deepcopy(resource)
+    resource = rec_sort(copy.deepcopy(resource))
 
     rdf_sources = [v.pop("rdf_source") for v in resource.get("versions", [])]
     resource = enforce_block_style(resource)
