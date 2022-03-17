@@ -8,13 +8,14 @@ from itertools import product
 from pathlib import Path
 from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
+import numpy
 from marshmallow import missing
 from ruamel.yaml import YAML, comments
 
 from bare_utils import DEPLOYED_BASE_URL
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.io_ import serialize_raw_resource_description
-from bioimageio.spec.shared import resolve_source
+from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION, resolve_source
 
 
 # todo: use MyYAML from bioimageio.spec. see comment below
@@ -41,6 +42,24 @@ with (Path(__file__).parent / "../animals.yaml").open(encoding="utf-8") as f:
     ANIMALS: Dict[str, str] = yaml.load(f)
 
 ADJECTIVES: List[str] = (Path(__file__).parent / "../adjectives.txt").read_text().split()
+
+# collect known nicknames independent of resource status (to avoid nickname conflicts if resources are unblocked)
+KNOWN_NICKNAMES = [yaml.load(p).get("nickname") for p in (Path(__file__).parent / "../collection").glob("**/resource.yaml")]
+# note: may be appended to by 'get_animal_nickname'
+
+
+def get_animal_nickname():
+    for _ in range(100000):
+        animal_adjective = numpy.random.choice(ADJECTIVES)
+        animal_name = numpy.random.choice(list(ANIMALS.keys()))
+        nickname = f"{animal_adjective} {animal_name}"
+        if nickname not in KNOWN_NICKNAMES:
+            break
+    else:
+        raise RuntimeError("Could not find free nickname")
+
+    KNOWN_NICKNAMES.append(nickname)
+    return nickname, ANIMALS[animal_name]
 
 
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):

@@ -6,29 +6,11 @@ from pathlib import Path
 from pprint import pprint
 from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 
-import numpy
 import requests
 import typer
 
 from bare_utils import set_gh_actions_outputs
-from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION
-from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, yaml
-
-KNOWN_NICKNAMES = [e.get("nickname") for e in BIOIMAGEIO_COLLECTION.get("collection", [])]
-
-
-def get_animal_nickname():
-    for _ in range(100000):
-        animal_adjective = numpy.random.choice(ADJECTIVES)
-        animal_name = numpy.random.choice(list(ANIMALS.keys()))
-        nickname = f"{animal_adjective} {animal_name}"
-        if nickname not in KNOWN_NICKNAMES:
-            break
-    else:
-        raise RuntimeError("Could not find free nickname")
-
-    KNOWN_NICKNAMES.append(nickname)
-    return nickname, ANIMALS[animal_name]
+from utils import enforce_block_style_resource, get_animal_nickname, yaml
 
 
 def update_resource(
@@ -70,18 +52,17 @@ def update_resource(
         resource["versions"].sort(key=lambda v: v["created"], reverse=True)
         resource["type"] = resource_type
     else:  # create new resource
-        nickname, nickname_icon = get_animal_nickname()
-
-        # check if animal nickname already exists
         resource = {
             "status": "accepted",  # default to accepted
             "versions": [new_version],
             "id": resource_id,
             "doi": resource_doi,
             "type": resource_type,
-            "nickname": nickname,
-            "nickname_icon": nickname_icon,
         }
+        if resource_type == "model":
+            nickname, nickname_icon = get_animal_nickname()
+            resource["nickname"] = nickname
+            resource["nickname_icon"] = nickname_icon
 
     if "owners" in new_version:
         resource["owners"] = new_version["owners"]
