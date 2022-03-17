@@ -8,8 +8,8 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    documentation: https://deepimagej.github.io/deepimagej/
-    name: deepImageJ Collection
+    type: collection
+    description: Resources for BioImgage.IO curated by the deepImageJ team.
     authors: []
     cite:
     - text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
@@ -17,12 +17,7 @@ versions:
         environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
         (2021).'
       doi: 10.1038/s41592-021-01262-9
-    tags:
-    - deepimagej
-    - bioimage.io
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
     maintainers: []
-    format_version: 0.2.2
     config:
       id: deepimagej
       name: DeepImageJ
@@ -40,11 +35,16 @@ versions:
       - notebook
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    type: collection
-    download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
+    documentation: https://deepimagej.github.io/deepimagej/
+    name: deepImageJ Collection
+    format_version: 0.2.2
+    tags:
+    - deepimagej
+    - bioimage.io
     links:
     - deepimagej/deepimagej
     - zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
     - deepimagej/MoNuSeg_digital_pathology_miccai2018
     source: https://raw.githubusercontent.com/deepimagej/models/master/stardist2D_zerocostdl4mic/model.yaml
+    download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
     id: deepimagej/Stardist2DZeroCostDL4Mic
