@@ -14,7 +14,7 @@ from bare_utils import set_gh_actions_outputs
 from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION
 from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, yaml
 
-KNOWN_NICKNAMES = [e.get("nickname") for e in BIOIMAGEIO_COLLECTION]
+KNOWN_NICKNAMES = [e.get("nickname") for e in BIOIMAGEIO_COLLECTION.get("collection", [])]
 
 
 def get_animal_nickname():
