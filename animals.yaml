@@ -1,0 +1,126 @@
+monkey: 🐒
+gorilla: 🦍
+orangutan: 🦧
+dog: 🐕
+poodle: 🐩
+wolf: 🐺
+fox: 🦊
+raccoon: 🦝
+cat: 🐈
+lion: 🦁
+tiger: 🐅
+leopard: 🐆
+horse: 🐎
+zebra: 🦓
+deer: 🦌
+ox: 🐂
+water buffalo: 🐃
+cow: 🐄
+pig: 🐖
+boar: 🐗
+sheep: 🐑
+goat: 🐐
+dromedary: 🐪
+camel: 🐫
+llama: 🦙
+elephant: 🐘
+rhino: 🦏  # rhinoceros
+hippo: 🦛  # hippopotamus
+mouse: 🐁
+rat: 🐀
+hamster: 🐹
+rabbit: 🐇
+chipmunk: 🐿
+hedgehog: 🦔
+bat: 🦇
+bear: 🐻
+koala: 🐨
+panda: 🐼
+sloth: 🦥
+otter: 🦦
+skunk: 🦨
+kangaroo: 🦘
+badger: 🦡
+turkey: 🦃
+chicken: 🐔
+rooster: 🐓
+chick: 🐤  # baby chick
+penguin: 🐧
+dove: 🕊
+eagle: 🦅
+duck: 🦆
+swan: 🦢
+owl: 🦉
+flamingo: 🦩
+peacock: 🦚
+parrot: 🦜
+frog: 🐸
+crocodile: 🐊
+turtle: 🐢
+lizard: 🦎
+snake: 🐍
+sauropod: 🦕
+t-rex: 🦖
+whale: 🐳  # spouting whale
+dolphin: 🐬
+fish: 🐟
+angelfish: 🐠    # tropical fish
+blowfish: 🐡
+shark: 🦈
+octopus: 🐙
+seashell: 🐚  # spiral shell
+snail: 🐌
+butterfly: 🦋
+bug: 🐛
+ant: 🐜
+honeybee: 🐝
+lady beetle: 🐞
+cricket: 🦗
+spider: 🕷
+scorpion: 🦂
+mosquito: 🦟
+microbe: 🦠
+crab: 🦀
+lobster: 🦞
+shrimp: 🦐
+squid: 🦑
+
+# not so catchy/close duplicates
+# bird: 🐦   # too general?!
+# ram: 🐏
+# ewe: 🐑
+# whale:🐋  # we use spouting whale as whale
+# hatching chick: 🐣
+# front-facing baby chick: 🐥
+
+# reserved for bioimageio
+# giraffe: 🦒
+
+# too new? not available on all common systems
+# black cat: 🐈‍⬛
+# bison: 🦬
+# mammoth: 🦣
+# beaver: 🦫
+# polar bear: 🐻‍❄
+# dodo: 🦤
+# seal: 🦭
+# beetle: 🪲
+# fly: 🪰
+# worm: 🪱
+
+# maybe not
+# cockroach: 🪳
+# unicorn: 🦄
+# dragon: 🐉
+
+# faces (for which non-face versions are listed)
+# monkey face: 🐵
+# dog face: 🐶
+# cat face: 🐱
+# tiger face: 🐯
+# horse face: 🐴
+# cow face: 🐮
+# pig face: 🐷
+# mouse face: 🐭
+# rabbit face: 🐰
+# dragon face: 🐲
