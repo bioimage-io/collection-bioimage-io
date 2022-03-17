@@ -9,4 +9,4 @@ versions:
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain],
   status: accepted, version_id: '5874842', version_name: revision 1}
 nickname: kind seashell
-icon: 🐚
+nickname_icon: 🐚

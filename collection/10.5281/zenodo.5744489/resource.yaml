@@ -7,4 +7,4 @@ versions:
     2D Nuclei Broad, rdf_source: https://zenodo.org/api/files/3f422e1b-a64e-40d3-89d1-29038d2f405d/rdf.yaml,
   status: blocked, version_id: '5744490', version_name: revision 1}
 nickname: communicative dolphin
-icon: 🐬
+nickname_icon: 🐬

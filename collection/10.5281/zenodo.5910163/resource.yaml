@@ -11,4 +11,4 @@ versions:
     Densenet, rdf_source: https://zenodo.org/api/files/5be7a94a-0f23-4658-bee3-d160c6eb1c83/rdf.yaml,
   status: blocked, version_id: '5910164', version_name: revision 1}
 nickname: rude pig
-icon: 🐖
+nickname_icon: 🐖

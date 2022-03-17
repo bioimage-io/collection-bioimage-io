@@ -8,4 +8,4 @@ versions:
   rdf_source: https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/rdf.yaml,
   status: accepted, version_id: '6028281', version_name: revision 1}
 nickname: willing hedgehog
-icon: 🦔
+nickname_icon: 🦔

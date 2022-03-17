@@ -25,4 +25,4 @@ versions:
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/474cde37-dc44-46f3-8343-aed6bafdd0bb/rdf.yaml
 nickname: straightforward crocodile
-icon: 🐊
+nickname_icon: 🐊

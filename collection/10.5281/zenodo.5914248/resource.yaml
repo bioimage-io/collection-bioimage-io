@@ -8,4 +8,4 @@ versions:
     Phase Contrast Cell Segmentation (U-Net), rdf_source: https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/rdf.yaml,
   status: accepted, version_id: '5914249', version_name: revision 1}
 nickname: discreet rooster
-icon: 🐓
+nickname_icon: 🐓
