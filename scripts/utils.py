@@ -37,6 +37,12 @@ class MyYAML(YAML):
 yaml = MyYAML()
 
 
+with (Path(__file__).parent / "../animals.yaml").open(encoding="utf-8") as f:
+    ANIMALS: Dict[str, str] = yaml.load(f)
+
+ADJECTIVES: List[str] = (Path(__file__).parent / "../adjectives.txt").read_text().split()
+
+
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
     if isinstance(matrix, str):
         matrix = json.loads(matrix)
@@ -148,7 +154,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
     Args:
         resource: resource info
         dist: output path
-        version_id: (if not None) only write rdf for specific version
+        only_for_version_id: (if not None) only write rdf for specific version
 
     Returns: list of updated version_ids
 
@@ -157,14 +163,12 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
     resource_id = resource["id"]
     updated_versions = []
-    for version_info in resource["versions"]:
+    for resource_version in resource["versions"]:
+        version_info = {k: v for k, v in resource.items() if k != "versions"}
+        version_info.update(resource_version)
         version_id = version_info["version_id"]
         if version_info["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
             continue
-
-        # Ignore the name in the version info
-        if "name" in version_info:
-            del version_info["name"]
 
         if isinstance(version_info["rdf_source"], dict):
             if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
@@ -205,7 +209,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         # Allowing to override fields
         for k in version_info:
             # Place these fields under config.bioimageio
-            if k in ["created", "doi", "status", "version_id", "version_name"]:
+            if k in ["created", "doi", "status", "version_id", "version_name", "nickname", "nickname_icon"]:
                 rdf["config"]["bioimageio"][k] = version_info[k]
             else:
                 rdf[k] = version_info[k]
