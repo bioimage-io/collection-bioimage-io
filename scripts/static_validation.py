@@ -185,12 +185,13 @@ def main(
 
         # validate nickname and nickname_icon
         rdf = yaml.load(rdf_path)
-        nickname = rdf["config"]["bioimageio"]["nickname"]
-        adjective, animal = nickname.split()
-        assert adjective in ADJECTIVES, f"'{adjective}' not in adjectives.txt"
-        assert animal in ANIMALS
-        nickname_icon = rdf["config"]["bioimageio"]["nickname_icon"]
-        assert nickname_icon == ANIMALS[animal]
+        nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname", missing)
+        if nickname is not missing:
+            adjective, animal = nickname.split()
+            assert adjective in ADJECTIVES, f"'{adjective}' not in adjectives.txt"
+            assert animal in ANIMALS
+            nickname_icon = rdf["config"]["bioimageio"]["nickname_icon"]
+            assert nickname_icon == ANIMALS[animal]
 
         # add rdf to dist (future static_validation_artifact)
         deploy_rdf_path = dist / resource_id / version_id / "rdf.yaml"
