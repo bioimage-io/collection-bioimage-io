@@ -22,14 +22,18 @@ SUMMARY_FIELDS = [
     "license",
     "links",
     "name",
-    "nickname",
-    "nickname_icon",
     "owners",
     "rdf_source",
     "source",
     "tags",
     "type",
     "versions",
+]
+
+SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
+    "nickname",
+    "nickname_icon",
+    "owners",
 ]
 
 
@@ -81,8 +85,9 @@ def main(
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
         else:
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
-            if latest_version["config"]["bioimageio"].get("owners"):
-                summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
+            for k in latest_version["config"]["bioimageio"]:
+                if k in SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO:
+                    summary[k] = latest_version["config"]["bioimageio"]
 
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
