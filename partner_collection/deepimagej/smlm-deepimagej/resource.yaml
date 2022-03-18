@@ -8,20 +8,23 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    type: application
-    description: Single molecule localization microscopy (SMLM) processing using deepImageJ
-      and ThunderSTORM in an ImageJ macro.
+    maintainers: []
+    tags:
+    - deepimagej
+    - smlm
+    - macro
+    - deepstorm
+    - thunderstorm
+    - workflow
+    - pipeline
+    - superresolution
     authors:
     - name: DeepImageJ
       affiliation: EPFL, UC3M
-    cite:
-    - text: Lucas von Chamier et al., Nature Communications 2021
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: Gómez de Mariscal et al. bioRxiv 2019
-      doi: https://doi.org/10.1101/799270
-    - text: M. Ovesný, et al., Bioinformatics 2014
-      doi: https://doi.org/10.1093/bioinformatics/btu202
-    maintainers: []
+    description: Single molecule localization microscopy (SMLM) processing using deepImageJ
+      and ThunderSTORM in an ImageJ macro.
+    type: application
+    name: SMLM-superresolution
     config:
       id: deepimagej
       name: DeepImageJ
@@ -40,20 +43,17 @@ versions:
       - application
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
     documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
-    name: SMLM-superresolution
     format_version: 0.2.2
-    tags:
-    - deepimagej
-    - smlm
-    - macro
-    - deepstorm
-    - thunderstorm
-    - workflow
-    - pipeline
-    - superresolution
-    source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
-    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    cite:
+    - text: Lucas von Chamier et al., Nature Communications 2021
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: Gómez de Mariscal et al. bioRxiv 2019
+      doi: https://doi.org/10.1101/799270
+    - text: M. Ovesný, et al., Bioinformatics 2014
+      doi: https://doi.org/10.1093/bioinformatics/btu202
     covers:
     - https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/cover.png
     download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
+    source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     id: deepimagej/smlm-deepimagej

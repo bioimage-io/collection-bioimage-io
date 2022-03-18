@@ -8,13 +8,17 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    type: application
-    description: the interactive learning and segmentation toolkit
-    authors:
-    - name: ilastik Team
     maintainers:
     - name: ilastik Team
       github_user: ilastik
+    tags:
+    - ilastik
+    - bioimage.io
+    authors:
+    - name: ilastik Team
+    description: the interactive learning and segmentation toolkit
+    type: application
+    name: ilastik
     config:
       id: ilastik
       name: ilastik
@@ -31,13 +35,9 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-    name: ilastik
     format_version: 0.2.2
-    tags:
-    - ilastik
-    - bioimage.io
-    source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
     documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
+    source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
     cite:
     - text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
         learning for (bio)image analysis. Nat Methods 16, 1226-1232 (2019).'

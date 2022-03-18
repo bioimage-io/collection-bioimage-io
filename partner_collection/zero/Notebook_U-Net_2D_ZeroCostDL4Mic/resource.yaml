@@ -8,7 +8,16 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
-    type: application
+    maintainers: []
+    tags:
+    - colab
+    - notebook
+    - U-Net
+    - segmentation
+    - ZeroCostDL4Mic
+    - 2D
+    authors:
+    - Romain Laine and the ZeroCostDL4Mic Team
     description: 2D binary segmentation. U-Net is an encoder-decoder architecture
       originally used for image segmentation. The first half of the U-Net architecture
       is a downsampling convolutional neural network which acts as a feature extractor
@@ -16,16 +25,8 @@ versions:
       by combining results from downsampling with the upsampled images. Note - visit
       the ZeroCostDL4Mic wiki to check the original publications this network is based
       on and make sure you cite these.
-    authors:
-    - Romain Laine and the ZeroCostDL4Mic Team
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional
-        Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597'
-      doi: https://arxiv.org/abs/1505.04597
-    maintainers: []
+    type: application
+    name: U-Net (2D) - ZeroCostDL4Mic
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -47,24 +48,23 @@ versions:
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    name: U-Net (2D) - ZeroCostDL4Mic
     format_version: 0.2.2
-    tags:
-    - colab
-    - notebook
-    - U-Net
-    - segmentation
-    - ZeroCostDL4Mic
-    - 2D
+    cite:
+    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    - text: 'Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional
+        Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597'
+      doi: https://arxiv.org/abs/1505.04597
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_U-Net_2D_DeepBacs
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic
