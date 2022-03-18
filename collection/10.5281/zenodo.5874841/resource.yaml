@@ -4,8 +4,8 @@ owners: [77626]
 status: accepted
 type: model
 versions:
-- {created: '2022-01-18 23:04:49.485980', doi: 10.5281/zenodo.5874842, name: Mitochondria
-    Segmentation for EM, rdf_source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml,
+- {created: '2022-01-18 23:04:49.485980', doi: 10.5281/zenodo.5874842, name: Mitochondria Segmentation for EM,
+  rdf_source: 'https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml',
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain],
   status: accepted, version_id: '5874842', version_name: revision 1}
 nickname: kind seashell
