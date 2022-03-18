@@ -72,7 +72,7 @@ def update_resource(
                 nickname, nickname_icon = get_animal_nickname()
             else:
                 try:
-                    adjective, animal = existing_nickname.split()
+                    adjective, animal = existing_nickname.split("_")
                     assert adjective in ADJECTIVES
                     assert animal in ANIMALS
                 except Exception as e:

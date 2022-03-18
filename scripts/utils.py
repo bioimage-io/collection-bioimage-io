@@ -44,7 +44,9 @@ with (Path(__file__).parent / "../animals.yaml").open(encoding="utf-8") as f:
 ADJECTIVES: List[str] = (Path(__file__).parent / "../adjectives.txt").read_text().split()
 
 # collect known nicknames independent of resource status (to avoid nickname conflicts if resources are unblocked)
-KNOWN_NICKNAMES = [yaml.load(p).get("nickname") for p in (Path(__file__).parent / "../collection").glob("**/resource.yaml")]
+KNOWN_NICKNAMES = [
+    yaml.load(p).get("nickname") for p in (Path(__file__).parent / "../collection").glob("**/resource.yaml")
+]
 # note: may be appended to by 'get_animal_nickname'
 
 
@@ -52,7 +54,7 @@ def get_animal_nickname():
     for _ in range(100000):
         animal_adjective = numpy.random.choice(ADJECTIVES)
         animal_name = numpy.random.choice(list(ANIMALS.keys()))
-        nickname = f"{animal_adjective} {animal_name}"
+        nickname = f"{animal_adjective}_{animal_name}"
         if nickname not in KNOWN_NICKNAMES:
             break
     else:
