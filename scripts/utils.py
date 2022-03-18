@@ -228,7 +228,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         # Allowing to override fields
         for k in version_info:
             # Place these fields under config.bioimageio
-            if k in ["created", "doi", "status", "version_id", "version_name", "nickname", "nickname_icon"]:
+            if k in ["created", "doi", "status", "version_id", "version_name", "owners", "nickname", "nickname_icon"]:
                 rdf["config"]["bioimageio"][k] = version_info[k]
             else:
                 rdf[k] = version_info[k]

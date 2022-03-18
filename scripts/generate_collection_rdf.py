@@ -22,7 +22,6 @@ SUMMARY_FIELDS = [
     "license",
     "links",
     "name",
-    "owners",
     "rdf_source",
     "source",
     "tags",
