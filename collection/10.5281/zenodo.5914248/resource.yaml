@@ -27,6 +27,6 @@ versions:
           max_percentile: 100
     shape:
       min: [1, 104, 104, 1]
-      step: [0, 8, 8, 0]}
+      step: [0, 8, 8, 0]
 nickname: discreet_rooster
 nickname_icon: 🐓
