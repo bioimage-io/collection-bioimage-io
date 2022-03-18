@@ -129,7 +129,7 @@ jobs:
         path: artifacts
     # todo: checkout partner gh-pages for their test summaries
     - name: install script deps
-      run: pip install typer bioimageio.spec
+      run: pip install typer packaging numpy bioimageio.spec
     - name: prepare to deploy
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Upload preview
