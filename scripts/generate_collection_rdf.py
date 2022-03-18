@@ -87,7 +87,7 @@ def main(
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
             for k in latest_version["config"]["bioimageio"]:
                 if k in SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO:
-                    summary[k] = latest_version["config"]["bioimageio"]
+                    summary[k] = latest_version["config"]["bioimageio"][k]
 
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
