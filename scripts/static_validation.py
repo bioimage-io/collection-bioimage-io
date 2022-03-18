@@ -15,7 +15,7 @@ from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import iterate_over_gh_matrix
+from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
@@ -183,6 +183,15 @@ def main(
         else:
             raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
 
+        # validate nickname and nickname_icon
+        rdf = yaml.load(rdf_path)
+        nickname = rdf["config"]["bioimageio"]["nickname"]
+        adjective, animal = nickname.split()
+        assert adjective in ADJECTIVES, f"'{adjective}' not in adjectives.txt"
+        assert animal in ANIMALS
+        nickname_icon = rdf["config"]["bioimageio"]["nickname_icon"]
+        assert nickname_icon == ANIMALS[animal]
+
         # add rdf to dist (future static_validation_artifact)
         deploy_rdf_path = dist / resource_id / version_id / "rdf.yaml"
         deploy_rdf_path.parent.mkdir(parents=True, exist_ok=True)
@@ -194,6 +203,7 @@ def main(
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if not static_summary["error"]:
+            # validate rdf using the latest format version
             latest_static_summary = validate(rdf_path, update_format=True)
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(rdf_path, update_to_format="latest")
