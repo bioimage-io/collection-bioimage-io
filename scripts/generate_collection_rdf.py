@@ -39,7 +39,7 @@ SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
 def main(
     collection: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
-    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
+    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",  # todo: rename (not a valid rdf)
     dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
@@ -102,6 +102,12 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
+
+    # check for unique nicknames
+    nicknames = [e["nickname"] for e in rdf["collection"] if "nickname" in e]
+    duplicate_nicknames = [nick for i, nick in enumerate(nicknames) if nick in nicknames[:i]]
+    if duplicate_nicknames:
+        raise ValueError(f"Duplicate nicknames: {duplicate_nicknames}")
 
     rdf_path = dist / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)
