@@ -14,13 +14,7 @@ versions:
       Yuting and Liu, Chong and Jiang, Tao and Dai, Qionghai and Li, Dong. The training
       is done using LR-SR image pairs, taking the LR images as input and obtaining
       an output as close to SR as posible.
-    name: DFCAN - ZeroCostDL4Mic
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     type: application
-    authors:
-    - Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
-    maintainers: []
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -41,6 +35,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
+    authors:
+    - Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    format_version: 0.2.2
+    name: DFCAN - ZeroCostDL4Mic
     tags:
     - colab
     - notebook
@@ -56,14 +56,14 @@ versions:
         Nat Methods. 2021 Feb;18(2):194-202. doi: 10.1038/s41592-020-01048-5. Epub
         2021 Jan 21. PMID: 33479522. '
       doi: https://doi.org/10.1038/s41592-020-01048-5
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DFCAN_notebook.png
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     id: zero/Notebook_DFCAN_ZeroCostDL4Mic

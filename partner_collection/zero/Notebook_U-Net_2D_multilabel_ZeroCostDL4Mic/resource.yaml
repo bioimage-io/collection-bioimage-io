@@ -15,13 +15,7 @@ versions:
       by combining results from downsampling with the upsampled images. Note - visit
       the ZeroCostDL4Mic wiki to check the original publications this network is based
       on and make sure you cite these.
-    name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     type: application
-    authors:
-    - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
-    maintainers: []
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -42,6 +36,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
+    authors:
+    - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    format_version: 0.2.2
+    name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
     tags:
     - colab
     - notebook
@@ -58,15 +58,15 @@ versions:
     - text: 'Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional
         Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597'
       doi: https://arxiv.org/abs/1505.04597
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
+    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/UNet_Multilabel_example.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/UNet-multilabel-example-zoom.png
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_U-Net_2D_multilabel_DeepBacs

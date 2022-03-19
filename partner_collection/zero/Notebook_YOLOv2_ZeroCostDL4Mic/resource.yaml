@@ -11,13 +11,7 @@ versions:
     description: Object detection of 2D images. YOLOv2 is an object detection network
       developed by Redmon & Farhadi, which identifies objects in images and draws
       bounding boxes around them.
-    name: YOLOv2 - ZeroCostDL4Mic
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     type: application
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
-    maintainers: []
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -38,6 +32,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    format_version: 0.2.2
+    name: YOLOv2 - ZeroCostDL4Mic
     tags:
     - colab
     - notebook
@@ -52,15 +52,15 @@ versions:
         Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 6517-6525,
         doi: 10.1109/CVPR.2017.690.'
       doi: https://doi.org/10.1109/CVPR.2017.690
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_YOLOv2_ZeroCostDL4Mic

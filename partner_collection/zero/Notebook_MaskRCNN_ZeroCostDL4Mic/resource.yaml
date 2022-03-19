@@ -11,13 +11,7 @@ versions:
     description: Instance segmentation of 2D images. MaskRCNN is a is an object detection
       and segmentation network, which identifies objects in images and draws bounding
       boxes around them.
-    name: MaskRCNN - ZeroCostDL4Mic
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     type: application
-    authors:
-    - Lucas von Chamier and the ZeroCostDL4Mic Team
-    maintainers: []
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -38,6 +32,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
+    authors:
+    - Lucas von Chamier and the ZeroCostDL4Mic Team
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    format_version: 0.2.2
+    name: MaskRCNN - ZeroCostDL4Mic
     tags:
     - colab
     - notebook
@@ -51,14 +51,14 @@ versions:
     - text: Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick. Mask R-CNN
         . arXiv:1703.06870.
       doi: https://arxiv.org/abs/1703.06870
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/maskRCNN_notebook.png
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     links:
     - zero/Notebook Preview
     id: zero/Notebook_MaskRCNN_ZeroCostDL4Mic

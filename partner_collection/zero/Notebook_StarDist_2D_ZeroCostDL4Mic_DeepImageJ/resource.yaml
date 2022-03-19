@@ -13,13 +13,7 @@ versions:
       Note - visit the ZeroCostDL4Mic wiki to check the original publications this
       network is based on and make sure you cite these. Networks trained in this notebook
       can be used in Fiji via deepImageJ and StarDist plugins for ImageJ.
-    name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     type: application
-    authors:
-    - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
-    maintainers: []
-    format_version: 0.2.2
     config:
       id: zero
       name: ZeroCostDL4Mic
@@ -40,6 +34,12 @@ versions:
       - dataset
       default_type: application
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+    maintainers: []
+    authors:
+    - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    format_version: 0.2.2
+    name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
     tags:
     - colab
     - notebook
@@ -55,17 +55,17 @@ versions:
     - text: Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection
         with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30
       doi: https://doi.org/10.1007/978-3-030-00934-2_30
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     badges:
     - label: Open in Colab
       icon: https://colab.research.google.com/assets/colab-badge.svg
       url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
