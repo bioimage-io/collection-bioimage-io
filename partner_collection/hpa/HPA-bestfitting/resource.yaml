@@ -27,27 +27,27 @@ versions:
       - model
       - application
       default_type: model
+    name: HPA-bestfitting
     tags:
     - classification
     - densenet-121
     - inception-v3
     - resnet-34
     - resnet-50
-    name: HPA-bestfitting
-    type: model
     format_version: 0.2.2
-    cite:
-    license: MIT
-    covers:
-    - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
-    - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
-    framework: pytorch
-    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
-    authors:
-    - Shubin Dai
+    type: model
     documentation: https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/README.md
     badges:
     - label: HPA Competition
       ext: 1st
       url: https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard
+    git_repo: https://github.com/CellProfiling/HPA-competition-solutions/tree/master/bestfitting
+    authors:
+    - Shubin Dai
+    cite:
+    license: MIT
+    framework: pytorch
+    covers:
+    - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png
+    - https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png
     id: hpa/HPA-bestfitting

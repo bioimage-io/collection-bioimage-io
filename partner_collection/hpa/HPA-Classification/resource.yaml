@@ -27,11 +27,11 @@ versions:
       - model
       - application
       default_type: model
+    name: HPA Collection
     tags:
     - hpa
     - bioimage.io
-    name: HPA Collection
-    type: application
     format_version: 0.2.2
+    type: application
     source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
     id: hpa/HPA-Classification

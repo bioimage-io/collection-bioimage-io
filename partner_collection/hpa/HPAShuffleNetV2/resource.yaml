@@ -26,14 +26,14 @@ versions:
       - model
       - application
       default_type: model
+    name: HPA ShuffleNetV2
     tags:
     - shufflenet
     - tensorflow.js
     - classification
     - imjoy
-    name: HPA ShuffleNetV2
-    type: model
     format_version: 0.1.0
+    type: model
     cite:
     authors:
     - Moshe Livne
