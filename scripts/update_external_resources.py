@@ -10,7 +10,7 @@ import requests
 import typer
 
 from bare_utils import set_gh_actions_outputs
-from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, yaml
+from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, split_animal_nickname, yaml
 
 
 def update_resource(
@@ -72,7 +72,7 @@ def update_resource(
                 nickname, nickname_icon = get_animal_nickname()
             else:
                 try:
-                    adjective, animal = existing_nickname.split("_")
+                    adjective, animal = split_animal_nickname(existing_nickname)
                     assert adjective in ADJECTIVES
                     assert animal in ANIMALS
                 except Exception as e:

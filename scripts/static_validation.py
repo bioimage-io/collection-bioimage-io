@@ -187,7 +187,7 @@ def main(
         rdf = yaml.load(rdf_path)
         nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname", missing)
         if nickname is not missing:
-            adjective, animal = nickname.split("_")
+            adjective, animal = split_animal_nickname(nickname)
             assert adjective in ADJECTIVES, f"'{adjective}' not in adjectives.txt"
             assert animal in ANIMALS
             nickname_icon = rdf["config"]["bioimageio"]["nickname_icon"]

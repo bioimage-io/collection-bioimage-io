@@ -41,7 +41,8 @@ yaml = MyYAML()
 with (Path(__file__).parent / "../animals.yaml").open(encoding="utf-8") as f:
     ANIMALS: Dict[str, str] = yaml.load(f)
 
-ADJECTIVES: List[str] = (Path(__file__).parent / "../adjectives.txt").read_text().split()
+
+ADJECTIVES: Tuple[str] = tuple((Path(__file__).parent / "../adjectives.txt").read_text().split())
 
 # collect known nicknames independent of resource status (to avoid nickname conflicts if resources are unblocked)
 KNOWN_NICKNAMES = [
@@ -50,7 +51,8 @@ KNOWN_NICKNAMES = [
 # note: may be appended to by 'get_animal_nickname'
 
 
-def get_animal_nickname():
+def get_animal_nickname() -> Tuple[str, str]:
+    """get animal nickname and associated icon"""
     for _ in range(100000):
         animal_adjective = numpy.random.choice(ADJECTIVES)
         animal_name = numpy.random.choice(list(ANIMALS.keys()))
@@ -62,6 +64,21 @@ def get_animal_nickname():
 
     KNOWN_NICKNAMES.append(nickname)
     return nickname, ANIMALS[animal_name]
+
+
+_NICKNAME_DASHES = tuple(["-" + a for a in ANIMALS if "-" in a] + ["-"])
+
+
+def split_animal_nickname(nickname: str) -> Tuple[str, str]:
+    """split an animal nickname into adjective and animal name"""
+    for d in _NICKNAME_DASHES:
+        idx = nickname.rfind(d)
+        if idx != -1:
+            break
+    else:
+        raise ValueError(f"Missing dash in nickname {nickname}")
+
+    return nickname[:idx], nickname[idx + 1 :]
 
 
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):

@@ -26,5 +26,5 @@ versions:
   name: HPA Nuclei Segmentation (DPNUnet)
   version_name: revision 4
   rdf_source: https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/rdf.yaml
-nickname: conscientious_seashell
+nickname: conscientious-seashell
 nickname_icon: 🐚
