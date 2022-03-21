@@ -15,7 +15,7 @@ from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix
+from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nickname
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
