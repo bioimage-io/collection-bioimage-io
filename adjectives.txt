@@ -109,7 +109,7 @@ polite
 popular
 powerful
 practical
-pro-active
+proactive
 quick-witted
 quiet
 rational
