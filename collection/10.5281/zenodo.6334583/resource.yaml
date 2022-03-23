@@ -14,6 +14,8 @@ versions:
   version_id: '6346519'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/rdf.yaml
+  maintainers:
+  - github_user: wolny
 - created: '2022-03-07 13:00:12.305646'
   doi: 10.5281/zenodo.6334584
   name: 3D UNet Arabidopsis Ovules
@@ -21,3 +23,5 @@ versions:
   version_id: '6334584'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/rdf.yaml
+  maintainers:
+  - github_user: wolny
