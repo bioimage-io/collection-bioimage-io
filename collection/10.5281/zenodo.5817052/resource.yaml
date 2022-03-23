@@ -13,3 +13,5 @@ versions:
 - {created: '2022-01-04 11:33:05.251713', doi: 10.5281/zenodo.5817053, name: Mitochondria
     segmentation - TEM - 2D U-Net - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/e14f65fa-f480-4503-944a-209e3119b38b/rdf.yaml',
   status: blocked, version_id: '5817053', version_name: revision 1}
+nickname: creative-panda
+nickname_icon: 🐼

@@ -1,0 +1,16 @@
+status: accepted
+versions:
+- version_id: '6348729'
+  doi: 10.5281/zenodo.6348729
+  created: '2022-03-12 09:56:33.055323'
+  status: accepted
+  name: Arabidopsis Leaf Segmentation
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/rdf.yaml
+id: 10.5281/zenodo.6348728
+doi: 10.5281/zenodo.6348728
+type: model
+owners:
+- 77626
+nickname: non-judgemental-eagle
+nickname_icon: 🦅
