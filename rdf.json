@@ -3520,8 +3520,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/raw.png",
-        "https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/pred.png"
+        "https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/raw.png",
+        "https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
       "id": "10.5281/zenodo.6334777",
@@ -3535,8 +3535,9 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6334778/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6346524/rdf.yaml",
       "tags": [
+        "plantseg",
         "unet",
         "3d",
         "semantic-segmentation",
@@ -3546,10 +3547,12 @@
         "plant",
         "tissue",
         "light-sheet-fluorescence-microscopy",
-        "pytorch"
+        "pytorch",
+        "plantseg"
       ],
       "type": "model",
       "versions": [
+        "6346524",
         "6334778"
       ]
     },
@@ -3738,7 +3741,7 @@
       "application": 92,
       "collection": 36,
       "dataset": 70,
-      "model": 50
+      "model": 51
     },
     "n_resources": {
       "application": 46,
