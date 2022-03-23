@@ -1,12 +1,23 @@
+doi: 10.5281/zenodo.6334383
+id: 10.5281/zenodo.6334383
+nickname: pioneering-rhino
+nickname_icon: 🦏
+owners:
+- 66700
 status: accepted
+type: model
 versions:
-- version_id: '6334384'
-  doi: 10.5281/zenodo.6334384
-  created: '2022-03-07 11:59:05.839103'
-  status: accepted
+- created: '2022-03-11 10:58:32.633796'
+  doi: 10.5281/zenodo.6346500
   name: 2D UNet Arabidopsis Ovules
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/rdf.yaml
+  status: accepted
+  version_id: '6346500'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/rdf.yaml
+- created: '2022-03-07 11:59:05.839103'
+  doi: 10.5281/zenodo.6334384
+  name: 2D UNet Arabidopsis Ovules
+  status: accepted
   tags:
   - unet
   - 2d
@@ -18,11 +29,7 @@ versions:
   - tissue
   - fluorescence-light-microscopy
   - pytorch
-  - plantseg  # added here
-id: 10.5281/zenodo.6334383
-doi: 10.5281/zenodo.6334383
-type: model
-owners:
-- 66700
-nickname: pioneering-rhino
-nickname_icon: '🦏'
+  - plantseg
+  version_id: '6334384'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/rdf.yaml
