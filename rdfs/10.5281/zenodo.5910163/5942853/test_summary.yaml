@@ -1,25 +1,45 @@
-bioimageio_spec_version: 0.4.4
-rdf_sha256: 7fd1d75f605364cde60ed75cd1d42e5a2192ba2fee764c2b32fc51b7d9ca3580
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: 4cbd435f08e6a8b846105b33d642d29028d01ad2feec7b3e511333cc8b2e406d
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.4
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [''modality'', ''dims'', ''framework'',
-        ''software'', ''network'', ''task'']'
+      tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
+        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
+        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
+        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
+        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''framework'': [''tensorflow'', ''pytorch'',
+        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
+        ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
+        ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
+        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
+        ''image-reconstruction'', ''in-silico-labeling'']}]'
       weights: {onnx: missing 'opset_version'}
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.4
+    name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [''modality'', ''dims'', ''framework'',
-        ''software'', ''network'', ''task'']'
+      tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
+        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
+        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
+        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
+        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''framework'': [''tensorflow'', ''pytorch'',
+        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
+        ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
+        ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
+        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
+        ''image-reconstruction'', ''in-silico-labeling'']}]'
       weights: {onnx: missing 'opset_version'}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}

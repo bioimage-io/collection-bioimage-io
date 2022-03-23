@@ -1,19 +1,29 @@
-bioimageio_spec_version: 0.4.4
-rdf_sha256: 74a6845d86e8857b180bb0f6d23cc19525d8632d57b228a7e4e101882c8c18de
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: e00744886e03b8c48ae1c6816e3be730ec910402acd10a5f425e20692bd77785
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.4
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [''framework'', ''task'']'}
-  - bioimageio_spec_version: 0.4.4
+    warnings: {tags: 'Missing tags for categories: [{''framework'': [''tensorflow'',
+        ''pytorch'', ''tensorflow.js'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
+        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
+        ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.4
+    name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [''framework'', ''task'']'}
+    warnings: {tags: 'Missing tags for categories: [{''framework'': [''tensorflow'',
+        ''pytorch'', ''tensorflow.js'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
+        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
+        ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}

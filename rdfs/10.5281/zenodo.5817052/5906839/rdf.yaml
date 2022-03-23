@@ -21,6 +21,8 @@ config:
   bioimageio:
     created: '2022-01-27 14:00:17.489637'
     doi: 10.5281/zenodo.5906839
+    nickname: creative-panda
+    nickname_icon: 🐼
     owners:
     - 271523
     status: accepted
@@ -56,7 +58,7 @@ covers:
 description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
   for neuron segmentation in Transmission Electron Microscopy images.
 documentation: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/README.md
-format_version: 0.4.4
+format_version: 0.4.5
 id: 10.5281/zenodo.5817052/5906839
 inputs:
 - axes: bxyc
@@ -82,7 +84,7 @@ links:
 - imjoy/BioImageIO-Packager
 - zero/notebook_u-net_2d_zerocostdl4mic_deepimagej
 - deepimagej/deepimagej
-name: Neurons segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+name: Neuron Segmentation in 2D EM (Membrane)
 outputs:
 - axes: bxyc
   data_range:
@@ -121,7 +123,7 @@ test_outputs:
 - https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_output.npy
 timestamp: '2021-12-09T15:03:20.680270'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   keras_hdf5:
     sha256: cdc0cfcc13d01f75a93b25599167bf7cf1572c0c276ea415dccbbe1d143b1489

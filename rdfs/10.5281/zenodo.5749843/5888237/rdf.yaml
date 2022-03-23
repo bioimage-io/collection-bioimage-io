@@ -21,6 +21,8 @@ config:
   bioimageio:
     created: '2022-01-21 14:50:48.356997'
     doi: 10.5281/zenodo.5888237
+    nickname: humorous-owl
+    nickname_icon: 🦉
     owners:
     - 252845
     status: accepted
@@ -90,7 +92,7 @@ maintainers:
   name: Estibaliz Gomez de Mariscal
 - github_user: crtorreg
   name: Cristina de la Torre
-name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+name: Cell Segmentation from Membrane Staining for Plant Tissues
 outputs:
 - axes: byxzc
   data_range:
@@ -143,7 +145,7 @@ test_outputs:
 - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/resultImage.npy
 timestamp: '2021-10-14T11:37:36.531183'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   keras_hdf5:
     sha256: 4e34b2b630899a28f087ba607f6c8df9f32fd04240e75ee1c5ee50187070eb7c

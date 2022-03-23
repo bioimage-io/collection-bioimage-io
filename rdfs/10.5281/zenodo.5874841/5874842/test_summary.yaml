@@ -1,25 +1,35 @@
-bioimageio_spec_version: 0.4.4
-rdf_sha256: 7c6770f289b9ee0aeca6db301efc5e63cc3a67665c7ecc9eb1279832ec6ed68b
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: 37ec79ccb3a74bbf7e057ec169d423057c8973e1e815724611242891aa9b95ed
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.2
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [''framework'', ''software'']'
+      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
+        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
+        ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.2
+    name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [''framework'', ''software'']'
+      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
+        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
+        ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}

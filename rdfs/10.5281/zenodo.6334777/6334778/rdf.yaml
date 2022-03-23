@@ -9,6 +9,8 @@ config:
   bioimageio:
     created: '2022-03-07 14:04:51.169223'
     doi: 10.5281/zenodo.6334778
+    nickname: thoughtful-turtle
+    nickname_icon: 🐢
     owners:
     - 66700
     status: accepted
@@ -84,7 +86,7 @@ test_outputs:
 - https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/test_output.npy
 timestamp: '2022-03-07T15:01:43.339537'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/unet.py:UNet3D

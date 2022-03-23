@@ -17,6 +17,8 @@ config:
   bioimageio:
     created: '2022-03-11 22:32:05.554959'
     doi: 10.5281/zenodo.6348085
+    nickname: fearless-crab
+    nickname_icon: 🦀
     owners:
     - 313404
     status: accepted
@@ -203,7 +205,7 @@ test_outputs:
 - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/test_output.npy
 timestamp: '2022-03-11T23:26:52.248097'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   tensorflow_saved_model_bundle:
     dependencies: conda:https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/environment.yaml

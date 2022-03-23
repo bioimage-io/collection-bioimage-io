@@ -11,6 +11,8 @@ config:
   bioimageio:
     created: '2022-02-01 22:38:38.088910'
     doi: 10.5281/zenodo.5942853
+    nickname: polite-pig
+    nickname_icon: 🐖
     owners:
     - 47882
     status: accepted
@@ -20,7 +22,7 @@ covers:
 - https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png
 description: The winning model of HPA image classification 2019 by Bestfitting
 documentation: https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/README.md
-format_version: 0.4.4
+format_version: 0.4.5
 id: 10.5281/zenodo.5910163/5942853
 inputs:
 - axes: bcyx

@@ -16,6 +16,8 @@ config:
   bioimageio:
     created: '2022-01-18 22:01:09.315638'
     doi: 10.5281/zenodo.5874742
+    nickname: impartial-shrimp
+    nickname_icon: 🦐
     owners:
     - 77626
     status: accepted
@@ -49,7 +51,7 @@ covers:
 - https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png
 description: Neuron segmentation in EM, trained on the CREMI challenge data.
 documentation: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/documentation.md
-format_version: 0.4.2
+format_version: 0.4.5
 id: 10.5281/zenodo.5874741/5874742
 inputs:
 - axes: bczyx
@@ -85,7 +87,7 @@ links:
 maintainers:
 - github_user: constantinpape
   name: Constantin Pape
-name: NeuronEMSegmentationBoundaryModel
+name: Neuron Segmentation in EM (Membrane Prediction)
 outputs:
 - axes: bczyx
   data_range:
@@ -133,7 +135,7 @@ test_outputs:
 - https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_output_0.npy
 timestamp: '2022-01-15T20:27:01.644120'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/unet.py:AnisotropicUNet

@@ -20,11 +20,13 @@ config:
   bioimageio:
     created: '2022-01-28 15:42:10.408513'
     doi: 10.5281/zenodo.5914249
+    nickname: discreet-rooster
+    nickname_icon: 🐓
     owners:
     - 147356
     status: accepted
     version_id: '5914249'
-    version_name: revision 1
+    version_name: version 1
   deepimagej:
     allow_tiling: true
     model_keys:
@@ -79,8 +81,8 @@ inputs:
   shape:
     min:
     - 1
-    - 8
-    - 8
+    - 104
+    - 104
     - 1
     step:
     - 0

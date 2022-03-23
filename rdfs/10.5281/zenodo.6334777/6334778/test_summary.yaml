@@ -1,10 +1,10 @@
-bioimageio_core_version: 0.5.1
-bioimageio_spec_version: 0.4.5post2
-rdf_sha256: a0635c993997a97821e4294d162596ac972ef9fb40374abd7d929a2a3038a35a
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: 7ff6e638cdf3330f1011fda101b164d3ab18e136235da4ae8a0a00d8109f0534
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post2
+  - bioimageio_spec_version: 0.4.5post4
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
       format version
@@ -16,7 +16,7 @@ tests:
         ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
         ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''software'':
         [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
-  - bioimageio_spec_version: 0.4.5post2
+  - bioimageio_spec_version: 0.4.5post4
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
@@ -27,5 +27,5 @@ tests:
         ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
         ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''software'':
         [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post2, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}

@@ -16,6 +16,8 @@ config:
   bioimageio:
     created: '2022-02-09 21:14:46.430029'
     doi: 10.5281/zenodo.6028098
+    nickname: organized-badger
+    nickname_icon: 🦡
     owners:
     - 77626
     status: accepted
@@ -49,7 +51,7 @@ covers:
 - https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png
 description: '{organelle} segmentation in EM of platynereis.'
 documentation: https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/documentation.md
-format_version: 0.4.2
+format_version: 0.4.5
 id: 10.5281/zenodo.6028097/6028098
 inputs:
 - axes: bczyx
@@ -131,7 +133,7 @@ test_outputs:
 - https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/test_output_0.npy
 timestamp: '2022-02-09T16:16:03.990153'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/unet.py:AnisotropicUNet

@@ -1,15 +1,15 @@
-bioimageio_spec_version: 0.4.4post1
-rdf_sha256: 89c1c54deedd4eee2f9c97ba26f1f4cde8a02138311eb4b1834f89a82db5ac83
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: c99edf447882cf78bde60a29e79a3581329fd41728b3c0022767498154fccd35
 status: failed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4post1
-    error:
-      _schema: ['Minimal shape [1. 8. 8. 1.] of output output is too small for halo
-          [0, 47, 47, 0].']
-    name: 'bioimageio.spec static validation of  RDF '
+  - bioimageio_spec_version: 0.4.5post4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
     nested_errors: {}
-    status: failed
+    status: passed
     traceback: null
     warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
         Free/libre., tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
@@ -21,3 +21,30 @@ tests:
         {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
+  - bioimageio_spec_version: 0.4.5post4
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
+        Free/libre., tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
+        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
+        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
+        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''content'':
+        [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'',
+        ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']},
+        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+        ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
+        ''in-silico-labeling'']}]'}
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post4
+    error: '[Errno 2] No such file or directory: ''/home/runner/work/collection-bioimage-io/collection-bioimage-io/artifacts/static_validation_artifact/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
+    name: reproduced test outputs from test inputs
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda/envs/5914249/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda/envs/5914249/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda/envs/5914249/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 428, in load\n    fid = open(os_fspath(file), \"rb\")\n"]

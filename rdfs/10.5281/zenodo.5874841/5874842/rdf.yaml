@@ -16,6 +16,8 @@ config:
   bioimageio:
     created: '2022-01-18 23:04:49.485980'
     doi: 10.5281/zenodo.5874842
+    nickname: kind-seashell
+    nickname_icon: 🐚
     owners:
     - 77626
     status: accepted
@@ -49,7 +51,7 @@ covers:
 - https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png
 description: Mitochondria segmentation for electron microscopy.
 documentation: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/documentation.md
-format_version: 0.4.2
+format_version: 0.4.5
 id: 10.5281/zenodo.5874841/5874842
 inputs:
 - axes: bczyx
@@ -85,7 +87,7 @@ links:
 maintainers:
 - github_user: constantinpape
   name: Constantin Pape
-name: MitochondriaEMSegmentationBoundaryModel
+name: Mitochondria Segmentation for EM
 outputs:
 - axes: bczyx
   data_range:
@@ -131,7 +133,7 @@ test_outputs:
 - https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_output_0.npy
 timestamp: '2022-01-18T23:04:36.427352'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/unet.py:AnisotropicUNet

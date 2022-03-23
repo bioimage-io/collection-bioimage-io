@@ -19,6 +19,8 @@ config:
   bioimageio:
     created: '2022-03-02 12:07:39.352008'
     doi: 10.5281/zenodo.6322939
+    nickname: affable-shark
+    nickname_icon: 🦈
     owners:
     - 77626
     status: accepted
@@ -52,7 +54,7 @@ covers:
 - https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png
 description: Nucleus segmentation for fluorescence microscopy
 documentation: https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/documentation.md
-format_version: 0.4.4
+format_version: 0.4.5
 id: 10.5281/zenodo.5764892/6322939
 inputs:
 - axes: bcyx
@@ -130,7 +132,7 @@ timestamp: '2021-12-07T18:43:26.889129'
 training_data:
   id: ilastik/stradist_dsb_training_data
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   onnx:
     opset_version: 12

@@ -1,10 +1,10 @@
-bioimageio_core_version: 0.5.1
-bioimageio_spec_version: 0.4.5post2
-rdf_sha256: 503f4276788cd8159964b69d60d01c972085e97fdbdca04782ab0cabe68b7027
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: b553be0ef48720631e89f9d77189109b0050944008479cda6d893d0269f3dc90
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post2
+  - bioimageio_spec_version: 0.4.5post4
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
       format version
@@ -23,7 +23,7 @@ tests:
         ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
         ''image-reconstruction'', ''in-silico-labeling'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_spec_version: 0.4.5post2
+  - bioimageio_spec_version: 0.4.5post4
     error: null
     name: bioimageio.spec static validation of model RDF 0.3.6
     nested_errors: {}
@@ -39,7 +39,7 @@ tests:
         ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
         ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
         ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post2, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post2, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}

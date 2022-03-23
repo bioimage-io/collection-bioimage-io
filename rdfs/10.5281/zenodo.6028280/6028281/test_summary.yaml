@@ -1,25 +1,35 @@
-bioimageio_spec_version: 0.4.4
-rdf_sha256: e0b82f8f8d19fd92842f11b4eca235dbe96f2727899c78fe5ae348fbcd62bbbe
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post4
+rdf_sha256: 41926f1a7fd842530dabd0bd32effca264c2204a0cc0980018e0148f8a5cbdf8
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.2
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [''dims'', ''framework'', ''software'']'
+      tags: 'Missing tags for categories: [{''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']},
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
-  - bioimageio_spec_version: 0.4.4
+  - bioimageio_spec_version: 0.4.5post4
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.2
+    name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [''dims'', ''framework'', ''software'']'
+      tags: 'Missing tags for categories: [{''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']},
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}

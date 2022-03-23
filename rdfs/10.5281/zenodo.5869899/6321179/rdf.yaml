@@ -17,6 +17,8 @@ config:
   bioimageio:
     created: '2022-03-01 19:53:40.554063'
     doi: 10.5281/zenodo.6321179
+    nickname: hiding-tiger
+    nickname_icon: 🐅
     owners:
     - 77626
     status: accepted
@@ -50,7 +52,7 @@ covers:
 - https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png
 description: Cell segmentation for phase-contrast microscopy.
 documentation: https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/documentation.md
-format_version: 0.4.4
+format_version: 0.4.5
 id: 10.5281/zenodo.5869899/6321179
 inputs:
 - axes: bcyx
@@ -129,7 +131,7 @@ timestamp: '2022-01-16T20:02:19.833552'
 training_data:
   id: ilastik/livecell_dataset
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   pytorch_state_dict:
     architecture: https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/unet.py:UNet2d

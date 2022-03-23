@@ -12,6 +12,8 @@ config:
   bioimageio:
     created: '2022-02-22 13:23:59.702632'
     doi: 10.5281/zenodo.6224243
+    nickname: conscientious-seashell
+    nickname_icon: 🐚
     owners:
     - 47882
     status: accepted

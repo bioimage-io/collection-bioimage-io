@@ -17,6 +17,8 @@ config:
   bioimageio:
     created: '2022-03-08 18:36:28.378522'
     doi: 10.5281/zenodo.6338615
+    nickname: chatty-frog
+    nickname_icon: 🐸
     owners:
     - 313404
     status: accepted
@@ -201,7 +203,7 @@ test_outputs:
 - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/test_output.npy
 timestamp: '2022-03-08T19:28:53.578207'
 type: model
-version: '0.1'
+version: 0.1.0
 weights:
   tensorflow_saved_model_bundle:
     dependencies: conda:https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/environment.yaml
