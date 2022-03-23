@@ -10,7 +10,7 @@ import requests
 import typer
 
 from bare_utils import set_gh_actions_outputs
-from utils import enforce_block_style_resource, yaml
+from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, split_animal_nickname, yaml
 
 
 def update_resource(
@@ -22,6 +22,7 @@ def update_resource(
     version_id: str,
     new_version: dict,
     resource_output_path: Path,
+    rdf: Optional[dict],
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if resource_output_path.exists():
         # maybe we have more than one new versions, so we should update the resource that is already written to output
@@ -60,6 +61,43 @@ def update_resource(
             "type": resource_type,
         }
 
+        # check/set nickname and nickname_icon
+        existing_nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname")
+        existing_nickname_icon = rdf.get("config", {}).get("bioimageio", {}).get("nickname_icon")
+        nickname = None
+        nickname_icon = None
+        if resource_type == "model":
+            if existing_nickname is None:
+                # suggest nickname and nickname_icon if missing (maybe we overwrite nickname_icon)
+                nickname, nickname_icon = get_animal_nickname()
+            else:
+                try:
+                    adjective, animal = split_animal_nickname(existing_nickname)
+                    assert adjective in ADJECTIVES
+                    assert animal in ANIMALS
+                except Exception as e:
+                    print("error", e)
+                    # suggest to overwrite nickname and nickname_icon if nickname is invalid
+                    nickname, nickname_icon = get_animal_nickname()
+                else:
+                    nickname = existing_nickname
+                    nickname_icon = ANIMALS[animal]  # maybe we overwrite nickname_icon; it needs to match animal
+        else:
+            # set invalid nickname if any nickname was specified for a non-model resource
+            if existing_nickname is not None:
+                nickname = "nickname not allowed for for non model resources"
+
+            # set invalid nickname_icon if any nickname_icon was specified for a non-model resource
+            if existing_nickname_icon is not None:
+                nickname_icon = "nickname_icon not allowed for for non model resources"
+
+        # set nickname(_icon) even if present in rdf to make sure it will stay the same for future versions
+        if nickname is not None:
+            resource["nickname"] = nickname
+
+        if nickname_icon is not None:
+            resource["nickname_icon"] = nickname_icon
+
     if "owners" in new_version:
         resource["owners"] = new_version["owners"]
         del new_version["owners"]
@@ -93,7 +131,9 @@ def update_with_new_version(
 
 
 def update_from_zenodo(
-    collection: Path, dist: Path, updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]]
+    collection: Path,
+    dist: Path,
+    updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]],
 ):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
@@ -127,11 +167,19 @@ def update_from_zenodo(
                 rdf_source = sorted(rdf_urls)[0]
                 try:
                     r = requests.get(rdf_source)
-                    rdf = yaml.load(r.text)
-                    name = rdf.get("name", doi)
-                    resource_type = rdf.get("type")
+                    r.raise_for_status()
                 except Exception as e:
-                    print(f"Failed to obtain version name: {e}")
+                    print(f"Failed to download rdf: {e}")
+                else:
+                    try:
+                        rdf = yaml.load(r.text)
+                        assert isinstance(rdf, dict)
+                    except Exception as e:
+                        print(f"invalid rdf at {rdf_source} ({e})")
+                        rdf = None
+                    else:
+                        name = rdf.get("name", doi)
+                        resource_type = rdf.get("type")
 
             version_id = str(hit["id"])
 
@@ -153,6 +201,7 @@ def update_from_zenodo(
                 version_id=version_id,
                 new_version=new_version,
                 resource_output_path=resource_output_path,
+                rdf=rdf,
             )
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
@@ -165,7 +214,6 @@ def main(
     max_resource_count: int = 3,
 ):
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
-
     update_from_zenodo(collection, dist, updated_resources)
 
     # limit the number of PRs created

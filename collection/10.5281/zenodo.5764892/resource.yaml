@@ -47,3 +47,5 @@ versions:
   version_id: '5764893'
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+nickname: affable-shark
+nickname_icon: 🦈
