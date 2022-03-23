@@ -14,6 +14,8 @@ versions:
   version_id: '6346477'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/rdf.yaml
+  maintainers:
+  - github_user: wolny
 - created: '2022-03-07 15:22:46.950734'
   doi: 10.5281/zenodo.6334882
   name: 2D UNet Arabidopsis Apical Stem Cells
