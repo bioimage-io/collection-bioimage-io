@@ -1,5 +1,5 @@
 authors:
-- Guillaume Jacquemet
+- name: Guillaume Jacquemet
 cite:
 - doi: https://doi.org/10.1038/s41467-021-22518-0
   text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -38,7 +38,6 @@ id: zero/Dataset_pix2pix_ZeroCostDL4Mic/latest
 maintainers: []
 name: pix2pix example training and test dataset - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_pix2pix_ZeroCostDL4Mic/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 tags:
 - pix2pix
 - ZeroCostDL4Mic

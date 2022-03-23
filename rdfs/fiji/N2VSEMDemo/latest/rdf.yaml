@@ -22,16 +22,16 @@ config:
 covers:
 - https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png
 description: Demo model for denoising trained on a single SEM image with Noise2Void
-documentation: README.md
+documentation: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/README.md
 download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
-format_version: 0.3.2
+format_version: 0.3.6
 framework: tensorflow
 id: fiji/N2VSEMDemo/latest
 inputs:
 - axes: byxc
   data_range:
-  - -inf
-  - inf
+  - -.inf
+  - .inf
   data_type: float32
   name: input
   preprocessing:
@@ -60,8 +60,8 @@ name: N2V SEM Demo
 outputs:
 - axes: byxc
   data_range:
-  - -inf
-  - inf
+  - -.inf
+  - .inf
   data_type: float32
   halo:
   - 0
@@ -77,27 +77,26 @@ outputs:
     name: scale_linear
   shape:
     offset:
-    - 0
-    - 0
-    - 0
-    - 0
-    reference_input: input
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input
     scale:
-    - 1
-    - 1
-    - 1
-    - 1
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/N2VSEMDemo/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
 tags:
 - denoising
 - unet2d
 - n2v
 test_inputs:
-- test_input.tif
+- https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/test_input.tif
 test_outputs:
-- test_output.tif
-timestamp: 2021-06-03 13:34:19.685956
+- https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/test_output.tif
+timestamp: '2021-06-03T13:34:19.685956'
 type: model
 weights:
   tensorflow_saved_model_bundle:

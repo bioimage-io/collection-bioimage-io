@@ -1,5 +1,5 @@
 authors:
-- Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team
+- name: Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team
 badges:
 - icon: https://colab.research.google.com/assets/colab-badge.svg
   label: Open in Colab
@@ -53,7 +53,6 @@ links:
 maintainers: []
 name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 tags:
 - colab
 - notebook

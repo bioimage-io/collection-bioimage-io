@@ -41,7 +41,6 @@ id: deepimagej/smlm-deepimagej/latest
 maintainers: []
 name: SMLM-superresolution
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/smlm-deepimagej/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
 source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
 tags:
 - deepimagej

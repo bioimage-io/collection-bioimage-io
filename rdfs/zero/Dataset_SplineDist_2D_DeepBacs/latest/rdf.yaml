@@ -1,6 +1,6 @@
 authors:
-- Christoph Spahn
-- Mike Heilemann
+- name: Christoph Spahn
+- name: Mike Heilemann
 cite:
 - doi: https://doi.org/10.1101/2021.11.03.467152
   text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
@@ -42,7 +42,6 @@ id: zero/Dataset_SplineDist_2D_DeepBacs/latest
 maintainers: []
 name: Escherichia coli bright field segmentation dataset - DeepBacs
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_SplineDist_2D_DeepBacs/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 tags:
 - StarDist
 - segmentation

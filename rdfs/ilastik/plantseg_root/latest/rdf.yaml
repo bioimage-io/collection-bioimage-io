@@ -27,7 +27,7 @@ covers:
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
 description: Training data for cell segmentation in Arabidopsis lateral root.
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_root.md
-format_version: 0.2.1
+format_version: 0.2.2
 id: ilastik/plantseg_root/latest
 license: CC-BY-4.0
 maintainers:
@@ -41,7 +41,6 @@ maintainers:
   orcid: 0000-0001-6562-7187
 name: Arabidopsis Lateral Root Traning Data
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/plantseg_root/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
 source: https://osf.io/2rszy/
 tags:
 - light-microscopy

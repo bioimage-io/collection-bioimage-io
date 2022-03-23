@@ -1,4 +1,3 @@
-api_version: 0.1.7
 attachments: {}
 authors: []
 badges: []
@@ -27,11 +26,9 @@ config:
   - ilastik
   url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
 covers: []
-dependencies: []
 description: Export BioImage.IO model packages for ilastik from a model description
   file
 documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
-env: ''
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
 id: ilastik/ilastik/latest
@@ -40,15 +37,6 @@ maintainers:
   name: ilastik Team
 name: ilastik
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/ilastik/latest/rdf.yaml
-requirements:
-- https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js
-- https://static.imjoy.io/spectre.css/spectre.min.css
-- https://static.imjoy.io/spectre.css/spectre-exp.min.css
-- https://static.imjoy.io/spectre.css/spectre-icons.min.css
-- https://static.imjoy.io/js/UZIP.js
-- https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js
-root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
 source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
 tags:
 - software

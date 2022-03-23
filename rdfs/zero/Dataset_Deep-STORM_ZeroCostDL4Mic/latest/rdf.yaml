@@ -1,6 +1,6 @@
 authors:
-- Christophe Leterrier
-- Romain F. Laine
+- name: Christophe Leterrier
+- name: Romain F. Laine
 cite:
 - doi: https://doi.org/10.1038/s41467-021-22518-0
   text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -41,7 +41,6 @@ id: zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest
 maintainers: []
 name: Deep-STORM training and example dataset - ZeroCostDL4Mic
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest/rdf.yaml
-root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
 tags:
 - SMLM
 - Deep-STORM
