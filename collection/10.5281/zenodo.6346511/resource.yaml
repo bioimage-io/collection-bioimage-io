@@ -14,3 +14,5 @@ versions:
   version_id: '6346512'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/rdf.yaml
+  maintainers:
+  - github_user: wolny
