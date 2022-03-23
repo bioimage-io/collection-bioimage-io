@@ -241,11 +241,11 @@ collection:
     file
   icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej/deepimagej
-  name: deepimagej
+  name: deepImageJ Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
   tags: [software, bioengine]
-  type: application
+  type: collection
   versions: [latest]
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -321,7 +321,7 @@ collection:
   description: ShuffleNetV2 for HPA.
   icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
   id: hpa/HPA-Classification
-  name: HPA-Classification
+  name: HPA Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
   tags: [bioengine]
@@ -419,7 +419,7 @@ collection:
   description: Run the live cell boundary model via the BioEngine
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
   id: ilastik/live-cell-boundary-model
-  name: live-cell-boundary-model
+  name: Live cell boundary model preview
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml
   source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
   tags: [bioengine]
@@ -507,7 +507,7 @@ collection:
   description: Exporting BioImage.IO model packages from the model description file
   icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
   id: imjoy/BioImageIO-Packager
-  name: BioImageIO-Packager
+  name: ImJoy Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
   tags: [bioengine]
@@ -519,7 +519,7 @@ collection:
   description: 'ImJoy: Supercharging interactivity and scalability!'
   icon: https://imjoy.io/static/img/imjoy-icon.png
   id: imjoy/ImJoy
-  name: ImJoy
+  name: ImJoy Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
   tags: [software, imjoy, bioengine]
@@ -531,7 +531,7 @@ collection:
   description: ImageJ running in the browser
   icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
   id: imjoy/ImageJ.JS
-  name: ImageJ.JS
+  name: ImJoy Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
   tags: [software, bioengine]
@@ -557,7 +557,7 @@ collection:
     with Viv & ImJoy
   icon: https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png
   id: imjoy/vizarr
-  name: vizarr
+  name: ImJoy Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html
   tags: [bioengine]
@@ -830,7 +830,7 @@ collection:
   description: Previewing Jupyter notebook without a Jupyter server
   icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
   id: zero/Notebook Preview
-  name: Notebook Preview
+  name: ZeroCost4Mic Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook
     Preview/latest/rdf.yaml
   source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
@@ -1515,7 +1515,9 @@ collection:
   id: 10.5281/zenodo.5749843
   license: MIT
   links: [imjoy/BioImageIO-Packager]
-  name: 3D UNet - arabidopsis - ZeroCostDL4Mic
+  name: Cell Segmentation from Membrane Staining for Plant Tissues
+  nickname: humorous-owl
+  nickname_icon: "\U0001F989"
   owners: [252845]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5888237/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, 3d, unet, fluorescence-light-microscopy,
@@ -1531,6 +1533,8 @@ collection:
   links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
     imjoy/BioImageIO-Packager]
   name: NucleiSegmentationBoundaryModel
+  nickname: affable-shark
+  nickname_icon: "\U0001F988"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6322939/rdf.yaml
   tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet, 2d]
@@ -1547,7 +1551,9 @@ collection:
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
     deepimagej/deepimagej]
-  name: Neurons segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  name: Neuron Segmentation in 2D EM (Membrane)
+  nickname: creative-panda
+  nickname_icon: "\U0001F43C"
   owners: [271523]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
@@ -1563,12 +1569,14 @@ collection:
   links: [ilastik/covid_if_training_data, ilastik/ilastik, deepimagej/deepimagej,
     imjoy/BioImageIO-Packager]
   name: CovidIFCellSegmentationBoundaryModel
+  nickname: powerful-chipmunk
+  nickname_icon: "\U0001F43F"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6322908/rdf.yaml
   tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence,
     instance-segmentation]
   type: model
-  versions: ['6322908', '5874728', '5847356']
+  versions: ['6322908']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
@@ -1577,6 +1585,8 @@ collection:
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: LiveCellSegmentationBoundaryModel
+  nickname: hiding-tiger
+  nickname_icon: "\U0001F405"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6321179/rdf.yaml
   tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
@@ -1590,7 +1600,9 @@ collection:
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/cremi_training_data, ilastik/ilastik, imjoy/BioImageIO-Packager]
-  name: NeuronEMSegmentationBoundaryModel
+  name: Neuron Segmentation in EM (Membrane Prediction)
+  nickname: impartial-shrimp
+  nickname_icon: "\U0001F990"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874741/5874742/rdf.yaml
   tags: [unet, neurons, instance-segmentation, electron-microscopy, cremi, connectomics,
@@ -1605,7 +1617,9 @@ collection:
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
     imjoy/BioImageIO-Packager]
-  name: MitochondriaEMSegmentationBoundaryModel
+  name: Mitochondria Segmentation for EM
+  nickname: kind-seashell
+  nickname_icon: "\U0001F41A"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
@@ -1619,6 +1633,8 @@ collection:
   license: MIT
   links: [imjoy/BioImageIO-Packager]
   name: HPA Bestfitting Densenet
+  nickname: polite-pig
+  nickname_icon: "\U0001F416"
   owners: [47882]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml
   tags: [classification, densenet-121, hpa, onnx, cells, protein-localization]
@@ -1647,6 +1663,8 @@ collection:
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager]
   name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+  nickname: discreet-rooster
+  nickname_icon: "\U0001F413"
   owners: [147356]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/5914249/rdf.yaml
   tags: [deepimagej, pancreatic-stem-cells, segmentation, phase-contrast, unet, neubias,
@@ -1662,6 +1680,8 @@ collection:
   links: [ilastik/platynereis_em_training_data, deepimagej/deepimagej, ilastik/ilastik,
     imjoy/BioImageIO-Packager]
   name: PlatynereisEMnucleiSegmentationBoundaryModel
+  nickname: organized-badger
+  nickname_icon: "\U0001F9A1"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028097/6028098/rdf.yaml
   tags: [unet, nuclei, instance-segmentation, electron-microscopy, platynereis, affinity-prediction]
@@ -1676,6 +1696,8 @@ collection:
   links: [deepimagej/deepimagej, ilastik/platynereis_em_training_data, ilastik/ilastik,
     imjoy/BioImageIO-Packager]
   name: PlatynereisEMcellsSegmentationBoundaryModel
+  nickname: willing-hedgehog
+  nickname_icon: "\U0001F994"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6028281/rdf.yaml
   tags: [unet, cells, instance-segmentation, electron-microscopy, platynereis]
@@ -1691,6 +1713,8 @@ collection:
   license: CC-BY-4.0
   links: [imjoy/BioImageIO-Packager]
   name: HPA Cell Segmentation (DPNUnet)
+  nickname: loyal-parrot
+  nickname_icon: "\U0001F99C"
   owners: [47882]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6200636/rdf.yaml
   tags: [nucleus-segmentation]
@@ -1706,6 +1730,8 @@ collection:
   license: CC-BY-4.0
   links: [deepimagej/deepimagej]
   name: HPA Nucleus Segmentation (DPNUnet)
+  nickname: conscientious-seashell
+  nickname_icon: "\U0001F41A"
   owners: [47882]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/rdf.yaml
   tags: [nucleus-segmentation]
@@ -1722,6 +1748,8 @@ collection:
   license: MIT
   links: [imjoy/BioImageIO-Packager]
   name: 3D UNet Lateral Root Primordia Cells
+  nickname: thoughtful-turtle
+  nickname_icon: "\U0001F422"
   owners: [66700]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6334778/rdf.yaml
   tags: [unet, 3d, semantic-segmentation, arabidopsis, lateral-root, cell-membrane,
@@ -1738,6 +1766,8 @@ collection:
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: StarDist H&E Nuclei Segmentation
+  nickname: chatty-frog
+  nickname_icon: "\U0001F438"
   owners: [313404]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml
   tags: [fluorescence-light-microscopy, whole-slide-imaging, other, 2d, cells, nuclei,
@@ -1754,6 +1784,8 @@ collection:
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: StarDist Fluorescence Nuclei Segmentation
+  nickname: fearless-crab
+  nickname_icon: "\U0001F980"
   owners: [313404]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml
   tags: [fluorescence-light-microscopy, whole-slide-imaging, other, 2d, cells, nuclei,
@@ -1768,6 +1800,8 @@ collection:
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: Arabidopsis Leaf Segmentation
+  nickname: non-judgemental-eagle
+  nickname_icon: "\U0001F985"
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, unet]
@@ -1777,8 +1811,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 94, collection: 34, dataset: 70, model: 47}
-  n_resources: {application: 47, collection: 17, dataset: 35, model: 21}
+  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 45}
+  n_resources: {application: 46, collection: 18, dataset: 35, model: 21}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application

@@ -473,14 +473,14 @@
       "description": "Export BioImage.IO model packages for deepImageJ from a model description file",
       "icon": "https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png",
       "id": "deepimagej/deepimagej",
-      "name": "deepimagej",
+      "name": "deepImageJ Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html",
       "tags": [
         "software",
         "bioengine"
       ],
-      "type": "application",
+      "type": "collection",
       "versions": [
         "latest"
       ]
@@ -639,7 +639,7 @@
       "description": "ShuffleNetV2 for HPA.",
       "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
       "id": "hpa/HPA-Classification",
-      "name": "HPA-Classification",
+      "name": "HPA Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html",
       "tags": [
@@ -832,7 +832,7 @@
       "description": "Run the live cell boundary model via the BioEngine",
       "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png",
       "id": "ilastik/live-cell-boundary-model",
-      "name": "live-cell-boundary-model",
+      "name": "Live cell boundary model preview",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html",
       "tags": [
@@ -1014,7 +1014,7 @@
       "description": "Exporting BioImage.IO model packages from the model description file",
       "icon": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png",
       "id": "imjoy/BioImageIO-Packager",
-      "name": "BioImageIO-Packager",
+      "name": "ImJoy Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html",
       "tags": [
@@ -1032,7 +1032,7 @@
       "description": "ImJoy: Supercharging interactivity and scalability!",
       "icon": "https://imjoy.io/static/img/imjoy-icon.png",
       "id": "imjoy/ImJoy",
-      "name": "ImJoy",
+      "name": "ImJoy Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html",
       "tags": [
@@ -1052,7 +1052,7 @@
       "description": "ImageJ running in the browser",
       "icon": "https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png",
       "id": "imjoy/ImageJ.JS",
-      "name": "ImageJ.JS",
+      "name": "ImJoy Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html",
       "tags": [
@@ -1096,7 +1096,7 @@
       "description": "A minimal, purely client-side program for viewing Zarr-based images with Viv & ImJoy",
       "icon": "https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png",
       "id": "imjoy/vizarr",
-      "name": "vizarr",
+      "name": "ImJoy Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html",
       "tags": [
@@ -1678,7 +1678,7 @@
       "description": "Previewing Jupyter notebook without a Jupyter server",
       "icon": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png",
       "id": "zero/Notebook Preview",
-      "name": "Notebook Preview",
+      "name": "ZeroCost4Mic Collection",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook Preview/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html",
       "tags": [
@@ -2944,7 +2944,9 @@
       "links": [
         "imjoy/BioImageIO-Packager"
       ],
-      "name": "3D UNet - arabidopsis - ZeroCostDL4Mic",
+      "name": "Cell Segmentation from Membrane Staining for Plant Tissues",
+      "nickname": "humorous-owl",
+      "nickname_icon": "\ud83e\udd89",
       "owners": [
         252845
       ],
@@ -2987,6 +2989,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "NucleiSegmentationBoundaryModel",
+      "nickname": "affable-shark",
+      "nickname_icon": "\ud83e\udd88",
       "owners": [
         77626
       ],
@@ -3027,7 +3031,9 @@
         "zero/notebook_u-net_2d_zerocostdl4mic_deepimagej",
         "deepimagej/deepimagej"
       ],
-      "name": "Neurons segmentation - TEM - 2D U-Net - ZeroCostDL4Mic",
+      "name": "Neuron Segmentation in 2D EM (Membrane)",
+      "nickname": "creative-panda",
+      "nickname_icon": "\ud83d\udc3c",
       "owners": [
         271523
       ],
@@ -3070,6 +3076,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "CovidIFCellSegmentationBoundaryModel",
+      "nickname": "powerful-chipmunk",
+      "nickname_icon": "\ud83d\udc3f",
       "owners": [
         77626
       ],
@@ -3084,9 +3092,7 @@
       ],
       "type": "model",
       "versions": [
-        "6322908",
-        "5874728",
-        "5847356"
+        "6322908"
       ]
     },
     {
@@ -3109,6 +3115,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "LiveCellSegmentationBoundaryModel",
+      "nickname": "hiding-tiger",
+      "nickname_icon": "\ud83d\udc05",
       "owners": [
         77626
       ],
@@ -3145,7 +3153,9 @@
         "ilastik/ilastik",
         "imjoy/BioImageIO-Packager"
       ],
-      "name": "NeuronEMSegmentationBoundaryModel",
+      "name": "Neuron Segmentation in EM (Membrane Prediction)",
+      "nickname": "impartial-shrimp",
+      "nickname_icon": "\ud83e\udd90",
       "owners": [
         77626
       ],
@@ -3183,7 +3193,9 @@
         "ilastik/mitoem_segmentation_challenge",
         "imjoy/BioImageIO-Packager"
       ],
-      "name": "MitochondriaEMSegmentationBoundaryModel",
+      "name": "Mitochondria Segmentation for EM",
+      "nickname": "kind-seashell",
+      "nickname_icon": "\ud83d\udc1a",
       "owners": [
         77626
       ],
@@ -3217,6 +3229,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "HPA Bestfitting Densenet",
+      "nickname": "polite-pig",
+      "nickname_icon": "\ud83d\udc16",
       "owners": [
         47882
       ],
@@ -3289,6 +3303,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "Pancreatic Phase Contrast Cell Segmentation (U-Net)",
+      "nickname": "discreet-rooster",
+      "nickname_icon": "\ud83d\udc13",
       "owners": [
         147356
       ],
@@ -3328,6 +3344,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "PlatynereisEMnucleiSegmentationBoundaryModel",
+      "nickname": "organized-badger",
+      "nickname_icon": "\ud83e\udda1",
       "owners": [
         77626
       ],
@@ -3364,6 +3382,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "PlatynereisEMcellsSegmentationBoundaryModel",
+      "nickname": "willing-hedgehog",
+      "nickname_icon": "\ud83e\udd94",
       "owners": [
         77626
       ],
@@ -3399,6 +3419,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "HPA Cell Segmentation (DPNUnet)",
+      "nickname": "loyal-parrot",
+      "nickname_icon": "\ud83e\udd9c",
       "owners": [
         47882
       ],
@@ -3430,6 +3452,8 @@
         "deepimagej/deepimagej"
       ],
       "name": "HPA Nucleus Segmentation (DPNUnet)",
+      "nickname": "conscientious-seashell",
+      "nickname_icon": "\ud83d\udc1a",
       "owners": [
         47882
       ],
@@ -3462,6 +3486,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "3D UNet Lateral Root Primordia Cells",
+      "nickname": "thoughtful-turtle",
+      "nickname_icon": "\ud83d\udc22",
       "owners": [
         66700
       ],
@@ -3506,6 +3532,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "StarDist H&E Nuclei Segmentation",
+      "nickname": "chatty-frog",
+      "nickname_icon": "\ud83d\udc38",
       "owners": [
         313404
       ],
@@ -3552,6 +3580,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "StarDist Fluorescence Nuclei Segmentation",
+      "nickname": "fearless-crab",
+      "nickname_icon": "\ud83e\udd80",
       "owners": [
         313404
       ],
@@ -3593,6 +3623,8 @@
         "imjoy/BioImageIO-Packager"
       ],
       "name": "Arabidopsis Leaf Segmentation",
+      "nickname": "non-judgemental-eagle",
+      "nickname_icon": "\ud83e\udd85",
       "owners": [
         77626
       ],
@@ -3614,14 +3646,14 @@
     "default_type": "model",
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
-      "application": 94,
-      "collection": 34,
+      "application": 92,
+      "collection": 36,
       "dataset": 70,
-      "model": 47
+      "model": 45
     },
     "n_resources": {
-      "application": 47,
-      "collection": 17,
+      "application": 46,
+      "collection": 18,
       "dataset": 35,
       "model": 21
     },
