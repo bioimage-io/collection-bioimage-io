@@ -56,7 +56,7 @@ def get_animal_nickname() -> Tuple[str, str]:
     for _ in range(100000):
         animal_adjective = numpy.random.choice(ADJECTIVES)
         animal_name = numpy.random.choice(list(ANIMALS.keys()))
-        nickname = f"{animal_adjective}_{animal_name}"
+        nickname = f"{animal_adjective}-{animal_name}"
         if nickname not in KNOWN_NICKNAMES:
             break
     else:
