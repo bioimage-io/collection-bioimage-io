@@ -1,0 +1,28 @@
+status: accepted
+versions:
+- version_id: '6334882'
+  doi: 10.5281/zenodo.6334882
+  created: '2022-03-07 15:22:46.950734'
+  status: accepted
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/rdf.yaml
+  tags:
+  - unet
+  - 2d
+  - semantic-segmentation
+  - arabidopsis
+  - stem-cells
+  - cell-membrane
+  - plant
+  - tissue
+  - fluorescence-light-microscopy
+  - pytorch
+  - plantset  # added here
+id: 10.5281/zenodo.6334881
+doi: 10.5281/zenodo.6334881
+type: model
+owners:
+- 66700
+nickname: laid-back-lobster
+nickname_icon: '🦞'
