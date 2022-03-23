@@ -3563,8 +3563,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/raw.png",
-        "https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/pred.png"
+        "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png",
+        "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
       "id": "10.5281/zenodo.6334881",
@@ -3578,8 +3578,9 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6334882/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml",
       "tags": [
+        "plantseg",
         "unet",
         "2d",
         "semantic-segmentation",
@@ -3589,11 +3590,11 @@
         "plant",
         "tissue",
         "fluorescence-light-microscopy",
-        "pytorch",
-        "plantset"
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "6346477",
         "6334882"
       ]
     },
@@ -3737,7 +3738,7 @@
       "application": 92,
       "collection": 36,
       "dataset": 70,
-      "model": 49
+      "model": 50
     },
     "n_resources": {
       "application": 46,

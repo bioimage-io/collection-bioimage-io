@@ -1778,8 +1778,8 @@ collection:
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/raw.png',
-    'https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/pred.png']
+  covers: ['https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png',
+    'https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png']
   description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
     apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
     0.25, 0.25]'
@@ -1790,11 +1790,11 @@ collection:
   nickname: laid-back-lobster
   nickname_icon: "\U0001F99E"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6334882/rdf.yaml
-  tags: [unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
-    plant, tissue, fluorescence-light-microscopy, pytorch, plantset]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml
+  tags: [plantseg, unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
+    plant, tissue, fluorescence-light-microscopy, pytorch]
   type: model
-  versions: ['6334882']
+  versions: ['6346477', '6334882']
 - authors:
   - {github_user: uschmidt83, name: Uwe Schmidt}
   - {github_user: maweigert, name: Martin Weigert}
@@ -1850,7 +1850,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 49}
+  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 50}
   n_resources: {application: 46, collection: 18, dataset: 35, model: 23}
   partners:
   - background_image: static/img/zoo-background.svg
