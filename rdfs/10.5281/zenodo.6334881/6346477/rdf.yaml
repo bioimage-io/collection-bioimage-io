@@ -1,0 +1,107 @@
+authors:
+- name: Lorenzo Cerrone
+- name: Adrian Wolny
+cite:
+- text: Wolny, Cerrone et al. Accurate and Versatile 3D Segmentation of Plant Tissues
+    at Cellular Resolution. eLife 2020.
+  url: https://elifesciences.org/articles/57613
+config:
+  bioimageio:
+    created: '2022-03-11 10:52:31.794285'
+    doi: 10.5281/zenodo.6346477
+    nickname: laid-back-lobster
+    nickname_icon: 🦞
+    owners:
+    - 66700
+    status: accepted
+    version_id: '6346477'
+    version_name: version 2
+covers:
+- https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png
+- https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png
+description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
+  apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
+  0.25, 0.25]'
+documentation: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/unet2d.md
+format_version: 0.4.5
+id: 10.5281/zenodo.6334881/6346477
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: raw
+  shape:
+  - 1
+  - 1
+  - 1
+  - 512
+  - 512
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+name: 2D UNet Arabidopsis Apical Stem Cells
+outputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 0
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: raw
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml
+tags:
+- plantseg
+- unet
+- 2d
+- semantic-segmentation
+- arabidopsis
+- stem-cells
+- cell-membrane
+- plant
+- tissue
+- fluorescence-light-microscopy
+- pytorch
+test_inputs:
+- https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/test_output.npy
+timestamp: '2022-03-11T11:47:13.075928'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/unet.py:UNet2D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    dependencies: conda:https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/environment.yaml
+    kwargs:
+      f_maps: 32
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 1
+      testing: true
+    sha256: 13bbeb9a2403f5ff840951d8907586cf1ceded3072d36466db3e592b5ad53649
+    source: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/confocal_pnas_2d.pytorch
