@@ -226,7 +226,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
                 rdf, rdf_name, rdf_root = resolve_rdf_source(version_info["rdf_source"])
                 if not isinstance(rdf, dict):
                     raise TypeError(type(rdf))
-                rdf["rdf_root"] = rdf_root  # we use this after updating the rdf to resolve remote sources
+                rdf["root_path"] = rdf_root  # we use this after updating the rdf to resolve remote sources
             except Exception as e:
                 warnings.warn(f"Failed to load {version_info['rdf_source']}: {e}")
                 rdf = {
