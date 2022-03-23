@@ -1,56 +1,51 @@
-status: accepted
 id: fiji/N2VSEMDemo
+status: accepted
 type: model
 versions:
 - name: N2V SEM Demo
+  status: accepted
   version_id: latest
   version_name: latest
-  status: accepted
   rdf_source:
-    root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+    authors:
+    - affiliation: MDC Berlin
+      name: Deborah Schmidt
+    cite:
+    - doi: https://doi.org/10.1016/bs.mch.2019.05.001
+      text: Buchholz, T. et al. - Content-aware image restoration for electron microscopy.
+        Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)
     config:
       fiji:
         batchDimLength: 180
         batchSize: 64
-        trainDimensions: 2
         neighborhoodRadius: 5
         numEpochs: 100
         numStepsPerEpoch: 300
         patchDimLength: 60
         stepsFinished: 30000
-    type: model
-    format_version: 0.3.2
-    name: N2V SEM Demo
-    tags:
-    - denoising
-    - unet2d
-    - n2v
-    description: Demo model for denoising trained on a single SEM image with Noise2Void
-    cite:
-    - text: Buchholz, T. et al. - Content-aware image restoration for electron microscopy.
-        Methods in Cell Biology, Volume 152 p.277-289, ISSN 0091-679X (2019)
-      doi: https://doi.org/10.1016/bs.mch.2019.05.001
-    authors:
-    - name: Deborah Schmidt
-      affiliation: MDC Berlin
-    documentation: README.md
-    test_inputs:
-    - test_input.tif
-    test_outputs:
-    - test_output.tif
+        trainDimensions: 2
     covers:
     - https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png
-    license: BSD-3-Clause
-    language: java
+    description: Demo model for denoising trained on a single SEM image with Noise2Void
+    documentation: README.md
+    download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+    format_version: 0.3.2
     framework: tensorflow
-    timestamp: 2021-06-03 13:34:19.685956
+    id: fiji/N2VSEMDemo
     inputs:
-    - name: input
-      axes: byxc
-      data_type: float32
+    - axes: byxc
       data_range:
       - -inf
       - inf
+      data_type: float32
+      name: input
+      preprocessing:
+      - kwargs:
+          axes: ycx
+          mean: 41498.87
+          mode: fixed
+          std: 15007.021
+        name: zero_mean_unit_variance
       shape:
         min:
         - 1
@@ -62,52 +57,57 @@ versions:
         - 4
         - 4
         - 0
-      preprocessing:
-      - name: zero_mean_unit_variance
-        kwargs:
-          mode: fixed
-          axes: ycx
-          mean: 41498.87
-          std: 15007.021
+    language: java
+    license: BSD-3-Clause
+    links:
+    - fiji/Fiji
+    name: N2V SEM Demo
     outputs:
-    - name: denoised
-      axes: byxc
-      data_type: float32
+    - axes: byxc
       data_range:
       - -inf
       - inf
+      data_type: float32
       halo:
       - 0
       - 32
       - 32
       - 0
+      name: denoised
+      postprocessing:
+      - kwargs:
+          axes: ycx
+          gain: 41498.87
+          offset: 15007.021
+        name: scale_linear
       shape:
+        offset:
+        - 0
+        - 0
+        - 0
+        - 0
         reference_input: input
         scale:
         - 1
         - 1
         - 1
         - 1
-        offset:
-        - 0
-        - 0
-        - 0
-        - 0
-      postprocessing:
-      - name: scale_linear
-        kwargs:
-          gain: 41498.87
-          offset: 15007.021
-          axes: ycx
+    root_path: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+    tags:
+    - denoising
+    - unet2d
+    - n2v
+    test_inputs:
+    - test_input.tif
+    test_outputs:
+    - test_output.tif
+    timestamp: 2021-06-03 13:34:19.685956
+    type: model
     weights:
       tensorflow_saved_model_bundle:
-        source: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.3.1/n2v-sem-demo_savedmodelbundle.zip
-        sha256: c55ab5528ec0dd8b3e00062df155ba00aef4971d7eacc3ed2d41db1f25917994
         authors:
-        - name: Deborah Schmidt
-          affiliation: MDC Berlin
+        - affiliation: MDC Berlin
+          name: Deborah Schmidt
+        sha256: c55ab5528ec0dd8b3e00062df155ba00aef4971d7eacc3ed2d41db1f25917994
+        source: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.3.1/n2v-sem-demo_savedmodelbundle.zip
         tensorflow_version: 1.13.1
-    download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
-    links:
-    - fiji/Fiji
-    id: fiji/N2VSEMDemo

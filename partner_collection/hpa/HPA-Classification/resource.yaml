@@ -1,37 +1,37 @@
-status: accepted
 id: hpa/HPA-Classification
+status: accepted
 type: application
 versions:
 - name: HPA Collection
+  status: accepted
   version_id: latest
   version_name: latest
-  status: accepted
   rdf_source:
-    root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
     config:
-      id: hpa
-      name: HPA
-      tags:
-      - hpa
-      logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
-      icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
       about_url: https://www.proteinatlas.org/
-      splash_title: The Human Protein Atlas
-      splash_subtitle:
-      splash_feature_list: []
-      explore_button_text: Start Exploring
       background_image: static/img/zoo-background.svg
+      default_type: model
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      id: hpa
+      logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      name: HPA
       resource_types:
       - model
       - application
-      default_type: model
-    type: application
+      splash_feature_list: []
+      splash_subtitle:
+      splash_title: The Human Protein Atlas
+      tags:
+      - hpa
+    description: Resources for BioImgage.IO curated by the the cellprofiling group
+      at HPA.
     format_version: 0.2.2
+    id: hpa/HPA-Classification
     name: HPA Collection
+    root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+    source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
     tags:
     - hpa
     - bioimage.io
-    description: Resources for BioImgage.IO curated by the the cellprofiling group
-      at HPA.
-    source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
-    id: hpa/HPA-Classification
+    type: application

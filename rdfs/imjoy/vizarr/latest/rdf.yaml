@@ -35,7 +35,7 @@ env: ''
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png
 id: imjoy/vizarr/latest
-name: vizarr
+name: ImJoy Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml
 requirements: []
 root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml

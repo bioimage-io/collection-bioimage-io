@@ -32,7 +32,7 @@ id: ilastik/live-cell-boundary-model/latest
 maintainers:
 - github_user: ilastik
   name: ilastik Team
-name: live-cell-boundary-model
+name: Live cell boundary model preview
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml
 requirements: []
 root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml

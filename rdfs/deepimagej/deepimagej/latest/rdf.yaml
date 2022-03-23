@@ -38,7 +38,7 @@ format_version: 0.2.2
 icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
 id: deepimagej/deepimagej/latest
 maintainers: []
-name: deepimagej
+name: deepImageJ Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej/latest/rdf.yaml
 requirements:
 - https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js
@@ -53,5 +53,5 @@ source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimage
 tags:
 - software
 - bioengine
-type: application
+type: collection
 version: 2.1.11

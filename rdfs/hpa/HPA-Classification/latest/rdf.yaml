@@ -38,7 +38,7 @@ env:
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
 id: hpa/HPA-Classification/latest
-name: HPA-Classification
+name: HPA Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml
 requirements:
 - https://cdn.jsdelivr.net/npm/apexcharts

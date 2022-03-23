@@ -1,40 +1,40 @@
-status: accepted
 id: imjoy/BioImageIO-Packager
+status: accepted
 type: application
 versions:
 - name: ImJoy Collection
+  status: accepted
   version_id: latest
   version_name: latest
-  status: accepted
   rdf_source:
-    root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
     config:
-      id: imjoy
-      name: ImJoy
-      tags:
-      - imjoy
-      logo: https://imjoy.io/static/img/imjoy-icon.svg
+      background_image: static/img/zoo-background.svg
+      default_type: application
+      explore_button_text: Start Exploring
       icon: https://imjoy.io/static/img/imjoy-icon.svg
-      splash_title: ImJoy
-      splash_subtitle: Deep Learning Made Easy!
+      id: imjoy
+      logo: https://imjoy.io/static/img/imjoy-icon.svg
+      name: ImJoy
+      resource_types:
+      - notebook
+      - application
       splash_feature_list:
       - Minimal and flexible plugin powered web application
       - Server-less progressive web application with offline support
       - Rich and interactive user interface powered by web technologies
-      explore_button_text: Start Exploring
-      background_image: static/img/zoo-background.svg
-      resource_types:
-      - notebook
-      - application
-      default_type: application
+      splash_subtitle: Deep Learning Made Easy!
+      splash_title: ImJoy
+      tags:
+      - imjoy
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
-    type: application
+    description: Resources for BioImgage.IO curated by the ImJoy Team.
     documentation: https://imjoy.io/docs
     format_version: 0.2.2
+    id: imjoy/BioImageIO-Packager
     name: ImJoy Collection
+    root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
     tags:
     - imjoy
     - bioimage.io
-    description: Resources for BioImgage.IO curated by the ImJoy Team.
-    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
-    id: imjoy/BioImageIO-Packager
+    type: application

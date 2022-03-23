@@ -1,67 +1,58 @@
-status: accepted
 id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic
+status: accepted
 type: application
 versions:
 - name: SplineDist (2D) - ZeroCostDL4Mic
+  status: accepted
   version_id: latest
   version_name: latest
-  status: accepted
   rdf_source:
-    root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    authors:
+    - Romain F. Laine and the ZeroCostDL4Mic Team
+    badges:
+    - icon: https://colab.research.google.com/assets/colab-badge.svg
+      label: Open in Colab
+      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    cite:
+    - doi: https://doi.org/10.1038/s41467-021-22518-0
+      text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+    - doi: https://doi.org/10.1101/2020.10.27.357640
+      text: 'Soham Mandal, Virginie Uhlmann. SplineDist: Automated Cell Segmentation
+        With Spline Curves. bioRxiv 2020.10.27.357640; doi: https://doi.org/10.1101/2020.10.27.357640'
     config:
-      id: zero
-      name: ZeroCostDL4Mic
-      version: 1.7.1
-      tags:
-      - ZeroCostDL4Mic
-      logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-      icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-      splash_title: ZeroCostDL4Mic
-      splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
-        in Microscopy
-      splash_feature_list: []
-      explore_button_text: Start Exploring
       background_image: static/img/zoo-background.svg
+      default_type: application
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      id: zero
+      logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      name: ZeroCostDL4Mic
       resource_types:
       - model
       - application
       - dataset
-      default_type: application
+      splash_feature_list: []
+      splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
+        in Microscopy
+      splash_title: ZeroCostDL4Mic
+      tags:
+      - ZeroCostDL4Mic
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    authors:
-    - Romain F. Laine and the ZeroCostDL4Mic Team
-    type: application
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    cite:
-    - text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
-        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-      doi: https://doi.org/10.1038/s41467-021-22518-0
-    - text: 'Soham Mandal, Virginie Uhlmann. SplineDist: Automated Cell Segmentation
-        With Spline Curves. bioRxiv 2020.10.27.357640; doi: https://doi.org/10.1101/2020.10.27.357640'
-      doi: https://doi.org/10.1101/2020.10.27.357640
-    maintainers: []
-    format_version: 0.2.2
-    name: SplineDist (2D) - ZeroCostDL4Mic
-    tags:
-    - colab
-    - notebook
-    - SplineDist
-    - segmentation
-    - ZeroCostDL4Mic
+      version: 1.7.1
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
     description: Instance segmentation of 2D images. SplineDist is a neural network
       inspired by StarDist, capable of performing image instance segmentation. Unlike
       StarDist, SplineDist uses cubic splines to describe the contour of each object
       and therefore can potentially segment objects of any shapes. This version is
       only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original
       publications this network is based on and make sure you cite these.
-    badges:
-    - label: Open in Colab
-      icon: https://colab.research.google.com/assets/colab-badge.svg
-      url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
-    covers:
-    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    format_version: 0.2.2
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic
     links:
     - zero/Notebook Preview
     - zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -71,4 +62,13 @@ versions:
     - zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
     - zero/Dataset_StarDist_2D_DeepBacs
     - zero/Dataset_SplineDist_2D_DeepBacs
-    id: zero/Notebook_SplineDist_2D_ZeroCostDL4Mic
+    maintainers: []
+    name: SplineDist (2D) - ZeroCostDL4Mic
+    root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+    tags:
+    - colab
+    - notebook
+    - SplineDist
+    - segmentation
+    - ZeroCostDL4Mic
+    type: application

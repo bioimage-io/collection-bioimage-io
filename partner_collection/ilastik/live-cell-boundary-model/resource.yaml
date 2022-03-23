@@ -1,41 +1,41 @@
-status: accepted
 id: ilastik/live-cell-boundary-model
+status: accepted
 type: application
 versions:
 - name: Live cell boundary model preview
+  status: accepted
   version_id: latest
   version_name: latest
-  status: accepted
   rdf_source:
-    root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    config:
-      id: ilastik
-      name: ilastik
-      tags:
-      - ilastik
-      logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
-      icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
-      splash_title: ilastik
-      splash_subtitle: the interactive learning and segmentation toolkit
-      splash_feature_list:
-      explore_button_text: Start Exploring
-      background_image: static/img/zoo-background.svg
-      resource_types:
-      - application
-      default_type: model
-      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
     authors:
     - name: ImJoy Team
     - name: ilastik Team
-    type: application
-    maintainers:
-    - name: ilastik Team
-      github_user: ilastik
+    config:
+      background_image: static/img/zoo-background.svg
+      default_type: model
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      id: ilastik
+      logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      name: ilastik
+      resource_types:
+      - application
+      splash_feature_list:
+      splash_subtitle: the interactive learning and segmentation toolkit
+      splash_title: ilastik
+      tags:
+      - ilastik
+      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    description: Run the live cell boundary model via the BioEngine
     format_version: 0.2.2
+    id: ilastik/live-cell-boundary-model
+    maintainers:
+    - github_user: ilastik
+      name: ilastik Team
     name: Live cell boundary model preview
+    root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+    source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
     tags:
     - ilastik
     - bioimage.io
-    description: Run the live cell boundary model via the BioEngine
-    source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
-    id: ilastik/live-cell-boundary-model
+    type: application

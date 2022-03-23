@@ -37,7 +37,7 @@ format_version: 0.2.2
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
 id: zero/Notebook Preview/latest
 maintainers: []
-name: Notebook Preview
+name: ZeroCost4Mic Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook
   Preview/latest/rdf.yaml
 requirements: []
