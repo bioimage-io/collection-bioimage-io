@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6079314
+id: 10.5281/zenodo.6079314
+nickname: wild_whale
+nickname_icon: 🐳
+owners:
+- 77626
+status: accepted
+type: model
+versions:
+- created: '2022-02-14 17:05:09.708440'
+  doi: 10.5281/zenodo.6079315
+  name: EpitheliaAffinityModel
+  status: accepted
+  version_id: '6079315'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/rdf.yaml
