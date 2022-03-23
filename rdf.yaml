@@ -1738,6 +1738,25 @@ collection:
   type: model
   versions: ['6224243']
 - authors:
+  - {name: Lorenzo Cerrone}
+  - {name: Adrian Wolny}
+  covers: ['https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/raw.png',
+    'https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/pred.png']
+  description: A 2D U-Net trained to predict the cell boundaries in confocal stacks
+    of Arabidopsis ovules. Trained on z-slices of 3D confocal images.
+  id: 10.5281/zenodo.6334383
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 2D UNet Arabidopsis Ovules
+  nickname: pioneering-rhino
+  nickname_icon: "\U0001F98F"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6334384/rdf.yaml
+  tags: [unet, 2d, semantic-segmentation, arabidopsis, ovules, cell-membrane, plant,
+    tissue, fluorescence-light-microscopy, pytorch, plantseg]
+  type: model
+  versions: ['6334384']
+- authors:
   - {name: Adrian Wolny}
   - {name: Lorenzo Cerrone}
   covers: ['https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/raw.png',
@@ -1831,8 +1850,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 47}
-  n_resources: {application: 46, collection: 18, dataset: 35, model: 22}
+  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 49}
+  n_resources: {application: 46, collection: 18, dataset: 35, model: 23}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
