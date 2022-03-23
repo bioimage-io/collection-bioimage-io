@@ -1066,7 +1066,9 @@
     },
     {
       "authors": [
-        "Perkin Elmer"
+        {
+          "name": "Perkin Elmer"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png"
@@ -1109,7 +1111,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png"
@@ -1132,8 +1136,12 @@
     },
     {
       "authors": [
-        "Christoph Spahn",
-        "Mike Heilemann"
+        {
+          "name": "Christoph Spahn"
+        },
+        {
+          "name": "Mike Heilemann"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/0417c6d1-0fe3-4d48-bc5a-dfaee6398433:532d7c49-5961-4d61-8ba2-a040f2f19cfd:A_E.coli_H-NS_mScarlet_examples.png/full/750,/0/default.png"
@@ -1157,7 +1165,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png"
@@ -1180,7 +1190,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png"
@@ -1201,8 +1213,12 @@
     },
     {
       "authors": [
-        "Christophe Leterrier",
-        "Romain F. Laine"
+        {
+          "name": "Christophe Leterrier"
+        },
+        {
+          "name": "Romain F. Laine"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_dataset.png"
@@ -1225,9 +1241,15 @@
     },
     {
       "authors": [
-        "Aki Stubb",
-        "Guillaume Jacquemet",
-        "Johanna Ivaska"
+        {
+          "name": "Aki Stubb"
+        },
+        {
+          "name": "Guillaume Jacquemet"
+        },
+        {
+          "name": "Johanna Ivaska"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png"
@@ -1250,8 +1272,12 @@
     },
     {
       "authors": [
-        "Mia Conduit",
-        "S\u00e9amus Holden"
+        {
+          "name": "Mia Conduit"
+        },
+        {
+          "name": "S\u00e9amus Holden"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/effa726a-dcdb-47a5-bd2e-63a4a6648ca7:aad7cd51-d389-4cf3-a84e-2d93d1891f20:B.subtilis_VerCINI_examples.png/full/750,/0/default.png"
@@ -1274,7 +1300,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_dataset.png"
@@ -1297,7 +1325,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png"
@@ -1321,8 +1351,12 @@
     },
     {
       "authors": [
-        "Christoph Spahn",
-        "Mike Heilemann"
+        {
+          "name": "Christoph Spahn"
+        },
+        {
+          "name": "Mike Heilemann"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png"
@@ -1345,12 +1379,24 @@
     },
     {
       "authors": [
-        "Christoph Spahn",
-        "Mike Heilemann",
-        "Mia Conduit",
-        "S\u00e9amus Holden",
-        "Pedro Matos Pereira",
-        "Mariana Pinho"
+        {
+          "name": "Christoph Spahn"
+        },
+        {
+          "name": "Mike Heilemann"
+        },
+        {
+          "name": "Mia Conduit"
+        },
+        {
+          "name": "S\u00e9amus Holden"
+        },
+        {
+          "name": "Pedro Matos Pereira"
+        },
+        {
+          "name": "Mariana Pinho"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png"
@@ -1373,8 +1419,12 @@
     },
     {
       "authors": [
-        "Johanna Jukkala",
-        "Guillaume Jacquemet"
+        {
+          "name": "Johanna Jukkala"
+        },
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png"
@@ -1397,7 +1447,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png"
@@ -1418,8 +1470,12 @@
     },
     {
       "authors": [
-        "Gautier Follain",
-        "Guillaume Jacquemet"
+        {
+          "name": "Gautier Follain"
+        },
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png"
@@ -1440,8 +1496,12 @@
     },
     {
       "authors": [
-        "Nathan H. Roy",
-        "Guillaume Jacquemet"
+        {
+          "name": "Nathan H. Roy"
+        },
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png"
@@ -1462,9 +1522,15 @@
     },
     {
       "authors": [
-        "Hussein Al-Akhrass",
-        "Johanna Ivaska",
-        "Guillaume Jacquemet"
+        {
+          "name": "Hussein Al-Akhrass"
+        },
+        {
+          "name": "Johanna Ivaska"
+        },
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png"
@@ -1485,8 +1551,12 @@
     },
     {
       "authors": [
-        "Spahn Christoph",
-        "Heilemann Mike"
+        {
+          "name": "Spahn Christoph"
+        },
+        {
+          "name": "Heilemann Mike"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png"
@@ -1509,8 +1579,12 @@
     },
     {
       "authors": [
-        "Mia Conduit",
-        "S\u00e9amus Holden"
+        {
+          "name": "Mia Conduit"
+        },
+        {
+          "name": "S\u00e9amus Holden"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/8ba101cf-97ac-4e68-9fff-4cc130b5ea81:93b67447-8b0a-4053-a522-9c141623ca6f:A_Multilabel_U-Net_example_B.subtilis.png/full/750,/0/default.png"
@@ -1534,8 +1608,12 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet",
-        "Lucas von Chamier"
+        {
+          "name": "Guillaume Jacquemet"
+        },
+        {
+          "name": "Lucas von Chamier"
+        }
       ],
       "covers": [
         "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png"
@@ -1556,8 +1634,12 @@
     },
     {
       "authors": [
-        "Christoph Spahn",
-        "Mike Heilemann"
+        {
+          "name": "Christoph Spahn"
+        },
+        {
+          "name": "Mike Heilemann"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/5b4a4304-ea44-47ce-9c75-4a069bfc9536:e3c27642-4605-42c3-ad3c-1e120917b97e:Antibiotic_profiling_examples.png/full/750,/0/default.png"
@@ -1580,8 +1662,12 @@
     },
     {
       "authors": [
-        "Christoph Spahn",
-        "Mike Heilemann"
+        {
+          "name": "Christoph Spahn"
+        },
+        {
+          "name": "Mike Heilemann"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/e30f5766-cc61-4a7c-9d36-30681f2dcbc2:677b2046-5d0b-49df-b231-b5470b6fcbc8:A_Object_detection_cell_cycle.png/full/750,/0/default.png"
@@ -1604,7 +1690,9 @@
     },
     {
       "authors": [
-        "Christoph Spahn"
+        {
+          "name": "Christoph Spahn"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Fnet_exemplary_data_mitochondria.png"
@@ -1627,8 +1715,12 @@
     },
     {
       "authors": [
-        "Christoph Spahn",
-        "Mike Heilemann"
+        {
+          "name": "Christoph Spahn"
+        },
+        {
+          "name": "Mike Heilemann"
+        }
       ],
       "covers": [
         "https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png"
@@ -1652,7 +1744,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet"
+        {
+          "name": "Guillaume Jacquemet"
+        }
       ],
       "covers": [
         "https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/pix2pix_dataset.png"
@@ -1694,7 +1788,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1728,7 +1824,9 @@
     },
     {
       "authors": [
-        "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        {
+          "name": "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1769,7 +1867,9 @@
     },
     {
       "authors": [
-        "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        {
+          "name": "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1805,7 +1905,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1848,7 +1950,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1883,7 +1987,9 @@
     },
     {
       "authors": [
-        "Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team"
+        {
+          "name": "Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1917,7 +2023,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1951,7 +2059,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -1990,7 +2100,9 @@
     },
     {
       "authors": [
-        "Romain Laine and the ZeroCostDL4Mic Team"
+        {
+          "name": "Romain Laine and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2027,7 +2139,9 @@
     },
     {
       "authors": [
-        "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        {
+          "name": "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        }
       ],
       "badges": [
         {
@@ -2065,7 +2179,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2099,7 +2215,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2137,7 +2255,9 @@
     },
     {
       "authors": [
-        "Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2176,7 +2296,9 @@
     },
     {
       "authors": [
-        "Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team"
+        {
+          "name": "Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2214,7 +2336,9 @@
     },
     {
       "authors": [
-        "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        {
+          "name": "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2248,7 +2372,9 @@
     },
     {
       "authors": [
-        "Romain Laine and the ZeroCostDL4Mic Team"
+        {
+          "name": "Romain Laine and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2288,7 +2414,9 @@
     },
     {
       "authors": [
-        "Romain Laine and the ZeroCostDL4Mic Team"
+        {
+          "name": "Romain Laine and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2325,7 +2453,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2358,7 +2488,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2394,7 +2526,9 @@
     },
     {
       "authors": [
-        "Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team"
+        {
+          "name": "Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2432,7 +2566,9 @@
     },
     {
       "authors": [
-        "Romain F. Laine and the ZeroCostDL4Mic Team"
+        {
+          "name": "Romain F. Laine and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2473,7 +2609,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2517,7 +2655,9 @@
     },
     {
       "authors": [
-        "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        {
+          "name": "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        }
       ],
       "badges": [
         {
@@ -2562,7 +2702,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2597,7 +2739,9 @@
     },
     {
       "authors": [
-        "Romain Laine and the ZeroCostDL4Mic Team"
+        {
+          "name": "Romain Laine and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2633,7 +2777,9 @@
     },
     {
       "authors": [
-        "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        {
+          "name": "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        }
       ],
       "badges": [
         {
@@ -2669,7 +2815,9 @@
     },
     {
       "authors": [
-        "Estibaliz G\u00f3mez de Mariscal and the ZeroCostDL4Mic teams"
+        {
+          "name": "Estibaliz G\u00f3mez de Mariscal and the ZeroCostDL4Mic teams"
+        }
       ],
       "badges": [
         {
@@ -2708,7 +2856,9 @@
     },
     {
       "authors": [
-        "Daniel Krentzel and the ZeroCostDL4Mic Team"
+        {
+          "name": "Daniel Krentzel and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2743,7 +2893,9 @@
     },
     {
       "authors": [
-        "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        {
+          "name": "Estibaliz G\u00f3mez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams"
+        }
       ],
       "badges": [
         {
@@ -2779,7 +2931,9 @@
     },
     {
       "authors": [
-        "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        {
+          "name": "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2817,7 +2971,9 @@
     },
     {
       "authors": [
-        "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        {
+          "name": "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2853,7 +3009,9 @@
     },
     {
       "authors": [
-        "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        {
+          "name": "Lucas von Chamier and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
@@ -2889,7 +3047,9 @@
     },
     {
       "authors": [
-        "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        {
+          "name": "Guillaume Jacquemet and the ZeroCostDL4Mic Team"
+        }
       ],
       "badges": [
         {
