@@ -42,7 +42,8 @@ versions:
   - pytorch
   - plantseg  # added here
   maintainers:
-  - github_user: wolnyid: 10.5281/zenodo.6334777
+  - github_user: wolny
+id: 10.5281/zenodo.6334777
 doi: 10.5281/zenodo.6334777
 type: model
 owners:
