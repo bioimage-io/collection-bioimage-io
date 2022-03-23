@@ -15,7 +15,7 @@ from ruamel.yaml import YAML, comments
 from bare_utils import DEPLOYED_BASE_URL
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.io_ import serialize_raw_resource_description
-from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION, resolve_source
+from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION, resolve_rdf_source, resolve_source
 
 
 # todo: use MyYAML from bioimageio.spec. see comment below
@@ -223,21 +223,16 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
             assert missing not in rdf.values(), rdf
         else:
             try:
-                rdf_node = load_raw_resource_description(version_info["rdf_source"])
+                rdf, rdf_name, rdf_root = resolve_rdf_source(version_info["rdf_source"])
+                if not isinstance(rdf, dict):
+                    raise TypeError(type(rdf))
+                rdf["rdf_root"] = rdf_root  # we use this after updating the rdf to resolve remote sources
             except Exception as e:
-                warnings.warn(f"Failed to interpret {version_info['rdf_source']} as rdf: {e}")
-                try:
-                    rdf_path = resolve_source(version_info["rdf_source"])
-                    rdf = yaml.load(rdf_path)
-                    if not isinstance(rdf, dict):
-                        raise TypeError(type(rdf))
-                except Exception as e:
-                    rdf = {
-                        "invalid_original_rdf_source": version_info["rdf_source"],
-                        "invalid_original_rdf_source_error": str(e),
-                    }
-            else:
-                rdf = serialize_raw_resource_description_to_dict(rdf_node)
+                warnings.warn(f"Failed to load {version_info['rdf_source']}: {e}")
+                rdf = {
+                    "invalid_original_rdf_source": version_info["rdf_source"],
+                    "invalid_original_rdf_source_error": str(e),
+                }
 
         if "config" not in rdf:
             rdf["config"] = {}
@@ -260,6 +255,15 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
         rdf["id"] = f"{resource_id}/{version_id}"
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
+
+        # resolve file paths relative to remote resource location
+        if "root_path" in rdf:
+            try:
+                # a round-trip will resolve all local paths to urls if 'root_path' is a url
+                rdf_node = load_raw_resource_description(rdf)
+                rdf = serialize_raw_resource_description_to_dict(rdf_node)
+            except Exception as e:
+                warnings.warn(f"Failed round-trip to resolve any remote sources: {e}")
 
         # sort rdf
         rdf = rec_sort(rdf)
