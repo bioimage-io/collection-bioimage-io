@@ -1759,6 +1759,26 @@ collection:
 - authors:
   - {name: Adrian Wolny}
   - {name: Lorenzo Cerrone}
+  covers: ['https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_raw.png',
+    'https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_sneak.png',
+    'https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png']
+  description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
+    of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
+  id: 10.5281/zenodo.6334583
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Arabidopsis Ovules
+  nickname: passionate-t-rex
+  nickname_icon: "\U0001F996"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/6346519/rdf.yaml
+  tags: [plantseg, unet, 3d, semantic-segmentation, arabidopsis, ovules, cell-membrane,
+    plant, tissue, fluorescence-light-microscopy, pytorch]
+  type: model
+  versions: ['6346519', '6334584']
+- authors:
+  - {name: Adrian Wolny}
+  - {name: Lorenzo Cerrone}
   covers: ['https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/raw.png',
     'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
   description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
@@ -1870,8 +1890,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 54}
-  n_resources: {application: 46, collection: 18, dataset: 35, model: 24}
+  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 57}
+  n_resources: {application: 46, collection: 18, dataset: 35, model: 25}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
