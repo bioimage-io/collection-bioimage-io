@@ -7,6 +7,18 @@ versions:
   name: 2D UNet Arabidopsis Ovules
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/rdf.yaml
+  tags:
+  - unet
+  - 2d
+  - semantic-segmentation
+  - arabidopsis
+  - ovules
+  - cell-membrane
+  - plant
+  - tissue
+  - fluorescence-light-microscopy
+  - pytorch
+  - plantseg  # added here
 id: 10.5281/zenodo.6334383
 doi: 10.5281/zenodo.6334383
 type: model
