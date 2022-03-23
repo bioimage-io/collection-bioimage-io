@@ -41,6 +41,8 @@ inputs:
 license: MIT
 links:
 - imjoy/BioImageIO-Packager
+maintainers:
+- github_user: wolny
 name: 2D UNet Arabidopsis Apical Stem Cells
 outputs:
 - axes: bczyx
