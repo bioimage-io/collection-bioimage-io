@@ -1,12 +1,23 @@
+doi: 10.5281/zenodo.6334881
+id: 10.5281/zenodo.6334881
+nickname: laid-back-lobster
+nickname_icon: 🦞
+owners:
+- 66700
 status: accepted
+type: model
 versions:
-- version_id: '6334882'
-  doi: 10.5281/zenodo.6334882
-  created: '2022-03-07 15:22:46.950734'
-  status: accepted
+- created: '2022-03-11 10:52:31.794285'
+  doi: 10.5281/zenodo.6346477
   name: 2D UNet Arabidopsis Apical Stem Cells
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/rdf.yaml
+  status: accepted
+  version_id: '6346477'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/rdf.yaml
+- created: '2022-03-07 15:22:46.950734'
+  doi: 10.5281/zenodo.6334882
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
   tags:
   - unet
   - 2d
@@ -18,11 +29,7 @@ versions:
   - tissue
   - fluorescence-light-microscopy
   - pytorch
-  - plantset  # added here
-id: 10.5281/zenodo.6334881
-doi: 10.5281/zenodo.6334881
-type: model
-owners:
-- 66700
-nickname: laid-back-lobster
-nickname_icon: '🦞'
+  - plantset
+  version_id: '6334882'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/rdf.yaml
