@@ -8,11 +8,6 @@ versions:
   status: accepted
   rdf_source:
     root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
-    format_version: 0.2.2
-    tags:
-    - ilastik
-    - bioimage.io
-    name: ilastik
     config:
       id: ilastik
       name: ilastik
@@ -29,12 +24,17 @@ versions:
       - application
       default_type: model
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    authors:
+    - name: ilastik Team
     type: application
     maintainers:
     - name: ilastik Team
       github_user: ilastik
-    authors:
-    - name: ilastik Team
+    format_version: 0.2.2
+    name: ilastik
+    tags:
+    - ilastik
+    - bioimage.io
     description: the interactive learning and segmentation toolkit
     documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
