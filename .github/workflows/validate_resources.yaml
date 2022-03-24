@@ -127,9 +127,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: artifacts
-    # todo: checkout partner gh-pages for their test summaries
     - name: install script deps
       run: pip install typer packaging numpy bioimageio.spec
+    - name: download partner test summaries
+      run: python scripts/download_partner_test_summaries.py
     - name: prepare to deploy
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Upload preview
