@@ -4077,6 +4077,7 @@
         ],
         "test_summaries": {
           "deploy_branch": "gh-pages",
+          "deploy_folder": "test_summaries",
           "repository": "deepimagej/models",
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/master"
@@ -4148,6 +4149,7 @@
         ],
         "test_summaries": {
           "deploy_branch": "gh-pages",
+          "deploy_folder": "test_summaries",
           "repository": "ilastik/bioimage-io-resources",
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/main"

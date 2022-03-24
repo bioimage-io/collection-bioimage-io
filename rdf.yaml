@@ -2011,8 +2011,8 @@ config:
     splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
     splash_title: deepImageJ
     tags: [deepimagej]
-    test_summaries: {deploy_branch: gh-pages, repository: deepimagej/models, workflow: test_bioimageio_resources.yaml,
-      workflow_ref: refs/heads/master}
+    test_summaries: {deploy_branch: gh-pages, deploy_folder: test_summaries, repository: deepimagej/models,
+      workflow: test_bioimageio_resources.yaml, workflow_ref: refs/heads/master}
     url_root: https://raw.githubusercontent.com/deepimagej/models/master
   - background_image: static/img/zoo-background.svg
     explore_button_text: Start Exploring
@@ -2056,7 +2056,7 @@ config:
     splash_subtitle: the interactive learning and segmentation toolkit
     splash_title: ilastik
     tags: [ilastik]
-    test_summaries: {deploy_branch: gh-pages, repository: ilastik/bioimage-io-resources,
+    test_summaries: {deploy_branch: gh-pages, deploy_folder: test_summaries, repository: ilastik/bioimage-io-resources,
       workflow: test_bioimageio_resources.yaml, workflow_ref: refs/heads/main}
     url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
   - about_url: https://www.proteinatlas.org/
