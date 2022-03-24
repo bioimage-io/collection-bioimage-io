@@ -1,0 +1,18 @@
+status: accepted
+versions:
+- version_id: '6348085'
+  doi: 10.5281/zenodo.6348085
+  created: '2022-03-11 22:32:05.554959'
+  status: accepted
+  name: StarDist Fluorescence Nuclei Segmentation
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/rdf.yaml
+  maintainers:
+  - github_user: uschmidt83
+id: 10.5281/zenodo.6348084
+doi: 10.5281/zenodo.6348084
+type: model
+owners:
+- 313404
+nickname: fearless-crab
+nickname_icon: 🦀

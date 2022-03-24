@@ -39,7 +39,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer bioimageio.spec lxml bioimageio.core
+      run: pip install typer bioimageio.spec lxml bioimageio.core packaging
     - name: update RDFs
       id: update_rdfs
       run: python scripts/update_rdfs.py --branch ${{ github.head_ref || github.ref }}
@@ -129,7 +129,7 @@ jobs:
         path: artifacts
     # todo: checkout partner gh-pages for their test summaries
     - name: install script deps
-      run: pip install typer bioimageio.spec
+      run: pip install typer packaging numpy bioimageio.spec
     - name: prepare to deploy
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Upload preview

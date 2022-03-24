@@ -8,13 +8,14 @@ from itertools import product
 from pathlib import Path
 from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
+import numpy
 from marshmallow import missing
 from ruamel.yaml import YAML, comments
 
 from bare_utils import DEPLOYED_BASE_URL
 from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
 from bioimageio.spec.io_ import serialize_raw_resource_description
-from bioimageio.spec.shared import resolve_source
+from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION, resolve_rdf_source, resolve_source
 
 
 # todo: use MyYAML from bioimageio.spec. see comment below
@@ -35,6 +36,49 @@ class MyYAML(YAML):
 
 # todo: clean up difference to bioimageio.spec.shared.yaml (diff is typ='safe'), but with 'safe' enforce_block_style does not work
 yaml = MyYAML()
+
+
+with (Path(__file__).parent / "../animals.yaml").open(encoding="utf-8") as f:
+    ANIMALS: Dict[str, str] = yaml.load(f)
+
+
+ADJECTIVES: Tuple[str] = tuple((Path(__file__).parent / "../adjectives.txt").read_text().split())
+
+# collect known nicknames independent of resource status (to avoid nickname conflicts if resources are unblocked)
+KNOWN_NICKNAMES = [
+    yaml.load(p).get("nickname") for p in (Path(__file__).parent / "../collection").glob("**/resource.yaml")
+]
+# note: may be appended to by 'get_animal_nickname'
+
+
+def get_animal_nickname() -> Tuple[str, str]:
+    """get animal nickname and associated icon"""
+    for _ in range(100000):
+        animal_adjective = numpy.random.choice(ADJECTIVES)
+        animal_name = numpy.random.choice(list(ANIMALS.keys()))
+        nickname = f"{animal_adjective}-{animal_name}"
+        if nickname not in KNOWN_NICKNAMES:
+            break
+    else:
+        raise RuntimeError("Could not find free nickname")
+
+    KNOWN_NICKNAMES.append(nickname)
+    return nickname, ANIMALS[animal_name]
+
+
+_NICKNAME_DASHES = tuple(["-" + a for a in ANIMALS if "-" in a] + ["-"])
+
+
+def split_animal_nickname(nickname: str) -> Tuple[str, str]:
+    """split an animal nickname into adjective and animal name"""
+    for d in _NICKNAME_DASHES:
+        idx = nickname.rfind(d)
+        if idx != -1:
+            break
+    else:
+        raise ValueError(f"Missing dash in nickname {nickname}")
+
+    return nickname[:idx], nickname[idx + 1 :]
 
 
 def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
@@ -148,7 +192,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
     Args:
         resource: resource info
         dist: output path
-        version_id: (if not None) only write rdf for specific version
+        only_for_version_id: (if not None) only write rdf for specific version
 
     Returns: list of updated version_ids
 
@@ -157,14 +201,12 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
     resource_id = resource["id"]
     updated_versions = []
-    for version_info in resource["versions"]:
+    for resource_version in resource["versions"]:
+        version_info = {k: v for k, v in resource.items() if k != "versions"}
+        version_info.update(resource_version)
         version_id = version_info["version_id"]
         if version_info["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
             continue
-
-        # Ignore the name in the version info
-        if "name" in version_info:
-            del version_info["name"]
 
         if isinstance(version_info["rdf_source"], dict):
             if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
@@ -181,21 +223,16 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
             assert missing not in rdf.values(), rdf
         else:
             try:
-                rdf_node = load_raw_resource_description(version_info["rdf_source"])
+                rdf, rdf_name, rdf_root = resolve_rdf_source(version_info["rdf_source"])
+                if not isinstance(rdf, dict):
+                    raise TypeError(type(rdf))
+                rdf["root_path"] = rdf_root  # we use this after updating the rdf to resolve remote sources
             except Exception as e:
-                warnings.warn(f"Failed to interpret {version_info['rdf_source']} as rdf: {e}")
-                try:
-                    rdf_path = resolve_source(version_info["rdf_source"])
-                    rdf = yaml.load(rdf_path)
-                    if not isinstance(rdf, dict):
-                        raise TypeError(type(rdf))
-                except Exception as e:
-                    rdf = {
-                        "invalid_original_rdf_source": version_info["rdf_source"],
-                        "invalid_original_rdf_source_error": str(e),
-                    }
-            else:
-                rdf = serialize_raw_resource_description_to_dict(rdf_node)
+                warnings.warn(f"Failed to load {version_info['rdf_source']}: {e}")
+                rdf = {
+                    "invalid_original_rdf_source": version_info["rdf_source"],
+                    "invalid_original_rdf_source_error": str(e),
+                }
 
         if "config" not in rdf:
             rdf["config"] = {}
@@ -205,7 +242,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         # Allowing to override fields
         for k in version_info:
             # Place these fields under config.bioimageio
-            if k in ["created", "doi", "status", "version_id", "version_name"]:
+            if k in ["created", "doi", "status", "version_id", "version_name", "owners", "nickname", "nickname_icon"]:
                 rdf["config"]["bioimageio"][k] = version_info[k]
             else:
                 rdf[k] = version_info[k]
@@ -218,6 +255,15 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
         rdf["id"] = f"{resource_id}/{version_id}"
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
+
+        # resolve file paths relative to remote resource location
+        if "root_path" in rdf:
+            try:
+                # a round-trip will resolve all local paths to urls if 'root_path' is a url
+                rdf_node = load_raw_resource_description(rdf)
+                rdf = serialize_raw_resource_description_to_dict(rdf_node)
+            except Exception as e:
+                warnings.warn(f"Failed round-trip to resolve any remote sources: {e}")
 
         # sort rdf
         rdf = rec_sort(rdf)
@@ -232,7 +278,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
 def enforce_block_style_resource(resource: dict):
     """enforce block style except for version:rdf_source, which might be an rdf dict"""
-    resource = copy.deepcopy(resource)
+    resource = rec_sort(copy.deepcopy(resource))
 
     rdf_sources = [v.pop("rdf_source") for v in resource.get("versions", [])]
     resource = enforce_block_style(resource)

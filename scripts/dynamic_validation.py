@@ -7,6 +7,12 @@ import typer
 from bioimageio.spec.shared import yaml
 
 
+def test_summary_from_exception(name, exception):
+    return dict(
+        name=name, status="failed", error=str(exception), traceback=traceback.format_tb(exception.__traceback__)
+    )
+
+
 def main(
     dist: Path,
     resource_id: str,
@@ -30,16 +36,18 @@ def main(
         try:
             from bioimageio.core.resource_tests import test_resource
         except Exception as e:
-            summary = dict(
-                name="import test_resource from test environment",
-                status="failed",
-                error=str(e),
-                traceback=traceback.format_tb(e.__traceback__),
-            )
+            summary = test_summary_from_exception("import test_resource from test environment", e)
         else:
-            summary = test_resource(rdf_path, weight_format=weight_format)
-            if "name" not in summary:  # todo: remove, summaries of the future always have a name
-                summary["name"] = "reproduced test outputs from test inputs"
+            try:
+                rdf = yaml.load(rdf_path)
+                test_kwargs = rdf.get("config", {}).get("bioimageio", {}).get("test_kwargs", {}).get(weight_format, {})
+            except Exception as e:
+                summary = test_summary_from_exception("check for test kwargs", e)
+            else:
+                try:
+                    summary = test_resource(rdf_path, weight_format=weight_format, **test_kwargs)
+                except Exception as e:
+                    summary = test_summary_from_exception("call 'test_resource'", e)
     else:
         env_path = dist / "static_validation_artifact" / resource_id / version_id / f"conda_env_{weight_format}.yaml"
         if env_path.exists():

@@ -1,9 +1,9 @@
 import copy
 import shutil
 from pathlib import Path
-from typing import Optional
 
 import typer
+from packaging.version import Version
 
 from bioimageio.spec.shared import yaml
 from utils import iterate_known_resource_versions
@@ -74,7 +74,8 @@ def main(
             for sp in static_validation_summaries:
                 sub_summary = get_sub_summary(sp)
                 test_summary["tests"]["bioimageio"].append(sub_summary)
-                spec_versions.add(sub_summary.get("bioimageio_spec_version"))
+                spec_versions.add(Version(sub_summary["bioimageio_spec_version"]))
+
                 success &= sub_summary.get("status") == "passed"
 
             if local:
@@ -96,19 +97,11 @@ def main(
             for sp in dyn_sums:
                 sub_summary = get_sub_summary(sp)
                 test_summary["tests"]["bioimageio"].append(sub_summary)
-                # spec_versions.add(sub_summary.get("bioimageio_spec_version"))  # may be behind due to pending core release
-                core_versions.add(sub_summary.get("bioimageio_core_version"))
+                core_versions.add(Version(sub_summary["bioimageio_core_version"]))
                 success &= sub_summary.get("status") == "passed"
 
-            if len(spec_versions) == 1:
-                test_summary["bioimageio_spec_version"] = spec_versions.pop()
-            elif len(spec_versions) > 1:
-                raise RuntimeError(spec_versions)
-
-            if len(core_versions) == 1:
-                test_summary["bioimageio_core_version"] = core_versions.pop()
-            elif len(core_versions) > 1:
-                raise RuntimeError(core_versions)
+            test_summary["bioimageio_spec_version"] = str(max(spec_versions))
+            test_summary["bioimageio_core_version"] = str(max(core_versions))
 
             test_summary["status"] = "passed" if success else "failed"
 

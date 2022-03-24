@@ -1,0 +1,52 @@
+status: accepted
+versions:
+- version_id: '6346524'
+  doi: 10.5281/zenodo.6346524
+  created: '2022-03-11 11:08:55.780841'
+  status: accepted
+  name: 3D UNet Lateral Root Primordia Cells
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/rdf.yaml
+  tags:
+  - plantseg
+  - unet
+  - 3d
+  - semantic-segmentation
+  - arabidopsis
+  - lateral-root
+  - cell-membrane
+  - plant
+  - tissue
+  - light-sheet-fluorescence-microscopy
+  - pytorch
+  - plantseg
+  maintainers:
+  - github_user: wolny
+- version_id: '6334778'
+  doi: 10.5281/zenodo.6334778
+  created: '2022-03-07 14:04:51.169223'
+  status: accepted
+  name: 3D UNet Lateral Root Primordia Cells
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/0b97165c-21d6-46c2-ae7a-474da1619b7b/rdf.yaml
+  tags:
+  - unet
+  - 3d
+  - semantic-segmentation
+  - arabidopsis
+  - lateral-root
+  - cell-membrane
+  - plant
+  - tissue
+  - light-sheet-fluorescence-microscopy
+  - pytorch
+  - plantseg  # added here
+  maintainers:
+  - github_user: wolny
+id: 10.5281/zenodo.6334777
+doi: 10.5281/zenodo.6334777
+type: model
+owners:
+- 66700
+nickname: thoughtful-turtle
+nickname_icon: 🐢

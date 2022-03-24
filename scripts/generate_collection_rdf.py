@@ -22,7 +22,6 @@ SUMMARY_FIELDS = [
     "license",
     "links",
     "name",
-    "owners",
     "rdf_source",
     "source",
     "tags",
@@ -30,11 +29,17 @@ SUMMARY_FIELDS = [
     "versions",
 ]
 
+SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
+    "nickname",
+    "nickname_icon",
+    "owners",
+]
+
 
 def main(
     collection: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
-    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",
+    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",  # todo: rename (not a valid rdf)
     dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
@@ -79,8 +84,9 @@ def main(
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
         else:
             summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
-            if latest_version["config"]["bioimageio"].get("owners"):
-                summary["owners"] = latest_version["config"]["bioimageio"]["owners"]
+            for k in latest_version["config"]["bioimageio"]:
+                if k in SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO:
+                    summary[k] = latest_version["config"]["bioimageio"][k]
 
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
@@ -96,6 +102,12 @@ def main(
     rdf["config"] = rdf.get("config", {})
     rdf["config"]["n_resources"] = n_accepted
     rdf["config"]["n_resource_versions"] = n_accepted_versions
+
+    # check for unique nicknames
+    nicknames = [e["nickname"] for e in rdf["collection"] if "nickname" in e]
+    duplicate_nicknames = [nick for i, nick in enumerate(nicknames) if nick in nicknames[:i]]
+    if duplicate_nicknames:
+        raise ValueError(f"Duplicate nicknames: {duplicate_nicknames}")
 
     rdf_path = dist / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)

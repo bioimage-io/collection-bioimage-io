@@ -1,6 +1,5 @@
 import shutil
 import warnings
-from distutils.version import StrictVersion
 from pathlib import Path
 from typing import Dict, List, Optional, Union
 
@@ -8,6 +7,7 @@ import requests
 import typer
 from marshmallow import missing
 from marshmallow.utils import _Missing
+from packaging.version import Version
 
 from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
@@ -15,7 +15,7 @@ from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
-from utils import iterate_over_gh_matrix
+from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nickname
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
@@ -59,16 +59,15 @@ def get_env_from_deps(deps: Dependencies):
     return conda_env
 
 
-def get_version_range(v: StrictVersion) -> str:
-    v_major, v_minor, v_patch = v.version
-    return f">={v_major}.{v_minor},<{v_major}.{v_minor + 1}"
+def get_version_range(v: Version) -> str:
+    return f">={v.major}.{v.minor},<{v.major}.{v.minor + 1}"
 
 
 def get_default_env(
     *,
     opset_version: Optional[int] = None,
-    pytorch_version: Optional[StrictVersion] = None,
-    tensorflow_version: Optional[StrictVersion] = None,
+    pytorch_version: Optional[Version] = None,
+    tensorflow_version: Optional[Version] = None,
 ):
     conda_env = get_base_env()
     if opset_version is not None:
@@ -82,15 +81,15 @@ def get_default_env(
         conda_env["dependencies"].append("cpuonly")
 
     if tensorflow_version is not None:
-        tf_major, tf_minor, tf_patch = tensorflow_version.version
-
         # tensorflow 1.15 is not available on conda, so we need to inject this as a pip dependency
-        if (tf_major, tf_minor) == (1, 15):
+        if (tensorflow_version.major, tensorflow_version.minor) == (1, 15):
             assert opset_version is None
             assert pytorch_version is None
             conda_env["dependencies"] = ["pip", "python >=3.7,<3.8"]  # tf 1.15 not available for py>=3.8
             # get bioimageio.core (and its dependencies) via pip as well to avoid conda/pip mix
-            conda_env["dependencies"].append({"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}"]})
+            conda_env["dependencies"].append(
+                {"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}"]}
+            )
         else:  # use conda otherwise
             conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
 
@@ -99,10 +98,8 @@ def get_default_env(
 
 def write_conda_env_file(*, rd: Model, weight_format: WeightsFormat, path: Path, env_name: str):
     assert isinstance(rd, Model)
-    given_versions: Dict[str, Union[_Missing, StrictVersion]] = {}
-    default_versions = dict(
-        pytorch_version=StrictVersion("1.10"), tensorflow_version=StrictVersion("1.15"), opset_version=15
-    )
+    given_versions: Dict[str, Union[_Missing, Version]] = {}
+    default_versions = dict(pytorch_version=Version("1.10"), tensorflow_version=Version("1.15"), opset_version=15)
     if weight_format in ["pytorch_state_dict", "torchscript"]:
         given_versions["pytorch_version"] = rd.weights[weight_format].pytorch_version
     elif weight_format in ["tensorflow_saved_model_bundle", "keras_hdf5"]:
@@ -186,6 +183,16 @@ def main(
         else:
             raise FileNotFoundError(f"{resource_id}/{version_id}/rdf.yaml in {rdf_dirs}")
 
+        # validate nickname and nickname_icon
+        rdf = yaml.load(rdf_path)
+        nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname", missing)
+        if nickname is not missing:
+            adjective, animal = split_animal_nickname(nickname)
+            assert adjective in ADJECTIVES, f"'{adjective}' not in adjectives.txt"
+            assert animal in ANIMALS
+            nickname_icon = rdf["config"]["bioimageio"]["nickname_icon"]
+            assert nickname_icon == ANIMALS[animal]
+
         # add rdf to dist (future static_validation_artifact)
         deploy_rdf_path = dist / resource_id / version_id / "rdf.yaml"
         deploy_rdf_path.parent.mkdir(parents=True, exist_ok=True)
@@ -197,6 +204,7 @@ def main(
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
         if not static_summary["error"]:
+            # validate rdf using the latest format version
             latest_static_summary = validate(rdf_path, update_format=True)
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(rdf_path, update_to_format="latest")
