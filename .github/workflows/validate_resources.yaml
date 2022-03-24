@@ -139,11 +139,6 @@ jobs:
         name: preview
         path: dist/gh_pages_update
         retention-days: 90
-    - name: debug
-      run: |
-        ls -d dist/gh_pages_update/*
-        ls -d dist/gh_pages_update/*/*
-        ls -d dist/gh_pages_update/*/*/*
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
       uses: JamesIves/github-pages-deploy-action@v4.2.3
