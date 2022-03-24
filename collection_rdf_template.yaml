@@ -39,6 +39,7 @@ config:
       test_summaries:
         repository: deepimagej/models
         deploy_branch: gh-pages
+        deploy_folder: test_summaries
         workflow: test_bioimageio_resources.yaml
         workflow_ref: refs/heads/master
     - id: fiji
