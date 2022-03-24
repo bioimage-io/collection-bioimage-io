@@ -3563,6 +3563,38 @@
     {
       "authors": [
         {
+          "name": "Constantin Pape; @constantinpape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/cover.png"
+      ],
+      "description": "affinity-model",
+      "id": "10.5281/zenodo.6079314",
+      "license": "CC-BY-4.0",
+      "links": [
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "EpitheliaAffinityModel",
+      "nickname": "wild-whale",
+      "nickname_icon": "\ud83d\udc33",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6079315/rdf.yaml",
+      "tags": [
+        "u-net",
+        "segmentation"
+      ],
+      "type": "model",
+      "versions": [
+        "6079315"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Hao Xu"
         },
         {
@@ -3992,13 +4024,13 @@
       "application": 92,
       "collection": 36,
       "dataset": 70,
-      "model": 57
+      "model": 59
     },
     "n_resources": {
       "application": 46,
       "collection": 18,
       "dataset": 35,
-      "model": 25
+      "model": 26
     },
     "partners": [
       {
