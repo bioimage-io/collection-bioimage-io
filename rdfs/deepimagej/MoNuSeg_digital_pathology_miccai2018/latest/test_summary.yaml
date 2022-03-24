@@ -1,2 +1,6 @@
 rdf_sha256: 317be4a5f96c7291e6767831ea4a2e281a4885dbb3fcc5517be205963f1cda74
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/MoNuSeg_digital_pathology_miccai2018/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

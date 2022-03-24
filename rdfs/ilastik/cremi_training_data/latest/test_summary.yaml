@@ -1,2 +1,6 @@
 rdf_sha256: 3802f5349cf17a471e69b8ebb243b6979f1bbd8e4e69cb789a0891f6bd955532
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for ilastik/cremi_training_data/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

@@ -1,2 +1,6 @@
 rdf_sha256: b362d2e8dc2c320edc53043a59c9e39b430d3f0bbfc3f6f62aa503824bd4f10b
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for zero/Notebook_Detectron2_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

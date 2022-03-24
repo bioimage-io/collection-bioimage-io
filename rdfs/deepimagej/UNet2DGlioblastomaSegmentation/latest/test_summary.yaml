@@ -1,2 +1,6 @@
 rdf_sha256: b3f18845a1b2a0dfefea27d2285c80721b870ef5dd8ead4e5d0d73dfaa6fb8fe
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/UNet2DGlioblastomaSegmentation/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

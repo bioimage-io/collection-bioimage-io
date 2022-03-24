@@ -1,2 +1,6 @@
 rdf_sha256: 1e79d996056ef76701fb196890f7022e632abe67cc7a05d0b9215b7d6ff47c5f
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/2DUNetZeroCostDL4Mic/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

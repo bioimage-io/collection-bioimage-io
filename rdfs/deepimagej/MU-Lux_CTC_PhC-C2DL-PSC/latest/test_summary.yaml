@@ -1,2 +1,6 @@
 rdf_sha256: d12c22713ce978fad250cf7e76507f21309762023846cfb9c9a04c95c8d2ae07
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

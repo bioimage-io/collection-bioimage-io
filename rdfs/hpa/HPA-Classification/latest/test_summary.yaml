@@ -1,2 +1,5 @@
 rdf_sha256: 6b8c7d50624f4f0ef501aff7dc5f70e2f036aba551dd36cae75204ad3042533f
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for hpa/HPA-Classification/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

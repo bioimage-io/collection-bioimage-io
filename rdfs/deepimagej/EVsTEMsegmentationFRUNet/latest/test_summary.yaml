@@ -1,2 +1,6 @@
 rdf_sha256: 42432a2c09786c84cb2af22e534f946bc29847c76abd980f8e6eb6e0c5fb9f44
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/EVsTEMsegmentationFRUNet/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

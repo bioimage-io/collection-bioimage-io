@@ -1,2 +1,6 @@
 rdf_sha256: 65adcb723ab655f9ff8c82a815abe5397fd6837e7f7f7cd90c3cf53cb3491026
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for zero/Dataset_fnet_3D_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

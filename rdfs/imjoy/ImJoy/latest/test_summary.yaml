@@ -1,2 +1,5 @@
 rdf_sha256: 8637bdbe261ed5b7b8a025c33a044c921882604ee66fd26d4eb93be4c088dff7
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for imjoy/ImJoy/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

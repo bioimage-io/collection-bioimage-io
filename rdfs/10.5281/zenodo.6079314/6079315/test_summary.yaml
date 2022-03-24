@@ -47,3 +47,4 @@ tests:
       weights: {pytorch_state_dict: missing 'pytorch_version'}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  ilastik: []

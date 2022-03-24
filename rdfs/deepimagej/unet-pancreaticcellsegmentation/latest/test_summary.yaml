@@ -1,2 +1,6 @@
 rdf_sha256: 715b989726dbbc4db5317e8d10c5273f46b82acd68b0d3bf50fcd07547eddc28
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/unet-pancreaticcellsegmentation/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

@@ -1,2 +1,6 @@
 rdf_sha256: a601d816908a3d0a6e34c07e6b967a217a48fb93ae36651eb70d038cc62c3c82
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for ilastik/stradist_dsb_training_data/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

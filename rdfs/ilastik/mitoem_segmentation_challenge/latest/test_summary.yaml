@@ -1,2 +1,6 @@
 rdf_sha256: 0235d13245c88828c30afc7bc197b290ded97c796ae17b036e3202194d56405a
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for ilastik/mitoem_segmentation_challenge/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

@@ -1,2 +1,6 @@
 rdf_sha256: 8853d7e88616bb9a8332a0d407d168fe563bf757f2f5a81c45238f147df982fd
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

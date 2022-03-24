@@ -43,3 +43,24 @@ tests:
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  ilastik:
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
+    error: Not found any of the specified weights formats ['pytorch_script']
+    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_script
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/core/resource_tests.py\",
+        line 38, in test_model\n    model = load_resource_description(\n", "  File
+        \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 55, in load_resource_description\n    raise ValueError(f\"Not found any
+        of the specified weights formats {weights_priority_order}\")\n"]
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: "Output
+      and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
+      elements: 159 / 2048 (7.76%)\nMax absolute difference: 0.00132132\nMax relative
+      difference: 0.08016495\n x: array([[0.0214, 0.3054, 0.0507, ..., 0.4618, 0.0332,
+      0.0118]],\n      dtype=float32)\n y: array([[0.0214, 0.3055, 0.0507, ..., 0.4618,
+      0.0332, 0.0118]],\n      dtype=float32)", name: reproduce test outputs with
+      ilastik <todo version> (draft) using onnx weights, reason: error, status: failed,
+    traceback: null}

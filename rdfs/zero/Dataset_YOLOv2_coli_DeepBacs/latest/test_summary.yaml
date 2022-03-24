@@ -1,2 +1,6 @@
 rdf_sha256: 7f4c6613083b834aa416d0ce688309e0bb61ec9bd86f0695d8069ad425d3cd1a
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for zero/Dataset_YOLOv2_coli_DeepBacs/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

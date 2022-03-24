@@ -1,2 +1,6 @@
 rdf_sha256: b204e280aa0710bb5282675a9c159982b57efa7f1809c0132ee81197851d7a54
-tests: {}
+tests:
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
