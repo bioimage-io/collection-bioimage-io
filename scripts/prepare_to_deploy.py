@@ -100,8 +100,11 @@ def main(
                 core_versions.add(Version(sub_summary["bioimageio_core_version"]))
                 success &= sub_summary.get("status") == "passed"
 
-            test_summary["bioimageio_spec_version"] = str(max(spec_versions))
-            test_summary["bioimageio_core_version"] = str(max(core_versions))
+            if spec_versions:
+                test_summary["bioimageio_spec_version"] = str(max(spec_versions))
+
+            if core_versions:
+                test_summary["bioimageio_core_version"] = str(max(core_versions))
 
             test_summary["status"] = "passed" if success else "failed"
 
