@@ -46,8 +46,7 @@ jobs:
     - name: check pending versions limit
       if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
       run: |
-        echo "::error file=scripts/update_rdfs.py,line=123,endline=124,title=Cannot retrigger in PR::Exceeding version validation limit"
-        exit 1
+        echo "::warning file=scripts/update_rdfs.py,line=123,endline=124,title=Exceeding version validation limit::Only validated a limited number or resources"
     - name: static validation
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       id: static_validation
@@ -106,7 +105,7 @@ jobs:
         path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
     - name: install script deps
-      if: steps.create_env.outcome == 'success'
+      if: steps.create_env.outcome == 'success' && inputs.check_validation == 'yes'
       run: pip install typer bioimageio.spec
     - name: check if validation passed
       if: inputs.check_validation == 'yes'
