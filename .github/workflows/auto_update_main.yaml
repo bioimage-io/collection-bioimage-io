@@ -172,7 +172,7 @@ jobs:
         token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
         commit-message: 'Update ${{ matrix.update.resource_id }}'
         committer: GitHub <noreply@github.com>
-        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        author: BioImage.IO Bot <bioimageiobot@users.noreply.github.com>
         signoff: false
         branch: auto-update-${{ matrix.update.resource_id }}
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
