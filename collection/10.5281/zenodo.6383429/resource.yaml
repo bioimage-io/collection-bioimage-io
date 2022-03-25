@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6383429
+id: 10.5281/zenodo.6383429
+nickname: straightforward-hamster
+nickname_icon: 🐹
+owners:
+- 66700
+status: accepted
+type: model
+versions:
+- created: '2022-03-25 01:46:26.819763'
+  doi: 10.5281/zenodo.6383430
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '6383430'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/rdf.yaml
