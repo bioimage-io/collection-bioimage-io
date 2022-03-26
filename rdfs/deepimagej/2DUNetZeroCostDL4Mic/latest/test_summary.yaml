@@ -4,6 +4,3 @@ tests:
   - {error: Missing/invalid weight formats for deepimagej/2DUNetZeroCostDL4Mic/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
-  - {error: Missing/invalid weight formats for deepimagej/2DUNetZeroCostDL4Mic/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
