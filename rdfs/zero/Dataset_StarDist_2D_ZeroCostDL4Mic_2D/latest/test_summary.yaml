@@ -4,3 +4,6 @@ tests:
   - {error: Missing/invalid weight formats for zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
+  - {error: Missing/invalid weight formats for zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

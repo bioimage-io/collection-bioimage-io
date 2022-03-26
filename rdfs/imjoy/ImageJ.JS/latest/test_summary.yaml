@@ -3,3 +3,5 @@ tests:
   ilastik:
   - {error: Missing/invalid weight formats for imjoy/ImageJ.JS/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}
+  - {error: Missing/invalid weight formats for imjoy/ImageJ.JS/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

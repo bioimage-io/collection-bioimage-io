@@ -49,6 +49,19 @@ tests:
         model.test_inputs]\n", "  File \"/usr/share/miniconda/envs/5914249/lib/python3.7/site-packages/numpy/lib/npyio.py\",
         line 428, in load\n    fid = open(os_fspath(file), \"rb\")\n"]
   ilastik:
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
+    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: No module named 'tensorflow'
@@ -83,3 +96,16 @@ tests:
         line 133, in _get_model_adapter\n    from ._tensorflow_model_adapter import
         TensorflowModelAdapter\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
         line 6, in <module>\n    import tensorflow as tf\n"]
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
+    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]

@@ -21,3 +21,5 @@ tests:
   ilastik:
   - {error: Missing/invalid weight formats for ilastik/plantseg_ovules/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}
+  - {error: Missing/invalid weight formats for ilastik/plantseg_ovules/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

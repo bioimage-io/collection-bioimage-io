@@ -4,3 +4,6 @@ tests:
   - {error: Missing/invalid weight formats for zero/Dataset_SplineDist_2D_DeepBacs/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
+  - {error: Missing/invalid weight formats for zero/Dataset_SplineDist_2D_DeepBacs/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

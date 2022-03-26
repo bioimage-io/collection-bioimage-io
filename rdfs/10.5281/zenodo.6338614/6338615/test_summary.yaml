@@ -39,3 +39,6 @@ tests:
         line 133, in _get_model_adapter\n    from ._tensorflow_model_adapter import
         TensorflowModelAdapter\n", "  File \"/home/runner/.local/lib/python3.8/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
         line 6, in <module>\n    import tensorflow as tf\n"]
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
