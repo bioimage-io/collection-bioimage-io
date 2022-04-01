@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6406756
+id: 10.5281/zenodo.6406756
+nickname: hiding-blowfish
+nickname_icon: 🐡
+owners:
+- 77626
+status: accepted
+type: model
+versions:
+- created: '2022-04-01 15:46:55.680792'
+  doi: 10.5281/zenodo.6406757
+  name: EnhancerMitochondriaEM2D
+  status: accepted
+  version_id: '6406757'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/rdf.yaml
