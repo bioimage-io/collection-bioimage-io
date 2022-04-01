@@ -501,6 +501,18 @@ collection:
     2D]
   type: dataset
   versions: [latest]
+- authors:
+  - {name: Constantin Pape}
+  covers: ['https://s3-eu-west-1.amazonaws.com/pfigshare-u-previews/1288336/preview.jpg']
+  description: Training data for cell segmentation in Arabidopsis lateral root.
+  id: ilastik/vnc
+  license: CC-BY-4.0
+  name: Segmented anisotropic ssTEM dataset of neural tissue
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/vnc/latest/rdf.yaml
+  source: https://github.com/unidesigner/groundtruth-drosophila-vnc
+  tags: [electron-microscopy, drosophila, neurons, instance-segmentation]
+  type: dataset
+  versions: [latest]
 - authors: []
   badges: []
   covers: []
@@ -1980,8 +1992,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 92, collection: 36, dataset: 70, model: 60}
-  n_resources: {application: 46, collection: 18, dataset: 35, model: 26}
+  n_resource_versions: {application: 92, collection: 36, dataset: 72, model: 60}
+  n_resources: {application: 46, collection: 18, dataset: 36, model: 26}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
