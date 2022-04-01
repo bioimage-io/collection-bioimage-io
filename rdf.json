@@ -4078,6 +4078,43 @@
       "versions": [
         "6406757"
       ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
+      ],
+      "description": "Segmentation of mitochondria in EM images.",
+      "id": "10.5281/zenodo.6406803",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "MitchondriaEMSegmentation2D",
+      "nickname": "shivering-raccoon",
+      "nickname_icon": "\ud83e\udd9d",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
+      "tags": [
+        "unet",
+        "mitochondria",
+        "electron-microscopy",
+        "instance-segmentation",
+        "2d"
+      ],
+      "type": "model",
+      "versions": [
+        "6406804"
+      ]
     }
   ],
   "config": {
@@ -4088,13 +4125,13 @@
       "application": 92,
       "collection": 36,
       "dataset": 72,
-      "model": 62
+      "model": 64
     },
     "n_resources": {
       "application": 46,
       "collection": 18,
       "dataset": 36,
-      "model": 27
+      "model": 28
     },
     "partners": [
       {
