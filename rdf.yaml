@@ -1988,12 +1988,27 @@ collection:
   tags: [zerocostdl4mic, deepimagej, segmentation, unet]
   type: model
   versions: ['6348729']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/cover.png']
+  description: Prediction Enhancer for segmenting mitochondria in EM images.
+  id: 10.5281/zenodo.6406756
+  license: CC-BY-4.0
+  links: [ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: EnhancerMitochondriaEM2D
+  nickname: hiding-blowfish
+  nickname_icon: "\U0001F421"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6406757/rdf.yaml
+  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
+  type: model
+  versions: ['6406757']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 92, collection: 36, dataset: 72, model: 60}
-  n_resources: {application: 46, collection: 18, dataset: 36, model: 26}
+  n_resource_versions: {application: 92, collection: 36, dataset: 72, model: 62}
+  n_resources: {application: 46, collection: 18, dataset: 36, model: 27}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
