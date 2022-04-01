@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6406803
+id: 10.5281/zenodo.6406803
+nickname: shivering-raccoon
+nickname_icon: 🦝
+owners:
+- 77626
+status: accepted
+type: model
+versions:
+- created: '2022-04-01 16:06:28.519947'
+  doi: 10.5281/zenodo.6406804
+  name: MitchondriaEMSegmentation2D
+  status: accepted
+  version_id: '6406804'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/rdf.yaml
