@@ -1,0 +1,18 @@
+doi: 10.5281/zenodo.6384845
+id: 10.5281/zenodo.6384845
+nickname: powerful-fish
+nickname_icon: 🐟
+owners:
+- 66700
+status: accepted
+type: model
+versions:
+- created: '2022-03-25 14:22:07.280404'
+  doi: 10.5281/zenodo.6384846
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '6384846'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/rdf.yaml
+  maintainers:
+  - github_user: wolny
