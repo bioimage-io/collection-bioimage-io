@@ -4045,6 +4045,50 @@
     {
       "authors": [
         {
+          "name": "A. Wolny"
+        },
+        {
+          "name": "V. Bondarenko"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
+      ],
+      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
+      "id": "10.5281/zenodo.6384845",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Mouse Embryo Live",
+      "nickname": "powerful-fish",
+      "nickname_icon": "\ud83d\udc1f",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "mouse-embryo",
+        "cell-membrane",
+        "animal",
+        "tissue",
+        "light-sheet-microscopy",
+        "pytorch",
+        "live"
+      ],
+      "type": "model",
+      "versions": [
+        "6384846"
+      ]
+    },
+    {
+      "authors": [
+        {
           "affiliation": "EMBL Heidelberg",
           "name": "Constantin Pape"
         }
@@ -4125,13 +4169,13 @@
       "application": 92,
       "collection": 36,
       "dataset": 72,
-      "model": 64
+      "model": 66
     },
     "n_resources": {
       "application": 46,
       "collection": 18,
       "dataset": 36,
-      "model": 28
+      "model": 29
     },
     "partners": [
       {
