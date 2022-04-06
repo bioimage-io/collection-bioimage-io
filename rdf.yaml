@@ -3,41 +3,53 @@ authors:
 cite:
 - {text: todo cite BioImageIO, url: 'https://bioimage.io'}
 collection:
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {name: ZeroCostDL4Mic}
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover.png']
+  description: 2D U-Net trained for binary segmentation using the EM images of neuronal
+    membranes and segmentation masks from the ISBI segmentation challenge 2012.
   download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
   id: deepimagej/2DUNetZeroCostDL4Mic
+  license: MIT
   links: [zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej/deepimagej,
     imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: 2D UNet - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/2DUNetZeroCostDL4Mic/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/2du-net_zerocostdl4mic/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ team}
+  covers: [./exampleImage.gif]
+  description: 3D U-Net trained using ZeroCostDL4Mic notebooks to segment mitochondria
+    in Transmission Electron Microscopy (TEM) data.
   download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
   id: deepimagej/3DUNetZeroCostDL4Mic
+  license: MIT
   links: [deepimagej/deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ,
     imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: 3D U-Net - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/3du-net_zerocostdl4mic/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, tem, mitochondria, segmentation, 3d-unet, zerocostdl4mic, deepimagej-beta]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'UCL, Francis Crick Institute, Turku and Åbo Akademi University',
+    name: ZeroCostDL4Mic team}
+  - {affiliation: 'UC3M, EPFL', name: DeepImageJ team}
+  covers: [./input.png, ./zoom.png]
+  description: A trained Deep-STORM model for image reconstruction from high-density
+    single-molecule localization microscopy (SMLM).
   download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
   id: deepimagej/DeepSTORMZeroCostDL4Mic
+  license: MIT
   links: [zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej/deepimagej,
     imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/DeepSTORMZeroCostDL4Mic/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [zerocostdl4mic, deepimagej, smlm, image-reconstruction, super-resolution]
+  type: model
   versions: [latest]
 - authors:
   - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
@@ -64,38 +76,63 @@ collection:
     workflow, pipeline]
   type: application
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
+  - {affiliation: Masaryk University, name: Martin Maška}
+  - {affiliation: Masaryk University, name: Anna Kotrbová}
+  - {affiliation: Masaryk University, name: Vendula Pospíchalová}
+  - {affiliation: Masaryk University, name: Pavel Matula}
+  - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/frunet_sev.jpg']
+  description: DeepImageJ compatible fully residual U-Net trained to segment small
+    extracellular vesicles in 2D TEM images
   download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
   id: deepimagej/FRUNet2DsEVSegmentation
+  license: BSD-3-Clause
   links: [deepimagej/deepimagej, deepimagej/EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, extracellular-vesicles, segmentation, tem, frunet, exosomes,
+    electron-microscopy, 2d-segmentation]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: University of California, name: Yair Rivenson}
+  - {affiliation: University of California, name: Hongda Wang}
+  - {affiliation: University of California, name: Aydogan Ozcan}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  description: A trained GAN to transform wide-field autofluorescence images of unlabelled
+    tissue sections into images that are equivalent to the bright-field images of
+    histologically stained versions of the same samples.
   download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
   id: deepimagej/JonesVirtualStaining
+  license: CC BY 4.0
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Jones Virtual Staining (GAN)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/JonesVirtualStaining/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, gan, virtual-staining, histology]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'Centre for Biomedical Image Analysis, Masaryk University', name: Filip
+      Lux}
+  - {affiliation: 'Centre for Biomedical Image Analysis, Masaryk University', name: Petr
+      Matula}
+  covers: [./cover.jpg]
+  description: The method combines deep learning with watershed segmentation. For
+    each frame, the convolutional neural network of U-Net shape detects all cells
+    by markers and recognizes the foreground and the background of the frame. Then,
+    the final segmentation is generated by a Marker-Controlled Watershed transformation.
   download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
   id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
+  license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Pancreatic Cell Phase Contrast Segmentation (DeepWater - CTC submission)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepwater, deepimagej, segmentation, watershed, cell-tracking-challenge,
+    phase-contrast]
+  type: model
   versions: [latest]
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -112,127 +149,190 @@ collection:
     digital pathology]
   type: dataset
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: University of California, name: Yair Rivenson}
+  - {affiliation: University of California, name: Hongda Wang}
+  - {affiliation: University of California, name: Aydogan Ozcan}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  description: A trained GAN to transform wide-field autofluorescence images of unlabelled
+    tissue sections into images that are equivalent to the bright-field images of
+    histologically stained versions of the same samples.
   download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
   id: deepimagej/Mt3VirtualStaining
+  license: CC-BY-4.0
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Masson’s Trichrome Virtual Staining (GAN)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, gan, virtual-staining, histology]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: null, name: Baptiste Ottino}
+  - {affiliation: null, name: Kyle M. Douglass}
+  - {affiliation: null, name: Suliana Manley}
+  covers: [./cover_image.jpg]
+  description: Density Estimation by Fully Convolutional Networks (DEFCoN) - A fluorescent
+    spot counter for single molecule localization microscopy. DEFCoN was written by
+    Baptiste Ottino as a Masters thesis project under the guidance of Kyle M. Douglass
+    and Suliana Manley in the Laboratory of Experimental Biophysics.
   download_url: https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip
   id: deepimagej/SMLMDensityMapEstimationDEFCoN
+  license: BSD-3
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: SMLM Density Map Estimation (DEFCoN)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/defcon_density_map_estimation/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [unet, deepimagej, deepimagej.js]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: UC3M, name: Carlos García-López-de-Haro}
+  covers: [./cover.jpg]
+  description: CNN trained to classify the type of imaged skin lesion.
   download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
   id: deepimagej/SkinLesionClassification
+  license: BSD2
   links: [deepimagej/deepimagej]
-  name: deepImageJ Collection
+  name: Skin lesions classification
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/SkinLesionClassification/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej-beta, deepimagej, skin-lesions, melanoma, classification, pytorch]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez de Mariscal}
+  covers: [./combined.jpg]
+  description: Nucleus segmentation in digital pathology datasets (MoNuSeg 2018 Challenge)
   download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
   id: deepimagej/Stardist2DZeroCostDL4Mic
+  license: MIT
   links: [deepimagej/deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ,
     deepimagej/MoNuSeg_digital_pathology_miccai2018]
-  name: deepImageJ Collection
+  name: Multi-Organ Nucleus Segmentation Challenge
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/stardist2D_zerocostdl4mic/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [zerocostdl4mic, deepimagej, segmentation, histopathology, stardist, digital-pathology,
+    nucleus-segmentation, trainable, 2d]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover_image.jpg']
+  description: DeepImageJ compatible U-Net trained to segment 2D phase contrast microscopy
+    images of glioblastoma-astrocytoma U373 cells on a polyacrylamide substrate.
   download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
   id: deepimagej/UNet2DGlioblastomaSegmentation
+  license: BSD-2
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Glioblastoma Phase Contrast Cell Segmentation (U-Net)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, glioblastoma-cells, segmentation, phase-contrast]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/unet_hela_seg.jpg']
+  description: DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
+    contrast microscopy images
   download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
   id: deepimagej/UNet2DHeLaSegmentation
+  license: BSD-2
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: HeLa DIC Cell Segmentation (U-Net)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, hela-cells, segmentation, phase-contrast]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}
+  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
+  covers: [./exampleImage.png, ./resultImage.png]
+  description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
+    images of pancreatic stem cells on a 2D polystyrene substrate.
   download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
   id: deepimagej/UNet2DPancreaticSegmentation
+  license: BSD-2
   links: [deepimagej/deepimagej, deepimagej/unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Pancreatic Cell Segmentation (U-Net)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, pancreatic-stem-cells, segmentation, phase-contrast, unet, neubias,
+    cell-tracking-challenge]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'AGH University of Science and Technology, Poland', name: Joanna
+      Gajda}
+  - {affiliation: 'Quorumetrix Solutions, Canada', name: Tyler F.W. Sloan}
+  - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
+      Graduate University, Japan', name: Hsieh-Fu Tsai}
+  - {affiliation: 'ImagineA, The Netherlands', name: Andrei Rares}
+  - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
+      Graduate University, Japan', name: Amy Q. Shen}
+  covers: [./cover.jpg]
+  description: Trained model given in Usiigaci for instance segmentation of cells
+    in a 2D substrate and phase contrast microscopy images. The model is a Mask R-CNN
+    and the input is preprocessed to get an RGB image from the grayscale image.
   download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
   id: deepimagej/Usiigaci
+  license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: NIH/3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Usiigaci/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, usiigaci, phase-contrast, fibroblasts, maskrcnn, 2d, segmentation,
+    deepimagej-beta]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Hongda Wang}
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
+      Ozcan}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  description: A trained GAN to transform diffraction-limited input images into super-resolved
+    ones.
   download_url: https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip
   id: deepimagej/WidefieldDapiSuperResolution
+  license: CC-BY-4.0
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Widefield Super-resolution (GAN - DAPI)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldDapiSuperResolution/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, gan, fluorescence-microscopy, super-resolution]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Hongda Wang}
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
+      Ozcan}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  description: A trained GAN to transform diffraction-limited input images into super-resolved
+    ones.
   download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
   id: deepimagej/WidefieldFitcSuperResolution
+  license: CC-BY-4.0
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Widefield Super-resolution (GAN - FITC)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldFitcSuperResolution/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, gan, fluorescence-microscopy, super-resolution]
+  type: model
   versions: [latest]
-- authors: []
-  description: Resources for BioImgage.IO curated by the deepImageJ team.
+- authors:
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Hongda Wang}
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
+  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
+      Ozcan}
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  description: A trained GAN to transform diffraction-limited input images into super-resolved
+    ones.
   download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
   id: deepimagej/WidefieldTxredSuperResolution
+  license: CC BY 4.0
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: deepImageJ Collection
+  name: Widefield Super-resolution (GAN - TxRed)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/model.yaml
-  tags: [deepimagej, bioimage.io]
-  type: collection
+  tags: [deepimagej, gan, fluorescence-microscopy, super-resolution]
+  type: model
   versions: [latest]
 - authors: []
   badges: []
@@ -241,11 +341,11 @@ collection:
     file
   icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej/deepimagej
-  name: deepImageJ Collection
+  name: deepimagej
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej/latest/rdf.yaml
   source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
   tags: [software, bioengine]
-  type: collection
+  type: application
   versions: [latest]
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -2041,8 +2141,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 92, collection: 36, dataset: 72, model: 66}
-  n_resources: {application: 46, collection: 18, dataset: 36, model: 29}
+  n_resource_versions: {application: 94, dataset: 72, model: 100}
+  n_resources: {application: 47, dataset: 36, model: 46}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
