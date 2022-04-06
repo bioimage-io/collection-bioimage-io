@@ -31,7 +31,7 @@ documentation: https://raw.githubusercontent.com/imjoy-team/ImJoy/master/README.
 format_version: 0.2.2
 icon: https://imjoy.io/static/img/imjoy-icon.png
 id: imjoy/ImJoy/latest
-name: ImJoy Collection
+name: ImJoy
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml
 source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
 tags:
