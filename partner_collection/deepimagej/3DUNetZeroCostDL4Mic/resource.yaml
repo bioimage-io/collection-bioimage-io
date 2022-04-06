@@ -1,50 +1,133 @@
 id: deepimagej/3DUNetZeroCostDL4Mic
 status: accepted
-type: collection
+type: model
 versions:
-- name: deepImageJ Collection
+- name: 3D U-Net - ZeroCostDL4Mic
   status: accepted
   version_id: latest
   version_name: latest
   rdf_source:
-    authors: []
+    attachments:
+      files:
+      - ./preprocessing.ijm
+      - ./exampleImage.tif
+      - ./resultImage.tif
+    authors:
+    - affiliation: EPFL, UC3M
+      name: DeepImageJ team
     cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
+    - doi: https://doi.org/10.1101/2020.03.20.000133
+      text: Lucas von Chamier et al. bioRxiv 2020
+    - doi: https://doi.org/10.1007/978-3-319-46723-8_49
+      text: Özgün Çiçek et al., MICCAI 2016
     config:
-      background_image: static/img/zoo-background.svg
-      explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
-      id: deepimagej
-      logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
-      name: DeepImageJ
-      resource_types:
-      - model
-      - notebook
-      - application
-      splash_feature_list:
-      splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
-      splash_title: deepImageJ
-      tags:
-      - deepimagej
-      url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    documentation: https://deepimagej.github.io/deepimagej/
+      deepimagej:
+        allow_tiling: true
+        model_keys:
+          tensorflow_model_tag: tf.saved_model.tag_constants.SERVING
+          tensorflow_siganture_def: tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY
+        prediction:
+          postprocess:
+          - spec:
+          preprocess:
+          - kwargs: preprocessing.ijm
+            spec: ij.IJ::runMacroFile
+        pyramidal_model: false
+        test_information:
+          inputs:
+          - name: exampleImage.tif
+            pixel_size:
+              x: 1.0 pixel
+              y: 1.0 pixel
+              z: 1.0 pixel
+            size: 256 x 256 x 1 x 51
+          memory_peak: 286.1 Mb
+          outputs:
+          - name: resultImage
+            size: 256 x 256 x 1 x 51
+            type: image
+          runtime: 28.3
+    covers:
+    - ./exampleImage.gif
+    description: 3D U-Net trained using ZeroCostDL4Mic notebooks to segment mitochondria
+      in Transmission Electron Microscopy (TEM) data.
+    documentation: ./README.md
     download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
-    format_version: 0.2.2
+    format_version: 0.3.2
+    framework: tensorflow
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     id: deepimagej/3DUNetZeroCostDL4Mic
+    inputs:
+    - axes: byxzc
+      data_range:
+      - -inf
+      - inf
+      data_type: float32
+      name: input
+      shape:
+      - 1
+      - 256
+      - 256
+      - 8
+      - 1
+    language: java
+    license: MIT
     links:
     - deepimagej/deepimagej
     - zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
     - imjoy/BioImageIO-Packager
     maintainers: []
-    name: deepImageJ Collection
+    name: 3D U-Net - ZeroCostDL4Mic
+    outputs:
+    - axes: byxzc
+      data_range:
+      - -inf
+      - inf
+      data_type: float32
+      halo:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      name: output
+      shape:
+        offset:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        reference_input: input
+        scale:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    source: https://raw.githubusercontent.com/deepimagej/models/master/3du-net_zerocostdl4mic/model.yaml
+    run_mode:
+    - name: deepimagej
+    sample_inputs:
+    - ./exampleImage.tif
+    sample_outputs:
+    - ./resultImage.tif
     tags:
     - deepimagej
-    - bioimage.io
-    type: collection
+    - tem
+    - mitochondria
+    - segmentation
+    - 3d-unet
+    - zerocostdl4mic
+    - deepimagej-beta
+    test_inputs:
+    - ./exampleImage.npy
+    test_outputs:
+    - ./resultImage.npy
+    timestamp: 2021-04-07 19:49:30.000301
+    type: model
+    weights:
+      tensorflow_saved_model_bundle:
+        sha256: 09f8212a605ae387b8289b364b29c3e2d65f44e42e02f820063793d11e3886e3
+        source: ./tensorflow_saved_model_bundle.zip
+        tensorflow_version: 1.15.2

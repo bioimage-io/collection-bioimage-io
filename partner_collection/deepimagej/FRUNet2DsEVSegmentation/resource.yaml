@@ -1,50 +1,158 @@
 id: deepimagej/FRUNet2DsEVSegmentation
 status: accepted
-type: collection
+type: model
 versions:
-- name: deepImageJ Collection
+- name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
   status: accepted
   version_id: latest
   version_name: latest
   rdf_source:
-    authors: []
+    attachments:
+      files:
+      - ./exampleImage.tiff
+      - ./resultImage.tiff
+      - ./resultImage_labels.tiff
+      - ./preprocessing.txt
+      - ./postprocessing.txt
+      - ./postprocessingWatershed.txt
+    authors:
+    - affiliation: Universidad Carlos III de Madrid
+      name: Estibaliz Gómez-de-Mariscal
+    - affiliation: Masaryk University
+      name: Martin Maška
+    - affiliation: Masaryk University
+      name: Anna Kotrbová
+    - affiliation: Masaryk University
+      name: Vendula Pospíchalová
+    - affiliation: Masaryk University
+      name: Pavel Matula
+    - affiliation: Universidad Carlos III de Madrid
+      name: Arrate Muñoz-Barrutia
     cite:
-    - doi: 10.1038/s41592-021-01262-9
-      text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati,
-        E. Lundberg, M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly
-        environment to run deep learning models in ImageJ", Nat Methods 18, 1192–1195
-        (2021).'
+    - doi: https://doi.org/10.1038/s41598-019-49431-3
+      text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
+        Vesicles in Transmission Electron Microscopy Images Scientific Reports, (2019)
     config:
-      background_image: static/img/zoo-background.svg
-      explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
-      id: deepimagej
-      logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
-      name: DeepImageJ
-      resource_types:
-      - model
-      - notebook
-      - application
-      splash_feature_list:
-      splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
-      splash_title: deepImageJ
-      tags:
-      - deepimagej
-      url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
-    documentation: https://deepimagej.github.io/deepimagej/
+      deepimagej:
+        allow_tiling: true
+        model_keys:
+          tensorflow_model_tag: tf.saved_model.tag_constants.SERVING
+          tensorflow_siganture_def: tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY
+        prediction:
+          postprocess:
+          - kwargs: postprocessing.txt
+            spec: ij.IJ::runMacroFile
+          preprocess:
+          - kwargs: preprocessing.txt
+            spec: ij.IJ::runMacroFile
+        pyramidal_model: false
+        test_information:
+          inputs:
+          - name: exampleImage.tiff
+            pixel_size:
+              x: 9.658E-4 µm
+              y: 9.658E-4 µm
+              z: 1.0 pixel
+            size: 2048 x 2048 x 1 x 1
+          memory_peak: 257.7 Mb
+          outputs:
+          - name: resultImage.tiff
+            size: 1264 x 1264 x 1 x 1
+            type: image
+          runtime: 78.8 s
+    covers:
+    - ./frunet_sev.jpg
+    description: DeepImageJ compatible fully residual U-Net trained to segment small
+      extracellular vesicles in 2D TEM images
+    documentation: ./README.md
     download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
-    format_version: 0.2.2
+    format_version: 0.3.2
+    framework: tensorflow
     id: deepimagej/FRUNet2DsEVSegmentation
+    inputs:
+    - axes: byxc
+      data_range:
+      - -inf
+      - inf
+      data_type: float32
+      name: input
+      preprocessing:
+      - kwargs:
+          axes: xy
+          max_percentile: 100
+          min_percentile: 0
+          mode: per_sample
+        name: scale_range
+      shape:
+      - 1
+      - 400
+      - 400
+      - 1
+    language: java
+    license: BSD-3-Clause
     links:
     - deepimagej/deepimagej
     - deepimagej/EVsTEMsegmentationFRUNet
     - imjoy/BioImageIO-Packager
     maintainers: []
-    name: deepImageJ Collection
+    name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
+    outputs:
+    - axes: byxc
+      data_range:
+      - 0
+      - 1
+      data_type: float32
+      halo:
+      - 0
+      - 127
+      - 127
+      - 0
+      name: output
+      postprocessing:
+      - kwargs:
+          threshold: 0.4
+        name: binarize
+      shape:
+        offset:
+        - 0
+        - 0
+        - 0
+        - 0
+        reference_input: input
+        scale:
+        - 1
+        - 1
+        - 1
+        - 1
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
-    source: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/model.yaml
+    sample_inputs:
+    - ./exampleImage.tiff
+    sample_outputs:
+    - ./resultImage.tiff
     tags:
     - deepimagej
-    - bioimage.io
-    type: collection
+    - extracellular-vesicles
+    - segmentation
+    - tem
+    - frunet
+    - exosomes
+    - electron-microscopy
+    - 2d-segmentation
+    test_inputs:
+    - ./exampleImage.npy
+    test_outputs:
+    - ./resultImage.npy
+    timestamp: 2021-02-17 10:13:32.618903
+    type: model
+    weights:
+      keras_hdf5:
+        sha256: 5122cbff7451136102eabfc8c80771dbba5ec477d5dac186f729cdfbb4605ff6
+        source: https://sandbox.zenodo.org/record/904786/files/fully_residual_dropout_segmentation.h5
+        tensorflow_version: 1.12
+      tensorflow_js:
+        sha256: eb27d8f3df23ce5d1d6ae4112cf36117c70a2257ca6f1b56869b9537fa60531e
+        source: https://raw.githubusercontent.com/deepimagej/tensorflow-js-models/main/fru-net_sev_segmentation_tf_js_model/model.json
+      tensorflow_saved_model_bundle:
+        sha256: 20bff1da933cc78027690fa311fea3e562cf60df1f0a2018527c45b9fafe8099
+        source: https://sandbox.zenodo.org/record/904786/files/tensorflow_saved_model_bundle.zip
+        tensorflow_version: 1.12

@@ -11,7 +11,7 @@ versions:
     - affiliation: EPFL, UC3M
       name: DeepImageJ
     cite:
-      doi: https://doi.org/10.1101/799270
+    - doi: https://doi.org/10.1101/799270
       text: 'Gómez-de-Mariscal, E., García-López-de-Haro, C., Ouyang, W., Donati,
         L., Lundberg E., Unser, M., Muñoz-Barrutia, A. and Sage, D. DeepImageJ: A
         user-friendly plugin to run deep learning models in ImageJ, BioRxiv, 2019'

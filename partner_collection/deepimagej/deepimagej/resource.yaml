@@ -1,8 +1,8 @@
 id: deepimagej/deepimagej
 status: accepted
-type: collection
+type: application
 versions:
-- name: deepImageJ Collection
+- name: deepimagej
   status: accepted
   version_id: latest
   version_name: latest
@@ -31,15 +31,17 @@ versions:
       tags:
       - deepimagej
       url_root: https://raw.githubusercontent.com/deepimagej/models/master
-    description: Resources for BioImgage.IO curated by the deepImageJ team.
+    description: Export BioImage.IO model packages for deepImageJ from a model description
+      file
     documentation: https://deepimagej.github.io/deepimagej/
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     id: deepimagej/deepimagej
     maintainers: []
-    name: deepImageJ Collection
+    name: deepimagej
     root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     source: https://raw.githubusercontent.com/deepimagej/models/master/src/deepimagej-app.imjoy.html
     tags:
-    - deepimagej
-    - bioimage.io
-    type: collection
+    - software
+    - bioengine
+    type: application
