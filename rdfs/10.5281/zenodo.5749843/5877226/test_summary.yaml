@@ -1,10 +1,10 @@
 bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post4
-rdf_sha256: 01b58575554d23310dc4a4d97e59032a108abe10e8fad0d0a288e744f12e4376
+bioimageio_spec_version: 0.4.5.post7
+rdf_sha256: 67068bbbe043cd8faeb8cfa37dff41a5fa994ae40ab128c3b469a767872bc188
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post4
+  - bioimageio_spec_version: 0.4.5post7
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
       format version
@@ -14,7 +14,7 @@ tests:
     warnings: {tags: 'Missing tags for categories: [{''task'': [''semantic-segmentation'',
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - bioimageio_spec_version: 0.4.5post4
+  - bioimageio_spec_version: 0.4.5post7
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
@@ -23,29 +23,34 @@ tests:
     warnings: {tags: 'Missing tags for categories: [{''task'': [''semantic-segmentation'',
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post7, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: name '_validate_input_shape' is not defined
-    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 103, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape),
-        ipt_spec.shape):\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: name '_validate_input_shape' is not defined
+    bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
     name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 103, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape),
-        ipt_spec.shape):\n"]
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
+    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '''str'' object has no attribute ''decode'''
@@ -65,9 +70,6 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '''str'' object has no attribute ''decode'''
@@ -87,6 +89,6 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}

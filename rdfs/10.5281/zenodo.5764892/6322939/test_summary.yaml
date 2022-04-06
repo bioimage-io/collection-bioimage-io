@@ -35,13 +35,13 @@ tests:
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
+    bioimageio_spec_version: 0.4.5post7
     error: No module named 'torch'
     name: reproduce test outputs with deepimagej 2.1.13 using pytorch_state_dict weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 44, in test_model\n    model = load_resource_description(\n", "  File
+        line 45, in test_model\n    model = load_resource_description(\n", "  File
         \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
         line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
         nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
@@ -49,9 +49,9 @@ tests:
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in generic_transformer\n    node, **{name: self.transform(value,
+        line 143, in generic_transformer\n    node, **{name: self.transform(value,
         **kwargs) for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
+        line 143, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
         for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
@@ -61,9 +61,9 @@ tests:
         key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in generic_transformer\n    node, **{name: self.transform(value,
+        line 143, in generic_transformer\n    node, **{name: self.transform(value,
         **kwargs) for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
+        line 143, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
         for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
@@ -76,45 +76,31 @@ tests:
         ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/unet.py\",
         line 1, in <module>\n    import torch\n"]
   - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: name '_validate_input_shape' is not defined
-    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 103, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape),
-        ipt_spec.shape):\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: name '_validate_input_shape' is not defined
+    bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
     name: reproduce test outputs with deepimagej 2.1.13 using onnx weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 103, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape),
-        ipt_spec.shape):\n"]
-  ilastik:
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: No module named 'onnxruntime'
-    name: reproduce test outputs with ilastik <todo version> (draft) using onnx weights
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
+    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
     reason: error
     status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 159, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
-        devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 113, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 138, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
-        line 5, in <module>\n    import onnxruntime as rt\n"]
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
+  ilastik:
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
       weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
       weights, reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
@@ -135,6 +121,22 @@ tests:
         line 138, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: No module named 'onnxruntime'
+    name: reproduce test outputs with ilastik <todo version> (draft) using onnx weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 159, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
+        devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 113, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 138, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
+        line 5, in <module>\n    import onnxruntime as rt\n"]
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
+    name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
       weights, reason: null, status: passed, traceback: null}

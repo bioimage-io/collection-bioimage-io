@@ -1,4 +1,4 @@
-rdf_sha256: 8637bdbe261ed5b7b8a025c33a044c921882604ee66fd26d4eb93be4c088dff7
+rdf_sha256: 3db9e33a4d432637140565e43929355b44ce7cd6e26a74f0f1894a60402dfb8f
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for imjoy/ImJoy/latest, name: reproduce

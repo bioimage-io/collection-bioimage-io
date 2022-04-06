@@ -50,46 +50,33 @@ tests:
         line 428, in load\n    fid = open(os_fspath(file), \"rb\")\n"]
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '[Errno 2] No such file or directory: ''/home/runner/work/models/models/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 96, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 96, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/numpy/lib/npyio.py\",
-        line 407, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
+    bioimageio_spec_version: 0.4.5post7
     error: '[Errno 2] No such file or directory: ''/home/runner/work/models/models/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
     name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 96, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        line 97, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
         in model.test_inputs]\n", "  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 96, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        line 97, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/numpy/lib/npyio.py\",
+        line 407, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
+    error: '[Errno 2] No such file or directory: ''/home/runner/work/models/models/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
+    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 97, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 97, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
         model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/numpy/lib/npyio.py\",
         line 407, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
   ilastik:
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
-        line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights
@@ -101,8 +88,8 @@ tests:
         line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
         model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
         line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
     name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
       weights
@@ -116,6 +103,19 @@ tests:
         line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
+    error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
+    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 417, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights

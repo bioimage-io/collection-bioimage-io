@@ -185,14 +185,10 @@ sample_inputs:
 sample_outputs:
 - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/sample_output_0.tif
 tags:
-- fluorescence-light-microscopy
 - whole-slide-imaging
-- other
 - 2d
-- cells
 - nuclei
 - tensorflow
-- fiji
 - unet
 - instance-segmentation
 - object-detection

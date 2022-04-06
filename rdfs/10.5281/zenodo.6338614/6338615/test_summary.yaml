@@ -1,41 +1,44 @@
 bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post4
-rdf_sha256: 4949e3fe5ac2f4b43f2d5b7c388cff008a418be07415295729f32a9d2dd5ef10
+bioimageio_spec_version: 0.4.5.post7
+rdf_sha256: 651963aeb67b349d3902719d8b1c53fe9f10be8ef4cc4101e290ffa1c7bf81da
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post4
+  - bioimageio_spec_version: 0.4.5post7
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {}
-  - bioimageio_spec_version: 0.4.5post4
+    warnings: {tags: 'Missing tags for categories: [{''software'': [''ilastik'', ''imagej'',
+        ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
+  - bioimageio_spec_version: 0.4.5post7
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
+    warnings: {tags: 'Missing tags for categories: [{''software'': [''ilastik'', ''imagej'',
+        ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post7, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: name '_validate_input_shape' is not defined
+    bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
     name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 103, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape),
-        ipt_spec.shape):\n"]
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}
