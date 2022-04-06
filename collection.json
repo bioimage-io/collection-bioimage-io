@@ -1313,6 +1313,58 @@
         }
       ],
       "covers": [
+        "https://github.com/constantinpape/torch-em/blob/main/experiments/misc/targets.png"
+      ],
+      "description": "Train a 2d UNet for semgentation tasks",
+      "id": "ilastik/torch-em-2d-unet-notebook",
+      "license": "CC-BY-4.0",
+      "name": "2D UNet Training",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/torch-em-2d-unet-notebook/latest/rdf.yaml",
+      "source": "https://github.com/constantinpape/torch-em/blob/main/experiments/2D-UNet-Training.ipynb",
+      "tags": [
+        "instance-segmentation",
+        "semantic-segmentation",
+        "u-net",
+        "2d"
+      ],
+      "type": "notebook",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://github.com/constantinpape/torch-em/blob/main/experiments/misc/targets.png"
+      ],
+      "description": "Train a 2d UNet for semgentation tasks",
+      "id": "ilastik/torch-em-3d-unet-notebook",
+      "license": "CC-BY-4.0",
+      "name": "3D UNet Training",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/torch-em-3d-unet-notebook/latest/rdf.yaml",
+      "source": "https://github.com/constantinpape/torch-em/blob/main/experiments/3D-UNet-Training.ipynb",
+      "tags": [
+        "instance-segmentation",
+        "semantic-segmentation",
+        "u-net",
+        "3d"
+      ],
+      "type": "notebook",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
         "https://s3-eu-west-1.amazonaws.com/pfigshare-u-previews/1288336/preview.jpg"
       ],
       "description": "Training data for cell segmentation in Arabidopsis lateral root.",
@@ -1339,7 +1391,7 @@
       "description": "Exporting BioImage.IO model packages from the model description file",
       "icon": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png",
       "id": "imjoy/BioImageIO-Packager",
-      "name": "ImJoy Collection",
+      "name": "BioImageIO-Packager",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html",
       "tags": [
@@ -1357,7 +1409,7 @@
       "description": "ImJoy: Supercharging interactivity and scalability!",
       "icon": "https://imjoy.io/static/img/imjoy-icon.png",
       "id": "imjoy/ImJoy",
-      "name": "ImJoy Collection",
+      "name": "ImJoy",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html",
       "tags": [
@@ -1423,7 +1475,7 @@
       "description": "A minimal, purely client-side program for viewing Zarr-based images with Viv & ImJoy",
       "icon": "https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png",
       "id": "imjoy/vizarr",
-      "name": "ImJoy Collection",
+      "name": "vizarr",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html",
       "tags": [
@@ -4196,14 +4248,10 @@
       ],
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml",
       "tags": [
-        "fluorescence-light-microscopy",
         "whole-slide-imaging",
-        "other",
         "2d",
-        "cells",
         "nuclei",
         "tensorflow",
-        "fiji",
         "unet",
         "instance-segmentation",
         "object-detection",
@@ -4467,12 +4515,14 @@
     "n_resource_versions": {
       "application": 94,
       "dataset": 72,
-      "model": 100
+      "model": 100,
+      "notebook": 4
     },
     "n_resources": {
       "application": 47,
       "dataset": 36,
-      "model": 46
+      "model": 46,
+      "notebook": 2
     },
     "partners": [
       {
