@@ -1,5 +1,8 @@
 rdf_sha256: d6029fee894357bfd09d46664f495683feb0f37f777e487b19e80c70e3d47155
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for zero/Dataset_fnet_DeepBacs/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for zero/Dataset_fnet_DeepBacs/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

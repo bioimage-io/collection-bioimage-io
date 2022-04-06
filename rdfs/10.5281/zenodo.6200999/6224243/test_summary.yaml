@@ -47,6 +47,16 @@ tests:
       weights: {torchscript: missing 'pytorch_version'}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post4, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  deepimagej:
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
+    error: name '_validate_input_shape' is not defined
+    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 103, in test_resource\n    if not _validate_input_shape(tuple(ipt.shape),
+        ipt_spec.shape):\n"]
   ilastik:
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript

@@ -1,5 +1,8 @@
 rdf_sha256: 95d2d3994b8478c85fa7ed10a5f9e4c0b9d6c837d6772154bf4affd6209e0dbd
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for hpa/HPA-bestfitting/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for hpa/HPA-bestfitting/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}

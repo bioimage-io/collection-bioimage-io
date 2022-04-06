@@ -1,5 +1,8 @@
 rdf_sha256: 55bec9366242e9c9e67c953e542b7fdae884020b68e5f879f41763995e2c332e
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for ilastik/isbi2012_neuron_segmentation_challenge/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for ilastik/isbi2012_neuron_segmentation_challenge/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

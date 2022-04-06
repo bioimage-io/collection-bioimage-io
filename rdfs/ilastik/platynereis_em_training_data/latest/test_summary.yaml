@@ -1,5 +1,8 @@
 rdf_sha256: 2bf460df9290bedb179eb1767f4fdd0ad6b80d3291f6dea9c77c3fab7ce1238b
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for ilastik/platynereis_em_training_data/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for ilastik/platynereis_em_training_data/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

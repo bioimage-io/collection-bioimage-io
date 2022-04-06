@@ -1,5 +1,8 @@
-rdf_sha256: 66bcffce0c52bbe7c9efc07d9e96cc49d08a573f4db8741b888c341bc0df0461
+rdf_sha256: 738517202c6b41a94f8c27706529e67372db7113c1b779ae20c7be59a59d5457
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

@@ -1,5 +1,8 @@
 rdf_sha256: ca6b9e5edcb9d2c0d1486304f0c4d2a9ee3beff65150ded1c2c78c1a0b1cb1de
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

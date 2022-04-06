@@ -1,5 +1,8 @@
 rdf_sha256: f24c5d2399c7e8055e9a5fa330993d6f70769b61c0485d626e66301c1c8991a1
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for imjoy/ImageJ.JS/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for imjoy/ImageJ.JS/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}

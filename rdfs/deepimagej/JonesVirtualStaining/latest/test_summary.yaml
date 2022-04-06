@@ -1,5 +1,8 @@
-rdf_sha256: c324b1074bc89a4dc71bcf2d2ef25ee36a189fca78ddf61d70e7f13c034a1a6c
+rdf_sha256: 00a1f41e99c04936af5ef0e1f12ba3fd90bc36d3e9cb56d66b239fb7692e29f5
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/JonesVirtualStaining/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/JonesVirtualStaining/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

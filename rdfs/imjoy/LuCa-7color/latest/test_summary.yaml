@@ -1,5 +1,8 @@
 rdf_sha256: b4c6882eccd56df600ccf8251120064bbeaad376a369dc3153603b3a35a840a4
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for imjoy/LuCa-7color/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for imjoy/LuCa-7color/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}

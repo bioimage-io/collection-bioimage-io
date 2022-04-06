@@ -1,5 +1,8 @@
 rdf_sha256: 447a9bdcda2ac2ad86ccbf8c31e5e5296c3436ad6d9a0a7b7e7567d43ffadd0d
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for ilastik/covid_if_training_data/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for ilastik/covid_if_training_data/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

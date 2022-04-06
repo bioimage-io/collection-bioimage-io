@@ -1,5 +1,8 @@
 rdf_sha256: ce1ef26d101b954d334144db7fd64087cd69cd1e643f0a64ff08ad0ae35db4a3
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for zero/Notebook_CycleGAN_2D_ZeroCostDL4Mic/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

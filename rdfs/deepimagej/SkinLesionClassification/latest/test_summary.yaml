@@ -1,5 +1,8 @@
-rdf_sha256: efc2782a45ac582337d5936cc5e3b640a109ebd9a8e344a2d5213afcfeb0b33b
+rdf_sha256: 8244996eba76ffaccad30d69552357ba96b1b3d46e8dd14043d4350aa62f9edb
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/SkinLesionClassification/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/SkinLesionClassification/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

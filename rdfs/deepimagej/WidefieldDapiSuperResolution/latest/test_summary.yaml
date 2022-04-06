@@ -1,5 +1,8 @@
-rdf_sha256: 2b617f34522633ac18c794f085f29a22d64cd4ad11430e3e60cd0945cac04237
+rdf_sha256: 8d4933c220e27d6d76d935cd84f5f7500634352c2de5ac460283d2fd07f2ee55
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/WidefieldDapiSuperResolution/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/WidefieldDapiSuperResolution/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

@@ -1,5 +1,8 @@
-rdf_sha256: 6138e7ec1e92d06a68d113c15dfaba43dae3e4289d67bf1f5de7cbea5cb17267
+rdf_sha256: 521ee4169208cd9428929ccfeb75883e3f05be8fc637f6cac9bb5214f80b7b0c
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/UNet2DHeLaSegmentation/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/UNet2DHeLaSegmentation/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

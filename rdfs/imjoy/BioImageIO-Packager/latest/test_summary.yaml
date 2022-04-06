@@ -1,5 +1,8 @@
 rdf_sha256: b7b942600aab0a2738141d67ebecabf1dc0147cd95c0c14c11a66fbcb0949e42
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for imjoy/BioImageIO-Packager/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for imjoy/BioImageIO-Packager/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}

@@ -1,5 +1,8 @@
-rdf_sha256: af2faaf0ae8a85c5a2c311245ad0eae798119c74e679cc130280b675b5d36e37
+rdf_sha256: 1380ba014b43f6d35183c9d460a8cda7d4282fdff144c6d75c706a93f1ba35a2
 tests:
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/deepimagej/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/deepimagej/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}
