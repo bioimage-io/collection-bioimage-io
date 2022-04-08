@@ -72,86 +72,25 @@ tests:
         ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/unet.py\",
         line 3, in <module>\n    import torch\n"]
   ilastik:
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: invalid syntax (unet.py, line 1)
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 51, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
-        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 113, in resolve_raw_resource_description\n    rd = SourceNodeTransformer().transform(rd)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in generic_transformer\n    node, **{name: self.transform(value,
-        **kwargs) for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
-        for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 63, in transform_dict\n    return {key: self.transform(value, **kwargs)
-        for key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 63, in <dictcomp>\n    return {key: self.transform(value, **kwargs) for
-        key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in generic_transformer\n    node, **{name: self.transform(value,
-        **kwargs) for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 70, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
-        for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 77, in transform_ResolvedImportableSourceFile\n    importlib_spec.loader.exec_module(dep)
-        \ # type: ignore  # todo: possible to use \"loader.load_module\"?\n", '  File
-        "<frozen importlib._bootstrap_external>", line 724, in exec_module
-
-        ', '  File "<frozen importlib._bootstrap_external>", line 860, in get_code
-
-        ', '  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
-
-        ', '  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
-
-        ']
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: 'Failed to download https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/test_output.npy
-      (504 Server Error: Gateway Time-out for url: https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/test_output.npy)'
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
-        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 112, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
-        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
-        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 60, in transform_list\n    return [self.transform(subnode, **kwargs)
-        for subnode in node]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 60, in <listcomp>\n    return [self.transform(subnode, **kwargs) for
-        subnode in node]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 206, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root_path)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/functools.py\",
-        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 212, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
-        output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
-        ({e})\")\n"]
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: "Output
+      and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
+      elements: 9097 / 1638400 (0.555%)\nMax absolute difference: 0.00042701\nMax
+      relative difference: 0.00239287\n x: array([[[[[0.0849, 0.0495, 0.0312, ...,
+      0.0452, 0.0658, 0.0985],\n          [0.0519, 0.0305, 0.018 , ..., 0.0247, 0.0351,
+      0.0563],\n          [0.0394, 0.0229, 0.014 , ..., 0.0161, 0.0212, 0.0354],...\n
+      y: array([[[[[0.085 , 0.0495, 0.0312, ..., 0.0452, 0.0658, 0.0985],\n          [0.0519,
+      0.0305, 0.018 , ..., 0.0247, 0.0351, 0.0563],\n          [0.0394, 0.0229, 0.014
+      , ..., 0.0161, 0.0212, 0.0354],...", name: reproduce test outputs with ilastik
+      <todo version> (draft) using pytorch_state_dict weights, reason: error, status: failed,
+    traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: "Output
+      and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
+      elements: 9097 / 1638400 (0.555%)\nMax absolute difference: 0.00042701\nMax
+      relative difference: 0.00239287\n x: array([[[[[0.0849, 0.0495, 0.0312, ...,
+      0.0452, 0.0658, 0.0985],\n          [0.0519, 0.0305, 0.018 , ..., 0.0247, 0.0351,
+      0.0563],\n          [0.0394, 0.0229, 0.014 , ..., 0.0161, 0.0212, 0.0354],...\n
+      y: array([[[[[0.085 , 0.0495, 0.0312, ..., 0.0452, 0.0658, 0.0985],\n          [0.0519,
+      0.0305, 0.018 , ..., 0.0247, 0.0351, 0.0563],\n          [0.0394, 0.0229, 0.014
+      , ..., 0.0161, 0.0212, 0.0354],...", name: reproduce test outputs with ilastik
+      <todo version> (draft) using pytorch_state_dict weights, reason: error, status: failed,
+    traceback: null}
