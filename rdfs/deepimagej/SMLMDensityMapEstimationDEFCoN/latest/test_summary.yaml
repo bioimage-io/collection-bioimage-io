@@ -108,25 +108,18 @@ tests:
   ilastik:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
-      [''Missing data for required field.''], ''weights'': defaultdict(<class ''dict''>,
-      {''tensorflow_js'': {''value'': [''Errors in all options for this field. Fix
-      any of the following errors:'', {''format'': [''Unknown field.''], ''name'':
-      [''Unknown field.'']}, {''weights_format'': [''Must be equal to keras_hdf5.''],
-      ''format'': [''Unknown field.''], ''name'': [''Unknown field.'']}, {''weights_format'':
-      [''Must be equal to onnx.''], ''format'': [''Unknown field.''], ''name'': [''Unknown
-      field.'']}, {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
-      ''format'': [''Unknown field.''], ''name'': [''Unknown field.'']}, {''weights_format'':
-      [''Must be equal to torchscript.''], ''format'': [''Unknown field.''], ''name'':
-      [''Unknown field.'']}, {''architecture'': [''Missing data for required field.''],
-      ''weights_format'': [''Must be equal to pytorch_state_dict.''], ''format'':
-      [''Unknown field.''], ''name'': [''Unknown field.'']}]}}), ''cite'': [''Field
-      may not be null.''], ''license'': [''Must be one of: bzip2-1.0.6, Glulxe, Parity-7.0.0,
-      OML, UCL-1.0, UPL-1.0, BSD-Protection, OCLC-2.0, eCos-2.0, Multics, IPL-1.0,
-      IPA, eGenix, Glide, Entessa, FSFUL, Nunit, MPL-2.0-no-copyleft-exception, libpng-2.0,
-      OLDAP-2.2.1, curl, ANTLR-PD, CC-BY-SA-2.0, LiLiQ-P-1.1, TCP-wrappers, Unicode-DFS-2016,
-      ODbL-1.0, LPPL-1.3a, CERN-OHL-1.2, ADSL, CDDL-1.0, Motosoto, BUSL-1.1, OGL-UK-1.0,
-      xinetd, Imlib2, SNIA, OGTSL, TMate, OCCT-PL, GPL-1.0-or-later, YPL-1.1, CECILL-2.0,
+    error: '{''inputs'': {0: {''preprocessing'': [''Not a valid list.'']}, ''_schema'':
+      [''Could not check for duplicate input tensor names due to another validation
+      error.'']}, ''cite'': [''Field may not be null.''], ''test_outputs'': [''Missing
+      data for required field.''], ''test_inputs'': [''Missing data for required field.''],
+      ''authors'': {0: {''affiliation'': [''Field may not be null.'']}, 1: {''affiliation'':
+      [''Field may not be null.'']}, 2: {''affiliation'': [''Field may not be null.'']}},
+      ''license'': [''Must be one of: bzip2-1.0.6, Glulxe, Parity-7.0.0, OML, UCL-1.0,
+      UPL-1.0, BSD-Protection, OCLC-2.0, eCos-2.0, Multics, IPL-1.0, IPA, eGenix,
+      Glide, Entessa, FSFUL, Nunit, MPL-2.0-no-copyleft-exception, libpng-2.0, OLDAP-2.2.1,
+      curl, ANTLR-PD, CC-BY-SA-2.0, LiLiQ-P-1.1, TCP-wrappers, Unicode-DFS-2016, ODbL-1.0,
+      LPPL-1.3a, CERN-OHL-1.2, ADSL, CDDL-1.0, Motosoto, BUSL-1.1, OGL-UK-1.0, xinetd,
+      Imlib2, SNIA, OGTSL, TMate, OCCT-PL, GPL-1.0-or-later, YPL-1.1, CECILL-2.0,
       PHP-3.0, BlueOak-1.0.0, Zimbra-1.3, OGC-1.0, NASA-1.3, SPL-1.0, Intel-ACPI,
       SISSL-1.2, OGL-Canada-2.0, CC-BY-3.0-US, copyleft-next-0.3.1, GFDL-1.1-invariants-or-later,
       GL2PS, MS-PL, SCEA, CC-BY-ND-2.5, SSPL-1.0, Spencer-86, LPPL-1.0, GPL-3.0-only,
@@ -190,11 +183,19 @@ tests:
       ISC, MIT-advertising, GFDL-1.2-invariants-or-later, CC-BY-NC-SA-2.5, CC-BY-1.0,
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.''],
-      ''inputs'': {0: {''preprocessing'': [''Not a valid list.'']}, ''_schema'': [''Could
-      not check for duplicate input tensor names due to another validation error.'']},
-      ''authors'': {0: {''affiliation'': [''Field may not be null.'']}, 1: {''affiliation'':
-      [''Field may not be null.'']}, 2: {''affiliation'': [''Field may not be null.'']}},
-      ''root_path'': [''Unknown field.''], ''date'': [''Unknown field.'']}'
+      ''weights'': defaultdict(<class ''dict''>, {''tensorflow_js'': {''value'': [''Errors
+      in all options for this field. Fix any of the following errors:'', {''format'':
+      [''Unknown field.''], ''name'': [''Unknown field.'']}, {''weights_format'':
+      [''Must be equal to keras_hdf5.''], ''format'': [''Unknown field.''], ''name'':
+      [''Unknown field.'']}, {''weights_format'': [''Must be equal to onnx.''], ''format'':
+      [''Unknown field.''], ''name'': [''Unknown field.'']}, {''weights_format'':
+      [''Must be equal to tensorflow_saved_model_bundle.''], ''format'': [''Unknown
+      field.''], ''name'': [''Unknown field.'']}, {''weights_format'': [''Must be
+      equal to torchscript.''], ''format'': [''Unknown field.''], ''name'': [''Unknown
+      field.'']}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
+      ''architecture'': [''Missing data for required field.''], ''format'': [''Unknown
+      field.''], ''name'': [''Unknown field.'']}]}}), ''date'': [''Unknown field.''],
+      ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_js
       weights
     reason: error
@@ -283,25 +284,25 @@ tests:
       ISC, MIT-advertising, GFDL-1.2-invariants-or-later, CC-BY-NC-SA-2.5, CC-BY-1.0,
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.''],
-      ''cite'': [''Field may not be null.''], ''test_outputs'': [''Missing data for
-      required field.''], ''weights'': defaultdict(<class ''dict''>, {''tensorflow_js'':
-      {''value'': [''Errors in all options for this field. Fix any of the following
-      errors:'', {''name'': [''Unknown field.''], ''format'': [''Unknown field.'']},
-      {''weights_format'': [''Must be equal to keras_hdf5.''], ''name'': [''Unknown
-      field.''], ''format'': [''Unknown field.'']}, {''weights_format'': [''Must be
-      equal to onnx.''], ''name'': [''Unknown field.''], ''format'': [''Unknown field.'']},
-      {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
-      ''name'': [''Unknown field.''], ''format'': [''Unknown field.'']}, {''weights_format'':
-      [''Must be equal to torchscript.''], ''name'': [''Unknown field.''], ''format'':
+      ''cite'': [''Field may not be null.''], ''weights'': defaultdict(<class ''dict''>,
+      {''tensorflow_js'': {''value'': [''Errors in all options for this field. Fix
+      any of the following errors:'', {''format'': [''Unknown field.''], ''name'':
+      [''Unknown field.'']}, {''weights_format'': [''Must be equal to keras_hdf5.''],
+      ''format'': [''Unknown field.''], ''name'': [''Unknown field.'']}, {''weights_format'':
+      [''Must be equal to onnx.''], ''format'': [''Unknown field.''], ''name'': [''Unknown
+      field.'']}, {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
+      ''format'': [''Unknown field.''], ''name'': [''Unknown field.'']}, {''weights_format'':
+      [''Must be equal to torchscript.''], ''format'': [''Unknown field.''], ''name'':
       [''Unknown field.'']}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
-      ''architecture'': [''Missing data for required field.''], ''name'': [''Unknown
-      field.''], ''format'': [''Unknown field.'']}]}}), ''inputs'': {0: {''preprocessing'':
-      [''Not a valid list.'']}, ''_schema'': [''Could not check for duplicate input
-      tensor names due to another validation error.'']}, ''test_inputs'': [''Missing
-      data for required field.''], ''authors'': {0: {''affiliation'': [''Field may
-      not be null.'']}, 1: {''affiliation'': [''Field may not be null.'']}, 2: {''affiliation'':
-      [''Field may not be null.'']}}, ''date'': [''Unknown field.''], ''root_path'':
-      [''Unknown field.'']}'
+      ''architecture'': [''Missing data for required field.''], ''format'': [''Unknown
+      field.''], ''name'': [''Unknown field.'']}]}}), ''test_outputs'': [''Missing
+      data for required field.''], ''inputs'': {0: {''preprocessing'': [''Not a valid
+      list.'']}, ''_schema'': [''Could not check for duplicate input tensor names
+      due to another validation error.'']}, ''test_inputs'': [''Missing data for required
+      field.''], ''authors'': {0: {''affiliation'': [''Field may not be null.'']},
+      1: {''affiliation'': [''Field may not be null.'']}, 2: {''affiliation'': [''Field
+      may not be null.'']}}, ''date'': [''Unknown field.''], ''root_path'': [''Unknown
+      field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_js
       weights
     reason: error
