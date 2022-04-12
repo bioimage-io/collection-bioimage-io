@@ -89,7 +89,7 @@ def main(
                     if not version_has_update:
                         # check bioimageio library versions in test summary
                         test_summary = yaml.load(test_summary_path)
-                        if "bioimageio" in test_summary:
+                        if "bioimageio" in test_summary or []:
                             last_spec_version = test_summary["bioimageio"].get("spec_version")
                             last_core_version = test_summary["bioimageio"].get("core_version")
                             if last_spec_version != spec_version or last_core_version != core_version:
