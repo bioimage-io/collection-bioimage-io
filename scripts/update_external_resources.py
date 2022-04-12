@@ -1,5 +1,6 @@
 import json
 import subprocess
+import warnings
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -62,8 +63,16 @@ def update_resource(
         }
 
         # check/set nickname and nickname_icon
-        existing_nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname")
-        existing_nickname_icon = rdf.get("config", {}).get("bioimageio", {}).get("nickname_icon")
+        def get_config_bioimageio(key):
+            try:
+                return rdf.get("config", {}).get("bioimageio", {}).get(key)
+            except Exception as e:
+                warnings.warn(f"Failed to get existing {key}: {e}")
+                return None
+
+        existing_nickname = get_config_bioimageio("nickname")
+        existing_nickname_icon = get_config_bioimageio("nickname_icon")
+
         nickname = None
         nickname_icon = None
         if resource_type == "model":
