@@ -210,17 +210,22 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
         if isinstance(version_info["rdf_source"], dict):
             if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
-                rdf_info = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]["source"]))
+                enriched_version_info = dict(
+                    get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]["source"])
+                )
             else:
-                rdf_info = {}
+                enriched_version_info = {}
 
-            # Inherit the info from e.g. the collection
+            enriched_version_info.update(version_info)
+            version_info = enriched_version_info
+
+            # Inherit the info from the collection
             rdf = version_info["rdf_source"].copy()
-            rdf.update(rdf_info)
-            assert missing not in rdf.values(), rdf
         elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
-            rdf = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]))
-            assert missing not in rdf.values(), rdf
+            enriched_version_info = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]))
+            enriched_version_info.update(version_info)
+            version_info = enriched_version_info
+            rdf = {}
         else:
             try:
                 rdf, rdf_name, rdf_root = resolve_rdf_source(version_info["rdf_source"])
@@ -264,6 +269,8 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
                 rdf = serialize_raw_resource_description_to_dict(rdf_node)
             except Exception as e:
                 warnings.warn(f"Failed round-trip to resolve any remote sources: {e}")
+
+        assert missing not in rdf.values(), rdf
 
         # sort rdf
         rdf = rec_sort(rdf)
