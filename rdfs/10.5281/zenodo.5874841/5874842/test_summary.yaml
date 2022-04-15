@@ -86,15 +86,48 @@ tests:
         rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: 'PytorchStreamReader failed reading zip archive: failed finding central
+      directory'
     name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights, reason: null, status: passed, traceback: null}
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 103, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 143, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_pytorch_model_adapter.py\",
+        line 30, in _load\n    state = torch.load(weights.source, map_location=self._devices[0])\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/torch/serialization.py\",
+        line 600, in load\n    with _open_zipfile_reader(opened_file) as opened_zipfile:\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/torch/serialization.py\",
+        line 242, in __init__\n    super(_open_zipfile_reader, self).__init__(torch._C.PyTorchFileReader(name_or_buffer))\n"]
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
       weights, reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
       weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: 'PytorchStreamReader failed reading zip archive: failed finding central
+      directory'
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
-      weights, reason: null, status: passed, traceback: null}
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 103, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 143, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_torchscript_model_adapter.py\",
+        line 23, in _load\n    self._model = torch.jit.load(weight_path)\n", "  File
+        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/torch/jit/_serialization.py\",
+        line 161, in load\n    cpp_module = torch._C.import_ir_module(cu, str(f),
+        map_location, _extra_files)\n"]
