@@ -1,5 +1,6 @@
 import json
 import subprocess
+import warnings
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -22,7 +23,7 @@ def update_resource(
     version_id: str,
     new_version: dict,
     resource_output_path: Path,
-    rdf: Optional[dict],
+    rdf: dict,
 ) -> Union[dict, Literal["old_hit", "blocked"]]:
     if resource_output_path.exists():
         # maybe we have more than one new versions, so we should update the resource that is already written to output
@@ -62,8 +63,16 @@ def update_resource(
         }
 
         # check/set nickname and nickname_icon
-        existing_nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname")
-        existing_nickname_icon = rdf.get("config", {}).get("bioimageio", {}).get("nickname_icon")
+        def get_config_bioimageio(key):
+            try:
+                return rdf.get("config", {}).get("bioimageio", {}).get(key)
+            except Exception as e:
+                warnings.warn(f"Failed to get existing {key}: {e}")
+                return None
+
+        existing_nickname = get_config_bioimageio("nickname")
+        existing_nickname_icon = get_config_bioimageio("nickname_icon")
+
         nickname = None
         nickname_icon = None
         if resource_type == "model":
@@ -134,6 +143,7 @@ def update_from_zenodo(
     collection: Path,
     dist: Path,
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]],
+    ignore_status_5xx: bool
 ):
     for page in range(1, 10):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
@@ -141,6 +151,7 @@ def update_from_zenodo(
         if not r.status_code == 200:
             print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
             break
+
         print(f"Collecting items from zenodo: {zenodo_request}")
 
         hits = r.json()["hits"]["hits"]
@@ -156,7 +167,7 @@ def update_from_zenodo(
             resource_output_path = dist / resource_doi / "resource.yaml"
             version_name = f"version {hit['metadata']['relations']['version'][0]['index'] + 1}"
             rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
-            rdf = None
+            rdf = {}
             rdf_source = "unknown"
             name = doi
             resource_type = "unknown"
@@ -165,18 +176,20 @@ def update_from_zenodo(
                     print("found multiple 'rdf.yaml' sources?!?")
 
                 rdf_source = sorted(rdf_urls)[0]
+                r = requests.get(rdf_source)
                 try:
-                    r = requests.get(rdf_source)
                     r.raise_for_status()
                 except Exception as e:
                     print(f"Failed to download rdf: {e}")
+                    if ignore_status_5xx and r.status_code // 100 == 5:
+                        continue
                 else:
                     try:
                         rdf = yaml.load(r.text)
                         assert isinstance(rdf, dict)
                     except Exception as e:
                         print(f"invalid rdf at {rdf_source} ({e})")
-                        rdf = None
+                        rdf = {}
                     else:
                         name = rdf.get("name", doi)
                         resource_type = rdf.get("type")
@@ -212,9 +225,10 @@ def main(
     collection: Path = Path(__file__).parent / "../collection",
     dist: Path = Path(__file__).parent / "../dist",
     max_resource_count: int = 3,
+    ignore_status_5xx: bool = False,
 ):
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]] = defaultdict(list)
-    update_from_zenodo(collection, dist, updated_resources)
+    update_from_zenodo(collection, dist, updated_resources, ignore_status_5xx)
 
     # limit the number of PRs created
     oldest_updated_resources: List[Tuple[str, List[Dict[str, str]]]] = sorted(  # type: ignore
