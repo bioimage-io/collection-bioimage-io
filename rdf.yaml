@@ -1725,7 +1725,7 @@ collection:
     of Arabidopsis thaliana ovules acquired on a confocal microscope.
   id: 10.5281/zenodo.5749843
   license: MIT
-  links: [imjoy/BioImageIO-Packager]
+  links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej]
   name: Cell Segmentation from Membrane Staining for Plant Tissues
   nickname: humorous-owl
   nickname_icon: "\U0001F989"
