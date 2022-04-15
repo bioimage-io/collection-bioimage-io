@@ -87,6 +87,8 @@ inputs:
 license: MIT
 links:
 - imjoy/BioImageIO-Packager
+- ilastik/ilastik
+- deepimagej/deepimagej
 maintainers:
 - github_user: esgomezm
   name: Estibaliz Gomez de Mariscal
