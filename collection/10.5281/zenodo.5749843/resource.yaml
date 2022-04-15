@@ -11,6 +11,7 @@ versions:
   status: accepted
   version_id: '5888237'
   version_name: revision 1
+  links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej]
   tags: [zerocostdl4mic, deepimagej, segmentation, 3d, unet, fluorescence-light-microscopy, cell-membrane, plant, arabidopsis, tensorflow]
   description: 'A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.'
 - created: '2022-01-19 10:16:02.455027'
