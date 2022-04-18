@@ -41,7 +41,7 @@ tests:
   ilastik:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
-    error: '{''test_outputs'': [''Missing data for required field.''], ''test_inputs'':
+    error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
       [''Missing data for required field.''], ''run_mode'': [''Expected dictionary,
       but got list.''], ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
@@ -60,7 +60,7 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''test_outputs'': [''Missing data for required field.''], ''test_inputs'':
+    error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
       [''Missing data for required field.''], ''run_mode'': [''Expected dictionary,
       but got list.''], ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
@@ -79,7 +79,7 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
-    error: '{''test_outputs'': [''Missing data for required field.''], ''test_inputs'':
+    error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
       [''Missing data for required field.''], ''run_mode'': [''Expected dictionary,
       but got list.''], ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
@@ -101,7 +101,7 @@ tests:
     status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''test_outputs'': [''Missing data for required field.''], ''test_inputs'':
+    error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
       [''Missing data for required field.''], ''run_mode'': [''Expected dictionary,
       but got list.''], ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle

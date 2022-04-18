@@ -42,8 +42,8 @@ tests:
       [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
       to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got str.'']},
       ''weights_format'': [''Must be equal to torchscript.'']}, {''authors'': {0:
-      [''Expected dictionary, but got str.'']}, ''architecture'': [''Missing data
-      for required field.''], ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}}),
+      [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
+      to pytorch_state_dict.''], ''architecture'': [''Missing data for required field.'']}]}}),
       ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights
@@ -72,8 +72,8 @@ tests:
       [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
       to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got str.'']},
       ''weights_format'': [''Must be equal to torchscript.'']}, {''authors'': {0:
-      [''Expected dictionary, but got str.'']}, ''architecture'': [''Missing data
-      for required field.''], ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}}),
+      [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
+      to pytorch_state_dict.''], ''architecture'': [''Missing data for required field.'']}]}}),
       ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights
