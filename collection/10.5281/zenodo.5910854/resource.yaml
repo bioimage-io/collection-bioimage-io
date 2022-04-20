@@ -10,7 +10,7 @@ versions:
   created: '2022-01-27 20:53:33.181598'
   status: accepted
   name: HPA Bestfitting InceptionV3
-  version_name: revision 1
+  version_name: Version 1
   rdf_source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/rdf.yaml
   config: 
     bioimageio:
