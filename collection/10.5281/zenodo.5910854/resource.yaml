@@ -12,6 +12,7 @@ versions:
   name: HPA Bestfitting InceptionV3
   version_name: Version 1
   rdf_source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/rdf.yaml
+  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell]
   config: 
     bioimageio:
       test_kwargs:
