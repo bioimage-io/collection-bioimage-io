@@ -3818,7 +3818,8 @@
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "imjoy/HPA-Single-Cell"
       ],
       "name": "HPA Bestfitting InceptionV3",
       "owners": [
@@ -4006,7 +4007,9 @@
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "imjoy/HPA-Single-Cell",
+        "deepimagej/deepimagej"
       ],
       "name": "HPA Cell Segmentation (DPNUnet)",
       "nickname": "loyal-parrot",
@@ -4039,6 +4042,8 @@
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
+        "imjoy/BioImageIO-Packager",
+        "imjoy/HPA-Single-Cell",
         "deepimagej/deepimagej"
       ],
       "name": "HPA Nucleus Segmentation (DPNUnet)",

@@ -1869,7 +1869,7 @@ collection:
   description: The winning model of HPA image classification 2021 by Bestfitting
   id: 10.5281/zenodo.5910854
   license: MIT
-  links: [imjoy/BioImageIO-Packager]
+  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell]
   name: HPA Bestfitting InceptionV3
   owners: [47882]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/5911832/rdf.yaml
@@ -1949,7 +1949,7 @@ collection:
     Atlas
   id: 10.5281/zenodo.6200635
   license: CC-BY-4.0
-  links: [imjoy/BioImageIO-Packager]
+  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell, deepimagej/deepimagej]
   name: HPA Cell Segmentation (DPNUnet)
   nickname: loyal-parrot
   nickname_icon: "\U0001F99C"
@@ -1966,7 +1966,7 @@ collection:
     Atlas
   id: 10.5281/zenodo.6200999
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej]
+  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell, deepimagej/deepimagej]
   name: HPA Nucleus Segmentation (DPNUnet)
   nickname: conscientious-seashell
   nickname_icon: "\U0001F41A"
