@@ -77,6 +77,8 @@ inputs:
   - 512
 license: CC-BY-4.0
 links:
+- imjoy/BioImageIO-Packager
+- imjoy/HPA-Single-Cell
 - deepimagej/deepimagej
 name: HPA Nucleus Segmentation (DPNUnet)
 outputs:

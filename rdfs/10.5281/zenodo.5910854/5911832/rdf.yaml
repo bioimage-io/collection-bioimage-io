@@ -52,6 +52,7 @@ inputs:
 license: MIT
 links:
 - imjoy/BioImageIO-Packager
+- imjoy/HPA-Single-Cell
 name: HPA Bestfitting InceptionV3
 outputs:
 - axes: bc
