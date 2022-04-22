@@ -7,6 +7,7 @@ versions:
   name: HPA Cell Segmentation (DPNUnet)
   version_name: revision 2
   rdf_source: https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/rdf.yaml
+  links: [imjoy/BioImageIO-Packager, imjoy/hpa-single-cell]
 id: 10.5281/zenodo.6200635
 doi: 10.5281/zenodo.6200635
 type: model
