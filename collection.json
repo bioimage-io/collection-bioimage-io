@@ -1406,6 +1406,24 @@
       "authors": [],
       "badges": [],
       "covers": [],
+      "description": "Run the HPA single cell classification model via the the BioEngine",
+      "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png",
+      "id": "imjoy/HPA-Single-Cell",
+      "name": "HPA Single Cell",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/HPA-Single-Cell/latest/rdf.yaml",
+      "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html",
+      "tags": [
+        "bioengine"
+      ],
+      "type": "collection",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [],
+      "badges": [],
+      "covers": [],
       "description": "ImJoy: Supercharging interactivity and scalability!",
       "icon": "https://imjoy.io/static/img/imjoy-icon.png",
       "id": "imjoy/ImJoy",
@@ -4516,12 +4534,14 @@
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
       "application": 94,
+      "collection": 2,
       "dataset": 72,
       "model": 100,
       "notebook": 4
     },
     "n_resources": {
       "application": 47,
+      "collection": 1,
       "dataset": 36,
       "model": 46,
       "notebook": 2
