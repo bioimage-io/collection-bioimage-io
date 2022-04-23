@@ -35,16 +35,16 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''weights'': defaultdict(<class ''dict''>, {''tensorflow_saved_model_bundle'':
       {''value'': [''Errors in all options for this field. Fix any of the following
-      errors:'', {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to keras_hdf5.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to onnx.''], ''authors'':
-      {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary, but
-      got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''], ''authors'':
-      {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to pytorch_state_dict.''], ''architecture'': [''Missing data for required
-      field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]}}), ''root_path'':
-      [''Unknown field.'']}'
+      errors:'', {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''authors'':
+      {0: [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be
+      equal to keras_hdf5.'']}, {''authors'': {0: [''Expected dictionary, but got
+      str.'']}, ''weights_format'': [''Must be equal to onnx.'']}, {''authors'': {0:
+      [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
+      to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got str.'']},
+      ''weights_format'': [''Must be equal to torchscript.'']}, {''authors'': {0:
+      [''Expected dictionary, but got str.'']}, ''architecture'': [''Missing data
+      for required field.''], ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}}),
+      ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights
     reason: error
@@ -72,9 +72,9 @@ tests:
       be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary, but
       got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''], ''authors'':
       {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to pytorch_state_dict.''], ''architecture'': [''Missing data for required
-      field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]}}), ''root_path'':
-      [''Unknown field.'']}'
+      be equal to pytorch_state_dict.''], ''authors'': {0: [''Expected dictionary,
+      but got str.'']}, ''architecture'': [''Missing data for required field.'']}]}}),
+      ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights
     reason: error
