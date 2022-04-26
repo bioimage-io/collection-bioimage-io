@@ -3822,6 +3822,8 @@
         "imjoy/HPA-Single-Cell"
       ],
       "name": "HPA Bestfitting InceptionV3",
+      "nickname": "straightforward-crocodile",
+      "nickname_icon": "\ud83d\udc0a",
       "owners": [
         47882
       ],

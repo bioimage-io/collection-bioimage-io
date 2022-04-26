@@ -1871,6 +1871,8 @@ collection:
   license: MIT
   links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell]
   name: HPA Bestfitting InceptionV3
+  nickname: straightforward-crocodile
+  nickname_icon: "\U0001F40A"
   owners: [47882]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/5911832/rdf.yaml
   tags: [classification, inception-v3, hpa, onnx, cells, protein-localization]
