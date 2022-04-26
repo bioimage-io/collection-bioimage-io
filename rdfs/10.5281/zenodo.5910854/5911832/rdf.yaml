@@ -9,6 +9,8 @@ cite:
     Atlas Image Classification competition. Nat Methods 16, 1254–1261 (2019).
 config:
   bioimageio:
+    nickname: straightforward-crocodile
+    nickname_icon: 🐊
     owners:
     - 47882
     test_kwargs:
