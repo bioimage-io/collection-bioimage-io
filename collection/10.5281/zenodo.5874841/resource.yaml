@@ -7,7 +7,7 @@ versions:
 - {created: '2022-01-18 23:04:49.485980', doi: 10.5281/zenodo.5874842, name: Mitochondria Segmentation for EM,
   rdf_source: 'https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml',
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain],
-  status: accepted, version_id: '5874842', version_name: revision 1}
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
+  status: accepted, version_id: '5874842', version_name: revision 1,
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]}
 nickname: kind-seashell
 nickname_icon: 🐚
