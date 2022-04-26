@@ -126,7 +126,12 @@ def resolve_partners(
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
-            partner_id: str = partner.get("id") or partner_collection.id
+            partner_id: str = partner.get("id")
+            if partner_id is None:
+                partner_id = partner_collection.id
+            else:
+                partner_collection.id = partner_id  # overwrite partner collection id
+
             if not partner_id:
                 warnings.warn(f"Missing partner id for partner {idx}: {partner}")
                 ignored_partners.add(f"partner[{idx}]")
@@ -151,24 +156,19 @@ def resolve_partners(
                     warnings.warn(f"{partner_id}[{entry_idx}]: {entry_error}")
                     continue
 
-                # Convert relative links to absolute  # todo: move to resolve_collection_entries
-                if "links" in entry_rdf:
-                    for idx, link in enumerate(entry_rdf["links"]):
-                        if "/" not in link:
-                            entry_rdf["links"][idx] = partner_id + "/" + link
-
+                assert hasattr(entry_rdf, "id")
                 updated_partner_resources.append(
                     dict(
                         status="accepted",
-                        id=entry_rdf["id"],
-                        type=entry_rdf.get("type", "unknown"),
+                        id=entry_rdf.id,  # type: ignore
+                        type=entry_rdf.type,
                         versions=[
                             dict(
-                                name=entry_rdf.get("name", "unknown"),
+                                name=entry_rdf.name,
                                 version_id="latest",
                                 version_name="latest",
                                 status="accepted",
-                                rdf_source=entry_rdf,
+                                rdf_source=serialize_raw_resource_description_to_dict(entry_rdf),
                             )
                         ],
                     )
