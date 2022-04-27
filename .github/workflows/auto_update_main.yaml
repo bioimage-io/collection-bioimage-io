@@ -59,7 +59,12 @@ jobs:
         name: collection-update
         path: dist
         retention-days: 1
-    - run: rm -r dist
+    - name: clean up dist
+      run: |
+      mv dist/download_counts.json tmp_download_counts.json
+      rm -r dist
+      mkdir dist
+      mv tmp_download_counts.json dist/download_counts.json
     - name: update partner resources
       run: python scripts/update_partner_resources.py
     - name: Upload preview of updated partner resources
