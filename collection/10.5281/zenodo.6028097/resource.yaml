@@ -7,6 +7,7 @@ versions:
   name: PlatynereisEMnucleiSegmentationBoundaryModel
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/rdf.yaml
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
 id: 10.5281/zenodo.6028097
 doi: 10.5281/zenodo.6028097
 type: model

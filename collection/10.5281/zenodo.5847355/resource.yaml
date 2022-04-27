@@ -12,6 +12,7 @@ versions:
   name: CovidIFCellSegmentationBoundaryModel
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/rdf.yaml
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
 - created: '2022-01-18 21:31:33.668428'
   doi: 10.5281/zenodo.5874728
   name: Cell Segmentation Immunofluorescence (Membrane Prediction)
