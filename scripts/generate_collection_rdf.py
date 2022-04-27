@@ -70,6 +70,10 @@ def main(
                 continue
 
             this_version = yaml.load(updated_rdf_source)
+            if this_version is None:
+                print(f"skipping empty rdf: {r.resource_id}/{version_id}")
+                continue
+
             assert version_id == this_version["id"].split("/")[-1]
             assert r.resource_id == this_version["id"][: -(len(version_id) + 1)]
 

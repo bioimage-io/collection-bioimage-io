@@ -143,9 +143,10 @@ def update_from_zenodo(
     collection: Path,
     dist: Path,
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]],
-    ignore_status_5xx: bool
+    ignore_status_5xx: bool,
 ):
-    for page in range(1, 10):
+    download_counts = {}
+    for page in range(1, 1000):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
@@ -194,6 +195,13 @@ def update_from_zenodo(
                         name = rdf.get("name", doi)
                         resource_type = rdf.get("type")
 
+            try:
+                download_count = int(hit["stats"]["unique_downloads"])
+            except Exception as e:
+                warnings.warn(f"Could not determine download count: {e}")
+                download_count = 1
+
+            download_counts[resource_doi] = download_count
             version_id = str(hit["id"])
 
             new_version = {
@@ -219,6 +227,10 @@ def update_from_zenodo(
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
+
+    dist.mkdir(parents=True, exist_ok=True)
+    with (dist / "download_counts.json").open("w", encoding="utf-8") as f:
+        json.dump(download_counts, f, sort_keys=True)
 
 
 def main(
