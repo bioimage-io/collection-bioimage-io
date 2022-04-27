@@ -1753,8 +1753,7 @@ collection:
   description: Nucleus segmentation for fluorescence microscopy
   id: 10.5281/zenodo.5764892
   license: CC-BY-4.0
-  links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   name: NucleiSegmentationBoundaryModel
   nickname: affable-shark
   nickname_icon: "\U0001F988"
@@ -1789,8 +1788,7 @@ collection:
   description: Cell segmentation for immunofluorescence microscopy.
   id: 10.5281/zenodo.5847355
   license: CC-BY-4.0
-  links: [ilastik/covid_if_training_data, ilastik/ilastik, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   name: CovidIFCellSegmentationBoundaryModel
   nickname: powerful-chipmunk
   nickname_icon: "\U0001F43F"
@@ -1806,7 +1804,8 @@ collection:
   description: Cell segmentation for phase-contrast microscopy.
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
-  links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
+    ilastik/live-cell-boundary-model]
   name: LiveCellSegmentationBoundaryModel
   nickname: hiding-tiger
   nickname_icon: "\U0001F405"
@@ -1822,7 +1821,7 @@ collection:
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/cremi_training_data, ilastik/ilastik, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
   name: Neuron Segmentation in EM (Membrane Prediction)
   nickname: impartial-shrimp
   nickname_icon: "\U0001F990"
@@ -1838,8 +1837,7 @@ collection:
   description: Mitochondria segmentation for electron microscopy.
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
-    imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
   name: Mitochondria Segmentation for EM
   nickname: kind-seashell
   nickname_icon: "\U0001F41A"
@@ -1902,8 +1900,7 @@ collection:
   description: '{organelle} segmentation in EM of platynereis.'
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
-  links: [ilastik/platynereis_em_training_data, deepimagej/deepimagej, ilastik/ilastik,
-    imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
   name: PlatynereisEMnucleiSegmentationBoundaryModel
   nickname: organized-badger
   nickname_icon: "\U0001F9A1"
@@ -1918,8 +1915,7 @@ collection:
   description: Cell segmentation in EM of platynereis.
   id: 10.5281/zenodo.6028280
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/platynereis_em_training_data, ilastik/ilastik,
-    imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
   name: PlatynereisEMcellsSegmentationBoundaryModel
   nickname: willing-hedgehog
   nickname_icon: "\U0001F994"
@@ -1934,7 +1930,7 @@ collection:
   description: affinity-model
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
-  links: [ilastik/ilastik, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   name: EpitheliaAffinityModel
   nickname: wild-whale
   nickname_icon: "\U0001F433"
@@ -2166,7 +2162,7 @@ collection:
   description: Segmentation of mitochondria in EM images.
   id: 10.5281/zenodo.6406803
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   name: MitchondriaEMSegmentation2D
   nickname: shivering-raccoon
   nickname_icon: "\U0001F99D"
