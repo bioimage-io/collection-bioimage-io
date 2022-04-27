@@ -59,9 +59,9 @@ tests:
         rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
       weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
       weights, reason: null, status: passed, traceback: null}

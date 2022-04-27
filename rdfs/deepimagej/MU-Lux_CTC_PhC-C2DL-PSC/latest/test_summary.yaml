@@ -37,11 +37,17 @@ tests:
   - {error: Missing/invalid weight formats for deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest,
     name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
+  - {error: Missing/invalid weight formats for deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
       [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
       weights
     reason: error
     status: failed
@@ -77,7 +83,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
       [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
+    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
@@ -91,9 +97,6 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
@@ -112,6 +115,3 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

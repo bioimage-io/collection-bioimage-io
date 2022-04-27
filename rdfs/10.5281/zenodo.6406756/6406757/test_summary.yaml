@@ -34,6 +34,16 @@ tests:
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
+    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
     error: No module named 'torch'
     name: reproduce test outputs with deepimagej 2.1.13 using pytorch_state_dict weights
     reason: error
@@ -73,26 +83,16 @@ tests:
 
         ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/unet.py\",
         line 2, in <module>\n    import torch\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
-        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
-        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
       weights, reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
+      weights, reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
+      weights, reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
       weights, reason: null, status: passed, traceback: null}
