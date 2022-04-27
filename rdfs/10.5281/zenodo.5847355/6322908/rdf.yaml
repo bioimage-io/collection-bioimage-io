@@ -81,10 +81,10 @@ inputs:
     - 16
 license: CC-BY-4.0
 links:
-- ilastik/covid_if_training_data
-- ilastik/ilastik
 - deepimagej/deepimagej
+- ilastik/ilastik
 - imjoy/BioImageIO-Packager
+- ilastik/torch-em-2d-unet-notebook
 maintainers:
 - github_user: constantinpape
   name: constantinpape

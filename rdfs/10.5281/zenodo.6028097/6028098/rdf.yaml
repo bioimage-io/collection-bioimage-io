@@ -80,10 +80,10 @@ inputs:
     - 16
 license: CC-BY-4.0
 links:
-- ilastik/platynereis_em_training_data
 - deepimagej/deepimagej
 - ilastik/ilastik
 - imjoy/BioImageIO-Packager
+- ilastik/torch-em-3d-unet-notebook
 maintainers:
 - github_user: Constantin Pape
   name: Constantin Pape

@@ -81,9 +81,9 @@ inputs:
 license: CC-BY-4.0
 links:
 - deepimagej/deepimagej
-- ilastik/cremi_training_data
 - ilastik/ilastik
 - imjoy/BioImageIO-Packager
+- ilastik/torch-em-3d-unet-notebook
 maintainers:
 - github_user: constantinpape
   name: Constantin Pape

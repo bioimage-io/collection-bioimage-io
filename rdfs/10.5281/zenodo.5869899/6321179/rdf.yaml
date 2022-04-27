@@ -79,10 +79,11 @@ inputs:
     - 16
 license: CC-BY-4.0
 links:
-- ilastik/livecell_dataset
-- ilastik/ilastik
 - deepimagej/deepimagej
+- ilastik/ilastik
 - imjoy/BioImageIO-Packager
+- ilastik/torch-em-2d-unet-notebook
+- ilastik/live-cell-boundary-model
 maintainers:
 - github_user: constantinpape
   name: Constantin Pape

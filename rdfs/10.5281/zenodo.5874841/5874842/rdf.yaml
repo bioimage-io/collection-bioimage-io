@@ -82,8 +82,8 @@ license: CC-BY-4.0
 links:
 - deepimagej/deepimagej
 - ilastik/ilastik
-- ilastik/mitoem_segmentation_challenge
 - imjoy/BioImageIO-Packager
+- ilastik/torch-em-3d-unet-notebook
 maintainers:
 - github_user: constantinpape
   name: Constantin Pape

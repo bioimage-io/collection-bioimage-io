@@ -67,8 +67,10 @@ inputs:
     - 16
 license: CC-BY-4.0
 links:
+- deepimagej/deepimagej
 - ilastik/ilastik
 - imjoy/BioImageIO-Packager
+- ilastik/torch-em-2d-unet-notebook
 maintainers:
 - github_user: Constantin Pape
   name: Constantin Pape
