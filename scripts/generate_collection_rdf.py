@@ -47,7 +47,7 @@ def main(
     rdf["collection"] = rdf.get("collection", [])
     assert isinstance(rdf["collection"], list), type(rdf["collection"])
 
-    download_counts_path = dist / "download_counts.json"
+    download_counts_path = gh_pages / "download_counts.json"
     if download_counts_path.exists():
         with download_counts_path.open(encoding="utf-8") as f:
             download_counts = json.load(f) or {}
@@ -121,6 +121,9 @@ def main(
     duplicate_nicknames = [nick for i, nick in enumerate(nicknames) if nick in nicknames[:i]]
     if duplicate_nicknames:
         raise ValueError(f"Duplicate nicknames: {duplicate_nicknames}")
+
+    # sort collection
+    rdf["collection"].sort(key=lambda c: -c["download_count"])
 
     rdf_path = dist / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)

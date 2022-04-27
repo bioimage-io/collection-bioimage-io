@@ -230,7 +230,7 @@ def update_from_zenodo(
 
     dist.mkdir(parents=True, exist_ok=True)
     with (dist / "download_counts.json").open("w", encoding="utf-8") as f:
-        json.dump(download_counts, f, sort_keys=True)
+        json.dump(download_counts, f, indent=2, sort_keys=True)
 
 
 def main(

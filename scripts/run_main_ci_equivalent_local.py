@@ -70,10 +70,17 @@ def main(always_continue: bool = True, skip_update_external: bool = True):
         print("would open auto-update PRs with:")
         pprint(updates)
 
+        # super fake deploy
+        shutil.move((dist / "download_counts.json").as_posix(), "tmp_download_counts.json")
+
         fake_deploy(dist, collection)  # in CI done via PRs
 
     if dist.exists():
         shutil.rmtree(str(dist))
+        tmp_dwn_counts = Path("tmp_download_counts.json")
+        if tmp_dwn_counts.exists():
+            dist.mkdir(parents=True)
+            shutil.move(tmp_dwn_counts.as_posix(), (dist / "download_counts.json").as_posix())
 
     update_partner_resources_script()
     fake_deploy(dist, gh_pages)
