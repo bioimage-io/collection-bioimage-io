@@ -122,6 +122,9 @@ def main(
     if duplicate_nicknames:
         raise ValueError(f"Duplicate nicknames: {duplicate_nicknames}")
 
+    # sort collection
+    rdf["collection"].sort(key=lambda c: -c["download_count"])
+
     rdf_path = dist / "rdf.yaml"
     rdf_path.parent.mkdir(exist_ok=True)
     yaml.dump(rec_sort(rdf), rdf_path)
