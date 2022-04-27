@@ -47,7 +47,7 @@ def main(
     rdf["collection"] = rdf.get("collection", [])
     assert isinstance(rdf["collection"], list), type(rdf["collection"])
 
-    download_counts_path = dist / "download_counts.json"
+    download_counts_path = gh_pages / "download_counts.json"
     if download_counts_path.exists():
         with download_counts_path.open(encoding="utf-8") as f:
             download_counts = json.load(f) or {}
