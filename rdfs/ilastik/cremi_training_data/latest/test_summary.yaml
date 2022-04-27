@@ -1,4 +1,4 @@
-rdf_sha256: 3802f5349cf17a471e69b8ebb243b6979f1bbd8e4e69cb789a0891f6bd955532
+rdf_sha256: ee22dcaeeaf7a60a972693b1f23dee07da6a4d05f644307a4649ec921318e8a2
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for ilastik/cremi_training_data/latest,

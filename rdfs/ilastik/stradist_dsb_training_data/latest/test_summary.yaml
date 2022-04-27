@@ -1,4 +1,4 @@
-rdf_sha256: a601d816908a3d0a6e34c07e6b967a217a48fb93ae36651eb70d038cc62c3c82
+rdf_sha256: 74f0000db6eaba746acd32dcada3d44213820c97c804729ac2f45ed32487a7b8
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for ilastik/stradist_dsb_training_data/latest,

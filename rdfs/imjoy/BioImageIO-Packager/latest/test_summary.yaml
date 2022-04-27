@@ -1,4 +1,4 @@
-rdf_sha256: 5f9804cccf43f2eef1a6840653912c7347543282526b0ad0b8ba34a6ad75392b
+rdf_sha256: 5385826fcef30d203b3545fdae70de0022e6bd6488eda7fff6e20a5deb1e6e5d
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for imjoy/BioImageIO-Packager/latest, name: reproduce

@@ -1,4 +1,4 @@
-rdf_sha256: 0235d13245c88828c30afc7bc197b290ded97c796ae17b036e3202194d56405a
+rdf_sha256: f703da55ff4e76854d774ac60cee43bda214ea82ebe717b906633623479518e0
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for ilastik/mitoem_segmentation_challenge/latest,

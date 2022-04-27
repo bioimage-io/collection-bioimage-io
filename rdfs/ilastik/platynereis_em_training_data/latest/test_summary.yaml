@@ -1,4 +1,4 @@
-rdf_sha256: 2bf460df9290bedb179eb1767f4fdd0ad6b80d3291f6dea9c77c3fab7ce1238b
+rdf_sha256: adc157d6c5a7e4bb37f9ce33755b1e9fab72c43b0796588c9c6c3ff20018bdf6
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for ilastik/platynereis_em_training_data/latest,

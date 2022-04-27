@@ -1,4 +1,4 @@
-rdf_sha256: 8c6a5a30e07d0c4751f3e0f3caba36e28006ba52a458ff899acc18e07082599d
+rdf_sha256: 22b0eb89e55ce87814a8db487ec53c0bc043db56fe8ae33cc1a4692c7ef04b32
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for ilastik/ilastik/latest, name: reproduce
