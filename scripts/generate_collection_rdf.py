@@ -39,12 +39,20 @@ SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
 def main(
     collection: Path = Path(__file__).parent / "../collection",
     gh_pages: Path = Path(__file__).parent / "../gh-pages",
-    rdf_template_path: Path = Path(__file__).parent / "../collection_rdf_template.yaml",  # todo: rename (not a valid rdf)
+    rdf_template_path: Path = Path(__file__).parent
+    / "../collection_rdf_template.yaml",  # todo: rename (not a valid rdf)
     dist: Path = Path(__file__).parent / "../dist",
 ):
     rdf = yaml.load(rdf_template_path)
     rdf["collection"] = rdf.get("collection", [])
     assert isinstance(rdf["collection"], list), type(rdf["collection"])
+
+    download_counts_path = dist / "download_counts.json"
+    if download_counts_path.exists():
+        with download_counts_path.open(encoding="utf-8") as f:
+            download_counts = json.load(f) or {}
+    else:
+        download_counts = {}
 
     if "partners" in rdf["config"]:
         # load resolved partner details
@@ -70,6 +78,10 @@ def main(
                 continue
 
             this_version = yaml.load(updated_rdf_source)
+            if this_version is None:
+                print(f"skipping empty rdf: {r.resource_id}/{version_id}")
+                continue
+
             assert version_id == this_version["id"].split("/")[-1]
             assert r.resource_id == this_version["id"][: -(len(version_id) + 1)]
 
@@ -88,6 +100,7 @@ def main(
                 if k in SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO:
                     summary[k] = latest_version["config"]["bioimageio"][k]
 
+            summary["download_count"] = download_counts.get(r.resource_id, 1)
             rdf["collection"].append(summary)
             type_ = latest_version.get("type", "unknown")
             n_accepted[type_] = n_accepted.get(type_, 0) + 1

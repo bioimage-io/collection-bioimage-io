@@ -49,7 +49,7 @@ def main(
         print(f"updating test summary for {krv.resource_id}/{krv.version_id}")
         previous_test_summary_path = gh_pages / "rdfs" / krv.resource_id / krv.version_id / "test_summary.yaml"
         if previous_test_summary_path.exists():
-            previous_test_summary = yaml.load(previous_test_summary_path)
+            previous_test_summary = yaml.load(previous_test_summary_path) or {}
         else:
             previous_test_summary = {}
 
