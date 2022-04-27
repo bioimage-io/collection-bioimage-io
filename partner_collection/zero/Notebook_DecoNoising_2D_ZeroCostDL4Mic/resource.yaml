@@ -8,7 +8,7 @@ versions:
   version_name: latest
   rdf_source:
     authors:
-    - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    - name: Guillaume Jacquemet and the ZeroCostDL4Mic Team
     badges:
     - icon: https://colab.research.google.com/assets/colab-badge.svg
       label: Open in Colab
@@ -60,7 +60,6 @@ versions:
     - zero/Dataset_CARE_2D_coli_DeepBacs
     maintainers: []
     name: DecoNoising (2D) - ZeroCostDL4Mic
-    root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
     tags:
     - colab
     - notebook

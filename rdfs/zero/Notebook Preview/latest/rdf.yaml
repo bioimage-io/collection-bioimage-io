@@ -1,3 +1,4 @@
+api_version: 0.2.3
 attachments: {}
 authors: []
 badges: []
@@ -39,6 +40,7 @@ maintainers: []
 name: ZeroCost4Mic Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook
   Preview/latest/rdf.yaml
+requirements: []
 source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 tags:
 - imjoy

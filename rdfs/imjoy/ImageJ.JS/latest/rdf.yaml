@@ -1,3 +1,4 @@
+api_version: 0.2.3
 attachments: {}
 authors: []
 badges: []
@@ -33,6 +34,7 @@ icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/i
 id: imjoy/ImageJ.JS/latest
 name: ImJoy Collection
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
+requirements: []
 source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
 tags:
 - software

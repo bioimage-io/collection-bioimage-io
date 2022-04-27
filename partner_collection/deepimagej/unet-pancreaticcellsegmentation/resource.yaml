@@ -49,7 +49,6 @@ versions:
     - deepimagej/UNet2DPancreaticSegmentation
     maintainers: []
     name: 2D U-Net for binary segmentation
-    root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     tags:
     - unet

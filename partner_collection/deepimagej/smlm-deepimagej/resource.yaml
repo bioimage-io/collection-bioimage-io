@@ -45,7 +45,6 @@ versions:
     id: deepimagej/smlm-deepimagej
     maintainers: []
     name: SMLM-superresolution
-    root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     tags:
     - deepimagej

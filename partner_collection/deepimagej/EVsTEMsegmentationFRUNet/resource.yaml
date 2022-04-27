@@ -59,7 +59,6 @@ versions:
     - deepimagej/FRUNet2DsEVSegmentation
     maintainers: []
     name: Small extracellular vesicle instance segmentation (FRU-Net)
-    root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
     tags:
     - extracellular-vesicles

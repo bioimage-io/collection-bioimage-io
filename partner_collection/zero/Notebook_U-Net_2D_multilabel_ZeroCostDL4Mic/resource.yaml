@@ -8,7 +8,7 @@ versions:
   version_name: latest
   rdf_source:
     authors:
-    - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
+    - name: Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
     badges:
     - icon: https://colab.research.google.com/assets/colab-badge.svg
       label: Open in Colab
@@ -60,7 +60,6 @@ versions:
     - zero/Dataset_U-Net_2D_multilabel_DeepBacs
     maintainers: []
     name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
-    root_path: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
     tags:
     - colab
     - notebook

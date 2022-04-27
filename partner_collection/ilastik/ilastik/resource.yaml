@@ -37,7 +37,6 @@ versions:
     - github_user: ilastik
       name: ilastik Team
     name: ilastik
-    root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
     tags:
     - ilastik

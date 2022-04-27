@@ -49,7 +49,6 @@ versions:
       orcid: 0000-0001-6562-7187
     name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
       Images'
-    root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
     source: https://cremi.org/
     tags:
     - electron-microscopy

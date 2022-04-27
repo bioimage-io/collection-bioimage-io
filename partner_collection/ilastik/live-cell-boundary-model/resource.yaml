@@ -33,7 +33,6 @@ versions:
     - github_user: ilastik
       name: ilastik Team
     name: Live cell boundary model preview
-    root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
     tags:
     - ilastik

@@ -27,8 +27,6 @@ versions:
     id: deepimagej/deepimagej-web
     maintainers: []
     name: DeepImageJ
-    passive: true
-    root_path: https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
     source: https://deepimagej.github.io/deepimagej/index.html
     tags:
     - deepimagej

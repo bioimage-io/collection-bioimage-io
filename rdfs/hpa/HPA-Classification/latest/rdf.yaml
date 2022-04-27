@@ -45,7 +45,6 @@ requirements:
 - https://cdn.jsdelivr.net/npm/@tensorflow/tfjs
 - https://cdn.jsdelivr.net/npm/simpleheat@0.4.0/simpleheat.min.js
 - https://cdn.jsdelivr.net/gh/photopea/UTIF.js@4f1b10cb09e244cfd4f9631245d2231537148be7/UTIF.js
-root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
 source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
 tags:
 - bioengine

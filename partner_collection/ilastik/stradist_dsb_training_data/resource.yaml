@@ -46,7 +46,6 @@ versions:
       name: Constantin Pape
       orcid: 0000-0001-6562-7187
     name: DSB Nucleus Segmentation Training Data
-    root_path: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
     source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
     tags:
     - nuclei

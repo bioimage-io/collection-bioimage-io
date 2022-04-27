@@ -32,7 +32,6 @@ versions:
     format_version: 0.2.2
     id: imjoy/ImJoy
     name: ImJoy
-    root_path: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
     source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
     tags:
     - imjoy

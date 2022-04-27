@@ -29,7 +29,6 @@ versions:
     format_version: 0.2.2
     id: hpa/HPA-Classification
     name: HPA Collection
-    root_path: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
     source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
     tags:
     - hpa
