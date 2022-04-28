@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 4397,
+      "download_count": 4443,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -60,7 +60,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 4359,
+      "download_count": 4405,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -182,7 +182,7 @@
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 2791,
+      "download_count": 2833,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -301,7 +301,7 @@
         "./output.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 1835,
+      "download_count": 1851,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -346,7 +346,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 1663,
+      "download_count": 1679,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -390,7 +390,7 @@
         "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 1481,
+      "download_count": 1497,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
@@ -517,7 +517,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1099,
+      "download_count": 1115,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -642,6 +642,42 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
+      ],
+      "description": "The winning model of HPA image classification 2019 by Bestfitting",
+      "download_count": 1007,
+      "id": "10.5281/zenodo.5910163",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "HPA Bestfitting Densenet",
+      "nickname": "polite-pig",
+      "nickname_icon": "\ud83d\udc16",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml",
+      "tags": [
+        "classification",
+        "densenet-121",
+        "hpa",
+        "onnx",
+        "cells",
+        "protein-localization"
+      ],
+      "type": "model",
+      "versions": [
+        "5942853"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Shubin Dai"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/diagram-of-InceptionV3.png"
       ],
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
@@ -675,37 +711,47 @@
     {
       "authors": [
         {
-          "name": "Shubin Dai"
+          "name": "Lorenzo Cerrone"
+        },
+        {
+          "name": "Adrian Wolny"
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
+        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png",
+        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png"
       ],
-      "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 991,
-      "id": "10.5281/zenodo.5910163",
+      "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
+      "download_count": 965,
+      "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
         "imjoy/BioImageIO-Packager"
       ],
-      "name": "HPA Bestfitting Densenet",
-      "nickname": "polite-pig",
-      "nickname_icon": "\ud83d\udc16",
+      "name": "2D UNet Arabidopsis Ovules",
+      "nickname": "pioneering-rhino",
+      "nickname_icon": "\ud83e\udd8f",
       "owners": [
-        47882
+        66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml",
       "tags": [
-        "classification",
-        "densenet-121",
-        "hpa",
-        "onnx",
-        "cells",
-        "protein-localization"
+        "plantseg",
+        "unet",
+        "2d",
+        "semantic-segmentation",
+        "arabidopsis",
+        "ovules",
+        "cell-membrane",
+        "plant",
+        "tissue",
+        "fluorescence-light-microscopy",
+        "pytorch"
       ],
       "type": "model",
       "versions": [
-        "5942853"
+        "6346500",
+        "6334384"
       ]
     },
     {
@@ -742,52 +788,6 @@
       "type": "model",
       "versions": [
         "6348729"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Lorenzo Cerrone"
-        },
-        {
-          "name": "Adrian Wolny"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png",
-        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png"
-      ],
-      "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
-      "download_count": 917,
-      "id": "10.5281/zenodo.6334383",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "2D UNet Arabidopsis Ovules",
-      "nickname": "pioneering-rhino",
-      "nickname_icon": "\ud83e\udd8f",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "2d",
-        "semantic-segmentation",
-        "arabidopsis",
-        "ovules",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
-      ],
-      "type": "model",
-      "versions": [
-        "6346500",
-        "6334384"
       ]
     },
     {
@@ -943,7 +943,7 @@
         "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 626,
+      "download_count": 650,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -973,6 +973,45 @@
       "versions": [
         "6346477",
         "6334882"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
+      ],
+      "description": "Segmentation of mitochondria in EM images.",
+      "download_count": 502,
+      "id": "10.5281/zenodo.6406803",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-2d-unet-notebook"
+      ],
+      "name": "MitchondriaEMSegmentation2D",
+      "nickname": "shivering-raccoon",
+      "nickname_icon": "\ud83e\udd9d",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
+      "tags": [
+        "unet",
+        "mitochondria",
+        "electron-microscopy",
+        "instance-segmentation",
+        "2d"
+      ],
+      "type": "model",
+      "versions": [
+        "6406804"
       ]
     },
     {
@@ -1016,45 +1055,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
-      ],
-      "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 459,
-      "id": "10.5281/zenodo.6406803",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook"
-      ],
-      "name": "MitchondriaEMSegmentation2D",
-      "nickname": "shivering-raccoon",
-      "nickname_icon": "\ud83e\udd9d",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
-      "tags": [
-        "unet",
-        "mitochondria",
-        "electron-microscopy",
-        "instance-segmentation",
-        "2d"
-      ],
-      "type": "model",
-      "versions": [
-        "6406804"
-      ]
-    },
-    {
-      "authors": [
-        {
           "name": "A. Wolny"
         },
         {
@@ -1066,7 +1066,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 365,
+      "download_count": 392,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -2438,7 +2438,7 @@
         }
       ],
       "covers": [
-        "https://github.com/constantinpape/torch-em/blob/main/experiments/misc/targets.png"
+        "https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png"
       ],
       "description": "Train a 2d UNet for semgentation tasks",
       "download_count": 1,
@@ -2446,7 +2446,7 @@
       "license": "CC-BY-4.0",
       "name": "2D UNet Training",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/torch-em-2d-unet-notebook/latest/rdf.yaml",
-      "source": "https://github.com/constantinpape/torch-em/blob/main/experiments/2D-UNet-Training.ipynb",
+      "source": "https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/2D-UNet-Training.ipynb",
       "tags": [
         "instance-segmentation",
         "semantic-segmentation",
@@ -2465,7 +2465,7 @@
         }
       ],
       "covers": [
-        "https://github.com/constantinpape/torch-em/blob/main/experiments/misc/targets.png"
+        "https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png"
       ],
       "description": "Train a 2d UNet for semgentation tasks",
       "download_count": 1,
@@ -2473,7 +2473,7 @@
       "license": "CC-BY-4.0",
       "name": "3D UNet Training",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/torch-em-3d-unet-notebook/latest/rdf.yaml",
-      "source": "https://github.com/constantinpape/torch-em/blob/main/experiments/3D-UNet-Training.ipynb",
+      "source": "https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/3D-UNet-Training.ipynb",
       "tags": [
         "instance-segmentation",
         "semantic-segmentation",
