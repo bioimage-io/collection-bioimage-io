@@ -29,7 +29,7 @@ versions:
       - ilastik
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
     covers:
-    - https://github.com/constantinpape/torch-em/blob/main/experiments/misc/targets.png
+    - https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png
     description: Train a 2d UNet for semgentation tasks
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/notebook_src/torch-em-2d-unet-notebook.md
     format_version: 0.2.2
@@ -45,7 +45,7 @@ versions:
       name: Constantin Pape
       orcid: 0000-0001-6562-7187
     name: 2D UNet Training
-    source: https://github.com/constantinpape/torch-em/blob/main/experiments/2D-UNet-Training.ipynb
+    source: https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/2D-UNet-Training.ipynb
     tags:
     - instance-segmentation
     - semantic-segmentation

@@ -24,7 +24,7 @@ config:
   - ilastik
   url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
 covers:
-- https://github.com/constantinpape/torch-em/blob/main/experiments/misc/targets.png
+- https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png
 description: Train a 2d UNet for semgentation tasks
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/notebook_src/torch-em-3d-unet-notebook.md
 format_version: 0.2.2
@@ -41,7 +41,7 @@ maintainers:
   orcid: 0000-0001-6562-7187
 name: 3D UNet Training
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/torch-em-3d-unet-notebook/latest/rdf.yaml
-source: https://github.com/constantinpape/torch-em/blob/main/experiments/3D-UNet-Training.ipynb
+source: https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/3D-UNet-Training.ipynb
 tags:
 - instance-segmentation
 - semantic-segmentation
