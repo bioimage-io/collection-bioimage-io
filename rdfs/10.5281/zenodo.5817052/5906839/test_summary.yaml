@@ -53,8 +53,7 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '''str'' object has no attribute ''decode'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -72,8 +71,7 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '''str'' object has no attribute ''decode'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -89,8 +87,8 @@ tests:
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}

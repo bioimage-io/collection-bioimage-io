@@ -23,7 +23,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
       small for halo [0, 32, 32, 0].'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
@@ -41,7 +41,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
       small for halo [0, 32, 32, 0].'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed

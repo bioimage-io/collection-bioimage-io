@@ -131,6 +131,8 @@ test_inputs:
 test_outputs:
 - https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/test_output_0.npy
 timestamp: '2022-02-09T16:24:38.391028'
+training_data:
+  id: ilastik/platynereis_em_training_data
 type: model
 version: 0.1.0
 weights:

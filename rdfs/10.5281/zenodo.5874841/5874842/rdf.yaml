@@ -132,6 +132,8 @@ test_inputs:
 test_outputs:
 - https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/test_output_0.npy
 timestamp: '2022-01-18T23:04:36.427352'
+training_data:
+  id: ilastik/mitoem_segmentation_challenge
 type: model
 version: 0.1.0
 weights:

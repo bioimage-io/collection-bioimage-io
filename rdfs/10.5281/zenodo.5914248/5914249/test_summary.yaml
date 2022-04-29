@@ -78,8 +78,7 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -91,8 +90,7 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -104,7 +102,7 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
@@ -117,7 +115,7 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '[Errno 2] No such file or directory: ''/home/runner/work/bioimage-io-resources/bioimage-io-resources/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed

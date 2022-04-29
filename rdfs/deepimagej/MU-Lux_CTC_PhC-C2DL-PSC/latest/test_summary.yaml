@@ -47,8 +47,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
       [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -65,8 +64,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
       [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -83,7 +81,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
       [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
@@ -101,7 +99,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
       [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed

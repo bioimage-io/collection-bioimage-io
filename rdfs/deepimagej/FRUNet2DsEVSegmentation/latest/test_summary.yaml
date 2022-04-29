@@ -141,8 +141,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
       (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff)'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_js
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_js weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -187,8 +186,7 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_js
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_js weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -201,8 +199,7 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -216,8 +213,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
       (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff)'
-    name: reproduce test outputs with ilastik <todo version> (draft) using keras_hdf5
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -259,7 +255,7 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
@@ -274,7 +270,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
       (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff)'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed

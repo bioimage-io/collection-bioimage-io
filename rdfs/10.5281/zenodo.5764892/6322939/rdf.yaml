@@ -130,7 +130,7 @@ test_outputs:
 - https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/test_output_0.npy
 timestamp: '2021-12-07T18:43:26.889129'
 training_data:
-  id: ilastik/stradist_dsb_training_data
+  id: ilastik/stardist_dsb_training_data
 type: model
 version: 0.1.0
 weights:

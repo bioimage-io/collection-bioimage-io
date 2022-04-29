@@ -1,10 +1,10 @@
 bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post9
-rdf_sha256: 9dd1d3c09c4e30c18264a7d24a05b6f5d6fbd24852f03e258599a46f3ff868b6
+bioimageio_spec_version: 0.4.5.post10
+rdf_sha256: 9d878bc54f884ff1efc357cb28fd78157f036965a56a478dc6f6d672df115b49
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post9
+  - bioimageio_spec_version: 0.4.5post10
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
       format version
@@ -16,7 +16,7 @@ tests:
         ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
         ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_spec_version: 0.4.5post9
+  - bioimageio_spec_version: 0.4.5post10
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.5
     nested_errors: {}
@@ -27,11 +27,11 @@ tests:
         ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
         ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post8, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post10, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post8, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post10, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post8, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post10, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
@@ -99,7 +99,7 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: No module named 'onnxruntime'
-    name: reproduce test outputs with ilastik <todo version> (draft) using onnx weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using onnx weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -113,21 +113,21 @@ tests:
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
-      weights, reason: null, status: passed, traceback: null}
+    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights,
+    reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights, reason: null, status: passed, traceback: null}
+    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,
+    reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using torchscript
-      weights, reason: null, status: passed, traceback: null}
+    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,
+    reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_state_dict
-      weights, reason: null, status: passed, traceback: null}
+    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights,
+    reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: No module named 'onnxruntime'
-    name: reproduce test outputs with ilastik <todo version> (draft) using onnx weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using onnx weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",

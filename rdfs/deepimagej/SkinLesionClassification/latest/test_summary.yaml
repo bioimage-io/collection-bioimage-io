@@ -168,8 +168,7 @@ tests:
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.''],
       ''run_mode'': [''Expected dictionary, but got list.''], ''root_path'': [''Unknown
       field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_script
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_script weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -255,8 +254,7 @@ tests:
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.''],
       ''root_path'': [''Unknown field.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using pytorch_script
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_script weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",

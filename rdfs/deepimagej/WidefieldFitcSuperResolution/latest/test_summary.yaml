@@ -31,7 +31,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''_schema'': [''Referenced tensor input_images with 3 dimensions does
       not match output tensor output_images with 4 dimensions.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed
@@ -49,7 +49,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: '{''_schema'': [''Referenced tensor input_images with 3 dimensions does
       not match output tensor output_images with 4 dimensions.'']}'
-    name: reproduce test outputs with ilastik <todo version> (draft) using tensorflow_saved_model_bundle
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
     status: failed

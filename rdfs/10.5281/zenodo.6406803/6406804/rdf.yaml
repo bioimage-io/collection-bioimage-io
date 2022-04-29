@@ -128,7 +128,7 @@ test_outputs:
 - https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/test_output_0.npy
 timestamp: '2022-04-01T17:15:46.185663'
 training_data:
-  id: ilastik/vnc
+  id: ilastik/mitoem_segmentation_challenge
 type: model
 version: 0.1.0
 weights:
