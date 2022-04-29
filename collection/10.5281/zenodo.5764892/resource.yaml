@@ -13,6 +13,8 @@ versions:
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/rdf.yaml
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  training_data:
+    id: ilastik/stardist_dsb_training_data
 - version_id: '6319663'
   doi: 10.5281/zenodo.6319663
   created: '2022-03-01 09:27:03.758432'

@@ -13,6 +13,8 @@ versions:
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/rdf.yaml
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook, ilastik/live-cell-boundary-model]
+  training_data:
+    id: ilastik/livecell_dataset
 - created: '2022-01-18 10:03:26.939252'
   doi: 10.5281/zenodo.5869900
   name: LiveCellSegmentationBoundaryModel
