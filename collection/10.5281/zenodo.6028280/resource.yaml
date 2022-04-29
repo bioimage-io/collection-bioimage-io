@@ -7,6 +7,7 @@ versions:
 - {created: '2022-02-09 21:42:30.280535', doi: 10.5281/zenodo.6028281, name: PlatynereisEMcellsSegmentationBoundaryModel,
   rdf_source: 'https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/rdf.yaml',
   status: accepted, version_id: '6028281', version_name: revision 1,
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]}
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook],
+  training_data: {id: ilastik/platynereis_em_training_data}}
 nickname: willing-hedgehog
 nickname_icon: 🦔

@@ -8,5 +8,7 @@ versions:
   rdf_source: 'https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml',
   status: accepted, version_id: '5874742', version_name: revision 1,
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]}
+  training_data:
+    id: ilastik/cremi_training_data
 nickname: impartial-shrimp
 nickname_icon: 🦐

@@ -14,3 +14,5 @@ versions:
   version_id: '6406757'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/rdf.yaml
+  training_data:
+    id: ilastik/vnc
