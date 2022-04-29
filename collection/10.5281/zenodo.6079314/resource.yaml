@@ -14,7 +14,7 @@ versions:
   version_id: '6385590'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/rdf.yaml
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook, ilastik/mws]
 - created: '2022-02-14 17:05:09.708440'
   doi: 10.5281/zenodo.6079315
   inputs:
