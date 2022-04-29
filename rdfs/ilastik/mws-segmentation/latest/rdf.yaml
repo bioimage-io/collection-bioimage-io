@@ -1,0 +1,47 @@
+api_version: 0.1.8
+attachments: {}
+authors: []
+badges: []
+cite:
+- doi: 10.1007/978-3-030-01225-0_34
+  text: 'Wolf, Pape et al. The Mutex Watershed: Efficient, Parameter-Free Image Partitioning'
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  id: ilastik
+  logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  name: ilastik
+  resource_types:
+  - application
+  splash_feature_list:
+  splash_subtitle: the interactive learning and segmentation toolkit
+  splash_title: ilastik
+  tags:
+  - ilastik
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+covers: []
+dependencies: []
+description: Run the mutex watershed for instance segmentation of affinity predictions
+documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.md
+env: ''
+format_version: 0.2.2
+icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png
+id: ilastik/mws-segmentation/latest
+maintainers:
+- github_user: constantinpape
+  name: Constantin Pape
+name: Mutex Watershed Plugin
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml
+requirements:
+- https://steffenwolf.science/webmutex/mws.js
+source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html
+tags:
+- bioengine
+type: application
+version: 0.1.1
