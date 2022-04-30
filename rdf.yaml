@@ -7,7 +7,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png']
   description: Mitochondria segmentation for electron microscopy.
-  download_count: 4491
+  download_count: 4541
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -23,7 +23,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 4450
+  download_count: 4502
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -56,7 +56,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 3285
+  download_count: 3306
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
@@ -126,7 +126,7 @@ collection:
   covers: [./input.png, ./output.png]
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 1855
+  download_count: 1864
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager]
@@ -182,7 +182,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 1276
+  download_count: 1309
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -214,6 +214,27 @@ collection:
   type: model
   versions: ['6224243']
 - authors:
+  - {affiliation: '', name: ZeroCostDL4Mic team}
+  - {name: Constantin Pape}
+  - {name: DeepImageJ team}
+  covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
+  description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
+    for neuron segmentation in Transmission Electron Microscopy images.
+  download_count: 1128
+  id: 10.5281/zenodo.5817052
+  license: MIT
+  links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
+    deepimagej/deepimagej]
+  name: Neuron Segmentation in 2D EM (Membrane)
+  nickname: creative-panda
+  nickname_icon: "\U0001F43C"
+  owners: [271523]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
+    neurons, brain, boundary-segmentation, 2d]
+  type: model
+  versions: ['5906839', '5850574']
+- authors:
   - {github_user: uschmidt83, name: Uwe Schmidt}
   - {github_user: maweigert, name: Martin Weigert}
   covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
@@ -233,31 +254,10 @@ collection:
   type: model
   versions: ['6348085']
 - authors:
-  - {affiliation: '', name: ZeroCostDL4Mic team}
-  - {name: Constantin Pape}
-  - {name: DeepImageJ team}
-  covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
-  description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
-    for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 1121
-  id: 10.5281/zenodo.5817052
-  license: MIT
-  links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
-    deepimagej/deepimagej]
-  name: Neuron Segmentation in 2D EM (Membrane)
-  nickname: creative-panda
-  nickname_icon: "\U0001F43C"
-  owners: [271523]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
-    neurons, brain, boundary-segmentation, 2d]
-  type: model
-  versions: ['5906839', '5850574']
-- authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 1077
+  download_count: 1089
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -302,6 +302,22 @@ collection:
   type: model
   versions: ['5911832']
 - authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
+  description: Perform leaf segmentation in light microscopy images of Arabidopsis
+  download_count: 1000
+  id: 10.5281/zenodo.6348728
+  license: MIT
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: Arabidopsis Leaf Segmentation
+  nickname: non-judgemental-eagle
+  nickname_icon: "\U0001F985"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
+  type: model
+  versions: ['6348729']
+- authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
   covers: ['https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png',
@@ -321,22 +337,6 @@ collection:
     plant, tissue, fluorescence-light-microscopy, pytorch]
   type: model
   versions: ['6346500', '6334384']
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
-  description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 981
-  id: 10.5281/zenodo.6348728
-  license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Arabidopsis Leaf Segmentation
-  nickname: non-judgemental-eagle
-  nickname_icon: "\U0001F985"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
-  type: model
-  versions: ['6348729']
 - authors:
   - {name: Adrian Wolny}
   - {name: Lorenzo Cerrone}
@@ -365,7 +365,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 816
+  download_count: 839
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -422,6 +422,22 @@ collection:
   versions: ['6346477', '6334882']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
+  description: Segmentation of mitochondria in EM images.
+  download_count: 558
+  id: 10.5281/zenodo.6406803
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  name: MitchondriaEMSegmentation2D
+  nickname: shivering-raccoon
+  nickname_icon: "\U0001F99D"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml
+  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
+  type: model
+  versions: ['6406804']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/cover.png']
   description: Prediction Enhancer for segmenting mitochondria in EM images.
   download_count: 552
@@ -437,29 +453,13 @@ collection:
   type: model
   versions: ['6406757']
 - authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
-  description: Segmentation of mitochondria in EM images.
-  download_count: 522
-  id: 10.5281/zenodo.6406803
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
-  name: MitchondriaEMSegmentation2D
-  nickname: shivering-raccoon
-  nickname_icon: "\U0001F99D"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml
-  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
-  type: model
-  versions: ['6406804']
-- authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
   covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
     'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 409
+  download_count: 434
   id: 10.5281/zenodo.6384845
   license: MIT
   links: [imjoy/BioImageIO-Packager]
