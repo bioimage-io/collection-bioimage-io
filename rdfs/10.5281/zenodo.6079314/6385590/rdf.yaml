@@ -71,6 +71,7 @@ links:
 - ilastik/ilastik
 - imjoy/BioImageIO-Packager
 - ilastik/torch-em-2d-unet-notebook
+- ilastik/mws-segmentation
 maintainers:
 - github_user: Constantin Pape
   name: Constantin Pape
