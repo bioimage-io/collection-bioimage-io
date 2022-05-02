@@ -102,31 +102,31 @@ tests:
     error: '{''packaged_by'': {0: [''Expected dictionary, but got str.'']}, ''weights'':
       defaultdict(<class ''dict''>, {''keras_hdf5'': {''value'': [''Errors in all
       options for this field. Fix any of the following errors:'', {''authors'': {0:
-      [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must be equal
-      to onnx.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
-      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to torchscript.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
-      ''architecture'': [''Missing data for required field.''], ''authors'': {0: [''Expected
-      dictionary, but got str.'']}}]}, ''tensorflow_saved_model_bundle'': {''value'':
-      [''Errors in all options for this field. Fix any of the following errors:'',
-      {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to keras_hdf5.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to onnx.''], ''authors'':
-      {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary, but
-      got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''], ''authors'':
-      {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to pytorch_state_dict.''], ''architecture'': [''Missing data for required
-      field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]}}), ''inputs'':
-      {0: {''data_range'': [''Not a valid tuple.''], ''preprocessing'': {0: {''name'':
-      [''Missing data for required field.''], ''scale_range'': [''Unknown field.'']}}},
-      ''_schema'': [''Could not check for duplicate input tensor names due to another
-      validation error.'']}, ''outputs'': {0: {''data_range'': [''Not a valid tuple.'']},
-      ''_schema'': [''Could not check for duplicate output tensor names due to another
-      validation error.'']}, ''root_path'': [''Unknown field.'']}'
+      [''Expected dictionary, but got str.'']}}, {''authors'': {0: [''Expected dictionary,
+      but got str.'']}, ''weights_format'': [''Must be equal to onnx.'']}, {''authors'':
+      {0: [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be
+      equal to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got
+      str.'']}, ''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.'']},
+      {''authors'': {0: [''Expected dictionary, but got str.'']}, ''weights_format'':
+      [''Must be equal to torchscript.'']}, {''architecture'': [''Missing data for
+      required field.''], ''authors'': {0: [''Expected dictionary, but got str.'']},
+      ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}, ''tensorflow_saved_model_bundle'':
+      {''value'': [''Errors in all options for this field. Fix any of the following
+      errors:'', {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''authors'':
+      {0: [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be
+      equal to keras_hdf5.'']}, {''authors'': {0: [''Expected dictionary, but got
+      str.'']}, ''weights_format'': [''Must be equal to onnx.'']}, {''authors'': {0:
+      [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
+      to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got str.'']},
+      ''weights_format'': [''Must be equal to torchscript.'']}, {''architecture'':
+      [''Missing data for required field.''], ''authors'': {0: [''Expected dictionary,
+      but got str.'']}, ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}}),
+      ''outputs'': {0: {''data_range'': [''Not a valid tuple.'']}, ''_schema'': [''Could
+      not check for duplicate output tensor names due to another validation error.'']},
+      ''inputs'': {0: {''preprocessing'': {0: {''name'': [''Missing data for required
+      field.''], ''scale_range'': [''Unknown field.'']}}, ''data_range'': [''Not a
+      valid tuple.'']}, ''_schema'': [''Could not check for duplicate input tensor
+      names due to another validation error.'']}, ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
@@ -142,34 +142,35 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''packaged_by'': {0: [''Expected dictionary, but got str.'']}, ''outputs'':
-      {0: {''data_range'': [''Not a valid tuple.'']}, ''_schema'': [''Could not check
-      for duplicate output tensor names due to another validation error.'']}, ''weights'':
-      defaultdict(<class ''dict''>, {''keras_hdf5'': {''value'': [''Errors in all
-      options for this field. Fix any of the following errors:'', {''authors'': {0:
-      [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must be equal
-      to onnx.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
-      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to torchscript.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
-      ''architecture'': [''Missing data for required field.''], ''authors'': {0: [''Expected
-      dictionary, but got str.'']}}]}, ''tensorflow_saved_model_bundle'': {''value'':
+    error: '{''outputs'': {0: {''data_range'': [''Not a valid tuple.'']}, ''_schema'':
+      [''Could not check for duplicate output tensor names due to another validation
+      error.'']}, ''weights'': defaultdict(<class ''dict''>, {''keras_hdf5'': {''value'':
       [''Errors in all options for this field. Fix any of the following errors:'',
       {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to keras_hdf5.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to onnx.''], ''authors'':
+      [''Must be equal to onnx.''], ''authors'': {0: [''Expected dictionary, but got
+      str.'']}}, {''weights_format'': [''Must be equal to tensorflow_js.''], ''authors'':
       {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary, but
-      got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''], ''authors'':
+      be equal to tensorflow_saved_model_bundle.''], ''authors'': {0: [''Expected
+      dictionary, but got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''],
+      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
+      [''Must be equal to pytorch_state_dict.''], ''architecture'': [''Missing data
+      for required field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]},
+      ''tensorflow_saved_model_bundle'': {''value'': [''Errors in all options for
+      this field. Fix any of the following errors:'', {''authors'': {0: [''Expected
+      dictionary, but got str.'']}}, {''weights_format'': [''Must be equal to keras_hdf5.''],
+      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
+      [''Must be equal to onnx.''], ''authors'': {0: [''Expected dictionary, but got
+      str.'']}}, {''weights_format'': [''Must be equal to tensorflow_js.''], ''authors'':
       {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to pytorch_state_dict.''], ''architecture'': [''Missing data for required
-      field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]}}), ''inputs'':
-      {0: {''data_range'': [''Not a valid tuple.''], ''preprocessing'': {0: {''name'':
-      [''Missing data for required field.''], ''scale_range'': [''Unknown field.'']}}},
-      ''_schema'': [''Could not check for duplicate input tensor names due to another
-      validation error.'']}, ''root_path'': [''Unknown field.'']}'
+      be equal to torchscript.''], ''authors'': {0: [''Expected dictionary, but got
+      str.'']}}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
+      ''architecture'': [''Missing data for required field.''], ''authors'': {0: [''Expected
+      dictionary, but got str.'']}}]}}), ''packaged_by'': {0: [''Expected dictionary,
+      but got str.'']}, ''inputs'': {0: {''preprocessing'': {0: {''name'': [''Missing
+      data for required field.''], ''scale_range'': [''Unknown field.'']}}, ''data_range'':
+      [''Not a valid tuple.'']}, ''_schema'': [''Could not check for duplicate input
+      tensor names due to another validation error.'']}, ''root_path'': [''Unknown
+      field.'']}'
     name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
@@ -188,31 +189,31 @@ tests:
     error: '{''packaged_by'': {0: [''Expected dictionary, but got str.'']}, ''weights'':
       defaultdict(<class ''dict''>, {''keras_hdf5'': {''value'': [''Errors in all
       options for this field. Fix any of the following errors:'', {''authors'': {0:
-      [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must be equal
-      to onnx.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
-      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to torchscript.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
-      ''architecture'': [''Missing data for required field.''], ''authors'': {0: [''Expected
-      dictionary, but got str.'']}}]}, ''tensorflow_saved_model_bundle'': {''value'':
-      [''Errors in all options for this field. Fix any of the following errors:'',
-      {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to keras_hdf5.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to onnx.''], ''authors'':
-      {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary, but
-      got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''], ''authors'':
-      {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to pytorch_state_dict.''], ''architecture'': [''Missing data for required
-      field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]}}), ''inputs'':
-      {0: {''data_range'': [''Not a valid tuple.''], ''preprocessing'': {0: {''name'':
-      [''Missing data for required field.''], ''scale_range'': [''Unknown field.'']}}},
-      ''_schema'': [''Could not check for duplicate input tensor names due to another
-      validation error.'']}, ''outputs'': {0: {''data_range'': [''Not a valid tuple.'']},
-      ''_schema'': [''Could not check for duplicate output tensor names due to another
-      validation error.'']}, ''root_path'': [''Unknown field.'']}'
+      [''Expected dictionary, but got str.'']}}, {''authors'': {0: [''Expected dictionary,
+      but got str.'']}, ''weights_format'': [''Must be equal to onnx.'']}, {''authors'':
+      {0: [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be
+      equal to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got
+      str.'']}, ''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.'']},
+      {''authors'': {0: [''Expected dictionary, but got str.'']}, ''weights_format'':
+      [''Must be equal to torchscript.'']}, {''architecture'': [''Missing data for
+      required field.''], ''authors'': {0: [''Expected dictionary, but got str.'']},
+      ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}, ''tensorflow_saved_model_bundle'':
+      {''value'': [''Errors in all options for this field. Fix any of the following
+      errors:'', {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''authors'':
+      {0: [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be
+      equal to keras_hdf5.'']}, {''authors'': {0: [''Expected dictionary, but got
+      str.'']}, ''weights_format'': [''Must be equal to onnx.'']}, {''authors'': {0:
+      [''Expected dictionary, but got str.'']}, ''weights_format'': [''Must be equal
+      to tensorflow_js.'']}, {''authors'': {0: [''Expected dictionary, but got str.'']},
+      ''weights_format'': [''Must be equal to torchscript.'']}, {''architecture'':
+      [''Missing data for required field.''], ''authors'': {0: [''Expected dictionary,
+      but got str.'']}, ''weights_format'': [''Must be equal to pytorch_state_dict.'']}]}}),
+      ''outputs'': {0: {''data_range'': [''Not a valid tuple.'']}, ''_schema'': [''Could
+      not check for duplicate output tensor names due to another validation error.'']},
+      ''inputs'': {0: {''preprocessing'': {0: {''name'': [''Missing data for required
+      field.''], ''scale_range'': [''Unknown field.'']}}, ''data_range'': [''Not a
+      valid tuple.'']}, ''_schema'': [''Could not check for duplicate input tensor
+      names due to another validation error.'']}, ''root_path'': [''Unknown field.'']}'
     name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
@@ -229,34 +230,35 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''packaged_by'': {0: [''Expected dictionary, but got str.'']}, ''outputs'':
-      {0: {''data_range'': [''Not a valid tuple.'']}, ''_schema'': [''Could not check
-      for duplicate output tensor names due to another validation error.'']}, ''weights'':
-      defaultdict(<class ''dict''>, {''keras_hdf5'': {''value'': [''Errors in all
-      options for this field. Fix any of the following errors:'', {''authors'': {0:
-      [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must be equal
-      to onnx.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to tensorflow_saved_model_bundle.''],
-      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to torchscript.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
-      ''architecture'': [''Missing data for required field.''], ''authors'': {0: [''Expected
-      dictionary, but got str.'']}}]}, ''tensorflow_saved_model_bundle'': {''value'':
+    error: '{''outputs'': {0: {''data_range'': [''Not a valid tuple.'']}, ''_schema'':
+      [''Could not check for duplicate output tensor names due to another validation
+      error.'']}, ''weights'': defaultdict(<class ''dict''>, {''keras_hdf5'': {''value'':
       [''Errors in all options for this field. Fix any of the following errors:'',
       {''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
-      [''Must be equal to keras_hdf5.''], ''authors'': {0: [''Expected dictionary,
-      but got str.'']}}, {''weights_format'': [''Must be equal to onnx.''], ''authors'':
+      [''Must be equal to onnx.''], ''authors'': {0: [''Expected dictionary, but got
+      str.'']}}, {''weights_format'': [''Must be equal to tensorflow_js.''], ''authors'':
       {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to tensorflow_js.''], ''authors'': {0: [''Expected dictionary, but
-      got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''], ''authors'':
+      be equal to tensorflow_saved_model_bundle.''], ''authors'': {0: [''Expected
+      dictionary, but got str.'']}}, {''weights_format'': [''Must be equal to torchscript.''],
+      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
+      [''Must be equal to pytorch_state_dict.''], ''architecture'': [''Missing data
+      for required field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]},
+      ''tensorflow_saved_model_bundle'': {''value'': [''Errors in all options for
+      this field. Fix any of the following errors:'', {''authors'': {0: [''Expected
+      dictionary, but got str.'']}}, {''weights_format'': [''Must be equal to keras_hdf5.''],
+      ''authors'': {0: [''Expected dictionary, but got str.'']}}, {''weights_format'':
+      [''Must be equal to onnx.''], ''authors'': {0: [''Expected dictionary, but got
+      str.'']}}, {''weights_format'': [''Must be equal to tensorflow_js.''], ''authors'':
       {0: [''Expected dictionary, but got str.'']}}, {''weights_format'': [''Must
-      be equal to pytorch_state_dict.''], ''architecture'': [''Missing data for required
-      field.''], ''authors'': {0: [''Expected dictionary, but got str.'']}}]}}), ''inputs'':
-      {0: {''data_range'': [''Not a valid tuple.''], ''preprocessing'': {0: {''name'':
-      [''Missing data for required field.''], ''scale_range'': [''Unknown field.'']}}},
-      ''_schema'': [''Could not check for duplicate input tensor names due to another
-      validation error.'']}, ''root_path'': [''Unknown field.'']}'
+      be equal to torchscript.''], ''authors'': {0: [''Expected dictionary, but got
+      str.'']}}, {''weights_format'': [''Must be equal to pytorch_state_dict.''],
+      ''architecture'': [''Missing data for required field.''], ''authors'': {0: [''Expected
+      dictionary, but got str.'']}}]}}), ''packaged_by'': {0: [''Expected dictionary,
+      but got str.'']}, ''inputs'': {0: {''preprocessing'': {0: {''name'': [''Missing
+      data for required field.''], ''scale_range'': [''Unknown field.'']}}, ''data_range'':
+      [''Not a valid tuple.'']}, ''_schema'': [''Could not check for duplicate input
+      tensor names due to another validation error.'']}, ''root_path'': [''Unknown
+      field.'']}'
     name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
