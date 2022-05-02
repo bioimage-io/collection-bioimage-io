@@ -60,7 +60,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 4521,
+      "download_count": 4546,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -182,7 +182,7 @@
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 2944,
+      "download_count": 2966,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -301,7 +301,7 @@
         "./output.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 1868,
+      "download_count": 1873,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -346,7 +346,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 1696,
+      "download_count": 1701,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -566,7 +566,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1132,
+      "download_count": 1137,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -944,7 +944,7 @@
         "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 676,
+      "download_count": 687,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -974,6 +974,45 @@
       "versions": [
         "6346477",
         "6334882"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
+      ],
+      "description": "Segmentation of mitochondria in EM images.",
+      "download_count": 582,
+      "id": "10.5281/zenodo.6406803",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-2d-unet-notebook"
+      ],
+      "name": "MitchondriaEMSegmentation2D",
+      "nickname": "shivering-raccoon",
+      "nickname_icon": "\ud83e\udd9d",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
+      "tags": [
+        "unet",
+        "mitochondria",
+        "electron-microscopy",
+        "instance-segmentation",
+        "2d"
+      ],
+      "type": "model",
+      "versions": [
+        "6406804"
       ]
     },
     {
@@ -1017,45 +1056,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
-      ],
-      "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 567,
-      "id": "10.5281/zenodo.6406803",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook"
-      ],
-      "name": "MitchondriaEMSegmentation2D",
-      "nickname": "shivering-raccoon",
-      "nickname_icon": "\ud83e\udd9d",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
-      "tags": [
-        "unet",
-        "mitochondria",
-        "electron-microscopy",
-        "instance-segmentation",
-        "2d"
-      ],
-      "type": "model",
-      "versions": [
-        "6406804"
-      ]
-    },
-    {
-      "authors": [
-        {
           "name": "A. Wolny"
         },
         {
@@ -1067,7 +1067,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 440,
+      "download_count": 454,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
