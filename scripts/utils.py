@@ -240,6 +240,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
             if k in rdf:
                 rdf["config"]["bioimageio"][k] = rdf.pop(k)
 
+        rdf.pop("rdf_source", None)  # remove rdf source
         try:
             # resolve relative paths of remote rdf_source
             orig_rdf = rdf
