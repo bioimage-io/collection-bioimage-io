@@ -288,8 +288,8 @@
     {
       "authors": [
         {
-          "affiliation": "Ikerbasque - EHU/UPV",
-          "name": "Ignacio Arganda-Carreras"
+          "affiliation": "Ikerbasque EHU UPV",
+          "name": "Ignacio Arganda Carreras"
         },
         {
           "affiliation": "EPFL, UC3M",
@@ -297,15 +297,16 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/input.png",
-        "https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/output.png"
+        "https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/exampleImage.png",
+        "https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
       "download_count": 1884,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "deepimagej/unet-pancreaticcellsegmentation"
       ],
       "name": "Pancreatic Phase Contrast Cell Segmentation (U-Net)",
       "nickname": "discreet-rooster",
@@ -313,7 +314,7 @@
       "owners": [
         147356
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/5914249/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/6514446/rdf.yaml",
       "tags": [
         "deepimagej",
         "pancreatic-stem-cells",
@@ -322,11 +323,15 @@
         "unet",
         "neubias",
         "cell-tracking-challenge",
+        "transmission-light-microscopy",
         "2d",
+        "cells",
+        "semantic-segmentation",
         "tensorflow"
       ],
       "type": "model",
       "versions": [
+        "6514446",
         "5914249"
       ]
     },
@@ -3186,7 +3191,7 @@
     "n_resource_versions": {
       "application": 94,
       "dataset": 22,
-      "model": 60,
+      "model": 61,
       "notebook": 4
     },
     "n_resources": {
