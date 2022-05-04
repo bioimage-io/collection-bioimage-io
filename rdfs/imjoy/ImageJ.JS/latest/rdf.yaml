@@ -1,0 +1,41 @@
+api_version: 0.2.3
+badges: []
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: application
+  explore_button_text: Start Exploring
+  icon: https://imjoy.io/static/img/imjoy-icon.svg
+  id: imjoy
+  logo: https://imjoy.io/static/img/imjoy-icon.svg
+  name: ImJoy
+  resource_types:
+  - notebook
+  - application
+  splash_feature_list:
+  - Minimal and flexible plugin powered web application
+  - Server-less progressive web application with offline support
+  - Rich and interactive user interface powered by web technologies
+  splash_subtitle: Deep Learning Made Easy!
+  splash_title: ImJoy
+  tags:
+  - imjoy
+  url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
+covers: []
+description: Resources for BioImgage.IO curated by the ImJoy Team.
+documentation: https://imjoy.io/docs
+format_version: 0.2.2
+icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
+id: imjoy/ImageJ.JS/latest
+name: ImJoy Collection
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
+requirements: []
+source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
+tags:
+- imjoy
+- bioimage.io
+type: application
+version: 0.1.6
