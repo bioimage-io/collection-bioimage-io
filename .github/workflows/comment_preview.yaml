@@ -11,8 +11,15 @@ jobs:
     name: comment links to previews in pull request
     runs-on: windows-2019
     steps:
-    - name: debug ref_name
-      run: echo ${{ github.ref_name }}
+    - name: debug pr number
+      run: echo ${{ github.event.number }}
+    - name: debug original ref
+      run: echo ${{ github.event.workflow_run.head_branch }}
+#    - uses: izhangzhihao/delete-comment@master
+#      with:
+#        github_token: ${{ secrets.PAT }}
+#        delete_user_name: bioimageiobot
+#        issue_number: ${{ github.event.number }}
     - uses: tonyhallett/artifacts-url-comments@v1.1.0
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
