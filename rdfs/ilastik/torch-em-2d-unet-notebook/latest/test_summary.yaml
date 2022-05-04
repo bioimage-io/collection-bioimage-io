@@ -1,0 +1,28 @@
+bioimageio_spec_version: 0.4.5.post11
+rdf_sha256: 02f7a98b50e490570acef094908702ef77fa227ca2a7b0c28ff473cfb2e97774
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of notebook RDF 0.2.2 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'notebook'. Validating as rdf.}
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of notebook RDF 0.2.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'notebook'. Validating as rdf.}
+  deepimagej: []
+  ilastik:
+  - {error: Missing/invalid weight formats for ilastik/torch-em-2d-unet-notebook/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
+  - {error: Missing/invalid weight formats for ilastik/torch-em-2d-unet-notebook/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

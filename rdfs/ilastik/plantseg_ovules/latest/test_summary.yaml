@@ -1,0 +1,26 @@
+bioimageio_spec_version: 0.4.5.post11
+rdf_sha256: 90bfbd842fa13da8b1e188761c8e0576fa412931cd1c21f93a1d326d1cc3df57
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.1 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.1
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {}
+  deepimagej:
+  - {error: Missing/invalid weight formats for ilastik/plantseg_ovules/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
+  - {error: Missing/invalid weight formats for ilastik/plantseg_ovules/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

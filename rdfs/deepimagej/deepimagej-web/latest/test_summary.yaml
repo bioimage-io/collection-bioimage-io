@@ -1,0 +1,26 @@
+bioimageio_spec_version: 0.4.5.post11
+rdf_sha256: e0e8cc7ef6046bb30d190bb8929df94b0622d594d4ba23bf02445ecb96ad4c1e
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of application RDF 0.2.2 with update to
+      latest format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of application RDF 0.2.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/deepimagej-web/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/deepimagej-web/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

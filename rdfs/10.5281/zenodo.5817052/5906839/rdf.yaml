@@ -1,0 +1,135 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/per_sample_scale_range.ijm
+  - https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/binarize.ijm
+  unknown: {}
+authors:
+- affiliation: ''
+  name: ZeroCostDL4Mic team
+- name: Constantin Pape
+- name: DeepImageJ team
+cite:
+- text: Falk et al. Nature Methods 2019
+  url: https://doi.org/10.1038/s41592-018-0261-2
+- text: Ronneberger et al. arXiv in 2015
+  url: https://doi.org/10.1007/978-3-319-24574-4_28
+- text: Lucas von Chamier et al. biorXiv 2020
+  url: https://doi.org/10.1101/2020.03.20.000133
+config:
+  _conceptdoi: 10.5281/zenodo.5817052
+  _doi: 10.5281/zenodo.5850574
+  bioimageio:
+    created: '2022-01-27 14:00:17.489637'
+    doi: 10.5281/zenodo.5906839
+    nickname: creative-panda
+    nickname_icon: 🐼
+    owners:
+    - 271523
+    status: accepted
+    version_id: '5906839'
+    version_name: revision 1
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - kwargs: binarize.ijm
+        spec: ij.IJ::runMacroFile
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: sample_input_0.tif
+        pixel_size:
+          x: 0.0004
+          y: 0.0004
+          z: 1
+        size: 512 x 512 x 1 x 1
+      memory_peak:
+      outputs:
+      - name: sample_output_0.tif
+        size: 512 x 512 x 1 x 1
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png
+description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
+  for neuron segmentation in Transmission Electron Microscopy images.
+documentation: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/README.md
+format_version: 0.4.5
+id: 10.5281/zenodo.5817052/5906839
+inputs:
+- axes: bxyc
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: uint8
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: xyc
+      max_percentile: 99.8
+      min_percentile: 1
+      mode: per_sample
+    name: scale_range
+  shape:
+  - 1
+  - 512
+  - 512
+  - 1
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+- zero/notebook_u-net_2d_zerocostdl4mic_deepimagej
+- deepimagej/deepimagej
+name: Neuron Segmentation in 2D EM (Membrane)
+outputs:
+- axes: bxyc
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: bool
+  name: output0
+  postprocessing:
+  - kwargs:
+      threshold: 0.4
+    name: binarize
+  shape:
+  - 1
+  - 512
+  - 512
+  - 1
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/sample_output_0.tif
+tags:
+- zerocostdl4mic
+- deepimagej
+- segmentation
+- electron-microscopy
+- unet
+- isbi2012-challenge
+- neurons
+- brain
+- boundary-segmentation
+- 2d
+test_inputs:
+- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_output.npy
+timestamp: '2021-12-09T15:03:20.680270'
+type: model
+version: 0.1.0
+weights:
+  keras_hdf5:
+    sha256: cdc0cfcc13d01f75a93b25599167bf7cf1572c0c276ea415dccbbe1d143b1489
+    source: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/keras_weights.hdf5
+    tensorflow_version: '1.15'
+  tensorflow_saved_model_bundle:
+    sha256: 34269e6da7caf38a604bb68f2aaa39662f306064f9a35e7cc81bc42049db87af
+    source: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/tf_weights.zip
+    tensorflow_version: '1.15'

@@ -1,0 +1,29 @@
+bioimageio_spec_version: 0.4.5.post11
+rdf_sha256: 61353210691e4bcb5c1f6f54dd20cdf8e93e89da10154ed61328b68935197dd6
+status: failed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post11
+    error:
+      documentation:
+      - 'Errors in all options for this field. Fix any of the following errors:'
+      - [Empty URI scheme component]
+      - ["Invalid suffix (\n\nThis plugin allows to predict the subcellular protein
+          localization pattern for a provided image. \n\n## Main features\n* Prediction
+          is performed with the winner of the special price of the 2018 Kaggle challenge
+          (https:/github.com/CellProfiling/HPA-Special-Prize). \n* Annotated localization
+          classes are from the **HPA cell atlas**. \n* The plugin uses a trained **ShuffleNet
+          (v2)** to perform the prediction directly in the browser. \n* Class Activation
+          Map: https:/arxiv.org/pdf/1512.04150.pdf  \n\n): Replacement index 0 out
+          of range for positional args tuple"]
+    name: 'bioimageio.spec static validation of  RDF '
+    nested_errors: {}
+    status: failed
+    traceback: null
+    warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  deepimagej:
+  - {error: Missing/invalid weight formats for hpa/HPA-Classification/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
+  - {error: Missing/invalid weight formats for hpa/HPA-Classification/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}

@@ -1,0 +1,27 @@
+bioimageio_spec_version: 0.4.5.post11
+rdf_sha256: 317be4a5f96c7291e6767831ea4a2e281a4885dbb3fcc5517be205963f1cda74
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.2 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {}
+  deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/MoNuSeg_digital_pathology_miccai2018/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
+  - {error: Missing/invalid weight formats for deepimagej/MoNuSeg_digital_pathology_miccai2018/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

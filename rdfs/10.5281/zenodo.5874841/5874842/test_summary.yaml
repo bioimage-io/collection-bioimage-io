@@ -1,0 +1,104 @@
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post11
+rdf_sha256: b2c494f461a69440bb035265acbb2bfcf5551f6b6c5b16e42cc9629b14ca4bf8
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
+        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
+        ''deepimagej'', ''n2v'']}]'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}
+  - bioimageio_spec_version: 0.4.5post11
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
+        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
+        ''deepimagej'', ''n2v'']}]'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  deepimagej:
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
+    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
+    error: No module named 'torch'
+    name: reproduce test outputs with deepimagej 2.1.13 using pytorch_state_dict weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 45, in test_model\n    model = load_resource_description(\n", "  File
+        \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 113, in resolve_raw_resource_description\n    rd = SourceNodeTransformer().transform(rd)\n",
+      "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 143, in generic_transformer\n    node, **{name: self.transform(value,
+        **kwargs) for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 143, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
+        for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 63, in transform_dict\n    return {key: self.transform(value, **kwargs)
+        for key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 63, in <dictcomp>\n    return {key: self.transform(value, **kwargs) for
+        key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 143, in generic_transformer\n    node, **{name: self.transform(value,
+        **kwargs) for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 143, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
+        for name, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 77, in transform_ResolvedImportableSourceFile\n    importlib_spec.loader.exec_module(dep)
+        \ # type: ignore  # todo: possible to use \"loader.load_module\"?\n", '  File
+        "<frozen importlib._bootstrap_external>", line 843, in exec_module
+
+        ', '  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+        ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/unet.py\",
+        line 1, in <module>\n    import torch\n"]
+  ilastik:
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.5874841/5874842, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.5874841/5874842, name: reproduce
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights,
+    reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,
+    reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,
+    reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights,
+    reason: null, status: passed, traceback: null}

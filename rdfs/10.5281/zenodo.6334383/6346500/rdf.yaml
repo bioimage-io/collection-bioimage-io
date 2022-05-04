@@ -1,0 +1,108 @@
+authors:
+- name: Lorenzo Cerrone
+- name: Adrian Wolny
+cite:
+- text: Wolny, Cerrone et al. Accurate and Versatile 3D Segmentation of Plant Tissues
+    at Cellular Resolution. eLife 2020.
+  url: https://elifesciences.org/articles/57613
+config:
+  bioimageio:
+    created: '2022-03-11 10:58:32.633796'
+    doi: 10.5281/zenodo.6346500
+    nickname: pioneering-rhino
+    nickname_icon: 🦏
+    owners:
+    - 66700
+    status: accepted
+    version_id: '6346500'
+    version_name: version 2
+covers:
+- https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png
+- https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png
+description: A 2D U-Net trained to predict the cell boundaries in confocal stacks
+  of Arabidopsis ovules. Trained on z-slices of 3D confocal images.
+documentation: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/unet2d.md
+format_version: 0.4.5
+id: 10.5281/zenodo.6334383/6346500
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: raw
+  shape:
+  - 1
+  - 1
+  - 1
+  - 512
+  - 512
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: wolny
+name: 2D UNet Arabidopsis Ovules
+outputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 0
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: raw
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml
+tags:
+- plantseg
+- unet
+- 2d
+- semantic-segmentation
+- arabidopsis
+- ovules
+- cell-membrane
+- plant
+- tissue
+- fluorescence-light-microscopy
+- pytorch
+test_inputs:
+- https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/test_output.npy
+timestamp: '2022-03-11T11:46:56.051080'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/unet.py:UNet2D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    dependencies: conda:https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/environment.yaml
+    kwargs:
+      f_maps: 64
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 1
+      testing: true
+    sha256: 5dcd21a84ed23931bb324e9c5ab38f730bb5cf90699dab5bfba1c1829c914895
+    source: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/unet2d-arabidopsis-ovules-confocal-ds2x.pytorch

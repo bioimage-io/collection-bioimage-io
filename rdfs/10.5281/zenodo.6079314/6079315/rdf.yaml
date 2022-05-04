@@ -1,0 +1,125 @@
+authors:
+- name: Constantin Pape; @constantinpape
+cite:
+- text: training library
+  url: https://doi.org/10.5281/zenodo.5108853
+- text: architecture
+  url: https://doi.org/10.1007/978-3-319-24574-4_28
+- text: segmentation algorithm
+  url: https://doi.org/10.1109/TPAMI.2020.2980827
+config:
+  bioimageio:
+    created: '2022-02-14 17:05:09.708440'
+    doi: 10.5281/zenodo.6079315
+    nickname: wild-whale
+    nickname_icon: 🐳
+    owners:
+    - 77626
+    status: accepted
+    version_id: '6079315'
+    version_name: version 1
+  mws:
+    offsets:
+    - - -1
+      - 0
+    - - 0
+      - -1
+    - - -3
+      - 0
+    - - 0
+      - -3
+    - - -9
+      - 0
+    - - 0
+      - -9
+    - - -27
+      - 0
+    - - 0
+      - -27
+covers:
+- https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/cover.png
+description: affinity-model
+documentation: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/documentation.md
+format_version: 0.4.5
+id: 10.5281/zenodo.6079314/6079315
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: cyx
+      mode: per_sample
+    name: zero_mean_unit_variance
+  shape:
+    min:
+    - 1
+    - 1
+    - 48
+    - 48
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- ilastik/ilastik
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: Constantin Pape
+  name: Constantin Pape
+name: EpitheliaAffinityModel
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 8.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6079315/rdf.yaml
+tags:
+- u-net
+- segmentation
+test_inputs:
+- https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/test_input_0.npy
+test_outputs:
+- https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/test_output_0.npy
+timestamp: '2022-01-11T10:06:01.735636'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/unet.py:UNet2d
+    architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
+    kwargs:
+      depth: 4
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 32
+      out_channels: 8
+      postprocessing:
+      return_side_outputs: false
+    sha256: 45e08ab0d974bea0963f163d1d229022ea72d6305c929bbe868d365434080495
+    source: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/weights.pt
