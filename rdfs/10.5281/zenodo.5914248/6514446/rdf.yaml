@@ -1,0 +1,157 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+  - https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/resultImage.tiff
+  - https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/exampleImage.tiff
+  - https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/postprocessing.txt
+  - https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/preprocessing.txt
+authors:
+- affiliation: Ikerbasque EHU UPV
+  name: Ignacio Arganda Carreras
+- affiliation: EPFL, UC3M
+  name: DeepImageJ
+cite:
+- doi: https://doi.org/10.1038/s41592-021-01262-9
+  text: Gómez-de-Mariscal E. et al., Nature Methods 2021
+- doi: https://doi.org/10.1038/nmeth.4473
+  text: Ulman V. et al., Nature Methods 2017
+- doi: https://doi.org/10.1007/978-3-319-24574-4_28
+  text: Ronneberger O. et al., MICCAI 2015
+config:
+  bioimageio:
+    created: '2022-05-03 14:26:34.050946'
+    doi: 10.5281/zenodo.6514446
+    nickname: discreet-rooster
+    nickname_icon: 🐓
+    owners:
+    - 147356
+    status: accepted
+    version_id: '6514446'
+    version_name: version 2
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+      tensorflow_model_tag: tf.saved_model.tag_constants.SERVING
+      tensorflow_siganture_def: tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY
+    prediction:
+      postprocess:
+      - kwargs: postprocessing.txt
+        spec: ij.IJ::runMacroFile
+      preprocess:
+      - kwargs: preprocessing.txt
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: exampleImage.tiff
+        pixel_size:
+          x: 1,60E-04 cm
+          y: 60E-04 cm
+          z: 1.0 pixel
+        size: 720 x 576 x 1 x 1
+      memory_peak: 328.1 Mb
+      outputs:
+      - name: resultImage.tiff
+        size: 720 x 576 x 1 x 1
+        type: image
+      runtime: 2.8 s
+covers:
+- https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/exampleImage.png
+- https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/resultImage.png
+description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
+  images of pancreatic stem cells on a 2D polystyrene substrate.
+documentation: https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/README.md
+format_version: 0.4.5
+id: 10.5281/zenodo.5914248/6514446
+inputs:
+- axes: byxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input
+  preprocessing:
+  - kwargs:
+      axes: xy
+      max_percentile: 100
+      min_percentile: 0
+      mode: per_sample
+    name: scale_range
+  shape:
+    min:
+    - 1
+    - 96
+    - 96
+    - 1
+    step:
+    - 0
+    - 8
+    - 8
+    - 0
+license: BSD-2-Clause
+links:
+- imjoy/BioImageIO-Packager
+- deepimagej/unet-pancreaticcellsegmentation
+name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+outputs:
+- axes: byxc
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 47
+  - 47
+  - 0
+  name: output
+  postprocessing:
+  - kwargs:
+      threshold: 0.5
+    name: binarize
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/6514446/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/exampleImage.tiff
+sample_outputs:
+- https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/resultImage.tiff
+tags:
+- deepimagej
+- pancreatic-stem-cells
+- segmentation
+- phase-contrast
+- unet
+- neubias
+- cell-tracking-challenge
+- transmission-light-microscopy
+- 2d
+- cells
+- semantic-segmentation
+- tensorflow
+test_inputs:
+- https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/exampleImage.npy
+test_outputs:
+- https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/resultImage.npy
+timestamp: '2021-02-17T10:13:32.618000'
+type: model
+version: 0.1.0
+weights:
+  keras_hdf5:
+    sha256: d31fd8c4e764ae4b315a33f9ee9cc17e94764a93f2097542a80d0337327e872b
+    source: https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/unet_pancreatic_cell_segmentation.h5
+    tensorflow_version: '1.15'
+  tensorflow_saved_model_bundle:
+    sha256: e0775a1d99afe6492946166f72fa6879a2c5e0315ea1e5292340f7e4ee73b842
+    source: https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/tensorflow_saved_model_bundle.zip
+    tensorflow_version: '1.15'
