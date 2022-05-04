@@ -226,16 +226,8 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
         # enrich rdf by rdf_source
         for k, v in rdf_source.items():
-            if k not in rdf_source:
+            if k not in rdf:
                 rdf[k] = v
-
-        try:
-            # resolve relative paths of remote rdf_source
-            rdf = serialize_raw_resource_description_to_dict(
-                load_raw_resource_description(rdf), convert_absolute_paths=True
-            )
-        except Exception as e:
-            warnings.warn(f"remote files could not be resolved for invalid RDF; error: {e}")
 
         # ensure config:bioimageio exists
         if "config" not in rdf:
@@ -243,10 +235,30 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         if "bioimageio" not in rdf["config"]:
             rdf["config"]["bioimageio"] = {}
 
+        # Move bioimageio specific fields to config.bioimageio
+        for k in ["created", "doi", "status", "version_id", "version_name", "owners", "nickname", "nickname_icon"]:
+            if k in rdf:
+                rdf["config"]["bioimageio"][k] = rdf.pop(k)
+
+        try:
+            # resolve relative paths of remote rdf_source
+            orig_rdf = rdf
+            rdf = serialize_raw_resource_description_to_dict(
+                load_raw_resource_description(rdf), convert_absolute_paths=False  # todo: we should not have any abs paths, but just in case we should convert them.. this needs a spec update though (underway)
+            )
+        except Exception as e:
+            warnings.warn(f"remote files could not be resolved for invalid RDF; error: {e}")
+        else:
+            # round-trip removes unknown fields for some RDF types, but we want to keep them
+            for k, v in orig_rdf.items():
+                if k not in rdf:
+                    rdf[k] = v
+
         # overwrite id and rdf_source
         rdf["id"] = f"{resource_id}/{version_id}"
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
 
+        rdf.pop("root_path", None)
         assert missing not in rdf.values(), rdf
 
         # sort rdf to avoid random diffs
