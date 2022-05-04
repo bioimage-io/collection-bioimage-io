@@ -202,74 +202,54 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
     resource_id = resource["id"]
     updated_versions = []
     for resource_version in resource["versions"]:
-        version_info = {k: v for k, v in resource.items() if k != "versions"}
-        version_info.update(resource_version)
-        version_id = version_info["version_id"]
-        if version_info["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
+        rdf = {k: v for k, v in resource.items() if k not in ("versions", "status")}  # rdf is based on resource info
+        rdf.update(resource_version)  # version specific info overwrites resource info
+        version_id = rdf["version_id"]
+        if rdf["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
             continue
 
-        if isinstance(version_info["rdf_source"], dict):
-            if version_info["rdf_source"].get("source", "").split("?")[0].endswith(".imjoy.html"):
-                enriched_version_info = dict(
-                    get_plugin_as_rdf(resource["id"], version_info["rdf_source"]["source"])
-                )
-                if resource["id"].startswith('imjoy'):
-                    print(enriched_version_info)
-                version_info.update(enriched_version_info)
-
-            # Inherit the info from the collection
-            rdf = version_info["rdf_source"].copy()
-        elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
-            enriched_version_info = dict(get_plugin_as_rdf(resource["id"], version_info["rdf_source"]))
-            version_info.update(enriched_version_info)
-            rdf = {}
+        rdf_source = rdf["rdf_source"]  # missing fields may be filled in based on rdf_source
+        if isinstance(rdf_source, str) and rdf_source.split("?")[0].endswith(".imjoy.html"):
+            rdf_source = dict(get_plugin_as_rdf(resource["id"], rdf["rdf_source"]))
         else:
-            try:
-                rdf, rdf_name, rdf_root = resolve_rdf_source(version_info["rdf_source"])
-                if not isinstance(rdf, dict):
-                    raise TypeError(type(rdf))
-                rdf["root_path"] = rdf_root  # we use this after updating the rdf to resolve remote sources
-            except Exception as e:
-                warnings.warn(f"Failed to load {version_info['rdf_source']}: {e}")
-                rdf = {
-                    "invalid_original_rdf_source": version_info["rdf_source"],
-                    "invalid_original_rdf_source_error": str(e),
-                }
+            if not isinstance(rdf_source, dict):
+                rdf_source, rdf_source_name, rdf_source_root = resolve_rdf_source(rdf_source)
+                assert "root_path" not in rdf
+                rdf_source["root_path"] = rdf_source_root  # enables remote source content to be resolved
 
+            assert isinstance(rdf_source, dict)
+            # rdf_source maybe filled by rdf["rdf_source"]["source"]
+            if rdf_source.get("source", "").split("?")[0].endswith(".imjoy.html"):
+                for k, v in dict(get_plugin_as_rdf(resource["id"], rdf["rdf_source"]["source"])).items():
+                    if k not in rdf_source:
+                        rdf_source[k] = v
+
+        # enrich rdf by rdf_source
+        for k, v in rdf_source.items():
+            if k not in rdf_source:
+                rdf[k] = v
+
+        try:
+            # resolve relative paths of remote rdf_source
+            rdf = serialize_raw_resource_description_to_dict(
+                load_raw_resource_description(rdf), convert_absolute_paths=True
+            )
+        except Exception as e:
+            warnings.warn(f"remote files could not be resolved for invalid RDF; error: {e}")
+
+        # ensure config:bioimageio exists
         if "config" not in rdf:
             rdf["config"] = {}
         if "bioimageio" not in rdf["config"]:
             rdf["config"]["bioimageio"] = {}
 
-        # Allowing to override fields
-        for k in version_info:
-            # Place these fields under config.bioimageio
-            if k in ["created", "doi", "status", "version_id", "version_name", "owners", "nickname", "nickname_icon"]:
-                rdf["config"]["bioimageio"][k] = version_info[k]
-            else:
-                rdf[k] = version_info[k]
-
-        if "rdf_source" in rdf and isinstance(rdf["rdf_source"], dict):
-            del rdf["rdf_source"]
-
-        if "owners" in resource:
-            rdf["config"]["bioimageio"]["owners"] = resource["owners"]
-
+        # overwrite id and rdf_source
         rdf["id"] = f"{resource_id}/{version_id}"
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
 
-        # resolve file paths relative to remote resource location
-        if "root_path" in rdf:
-            try:
-                # a round-trip will resolve all local paths to urls if 'root_path' is a url
-                rdf_node = load_raw_resource_description(rdf)
-                rdf = serialize_raw_resource_description_to_dict(rdf_node)
-            except Exception as e:
-                warnings.warn(f"Failed round-trip to resolve any remote sources: {e}")
-
         assert missing not in rdf.values(), rdf
 
-        # sort rdf
+        # sort rdf to avoid random diffs
         rdf = rec_sort(rdf)
 
         updated_versions.append(version_id)
