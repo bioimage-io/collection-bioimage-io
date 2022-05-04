@@ -1,4 +1,4 @@
-rdf_sha256: 3870751ddcce36aca7458dcabeabec41d983ab0c3b0bdb0e43e428b28860b317
+rdf_sha256: 9e75fdfc772d62d792178cf9a21849a08264f39039f5cadd790f6e92e10c6ac9
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for hpa/HPA-Classification/latest, name: reproduce

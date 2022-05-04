@@ -1,4 +1,4 @@
-rdf_sha256: e38a50befd17fe5906f1a1dc7c33ab88555e80392f426cf9a782c17d6c8e0043
+rdf_sha256: c2613266fd1f2f20b58ddc1c5890e58ffc0b77b238de58ff9b61a084156985a5
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for ilastik/live-cell-boundary-model/latest,
