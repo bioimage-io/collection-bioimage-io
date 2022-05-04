@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: debug pr number
       run: echo ${{ github.event.number }}
+    - name: debug original ref
+      run: echo ${{ github.event.workflow_run.head_branch }}
 #    - uses: izhangzhihao/delete-comment@master
 #      with:
 #        github_token: ${{ secrets.PAT }}
