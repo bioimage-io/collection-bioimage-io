@@ -241,11 +241,14 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
                 rdf["config"]["bioimageio"][k] = rdf.pop(k)
 
         rdf.pop("rdf_source", None)  # remove rdf source
+
         try:
             # resolve relative paths of remote rdf_source
             orig_rdf = rdf
+            rdf_node = load_raw_resource_description(rdf)
             rdf = serialize_raw_resource_description_to_dict(
-                load_raw_resource_description(rdf), convert_absolute_paths=False  # todo: we should not have any abs paths, but just in case we should convert them.. this needs a spec update though (underway)
+                rdf_node,
+                convert_absolute_paths=False,  # todo: we should not have any abs paths, but just in case we should convert them.. this needs a spec update though (underway)
             )
         except Exception as e:
             warnings.warn(f"remote files could not be resolved for invalid RDF; error: {e}")
