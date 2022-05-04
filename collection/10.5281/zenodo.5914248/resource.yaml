@@ -1,32 +1,48 @@
 doi: 10.5281/zenodo.5914248
 id: 10.5281/zenodo.5914248
-owners: [147356]
+nickname: discreet-rooster
+nickname_icon: 🐓
+owners:
+- 147356
 status: accepted
 type: model
 versions:
+- created: '2022-05-03 14:26:34.050946'
+  doi: 10.5281/zenodo.6514446
+  name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+  status: accepted
+  version_id: '6514446'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/rdf.yaml
 - created: '2022-01-28 15:42:10.408513'
   doi: 10.5281/zenodo.5914249
+  inputs:
+  - axes: byxc
+    data_range:
+    - -inf
+    - inf
+    data_type: float32
+    name: input
+    preprocessing:
+    - kwargs:
+        axes: xyc
+        max_percentile: 100
+        min_percentile: 0
+        mode: per_sample
+      name: scale_range
+    shape:
+      min:
+      - 1
+      - 104
+      - 104
+      - 1
+      step:
+      - 0
+      - 8
+      - 8
+      - 0
   name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
-  rdf_source: 'https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/rdf.yaml'
   status: accepted
   version_id: '5914249'
   version_name: version 1
-  inputs:
-  - name: input
-    axes: byxc
-    data_type: float32
-    data_range:
-      - '-inf'
-      - inf
-    preprocessing:
-      - name: scale_range
-        kwargs:
-          mode: per_sample
-          axes: xyc
-          min_percentile: 0
-          max_percentile: 100
-    shape:
-      min: [1, 104, 104, 1]
-      step: [0, 8, 8, 0]
-nickname: discreet-rooster
-nickname_icon: 🐓
+  rdf_source: https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/rdf.yaml
