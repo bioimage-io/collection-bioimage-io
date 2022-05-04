@@ -1,6 +1,7 @@
 api_version: 0.1.8
-attachments: {}
-authors: []
+authors:
+- name: ImJoy Team
+- name: ilastik Team
 badges: []
 config:
   background_image: static/img/zoo-background.svg
@@ -32,7 +33,7 @@ id: ilastik/live-cell-boundary-model/latest
 maintainers:
 - github_user: ilastik
   name: ilastik Team
-name: Live cell boundary model preview
+name: live-cell-boundary-model
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml
 requirements: []
 source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html

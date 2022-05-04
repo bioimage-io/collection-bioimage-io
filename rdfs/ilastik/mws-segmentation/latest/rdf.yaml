@@ -1,6 +1,6 @@
 api_version: 0.1.8
-attachments: {}
-authors: []
+authors:
+- name: Constantin Pape
 badges: []
 cite:
 - doi: 10.1007/978-3-030-01225-0_34
@@ -36,7 +36,7 @@ id: ilastik/mws-segmentation/latest
 maintainers:
 - github_user: constantinpape
   name: Constantin Pape
-name: Mutex Watershed Plugin
+name: mws-segmentation
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml
 requirements:
 - https://steffenwolf.science/webmutex/mws.js
@@ -44,4 +44,4 @@ source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mw
 tags:
 - bioengine
 type: application
-version: 0.1.1
+version: 0.1.2

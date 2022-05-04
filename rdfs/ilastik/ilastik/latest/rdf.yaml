@@ -1,6 +1,6 @@
 api_version: 0.1.7
-attachments: {}
-authors: []
+authors:
+- name: ilastik Team
 badges: []
 cite:
 - doi: 10.1038/s41592-019-0582-9

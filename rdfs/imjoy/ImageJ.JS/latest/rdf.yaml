@@ -1,6 +1,4 @@
 api_version: 0.2.3
-attachments: {}
-authors: []
 badges: []
 config:
   background_image: static/img/zoo-background.svg
@@ -32,7 +30,7 @@ documentation: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/REA
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
 id: imjoy/ImageJ.JS/latest
-name: ImJoy Collection
+name: ImageJ.JS
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
 requirements: []
 source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
