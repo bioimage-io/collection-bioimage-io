@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6518500
+id: 10.5281/zenodo.6518500
+nickname: laid-back-crab
+nickname_icon: 🦀
+owners:
+- 147356
+status: accepted
+type: model
+versions:
+- created: '2022-05-04 16:53:27.309822'
+  doi: 10.5281/zenodo.6518501
+  name: Widefield Super-resolution (GAN - FITC)
+  status: accepted
+  version_id: '6518501'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/7daa746b-dfc8-4215-ab55-d31dfd3de724/rdf.yaml
