@@ -1,9 +1,0 @@
-rdf_sha256: b94e682fc0b53c6da897e271d999c61ed56ffdef09796b2b0ebe37936e3ffe47
-tests:
-  deepimagej:
-  - {error: Missing/invalid weight formats for zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
-  ilastik:
-  - {error: Missing/invalid weight formats for zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

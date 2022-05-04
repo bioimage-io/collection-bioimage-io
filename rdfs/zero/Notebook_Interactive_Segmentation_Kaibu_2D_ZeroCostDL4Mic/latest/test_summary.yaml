@@ -1,9 +1,0 @@
-rdf_sha256: aae727f3563a9fa6b54b106039d44751a655ce53198d8d23a13c1e59ef7cf9d9
-tests:
-  deepimagej:
-  - {error: Missing/invalid weight formats for zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
-  ilastik:
-  - {error: Missing/invalid weight formats for zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

@@ -1,9 +1,0 @@
-rdf_sha256: ee22dcaeeaf7a60a972693b1f23dee07da6a4d05f644307a4649ec921318e8a2
-tests:
-  deepimagej:
-  - {error: Missing/invalid weight formats for ilastik/cremi_training_data/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
-  ilastik:
-  - {error: Missing/invalid weight formats for ilastik/cremi_training_data/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

@@ -1,6 +1,0 @@
-error: null
-name: bioimageio.spec static validation with auto-conversion to latest format
-nested_errors: {}
-source_name: https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/rdf.yaml...
-traceback: null
-warnings: {}

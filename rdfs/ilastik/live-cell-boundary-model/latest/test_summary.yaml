@@ -1,9 +1,0 @@
-rdf_sha256: c2613266fd1f2f20b58ddc1c5890e58ffc0b77b238de58ff9b61a084156985a5
-tests:
-  deepimagej:
-  - {error: Missing/invalid weight formats for ilastik/live-cell-boundary-model/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
-  ilastik:
-  - {error: Missing/invalid weight formats for ilastik/live-cell-boundary-model/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

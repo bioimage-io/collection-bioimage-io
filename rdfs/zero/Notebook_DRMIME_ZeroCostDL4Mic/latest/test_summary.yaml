@@ -1,9 +1,0 @@
-rdf_sha256: 27c4e0c29f6f9d07b150fe07d117e472f5c5152ff3d76e16002adf4ed208f216
-tests:
-  deepimagej:
-  - {error: Missing/invalid weight formats for zero/Notebook_DRMIME_ZeroCostDL4Mic/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
-  ilastik:
-  - {error: Missing/invalid weight formats for zero/Notebook_DRMIME_ZeroCostDL4Mic/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

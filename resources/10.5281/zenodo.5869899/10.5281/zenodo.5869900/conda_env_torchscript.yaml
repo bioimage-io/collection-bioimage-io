@@ -1,3 +1,0 @@
-channels: [pytorch, conda-forge, defaults]
-dependencies: [bioimageio.core, pytorch, cpuonly]
-name: 10.5281zenodo.5869900
