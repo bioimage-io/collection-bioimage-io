@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 4637,
+      "download_count": 4705,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -60,7 +60,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 4599,
+      "download_count": 4667,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -141,7 +141,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 3329,
+      "download_count": 3342,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -182,7 +182,7 @@
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 3013,
+      "download_count": 3067,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -262,7 +262,7 @@
         "https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 2067,
+      "download_count": 2126,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -301,7 +301,7 @@
         "./output.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 1879,
+      "download_count": 1884,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -346,7 +346,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 1707,
+      "download_count": 1712,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -390,7 +390,7 @@
         "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 1525,
+      "download_count": 1530,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
@@ -526,7 +526,7 @@
         "https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 1159,
+      "download_count": 1166,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -566,7 +566,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1143,
+      "download_count": 1148,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -647,7 +647,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 1041,
+      "download_count": 1087,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -682,7 +682,7 @@
         "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
       ],
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 1035,
+      "download_count": 1040,
       "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
@@ -706,6 +706,52 @@
       "type": "model",
       "versions": [
         "5942853"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Lorenzo Cerrone"
+        },
+        {
+          "name": "Adrian Wolny"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png",
+        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png"
+      ],
+      "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
+      "download_count": 1034,
+      "id": "10.5281/zenodo.6334383",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "2D UNet Arabidopsis Ovules",
+      "nickname": "pioneering-rhino",
+      "nickname_icon": "\ud83e\udd8f",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "2d",
+        "semantic-segmentation",
+        "arabidopsis",
+        "ovules",
+        "cell-membrane",
+        "plant",
+        "tissue",
+        "fluorescence-light-microscopy",
+        "pytorch"
+      ],
+      "type": "model",
+      "versions": [
+        "6346500",
+        "6334384"
       ]
     },
     {
@@ -743,52 +789,6 @@
       "type": "model",
       "versions": [
         "5911832"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Lorenzo Cerrone"
-        },
-        {
-          "name": "Adrian Wolny"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png",
-        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png"
-      ],
-      "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
-      "download_count": 1019,
-      "id": "10.5281/zenodo.6334383",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "2D UNet Arabidopsis Ovules",
-      "nickname": "pioneering-rhino",
-      "nickname_icon": "\ud83e\udd8f",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "2d",
-        "semantic-segmentation",
-        "arabidopsis",
-        "ovules",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
-      ],
-      "type": "model",
-      "versions": [
-        "6346500",
-        "6334384"
       ]
     },
     {
@@ -944,7 +944,7 @@
         "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 697,
+      "download_count": 706,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -974,6 +974,45 @@
       "versions": [
         "6346477",
         "6334882"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
+      ],
+      "description": "Segmentation of mitochondria in EM images.",
+      "download_count": 632,
+      "id": "10.5281/zenodo.6406803",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-2d-unet-notebook"
+      ],
+      "name": "MitchondriaEMSegmentation2D",
+      "nickname": "shivering-raccoon",
+      "nickname_icon": "\ud83e\udd9d",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
+      "tags": [
+        "unet",
+        "mitochondria",
+        "electron-microscopy",
+        "instance-segmentation",
+        "2d"
+      ],
+      "type": "model",
+      "versions": [
+        "6406804"
       ]
     },
     {
@@ -1017,45 +1056,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
-      ],
-      "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 603,
-      "id": "10.5281/zenodo.6406803",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook"
-      ],
-      "name": "MitchondriaEMSegmentation2D",
-      "nickname": "shivering-raccoon",
-      "nickname_icon": "\ud83e\udd9d",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml",
-      "tags": [
-        "unet",
-        "mitochondria",
-        "electron-microscopy",
-        "instance-segmentation",
-        "2d"
-      ],
-      "type": "model",
-      "versions": [
-        "6406804"
-      ]
-    },
-    {
-      "authors": [
-        {
           "name": "A. Wolny"
         },
         {
@@ -1067,7 +1067,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 473,
+      "download_count": 496,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -2042,7 +2042,6 @@
       ]
     },
     {
-      "authors": [],
       "badges": [],
       "covers": [
         "https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif"
@@ -2051,7 +2050,7 @@
       "download_count": 1,
       "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
       "id": "hpa/HPA-Classification",
-      "name": "HPA Collection",
+      "name": "HPA-Classification",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html",
       "tags": [
@@ -2195,7 +2194,11 @@
       ]
     },
     {
-      "authors": [],
+      "authors": [
+        {
+          "name": "ilastik Team"
+        }
+      ],
       "badges": [],
       "covers": [],
       "description": "Export BioImage.IO model packages for ilastik from a model description file",
@@ -2244,14 +2247,21 @@
       ]
     },
     {
-      "authors": [],
+      "authors": [
+        {
+          "name": "ImJoy Team"
+        },
+        {
+          "name": "ilastik Team"
+        }
+      ],
       "badges": [],
       "covers": [],
       "description": "Run the live cell boundary model via the BioEngine",
       "download_count": 1,
       "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png",
       "id": "ilastik/live-cell-boundary-model",
-      "name": "Live cell boundary model preview",
+      "name": "live-cell-boundary-model",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html",
       "tags": [
@@ -2319,14 +2329,18 @@
       ]
     },
     {
-      "authors": [],
+      "authors": [
+        {
+          "name": "Constantin Pape"
+        }
+      ],
       "badges": [],
       "covers": [],
       "description": "Run the mutex watershed for instance segmentation of affinity predictions",
       "download_count": 1,
       "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png",
       "id": "ilastik/mws-segmentation",
-      "name": "Mutex Watershed Plugin",
+      "name": "mws-segmentation",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html",
       "tags": [
@@ -2533,7 +2547,6 @@
       ]
     },
     {
-      "authors": [],
       "badges": [],
       "covers": [],
       "description": "Exporting BioImage.IO model packages from the model description file",
@@ -2571,7 +2584,6 @@
       ]
     },
     {
-      "authors": [],
       "badges": [],
       "covers": [],
       "description": "ImJoy: Supercharging interactivity and scalability!",
@@ -2592,14 +2604,13 @@
       ]
     },
     {
-      "authors": [],
       "badges": [],
       "covers": [],
       "description": "ImageJ running in the browser",
       "download_count": 1,
       "icon": "https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png",
       "id": "imjoy/ImageJ.JS",
-      "name": "ImJoy Collection",
+      "name": "ImageJ.JS",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html",
       "tags": [
@@ -2640,7 +2651,6 @@
       ]
     },
     {
-      "authors": [],
       "badges": [],
       "covers": [],
       "description": "A minimal, purely client-side program for viewing Zarr-based images with Viv & ImJoy",
@@ -3346,7 +3356,7 @@
       "download_count": 1,
       "icon": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png",
       "id": "zero/Notebook Preview",
-      "name": "ZeroCost4Mic Collection",
+      "name": "Notebook Preview",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook Preview/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html",
       "tags": [
