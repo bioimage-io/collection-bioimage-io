@@ -123,7 +123,8 @@ collection:
 - authors:
   - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: [./input.png, ./output.png]
+  covers: ['https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/input.png',
+    'https://zenodo.org/api/files/436a4ace-0b71-4bee-bf08-b0c197350a4c/output.png']
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
   download_count: 1884
@@ -474,57 +475,6 @@ collection:
   type: model
   versions: ['6384846']
 - authors:
-  - {name: ZeroCostDL4Mic}
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover.png']
-  description: 2D U-Net trained for binary segmentation using the EM images of neuronal
-    membranes and segmentation masks from the ISBI segmentation challenge 2012.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/904905/files/DeepImageJ_2D_UNet_ZeroCostDL4Mic.zip
-  id: deepimagej/2DUNetZeroCostDL4Mic
-  license: MIT
-  links: [zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
-  name: 2D UNet - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/2DUNetZeroCostDL4Mic/latest/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ team}
-  covers: [./exampleImage.gif]
-  description: 3D U-Net trained using ZeroCostDL4Mic notebooks to segment mitochondria
-    in Transmission Electron Microscopy (TEM) data.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/907831/files/3DUNet_ZeroCostDL4Mic.bioimage.io.model.zip
-  id: deepimagej/3DUNetZeroCostDL4Mic
-  license: MIT
-  links: [deepimagej/deepimagej, zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ,
-    imjoy/BioImageIO-Packager]
-  name: 3D U-Net - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/3DUNetZeroCostDL4Mic/latest/rdf.yaml
-  tags: [deepimagej, tem, mitochondria, segmentation, 3d-unet, zerocostdl4mic, deepimagej-beta]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'UCL, Francis Crick Institute, Turku and Åbo Akademi University',
-    name: ZeroCostDL4Mic team}
-  - {affiliation: 'UC3M, EPFL', name: DeepImageJ team}
-  covers: [./input.png, ./zoom.png]
-  description: A trained Deep-STORM model for image reconstruction from high-density
-    single-molecule localization microscopy (SMLM).
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
-  id: deepimagej/DeepSTORMZeroCostDL4Mic
-  license: MIT
-  links: [zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ, deepimagej/deepimagej,
-    imjoy/BioImageIO-Packager]
-  name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/DeepSTORMZeroCostDL4Mic/latest/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, smlm, image-reconstruction, super-resolution]
-  type: model
-  versions: [latest]
-- authors:
   - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
   - {affiliation: Masaryk University, name: Martin Maška}
   - {affiliation: Masaryk University, name: Anna Kotrbová}
@@ -551,67 +501,6 @@ collection:
   type: application
   versions: [latest]
 - authors:
-  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
-  - {affiliation: Masaryk University, name: Martin Maška}
-  - {affiliation: Masaryk University, name: Anna Kotrbová}
-  - {affiliation: Masaryk University, name: Vendula Pospíchalová}
-  - {affiliation: Masaryk University, name: Pavel Matula}
-  - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/frunet_sev.jpg']
-  description: DeepImageJ compatible fully residual U-Net trained to segment small
-    extracellular vesicles in 2D TEM images
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
-  id: deepimagej/FRUNet2DsEVSegmentation
-  license: BSD-3-Clause
-  links: [deepimagej/deepimagej, deepimagej/EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
-  name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
-  tags: [deepimagej, extracellular-vesicles, segmentation, tem, frunet, exosomes,
-    electron-microscopy, 2d-segmentation]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: University of California, name: Yair Rivenson}
-  - {affiliation: University of California, name: Hongda Wang}
-  - {affiliation: University of California, name: Aydogan Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
-  description: A trained GAN to transform wide-field autofluorescence images of unlabelled
-    tissue sections into images that are equivalent to the bright-field images of
-    histologically stained versions of the same samples.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
-  id: deepimagej/JonesVirtualStaining
-  license: CC BY 4.0
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Jones Virtual Staining (GAN)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/JonesVirtualStaining/latest/rdf.yaml
-  tags: [deepimagej, gan, virtual-staining, histology]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'Centre for Biomedical Image Analysis, Masaryk University', name: Filip
-      Lux}
-  - {affiliation: 'Centre for Biomedical Image Analysis, Masaryk University', name: Petr
-      Matula}
-  covers: [./cover.jpg]
-  description: The method combines deep learning with watershed segmentation. For
-    each frame, the convolutional neural network of U-Net shape detects all cells
-    by markers and recognizes the foreground and the background of the frame. Then,
-    the final segmentation is generated by a Marker-Controlled Watershed transformation.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/914413/files/mu-lux_ctc_phc-c2dl-psc.zip
-  id: deepimagej/MU-Lux_CTC_PhC-C2DL-PSC
-  license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Pancreatic Cell Phase Contrast Segmentation (DeepWater - CTC submission)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/MU-Lux_CTC_PhC-C2DL-PSC/latest/rdf.yaml
-  tags: [deepwater, deepimagej, segmentation, watershed, cell-tracking-challenge,
-    phase-contrast]
-  type: model
-  versions: [latest]
-- authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   covers: ['https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg1.jpg',
     'https://raw.githubusercontent.com/deepimagej/models/master/datasets/MoNuSeg2.jpg',
@@ -626,202 +515,6 @@ collection:
   tags: [StarDist, segmentation, pathology, H&E, histology, 2D, nuclei segmentation,
     digital pathology]
   type: dataset
-  versions: [latest]
-- authors:
-  - {affiliation: University of California, name: Yair Rivenson}
-  - {affiliation: University of California, name: Hongda Wang}
-  - {affiliation: University of California, name: Aydogan Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
-  description: A trained GAN to transform wide-field autofluorescence images of unlabelled
-    tissue sections into images that are equivalent to the bright-field images of
-    histologically stained versions of the same samples.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
-  id: deepimagej/Mt3VirtualStaining
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Masson’s Trichrome Virtual Staining (GAN)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
-  tags: [deepimagej, gan, virtual-staining, histology]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: null, name: Baptiste Ottino}
-  - {affiliation: null, name: Kyle M. Douglass}
-  - {affiliation: null, name: Suliana Manley}
-  covers: [./cover_image.jpg]
-  description: Density Estimation by Fully Convolutional Networks (DEFCoN) - A fluorescent
-    spot counter for single molecule localization microscopy. DEFCoN was written by
-    Baptiste Ottino as a Masters thesis project under the guidance of Kyle M. Douglass
-    and Suliana Manley in the Laboratory of Experimental Biophysics.
-  download_count: 1
-  download_url: https://zenodo.org/record/4608442/files/SMLM_Density%20Map_Estimation_%28DEFCoN%29.bioimage.io.model.zip
-  id: deepimagej/SMLMDensityMapEstimationDEFCoN
-  license: BSD-3
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: SMLM Density Map Estimation (DEFCoN)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/SMLMDensityMapEstimationDEFCoN/latest/rdf.yaml
-  tags: [unet, deepimagej, deepimagej.js]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: UC3M, name: Carlos García-López-de-Haro}
-  covers: [./cover.jpg]
-  description: CNN trained to classify the type of imaged skin lesion.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
-  id: deepimagej/SkinLesionClassification
-  license: BSD2
-  links: [deepimagej/deepimagej]
-  name: Skin lesions classification
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/SkinLesionClassification/latest/rdf.yaml
-  tags: [deepimagej-beta, deepimagej, skin-lesions, melanoma, classification, pytorch]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez de Mariscal}
-  covers: [./combined.jpg]
-  description: Nucleus segmentation in digital pathology datasets (MoNuSeg 2018 Challenge)
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/894493/files/MoNu_HE_StarDist_9JUL.bioimage.io.model.zip
-  id: deepimagej/Stardist2DZeroCostDL4Mic
-  license: MIT
-  links: [deepimagej/deepimagej, zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ,
-    deepimagej/MoNuSeg_digital_pathology_miccai2018]
-  name: Multi-Organ Nucleus Segmentation Challenge
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Stardist2DZeroCostDL4Mic/latest/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, histopathology, stardist, digital-pathology,
-    nucleus-segmentation, trainable, 2d]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover_image.jpg']
-  description: DeepImageJ compatible U-Net trained to segment 2D phase contrast microscopy
-    images of glioblastoma-astrocytoma U373 cells on a polyacrylamide substrate.
-  download_count: 1
-  download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
-  id: deepimagej/UNet2DGlioblastomaSegmentation
-  license: BSD-2
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Glioblastoma Phase Contrast Cell Segmentation (U-Net)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
-  tags: [deepimagej, glioblastoma-cells, segmentation, phase-contrast]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/unet_hela_seg.jpg']
-  description: DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
-    contrast microscopy images
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
-  id: deepimagej/UNet2DHeLaSegmentation
-  license: BSD-2
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: HeLa DIC Cell Segmentation (U-Net)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
-  tags: [deepimagej, hela-cells, segmentation, phase-contrast]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: Ikerbasque - EHU/UPV, name: Ignacio Arganda-Carreras}
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: [./exampleImage.png, ./resultImage.png]
-  description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
-    images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 1
-  download_url: https://github.com/deepimagej/models/releases/download/0.3/PancreaticCellSegmentation.U-Net.bioimage.io.model.zip
-  id: deepimagej/UNet2DPancreaticSegmentation
-  license: BSD-2
-  links: [deepimagej/deepimagej, deepimagej/unet-pancreaticcellsegmentation, imjoy/BioImageIO-Packager]
-  name: Pancreatic Cell Segmentation (U-Net)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DPancreaticSegmentation/latest/rdf.yaml
-  tags: [deepimagej, pancreatic-stem-cells, segmentation, phase-contrast, unet, neubias,
-    cell-tracking-challenge]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'AGH University of Science and Technology, Poland', name: Joanna
-      Gajda}
-  - {affiliation: 'Quorumetrix Solutions, Canada', name: Tyler F.W. Sloan}
-  - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
-      Graduate University, Japan', name: Hsieh-Fu Tsai}
-  - {affiliation: 'ImagineA, The Netherlands', name: Andrei Rares}
-  - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
-      Graduate University, Japan', name: Amy Q. Shen}
-  covers: [./cover.jpg]
-  description: Trained model given in Usiigaci for instance segmentation of cells
-    in a 2D substrate and phase contrast microscopy images. The model is a Mask R-CNN
-    and the input is preprocessed to get an RGB image from the grayscale image.
-  download_count: 1
-  download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
-  id: deepimagej/Usiigaci
-  license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: NIH/3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Usiigaci/latest/rdf.yaml
-  tags: [deepimagej, usiigaci, phase-contrast, fibroblasts, maskrcnn, 2d, segmentation,
-    deepimagej-beta]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Hongda Wang}
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
-      Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
-  description: A trained GAN to transform diffraction-limited input images into super-resolved
-    ones.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip
-  id: deepimagej/WidefieldDapiSuperResolution
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Widefield Super-resolution (GAN - DAPI)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldDapiSuperResolution/latest/rdf.yaml
-  tags: [deepimagej, gan, fluorescence-microscopy, super-resolution]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Hongda Wang}
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
-      Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
-  description: A trained GAN to transform diffraction-limited input images into super-resolved
-    ones.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/914425/files/widefield_fitc_super-resolution.zip
-  id: deepimagej/WidefieldFitcSuperResolution
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Widefield Super-resolution (GAN - FITC)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldFitcSuperResolution/latest/rdf.yaml
-  tags: [deepimagej, gan, fluorescence-microscopy, super-resolution]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Hongda Wang}
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
-  - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
-      Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
-  description: A trained GAN to transform diffraction-limited input images into super-resolved
-    ones.
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
-  id: deepimagej/WidefieldTxredSuperResolution
-  license: CC BY 4.0
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: Widefield Super-resolution (GAN - TxRed)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
-  tags: [deepimagej, gan, fluorescence-microscopy, super-resolution]
-  type: model
   versions: [latest]
 - authors: []
   badges: []
@@ -884,74 +577,18 @@ collection:
   tags: [unet, segmentation, deepimagej, notebook, training, cell-segmentation]
   type: application
   versions: [latest]
-- authors: [Fiji community]
-  description: Fiji is an image processing package — a "batteries-included" distribution
-    of ImageJ, bundling many plugins which facilitate scientific image analysis.
-  download_count: 1
-  icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
-  id: fiji/Fiji
-  name: Fiji
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/Fiji/latest/rdf.yaml
-  source: https://fiji.sc/
-  tags: [fiji, software]
-  type: application
-  versions: [latest]
-- authors:
-  - {affiliation: MDC Berlin, name: Deborah Schmidt}
-  covers: ['https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png']
-  description: Demo model for denoising trained on a single SEM image with Noise2Void
-  download_count: 1
-  download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
-  id: fiji/N2VSEMDemo
-  license: BSD-3-Clause
-  links: [fiji/Fiji]
-  name: N2V SEM Demo
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/N2VSEMDemo/latest/rdf.yaml
-  tags: [denoising, unet2d, n2v]
-  type: model
-  versions: [latest]
 - badges: []
   covers: ['https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif']
-  description: ShuffleNetV2 for HPA.
+  description: Resources for BioImgage.IO curated by the the cellprofiling group at
+    HPA.
   download_count: 1
   icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
   id: hpa/HPA-Classification
-  name: HPA-Classification
+  name: HPA Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
-  tags: [bioengine]
+  tags: [hpa, bioimage.io]
   type: application
-  versions: [latest]
-- authors: [Shubin Dai]
-  badges:
-  - {ext: 1st, label: HPA Competition, url: 'https://www.kaggle.com/c/human-protein-atlas-image-classification/leaderboard'}
-  covers: ['https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/hpa_challenge_header.png',
-    'https://raw.githubusercontent.com/CellProfiling/HPA-competition-solutions/master/bestfitting/src/bestfitting-densenet-diagram.png']
-  description: A CNN model using focal loss and image augmentation, optimized with
-    Adam optimizer.
-  download_count: 1
-  id: hpa/HPA-bestfitting
-  license: MIT
-  name: HPA-bestfitting
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-bestfitting/latest/rdf.yaml
-  tags: [classification, densenet-121, inception-v3, resnet-34, resnet-50]
-  type: model
-  versions: [latest]
-- authors: [Moshe Livne, Wei OUYANG]
-  badges:
-  - {icon: 'https://imjoy.io/static/badge/powered-by-imjoy-badge.svg', label: Powered
-      by ImJoy, url: 'https://imjoy.io'}
-  covers: ['https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif']
-  description: A light-weight model for HPA image classification competition
-  download_count: 1
-  id: hpa/HPAShuffleNetV2
-  license: Apache 2.0
-  links: [hpa/HPA-Classification]
-  name: HPA ShuffleNetV2
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPAShuffleNetV2/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/oeway/Anet-Model-Zoo/master/4_hpa_shufflenet_v2/model.json
-  tags: [shufflenet, tensorflow.js, classification, imjoy]
-  type: model
   versions: [latest]
 - authors:
   - {name: Constantin Pape}
@@ -991,15 +628,14 @@ collection:
   - {name: ilastik Team}
   badges: []
   covers: []
-  description: Export BioImage.IO model packages for ilastik from a model description
-    file
+  description: the interactive learning and segmentation toolkit
   download_count: 1
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
   id: ilastik/ilastik
   name: ilastik
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/ilastik/latest/rdf.yaml
   source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
-  tags: [software, bioengine]
+  tags: [ilastik, bioimage.io]
   type: application
   versions: [latest]
 - authors:
@@ -1024,10 +660,10 @@ collection:
   download_count: 1
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
   id: ilastik/live-cell-boundary-model
-  name: live-cell-boundary-model
+  name: Live cell boundary model preview
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml
   source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
-  tags: [bioengine]
+  tags: [ilastik, bioimage.io]
   type: application
   versions: [latest]
 - authors:
@@ -1060,14 +696,14 @@ collection:
   - {name: Constantin Pape}
   badges: []
   covers: []
-  description: Run the mutex watershed for instance segmentation of affinity predictions
+  description: Segmentation plugin for models that predict pixel affinities
   download_count: 1
   icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png
   id: ilastik/mws-segmentation
-  name: mws-segmentation
+  name: Mutex Watershed Plugin
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml
   source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html
-  tags: [bioengine]
+  tags: [ilastik, bioimage.io]
   type: application
   versions: [latest]
 - authors:
@@ -1167,423 +803,64 @@ collection:
   versions: [latest]
 - badges: []
   covers: []
-  description: Exporting BioImage.IO model packages from the model description file
+  description: Resources for BioImgage.IO curated by the ImJoy Team.
   download_count: 1
   icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
   id: imjoy/BioImageIO-Packager
   name: BioImageIO-Packager
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
-  tags: [bioengine]
+  tags: [imjoy, bioimage.io]
   type: application
-  versions: [latest]
-- authors: []
-  badges: []
-  covers: []
-  description: Run the HPA single cell classification model via the the BioEngine
-  download_count: 1
-  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
-  id: imjoy/HPA-Single-Cell
-  name: HPA Single Cell
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/HPA-Single-Cell/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html
-  tags: [bioengine]
-  type: collection
   versions: [latest]
 - badges: []
   covers: []
-  description: 'ImJoy: Supercharging interactivity and scalability!'
+  description: Resources for BioImgage.IO curated by the ImJoy Team.
   download_count: 1
   icon: https://imjoy.io/static/img/imjoy-icon.png
   id: imjoy/ImJoy
   name: ImJoy
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
-  tags: [software, imjoy, bioengine]
+  tags: [imjoy, bioimage.io]
   type: application
   versions: [latest]
 - badges: []
   covers: []
-  description: ImageJ running in the browser
+  description: Resources for BioImgage.IO curated by the ImJoy Team.
   download_count: 1
   icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
   id: imjoy/ImageJ.JS
-  name: ImageJ.JS
+  name: ImJoy Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
-  tags: [software, bioengine]
+  tags: [imjoy, bioimage.io]
   type: application
-  versions: [latest]
-- authors:
-  - {name: Perkin Elmer}
-  covers: ['https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png']
-  description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
-  download_count: 1
-  download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
-  id: imjoy/LuCa-7color
-  license: CC-BY 4.0
-  links: [imjoy/vizarr]
-  name: LuCa-7color
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/LuCa-7color/latest/rdf.yaml
-  source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
-  tags: [OME-TIFF]
-  type: dataset
   versions: [latest]
 - badges: []
   covers: []
-  description: A minimal, purely client-side program for viewing Zarr-based images
-    with Viv & ImJoy
+  description: Resources for BioImgage.IO curated by the ImJoy Team.
   download_count: 1
   icon: https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png
   id: imjoy/vizarr
   name: vizarr
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html
-  tags: [bioengine]
+  tags: [imjoy, bioimage.io]
   type: application
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png']
-  description: Fluorescence microscopy (Lifeact-RFP)
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3713330
-  id: zero/Dataset_CARE_2D_ZeroCostDL4Mic
-  name: CARE (2D) example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CARE_2D_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  - {name: Mike Heilemann}
-  covers: ['https://zenodo.org/api/iiif/v2/0417c6d1-0fe3-4d48-bc5a-dfaee6398433:532d7c49-5961-4d61-8ba2-a040f2f19cfd:A_E.coli_H-NS_mScarlet_examples.png/full/750,/0/default.png']
-  description: Paired training and test images of H-NS-mScarlet-I expressing E. coli
-    cells for image denoising.
-  download_count: 1
-  download_url: https://zenodo.org/record/5551112
-  id: zero/Dataset_CARE_2D_coli_DeepBacs
-  name: Escherichia coli nucleoid denoising dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CARE_2D_coli_DeepBacs/latest/rdf.yaml
-  tags: [Noise2Void, CARE, denoising, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png']
-  description: Fluorescence microscopy (Lifeact-RFP)
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3713337
-  id: zero/Dataset_CARE_3D_ZeroCostDL4Mic
-  name: CARE (3D) example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CARE_3D_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png']
-  description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk
-    and SRRF reconstructed images)
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3941884
-  id: zero/Dataset_CycleGAN_ZeroCostDL4Mic
-  name: CycleGAN example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_CycleGAN_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [CycleGAN, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christophe Leterrier}
-  - {name: Romain F. Laine}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_dataset.png']
-  description: Time-series of simulated, randomly distributed single-molecule localization
-    (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition of
-    Glial cells stained with phalloidin for actin (Example dataset).
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3959089
-  id: zero/Dataset_Deep-STORM_ZeroCostDL4Mic
-  name: Deep-STORM training and example dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Deep-STORM_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [SMLM, Deep-STORM, ZeroCostDL4Mic, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Aki Stubb}
-  - {name: Guillaume Jacquemet}
-  - {name: Johanna Ivaska}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png']
-  description: Fluorescence microscopy (paxillin-GFP)
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3713315
-  id: zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic
-  name: Noise2Void (2D) example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noise2Void_2D_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [Noise2Void, denoising, ZeroCostDL4Mic, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Mia Conduit}
-  - {name: Séamus Holden}
-  covers: ['https://zenodo.org/api/iiif/v2/effa726a-dcdb-47a5-bd2e-63a4a6648ca7:aad7cd51-d389-4cf3-a84e-2d93d1891f20:B.subtilis_VerCINI_examples.png/full/750,/0/default.png']
-  description: Live-cell time series of vertically aligned B. subtilis cells expressing
-    FtsZ-GFP protein fusion.
-  download_count: 1
-  download_url: https://zenodo.org/record/5551135
-  id: zero/Dataset_Noise2Void_2D_subtilis_DeepBacs
-  name: Bacillus subtilis denoising dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noise2Void_2D_subtilis_DeepBacs/latest/rdf.yaml
-  tags: [Noise2Void, denoising, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_dataset.png']
-  description: Fluorescence microscopy (Lifeact-RFP)
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3713326
-  id: zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic
-  name: Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noise2Void_3D_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [Noise2Void, denoising, ZeroCostDL4Mic, 3D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png']
-  description: This dataset contains a denoising training and test dataset for deep
-    learning applications. The training dataset comprises 20 paired matching noisy
-    and high signal-to-noise images. The test dataset contains five paired matching
-    noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA)
-    images acquired using a spinning disk confocal microscope with a 20x 0.8 NA objective.
-  download_count: 1
-  download_url: https://zenodo.org/record/5750174
-  id: zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic
-  name: Noisy nuclei dataset.
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_Noisy_Nuclei_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  - {name: Mike Heilemann}
-  covers: ['https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png']
-  description: Training and test images of live E. coli cells imaged under bright
-    field for the task of segmentation.
-  download_count: 1
-  download_url: https://zenodo.org/record/5550935
-  id: zero/Dataset_SplineDist_2D_DeepBacs
-  name: Escherichia coli bright field segmentation dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_SplineDist_2D_DeepBacs/latest/rdf.yaml
-  tags: [StarDist, segmentation, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  - {name: Mike Heilemann}
-  - {name: Mia Conduit}
-  - {name: Séamus Holden}
-  - {name: Pedro Matos Pereira}
-  - {name: Mariana Pinho}
-  covers: ['https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png']
-  description: Mixed training and test images of S. aureus, E. coli and B. subtilis
-    for cell segmentation using StarDist.
-  download_count: 1
-  download_url: https://zenodo.org/record/5551009
-  id: zero/Dataset_StarDist_2D_DeepBacs
-  name: Mixed segmentation dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_2D_DeepBacs/latest/rdf.yaml
-  tags: [StarDist, segmentation, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Johanna Jukkala}
-  - {name: Guillaume Jacquemet}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png']
-  description: Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3715492
-  id: zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D
-  name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D/latest/rdf.yaml
-  tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png']
-  description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
-    manual segmentation
-  download_count: 1
-  download_url: https://zenodo.org/record/4034976
-  id: zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic
-  name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [StarDist, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Gautier Follain}
-  - {name: Guillaume Jacquemet}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png']
-  description: Paired brightfield images of cancer cells and corresponding masks
-  download_count: 1
-  download_url: https://zenodo.org/record/4034939
-  id: zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-  name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [StarDist, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Nathan H. Roy}
-  - {name: Guillaume Jacquemet}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png']
-  description: Paired brightfield images of migrating T cells and corresponding masks
-  download_count: 1
-  download_url: https://zenodo.org/record/4034929
-  id: zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic
-  name: Combining StarDist and TrackMate example 2 - T cell dataset
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [StarDist, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Hussein Al-Akhrass}
-  - {name: Johanna Ivaska}
-  - {name: Guillaume Jacquemet}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png']
-  description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
-    manual segmentation
-  download_count: 1
-  download_url: https://zenodo.org/record/4811213
-  id: zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic
-  name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [StarDist, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Spahn Christoph}
-  - {name: Heilemann Mike}
-  covers: ['https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png']
-  description: Paired bright field and segmented mask images of live E. coli cells
-    imaged under bright field.
-  download_count: 1
-  download_url: https://zenodo.org/record/5550935
-  id: zero/Dataset_U-Net_2D_DeepBacs
-  name: Escherichia coli bright field segmentation dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_U-Net_2D_DeepBacs/latest/rdf.yaml
-  tags: [U-Net, segmentation, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Mia Conduit}
-  - {name: Séamus Holden}
-  covers: ['https://zenodo.org/api/iiif/v2/8ba101cf-97ac-4e68-9fff-4cc130b5ea81:93b67447-8b0a-4053-a522-9c141623ca6f:A_Multilabel_U-Net_example_B.subtilis.png/full/750,/0/default.png']
-  description: Paired bright field images and segmented binary masks of live E. coli
-    cells.
-  download_count: 1
-  download_url: https://zenodo.org/record/5639253
-  id: zero/Dataset_U-Net_2D_multilabel_DeepBacs
-  name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
-  tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  - {name: Lucas von Chamier}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png']
-  description: 2D grayscale .png images with corresponding bounding box annotations
-    in .xml  PASCAL Voc format.
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3941908
-  id: zero/Dataset_YOLOv2_ZeroCostDL4Mic
-  name: YoloV2 example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [YOLOv2, ZeroCostDL4Mic]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  - {name: Mike Heilemann}
-  covers: ['https://zenodo.org/api/iiif/v2/5b4a4304-ea44-47ce-9c75-4a069bfc9536:e3c27642-4605-42c3-ad3c-1e120917b97e:Antibiotic_profiling_examples.png/full/750,/0/default.png']
-  description: Training and test images of E. coli cells treated with different antibiotics
-    for antibiotic phenotyping.
-  download_count: 1
-  download_url: https://zenodo.org/record/5551057
-  id: zero/Dataset_YOLOv2_antibiotic_DeepBacs
-  name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_YOLOv2_antibiotic_DeepBacs/latest/rdf.yaml
-  tags: [YOLOv2, object detection, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  - {name: Mike Heilemann}
-  covers: ['https://zenodo.org/api/iiif/v2/e30f5766-cc61-4a7c-9d36-30681f2dcbc2:677b2046-5d0b-49df-b231-b5470b6fcbc8:A_Object_detection_cell_cycle.png/full/750,/0/default.png']
-  description: Training and test images of E. coli cells for object detection and
-    classification.
-  download_count: 1
-  download_url: https://zenodo.org/record/5551016
-  id: zero/Dataset_YOLOv2_coli_DeepBacs
-  name: Escherichia coli growth stage object detection dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_YOLOv2_coli_DeepBacs/latest/rdf.yaml
-  tags: [YOLOv2, object detection, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Fnet_exemplary_data_mitochondria.png']
-  description: Confocal microscopy data (TOM20 labeled with Alexa Fluor 594)
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3748967
-  id: zero/Dataset_fnet_3D_ZeroCostDL4Mic
-  name: Label-free prediction (fnet) example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_3D_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Christoph Spahn}
-  - {name: Mike Heilemann}
-  covers: ['https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png']
-  description: Training and test images of E. coli cells for artificial labeling of
-    membranes in brightfield images using fnet or CARE, as well as trained models
-    for prediction of super-resolution membranes.
-  download_count: 1
-  download_url: https://zenodo.org/record/5551123
-  id: zero/Dataset_fnet_DeepBacs
-  name: Artificial labeling of E. coli membranes dataset - DeepBacs
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
-  tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Guillaume Jacquemet}
-  covers: ['https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/pix2pix_dataset.png']
-  description: Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA
-  download_count: 1
-  download_url: https://doi.org/10.5281/zenodo.3941889
-  id: zero/Dataset_pix2pix_ZeroCostDL4Mic
-  name: pix2pix example training and test dataset - ZeroCostDL4Mic
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_pix2pix_ZeroCostDL4Mic/latest/rdf.yaml
-  tags: [pix2pix, ZeroCostDL4Mic]
-  type: dataset
   versions: [latest]
 - authors: []
   badges: []
   covers: []
-  description: Previewing Jupyter notebook without a Jupyter server
+  description: Resources for BioImgage.IO curated by the ZeroCost4Mic team.
   download_count: 1
   icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
   id: zero/Notebook Preview
-  name: Notebook Preview
+  name: ZeroCost4Mic Collection
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook
     Preview/latest/rdf.yaml
   source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
-  tags: [imjoy, notebook, jupyter, bioengine]
+  tags: [zero, bioimage.io]
   type: application
   versions: [latest]
 - authors:
@@ -2320,8 +1597,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 96, collection: 2, dataset: 72, model: 100, notebook: 4}
-  n_resources: {application: 48, collection: 1, dataset: 36, model: 46, notebook: 2}
+  n_resource_versions: {application: 94, dataset: 22, model: 60, notebook: 4}
+  n_resources: {application: 47, dataset: 11, model: 26, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
