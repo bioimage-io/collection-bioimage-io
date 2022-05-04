@@ -162,23 +162,26 @@ def convert_config_to_rdf(plugin_config, plugin_id, source_url=None):
     elif not isinstance(rdf["badges"], list):
         rdf["badges"] = [rdf["badges"]]
 
-    rdf["authors"] = plugin_config.get("author")
-    if not rdf["authors"]:
-        rdf["authors"] = []
-    elif not isinstance(rdf["authors"], list):
-        rdf["authors"] = [rdf["authors"]]
+    authors = plugin_config.get("author")
+    if authors:
+        if isinstance(authors, str):
+            authors = {"name": authors}
+        if not isinstance(authors, list):
+            authors = [ authors ]
+        rdf["authors"] = authors
 
-    rdf["attachments"] = {}
+    # rdf["attachments"] = {}
     return rdf
 
 
 def get_plugin_as_rdf(resource_id, source_url):
     """Get imjoy plugin config in RDF format."""
+    assert "/" in resource_id
     req = requests.get(source_url)
     source = req.text
     plugin_config = parse_imjoy_plugin(source)
     rdf = convert_config_to_rdf(plugin_config, resource_id, source_url)
-    assert resource_id == plugin_config["name"], (
+    assert resource_id.split("/")[1] == plugin_config["name"], (
         "Please use the app name (" + plugin_config["name"] + ") as its application id."
     )
     return rdf
