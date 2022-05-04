@@ -213,18 +213,13 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
                 enriched_version_info = dict(
                     get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]["source"])
                 )
-            else:
-                enriched_version_info = {}
-
-            enriched_version_info.update(version_info)
-            version_info = enriched_version_info
+                version_info.update(enriched_version_info)
 
             # Inherit the info from the collection
             rdf = version_info["rdf_source"].copy()
         elif version_info["rdf_source"].split("?")[0].endswith(".imjoy.html"):
             enriched_version_info = dict(get_plugin_as_rdf(resource["id"].split("/")[1], version_info["rdf_source"]))
-            enriched_version_info.update(version_info)
-            version_info = enriched_version_info
+            version_info.update(enriched_version_info)
             rdf = {}
         else:
             try:

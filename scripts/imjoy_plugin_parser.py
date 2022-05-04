@@ -162,13 +162,15 @@ def convert_config_to_rdf(plugin_config, plugin_id, source_url=None):
     elif not isinstance(rdf["badges"], list):
         rdf["badges"] = [rdf["badges"]]
 
-    rdf["authors"] = plugin_config.get("author")
-    if not rdf["authors"]:
-        rdf["authors"] = []
-    elif not isinstance(rdf["authors"], list):
-        rdf["authors"] = [rdf["authors"]]
+    authors = plugin_config.get("author")
+    if authors:
+        if isinstance(authors, str):
+            authors = {"name": authors}
+        if not isinstance(authors, list):
+            authors = [ authors ]
+        rdf["authors"] = authors
 
-    rdf["attachments"] = {}
+    # rdf["attachments"] = {}
     return rdf
 
 
