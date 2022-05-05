@@ -1322,6 +1322,58 @@
       ]
     },
     {
+      "authors": [
+        {
+          "name": "Fiji community"
+        }
+      ],
+      "description": "Fiji is an image processing package \u2014 a \"batteries-included\" distribution of ImageJ, bundling many plugins which facilitate scientific image analysis.",
+      "download_count": 1,
+      "icon": "https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png",
+      "id": "fiji/Fiji",
+      "name": "Fiji",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/Fiji/latest/rdf.yaml",
+      "source": "https://fiji.sc/",
+      "tags": [
+        "fiji",
+        "software"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "MDC Berlin",
+          "name": "Deborah Schmidt"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png"
+      ],
+      "description": "Demo model for denoising trained on a single SEM image with Noise2Void",
+      "download_count": 1,
+      "download_url": "https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip",
+      "id": "fiji/N2VSEMDemo",
+      "license": "BSD-3-Clause",
+      "links": [
+        "fiji/Fiji"
+      ],
+      "name": "N2V SEM Demo",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/N2VSEMDemo/latest/rdf.yaml",
+      "tags": [
+        "denoising",
+        "unet2d",
+        "n2v"
+      ],
+      "type": "model",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
       "badges": [],
       "covers": [
         "https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif"
@@ -2912,14 +2964,14 @@
     {
       "authors": [
         {
-          "name": "Estibaliz G\u00f3mez de Mariscal and the ZeroCostDL4Mic teams"
+          "name": "Estibaliz G\u00f3mez de Mariscal and the ZeroCostDL4Mic team"
         }
       ],
       "badges": [
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb"
         }
       ],
       "covers": [
@@ -2928,7 +2980,7 @@
       ],
       "description": "2D semantic segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_count": 1,
-      "download_url": "https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb",
       "id": "zero/Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -3192,15 +3244,15 @@
     "default_type": "model",
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
-      "application": 94,
+      "application": 96,
       "dataset": 22,
-      "model": 62,
+      "model": 64,
       "notebook": 4
     },
     "n_resources": {
-      "application": 47,
+      "application": 48,
       "dataset": 11,
-      "model": 26,
+      "model": 27,
       "notebook": 2
     },
     "partners": [
