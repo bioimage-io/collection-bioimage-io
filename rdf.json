@@ -1109,6 +1109,52 @@
     {
       "authors": [
         {
+          "name": "V. Bondarenko"
+        },
+        {
+          "name": "A. Wolny"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png",
+        "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png",
+        "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
+      ],
+      "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
+      "download_count": 244,
+      "id": "10.5281/zenodo.6383429",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Mouse Embryo Fixed",
+      "nickname": "loyal-squid",
+      "nickname_icon": "\ud83e\udd91",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "mouse-embryo",
+        "nuclei",
+        "animal",
+        "tissue",
+        "confocal-microscopy",
+        "pytorch",
+        "fixed"
+      ],
+      "type": "model",
+      "versions": [
+        "6383430"
+      ]
+    },
+    {
+      "authors": [
+        {
           "affiliation": "Universidad Carlos III de Madrid",
           "name": "Estibaliz G\u00f3mez-de-Mariscal"
         },
@@ -1865,6 +1911,34 @@
         "bioimage.io"
       ],
       "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Perkin Elmer"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png"
+      ],
+      "description": "Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)",
+      "download_count": 1,
+      "download_url": "https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff",
+      "id": "imjoy/LuCa-7color",
+      "license": "CC-BY 4.0",
+      "links": [
+        "imjoy/vizarr"
+      ],
+      "name": "LuCa-7color",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/LuCa-7color/latest/rdf.yaml",
+      "source": "https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0",
+      "tags": [
+        "OME-TIFF"
+      ],
+      "type": "dataset",
       "versions": [
         "latest"
       ]
@@ -3245,14 +3319,14 @@
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
       "application": 96,
-      "dataset": 22,
-      "model": 64,
+      "dataset": 24,
+      "model": 66,
       "notebook": 4
     },
     "n_resources": {
       "application": 48,
-      "dataset": 11,
-      "model": 27,
+      "dataset": 12,
+      "model": 28,
       "notebook": 2
     },
     "partners": [
