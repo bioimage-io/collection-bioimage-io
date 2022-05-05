@@ -6,6 +6,8 @@ owners:
 - 147356
 status: accepted
 type: model
+maintainers: 
+- github_user: iarganda
 versions:
 - created: '2022-05-03 14:50:12.368648'
   doi: 10.5281/zenodo.6514622
