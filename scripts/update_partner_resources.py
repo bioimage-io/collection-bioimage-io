@@ -4,6 +4,7 @@ from pathlib import Path
 
 import typer
 
+from bioimageio.spec import __version__ as bioimageio_spec_version
 from utils import enforce_block_style_resource, resolve_partners, write_rdfs_for_resource, yaml
 
 
@@ -18,6 +19,9 @@ def main(
 
     partner_hashes_path = gh_pages / "partner_collection_hashes.json"
     partner_hashes = json.loads(partner_hashes_path.read_text(encoding="utf-8")) if partner_hashes_path.exists() else {}
+    # reset partner hashes if bioimageio.spec version has changed
+    if partner_hashes.get("bioimageio_spec_version") != bioimageio_spec_version:
+        partner_hashes = {"bioimageio_spec_version": bioimageio_spec_version}
 
     partners, updated_partner_resources, new_partner_hashes, ignored_partners = resolve_partners(
         rdf, current_format=current_collection_format, previous_partner_hashes=partner_hashes
