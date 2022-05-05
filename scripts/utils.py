@@ -13,9 +13,14 @@ from marshmallow import missing
 from ruamel.yaml import YAML, comments
 
 from bare_utils import DEPLOYED_BASE_URL
-from bioimageio.spec import load_raw_resource_description, serialize_raw_resource_description_to_dict
+from bioimageio.spec import (
+    load_raw_resource_description,
+    serialize_raw_resource_description_to_dict,
+)
+from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 from bioimageio.spec.io_ import serialize_raw_resource_description
-from bioimageio.spec.shared import BIOIMAGEIO_COLLECTION, resolve_rdf_source, resolve_source
+from bioimageio.spec.partner.imjoy_plugin_parser import get_plugin_as_rdf
+from bioimageio.spec.shared import resolve_rdf_source
 
 
 # todo: use MyYAML from bioimageio.spec. see comment below
@@ -106,7 +111,6 @@ def resolve_partners(
 ) -> Tuple[List[dict], List[dict], Dict[str, str], set]:
     from bioimageio.spec import load_raw_resource_description
     from bioimageio.spec.collection.v0_2.raw_nodes import Collection
-    from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 
     partners = []
     updated_partner_resources = []
@@ -150,7 +154,11 @@ def resolve_partners(
             partners[idx]["id"] = partner_id
 
             for entry_idx, (entry_rdf, entry_error) in enumerate(
-                resolve_collection_entries(partner_collection, collection_id=partner_id)
+                resolve_collection_entries(
+                    partner_collection,
+                    collection_id=partner_id,
+                    enrich_partial_rdf=enrich_partial_rdf_with_imjoy_plugin,
+                )
             ):
                 if entry_error:
                     warnings.warn(f"{partner_id}[{entry_idx}]: {entry_error}")
@@ -186,6 +194,36 @@ def rec_sort(obj):
         return obj
 
 
+def enrich_partial_rdf_with_imjoy_plugin(partial_rdf: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    a (partial) rdf may have 'rdf_resource' or 'source' which resolve to rdf data that may be overwritten.
+    Due to resolving imjoy plugins this is not done in bioimageio.spec.collection atm
+    """
+    enriched_rdf = {}
+    if "rdf_source" in partial_rdf:
+        rdf_source = partial_rdf["rdf_source"]
+        if isinstance(rdf_source, str) and rdf_source.split("?")[0].endswith(".imjoy.html"):
+            # rdf_source is an imjoy plugin
+            rdf_source = dict(get_plugin_as_rdf(rdf_source))
+
+        else:
+            # rdf_source is an actual rdf
+            if not isinstance(rdf_source, dict):
+                rdf_source, rdf_source_name, rdf_source_root = resolve_rdf_source(rdf_source)
+                rdf_source["root_path"] = rdf_source_root  # enables remote source content to be resolved
+
+        assert isinstance(rdf_source, dict)
+        enriched_rdf.update(rdf_source)
+
+    if "source" in partial_rdf:
+        if partial_rdf["source"].split("?")[0].endswith(".imjoy.html"):
+            rdf_from_source = get_plugin_as_rdf(partial_rdf["source"])
+            enriched_rdf.update(rdf_from_source)
+
+    enriched_rdf.update(partial_rdf)  # initial partial rdf overwrites fields from rdf_source or source
+    return enriched_rdf
+
+
 def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Optional[str] = None) -> List[str]:
     """write updated version rdfs for the given resource to dist
 
@@ -197,37 +235,25 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
     Returns: list of updated version_ids
 
     """
-    from imjoy_plugin_parser import get_plugin_as_rdf
-
     resource_id = resource["id"]
     updated_versions = []
-    for resource_version in resource["versions"]:
-        rdf = {k: v for k, v in resource.items() if k not in ("versions", "status")}  # rdf is based on resource info
-        rdf.update(resource_version)  # version specific info overwrites resource info
-        version_id = rdf["version_id"]
-        if rdf["status"] == "blocked" or only_for_version_id is not None and only_for_version_id != version_id:
+    resource_info = enrich_partial_rdf_with_imjoy_plugin(resource)
+    for version_info in resource["versions"]:
+        version_id = version_info["version_id"]
+        if (
+            resource["status"] == "blocked"
+            or version_info["status"] == "blocked"
+            or only_for_version_id is not None
+            and only_for_version_id != version_id
+        ):
             continue
 
-        rdf_source = rdf["rdf_source"]  # missing fields may be filled in based on rdf_source
-        if isinstance(rdf_source, str) and rdf_source.split("?")[0].endswith(".imjoy.html"):
-            rdf_source = dict(get_plugin_as_rdf(resource["id"], rdf["rdf_source"]))
-        else:
-            if not isinstance(rdf_source, dict):
-                rdf_source, rdf_source_name, rdf_source_root = resolve_rdf_source(rdf_source)
-                assert "root_path" not in rdf
-                rdf_source["root_path"] = rdf_source_root  # enables remote source content to be resolved
+        version_info = enrich_partial_rdf_with_imjoy_plugin(version_info)
 
-            assert isinstance(rdf_source, dict)
-            # rdf_source maybe filled by rdf["rdf_source"]["source"]
-            if rdf_source.get("source", "").split("?")[0].endswith(".imjoy.html"):
-                for k, v in dict(get_plugin_as_rdf(resource["id"], rdf["rdf_source"]["source"])).items():
-                    if k not in rdf_source:
-                        rdf_source[k] = v
+        rdf = dict(resource_info)  # rdf is based on resource info
+        rdf.update(version_info)  # version specific info overwrites resource info
 
-        # enrich rdf by rdf_source
-        for k, v in rdf_source.items():
-            if k not in rdf:
-                rdf[k] = v
+        rdf.pop("versions")
 
         # ensure config:bioimageio exists
         if "config" not in rdf:
@@ -240,7 +266,8 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
             if k in rdf:
                 rdf["config"]["bioimageio"][k] = rdf.pop(k)
 
-        rdf.pop("rdf_source", None)  # remove rdf source
+        # remove rdf source as it has been processed and might block loading if it is invalid on its own
+        rdf.pop("rdf_source", None)
 
         try:
             # resolve relative paths of remote rdf_source
@@ -264,6 +291,9 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
 
         rdf.pop("root_path", None)
         assert missing not in rdf.values(), rdf
+
+        if rdf["type"] == "application" and rdf["name"] != rdf["id"].split("/")[1]:
+            warnings.warn(f"BioEngine name '{rdf['name']}' not second part in id '{rdf['id']}'")
 
         # sort rdf to avoid random diffs
         rdf = rec_sort(rdf)
