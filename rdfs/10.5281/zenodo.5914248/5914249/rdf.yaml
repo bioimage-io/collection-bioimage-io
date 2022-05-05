@@ -92,10 +92,7 @@ license: BSD-2-Clause
 links:
 - imjoy/BioImageIO-Packager
 maintainers:
-- github_user: esgomezm
-  name: Estibaliz Gomez de Mariscal
-- github_user: crtorreg
-  name: Cristina de la Torre
+- github_user: iarganda
 name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
 outputs:
 - axes: byxc

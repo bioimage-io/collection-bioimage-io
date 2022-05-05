@@ -1,0 +1,27 @@
+bioimageio_core_version: 0.5.3.post2
+bioimageio_spec_version: 0.4.5.post13
+rdf_sha256: ff6118efe6d67bf264ed5e63715bd345cb57f8e804dee9de4e3c370761195326
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post13
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
+        Free/libre.}
+  - bioimageio_spec_version: 0.4.5post13
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.5
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
+        Free/libre.}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post13, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  deepimagej: []
+  ilastik: []
