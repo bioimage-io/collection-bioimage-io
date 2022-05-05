@@ -1,0 +1,107 @@
+authors:
+- name: V. Bondarenko
+- name: A. Wolny
+cite:
+- text: V. Bondarenko et al. Ex vivo Engineering Uterine Environment for Peri-implantation
+    Mouse Development
+  url: https://github.com/kreshuklab/mouse-embryo-seg
+config:
+  bioimageio:
+    created: '2022-03-25 01:46:26.819763'
+    doi: 10.5281/zenodo.6383430
+    nickname: loyal-squid
+    nickname_icon: 🦑
+    owners:
+    - 66700
+    status: accepted
+    version_id: '6383430'
+    version_name: version 1
+covers:
+- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png
+- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png
+- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png
+description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
+  confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
+documentation: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/unet3d.md
+format_version: 0.4.5
+id: 10.5281/zenodo.6383429/6383430
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: raw
+  shape:
+  - 1
+  - 1
+  - 32
+  - 128
+  - 128
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+name: 3D UNet Mouse Embryo Fixed
+outputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: raw
+    scale:
+    - 1.0
+    - 2.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/rdf.yaml
+tags:
+- plantseg
+- unet
+- 3d
+- semantic-segmentation
+- mouse-embryo
+- nuclei
+- animal
+- tissue
+- confocal-microscopy
+- pytorch
+- fixed
+test_inputs:
+- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/test_output.npy
+timestamp: '2022-03-25T02:38:38.013210'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/unet.py:UNet3D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    dependencies: conda:https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/environment.yaml
+    kwargs:
+      f_maps: 16
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 2
+      testing: true
+    sha256: c7c73485fd17273f8018e7e8ba76c030d7b0c8553a242ac1303b23904f6303ef
+    source: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/unet-bce-dice-ab-nuclei-boundary-090121.pytorch

@@ -1,0 +1,28 @@
+bioimageio_spec_version: 0.4.5.post13
+rdf_sha256: b4c6882eccd56df600ccf8251120064bbeaad376a369dc3153603b3a35a840a4
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.5post13
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.2 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {license: 'CC-BY 4.0 is not a recognized SPDX license identifier. See
+        https://spdx.org/licenses/'}
+  - bioimageio_spec_version: 0.4.5post13
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.2
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {license: 'CC-BY 4.0 is not a recognized SPDX license identifier. See
+        https://spdx.org/licenses/'}
+  deepimagej:
+  - {error: Missing/invalid weight formats for imjoy/LuCa-7color/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
+  - {error: Missing/invalid weight formats for imjoy/LuCa-7color/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}
