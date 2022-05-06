@@ -1,3 +1,4 @@
 bioimageio.spec
 lxml
 typer
+boltons
