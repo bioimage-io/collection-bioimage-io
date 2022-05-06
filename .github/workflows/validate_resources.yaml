@@ -127,7 +127,7 @@ jobs:
       with:
         path: artifacts
     - name: install script deps
-      run: pip install typer packaging numpy bioimageio.spec
+      run: pip install typer packaging numpy bioimageio.spec lxml
     - name: download partner test summaries
       run: python scripts/download_partner_test_summaries.py
     - name: prepare to deploy
