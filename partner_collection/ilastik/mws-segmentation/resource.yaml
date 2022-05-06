@@ -9,6 +9,7 @@ versions:
   rdf_source:
     authors:
     - name: Constantin Pape
+    badges: []
     cite:
     - doi: 10.1007/978-3-030-01225-0_34
       text: 'Wolf, Pape et al. The Mutex Watershed: Efficient, Parameter-Free Image
@@ -29,9 +30,11 @@ versions:
       tags:
       - ilastik
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    covers: []
     description: Segmentation plugin for models that predict pixel affinities
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.md
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png
     id: ilastik/mws-segmentation
     maintainers:
     - github_user: constantinpape
@@ -39,6 +42,6 @@ versions:
     name: Mutex Watershed Plugin
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html
     tags:
-    - ilastik
-    - bioimage.io
+    - bioengine
     type: application
+    version: 0.1.2

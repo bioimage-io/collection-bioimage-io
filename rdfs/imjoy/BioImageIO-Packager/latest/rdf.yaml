@@ -1,4 +1,3 @@
-api_version: 0.1.7
 badges: []
 config:
   background_image: static/img/zoo-background.svg
@@ -25,26 +24,15 @@ config:
   - imjoy
   url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
 covers: []
-dependencies: []
-description: Resources for BioImgage.IO curated by the ImJoy Team.
+description: Exporting BioImage.IO model packages from the model description file
 documentation: https://imjoy.io/docs
-env: ''
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
 id: imjoy/BioImageIO-Packager/latest
 name: BioImageIO-Packager
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml
-requirements:
-- https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js
-- https://static.imjoy.io/spectre.css/spectre.min.css
-- https://static.imjoy.io/spectre.css/spectre-exp.min.css
-- https://static.imjoy.io/spectre.css/spectre-icons.min.css
-- https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js
-- https://static.imjoy.io/js/UZIP.js
 source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
 tags:
-- imjoy
-- bioimage.io
+- bioengine
 type: application
 version: 0.3.2

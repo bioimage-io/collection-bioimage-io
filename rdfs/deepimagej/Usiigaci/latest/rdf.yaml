@@ -1,12 +1,12 @@
 attachments:
   files:
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/preprocessing.ijm
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/postprocessing.ijm
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/General.jar
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/config.ijm
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/exampleImage.tif
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/MAX_finalMask.tif
-  - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/fibroblasts_detection.csv
+  - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/General.jar
+  - https://raw.githubusercontent.com/deepimagej/models/master/config.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tif
+  - https://raw.githubusercontent.com/deepimagej/models/master/MAX_finalMask.tif
+  - https://raw.githubusercontent.com/deepimagej/models/master/fibroblasts_detection.csv
 authors:
 - affiliation: AGH University of Science and Technology, Poland
   name: Joanna Gajda
@@ -61,11 +61,11 @@ config:
         type: ResultsTable
       runtime: 57.6
 covers:
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/cover.jpg
+- https://raw.githubusercontent.com/deepimagej/models/master/cover.jpg
 description: Trained model given in Usiigaci for instance segmentation of cells in
   a 2D substrate and phase contrast microscopy images. The model is a Mask R-CNN and
   the input is preprocessed to get an RGB image from the grayscale image.
-documentation: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/README.md
+documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
 download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
 format_version: 0.3.6
 framework: tensorflow
@@ -121,10 +121,10 @@ outputs:
   - 2
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Usiigaci/latest/rdf.yaml
 sample_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/Composite.tif
+- https://raw.githubusercontent.com/deepimagej/models/master/Composite.tif
 sample_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/MAX_finalMask.tif
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/fibroblasts_detection.csv
+- https://raw.githubusercontent.com/deepimagej/models/master/MAX_finalMask.tif
+- https://raw.githubusercontent.com/deepimagej/models/master/fibroblasts_detection.csv
 tags:
 - deepimagej
 - usiigaci
@@ -135,10 +135,10 @@ tags:
 - segmentation
 - deepimagej-beta
 test_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/Composite.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/Composite.npy
 test_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/MAX_finalMask.npy
-- https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/fibroblasts_detection.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/MAX_finalMask.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/fibroblasts_detection.npy
 timestamp: '2021-08-26T20:19:15.000544'
 type: model
 weights:
@@ -149,4 +149,4 @@ weights:
     authors:
     - name: Carlos García López-de-Haro
     sha256: a5e697209327296076df4a414d9bf1ccf15ed4d4ab46f352a90398fd68f1a355
-    source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/tensorflow_saved_model_bundle.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/tensorflow_saved_model_bundle.zip

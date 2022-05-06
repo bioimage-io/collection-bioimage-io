@@ -1,9 +1,9 @@
 attachments:
   files:
-  - https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/preprocessing.txt
-  - https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/postprocessing.txt
-  - https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/exampleImage.tiff
-  - https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/resultImage.tiff
+  - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
+  - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
 authors:
 - affiliation: University of California, Los Angeles, CA, USA
   name: Hongda Wang
@@ -47,11 +47,11 @@ config:
         type: image
       runtime: 90.0 s
 covers:
-- https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/exampleImage.png
-- https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/resultImage.png
+- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png
+- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png
 description: A trained GAN to transform diffraction-limited input images into super-resolved
   ones.
-documentation: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/README.md
+documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
 download_url: https://sandbox.zenodo.org/record/913992/files/widefield_txred_super-resolution.zip
 format_version: 0.3.6
 framework: tensorflow
@@ -100,18 +100,18 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/WidefieldTxredSuperResolution/latest/rdf.yaml
 sample_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/exampleImage.tiff
+- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
 sample_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/resultImage.tiff
+- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
 tags:
 - deepimagej
 - gan
 - fluorescence-microscopy
 - super-resolution
 test_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/exampleImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
 test_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/resultImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
 timestamp: '2021-09-09T17:40:54.000799'
 type: model
 weights:
@@ -120,5 +120,5 @@ weights:
       files:
       - ./config.xml
     sha256: f8873ff5c48c4cb9c305851b938ec6d31719d86d2ee570f5f576725a8c35486c
-    source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/tensorflow_saved_model_bundle.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/tensorflow_saved_model_bundle.zip
     tensorflow_version: '1.15'

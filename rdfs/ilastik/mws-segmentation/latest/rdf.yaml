@@ -1,4 +1,3 @@
-api_version: 0.1.8
 authors:
 - name: Constantin Pape
 badges: []
@@ -26,10 +25,8 @@ config:
   - ilastik
   url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
 covers: []
-dependencies: []
 description: Segmentation plugin for models that predict pixel affinities
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.md
-env: ''
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png
 id: ilastik/mws-segmentation/latest
@@ -38,11 +35,8 @@ maintainers:
   name: Constantin Pape
 name: Mutex Watershed Plugin
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml
-requirements:
-- https://steffenwolf.science/webmutex/mws.js
 source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html
 tags:
-- ilastik
-- bioimage.io
+- bioengine
 type: application
 version: 0.1.2

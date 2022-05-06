@@ -2,11 +2,12 @@ id: imjoy/ImageJ.JS
 status: accepted
 type: application
 versions:
-- name: ImJoy Collection
+- name: ImageJ.JS
   status: accepted
   version_id: latest
   version_name: latest
   rdf_source:
+    badges: []
     config:
       background_image: static/img/zoo-background.svg
       default_type: application
@@ -27,13 +28,16 @@ versions:
       tags:
       - imjoy
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
-    description: Resources for BioImgage.IO curated by the ImJoy Team.
-    documentation: https://imjoy.io/docs
+    covers: []
+    description: ImageJ running in the browser
+    documentation: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/README.md
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
     id: imjoy/ImageJ.JS
-    name: ImJoy Collection
+    name: ImageJ.JS
     source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
     tags:
-    - imjoy
-    - bioimage.io
+    - software
+    - bioengine
     type: application
+    version: 0.1.6

@@ -7,6 +7,7 @@ versions:
   version_id: latest
   version_name: latest
   rdf_source:
+    badges: []
     config:
       background_image: static/img/zoo-background.svg
       default_type: application
@@ -27,13 +28,15 @@ versions:
       tags:
       - imjoy
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
-    description: Resources for BioImgage.IO curated by the ImJoy Team.
+    covers: []
+    description: Exporting BioImage.IO model packages from the model description file
     documentation: https://imjoy.io/docs
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
     id: imjoy/BioImageIO-Packager
     name: BioImageIO-Packager
     source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
     tags:
-    - imjoy
-    - bioimage.io
+    - bioengine
     type: application
+    version: 0.3.2

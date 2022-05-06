@@ -9,12 +9,12 @@ versions:
   rdf_source:
     attachments:
       files:
-      - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/exampleImage.tiff
-      - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/resultImage.tiff
-      - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/resultImage_labels.tiff
-      - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/preprocessing.txt
-      - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/postprocessing.txt
-      - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/postprocessingWatershed.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/resultImage_labels.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/postprocessingWatershed.txt
     authors:
     - affiliation: Universidad Carlos III de Madrid
       name: Estibaliz Gómez-de-Mariscal
@@ -61,10 +61,10 @@ versions:
             type: image
           runtime: 78.8 s
     covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg
+    - https://raw.githubusercontent.com/deepimagej/models/master/frunet_sev.jpg
     description: DeepImageJ compatible fully residual U-Net trained to segment small
       extracellular vesicles in 2D TEM images
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
     download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
     format_version: 0.3.6
     framework: tensorflow
@@ -125,9 +125,9 @@ versions:
         - 1.0
         - 1.0
     sample_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/exampleImage.tiff
+    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
     sample_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/resultImage.tiff
+    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
     tags:
     - deepimagej
     - extracellular-vesicles
@@ -138,9 +138,9 @@ versions:
     - electron-microscopy
     - 2d-segmentation
     test_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/exampleImage.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
     test_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/resultImage.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
     timestamp: '2021-02-17T10:13:32.618903'
     type: model
     weights:

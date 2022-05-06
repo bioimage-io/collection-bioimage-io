@@ -1,4 +1,3 @@
-api_version: 0.2.3
 authors: []
 badges: []
 cite:
@@ -30,19 +29,20 @@ config:
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
   version: 1.7.1
 covers: []
-description: Resources for BioImgage.IO curated by the ZeroCost4Mic team.
+description: Previewing Jupyter notebook without a Jupyter server
 documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
 id: zero/Notebook Preview/latest
 maintainers: []
-name: ZeroCost4Mic Collection
+name: Notebook Preview
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook
   Preview/latest/rdf.yaml
-requirements: []
 source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 tags:
-- zero
-- bioimage.io
+- imjoy
+- notebook
+- jupyter
+- bioengine
 type: application
 version: 0.1.0

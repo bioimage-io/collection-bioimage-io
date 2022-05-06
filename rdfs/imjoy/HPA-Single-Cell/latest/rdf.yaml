@@ -24,17 +24,15 @@ config:
   - imjoy
   url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
 covers: []
-description: 'ImJoy: Supercharging interactivity and scalability!'
-documentation: https://raw.githubusercontent.com/imjoy-team/ImJoy/master/README.md
+description: Run the HPA single cell classification model via the the BioEngine
+documentation: https://imjoy.io/docs
 format_version: 0.2.2
-icon: https://imjoy.io/static/img/imjoy-icon.png
-id: imjoy/ImJoy/latest
-name: ImJoy
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml
-source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
+icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
+id: imjoy/HPA-Single-Cell/latest
+name: HPA Single Cell
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/HPA-Single-Cell/latest/rdf.yaml
+source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html
 tags:
-- software
-- imjoy
 - bioengine
 type: application
-version: 0.1.6
+version: 0.1.3

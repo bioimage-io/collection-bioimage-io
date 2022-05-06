@@ -9,6 +9,7 @@ versions:
   rdf_source:
     authors:
     - name: ilastik Team
+    badges: []
     cite:
     - doi: 10.1038/s41592-019-0582-9
       text: 'Berg, S., Kutra, D., Kroeger, T. et al. ilastik: interactive machine
@@ -29,9 +30,11 @@ versions:
       tags:
       - ilastik
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    covers: []
     description: the interactive learning and segmentation toolkit
     documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
     id: ilastik/ilastik
     maintainers:
     - github_user: ilastik
@@ -39,6 +42,7 @@ versions:
     name: ilastik
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
     tags:
-    - ilastik
-    - bioimage.io
+    - software
+    - bioengine
     type: application
+    version: 0.2.2

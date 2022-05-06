@@ -10,6 +10,7 @@ versions:
     authors:
     - name: ImJoy Team
     - name: ilastik Team
+    badges: []
     config:
       background_image: static/img/zoo-background.svg
       default_type: model
@@ -26,8 +27,10 @@ versions:
       tags:
       - ilastik
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    covers: []
     description: Run the live cell boundary model via the BioEngine
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
     id: ilastik/live-cell-boundary-model
     maintainers:
     - github_user: ilastik
@@ -35,6 +38,6 @@ versions:
     name: Live cell boundary model preview
     source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
     tags:
-    - ilastik
-    - bioimage.io
+    - bioengine
     type: application
+    version: 0.1.1

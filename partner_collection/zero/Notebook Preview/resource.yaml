@@ -2,12 +2,13 @@ id: zero/Notebook Preview
 status: accepted
 type: application
 versions:
-- name: ZeroCost4Mic Collection
+- name: Notebook Preview
   status: accepted
   version_id: latest
   version_name: latest
   rdf_source:
     authors: []
+    badges: []
     cite:
     - doi: 10.1038/s41467-021-22518-0
       text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -32,14 +33,19 @@ versions:
       - ZeroCostDL4Mic
       url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
       version: 1.7.1
-    description: Resources for BioImgage.IO curated by the ZeroCost4Mic team.
+    covers: []
+    description: Previewing Jupyter notebook without a Jupyter server
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
     id: zero/Notebook Preview
     maintainers: []
-    name: ZeroCost4Mic Collection
+    name: Notebook Preview
     source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
     tags:
-    - zero
-    - bioimage.io
+    - imjoy
+    - notebook
+    - jupyter
+    - bioengine
     type: application
+    version: 0.1.0

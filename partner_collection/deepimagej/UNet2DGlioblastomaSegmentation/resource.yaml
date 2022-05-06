@@ -9,11 +9,11 @@ versions:
   rdf_source:
     attachments:
       files:
-      - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/preprocessing.txt
-      - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/postprocessing.txt
-      - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/exampleImage.tiff
-      - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/Results.csv
-      - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/resultImage.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/Results.csv
+      - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
     authors:
     - affiliation: EPFL, UC3M
       name: DeepImageJ
@@ -51,11 +51,11 @@ versions:
             type: image
           runtime: 11.5 s s
     covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/cover_image.jpg
+    - https://raw.githubusercontent.com/deepimagej/models/master/cover_image.jpg
     description: DeepImageJ compatible U-Net trained to segment 2D phase contrast
       microscopy images of glioblastoma-astrocytoma U373 cells on a polyacrylamide
       substrate.
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/README.md
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
     download_url: https://zenodo.org/record/4155785/files/deepimagej_u-net_glioblastoma_segmentation.zip
     format_version: 0.3.6
     framework: tensorflow
@@ -105,18 +105,18 @@ versions:
         - 1.0
         - 1.0
     sample_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/exampleImage.tiff
+    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
     sample_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/resultImage.tiff
+    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
     tags:
     - deepimagej
     - glioblastoma-cells
     - segmentation
     - phase-contrast
     test_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/exampleImage.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
     test_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/resultImage.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
     timestamp: '2021-08-31T10:13:32.618903'
     type: model
     weights:
