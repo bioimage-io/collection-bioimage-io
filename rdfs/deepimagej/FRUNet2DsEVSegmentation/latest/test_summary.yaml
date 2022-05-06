@@ -1,4 +1,4 @@
-rdf_sha256: 63821f48c9a2d407e759543e433a3d08f1a59537f47a1e5cb0574ad2bbc48bc5
+rdf_sha256: 7428ec0eaa16bc6ed0675b7200b412d9e9994a789e072738341cfb54460a1a19
 tests:
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
