@@ -1,0 +1,125 @@
+attachments:
+  files:
+  - https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/preprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/postprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/exampleImage.tif
+  - https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/resultImage.tif
+authors:
+- affiliation: University of California
+  name: Yair Rivenson
+- affiliation: University of California
+  name: Hongda Wang
+- affiliation: University of California
+  name: Aydogan Ozcan
+cite:
+- doi: https://doi.org/10.1038/s41551-019-0362-y
+  text: Hongda Wang, Yair Rivenson, et al., Nature Biomedical Engineering, 2019
+config:
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+      tensorflow_model_tag: tf.saved_model.tag_constants.SERVING
+      tensorflow_siganture_def: tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY
+    prediction:
+      postprocess:
+      - kwargs: postprocessing.txt
+        spec: ij.IJ::runMacroFile
+      preprocess:
+      - kwargs: preprocessing.txt
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: exampleImage.tif
+        pixel_size:
+          x: 1.0 pixel
+          y: 1.0 pixel
+          z: 1.0 pixel
+        size: 1224 x 1224 x 1
+      memory_peak: 829.8 Mb
+      outputs:
+      - name: resultImage.tif
+        size: 1224 x 1224 x 1
+        type: image
+      runtime: 130.9 s
+covers:
+- https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/exampleImage.png
+- https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/resultImage.png
+description: A trained GAN to transform wide-field autofluorescence images of unlabelled
+  tissue sections into images that are equivalent to the bright-field images of histologically
+  stained versions of the same samples.
+documentation: https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/README.md
+download_url: https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip
+format_version: 0.3.6
+framework: tensorflow
+id: deepimagej/JonesVirtualStaining/latest
+inputs:
+- axes: yxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input_images
+  shape:
+  - 1224
+  - 1224
+  - 1
+language: java
+license: CC BY 4.0
+links:
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+maintainers: []
+name: Jones Virtual Staining (GAN)
+outputs:
+- axes: byxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 150
+  - 150
+  - 0
+  name: output_images
+  shape:
+    offset:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input_images
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 3.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/JonesVirtualStaining/latest/rdf.yaml
+sample_inputs:
+- https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/exampleImage.tif
+sample_outputs:
+- https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/resultImage.tif
+tags:
+- deepimagej
+- gan
+- virtual-staining
+- histology
+test_inputs:
+- https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/exampleImage.npy
+test_outputs:
+- https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/resultImage.npy
+timestamp: '2021-02-17T10:13:32.618903'
+type: model
+weights:
+  tensorflow_saved_model_bundle:
+    attachments:
+      files:
+      - ./config.xml
+    sha256: ec37989b50017f53c3cb9cb3ff1a302ee3b7ed50ab6d8ba34264f10a64ad551a
+    source: https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/tensorflow_saved_model_bundle.zip
+    tensorflow_version: '1.15'
