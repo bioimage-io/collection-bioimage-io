@@ -43,14 +43,14 @@ def main(always_continue: bool = True, skip_update_external: bool = True):
         # todo: download partner_test_summaries
 
     gh_pages = Path(__file__).parent / "../gh-pages"
-    if not gh_pages.exists():
-        subprocess.run(["git", "worktree", "prune"], check=True)
-        subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
+    # if not gh_pages.exists():
+    #     subprocess.run(["git", "worktree", "prune"], check=True)
+    #     subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
 
-    last_collection = Path(__file__).parent / "../last_ci_run/collection"
-    if not last_collection.parent.exists():
-        subprocess.run(["git", "worktree", "prune"], check=True)
-        subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
+    # last_collection = Path(__file__).parent / "../last_ci_run/collection"
+    # if not last_collection.parent.exists():
+    #     subprocess.run(["git", "worktree", "prune"], check=True)
+    #     subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
 
     dist = Path(__file__).parent / "../dist"
     if dist.exists():
