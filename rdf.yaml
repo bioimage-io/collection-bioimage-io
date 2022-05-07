@@ -38,6 +38,22 @@ collection:
   versions: ['5874742']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png']
+  description: Nucleus segmentation for fluorescence microscopy
+  download_count: 3406
+  id: 10.5281/zenodo.5764892
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  name: NucleiSegmentationBoundaryModel
+  nickname: affable-shark
+  nickname_icon: "\U0001F988"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6322939/rdf.yaml
+  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet, 2d]
+  type: model
+  versions: ['6322939']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
   download_count: 3402
@@ -54,22 +70,6 @@ collection:
     unet]
   type: model
   versions: ['6321179', '5869900']
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png']
-  description: Nucleus segmentation for fluorescence microscopy
-  download_count: 3395
-  id: 10.5281/zenodo.5764892
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
-  name: NucleiSegmentationBoundaryModel
-  nickname: affable-shark
-  nickname_icon: "\U0001F988"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6322939/rdf.yaml
-  tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet, 2d]
-  type: model
-  versions: ['6322939']
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png']
@@ -90,7 +90,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png']
   description: '{organelle} segmentation in EM of platynereis.'
-  download_count: 2863
+  download_count: 2969
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -108,7 +108,7 @@ collection:
   covers: ['https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png']
   description: Cell segmentation model for segmenting images from the Human Protein
     Atlas
-  download_count: 2269
+  download_count: 2367
   id: 10.5281/zenodo.6200635
   license: CC-BY-4.0
   links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell, deepimagej/deepimagej]
@@ -165,7 +165,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png']
   description: Cell segmentation for immunofluorescence microscopy.
-  download_count: 1570
+  download_count: 1581
   id: 10.5281/zenodo.5847355
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -203,7 +203,7 @@ collection:
   covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
     'https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 1390
+  download_count: 1474
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -220,7 +220,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 1217
+  download_count: 1294
   id: 10.5281/zenodo.6348728
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -238,7 +238,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png']
   description: Nuclei segmentation model for segmenting images from the Human Protein
     Atlas
-  download_count: 1206
+  download_count: 1217
   id: 10.5281/zenodo.6200999
   license: CC-BY-4.0
   links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell, deepimagej/deepimagej]
@@ -295,7 +295,7 @@ collection:
     'https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png']
   description: A 2D U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Trained on z-slices of 3D confocal images.
-  download_count: 1107
+  download_count: 1122
   id: 10.5281/zenodo.6334383
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -368,7 +368,7 @@ collection:
     'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
   description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
     of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
-  download_count: 962
+  download_count: 979
   id: 10.5281/zenodo.6334777
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -389,7 +389,7 @@ collection:
     'https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png']
   description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-  download_count: 778
+  download_count: 795
   id: 10.5281/zenodo.6334583
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -402,6 +402,22 @@ collection:
     plant, tissue, fluorescence-light-microscopy, pytorch]
   type: model
   versions: ['6346519', '6334584']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/cover.png']
+  description: Prediction Enhancer for segmenting mitochondria in EM images.
+  download_count: 782
+  id: 10.5281/zenodo.6406756
+  license: CC-BY-4.0
+  links: [ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: EnhancerMitochondriaEM2D
+  nickname: hiding-blowfish
+  nickname_icon: "\U0001F421"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6406757/rdf.yaml
+  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
+  type: model
+  versions: ['6406757']
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
@@ -440,22 +456,6 @@ collection:
   type: model
   versions: ['6406804']
 - authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/cover.png']
-  description: Prediction Enhancer for segmenting mitochondria in EM images.
-  download_count: 724
-  id: 10.5281/zenodo.6406756
-  license: CC-BY-4.0
-  links: [ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: EnhancerMitochondriaEM2D
-  nickname: hiding-blowfish
-  nickname_icon: "\U0001F421"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6406757/rdf.yaml
-  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
-  type: model
-  versions: ['6406757']
-- authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
   covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
@@ -483,7 +483,7 @@ collection:
     'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-  download_count: 274
+  download_count: 327
   id: 10.5281/zenodo.6383429
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -500,8 +500,8 @@ collection:
   - {affiliation: 'UCL, Francis Crick Institute, Turku and Åbo Akademi University',
     name: ZeroCostDL4Mic team}
   - {affiliation: 'UC3M, EPFL', name: DeepImageJ team}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/input.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/zoom.png']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/input.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/zoom.png']
   description: A trained Deep-STORM model for image reconstruction from high-density
     single-molecule localization microscopy (SMLM).
   download_count: 1
@@ -549,7 +549,7 @@ collection:
   - {affiliation: Masaryk University, name: Vendula Pospíchalová}
   - {affiliation: Masaryk University, name: Pavel Matula}
   - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/frunet_sev.jpg']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg']
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
   download_count: 1
@@ -567,8 +567,8 @@ collection:
   - {affiliation: University of California, name: Yair Rivenson}
   - {affiliation: University of California, name: Hongda Wang}
   - {affiliation: University of California, name: Aydogan Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/resultImage.png']
   description: A trained GAN to transform wide-field autofluorescence images of unlabelled
     tissue sections into images that are equivalent to the bright-field images of
     histologically stained versions of the same samples.
@@ -587,7 +587,7 @@ collection:
       Lux}
   - {affiliation: 'Centre for Biomedical Image Analysis, Masaryk University', name: Petr
       Matula}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover.jpg']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/mu-lux_ctc_phc-c2dl-psc/cover.jpg']
   description: The method combines deep learning with watershed segmentation. For
     each frame, the convolutional neural network of U-Net shape detects all cells
     by markers and recognizes the foreground and the background of the frame. Then,
@@ -623,8 +623,8 @@ collection:
   - {affiliation: University of California, name: Yair Rivenson}
   - {affiliation: University of California, name: Hongda Wang}
   - {affiliation: University of California, name: Aydogan Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/resultImage.png']
   description: A trained GAN to transform wide-field autofluorescence images of unlabelled
     tissue sections into images that are equivalent to the bright-field images of
     histologically stained versions of the same samples.
@@ -642,7 +642,7 @@ collection:
   - {affiliation: EPFL, name: Baptiste Ottino}
   - {affiliation: EPFL, name: Kyle M. Douglass}
   - {affiliation: EPFL, name: Suliana Manley}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover_image.jpg']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/defcon_density_map_estimation/cover_image.jpg']
   description: Density Estimation by Fully Convolutional Networks (DEFCoN) - A fluorescent
     spot counter for single molecule localization microscopy. DEFCoN was written by
     Baptiste Ottino as a Masters thesis project under the guidance of Kyle M. Douglass
@@ -673,7 +673,7 @@ collection:
   versions: [latest]
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover_image.jpg']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/u-net_glioblastoma_segmentation/cover_image.jpg']
   description: DeepImageJ compatible U-Net trained to segment 2D phase contrast microscopy
     images of glioblastoma-astrocytoma U373 cells on a polyacrylamide substrate.
   download_count: 1
@@ -688,7 +688,7 @@ collection:
   versions: [latest]
 - authors:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/unet_hela_seg.jpg']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/unet_hela_seg.jpg']
   description: DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
     contrast microscopy images
   download_count: 1
@@ -710,7 +710,7 @@ collection:
   - {affiliation: 'ImagineA, The Netherlands', name: Andrei Rares}
   - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
       Graduate University, Japan', name: Amy Q. Shen}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/cover.jpg']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/cover.jpg']
   description: Trained model given in Usiigaci for instance segmentation of cells
     in a 2D substrate and phase contrast microscopy images. The model is a Mask R-CNN
     and the input is preprocessed to get an RGB image from the grayscale image.
@@ -730,8 +730,8 @@ collection:
   - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
   - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
       Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/resultImage.png']
   description: A trained GAN to transform diffraction-limited input images into super-resolved
     ones.
   download_count: 1
@@ -749,8 +749,8 @@ collection:
   - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
   - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
       Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/widefield_fitc_super-resolution/resultImage.png']
   description: A trained GAN to transform diffraction-limited input images into super-resolved
     ones.
   download_count: 1
@@ -768,8 +768,8 @@ collection:
   - {affiliation: 'University of California, Los Angeles, CA, USA', name: Yair Rivenson}
   - {affiliation: 'University of California, Los Angeles, CA, USA', name: Aydogan
       Ozcan}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png',
-    'https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png']
+  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/exampleImage.png',
+    'https://raw.githubusercontent.com/deepimagej/models/master/widefield_txred_super-resolution/resultImage.png']
   description: A trained GAN to transform diffraction-limited input images into super-resolved
     ones.
   download_count: 1
