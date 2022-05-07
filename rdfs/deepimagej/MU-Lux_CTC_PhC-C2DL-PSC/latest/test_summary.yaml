@@ -1,4 +1,4 @@
-rdf_sha256: 047d4ee6a4de67b0cb4fd92592bc2017a94734e155dea2c9121f83ece541f535
+rdf_sha256: 470bf6f981ee5085f2766c3dc241b64968c01038f836f8ad1ac5fc748f02c9be
 tests:
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
@@ -45,8 +45,8 @@ tests:
     status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
-    error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
-      [''Unknown field.'']}'
+    error: '{''_schema'': [''Minimal shape [ 1. 32. 32.  1.] of output output is too
+      small for halo [0, 97, 97, 0].'']}'
     name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
@@ -62,8 +62,8 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
-      [''Unknown field.'']}'
+    error: '{''_schema'': [''Minimal shape [ 1. 32. 32.  1.] of output output is too
+      small for halo [0, 97, 97, 0].'']}'
     name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
@@ -79,8 +79,8 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
-    error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
-      [''Unknown field.'']}'
+    error: '{''_schema'': [''Minimal shape [ 1. 32. 32.  1.] of output output is too
+      small for halo [0, 97, 97, 0].'']}'
     name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights
     reason: error
@@ -97,8 +97,8 @@ tests:
         line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: '{''run_mode'': [''Expected dictionary, but got list.''], ''root_path'':
-      [''Unknown field.'']}'
+    error: '{''_schema'': [''Minimal shape [ 1. 32. 32.  1.] of output output is too
+      small for halo [0, 97, 97, 0].'']}'
     name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
