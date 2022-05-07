@@ -1,10 +1,10 @@
 attachments:
   files:
-  - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
-  - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.txt
-  - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
-  - https://raw.githubusercontent.com/deepimagej/models/master/Results.csv
-  - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
+  - https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/preprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/postprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/exampleImage.tiff
+  - https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/Results.csv
+  - https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/resultImage.tiff
 authors:
 - affiliation: EPFL, UC3M
   name: DeepImageJ
@@ -46,10 +46,10 @@ config:
         type: image
       runtime: 5.5 s s
 covers:
-- https://raw.githubusercontent.com/deepimagej/models/master/unet_hela_seg.jpg
+- https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/unet_hela_seg.jpg
 description: DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
   contrast microscopy images
-documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
+documentation: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/README.md
 download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
 format_version: 0.3.6
 framework: tensorflow
@@ -100,18 +100,18 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
 sample_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
+- https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/exampleImage.tiff
 sample_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
+- https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/resultImage.tiff
 tags:
 - deepimagej
 - hela-cells
 - segmentation
 - phase-contrast
 test_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/exampleImage.npy
 test_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/resultImage.npy
 timestamp: '2021-09-09T10:13:32.618903'
 type: model
 weights:
@@ -123,5 +123,5 @@ weights:
       files:
       - ./config.xml
     sha256: dc00ad55637842dfcd9bdf04a48a763641cc70b3f20c1d851f43c850039653a3
-    source: https://raw.githubusercontent.com/deepimagej/models/master/tensorflow_saved_model_bundle.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/tensorflow_saved_model_bundle.zip
     tensorflow_version: '1.13'

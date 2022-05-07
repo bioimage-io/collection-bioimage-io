@@ -1,12 +1,12 @@
 attachments:
   files:
-  - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm
-  - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing_LocalMaximaSMLM.ijm
-  - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
-  - https://raw.githubusercontent.com/deepimagej/models/master/Localizations_resultImage_max.csv
-  - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
-  - https://raw.githubusercontent.com/deepimagej/models/master/DeepSTORM4stacksThunderSTORM.ijm
-  - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing_AveragedMaximaSMLM.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/preprocessing.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/postprocessing_LocalMaximaSMLM.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.tiff
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/Localizations_resultImage_max.csv
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/resultImage.tiff
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/DeepSTORM4stacksThunderSTORM.ijm
+  - https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/postprocessing_AveragedMaximaSMLM.ijm
 authors:
 - affiliation: UCL, Francis Crick Institute, Turku and Åbo Akademi University
   name: ZeroCostDL4Mic team
@@ -58,11 +58,11 @@ config:
         type: ResultsTable
       runtime: 11.7 s
 covers:
-- https://raw.githubusercontent.com/deepimagej/models/master/input.png
-- https://raw.githubusercontent.com/deepimagej/models/master/zoom.png
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/input.png
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/zoom.png
 description: A trained Deep-STORM model for image reconstruction from high-density
   single-molecule localization microscopy (SMLM).
-documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
+documentation: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/README.md
 download_url: https://sandbox.zenodo.org/record/907832/files/bioimage.io.model.zip
 format_version: 0.3.6
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
@@ -114,10 +114,10 @@ rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej
 run_mode:
   name: deepimagej
 sample_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.tiff
 sample_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
-- https://raw.githubusercontent.com/deepimagej/models/master/Localizations_resultImage_max.csv
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/resultImage.tiff
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/Localizations_resultImage_max.csv
 tags:
 - zerocostdl4mic
 - deepimagej
@@ -126,19 +126,19 @@ tags:
 - super-resolution
 - tensorflow
 test_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy
 test_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/resultImage.npy
 timestamp: '2021-02-17T10:13:32.618903'
 type: model
 weights:
   keras_hdf5:
     sha256: 61fd2b4d03d7704c8db810fbd33c6f6a4aed0b3a1ca8371c8381adb6850711f6
-    source: https://raw.githubusercontent.com/deepimagej/models/master/weights_best.hdf5
+    source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/weights_best.hdf5
   tensorflow_saved_model_bundle:
     attachments:
       files:
       - ./config.xml
     sha256: efcae3a3cde4b9f077b9595dd7f3c40c39e97e673e087b7cc8fa5fa28e283944
-    source: https://raw.githubusercontent.com/deepimagej/models/master/tensorflow_saved_model_bundle.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/tensorflow_saved_model_bundle.zip
     tensorflow_version: '1.15'

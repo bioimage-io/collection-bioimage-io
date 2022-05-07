@@ -9,10 +9,10 @@ versions:
   rdf_source:
     attachments:
       files:
-      - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
-      - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.txt
-      - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
-      - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/preprocessing.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/postprocessing.txt
+      - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/exampleImage.tiff
+      - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/resultImage.tiff
     authors:
     - affiliation: University of California, Los Angeles, CA, USA
       name: Hongda Wang
@@ -52,11 +52,11 @@ versions:
             type: image
           runtime: 90.0 s
     covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png
-    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png
+    - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/exampleImage.png
+    - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/resultImage.png
     description: A trained GAN to transform diffraction-limited input images into
       super-resolved ones.
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/README.md
     download_url: https://sandbox.zenodo.org/record/914422/files/widefield_dapi_super-resolution.zip
     format_version: 0.3.6
     framework: tensorflow
@@ -104,18 +104,18 @@ versions:
         - 1.0
         - 1.0
     sample_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tiff
+    - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/exampleImage.tiff
     sample_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tiff
+    - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/resultImage.tiff
     tags:
     - deepimagej
     - gan
     - fluorescence-microscopy
     - super-resolution
     test_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/exampleImage.npy
     test_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/resultImage.npy
     timestamp: '2021-09-09T17:47:28.000545'
     type: model
     weights:
@@ -124,5 +124,5 @@ versions:
           files:
           - ./config.xml
         sha256: 9b84763f2341ba472f091c9eb55e53190bb07bd25b4a3092919fb9585be93878
-        source: https://raw.githubusercontent.com/deepimagej/models/master/tensorflow_saved_model_bundle
+        source: https://raw.githubusercontent.com/deepimagej/models/master/widefield_dapi_super-resolution/tensorflow_saved_model_bundle
         tensorflow_version: '1.15'

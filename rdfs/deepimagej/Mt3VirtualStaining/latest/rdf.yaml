@@ -1,9 +1,9 @@
 attachments:
   files:
-  - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
-  - https://raw.githubusercontent.com/deepimagej/models/master/postprocessing.txt
-  - https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tif
-  - https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tif
+  - https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/preprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/postprocessing.txt
+  - https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/exampleImage.tif
+  - https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/resultImage.tif
 authors:
 - affiliation: University of California
   name: Yair Rivenson
@@ -47,12 +47,12 @@ config:
         type: image
       runtime: 95.2
 covers:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.png
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.png
+- https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/exampleImage.png
+- https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/resultImage.png
 description: A trained GAN to transform wide-field autofluorescence images of unlabelled
   tissue sections into images that are equivalent to the bright-field images of histologically
   stained versions of the same samples.
-documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
+documentation: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/README.md
 download_url: https://sandbox.zenodo.org/record/906805/files/bioimage.io.model.zip
 format_version: 0.3.6
 framework: tensorflow
@@ -98,18 +98,18 @@ outputs:
     - 3.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Mt3VirtualStaining/latest/rdf.yaml
 sample_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.tif
+- https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/exampleImage.tif
 sample_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.tif
+- https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/resultImage.tif
 tags:
 - deepimagej
 - gan
 - virtual-staining
 - histology
 test_inputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/exampleImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/exampleImage.npy
 test_outputs:
-- https://raw.githubusercontent.com/deepimagej/models/master/resultImage.npy
+- https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/resultImage.npy
 timestamp: '2021-03-09T15:58:33.000793'
 type: model
 weights:
@@ -118,5 +118,5 @@ weights:
       files:
       - ./config.xml
     sha256: 9c20009f5eb0f751dcd4b9f1d43ef7b7ec989b41d6edd080804595aa436b6201
-    source: https://raw.githubusercontent.com/deepimagej/models/master/tensorflow_saved_model_bundle.zip
+    source: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/tensorflow_saved_model_bundle.zip
     tensorflow_version: '1.15'
