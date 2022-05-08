@@ -60,8 +60,8 @@ tests:
         data \"\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm
-      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm)'
+    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy
+      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy)'
     name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
     reason: error
     status: failed
@@ -73,12 +73,6 @@ tests:
         line 112, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
         uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
         \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
@@ -117,8 +111,8 @@ tests:
         data \"\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
-    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm
-      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm)'
+    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy
+      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy)'
     name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights
     reason: error
@@ -131,12 +125,6 @@ tests:
         line 112, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
         uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
         \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
         line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
