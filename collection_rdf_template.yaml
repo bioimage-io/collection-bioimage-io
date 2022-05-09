@@ -30,6 +30,9 @@ config:
   url_root: >-
     https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
   partners:
+    - id: bioimageio
+      source: >-
+        https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.yaml
     - id: zero
       source: >-
         https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
