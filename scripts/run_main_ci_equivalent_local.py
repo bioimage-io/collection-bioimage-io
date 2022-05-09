@@ -154,6 +154,10 @@ def main(always_continue: bool = True, skip_update_external: bool = False, with_
 
     end_of_job(dist, always_continue)
 
+    # copy _header and index.html file in order to enable a valid bioimage.io preview
+    shutil.copy("_headers", str(gh_pages / "_headers"))
+    shutil.copy("index.html", str(gh_pages / "index.html"))
+
 
 if __name__ == "__main__":
     typer.run(main)
