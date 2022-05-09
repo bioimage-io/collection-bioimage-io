@@ -31,7 +31,7 @@ documentation: https://imjoy.io/docs
 download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
 format_version: 0.2.2
 id: imjoy/LuCa-7color/latest
-license: CC-BY 4.0
+license: CC-BY-4.0
 links:
 - imjoy/vizarr
 name: LuCa-7color

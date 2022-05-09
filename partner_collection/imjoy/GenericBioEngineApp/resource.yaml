@@ -7,6 +7,7 @@ versions:
   version_id: latest
   version_name: latest
   rdf_source:
+    badges: []
     config:
       background_image: static/img/zoo-background.svg
       default_type: application
@@ -27,13 +28,15 @@ versions:
       tags:
       - imjoy
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
-    description: Resources for BioImgage.IO curated by the ImJoy Team.
+    covers: []
+    description: An generic BioEngine for processing images
     documentation: https://imjoy.io/docs
     format_version: 0.2.2
+    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
     id: imjoy/GenericBioEngineApp
     name: GenericBioEngineApp
     source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/generic-bioengine-app.imjoy.html
     tags:
-    - imjoy
-    - bioimage.io
+    - bioengine
     type: application
+    version: 0.1.1

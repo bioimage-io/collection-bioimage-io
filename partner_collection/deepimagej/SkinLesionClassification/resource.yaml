@@ -9,11 +9,11 @@ versions:
   rdf_source:
     attachments:
       files:
-      - https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.ijm
-      - https://raw.githubusercontent.com/deepimagej/models/master/post.ijm
-      - https://raw.githubusercontent.com/deepimagej/models/master/0066.tif
-      - https://raw.githubusercontent.com/deepimagej/models/master/lesion.csv
-      - https://raw.githubusercontent.com/deepimagej/models/master/0066_mask.png
+      - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/preprocessing.ijm
+      - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/post.ijm
+      - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/0066.tif
+      - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/lesion.csv
+      - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/0066_mask.png
     authors:
     - affiliation: UC3M
       name: Carlos García-López-de-Haro
@@ -45,9 +45,9 @@ versions:
             type: ResultsTable
           runtime: 0.3 s
     covers:
-    - https://raw.githubusercontent.com/deepimagej/models/master/cover.jpg
+    - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/cover.jpg
     description: CNN trained to classify the type of imaged skin lesion.
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/README.md
+    documentation: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/README.md
     download_url: https://sandbox.zenodo.org/record/906807/files/bioimage.io.model.zip
     format_version: 0.3.6
     framework: pytorch
@@ -90,9 +90,9 @@ versions:
     run_mode:
       name: deepimagej
     sample_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/0066.tif
+    - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/0066.tif
     sample_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/lesion.csv
+    - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/lesion.csv
     tags:
     - deepimagej-beta
     - deepimagej
@@ -101,12 +101,12 @@ versions:
     - classification
     - pytorch
     test_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/0066.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/0066.npy
     test_outputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/lesion.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/lesion.npy
     timestamp: '2020-08-31T10:13:32.618903'
     type: model
     weights:
       pytorch_script:
         sha256: b40e303e2a1996535da02626af6f2a4a243befc8f0957be4d47abdd940554f15
-        source: https://raw.githubusercontent.com/deepimagej/models/master/pytorch_script.pt
+        source: https://raw.githubusercontent.com/deepimagej/models/master/skin_lesion_classification/pytorch_script.pt
