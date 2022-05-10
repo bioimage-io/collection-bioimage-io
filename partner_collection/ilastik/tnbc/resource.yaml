@@ -1,0 +1,55 @@
+id: ilastik/tnbc
+status: accepted
+type: dataset
+versions:
+- name: Segmentation of Nuclei in Histopathology Images
+  status: accepted
+  version_id: latest
+  version_name: latest
+  rdf_source:
+    authors:
+    - name: Constantin Pape
+    cite:
+    - doi: https://doi.org/10.1109/TMI.2018.2865709
+      text: Nayolor et al.
+    config:
+      background_image: static/img/zoo-background.svg
+      default_type: model
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      id: ilastik
+      logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      name: ilastik
+      resource_types:
+      - application
+      splash_feature_list:
+      splash_subtitle: the interactive learning and segmentation toolkit
+      splash_title: ilastik
+      tags:
+      - ilastik
+      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+    covers:
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/tnbc_cover.jpg
+    description: Dataset of H&E Brightfield images with nucleus instance annotations.
+      Contains 50 annotated images, divided into 11 patients.
+    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/tnbc.md
+    format_version: 0.2.1
+    id: ilastik/tnbc
+    license: CC-BY-4.0
+    maintainers:
+    - affiliation: EMBL Heidelberg
+      github_user: fynnbe
+      name: Fynn Beuttenmüller
+      orcid: 0000-0002-8567-6389
+    - affiliation: EMBL Heidelberg
+      github_user: constantinpape
+      name: Constantin Pape
+      orcid: 0000-0001-6562-7187
+    name: Segmentation of Nuclei in Histopathology Images
+    source: https://zenodo.org/record/1175282#.Ynpj81xBwUG
+    tags:
+    - nuclei
+    - instance-segmentation
+    - brightfield-microscopy
+    - 2D
+    type: dataset
