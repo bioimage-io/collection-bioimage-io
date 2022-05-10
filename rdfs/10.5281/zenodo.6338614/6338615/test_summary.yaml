@@ -1,27 +1,27 @@
 bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post11
-rdf_sha256: 651963aeb67b349d3902719d8b1c53fe9f10be8ef4cc4101e290ffa1c7bf81da
+bioimageio_spec_version: 0.4.6.post1
+rdf_sha256: 971ed799d609f2044bdcfd490555aac567acf1a0ea1ef34276c3e7293533e219
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.6post1
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {tags: 'Missing tags for categories: [{''software'': [''ilastik'', ''imagej'',
         ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.6post1
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5
+    name: bioimageio.spec static validation of model RDF 0.4.6
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {tags: 'Missing tags for categories: [{''software'': [''ilastik'', ''imagej'',
         ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2

@@ -123,7 +123,7 @@ covers:
 - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg
 description: StarDist - Object Detection with Star-convex Shapes
 documentation: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/README.md
-format_version: 0.4.5
+format_version: 0.4.6
 id: 10.5281/zenodo.6348084/6348085
 inputs:
 - axes: byxc
@@ -154,6 +154,8 @@ license: BSD-3-Clause
 links:
 - deepimagej/deepimagej
 - imjoy/BioImageIO-Packager
+- bioimageio/stardist
+- bioimageio/qupath
 maintainers:
 - github_user: uschmidt83
 name: StarDist Fluorescence Nuclei Segmentation
@@ -204,6 +206,8 @@ test_inputs:
 test_outputs:
 - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/test_output.npy
 timestamp: '2022-03-11T23:26:52.248097'
+training_data:
+  id: ilastik/stradist_dsb_training_data
 type: model
 version: 0.1.0
 weights:

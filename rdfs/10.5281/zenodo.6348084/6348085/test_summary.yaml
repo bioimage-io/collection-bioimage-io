@@ -1,25 +1,25 @@
 bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post11
-rdf_sha256: c0cf2424716673ac503d8c6f503e9b626a501d9bda32f6fc7270ecea0c56e570
+bioimageio_spec_version: 0.4.6.post1
+rdf_sha256: a5155ccefaed634f11e17967152e4752c1f2f23655c1622c32c4c9c18f0c0424
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.6post1
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.6post1
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5
+    name: bioimageio.spec static validation of model RDF 0.4.6
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2

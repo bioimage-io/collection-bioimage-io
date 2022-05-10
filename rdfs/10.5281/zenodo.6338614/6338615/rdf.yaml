@@ -123,7 +123,7 @@ covers:
 - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg
 description: StarDist - Object Detection with Star-convex Shapes
 documentation: https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/README.md
-format_version: 0.4.5
+format_version: 0.4.6
 id: 10.5281/zenodo.6338614/6338615
 inputs:
 - axes: byxc
@@ -154,6 +154,9 @@ license: BSD-3-Clause
 links:
 - deepimagej/deepimagej
 - imjoy/BioImageIO-Packager
+- ilastik/tnbc
+- bioimageio/stardist
+- bioimageio/qupath
 name: StarDist H&E Nuclei Segmentation
 outputs:
 - axes: byxc
@@ -198,6 +201,8 @@ test_inputs:
 test_outputs:
 - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/test_output.npy
 timestamp: '2022-03-08T19:28:53.578207'
+training_data:
+  id: deepimagej/monuseg_digital_pathology_miccai2018
 type: model
 version: 0.1.0
 weights:
