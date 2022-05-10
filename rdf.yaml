@@ -170,7 +170,8 @@ collection:
   download_count: 1764
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
+    bioimageio/qupath]
   name: StarDist H&E Nuclei Segmentation
   nickname: chatty-frog
   nickname_icon: "\U0001F438"
@@ -206,7 +207,7 @@ collection:
   download_count: 1589
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
   name: StarDist Fluorescence Nuclei Segmentation
   nickname: fearless-crab
   nickname_icon: "\U0001F980"

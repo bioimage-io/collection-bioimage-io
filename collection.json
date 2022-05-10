@@ -409,7 +409,10 @@
       "license": "BSD-3-Clause",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/tnbc",
+        "bioimageio/stardist",
+        "bioimageio/qupath"
       ],
       "name": "StarDist H&E Nuclei Segmentation",
       "nickname": "chatty-frog",
@@ -494,7 +497,9 @@
       "license": "BSD-3-Clause",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "bioimageio/stardist",
+        "bioimageio/qupath"
       ],
       "name": "StarDist Fluorescence Nuclei Segmentation",
       "nickname": "fearless-crab",
