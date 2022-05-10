@@ -11,7 +11,7 @@ versions:
   - github_user: uschmidt83
   training_data:
     id: ilastik/stradist_dsb_training_data
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
 id: 10.5281/zenodo.6348084
 doi: 10.5281/zenodo.6348084
 type: model
