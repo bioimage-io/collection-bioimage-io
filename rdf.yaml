@@ -1070,6 +1070,20 @@ collection:
   versions: [latest]
 - authors:
   - {name: Constantin Pape}
+  covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/tnbc_cover.jpg']
+  description: Dataset of H&E Brightfield images with nucleus instance annotations.
+    Contains 50 annotated images, divided into 11 patients.
+  download_count: 1
+  id: ilastik/tnbc
+  license: CC-BY-4.0
+  name: Segmentation of Nuclei in Histopathology Images
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/tnbc/latest/rdf.yaml
+  source: https://zenodo.org/record/1175282#.Ynpj81xBwUG
+  tags: [nuclei, instance-segmentation, brightfield-microscopy, 2D]
+  type: dataset
+  versions: [latest]
+- authors:
+  - {name: Constantin Pape}
   covers: ['https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png']
   description: Train a 2d UNet for semgentation tasks
   download_count: 1
@@ -1943,8 +1957,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 100, dataset: 26, model: 92, notebook: 4}
-  n_resources: {application: 50, dataset: 13, model: 41, notebook: 2}
+  n_resource_versions: {application: 100, dataset: 28, model: 92, notebook: 4}
+  n_resources: {application: 50, dataset: 14, model: 41, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     default_type: application
