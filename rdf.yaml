@@ -499,6 +499,7 @@ collection:
   versions: ['6383430']
 - authors:
   - {github_user: petebankhead, name: Pete Bankhead}
+  covers: ['https://qupath.readthedocs.io/en/latest/_static/qupath_128.png']
   description: QuPath is an open, powerful, flexible, extensible software platform
     for bioimage analysis.
   download_count: 1
@@ -511,6 +512,7 @@ collection:
 - authors:
   - {github_user: uschmidt83, name: Uwe Schmidt}
   - {github_user: maweigert, name: Martin Weigert}
+  covers: ['https://raw.githubusercontent.com/stardist/stardist/master/images/stardist_logo.jpg']
   description: Object Detection with Star-convex Shapes
   download_count: 1
   id: bioimageio/stardist
