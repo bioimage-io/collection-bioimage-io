@@ -37,6 +37,7 @@ description: QuPath is an open, powerful, flexible, extensible software platform
 documentation: https://raw.githubusercontent.com/qupath/qupath/main/README.md
 format_version: 0.2.2
 git_repo: https://github.com/qupath/qupath
+icon: https://qupath.readthedocs.io/en/latest/_static/qupath_128.png
 id: bioimageio/qupath/latest
 maintainers:
 - github_user: petebankhead
