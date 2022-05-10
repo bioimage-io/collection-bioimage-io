@@ -498,6 +498,28 @@ collection:
   type: model
   versions: ['6383430']
 - authors:
+  - {github_user: petebankhead, name: Pete Bankhead}
+  description: QuPath is an open, powerful, flexible, extensible software platform
+    for bioimage analysis.
+  download_count: 1
+  id: bioimageio/qupath
+  name: QuPath
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/qupath/latest/rdf.yaml
+  tags: [qupath]
+  type: application
+  versions: [latest]
+- authors:
+  - {github_user: uschmidt83, name: Uwe Schmidt}
+  - {github_user: maweigert, name: Martin Weigert}
+  description: Object Detection with Star-convex Shapes
+  download_count: 1
+  id: bioimageio/stardist
+  name: StarDist
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/stardist/latest/rdf.yaml
+  tags: [stardist]
+  type: application
+  versions: [latest]
+- authors:
   - {affiliation: 'UCL, Francis Crick Institute, Turku and Åbo Akademi University',
     name: ZeroCostDL4Mic team}
   - {affiliation: 'UC3M, EPFL', name: DeepImageJ team}
@@ -1958,9 +1980,25 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 100, dataset: 28, model: 92, notebook: 4}
-  n_resources: {application: 50, dataset: 14, model: 41, notebook: 2}
+  n_resource_versions: {application: 104, dataset: 28, model: 92, notebook: 4}
+  n_resources: {application: 52, dataset: 14, model: 41, notebook: 2}
   partners:
+  - background_image: static/img/zoo-background.svg
+    default_type: model
+    explore_button_text: Start Exploring
+    icon: "\U0001F992"
+    id: bioimageio
+    logo: "\U0001F992"
+    name: BioImage.IO
+    resource_types: [model, application, notebook, dataset]
+    source: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.yaml
+    splash_feature_list: ['Integrate with Fiji, Ilastik, ImJoy', Try model instantly
+        with BioEngine, Contribute your models via Zenodo, Link models to datasets
+        and applications]
+    splash_subtitle: Advanced AI models in one-click
+    splash_title: BioImage Model Zoo
+    tags: []
+    url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
   - background_image: static/img/zoo-background.svg
     default_type: application
     explore_button_text: Start Exploring
@@ -2053,7 +2091,7 @@ config:
     tags: [hpa]
   resource_types: [model, application, dataset]
   splash_feature_list: ['Integrate with Fiji, Ilastik, ImJoy', Try model instantly
-      with BioEngine, Contribute your models via Github, Link models to datasets and
+      with BioEngine, Contribute your models via Zenodo, Link models to datasets and
       applications]
   splash_subtitle: Advanced AI models in one-click
   splash_title: BioImage Model Zoo
