@@ -1,0 +1,46 @@
+authors:
+- github_user: petebankhead
+  name: Pete Bankhead
+cite:
+- doi: 10.1038/s41598-017-17204-5
+  text: 'QuPath: Open source software for digital pathology image analysis'
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: 🦒
+  id: bioimageio
+  logo: 🦒
+  name: BioImage.IO
+  resource_types:
+  - model
+  - application
+  - notebook
+  - dataset
+  splash_feature_list:
+  - Integrate with Fiji, Ilastik, ImJoy
+  - Try model instantly with BioEngine
+  - Contribute your models via Zenodo
+  - Link models to datasets and applications
+  splash_subtitle: Advanced AI models in one-click
+  splash_title: BioImage Model Zoo
+  tags: []
+  url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
+description: QuPath is an open, powerful, flexible, extensible software platform for
+  bioimage analysis.
+documentation: https://raw.githubusercontent.com/qupath/qupath/main/README.md
+format_version: 0.2.2
+git_repo: https://github.com/qupath/qupath
+id: bioimageio/qupath/latest
+maintainers:
+- github_user: petebankhead
+  name: Pete Bankhead
+name: QuPath
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/qupath/latest/rdf.yaml
+tags:
+- qupath
+type: application

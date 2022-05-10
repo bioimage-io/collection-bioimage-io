@@ -1,6 +1,32 @@
 [
     {
         "background_image": "static/img/zoo-background.svg",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "🦒",
+        "id": "bioimageio",
+        "logo": "🦒",
+        "name": "BioImage.IO",
+        "resource_types": [
+            "model",
+            "application",
+            "notebook",
+            "dataset"
+        ],
+        "source": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.yaml",
+        "splash_feature_list": [
+            "Integrate with Fiji, Ilastik, ImJoy",
+            "Try model instantly with BioEngine",
+            "Contribute your models via Zenodo",
+            "Link models to datasets and applications"
+        ],
+        "splash_subtitle": "Advanced AI models in one-click",
+        "splash_title": "BioImage Model Zoo",
+        "tags": [],
+        "url_root": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main"
+    },
+    {
+        "background_image": "static/img/zoo-background.svg",
         "default_type": "application",
         "explore_button_text": "Start Exploring",
         "icon": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png",

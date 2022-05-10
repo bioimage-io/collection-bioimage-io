@@ -1,0 +1,49 @@
+authors:
+- github_user: uschmidt83
+  name: Uwe Schmidt
+- github_user: maweigert
+  name: Martin Weigert
+cite:
+- doi: https://doi.org/10.1007/978-3-030-00934-2_30
+  text: Cell Detection with Star-Convex Polygons
+- doi: https://doi.org/10.1109/WACV45572.2020.9093435
+  text: Star-convex Polyhedra for 3D Object Detection and Segmentation in Microscopy
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: 🦒
+  id: bioimageio
+  logo: 🦒
+  name: BioImage.IO
+  resource_types:
+  - model
+  - application
+  - notebook
+  - dataset
+  splash_feature_list:
+  - Integrate with Fiji, Ilastik, ImJoy
+  - Try model instantly with BioEngine
+  - Contribute your models via Zenodo
+  - Link models to datasets and applications
+  splash_subtitle: Advanced AI models in one-click
+  splash_title: BioImage Model Zoo
+  tags: []
+  url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
+description: Object Detection with Star-convex Shapes
+documentation: https://raw.githubusercontent.com/stardist/stardist/master/README.md
+format_version: 0.2.2
+git_repo: https://github.com/stardist/stardist
+id: bioimageio/stardist/latest
+maintainers:
+- github_user: uschmidt83
+  name: Uwe Schmidt
+name: StarDist
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/stardist/latest/rdf.yaml
+tags:
+- stardist
+type: application
