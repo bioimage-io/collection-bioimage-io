@@ -7,6 +7,9 @@ versions:
   name: Arabidopsis Leaf Segmentation
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/rdf.yaml
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
+  training_data:
+    id: ilastik/arabidopsis_tissue_atlas
 id: 10.5281/zenodo.6348728
 doi: 10.5281/zenodo.6348728
 type: model
