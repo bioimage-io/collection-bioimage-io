@@ -34,6 +34,8 @@ config:
   splash_title: BioImage Model Zoo
   tags: []
   url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
+covers:
+- https://raw.githubusercontent.com/stardist/stardist/master/images/stardist_logo.jpg
 description: Object Detection with Star-convex Shapes
 documentation: https://raw.githubusercontent.com/stardist/stardist/master/README.md
 format_version: 0.2.2

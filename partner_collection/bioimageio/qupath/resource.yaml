@@ -35,6 +35,8 @@ versions:
       splash_title: BioImage Model Zoo
       tags: []
       url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
+    covers:
+    - https://qupath.readthedocs.io/en/latest/_static/qupath_128.png
     description: QuPath is an open, powerful, flexible, extensible software platform
       for bioimage analysis.
     documentation: https://raw.githubusercontent.com/qupath/qupath/main/README.md
