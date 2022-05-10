@@ -1,12 +1,12 @@
 bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post11
-rdf_sha256: e105ea957e41e54110a6050e2bd50d61c7278cbc288f5372a4992c16c626341e
+bioimageio_spec_version: 0.4.6.post1
+rdf_sha256: 7be6b84790587b9972826dd5e21dc487b39f5eebd534005bfb55af8c5bb149db
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.6post1
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
       format version
     nested_errors: {}
     status: passed
@@ -21,9 +21,9 @@ tests:
         ''pytorch'', ''tensorflow.js'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
         ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
         ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.6post1
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5
+    name: bioimageio.spec static validation of model RDF 0.4.6
     nested_errors: {}
     status: passed
     traceback: null
@@ -37,7 +37,7 @@ tests:
         ''pytorch'', ''tensorflow.js'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
         ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
         ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6post1, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
@@ -62,10 +62,6 @@ tests:
         rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6348728/6348729, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6348728/6348729, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '''str'' object has no attribute ''decode'''
@@ -84,6 +80,14 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6348728/6348729, name: reproduce
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '''str'' object has no attribute ''decode'''
@@ -102,9 +106,5 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6348728/6348729, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}

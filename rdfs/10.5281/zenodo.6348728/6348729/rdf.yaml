@@ -51,7 +51,7 @@ covers:
 - https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png
 description: Perform leaf segmentation in light microscopy images of Arabidopsis
 documentation: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/README.md
-format_version: 0.4.5
+format_version: 0.4.6
 id: 10.5281/zenodo.6348728/6348729
 inputs:
 - axes: bxyzc
@@ -77,6 +77,8 @@ license: MIT
 links:
 - deepimagej/deepimagej
 - imjoy/BioImageIO-Packager
+- ilastik/ilastik
+- zero/notebook_u-net_3d_zerocostdl4mic
 name: Arabidopsis Leaf Segmentation
 outputs:
 - axes: bxyzc
@@ -114,6 +116,8 @@ test_inputs:
 test_outputs:
 - https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/test_output.npy
 timestamp: '2022-03-11T17:00:18.455992'
+training_data:
+  id: ilastik/arabidopsis_tissue_atlas
 type: model
 version: 0.1.0
 weights:

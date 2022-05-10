@@ -62,7 +62,7 @@ covers:
 description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
   of Arabidopsis thaliana ovules acquired on a confocal microscope.
 documentation: https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/README.md
-format_version: 0.4.5
+format_version: 0.4.6
 id: 10.5281/zenodo.5749843/5888237
 inputs:
 - axes: byxzc
@@ -89,6 +89,7 @@ links:
 - imjoy/BioImageIO-Packager
 - ilastik/ilastik
 - deepimagej/deepimagej
+- zero/notebook_u-net_3d_zerocostdl4mic
 maintainers:
 - github_user: esgomezm
   name: Estibaliz Gomez de Mariscal
@@ -146,6 +147,8 @@ test_inputs:
 test_outputs:
 - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/resultImage.npy
 timestamp: '2021-10-14T11:37:36.531183'
+training_data:
+  id: ilastik/plantseg_ovules
 type: model
 version: 0.1.0
 weights:

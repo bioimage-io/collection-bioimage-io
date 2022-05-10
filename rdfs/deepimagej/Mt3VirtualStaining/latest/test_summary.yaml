@@ -51,20 +51,6 @@ tests:
   - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
-  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: 'Shape (0, 0, 0, 0, 0) of test input 0 ''input_images'' does not match
-      input shape description: [1224, 1224, 1].'
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 134, in test_resource\n    f\"Shape {tuple(ipt.shape)} of test input
-        {idx} '{ipt_spec.name}' does not match \"\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/tensorflow_saved_model_bundle.zip
@@ -109,3 +95,17 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: 'Shape (0, 0, 0, 0, 0) of test input 0 ''input_images'' does not match
+      input shape description: [1224, 1224, 1].'
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 134, in test_resource\n    f\"Shape {tuple(ipt.shape)} of test input
+        {idx} '{ipt_spec.name}' does not match \"\n"]
+  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
