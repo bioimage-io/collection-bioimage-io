@@ -615,7 +615,7 @@
         "https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 1253,
+      "download_count": 1255,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
