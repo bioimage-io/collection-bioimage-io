@@ -1,4 +1,3 @@
-api_version: 0.1.2
 badges: []
 config:
   about_url: https://www.proteinatlas.org/
@@ -23,30 +22,15 @@ config:
   - hpa
 covers:
 - https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif
-dependencies:
-- https://raw.githubusercontent.com/imjoy-team/example-plugins/master/imjoy-plugins/HPA-Image-Selection.imjoy.html
-description: Resources for BioImgage.IO curated by the the cellprofiling group at
-  HPA.
-documentation: "\n\nThis plugin allows to predict the subcellular protein localization\
-  \ pattern for a provided image. \n\n## Main features\n* Prediction is performed\
-  \ with the winner of the special price of the 2018 Kaggle challenge (https://github.com/CellProfiling/HPA-Special-Prize).\
-  \ \n* Annotated localization classes are from the **HPA cell atlas**. \n* The plugin\
-  \ uses a trained **ShuffleNet (v2)** to perform the prediction directly in the browser.\
-  \ \n* Class Activation Map: https://arxiv.org/pdf/1512.04150.pdf  \n\n"
-env:
+description: ShuffleNetV2 for HPA.
+documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-classification-app.md
 format_version: 0.2.2
 icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
 id: hpa/HPA-Classification/latest
-name: HPA Collection
+name: HPA-Classification
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml
-requirements:
-- https://cdn.jsdelivr.net/npm/apexcharts
-- https://cdn.jsdelivr.net/npm/@tensorflow/tfjs
-- https://cdn.jsdelivr.net/npm/simpleheat@0.4.0/simpleheat.min.js
-- https://cdn.jsdelivr.net/gh/photopea/UTIF.js@4f1b10cb09e244cfd4f9631245d2231537148be7/UTIF.js
 source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
 tags:
-- hpa
-- bioimage.io
+- bioengine
 type: application
 version: 0.2.0
