@@ -3,9 +3,9 @@
         "background_image": "static/img/zoo-background.svg",
         "default_type": "model",
         "explore_button_text": "Start Exploring",
-        "icon": "🦒",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
         "id": "bioimageio",
-        "logo": "🦒",
+        "logo": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
         "name": "BioImage.IO",
         "resource_types": [
             "model",
@@ -13,7 +13,7 @@
             "notebook",
             "dataset"
         ],
-        "source": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.yaml",
+        "source": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.bioimage.io.yaml",
         "splash_feature_list": [
             "Integrate with Fiji, Ilastik, ImJoy",
             "Try model instantly with BioEngine",
