@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-destination="https://bioimage.io/#/">
+<html>
   <head>
     <noscript><meta id="redirect" http-equiv="refresh" content="0; url=https://bioimage.io/#/"></noscript>
   </head>
@@ -9,8 +9,7 @@
 
   <!-- Redirect in JavaScript with meta refresh fallback above in noscript -->
   <script>
-  var destination = document.documentElement.getAttribute('data-destination');
-  window.location.href = destination + (window.location.search || '') + (window.location.hash || '');
+  window.location.href = window.location.href.split("?")[0].replace('index.html', '') + 'collection.json';
   </script>
   </body>
 </html>
