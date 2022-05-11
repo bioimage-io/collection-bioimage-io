@@ -32,7 +32,7 @@ config:
   partners:
     - id: bioimageio
       source: >-
-        https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.yaml
+        https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.bioimage.io.yaml
     - id: zero
       source: >-
         https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
