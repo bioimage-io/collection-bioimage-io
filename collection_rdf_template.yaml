@@ -50,7 +50,7 @@ config:
         https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
     - id: imjoy
       source: >-
-        https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+        https://raw.githubusercontent.com/imjoy-team/bioimage-io-resources/master/collection.bioimage.io.yaml
     - id: ilastik
       source: >-
         https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
