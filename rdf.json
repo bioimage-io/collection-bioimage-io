@@ -645,15 +645,13 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png"
+        "https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
       "download_count": 1255,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
-        "imjoy/BioImageIO-Packager",
-        "imjoy/HPA-Single-Cell",
         "deepimagej/deepimagej"
       ],
       "name": "HPA Nucleus Segmentation (DPNUnet)",
@@ -662,12 +660,13 @@
       "owners": [
         47882
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6538911/rdf.yaml",
       "tags": [
         "nucleus-segmentation"
       ],
       "type": "model",
       "versions": [
+        "6538911",
         "6224243"
       ]
     },
@@ -4106,7 +4105,7 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 32,
-      "model": 92,
+      "model": 93,
       "notebook": 4
     },
     "n_resources": {
