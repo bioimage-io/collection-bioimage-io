@@ -27,6 +27,7 @@ SUMMARY_FIELDS = [
     "tags",
     "type",
     "versions",
+    "training_data",
 ]
 
 SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
