@@ -1,0 +1,5 @@
+bioimageio.spec
+bioimageio.core
+lxml
+typer
+boltons

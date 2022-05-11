@@ -30,7 +30,16 @@ def end_of_job(dist: Path, always_continue: bool):
         shutil.rmtree(str(dist))
 
 
-def main(always_continue: bool = True, skip_update_external: bool = True):
+def main(always_continue: bool = True, skip_update_external: bool = False, with_state: bool = False):
+    """ run a close equivalent to the 'update collection' (auto_update_main.yaml) workflow.
+    # todo: improve this script and substitute the GitHub Actions CI with it in order to make deployment more transparent
+
+    Args:
+        always_continue: Set to False for debugging to pause between individual deployment steps
+        skip_update_external: Don't query zenodo.org for new relevant records
+        with_state: checkout current 'gh-pages' branch and 'lst_ci_run" tag to evaluate difference only
+
+    """
     # local setup
     collection = Path(__file__).parent / "../collection"
 
@@ -44,13 +53,21 @@ def main(always_continue: bool = True, skip_update_external: bool = True):
 
     gh_pages = Path(__file__).parent / "../gh-pages"
     if not gh_pages.exists():
-        subprocess.run(["git", "worktree", "prune"], check=True)
-        subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
+        if with_state:
+            subprocess.run(["git", "worktree", "prune"], check=True)
+            subprocess.run(["git", "worktree", "add", "--detach", str(gh_pages), "gh-pages"], check=True)
+        else:
+            gh_pages.mkdir()
 
     last_collection = Path(__file__).parent / "../last_ci_run/collection"
     if not last_collection.parent.exists():
-        subprocess.run(["git", "worktree", "prune"], check=True)
-        subprocess.run(["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True)
+        if with_state:
+            subprocess.run(["git", "worktree", "prune"], check=True)
+            subprocess.run(
+                ["git", "worktree", "add", "--detach", str(last_collection.parent), "last_ci_run"], check=True
+            )
+        else:
+            last_collection.mkdir(parents=True)
 
     dist = Path(__file__).parent / "../dist"
     if dist.exists():
@@ -136,6 +153,10 @@ def main(always_continue: bool = True, skip_update_external: bool = True):
         print("incomplete collection update. needs additional run(s).")
 
     end_of_job(dist, always_continue)
+
+    # copy _header and index.html file in order to enable a valid bioimage.io preview
+    shutil.copy("_headers", str(gh_pages / "_headers"))
+    shutil.copy("index.html", str(gh_pages / "index.html"))
 
 
 if __name__ == "__main__":
