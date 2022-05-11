@@ -16,4 +16,4 @@ versions:
   rdf_source: https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/rdf.yaml
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   training_data:
-    id: ilastik/mitoem_segmentation_challenge
+    id: ilastik/vnc
