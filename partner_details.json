@@ -108,7 +108,7 @@
             "notebook",
             "application"
         ],
-        "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml",
+        "source": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-resources/master/collection.bioimage.io.yaml",
         "splash_feature_list": [
             "Minimal and flexible plugin powered web application",
             "Server-less progressive web application with offline support",
