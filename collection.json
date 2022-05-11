@@ -262,7 +262,7 @@
         "https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 2558,
+      "download_count": 2578,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -2025,6 +2025,76 @@
         "bioimage.io"
       ],
       "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Jay Kaimal"
+        },
+        {
+          "name": "Peter Thul"
+        },
+        {
+          "name": "Hao Xu"
+        },
+        {
+          "name": "Wei Ouyang"
+        },
+        {
+          "name": "Emma Lundberg"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png"
+      ],
+      "description": "Annotated images from the Human Protein Atlas for cell segmentation",
+      "download_count": 1,
+      "id": "hpa/hpa-cell-image-segmentation-dataset",
+      "license": "CC-BY-4.0",
+      "name": "HPA Cell Image Segmentation Dataset",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/hpa-cell-image-segmentation-dataset/latest/rdf.yaml",
+      "source": "https://zenodo.org/record/4665863",
+      "tags": [
+        "fluorescence-light-microscopy",
+        "2D",
+        "cells",
+        "nuclei",
+        "semantic-segmentation",
+        "instance-segmentation"
+      ],
+      "type": "dataset",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "The Human Protein Atlas"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-single-cell-classification.png"
+      ],
+      "description": "Training dataset for the Human Protein Atlas Single Cell Classification competition 2021",
+      "download_count": 1,
+      "id": "hpa/hpa-kaggle-2021-dataset",
+      "license": "CC-BY-4.0",
+      "name": "HPA Single Cell Classification Dataset 2021",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/hpa-kaggle-2021-dataset/latest/rdf.yaml",
+      "source": "https://www.kaggle.com/competitions/hpa-single-cell-image-classification/data",
+      "tags": [
+        "fluorescence-light-microscopy",
+        "2D",
+        "cells",
+        "nuclei",
+        "protein",
+        "classification"
+      ],
+      "type": "dataset",
       "versions": [
         "latest"
       ]
@@ -3997,13 +4067,13 @@
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
       "application": 104,
-      "dataset": 28,
+      "dataset": 32,
       "model": 92,
       "notebook": 4
     },
     "n_resources": {
       "application": 52,
-      "dataset": 14,
+      "dataset": 16,
       "model": 41,
       "notebook": 2
     },
