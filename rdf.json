@@ -966,7 +966,7 @@
         "2d"
       ],
       "training_data": {
-        "id": "ilastik/mitoem_segmentation_challenge"
+        "id": "ilastik/vnc"
       },
       "type": "model",
       "versions": [

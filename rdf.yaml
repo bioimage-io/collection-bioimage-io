@@ -407,7 +407,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml
   tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
-  training_data: {id: ilastik/mitoem_segmentation_challenge}
+  training_data: {id: ilastik/vnc}
   type: model
   versions: ['6406804']
 - authors:
