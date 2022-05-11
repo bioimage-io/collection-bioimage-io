@@ -36,13 +36,13 @@ versions:
       tags: []
       url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
     covers:
-    - https://github.com/qupath/qupath/blob/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png
+    - https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png
     description: QuPath is an open, powerful, flexible, extensible software platform
       for bioimage analysis.
     documentation: https://raw.githubusercontent.com/qupath/qupath/main/README.md
     format_version: 0.2.2
     git_repo: https://github.com/qupath/qupath
-    icon: https://github.com/qupath/qupath/blob/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_64.png
+    icon: https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_64.png
     id: bioimageio/qupath
     maintainers:
     - github_user: petebankhead
