@@ -277,7 +277,7 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png"
+        "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
       "download_count": 2578,
@@ -285,8 +285,7 @@
       "license": "CC-BY-4.0",
       "links": [
         "imjoy/BioImageIO-Packager",
-        "imjoy/HPA-Single-Cell",
-        "deepimagej/deepimagej"
+        "hpa/hpa-cell-image-segmentation-dataset"
       ],
       "name": "HPA Cell Segmentation (DPNUnet)",
       "nickname": "loyal-parrot",
@@ -294,12 +293,13 @@
       "owners": [
         47882
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6200636/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml",
       "tags": [
         "nucleus-segmentation"
       ],
       "type": "model",
       "versions": [
+        "6538890",
         "6200636"
       ]
     },
@@ -4105,7 +4105,7 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 32,
-      "model": 93,
+      "model": 94,
       "notebook": 4
     },
     "n_resources": {
