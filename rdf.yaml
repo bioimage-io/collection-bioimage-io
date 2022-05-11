@@ -17,6 +17,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml
   tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
+  training_data: {id: ilastik/mitoem_segmentation_challenge}
   type: model
   versions: ['5874842']
 - authors:
@@ -34,6 +35,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874741/5874742/rdf.yaml
   tags: [unet, neurons, instance-segmentation, electron-microscopy, cremi, connectomics,
     3d, affinity-prediction]
+  training_data: {id: ilastik/cremi_training_data}
   type: model
   versions: ['5874742']
 - authors:
@@ -50,6 +52,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6028281/rdf.yaml
   tags: [unet, cells, instance-segmentation, electron-microscopy, platynereis]
+  training_data: {id: ilastik/platynereis_em_training_data}
   type: model
   versions: ['6028281']
 - authors:
@@ -68,6 +71,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6321179/rdf.yaml
   tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
     unet]
+  training_data: {id: ilastik/livecell_dataset}
   type: model
   versions: ['6321179', '5869900']
 - authors:
@@ -84,6 +88,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6322939/rdf.yaml
   tags: [fluorescence-light-microscopy, nuclei, instance-segmentation, unet, 2d]
+  training_data: {id: ilastik/stardist_dsb_training_data}
   type: model
   versions: ['6322939']
 - authors:
@@ -100,6 +105,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028097/6028098/rdf.yaml
   tags: [unet, nuclei, instance-segmentation, electron-microscopy, platynereis, affinity-prediction]
+  training_data: {id: ilastik/platynereis_em_training_data}
   type: model
   versions: ['6028098']
 - authors:
@@ -159,6 +165,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml
   tags: [whole-slide-imaging, 2d, nuclei, tensorflow, unet, instance-segmentation,
     object-detection, stardist]
+  training_data: {id: deepimagej/monuseg_digital_pathology_miccai2018}
   type: model
   versions: ['6338615']
 - authors:
@@ -179,6 +186,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5888237/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, 3d, unet, fluorescence-light-microscopy,
     cell-membrane, plant, arabidopsis, tensorflow]
+  training_data: {id: ilastik/plantseg_ovules}
   type: model
   versions: ['5888237', '5877226']
 - authors:
@@ -198,6 +206,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml
   tags: [fluorescence-light-microscopy, whole-slide-imaging, other, 2d, cells, nuclei,
     tensorflow, fiji, unet, instance-segmentation, object-detection, stardist]
+  training_data: {id: ilastik/stradist_dsb_training_data}
   type: model
   versions: ['6348085']
 - authors:
@@ -215,6 +224,7 @@ collection:
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6322908/rdf.yaml
   tags: [unet, cells, transmission-light-microscopy, covid19, immunofluorescence,
     instance-segmentation]
+  training_data: {id: ilastik/covid_if_training_data}
   type: model
   versions: ['6322908']
 - authors:
@@ -231,6 +241,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, unet]
+  training_data: {id: ilastik/arabidopsis_tissue_atlas}
   type: model
   versions: ['6348729']
 - authors:
@@ -396,6 +407,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml
   tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
+  training_data: {id: ilastik/mitoem_segmentation_challenge}
   type: model
   versions: ['6406804']
 - authors:
@@ -412,6 +424,7 @@ collection:
   owners: [77626]
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6406757/rdf.yaml
   tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
+  training_data: {id: ilastik/vnc}
   type: model
   versions: ['6406757']
 - authors:
@@ -899,15 +912,14 @@ collection:
   versions: [latest]
 - badges: []
   covers: ['https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif']
-  description: Resources for BioImgage.IO curated by the the cellprofiling group at
-    HPA.
+  description: ShuffleNetV2 for HPA.
   download_count: 1
   icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
   id: hpa/HPA-Classification
-  name: HPA Collection
+  name: HPA-Classification
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml
   source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
-  tags: [hpa, bioimage.io]
+  tags: [bioengine]
   type: application
   versions: [latest]
 - authors:

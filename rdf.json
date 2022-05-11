@@ -45,6 +45,9 @@
         "unet",
         "brain"
       ],
+      "training_data": {
+        "id": "ilastik/mitoem_segmentation_challenge"
+      },
       "type": "model",
       "versions": [
         "5874842"
@@ -86,6 +89,9 @@
         "3d",
         "affinity-prediction"
       ],
+      "training_data": {
+        "id": "ilastik/cremi_training_data"
+      },
       "type": "model",
       "versions": [
         "5874742"
@@ -124,6 +130,9 @@
         "electron-microscopy",
         "platynereis"
       ],
+      "training_data": {
+        "id": "ilastik/platynereis_em_training_data"
+      },
       "type": "model",
       "versions": [
         "6028281"
@@ -165,6 +174,9 @@
         "instance-segmentation",
         "unet"
       ],
+      "training_data": {
+        "id": "ilastik/livecell_dataset"
+      },
       "type": "model",
       "versions": [
         "6321179",
@@ -205,6 +217,9 @@
         "unet",
         "2d"
       ],
+      "training_data": {
+        "id": "ilastik/stardist_dsb_training_data"
+      },
       "type": "model",
       "versions": [
         "6322939"
@@ -244,6 +259,9 @@
         "platynereis",
         "affinity-prediction"
       ],
+      "training_data": {
+        "id": "ilastik/platynereis_em_training_data"
+      },
       "type": "model",
       "versions": [
         "6028098"
@@ -381,6 +399,9 @@
         "object-detection",
         "stardist"
       ],
+      "training_data": {
+        "id": "deepimagej/monuseg_digital_pathology_miccai2018"
+      },
       "type": "model",
       "versions": [
         "6338615"
@@ -430,6 +451,9 @@
         "arabidopsis",
         "tensorflow"
       ],
+      "training_data": {
+        "id": "ilastik/plantseg_ovules"
+      },
       "type": "model",
       "versions": [
         "5888237",
@@ -482,6 +506,9 @@
         "object-detection",
         "stardist"
       ],
+      "training_data": {
+        "id": "ilastik/stradist_dsb_training_data"
+      },
       "type": "model",
       "versions": [
         "6348085"
@@ -522,6 +549,9 @@
         "immunofluorescence",
         "instance-segmentation"
       ],
+      "training_data": {
+        "id": "ilastik/covid_if_training_data"
+      },
       "type": "model",
       "versions": [
         "6322908"
@@ -560,6 +590,9 @@
         "segmentation",
         "unet"
       ],
+      "training_data": {
+        "id": "ilastik/arabidopsis_tissue_atlas"
+      },
       "type": "model",
       "versions": [
         "6348729"
@@ -933,6 +966,9 @@
         "instance-segmentation",
         "2d"
       ],
+      "training_data": {
+        "id": "ilastik/mitoem_segmentation_challenge"
+      },
       "type": "model",
       "versions": [
         "6406804"
@@ -971,6 +1007,9 @@
         "instance-segmentation",
         "2d"
       ],
+      "training_data": {
+        "id": "ilastik/vnc"
+      },
       "type": "model",
       "versions": [
         "6406757"
@@ -2013,16 +2052,15 @@
       "covers": [
         "https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif"
       ],
-      "description": "Resources for BioImgage.IO curated by the the cellprofiling group at HPA.",
+      "description": "ShuffleNetV2 for HPA.",
       "download_count": 1,
       "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
       "id": "hpa/HPA-Classification",
-      "name": "HPA Collection",
+      "name": "HPA-Classification",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/HPA-Classification/latest/rdf.yaml",
       "source": "https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html",
       "tags": [
-        "hpa",
-        "bioimage.io"
+        "bioengine"
       ],
       "type": "application",
       "versions": [
