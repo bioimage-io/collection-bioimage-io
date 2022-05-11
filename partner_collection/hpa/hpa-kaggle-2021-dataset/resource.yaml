@@ -1,0 +1,47 @@
+id: hpa/hpa-kaggle-2021-dataset
+status: accepted
+type: dataset
+versions:
+- name: HPA Single Cell Classification Dataset 2021
+  status: accepted
+  version_id: latest
+  version_name: latest
+  rdf_source:
+    authors:
+    - name: The Human Protein Atlas
+    cite: []
+    config:
+      about_url: https://www.proteinatlas.org/
+      background_image: static/img/zoo-background.svg
+      default_type: model
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      id: hpa
+      logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      name: HPA
+      resource_types:
+      - model
+      - application
+      splash_feature_list: []
+      splash_subtitle:
+      splash_title: The Human Protein Atlas
+      tags:
+      - hpa
+    covers:
+    - https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-single-cell-classification.png
+    description: Training dataset for the Human Protein Atlas Single Cell Classification
+      competition 2021
+    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-single-cell-classification.md
+    format_version: 0.2.1
+    id: hpa/hpa-kaggle-2021-dataset
+    license: CC-BY-4.0
+    name: HPA Single Cell Classification Dataset 2021
+    source: https://www.kaggle.com/competitions/hpa-single-cell-image-classification/data
+    tags:
+    - fluorescence-light-microscopy
+    - 2D
+    - cells
+    - nuclei
+    - protein
+    - classification
+    type: dataset

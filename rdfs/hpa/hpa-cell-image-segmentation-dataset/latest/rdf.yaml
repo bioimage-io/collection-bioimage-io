@@ -1,0 +1,48 @@
+authors:
+- name: Jay Kaimal
+- name: Peter Thul
+- name: Hao Xu
+- name: Wei Ouyang
+- name: Emma Lundberg
+cite:
+- doi: https://doi.org/10.5281/zenodo.4665863
+  text: Kaimal et al.
+config:
+  about_url: https://www.proteinatlas.org/
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  id: hpa
+  logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  name: HPA
+  resource_types:
+  - model
+  - application
+  splash_feature_list: []
+  splash_subtitle:
+  splash_title: The Human Protein Atlas
+  tags:
+  - hpa
+covers:
+- https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png
+description: Annotated images from the Human Protein Atlas for cell segmentation
+documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-cell-image-segmentation-dataset.md
+format_version: 0.2.1
+id: hpa/hpa-cell-image-segmentation-dataset/latest
+license: CC-BY-4.0
+name: HPA Cell Image Segmentation Dataset
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/hpa-cell-image-segmentation-dataset/latest/rdf.yaml
+source: https://zenodo.org/record/4665863
+tags:
+- fluorescence-light-microscopy
+- 2D
+- cells
+- nuclei
+- semantic-segmentation
+- instance-segmentation
+type: dataset
