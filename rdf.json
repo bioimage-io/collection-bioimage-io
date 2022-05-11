@@ -18,6 +18,45 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
+      ],
+      "description": "Mitochondria segmentation for electron microscopy.",
+      "download_count": 5215,
+      "id": "10.5281/zenodo.5874841",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-3d-unet-notebook"
+      ],
+      "name": "Mitochondria Segmentation for EM",
+      "nickname": "kind-seashell",
+      "nickname_icon": "\ud83d\udc1a",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml",
+      "tags": [
+        "3d",
+        "electron-microscopy",
+        "mitochondria",
+        "instance-segmentation",
+        "unet",
+        "brain"
+      ],
+      "type": "model",
+      "versions": [
+        "5874842"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
@@ -50,45 +89,6 @@
       "type": "model",
       "versions": [
         "5874742"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
-      ],
-      "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 5124,
-      "id": "10.5281/zenodo.5874841",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-3d-unet-notebook"
-      ],
-      "name": "Mitochondria Segmentation for EM",
-      "nickname": "kind-seashell",
-      "nickname_icon": "\ud83d\udc1a",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml",
-      "tags": [
-        "3d",
-        "electron-microscopy",
-        "mitochondria",
-        "instance-segmentation",
-        "unet",
-        "brain"
-      ],
-      "type": "model",
-      "versions": [
-        "5874842"
       ]
     },
     {
@@ -140,7 +140,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 3461,
+      "download_count": 3481,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -341,6 +341,54 @@
     {
       "authors": [
         {
+          "github_user": "uschmidt83",
+          "name": "Uwe Schmidt"
+        },
+        {
+          "github_user": "maweigert",
+          "name": "Martin Weigert"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg",
+        "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
+      ],
+      "description": "StarDist - Object Detection with Star-convex Shapes",
+      "download_count": 1832,
+      "id": "10.5281/zenodo.6338614",
+      "license": "BSD-3-Clause",
+      "links": [
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/tnbc",
+        "bioimageio/stardist",
+        "bioimageio/qupath"
+      ],
+      "name": "StarDist H&E Nuclei Segmentation",
+      "nickname": "chatty-frog",
+      "nickname_icon": "\ud83d\udc38",
+      "owners": [
+        313404
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml",
+      "tags": [
+        "whole-slide-imaging",
+        "2d",
+        "nuclei",
+        "tensorflow",
+        "unet",
+        "instance-segmentation",
+        "object-detection",
+        "stardist"
+      ],
+      "type": "model",
+      "versions": [
+        "6338615"
+      ]
+    },
+    {
+      "authors": [
+        {
           "affiliation": "UC3M, EPFL",
           "name": "DeepImageJ"
         },
@@ -386,54 +434,6 @@
       "versions": [
         "5888237",
         "5877226"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "github_user": "uschmidt83",
-          "name": "Uwe Schmidt"
-        },
-        {
-          "github_user": "maweigert",
-          "name": "Martin Weigert"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg",
-        "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
-      ],
-      "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 1764,
-      "id": "10.5281/zenodo.6338614",
-      "license": "BSD-3-Clause",
-      "links": [
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/tnbc",
-        "bioimageio/stardist",
-        "bioimageio/qupath"
-      ],
-      "name": "StarDist H&E Nuclei Segmentation",
-      "nickname": "chatty-frog",
-      "nickname_icon": "\ud83d\udc38",
-      "owners": [
-        313404
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml",
-      "tags": [
-        "whole-slide-imaging",
-        "2d",
-        "nuclei",
-        "tensorflow",
-        "unet",
-        "instance-segmentation",
-        "object-detection",
-        "stardist"
-      ],
-      "type": "model",
-      "versions": [
-        "6338615"
       ]
     },
     {
@@ -568,6 +568,43 @@
     {
       "authors": [
         {
+          "name": "Constantin Pape; @constantinpape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
+      ],
+      "description": "affinity-model",
+      "download_count": 1257,
+      "id": "10.5281/zenodo.6079314",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-2d-unet-notebook",
+        "ilastik/mws-segmentation"
+      ],
+      "name": "EpitheliaAffinityModel",
+      "nickname": "wild-whale",
+      "nickname_icon": "\ud83d\udc33",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6385590/rdf.yaml",
+      "tags": [
+        "u-net",
+        "segmentation"
+      ],
+      "type": "model",
+      "versions": [
+        "6385590",
+        "6079315"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Hao Xu"
         },
         {
@@ -604,43 +641,6 @@
     {
       "authors": [
         {
-          "name": "Constantin Pape; @constantinpape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
-      ],
-      "description": "affinity-model",
-      "download_count": 1237,
-      "id": "10.5281/zenodo.6079314",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook",
-        "ilastik/mws-segmentation"
-      ],
-      "name": "EpitheliaAffinityModel",
-      "nickname": "wild-whale",
-      "nickname_icon": "\ud83d\udc33",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6385590/rdf.yaml",
-      "tags": [
-        "u-net",
-        "segmentation"
-      ],
-      "type": "model",
-      "versions": [
-        "6385590",
-        "6079315"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "",
           "name": "ZeroCostDL4Mic team"
         },
@@ -655,7 +655,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1221,
+      "download_count": 1235,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -773,6 +773,51 @@
     {
       "authors": [
         {
+          "name": "Lorenzo Cerrone"
+        },
+        {
+          "name": "Adrian Wolny"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png",
+        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
+      ],
+      "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
+      "download_count": 1126,
+      "id": "10.5281/zenodo.6346511",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Arabidopsis Apical Stem Cells",
+      "nickname": "emotional-cricket",
+      "nickname_icon": "\ud83e\udd97",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "arabidopsis",
+        "stem-cells",
+        "cell-membrane",
+        "plant",
+        "tissue",
+        "fluorescence-light-microscopy",
+        "pytorch"
+      ],
+      "type": "model",
+      "versions": [
+        "6346512"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Shubin Dai"
         }
       ],
@@ -805,51 +850,6 @@
       "type": "model",
       "versions": [
         "5911832"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Lorenzo Cerrone"
-        },
-        {
-          "name": "Adrian Wolny"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png",
-        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
-      ],
-      "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 1094,
-      "id": "10.5281/zenodo.6346511",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "3D UNet Arabidopsis Apical Stem Cells",
-      "nickname": "emotional-cricket",
-      "nickname_icon": "\ud83e\udd97",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "3d",
-        "semantic-segmentation",
-        "arabidopsis",
-        "stem-cells",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
-      ],
-      "type": "model",
-      "versions": [
-        "6346512"
       ]
     },
     {
@@ -1083,7 +1083,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 688,
+      "download_count": 718,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -1168,11 +1168,11 @@
         }
       ],
       "covers": [
-        "https://qupath.readthedocs.io/en/latest/_static/qupath_128.png"
+        "https://github.com/qupath/qupath/blob/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png"
       ],
       "description": "QuPath is an open, powerful, flexible, extensible software platform for bioimage analysis.",
       "download_count": 1,
-      "icon": "https://qupath.readthedocs.io/en/latest/_static/qupath_128.png",
+      "icon": "https://github.com/qupath/qupath/blob/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_64.png",
       "id": "bioimageio/qupath",
       "name": "QuPath",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/qupath/latest/rdf.yaml",
@@ -4012,9 +4012,9 @@
         "background_image": "static/img/zoo-background.svg",
         "default_type": "model",
         "explore_button_text": "Start Exploring",
-        "icon": "\ud83e\udd92",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
         "id": "bioimageio",
-        "logo": "\ud83e\udd92",
+        "logo": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
         "name": "BioImage.IO",
         "resource_types": [
           "model",
@@ -4022,7 +4022,7 @@
           "notebook",
           "dataset"
         ],
-        "source": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.yaml",
+        "source": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main/collection.bioimage.io.yaml",
         "splash_feature_list": [
           "Integrate with Fiji, Ilastik, ImJoy",
           "Try model instantly with BioEngine",
