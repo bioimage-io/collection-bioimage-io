@@ -261,9 +261,6 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         rdf.pop("root_path", None)
         assert missing not in rdf.values(), rdf
 
-        if rdf["type"] == "application" and rdf["name"] != rdf["id"].split("/")[1]:
-            warnings.warn(f"BioEngine name '{rdf['name']}' not second part in id '{rdf['id']}'")
-
         # sort rdf to avoid random diffs
         rdf = rec_sort(rdf)
 
