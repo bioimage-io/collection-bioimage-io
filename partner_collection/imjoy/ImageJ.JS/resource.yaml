@@ -30,7 +30,7 @@ versions:
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
     covers: []
     description: ImageJ running in the browser
-    documentation: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/README.md
+    documentation: https://imjoy.io/docs
     format_version: 0.2.2
     icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
     id: imjoy/ImageJ.JS

@@ -30,7 +30,7 @@ versions:
       url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
     covers: []
     description: 'ImJoy: Supercharging interactivity and scalability!'
-    documentation: https://raw.githubusercontent.com/imjoy-team/ImJoy/master/README.md
+    documentation: https://imjoy.io/docs
     format_version: 0.2.2
     icon: https://imjoy.io/static/img/imjoy-icon.png
     id: imjoy/ImJoy
