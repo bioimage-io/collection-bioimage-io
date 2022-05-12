@@ -342,6 +342,27 @@ collection:
   type: model
   versions: ['6346512']
 - authors:
+  - {name: Lorenzo Cerrone}
+  - {name: Adrian Wolny}
+  covers: ['https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png',
+    'https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png']
+  description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
+    apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
+    0.25, 0.25]'
+  download_count: 1168
+  id: 10.5281/zenodo.6334881
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  nickname: laid-back-lobster
+  nickname_icon: "\U0001F99E"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml
+  tags: [plantseg, unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
+    plant, tissue, fluorescence-light-microscopy, pytorch]
+  type: model
+  versions: ['6346477', '6334882']
+- authors:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
@@ -448,27 +469,6 @@ collection:
     plant, tissue, fluorescence-light-microscopy, pytorch]
   type: model
   versions: ['6346519', '6334584']
-- authors:
-  - {name: Lorenzo Cerrone}
-  - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png',
-    'https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png']
-  description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
-    apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
-    0.25, 0.25]'
-  download_count: 868
-  id: 10.5281/zenodo.6334881
-  license: MIT
-  links: [imjoy/BioImageIO-Packager]
-  name: 2D UNet Arabidopsis Apical Stem Cells
-  nickname: laid-back-lobster
-  nickname_icon: "\U0001F99E"
-  owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml
-  tags: [plantseg, unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
-    plant, tissue, fluorescence-light-microscopy, pytorch]
-  type: model
-  versions: ['6346477', '6334882']
 - authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
