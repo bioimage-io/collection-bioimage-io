@@ -20,9 +20,9 @@ versions:
       nickname_icon: 🐊
       test_kwargs:
         onnx:
-          decimal: 2
+          decimal: 1
         torchscript:
-          decimal: 2
+          decimal: 1
   created: '2022-01-27 20:53:33.181598'
   doi: 10.5281/zenodo.5911832
   links:
