@@ -9,9 +9,12 @@ from bioimageio.spec.shared import yaml
 from utils import iterate_known_resource_versions
 
 
-def get_sub_summary(path: Path):
-    sub = yaml.load(path)
-    return {k: v for k, v in sub.items() if k != "source_name"}
+def get_sub_summaries(path: Path):
+    subs = yaml.load(path)
+    if isinstance(subs, dict):  # account for previous single sub summary format
+        subs = [subs]
+
+    return [{k: v for k, v in sub.items() if k != "source_name"} for sub in subs]
 
 
 def main(
@@ -72,11 +75,11 @@ def main(
             # append static validation summaries from artifact
             spec_versions = set()
             for sp in static_validation_summaries:
-                sub_summary = get_sub_summary(sp)
-                test_summary["tests"]["bioimageio"].append(sub_summary)
-                spec_versions.add(Version(sub_summary["bioimageio_spec_version"]))
+                for sub_summary in get_sub_summaries(sp):
+                    test_summary["tests"]["bioimageio"].append(sub_summary)
+                    spec_versions.add(Version(sub_summary["bioimageio_spec_version"]))
 
-                success &= sub_summary.get("status") == "passed"
+                    success &= sub_summary.get("status") == "passed"
 
             if local:
                 dyn_sums = sorted(
@@ -95,10 +98,10 @@ def main(
             # append dynamic validation summaries from artifact
             core_versions = set()
             for sp in dyn_sums:
-                sub_summary = get_sub_summary(sp)
-                test_summary["tests"]["bioimageio"].append(sub_summary)
-                core_versions.add(Version(sub_summary["bioimageio_core_version"]))
-                success &= sub_summary.get("status") == "passed"
+                for sub_summary in get_sub_summaries(sp):
+                    test_summary["tests"]["bioimageio"].append(sub_summary)
+                    core_versions.add(Version(sub_summary["bioimageio_core_version"]))
+                    success &= sub_summary.get("status") == "passed"
 
             if spec_versions:
                 test_summary["bioimageio_spec_version"] = str(max(spec_versions))
@@ -122,7 +125,7 @@ def main(
                 assert partner_id != "bioimageio"
                 test_summary["tests"][partner_id] = []
                 for sp in (partner_folder / krv.resource_id / krv.version_id).glob("*test_summary*.yaml"):
-                    test_summary["tests"][partner_id].append(get_sub_summary(sp))
+                    test_summary["tests"][partner_id] += get_sub_summaries(sp)
 
         # write updated test summary
         if test_summary != previous_test_summary:
