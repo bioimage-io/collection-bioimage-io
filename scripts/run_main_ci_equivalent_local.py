@@ -30,7 +30,7 @@ def end_of_job(dist: Path, always_continue: bool):
         shutil.rmtree(str(dist))
 
 
-def main(always_continue: bool = True, skip_update_external: bool = False, with_state: bool = False):
+def main(always_continue: bool = True, skip_update_external: bool = True, with_state: bool = True):
     """ run a close equivalent to the 'update collection' (auto_update_main.yaml) workflow.
     # todo: improve this script and substitute the GitHub Actions CI with it in order to make deployment more transparent
 
