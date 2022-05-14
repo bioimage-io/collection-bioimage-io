@@ -27,7 +27,7 @@ covers: []
 description: An generic BioEngine for processing images
 documentation: https://imjoy.io/docs
 format_version: 0.2.2
-icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
+icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-resources/master/src/bioengine-icon.svg
 id: imjoy/GenericBioEngineApp/latest
 name: GenericBioEngineApp
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/GenericBioEngineApp/latest/rdf.yaml
