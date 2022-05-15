@@ -136,7 +136,7 @@ tests:
   ilastik:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
-    error: '''str'' object has no attribute ''decode'''
+    error: Unable to open file (file signature not found)
     name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
@@ -151,7 +151,18 @@ tests:
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
-        line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
+        line 200, in load_model_from_hdf5\n    f = h5py.File(filepath, mode='r')\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/h5py/_hl/files.py\",
+        line 507, in __init__\n    fid = make_fid(name, mode, userblock_size, fapl,
+        fcpl, swmr=swmr)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/h5py/_hl/files.py\",
+        line 220, in make_fid\n    fid = h5f.open(name, flags, fapl=fapl)\n", '  File
+        "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+
+        ', '  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+
+        ', '  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+
+        ']
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Weight format tensorflow_js is not in supported formats ['pytorch_state_dict',
