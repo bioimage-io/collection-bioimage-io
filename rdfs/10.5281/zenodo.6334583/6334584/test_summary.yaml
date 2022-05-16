@@ -68,18 +68,6 @@ tests:
   ilastik:
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: "Output
       and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
-      elements: 7532 / 1638400 (0.46%)\nMax absolute difference: 0.00075483\nMax relative
-      difference: 0.0032108\n x: array([[[[[0.1346, 0.0898, 0.06  , ..., 0.7108, 0.6976,
-      0.591 ],\n          [0.069 , 0.0445, 0.0313, ..., 0.7929, 0.8041, 0.7187],\n
-      \         [0.0401, 0.0229, 0.017 , ..., 0.7752, 0.7838, 0.7582],...\n y: array([[[[[0.1346,
-      0.0898, 0.06  , ..., 0.7108, 0.6976, 0.591 ],\n          [0.0689, 0.0445, 0.0313,
-      ..., 0.7929, 0.8041, 0.7187],\n          [0.0401, 0.0229, 0.0169, ..., 0.7752,
-      0.7838, 0.7582],...", name: reproduce test outputs with ilastik 1.4.0b27 using
-      pytorch_state_dict weights, reason: error, status: failed, traceback: null}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6334583/6334584, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: "Output
-      and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
       elements: 7518 / 1638400 (0.459%)\nMax absolute difference: 0.00075448\nMax
       relative difference: 0.00320624\n x: array([[[[[0.1346, 0.0898, 0.06  , ...,
       0.7108, 0.6976, 0.591 ],\n          [0.069 , 0.0445, 0.0313, ..., 0.7929, 0.8041,
@@ -87,6 +75,26 @@ tests:
       y: array([[[[[0.1346, 0.0898, 0.06  , ..., 0.7108, 0.6976, 0.591 ],\n          [0.0689,
       0.0445, 0.0313, ..., 0.7929, 0.8041, 0.7187],\n          [0.0401, 0.0229, 0.0169,
       ..., 0.7752, 0.7838, 0.7582],...", name: reproduce test outputs with ilastik
-      1.4.0b26 using pytorch_state_dict weights, reason: error, status: failed, traceback: null}
+      1.4.0b27 using pytorch_state_dict weights, reason: error, status: failed, traceback: null}
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6334583/6334584, name: reproduce
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: invalid load key, '<'.
+    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 103, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 143, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_pytorch_model_adapter.py\",
+        line 30, in _load\n    state = torch.load(weights.source, map_location=self._devices[0])\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/torch/serialization.py\",
+        line 608, in load\n    return _legacy_load(opened_file, map_location, pickle_module,
+        **pickle_load_args)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/torch/serialization.py\",
+        line 777, in _legacy_load\n    magic_number = pickle_module.load(f, **pickle_load_args)\n"]
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6334583/6334584, name: reproduce
       test outputs with ilastik 1.4.0b27, reason: error, status: failed}

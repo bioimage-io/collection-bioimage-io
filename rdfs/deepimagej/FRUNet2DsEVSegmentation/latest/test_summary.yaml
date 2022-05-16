@@ -183,20 +183,12 @@ tests:
         devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
         line 108, in create_model_adapter\n    raise ValueError(f\"Weight format {weight_format}
         is not in supported formats {_WEIGHT_FORMATS}\")\n"]
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: "Output
-      and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
-      elements: 15540 / 160000 (9.71%)\nMax absolute difference: 255.\nMax relative
-      difference: 1.\n x: array([[[[0.],\n         [0.],\n         [0.],...\n y: array([[[[0],\n
-      \        [0],\n         [0],...", name: reproduce test outputs with ilastik
-      1.4.0b27 using tensorflow_saved_model_bundle weights, reason: error, status: failed,
-    traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: "Output
-      and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
-      elements: 15540 / 160000 (9.71%)\nMax absolute difference: 255.\nMax relative
-      difference: 1.\n x: array([[[[0.],\n         [0.],\n         [0.],...\n y: array([[[[0],\n
-      \        [0],\n         [0],...", name: reproduce test outputs with ilastik
-      1.4.0b26 using tensorflow_saved_model_bundle weights, reason: error, status: failed,
-    traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '''str'' object has no attribute ''decode'''

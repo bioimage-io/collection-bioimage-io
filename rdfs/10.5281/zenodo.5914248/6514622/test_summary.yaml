@@ -57,9 +57,32 @@ tests:
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: 'SavedModel file does not exist at: /tmp/bioimageio_cache/https/zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/tensorflow_saved_model_bundle.zip/{saved_model.pbtxt|saved_model.pb}'
     name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 150, in test_resource\n    results = predict(prediction_pipeline, inputs)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction.py\",
+        line 268, in predict\n    return prediction_pipeline.forward(*tagged_data)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 129, in forward\n    prediction = self.predict(*preprocessed)\n", "  File
+        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 124, in predict\n    return self._model.forward(*input_tensors)\n", "  File
+        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 59, in forward\n    return self._forward(*input_tensors)\n", "  File
+        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
+        line 112, in _forward\n    result = self._forward_tf(*data)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
+        line 83, in _forward_tf\n    graph_def = tf.saved_model.loader.load(sess,
+        [tag], self._model)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py\",
+        line 324, in new_func\n    return func(*args, **kwargs)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/saved_model/loader_impl.py\",
+        line 268, in load\n    loader = SavedModelLoader(export_dir)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/saved_model/loader_impl.py\",
+        line 284, in __init__\n    self._saved_model = parse_saved_model(export_dir)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/saved_model/loader_impl.py\",
+        line 83, in parse_saved_model\n    constants.SAVED_MODEL_FILENAME_PB))\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/unet_pancreatic_cell_segmentation.h5
