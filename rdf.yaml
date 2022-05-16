@@ -62,8 +62,7 @@ collection:
   download_count: 3563
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
-    ilastik/live-cell-boundary-model]
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   name: LiveCellSegmentationBoundaryModel
   nickname: hiding-tiger
   nickname_icon: "\U0001F405"

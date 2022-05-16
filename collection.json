@@ -156,8 +156,7 @@
         "deepimagej/deepimagej",
         "ilastik/ilastik",
         "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook",
-        "ilastik/live-cell-boundary-model"
+        "ilastik/torch-em-2d-unet-notebook"
       ],
       "name": "LiveCellSegmentationBoundaryModel",
       "nickname": "hiding-tiger",
