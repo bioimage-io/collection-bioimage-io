@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6554667
+id: 10.5281/zenodo.6554667
+nickname: talkative-fish
+nickname_icon: 🐟
+owners:
+- 147356
+status: accepted
+type: model
+versions:
+- created: '2022-05-16 19:24:49.532017'
+  doi: 10.5281/zenodo.6554668
+  name: Glial Cell SMLM (DeepSTORM - ZeroCostDL4Mic)
+  status: accepted
+  version_id: '6554668'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/df79d72f-4b04-4a51-a20b-02823131b54d/rdf.yaml
