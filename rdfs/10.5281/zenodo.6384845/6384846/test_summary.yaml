@@ -77,8 +77,8 @@ tests:
     reason: null, status: passed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6384845/6384846, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6384845/6384846, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,
     reason: null, status: passed, traceback: null}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6384845/6384846, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
