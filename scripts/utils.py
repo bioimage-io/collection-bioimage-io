@@ -120,7 +120,10 @@ def resolve_partners(
         for idx in range(len(partners)):
             partner = partners[idx]
             try:
-                partner_collection = load_raw_resource_description(partner["source"], update_to_format=current_format)
+                partner_collection = load_raw_resource_description(
+                    f"https://raw.githubusercontent.com/{partner['repository']}/{partner['branch']}/{partner['collection_file_name']}",
+                    update_to_format=current_format,
+                )
                 assert isinstance(partner_collection, Collection)
             except Exception as e:
                 warnings.warn(
