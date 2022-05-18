@@ -3,4 +3,3 @@ bioimageio.core
 lxml
 typer
 boltons
-git
