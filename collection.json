@@ -4126,6 +4126,64 @@
       "versions": [
         "latest"
       ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "Universidad Carlos III de Madrid",
+          "name": "Estibaliz G\u00f3mez-de-Mariscal"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Martin Ma\u0161ka"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Anna Kotrbov\u00e1"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Vendula Posp\u00edchalov\u00e1"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Pavel Matula"
+        },
+        {
+          "affiliation": "Universidad Carlos III de Madrid",
+          "name": "Arrate Mu\u00f1oz-Barrutia"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png"
+      ],
+      "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
+      "download_count": 0,
+      "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
+      "id": "10.5281/zenodo.6559929",
+      "license": "MIT",
+      "links": [],
+      "name": "Small Extracellular Vesicle TEM Instance Segmentation annotated data",
+      "owners": [
+        271523
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559929/6559930/rdf.yaml",
+      "source": "https://cbia.fi.muni.cz/research/segmentation/fru-net",
+      "tags": [
+        "extracellular-vesicles",
+        "segmentation",
+        "tem",
+        "exosomes",
+        "electron-microscopy",
+        "2d-segmentation",
+        "2d",
+        "segmentation",
+        "instance-segmentation"
+      ],
+      "type": "dataset",
+      "versions": [
+        "6559930"
+      ]
     }
   ],
   "config": {
@@ -4134,13 +4192,13 @@
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
       "application": 104,
-      "dataset": 34,
+      "dataset": 36,
       "model": 95,
       "notebook": 4
     },
     "n_resources": {
       "application": 52,
-      "dataset": 17,
+      "dataset": 18,
       "model": 41,
       "notebook": 2
     },

@@ -2040,12 +2040,35 @@ collection:
   tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
   type: application
   versions: [latest]
+- authors:
+  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
+  - {affiliation: Masaryk University, name: Martin Maška}
+  - {affiliation: Masaryk University, name: Anna Kotrbová}
+  - {affiliation: Masaryk University, name: Vendula Pospíchalová}
+  - {affiliation: Masaryk University, name: Pavel Matula}
+  - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
+  covers: ['https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png']
+  description: DeepImageJ compatible fully residual U-Net trained to segment small
+    extracellular vesicles in 2D TEM images
+  download_count: 0
+  download_url: https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip
+  id: 10.5281/zenodo.6559929
+  license: MIT
+  links: []
+  name: Small Extracellular Vesicle TEM Instance Segmentation annotated data
+  owners: [271523]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559929/6559930/rdf.yaml
+  source: https://cbia.fi.muni.cz/research/segmentation/fru-net
+  tags: [extracellular-vesicles, segmentation, tem, exosomes, electron-microscopy,
+    2d-segmentation, 2d, segmentation, instance-segmentation]
+  type: dataset
+  versions: ['6559930']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 104, dataset: 34, model: 95, notebook: 4}
-  n_resources: {application: 52, dataset: 17, model: 41, notebook: 2}
+  n_resource_versions: {application: 104, dataset: 36, model: 95, notebook: 4}
+  n_resources: {application: 52, dataset: 18, model: 41, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
