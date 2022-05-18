@@ -172,8 +172,8 @@ def main(always_continue: bool = True, skip_update_external: bool = True, with_s
     end_of_job(dist, always_continue)
 
     # copy _header and index.html file in order to enable a valid bioimage.io preview
-    shutil.copy("_headers", str(gh_pages / "_headers"))
-    shutil.copy("index.html", str(gh_pages / "index.html"))
+    shutil.copy(Path(__file__).parent / "../_headers", str(gh_pages / "_headers"))
+    shutil.copy(Path(__file__).parent / "../index.html", str(gh_pages / "index.html"))
 
 
 if __name__ == "__main__":
