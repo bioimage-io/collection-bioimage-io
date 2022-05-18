@@ -1,5 +1,6 @@
-bioimageio.spec
 bioimageio.core
-lxml
-typer
+bioimageio.spec
 boltons
+lxml
+requests
+typer
