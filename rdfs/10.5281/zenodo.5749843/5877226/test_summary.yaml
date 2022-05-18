@@ -29,7 +29,8 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
+    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
+      weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
@@ -39,8 +40,7 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
-      weights
+    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
@@ -48,6 +48,38 @@ tests:
         rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: Cannot load file containing pickled data when allow_pickle=False
+    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
+        data \"\n"]
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5877226, name: reproduce
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: Cannot load file containing pickled data when allow_pickle=False
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
+        data \"\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/exampleImage.npy
@@ -86,36 +118,4 @@ tests:
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5877226, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5877226, name: reproduce
       test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
-        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
-        data \"\n"]
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
-        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
-        data \"\n"]
