@@ -2,7 +2,6 @@
 import io
 import json
 import shutil
-import subprocess
 import tempfile
 import zipfile
 from pathlib import Path
@@ -10,7 +9,6 @@ from pprint import pprint
 
 import requests
 import typer
-from requests import HTTPError
 
 from dynamic_validation import main as dynamic_validation_script
 from generate_collection_rdf import main as generate_collection_rdf_script
