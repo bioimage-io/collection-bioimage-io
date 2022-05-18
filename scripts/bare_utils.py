@@ -4,7 +4,8 @@ import json
 import os
 from typing import Any, Dict, Union
 
-DEPLOYED_BASE_URL = f"https://{os.getenv('GITHUB_REPOSITORY_OWNER', 'bioimage-io')}.github.io/collection-bioimage-io"
+GITHUB_REPOSITORY_OWNER = os.getenv("GITHUB_REPOSITORY_OWNER", "bioimage-io")
+DEPLOYED_BASE_URL = f"https://{GITHUB_REPOSITORY_OWNER}.github.io/collection-bioimage-io"
 RAW_BASE_URL = f"https://raw.githubusercontent.com/{os.getenv('GITHUB_REPOSITORY_OWNER', 'bioimage-io')}/collection-bioimage-io/main"
 GH_API_URL = "https://api.github.com"
 
