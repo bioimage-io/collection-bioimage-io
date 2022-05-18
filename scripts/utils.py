@@ -9,10 +9,12 @@ from pathlib import Path
 from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
 import numpy
+import requests
 from marshmallow import missing
+from requests import HTTPError
 from ruamel.yaml import YAML, comments
 
-from bare_utils import DEPLOYED_BASE_URL
+from bare_utils import DEPLOYED_BASE_URL, GH_API_URL
 from bioimageio.spec import (
     load_raw_resource_description,
     serialize_raw_resource_description_to_dict,
@@ -143,8 +145,17 @@ def resolve_partners(
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
-            serialized_partner_collection: str = serialize_raw_resource_description(partner_collection)
-            partner_hash = sha256(serialized_partner_collection.encode("utf-8")).hexdigest()
+            r = requests.get(
+                f"{ GH_API_URL }/repos/{ partner['repository'] }/commits/{ partner['branch'] }",
+                headers=dict(Accept="application/vnd.github.v3+json"),
+            )
+            try:
+                r.raise_for_status()
+            except HTTPError as e:
+                print(e)
+                continue
+
+            partner_hash = r.json()["sha"]
             # option to skip based on partner collection diff
             if partner_hash == previous_partner_hashes.get(partner_id):
                 continue  # no change in partner collection
