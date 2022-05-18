@@ -1,0 +1,62 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/exampleImage.tiff
+  - https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/resultImage.tiff
+  - https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/resultImage_labels.tiff
+  - https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/preprocessing.txt
+  - https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/postprocessing.txt
+  - https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/postprocessingWatershed.txt
+authors:
+- affiliation: Universidad Carlos III de Madrid
+  name: Estibaliz Gómez-de-Mariscal
+- affiliation: Masaryk University
+  name: Martin Maška
+- affiliation: Masaryk University
+  name: Anna Kotrbová
+- affiliation: Masaryk University
+  name: Vendula Pospíchalová
+- affiliation: Masaryk University
+  name: Pavel Matula
+- affiliation: Universidad Carlos III de Madrid
+  name: Arrate Muñoz-Barrutia
+cite:
+- doi: https://doi.org/10.1038/s41598-019-49431-3
+  text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
+    Vesicles in Transmission Electron Microscopy Images Scientific Reports, (2019)
+config:
+  bioimageio:
+    created: '2022-05-18 10:12:14.635800'
+    doi: 10.5281/zenodo.6559930
+    owners:
+    - 271523
+    status: accepted
+    version_id: '6559930'
+    version_name: version 1
+covers:
+- https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png
+description: DeepImageJ compatible fully residual U-Net trained to segment small extracellular
+  vesicles in 2D TEM images
+documentation: https://cbia.fi.muni.cz/research/segmentation/fru-net.html
+download_url: https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip
+format_version: 0.2.2
+id: 10.5281/zenodo.6559929/6559930
+license: MIT
+links: []
+maintainers:
+- github_user: esgomezm
+  name: Estibaliz
+name: Small Extracellular Vesicle TEM Instance Segmentation annotated data
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559929/6559930/rdf.yaml
+source: https://cbia.fi.muni.cz/research/segmentation/fru-net
+tags:
+- extracellular-vesicles
+- segmentation
+- tem
+- exosomes
+- electron-microscopy
+- 2d-segmentation
+- 2d
+- segmentation
+- instance-segmentation
+type: dataset
+version: 0.1.0
