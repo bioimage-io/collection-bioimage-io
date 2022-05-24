@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 5978,
+      "download_count": 6031,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -63,7 +63,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 5934,
+      "download_count": 5989,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -107,7 +107,7 @@
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 4237,
+      "download_count": 4292,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -191,7 +191,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 3649,
+      "download_count": 3656,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -318,7 +318,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 2402,
+      "download_count": 2445,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -423,7 +423,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 2176,
+      "download_count": 2182,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -611,7 +611,7 @@
         "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
       ],
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 1466,
+      "download_count": 1495,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -698,7 +698,7 @@
         "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 1420,
+      "download_count": 1426,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -777,7 +777,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1338,
+      "download_count": 1342,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -890,44 +890,6 @@
     {
       "authors": [
         {
-          "name": "Shubin Dai"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
-      ],
-      "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 1217,
-      "id": "10.5281/zenodo.5910854",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager",
-        "hpa/hpa-kaggle-2021-dataset"
-      ],
-      "name": "HPA Bestfitting InceptionV3",
-      "nickname": "straightforward-crocodile",
-      "nickname_icon": "\ud83d\udc0a",
-      "owners": [
-        47882
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/6539073/rdf.yaml",
-      "tags": [
-        "classification",
-        "inception-v3",
-        "hpa",
-        "onnx",
-        "cells",
-        "protein-localization"
-      ],
-      "type": "model",
-      "versions": [
-        "6539073",
-        "5911832"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "EMBL Heidelberg",
           "name": "Constantin Pape"
         }
@@ -936,7 +898,7 @@
         "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
       ],
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 1206,
+      "download_count": 1223,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -965,6 +927,44 @@
       "type": "model",
       "versions": [
         "6406804"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Shubin Dai"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
+      ],
+      "description": "The winning model of HPA image classification 2021 by Bestfitting",
+      "download_count": 1221,
+      "id": "10.5281/zenodo.5910854",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager",
+        "hpa/hpa-kaggle-2021-dataset"
+      ],
+      "name": "HPA Bestfitting InceptionV3",
+      "nickname": "straightforward-crocodile",
+      "nickname_icon": "\ud83d\udc0a",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/6539073/rdf.yaml",
+      "tags": [
+        "classification",
+        "inception-v3",
+        "hpa",
+        "onnx",
+        "cells",
+        "protein-localization"
+      ],
+      "type": "model",
+      "versions": [
+        "6539073",
+        "5911832"
       ]
     },
     {
@@ -1120,7 +1120,7 @@
         "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 996,
+      "download_count": 1003,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
