@@ -68,14 +68,14 @@ tests:
   ilastik:
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: "Output
       and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
-      elements: 7532 / 1638400 (0.46%)\nMax absolute difference: 0.00075483\nMax relative
-      difference: 0.0032108\n x: array([[[[[0.1346, 0.0898, 0.06  , ..., 0.7108, 0.6976,
-      0.591 ],\n          [0.069 , 0.0445, 0.0313, ..., 0.7929, 0.8041, 0.7187],\n
-      \         [0.0401, 0.0229, 0.017 , ..., 0.7752, 0.7838, 0.7582],...\n y: array([[[[[0.1346,
-      0.0898, 0.06  , ..., 0.7108, 0.6976, 0.591 ],\n          [0.0689, 0.0445, 0.0313,
-      ..., 0.7929, 0.8041, 0.7187],\n          [0.0401, 0.0229, 0.0169, ..., 0.7752,
-      0.7838, 0.7582],...", name: reproduce test outputs with ilastik 1.4.0b27 using
-      pytorch_state_dict weights, reason: error, status: failed, traceback: null}
+      elements: 7518 / 1638400 (0.459%)\nMax absolute difference: 0.00075448\nMax
+      relative difference: 0.00320624\n x: array([[[[[0.1346, 0.0898, 0.06  , ...,
+      0.7108, 0.6976, 0.591 ],\n          [0.069 , 0.0445, 0.0313, ..., 0.7929, 0.8041,
+      0.7187],\n          [0.0401, 0.0229, 0.017 , ..., 0.7752, 0.7838, 0.7582],...\n
+      y: array([[[[[0.1346, 0.0898, 0.06  , ..., 0.7108, 0.6976, 0.591 ],\n          [0.0689,
+      0.0445, 0.0313, ..., 0.7929, 0.8041, 0.7187],\n          [0.0401, 0.0229, 0.0169,
+      ..., 0.7752, 0.7838, 0.7582],...", name: reproduce test outputs with ilastik
+      1.4.0b27 using pytorch_state_dict weights, reason: error, status: failed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6334583/6334584, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6334583/6334584, name: reproduce
