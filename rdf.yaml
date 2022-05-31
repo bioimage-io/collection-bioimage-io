@@ -59,7 +59,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png']
   description: '{organelle} segmentation in EM of platynereis.'
-  download_count: 4130
+  download_count: 4163
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -94,7 +94,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png']
   description: Nucleus segmentation for fluorescence microscopy
-  download_count: 3574
+  download_count: 3578
   id: 10.5281/zenodo.5764892
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -113,7 +113,7 @@ collection:
   covers: ['https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png']
   description: Cell segmentation model for segmenting images from the Human Protein
     Atlas
-  download_count: 2884
+  download_count: 2894
   id: 10.5281/zenodo.6200635
   license: CC-BY-4.0
   links: [imjoy/BioImageIO-Packager, hpa/hpa-cell-image-segmentation-dataset]
@@ -131,7 +131,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 2664
+  download_count: 2691
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -152,7 +152,7 @@ collection:
   covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
     'https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 2410
+  download_count: 2431
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
@@ -166,6 +166,23 @@ collection:
   training_data: {id: ilastik/stradist_dsb_training_data}
   type: model
   versions: ['6348085']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
+  description: Perform leaf segmentation in light microscopy images of Arabidopsis
+  download_count: 2233
+  id: 10.5281/zenodo.6348728
+  license: MIT
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
+  name: Arabidopsis Leaf Segmentation
+  nickname: non-judgemental-eagle
+  nickname_icon: "\U0001F985"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
+  training_data: {id: ilastik/arabidopsis_tissue_atlas}
+  type: model
+  versions: ['6348729']
 - authors:
   - {affiliation: Ikerbasque EHU UPV, name: Ignacio Arganda Carreras}
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -188,30 +205,13 @@ collection:
   type: model
   versions: ['6514622', '6514446', '5914249']
 - authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
-  description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 2210
-  id: 10.5281/zenodo.6348728
-  license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
-  name: Arabidopsis Leaf Segmentation
-  nickname: non-judgemental-eagle
-  nickname_icon: "\U0001F985"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
-  tags: [zerocostdl4mic, deepimagej, segmentation, unet]
-  training_data: {id: ilastik/arabidopsis_tissue_atlas}
-  type: model
-  versions: ['6348729']
-- authors:
   - {affiliation: 'UC3M, EPFL', name: DeepImageJ}
   - {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
   covers: ['https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png',
     'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
   description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
     of Arabidopsis thaliana ovules acquired on a confocal microscope.
-  download_count: 1932
+  download_count: 1936
   id: 10.5281/zenodo.5749843
   license: MIT
   links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -271,7 +271,7 @@ collection:
     'https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png']
   description: A 2D U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Trained on z-slices of 3D confocal images.
-  download_count: 1516
+  download_count: 1524
   id: 10.5281/zenodo.6334383
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -302,28 +302,10 @@ collection:
   type: model
   versions: ['6385590', '6079315']
 - authors:
-  - {name: Hao Xu}
-  - {name: Wei Ouyang}
-  covers: ['https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png']
-  description: Nuclei segmentation model for segmenting images from the Human Protein
-    Atlas
-  download_count: 1386
-  id: 10.5281/zenodo.6200999
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej]
-  name: HPA Nucleus Segmentation (DPNUnet)
-  nickname: conscientious-seashell
-  nickname_icon: "\U0001F41A"
-  owners: [47882]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6538911/rdf.yaml
-  tags: [nucleus-segmentation]
-  type: model
-  versions: ['6538911', '6224243']
-- authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/cover.png']
   description: Prediction Enhancer for segmenting mitochondria in EM images.
-  download_count: 1373
+  download_count: 1391
   id: 10.5281/zenodo.6406756
   license: CC-BY-4.0
   links: [ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -336,6 +318,24 @@ collection:
   training_data: {id: ilastik/vnc}
   type: model
   versions: ['6406757']
+- authors:
+  - {name: Hao Xu}
+  - {name: Wei Ouyang}
+  covers: ['https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png']
+  description: Nuclei segmentation model for segmenting images from the Human Protein
+    Atlas
+  download_count: 1390
+  id: 10.5281/zenodo.6200999
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej]
+  name: HPA Nucleus Segmentation (DPNUnet)
+  nickname: conscientious-seashell
+  nickname_icon: "\U0001F41A"
+  owners: [47882]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6538911/rdf.yaml
+  tags: [nucleus-segmentation]
+  type: model
+  versions: ['6538911', '6224243']
 - authors:
   - {affiliation: '', name: ZeroCostDL4Mic team}
   - {name: Constantin Pape}
@@ -378,7 +378,7 @@ collection:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
-  download_count: 1261
+  download_count: 1265
   id: 10.5281/zenodo.5910163
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -390,6 +390,26 @@ collection:
   tags: [classification, densenet-121, hpa, onnx, cells, protein-localization]
   type: model
   versions: ['5942853']
+- authors:
+  - {name: Adrian Wolny}
+  - {name: Lorenzo Cerrone}
+  covers: ['https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/raw.png',
+    'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
+  description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
+    of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
+  download_count: 1254
+  id: 10.5281/zenodo.6334777
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Lateral Root Primordia Cells
+  nickname: thoughtful-turtle
+  nickname_icon: "\U0001F422"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6346524/rdf.yaml
+  tags: [plantseg, unet, 3d, semantic-segmentation, arabidopsis, lateral-root, cell-membrane,
+    plant, tissue, light-sheet-fluorescence-microscopy, pytorch, plantseg]
+  type: model
+  versions: ['6346524', '6334778']
 - authors:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png']
@@ -406,26 +426,6 @@ collection:
   tags: [classification, inception-v3, hpa, onnx, cells, protein-localization]
   type: model
   versions: ['6539073', '5911832']
-- authors:
-  - {name: Adrian Wolny}
-  - {name: Lorenzo Cerrone}
-  covers: ['https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/raw.png',
-    'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
-  description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
-    of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
-  download_count: 1246
-  id: 10.5281/zenodo.6334777
-  license: MIT
-  links: [imjoy/BioImageIO-Packager]
-  name: 3D UNet Lateral Root Primordia Cells
-  nickname: thoughtful-turtle
-  nickname_icon: "\U0001F422"
-  owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6346524/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, arabidopsis, lateral-root, cell-membrane,
-    plant, tissue, light-sheet-fluorescence-microscopy, pytorch, plantseg]
-  type: model
-  versions: ['6346524', '6334778']
 - authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
@@ -454,7 +454,7 @@ collection:
     'https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png']
   description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-  download_count: 1063
+  download_count: 1071
   id: 10.5281/zenodo.6334583
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -496,7 +496,7 @@ collection:
     'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-  download_count: 798
+  download_count: 813
   id: 10.5281/zenodo.6383429
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -519,7 +519,7 @@ collection:
   covers: ['https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png']
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
-  download_count: 105
+  download_count: 110
   download_url: https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip
   id: 10.5281/zenodo.6559929
   license: MIT
