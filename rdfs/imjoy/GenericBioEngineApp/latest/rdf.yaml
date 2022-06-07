@@ -35,4 +35,4 @@ source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/s
 tags:
 - bioengine
 type: application
-version: 0.1.3
+version: 0.1.4
