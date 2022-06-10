@@ -18,6 +18,48 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
+      ],
+      "description": "Mitochondria segmentation for electron microscopy.",
+      "download_count": 7109,
+      "id": "10.5281/zenodo.5874841",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-3d-unet-notebook"
+      ],
+      "name": "Mitochondria Segmentation for EM",
+      "nickname": "kind-seashell",
+      "nickname_icon": "\ud83d\udc1a",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml",
+      "tags": [
+        "3d",
+        "electron-microscopy",
+        "mitochondria",
+        "instance-segmentation",
+        "unet",
+        "brain"
+      ],
+      "training_data": {
+        "id": "ilastik/mitoem_segmentation_challenge"
+      },
+      "type": "model",
+      "versions": [
+        "5874842"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
@@ -53,48 +95,6 @@
       "type": "model",
       "versions": [
         "5874742"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
-      ],
-      "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 6754,
-      "id": "10.5281/zenodo.5874841",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-3d-unet-notebook"
-      ],
-      "name": "Mitochondria Segmentation for EM",
-      "nickname": "kind-seashell",
-      "nickname_icon": "\ud83d\udc1a",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml",
-      "tags": [
-        "3d",
-        "electron-microscopy",
-        "mitochondria",
-        "instance-segmentation",
-        "unet",
-        "brain"
-      ],
-      "training_data": {
-        "id": "ilastik/mitoem_segmentation_challenge"
-      },
-      "type": "model",
-      "versions": [
-        "5874842"
       ]
     },
     {
@@ -191,7 +191,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 3797,
+      "download_count": 3805,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -269,42 +269,6 @@
     {
       "authors": [
         {
-          "name": "Hao Xu"
-        },
-        {
-          "name": "Wei Ouyang"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
-      ],
-      "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 3032,
-      "id": "10.5281/zenodo.6200635",
-      "license": "CC-BY-4.0",
-      "links": [
-        "imjoy/BioImageIO-Packager",
-        "hpa/hpa-cell-image-segmentation-dataset"
-      ],
-      "name": "HPA Cell Segmentation (DPNUnet)",
-      "nickname": "loyal-parrot",
-      "nickname_icon": "\ud83e\udd9c",
-      "owners": [
-        47882
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml",
-      "tags": [
-        "nucleus-segmentation"
-      ],
-      "type": "model",
-      "versions": [
-        "6538890",
-        "6200636"
-      ]
-    },
-    {
-      "authors": [
-        {
           "github_user": "uschmidt83",
           "name": "Uwe Schmidt"
         },
@@ -318,7 +282,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 2993,
+      "download_count": 3265,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -351,6 +315,42 @@
       "type": "model",
       "versions": [
         "6338615"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Hao Xu"
+        },
+        {
+          "name": "Wei Ouyang"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
+      ],
+      "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
+      "download_count": 3032,
+      "id": "10.5281/zenodo.6200635",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager",
+        "hpa/hpa-cell-image-segmentation-dataset"
+      ],
+      "name": "HPA Cell Segmentation (DPNUnet)",
+      "nickname": "loyal-parrot",
+      "nickname_icon": "\ud83e\udd9c",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml",
+      "tags": [
+        "nucleus-segmentation"
+      ],
+      "type": "model",
+      "versions": [
+        "6538890",
+        "6200636"
       ]
     },
     {
@@ -418,7 +418,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 2509,
+      "download_count": 2762,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -739,7 +739,7 @@
         "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 1560,
+      "download_count": 1568,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -777,7 +777,7 @@
         "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
       ],
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 1471,
+      "download_count": 1558,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -860,7 +860,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1411,
+      "download_count": 1415,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -891,6 +891,51 @@
       "versions": [
         "5906839",
         "5850574"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "A. Wolny"
+        },
+        {
+          "name": "V. Bondarenko"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
+      ],
+      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
+      "download_count": 1371,
+      "id": "10.5281/zenodo.6384845",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Mouse Embryo Live",
+      "nickname": "powerful-fish",
+      "nickname_icon": "\ud83d\udc1f",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "mouse-embryo",
+        "cell-membrane",
+        "animal",
+        "tissue",
+        "light-sheet-microscopy",
+        "pytorch",
+        "live"
+      ],
+      "type": "model",
+      "versions": [
+        "6384846"
       ]
     },
     {
@@ -974,51 +1019,6 @@
       "type": "model",
       "versions": [
         "5942853"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "A. Wolny"
-        },
-        {
-          "name": "V. Bondarenko"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
-      ],
-      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 1300,
-      "id": "10.5281/zenodo.6384845",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "3D UNet Mouse Embryo Live",
-      "nickname": "powerful-fish",
-      "nickname_icon": "\ud83d\udc1f",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "3d",
-        "semantic-segmentation",
-        "mouse-embryo",
-        "cell-membrane",
-        "animal",
-        "tissue",
-        "light-sheet-microscopy",
-        "pytorch",
-        "live"
-      ],
-      "type": "model",
-      "versions": [
-        "6384846"
       ]
     },
     {
