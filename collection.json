@@ -18,7 +18,7 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png"
+        "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
       "download_count": 7109,
@@ -27,29 +27,26 @@
       "links": [
         "deepimagej/deepimagej",
         "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-3d-unet-notebook"
+        "ilastik/mitoem_segmentation_challenge",
+        "imjoy/BioImageIO-Packager"
       ],
-      "name": "Mitochondria Segmentation for EM",
+      "name": "MitochondriaEMSegmentationBoundaryModel",
       "nickname": "kind-seashell",
       "nickname_icon": "\ud83d\udc1a",
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/6630266/rdf.yaml",
       "tags": [
         "3d",
         "electron-microscopy",
         "mitochondria",
         "instance-segmentation",
-        "unet",
-        "brain"
+        "unet"
       ],
-      "training_data": {
-        "id": "ilastik/mitoem_segmentation_challenge"
-      },
       "type": "model",
       "versions": [
+        "6630266",
         "5874842"
       ]
     },
@@ -4193,7 +4190,7 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 36,
-      "model": 95,
+      "model": 96,
       "notebook": 4
     },
     "n_resources": {

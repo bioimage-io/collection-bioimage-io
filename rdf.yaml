@@ -5,21 +5,21 @@ cite:
 collection:
 - authors:
   - {name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/cover.png']
+  covers: ['https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png']
   description: Mitochondria segmentation for electron microscopy.
   download_count: 7109
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
-  name: Mitochondria Segmentation for EM
+  links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
+    imjoy/BioImageIO-Packager]
+  name: MitochondriaEMSegmentationBoundaryModel
   nickname: kind-seashell
   nickname_icon: "\U0001F41A"
   owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/rdf.yaml
-  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
-  training_data: {id: ilastik/mitoem_segmentation_challenge}
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/6630266/rdf.yaml
+  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet]
   type: model
-  versions: ['5874842']
+  versions: ['6630266', '5874842']
 - authors:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
@@ -2067,7 +2067,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 104, dataset: 36, model: 95, notebook: 4}
+  n_resource_versions: {application: 104, dataset: 36, model: 96, notebook: 4}
   n_resources: {application: 52, dataset: 18, model: 41, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
