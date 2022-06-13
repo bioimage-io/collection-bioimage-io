@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 7165,
+      "download_count": 7173,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -188,7 +188,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 3826,
+      "download_count": 3830,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -279,7 +279,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 3431,
+      "download_count": 3462,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -415,7 +415,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 2907,
+      "download_count": 2935,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -808,6 +808,51 @@
     {
       "authors": [
         {
+          "name": "A. Wolny"
+        },
+        {
+          "name": "V. Bondarenko"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
+      ],
+      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
+      "download_count": 1450,
+      "id": "10.5281/zenodo.6384845",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Mouse Embryo Live",
+      "nickname": "powerful-fish",
+      "nickname_icon": "\ud83d\udc1f",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "mouse-embryo",
+        "cell-membrane",
+        "animal",
+        "tissue",
+        "light-sheet-microscopy",
+        "pytorch",
+        "live"
+      ],
+      "type": "model",
+      "versions": [
+        "6384846"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Hao Xu"
         },
         {
@@ -843,51 +888,6 @@
     {
       "authors": [
         {
-          "name": "A. Wolny"
-        },
-        {
-          "name": "V. Bondarenko"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
-      ],
-      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 1434,
-      "id": "10.5281/zenodo.6384845",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "3D UNet Mouse Embryo Live",
-      "nickname": "powerful-fish",
-      "nickname_icon": "\ud83d\udc1f",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "3d",
-        "semantic-segmentation",
-        "mouse-embryo",
-        "cell-membrane",
-        "animal",
-        "tissue",
-        "light-sheet-microscopy",
-        "pytorch",
-        "live"
-      ],
-      "type": "model",
-      "versions": [
-        "6384846"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "",
           "name": "ZeroCostDL4Mic team"
         },
@@ -902,7 +902,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1426,
+      "download_count": 1430,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
