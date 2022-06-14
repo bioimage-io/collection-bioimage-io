@@ -7,7 +7,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 7277
+  download_count: 7390
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -25,7 +25,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png']
   description: Mitochondria segmentation for electron microscopy.
-  download_count: 7173
+  download_count: 7181
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
@@ -76,7 +76,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 3830
+  download_count: 3838
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -113,7 +113,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 3462
+  download_count: 3558
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -305,7 +305,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
   description: Segmentation of mitochondria in EM images.
-  download_count: 1647
+  download_count: 1685
   id: 10.5281/zenodo.6406803
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -322,7 +322,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 1596
+  download_count: 1604
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
@@ -335,6 +335,26 @@ collection:
   tags: [u-net, segmentation]
   type: model
   versions: ['6385590', '6079315']
+- authors:
+  - {name: A. Wolny}
+  - {name: V. Bondarenko}
+  covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
+    'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
+  description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
+    images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
+  download_count: 1478
+  id: 10.5281/zenodo.6384845
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Mouse Embryo Live
+  nickname: powerful-fish
+  nickname_icon: "\U0001F41F"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml
+  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, cell-membrane, animal,
+    tissue, light-sheet-microscopy, pytorch, live]
+  type: model
+  versions: ['6384846']
 - authors:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
@@ -354,33 +374,13 @@ collection:
   type: model
   versions: ['6538911', '6224243']
 - authors:
-  - {name: A. Wolny}
-  - {name: V. Bondarenko}
-  covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
-    'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
-  description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
-    images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 1450
-  id: 10.5281/zenodo.6384845
-  license: MIT
-  links: [imjoy/BioImageIO-Packager]
-  name: 3D UNet Mouse Embryo Live
-  nickname: powerful-fish
-  nickname_icon: "\U0001F41F"
-  owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, cell-membrane, animal,
-    tissue, light-sheet-microscopy, pytorch, live]
-  type: model
-  versions: ['6384846']
-- authors:
   - {affiliation: '', name: ZeroCostDL4Mic team}
   - {name: Constantin Pape}
   - {name: DeepImageJ team}
   covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 1430
+  download_count: 1434
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
