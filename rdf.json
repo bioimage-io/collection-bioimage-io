@@ -104,7 +104,7 @@
         "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 5739,
+      "download_count": 5813,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -188,7 +188,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 3846,
+      "download_count": 3854,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -648,7 +648,7 @@
         "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 1820,
+      "download_count": 1824,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
