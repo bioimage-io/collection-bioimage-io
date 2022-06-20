@@ -7,7 +7,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 7774
+  download_count: 7803
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -25,7 +25,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png']
   description: Mitochondria segmentation for electron microscopy.
-  download_count: 7237
+  download_count: 7245
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
@@ -76,7 +76,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 3893
+  download_count: 3903
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -96,7 +96,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 3859
+  download_count: 3884
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -211,7 +211,7 @@ collection:
     'https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png']
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 2417
+  download_count: 2425
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation]
@@ -265,6 +265,23 @@ collection:
   versions: ['5888237', '5877226']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
+  description: Segmentation of mitochondria in EM images.
+  download_count: 1857
+  id: 10.5281/zenodo.6406803
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  name: MitchondriaEMSegmentation2D
+  nickname: shivering-raccoon
+  nickname_icon: "\U0001F99D"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml
+  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
+  training_data: {id: ilastik/vnc}
+  type: model
+  versions: ['6406804']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png']
   description: Cell segmentation for immunofluorescence microscopy.
   download_count: 1850
@@ -281,23 +298,6 @@ collection:
   training_data: {id: ilastik/covid_if_training_data}
   type: model
   versions: ['6322908']
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
-  description: Segmentation of mitochondria in EM images.
-  download_count: 1842
-  id: 10.5281/zenodo.6406803
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
-  name: MitchondriaEMSegmentation2D
-  nickname: shivering-raccoon
-  nickname_icon: "\U0001F99D"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/rdf.yaml
-  tags: [unet, mitochondria, electron-microscopy, instance-segmentation, 2d]
-  training_data: {id: ilastik/vnc}
-  type: model
-  versions: ['6406804']
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
@@ -322,7 +322,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 1657
+  download_count: 1665
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
@@ -342,7 +342,7 @@ collection:
     'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 1603
+  download_count: 1626
   id: 10.5281/zenodo.6384845
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -380,7 +380,7 @@ collection:
   covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 1464
+  download_count: 1468
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
