@@ -73,30 +73,12 @@ collection:
   type: model
   versions: ['6028098']
 - authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
-  description: Cell segmentation for phase-contrast microscopy.
-  download_count: 3903
-  id: 10.5281/zenodo.5869899
-  license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
-  name: LiveCellSegmentationBoundaryModel
-  nickname: hiding-tiger
-  nickname_icon: "\U0001F405"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6321179/rdf.yaml
-  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
-    unet]
-  training_data: {id: ilastik/livecell_dataset}
-  type: model
-  versions: ['6321179', '5869900']
-- authors:
   - {github_user: uschmidt83, name: Uwe Schmidt}
   - {github_user: maweigert, name: Martin Weigert}
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 3884
+  download_count: 3941
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -111,6 +93,24 @@ collection:
   training_data: {id: deepimagej/monuseg_digital_pathology_miccai2018}
   type: model
   versions: ['6338615']
+- authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png']
+  description: Cell segmentation for phase-contrast microscopy.
+  download_count: 3909
+  id: 10.5281/zenodo.5869899
+  license: CC-BY-4.0
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  name: LiveCellSegmentationBoundaryModel
+  nickname: hiding-tiger
+  nickname_icon: "\U0001F405"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6321179/rdf.yaml
+  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
+    unet]
+  training_data: {id: ilastik/livecell_dataset}
+  type: model
+  versions: ['6321179', '5869900']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png']
@@ -152,7 +152,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 3318
+  download_count: 3360
   id: 10.5281/zenodo.6348728
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -191,7 +191,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 2731
+  download_count: 2771
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -267,7 +267,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
   description: Segmentation of mitochondria in EM images.
-  download_count: 1857
+  download_count: 1894
   id: 10.5281/zenodo.6406803
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -380,7 +380,7 @@ collection:
   covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 1468
+  download_count: 1472
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
