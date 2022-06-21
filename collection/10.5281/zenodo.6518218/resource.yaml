@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6518218
+id: 10.5281/zenodo.6518218
+nickname: creative-dromedary
+nickname_icon: 🐪
+owners:
+- 147356
+status: accepted
+type: model
+versions:
+- created: '2022-05-04 16:02:25.922192'
+  doi: 10.5281/zenodo.6518219
+  name: Widefield Super-resolution (GAN - TxRed)
+  status: accepted
+  version_id: '6518219'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/fb4d2ec5-cdc8-48d9-8830-df151ce9a59c/rdf.yaml
