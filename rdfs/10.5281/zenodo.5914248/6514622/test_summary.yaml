@@ -25,12 +25,38 @@ tests:
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej: []
   ilastik:
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: Unable to open file (file signature not found)
+    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 103, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 143, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_keras_model_adapter.py\",
+        line 39, in _load\n    self._model = keras.models.load_model(weight_file)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
+        line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
+        custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
+        line 200, in load_model_from_hdf5\n    f = h5py.File(filepath, mode='r')\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/h5py/_hl/files.py\",
+        line 507, in __init__\n    fid = make_fid(name, mode, userblock_size, fapl,
+        fcpl, swmr=swmr)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/h5py/_hl/files.py\",
+        line 220, in make_fid\n    fid = h5f.open(name, flags, fapl=fapl)\n", '  File
+        "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+
+        ', '  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+
+        ', '  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+
+        ']
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/unet_pancreatic_cell_segmentation.h5
@@ -74,32 +100,6 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: Unable to open file (file signature not found)
-    name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 103, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 143, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_keras_model_adapter.py\",
-        line 39, in _load\n    self._model = keras.models.load_model(weight_file)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
-        line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
-        custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
-        line 200, in load_model_from_hdf5\n    f = h5py.File(filepath, mode='r')\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/h5py/_hl/files.py\",
-        line 507, in __init__\n    fid = make_fid(name, mode, userblock_size, fapl,
-        fcpl, swmr=swmr)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/h5py/_hl/files.py\",
-        line 220, in make_fid\n    fid = h5f.open(name, flags, fapl=fapl)\n", '  File
-        "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
-
-        ', '  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
-
-        ', '  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
-
-        ']
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
