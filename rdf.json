@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 8385,
+      "download_count": 8475,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
