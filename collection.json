@@ -145,7 +145,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 6069,
+      "download_count": 6166,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -337,7 +337,7 @@
         "https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png"
       ],
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 3716,
+      "download_count": 3726,
       "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
@@ -547,7 +547,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 2505,
+      "download_count": 2525,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -642,7 +642,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 2073,
+      "download_count": 2083,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -677,6 +677,49 @@
       "versions": [
         "5888237",
         "5877226"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
+      ],
+      "description": "Cell segmentation for immunofluorescence microscopy.",
+      "download_count": 1900,
+      "id": "10.5281/zenodo.5847355",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-2d-unet-notebook"
+      ],
+      "name": "CovidIFCellSegmentationBoundaryModel",
+      "nickname": "powerful-chipmunk",
+      "nickname_icon": "\ud83d\udc3f",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6322908/rdf.yaml",
+      "tags": [
+        "unet",
+        "cells",
+        "transmission-light-microscopy",
+        "covid19",
+        "immunofluorescence",
+        "instance-segmentation"
+      ],
+      "training_data": {
+        "id": "ilastik/covid_if_training_data"
+      },
+      "type": "model",
+      "versions": [
+        "6322908"
       ]
     },
     {
@@ -723,49 +766,6 @@
       "versions": [
         "6346500",
         "6334384"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
-      ],
-      "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 1890,
-      "id": "10.5281/zenodo.5847355",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook"
-      ],
-      "name": "CovidIFCellSegmentationBoundaryModel",
-      "nickname": "powerful-chipmunk",
-      "nickname_icon": "\ud83d\udc3f",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6322908/rdf.yaml",
-      "tags": [
-        "unet",
-        "cells",
-        "transmission-light-microscopy",
-        "covid19",
-        "immunofluorescence",
-        "instance-segmentation"
-      ],
-      "training_data": {
-        "id": "ilastik/covid_if_training_data"
-      },
-      "type": "model",
-      "versions": [
-        "6322908"
       ]
     },
     {
@@ -823,7 +823,7 @@
         "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 1744,
+      "download_count": 1764,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -888,6 +888,56 @@
     {
       "authors": [
         {
+          "affiliation": "",
+          "name": "ZeroCostDL4Mic team"
+        },
+        {
+          "name": "Constantin Pape"
+        },
+        {
+          "name": "DeepImageJ team"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
+      ],
+      "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
+      "download_count": 1518,
+      "id": "10.5281/zenodo.5817052",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager",
+        "zero/notebook_u-net_2d_zerocostdl4mic_deepimagej",
+        "deepimagej/deepimagej"
+      ],
+      "name": "Neuron Segmentation in 2D EM (Membrane)",
+      "nickname": "creative-panda",
+      "nickname_icon": "\ud83d\udc3c",
+      "owners": [
+        271523
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml",
+      "tags": [
+        "zerocostdl4mic",
+        "deepimagej",
+        "segmentation",
+        "electron-microscopy",
+        "unet",
+        "isbi2012-challenge",
+        "neurons",
+        "brain",
+        "boundary-segmentation",
+        "2d"
+      ],
+      "type": "model",
+      "versions": [
+        "5906839",
+        "5850574"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Adrian Wolny"
         },
         {
@@ -930,56 +980,6 @@
       "versions": [
         "6346524",
         "6334778"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "affiliation": "",
-          "name": "ZeroCostDL4Mic team"
-        },
-        {
-          "name": "Constantin Pape"
-        },
-        {
-          "name": "DeepImageJ team"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
-      ],
-      "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1508,
-      "id": "10.5281/zenodo.5817052",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager",
-        "zero/notebook_u-net_2d_zerocostdl4mic_deepimagej",
-        "deepimagej/deepimagej"
-      ],
-      "name": "Neuron Segmentation in 2D EM (Membrane)",
-      "nickname": "creative-panda",
-      "nickname_icon": "\ud83d\udc3c",
-      "owners": [
-        271523
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml",
-      "tags": [
-        "zerocostdl4mic",
-        "deepimagej",
-        "segmentation",
-        "electron-microscopy",
-        "unet",
-        "isbi2012-challenge",
-        "neurons",
-        "brain",
-        "boundary-segmentation",
-        "2d"
-      ],
-      "type": "model",
-      "versions": [
-        "5906839",
-        "5850574"
       ]
     },
     {
@@ -1038,7 +1038,7 @@
         "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
       ],
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 1402,
+      "download_count": 1412,
       "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
@@ -1074,7 +1074,7 @@
         "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
       ],
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 1387,
+      "download_count": 1397,
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
