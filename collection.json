@@ -4181,6 +4181,49 @@
       "versions": [
         "6348085"
       ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Jonas Hellgoth"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png"
+      ],
+      "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
+      "download_count": 0,
+      "id": "10.5281/zenodo.6808325",
+      "license": "CC-BY-4.0",
+      "links": [
+        "ilastik/ilastik",
+        "deepimagej/deepimagej",
+        "ilastik/torch-em-3d-unet-notebook",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "EM3DBoundaryEnhancer",
+      "nickname": "determined-chipmunk",
+      "nickname_icon": "\ud83d\udc3f",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6808325/6808413/rdf.yaml",
+      "tags": [
+        "unet",
+        "cells",
+        "electron-microscopy",
+        "instance-segmentation",
+        "3d",
+        "shallow2deep"
+      ],
+      "training_data": {
+        "id": "ilastik/vnc"
+      },
+      "type": "model",
+      "versions": [
+        "6808413"
+      ]
     }
   ],
   "config": {
@@ -4190,13 +4233,13 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 36,
-      "model": 96,
+      "model": 98,
       "notebook": 4
     },
     "n_resources": {
       "application": 52,
       "dataset": 18,
-      "model": 41,
+      "model": 42,
       "notebook": 2
     },
     "partners": [
