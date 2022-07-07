@@ -1,0 +1,158 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/per_sample_scale_range.ijm
+authors:
+- affiliation: EMBL Heidelberg
+  name: Jonas Hellgoth
+cite:
+- doi: https://doi.org/10.5281/zenodo.5108853
+  text: training library
+- doi: https://doi.org/10.1007/978-3-319-46723-8_49
+  text: architecture
+- doi: https://doi.org/10.3389/fcomp.2022.805166
+  text: shallow2deep
+config:
+  bioimageio:
+    created: '2022-07-07 21:30:58.116303'
+    doi: 10.5281/zenodo.6808413
+    nickname: determined-chipmunk
+    nickname_icon: 🐿
+    owners:
+    - 77626
+    status: accepted
+    version_id: '6808413'
+    version_name: version 2
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input_0.npy
+        pixel_size:
+          x: 1
+          y: 1
+          z: 1
+        size: 256 x 256 x 32 x 1
+      memory_peak:
+      outputs:
+      - name: test_output_0.npy
+        size: 256 x 256 x 32 x 1
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png
+description: Prediction enhancer for segmenting cell boundaries in EM images.
+documentation: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/documentation.md
+format_version: 0.4.6
+id: 10.5281/zenodo.6808325/6808413
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: czyx
+      max_percentile: 100
+      min_percentile: 0
+      mode: per_sample
+    name: scale_range
+  shape:
+    min:
+    - 1
+    - 1
+    - 32
+    - 128
+    - 128
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- ilastik/ilastik
+- deepimagej/deepimagej
+- ilastik/torch-em-3d-unet-notebook
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: constantinpape
+  name: constantinpape
+name: EM3DBoundaryEnhancer
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 8
+  - 8
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6808325/6808413/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/sample_output_0.tif
+tags:
+- unet
+- cells
+- electron-microscopy
+- instance-segmentation
+- 3d
+- shallow2deep
+test_inputs:
+- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/test_input_0.npy
+test_outputs:
+- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/test_output_0.npy
+timestamp: '2022-07-07T22:19:35.377364'
+training_data:
+  id: ilastik/vnc
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/unet.py:UNet3d
+    architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
+    dependencies: conda:https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/environment.yaml
+    kwargs:
+      depth: 4
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 32
+      out_channels: 1
+      postprocessing:
+      return_side_outputs: false
+    sha256: 613211374a1b7955848f5261dedbfe439c6cf12f74dd363426af8bfde37e099e
+    source: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/weights.pt
+  torchscript:
+    sha256: e9c75b6b789b980caf605876e6651cc8b5db0325047cbf5ee24f7d2e4ac65499
+    source: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/weights-torchscript.pt
