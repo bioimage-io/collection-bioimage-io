@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-07-07 21:30:58.116303'
+  doi: 10.5281/zenodo.6808413
+  name: EM3DBoundaryEnhancer
+  status: accepted
+  version_id: '6808413'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/rdf.yaml
 - created: '2022-07-07 19:57:46.482832'
   doi: 10.5281/zenodo.6808326
   name: EM3DBoundaryEnhancer
