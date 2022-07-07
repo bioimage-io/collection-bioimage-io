@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6808325
+id: 10.5281/zenodo.6808325
+nickname: determined-chipmunk
+nickname_icon: 🐿
+owners:
+- 77626
+status: accepted
+type: model
+versions:
+- created: '2022-07-07 19:57:46.482832'
+  doi: 10.5281/zenodo.6808326
+  name: EM3DBoundaryEnhancer
+  status: accepted
+  version_id: '6808326'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/d60f6e26-04ce-4bb3-bf13-4b9387bb7208/rdf.yaml
