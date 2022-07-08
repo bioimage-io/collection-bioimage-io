@@ -393,10 +393,10 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/cover.png"
+        "https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 3077,
+      "download_count": 3093,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -411,7 +411,7 @@
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6811498/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6811922/rdf.yaml",
       "tags": [
         "unet",
         "mitochondria",
@@ -425,6 +425,7 @@
       },
       "type": "model",
       "versions": [
+        "6811922",
         "6811498",
         "6406757"
       ]
@@ -4279,7 +4280,7 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 36,
-      "model": 101,
+      "model": 102,
       "notebook": 4
     },
     "n_resources": {

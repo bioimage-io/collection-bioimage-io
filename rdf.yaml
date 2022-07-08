@@ -165,9 +165,9 @@ collection:
   versions: ['6538890', '6200636']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/cover.png']
+  covers: ['https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png']
   description: Prediction enhancer for segmenting mitochondria in EM images.
-  download_count: 3077
+  download_count: 3093
   id: 10.5281/zenodo.6406756
   license: CC-BY-4.0
   links: [ilastik/torch-em-2d-unet-notebook, ilastik/ilastik, deepimagej/deepimagej,
@@ -176,12 +176,12 @@ collection:
   nickname: hiding-blowfish
   nickname_icon: "\U0001F421"
   owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6811498/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6811922/rdf.yaml
   tags: [unet, mitochondria, electron-microscopy, instance-segmentation, shallow2deep,
     2d]
   training_data: {id: ilastik/mitoem_segmentation_challenge}
   type: model
-  versions: ['6811498', '6406757']
+  versions: ['6811922', '6811498', '6406757']
 - authors:
   - {affiliation: Ikerbasque EHU UPV, name: Ignacio Arganda Carreras}
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
@@ -2106,7 +2106,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 104, dataset: 36, model: 101, notebook: 4}
+  n_resource_versions: {application: 104, dataset: 36, model: 102, notebook: 4}
   n_resources: {application: 52, dataset: 18, model: 43, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
