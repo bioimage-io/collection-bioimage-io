@@ -7,12 +7,19 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-07-08 14:41:44.879575'
+  doi: 10.5281/zenodo.6811498
+  name: EnhancerMitochondriaEM2D
+  status: accepted
+  version_id: '6811498'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/rdf.yaml
 - created: '2022-04-01 15:46:55.680792'
   doi: 10.5281/zenodo.6406757
   name: EnhancerMitochondriaEM2D
   status: accepted
+  training_data:
+    id: ilastik/vnc
   version_id: '6406757'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/rdf.yaml
-  training_data:
-    id: ilastik/vnc
