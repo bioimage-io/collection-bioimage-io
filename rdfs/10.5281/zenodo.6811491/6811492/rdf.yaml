@@ -1,0 +1,173 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/per_sample_scale_range.ijm
+authors:
+- affiliation: EMBL Heidelberg
+  name: Constantin Pape
+cite:
+- doi: https://doi.org/10.5281/zenodo.5108853
+  text: training library
+- doi: https://doi.org/10.1007/978-3-319-46723-8_49
+  text: architecture
+- doi: https://doi.org/10.1007/978-3-030-59722-1_7
+  text: data
+- doi: https://doi.org/10.3389/fcomp.2022.805166
+  text: shallow2deep
+config:
+  bioimageio:
+    created: '2022-07-08 14:35:48.861260'
+    doi: 10.5281/zenodo.6811492
+    nickname: independent-shrimp
+    nickname_icon: 🦐
+    owners:
+    - 77626
+    status: accepted
+    version_id: '6811492'
+    version_name: version 1
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input_0.npy
+        pixel_size:
+          x: 1
+          y: 1
+          z: 1
+        size: 256 x 256 x 32 x 1
+      memory_peak:
+      outputs:
+      - name: test_output_0.npy
+        size: 256 x 256 x 32 x 2
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png
+description: Prediction enhancer for segmenting mitochondria in EM images.
+documentation: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/documentation.md
+format_version: 0.4.6
+id: 10.5281/zenodo.6811491/6811492
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: czyx
+      max_percentile: 100
+      min_percentile: 0
+      mode: per_sample
+    name: scale_range
+  shape:
+    min:
+    - 1
+    - 1
+    - 16
+    - 128
+    - 128
+    step:
+    - 0
+    - 0
+    - 8
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- deepimagej/deepimagej
+- ilastik/torch-em-3d-unet-notebook
+- ilastik/ilastik
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: constantinpape
+  name: constantinpape
+name: EnhancerMitochondriaEM3D
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 4
+  - 32
+  - 32
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 2.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6811491/6811492/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/sample_output_0.tif
+tags:
+- unet
+- mitochondria
+- electron-microscopy
+- instance-segmentation
+- shallow2deep
+- 3d
+test_inputs:
+- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/test_input_0.npy
+test_outputs:
+- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/test_output_0.npy
+timestamp: '2022-07-08T13:55:44.346024'
+training_data:
+  id: ilastik/mitoem_segmentation_challenge
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/unet.py:AnisotropicUNet
+    architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
+    dependencies: conda:https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/environment.yaml
+    kwargs:
+      anisotropic_kernel: false
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 32
+      out_channels: 2
+      postprocessing:
+      return_side_outputs: false
+      scale_factors:
+      - - 1
+        - 2
+        - 2
+      - - 2
+        - 2
+        - 2
+      - - 2
+        - 2
+        - 2
+      - - 2
+        - 2
+        - 2
+    sha256: 72e755ec59f31a714956cf136c0fb2f28177230e8abe906ffc12d76cf3844628
+    source: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/weights.pt
+  torchscript:
+    sha256: e9b8085c55caca5c1fc264ad06b0861a69728f50fc6b1e51a94d878c6f97f21f
+    source: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/weights-torchscript.pt
