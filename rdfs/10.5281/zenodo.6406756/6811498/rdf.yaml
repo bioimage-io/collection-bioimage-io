@@ -1,0 +1,155 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/per_sample_scale_range.ijm
+authors:
+- affiliation: EMBL Heidelberg
+  name: Constantin Pape
+cite:
+- doi: https://doi.org/10.5281/zenodo.5108853
+  text: training library
+- doi: https://doi.org/10.1007/978-3-319-24574-4_28
+  text: architecture
+- doi: https://doi.org/10.1007/978-3-030-59722-1_7
+  text: data
+- doi: https://doi.org/10.3389/fcomp.2022.805166
+  text: shallow2deep
+config:
+  bioimageio:
+    created: '2022-07-08 14:41:44.879575'
+    doi: 10.5281/zenodo.6811498
+    nickname: hiding-blowfish
+    nickname_icon: 🐡
+    owners:
+    - 77626
+    status: accepted
+    version_id: '6811498'
+    version_name: version 2
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input_0.npy
+        pixel_size:
+          x: 1
+          y: 1
+          z: 1
+        size: 512 x 512 x 1 x 1
+      memory_peak:
+      outputs:
+      - name: test_output_0.npy
+        size: 512 x 512 x 1 x 2
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/cover.png
+description: Prediction enhancer for segmenting mitochondria in EM images.
+documentation: https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/documentation.md
+format_version: 0.4.6
+id: 10.5281/zenodo.6406756/6811498
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: cyx
+      max_percentile: 100
+      min_percentile: 0
+      mode: per_sample
+    name: scale_range
+  shape:
+    min:
+    - 1
+    - 1
+    - 256
+    - 256
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- ilastik/torch-em-2d-unet-notebook
+- ilastik/ilastik
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: constantinpape
+  name: constantinpape
+name: EnhancerMitochondriaEM2D
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 32
+  - 32
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 2.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6811498/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/sample_output_0.tif
+tags:
+- unet
+- mitochondria
+- electron-microscopy
+- instance-segmentation
+- shallow2deep
+- 2d
+test_inputs:
+- https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/test_input_0.npy
+test_outputs:
+- https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/test_output_0.npy
+timestamp: '2022-07-08T12:53:06.410838'
+training_data:
+  id: ilastik/mitoem_segmentation_challenge
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/unet.py:UNet2d
+    architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
+    dependencies: conda:https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/environment.yaml
+    kwargs:
+      depth: 4
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 64
+      out_channels: 2
+      postprocessing:
+      return_side_outputs: false
+    sha256: afc9a185f89be44eeeabe12454a589fb9572b5bae62c64fb4215c3015fa81f0d
+    source: https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/weights.pt
+  torchscript:
+    sha256: 0a5f6e018828c723369904231ad48b45e0126b417aeaaba977d15a08b897d035
+    source: https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/weights-torchscript.pt
