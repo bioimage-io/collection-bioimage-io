@@ -59,7 +59,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png']
   description: '{organelle} segmentation in EM of platynereis.'
-  download_count: 6505
+  download_count: 6525
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -132,7 +132,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 3438
+  download_count: 3454
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -227,7 +227,7 @@ collection:
     'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
   description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
     of Arabidopsis thaliana ovules acquired on a confocal microscope.
-  download_count: 2116
+  download_count: 2118
   id: 10.5281/zenodo.5749843
   license: MIT
   links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -516,7 +516,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth}
   covers: ['https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png']
   description: Prediction enhancer for segmenting cell boundaries in EM images.
-  download_count: 20
+  download_count: 22
   id: 10.5281/zenodo.6808325
   license: CC-BY-4.0
   links: [ilastik/ilastik, deepimagej/deepimagej, ilastik/torch-em-3d-unet-notebook,
