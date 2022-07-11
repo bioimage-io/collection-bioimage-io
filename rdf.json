@@ -934,6 +934,42 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
+      ],
+      "description": "The winning model of HPA image classification 2019 by Bestfitting",
+      "download_count": 1450,
+      "id": "10.5281/zenodo.5910163",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "HPA Bestfitting Densenet",
+      "nickname": "polite-pig",
+      "nickname_icon": "\ud83d\udc16",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml",
+      "tags": [
+        "classification",
+        "densenet-121",
+        "hpa",
+        "onnx",
+        "cells",
+        "protein-localization"
+      ],
+      "type": "model",
+      "versions": [
+        "5942853"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Shubin Dai"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
       ],
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
@@ -963,42 +999,6 @@
       "versions": [
         "6539073",
         "5911832"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Shubin Dai"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
-      ],
-      "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 1447,
-      "id": "10.5281/zenodo.5910163",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "HPA Bestfitting Densenet",
-      "nickname": "polite-pig",
-      "nickname_icon": "\ud83d\udc16",
-      "owners": [
-        47882
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml",
-      "tags": [
-        "classification",
-        "densenet-121",
-        "hpa",
-        "onnx",
-        "cells",
-        "protein-localization"
-      ],
-      "type": "model",
-      "versions": [
-        "5942853"
       ]
     },
     {
