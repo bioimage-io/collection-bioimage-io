@@ -1,6 +1,8 @@
 rdf_sha256: b828a5a1682febc3612ea3ba12655b1bb3d5a5bfef6f6bbbb5b247abf9b230fc
 tests:
   deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/DeepSTORMZeroCostDL4Mic/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
@@ -18,8 +20,6 @@ tests:
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 717, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for deepimagej/DeepSTORMZeroCostDL4Mic/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: '{''test_inputs'': [''Missing data for required field.''], ''test_outputs'':
@@ -42,23 +42,6 @@ tests:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
-        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
-        data \"\n"]
-  - {error: Missing/invalid weight formats for deepimagej/DeepSTORMZeroCostDL4Mic/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: Cannot load file containing pickled data when allow_pickle=False
     name: reproduce test outputs with ilastik 1.4.0b26 using keras_hdf5 weights
     reason: error
     status: failed
@@ -72,43 +55,6 @@ tests:
   - {error: Missing/invalid weight formats for deepimagej/DeepSTORMZeroCostDL4Mic/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy
-      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy)'
-    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
-        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 112, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
-        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
-        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 86, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 60, in transform_list\n    return [self.transform(subnode, **kwargs)
-        for subnode in node]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 60, in <listcomp>\n    return [self.transform(subnode, **kwargs) for
-        subnode in node]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 206, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root_path)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/functools.py\",
-        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 212, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
-        output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
-        ({e})\")\n"]
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy
@@ -147,3 +93,57 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: Cannot load file containing pickled data when allow_pickle=False
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
+        in model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 126, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
+        data \"\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
+    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy
+      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/deepstorm_zerocostdl4mic/exampleImage.npy)'
+    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
+        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_resource_description(raw_rd=raw_rd,
+        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 112, in resolve_raw_resource_description\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
+        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
+        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 86, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 86, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 60, in transform_list\n    return [self.transform(subnode, **kwargs)
+        for subnode in node]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 60, in <listcomp>\n    return [self.transform(subnode, **kwargs) for
+        subnode in node]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 54, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 206, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root_path)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/functools.py\",
+        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 212, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
+        output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
+        ({e})\")\n"]
+  - {error: Missing/invalid weight formats for deepimagej/DeepSTORMZeroCostDL4Mic/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
