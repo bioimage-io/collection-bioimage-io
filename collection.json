@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 7458,
+      "download_count": 7467,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -193,7 +193,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 4535,
+      "download_count": 4591,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -334,7 +334,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 4117,
+      "download_count": 4124,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -644,7 +644,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 2199,
+      "download_count": 2239,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -999,7 +999,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1563,
+      "download_count": 1566,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
