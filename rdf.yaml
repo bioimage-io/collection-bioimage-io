@@ -288,7 +288,7 @@ collection:
     'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
   description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
     of Arabidopsis thaliana ovules acquired on a confocal microscope.
-  download_count: 2137
+  download_count: 2139
   id: 10.5281/zenodo.5749843
   license: MIT
   links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej, zero/notebook_u-net_3d_zerocostdl4mic]
