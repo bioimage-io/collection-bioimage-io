@@ -66,14 +66,6 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5877226, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '''str'' object has no attribute ''decode'''
@@ -92,5 +84,13 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5877226, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5877226, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
