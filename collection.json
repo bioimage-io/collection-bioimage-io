@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 9266,
+      "download_count": 9327,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -58,6 +58,47 @@
     {
       "authors": [
         {
+          "name": "Constantin Pape; @constantinpape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
+      ],
+      "description": "Cell segmentation in EM of platynereis.",
+      "download_count": 7530,
+      "id": "10.5281/zenodo.6028280",
+      "license": "CC-BY-4.0",
+      "links": [
+        "deepimagej/deepimagej",
+        "ilastik/ilastik",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-3d-unet-notebook"
+      ],
+      "name": "PlatynereisEMcellsSegmentationBoundaryModel",
+      "nickname": "willing-hedgehog",
+      "nickname_icon": "\ud83e\udd94",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6028281/rdf.yaml",
+      "tags": [
+        "unet",
+        "cells",
+        "instance-segmentation",
+        "electron-microscopy",
+        "platynereis"
+      ],
+      "training_data": {
+        "id": "ilastik/platynereis_em_training_data"
+      },
+      "type": "model",
+      "versions": [
+        "6028281"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Constantin Pape"
         }
       ],
@@ -65,7 +106,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 7485,
+      "download_count": 7487,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -101,51 +142,10 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png"
-      ],
-      "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 7469,
-      "id": "10.5281/zenodo.6028280",
-      "license": "CC-BY-4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-3d-unet-notebook"
-      ],
-      "name": "PlatynereisEMcellsSegmentationBoundaryModel",
-      "nickname": "willing-hedgehog",
-      "nickname_icon": "\ud83e\udd94",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6028281/rdf.yaml",
-      "tags": [
-        "unet",
-        "cells",
-        "instance-segmentation",
-        "electron-microscopy",
-        "platynereis"
-      ],
-      "training_data": {
-        "id": "ilastik/platynereis_em_training_data"
-      },
-      "type": "model",
-      "versions": [
-        "6028281"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Constantin Pape; @constantinpape"
-        }
-      ],
-      "covers": [
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 6888,
+      "download_count": 6946,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -193,7 +193,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 4682,
+      "download_count": 4736,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -239,7 +239,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 4351,
+      "download_count": 4405,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -285,7 +285,7 @@
         "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 4346,
+      "download_count": 4398,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -378,7 +378,7 @@
         "https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/cover.png"
       ],
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 3782,
+      "download_count": 3784,
       "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
@@ -467,7 +467,7 @@
         "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 3487,
+      "download_count": 3490,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -501,7 +501,7 @@
         "https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 3173,
+      "download_count": 3175,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -546,7 +546,7 @@
         "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
       ],
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 2769,
+      "download_count": 2816,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -593,7 +593,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 2662,
+      "download_count": 2664,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -691,7 +691,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 2139,
+      "download_count": 2141,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -742,7 +742,7 @@
         "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png"
       ],
       "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
-      "download_count": 2075,
+      "download_count": 2101,
       "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
@@ -785,7 +785,7 @@
         "https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 1956,
+      "download_count": 1958,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
@@ -827,7 +827,7 @@
         "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 1901,
+      "download_count": 1903,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -869,7 +869,7 @@
         "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 1805,
+      "download_count": 1824,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -914,7 +914,7 @@
         "https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 1676,
+      "download_count": 1678,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
@@ -960,7 +960,7 @@
         "https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 1593,
+      "download_count": 1595,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -999,7 +999,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1574,
+      "download_count": 1576,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -1047,7 +1047,7 @@
         "https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 1493,
+      "download_count": 1495,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1093,7 +1093,7 @@
         "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 1479,
+      "download_count": 1481,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -1135,7 +1135,7 @@
         "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
       ],
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 1474,
+      "download_count": 1476,
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
@@ -1173,7 +1173,7 @@
         "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
       ],
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 1468,
+      "download_count": 1470,
       "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
@@ -1230,7 +1230,7 @@
         "https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 544,
+      "download_count": 548,
       "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
       "id": "10.5281/zenodo.6559929",
       "license": "MIT",
@@ -1268,7 +1268,7 @@
         "https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 162,
+      "download_count": 186,
       "id": "10.5281/zenodo.6811491",
       "license": "CC-BY-4.0",
       "links": [
@@ -1311,7 +1311,7 @@
         "https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png"
       ],
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 43,
+      "download_count": 45,
       "id": "10.5281/zenodo.6808325",
       "license": "CC-BY-4.0",
       "links": [
