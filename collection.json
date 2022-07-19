@@ -334,7 +334,7 @@
         "https://zenodo.org/api/files/f2a796dc-27f5-43b8-aadb-981898f39b87/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 4142,
+      "download_count": 4144,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -365,6 +365,51 @@
       "versions": [
         "6321179",
         "5869900"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Lorenzo Cerrone"
+        },
+        {
+          "name": "Adrian Wolny"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png",
+        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
+      ],
+      "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
+      "download_count": 3799,
+      "id": "10.5281/zenodo.6346511",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Arabidopsis Apical Stem Cells",
+      "nickname": "emotional-cricket",
+      "nickname_icon": "\ud83e\udd97",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "arabidopsis",
+        "stem-cells",
+        "cell-membrane",
+        "plant",
+        "tissue",
+        "fluorescence-light-microscopy",
+        "pytorch"
+      ],
+      "type": "model",
+      "versions": [
+        "6346512"
       ]
     },
     {
@@ -407,51 +452,6 @@
       "type": "model",
       "versions": [
         "6322939"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Lorenzo Cerrone"
-        },
-        {
-          "name": "Adrian Wolny"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png",
-        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
-      ],
-      "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 3752,
-      "id": "10.5281/zenodo.6346511",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "3D UNet Arabidopsis Apical Stem Cells",
-      "nickname": "emotional-cricket",
-      "nickname_icon": "\ud83e\udd97",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "3d",
-        "semantic-segmentation",
-        "arabidopsis",
-        "stem-cells",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
-      ],
-      "type": "model",
-      "versions": [
-        "6346512"
       ]
     },
     {
@@ -644,7 +644,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 2307,
+      "download_count": 2350,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
