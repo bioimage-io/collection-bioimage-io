@@ -12,7 +12,7 @@ versions:
 - created: '2022-06-08 00:04:57.581394'
   doi: 10.5281/zenodo.6622089
   name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
-  status: accepted
+  status: blocked
   version_id: '6622089'
   version_name: version 5
   rdf_source: https://zenodo.org/api/files/2c6aa544-1689-4cd6-a069-3061573bf1b4/rdf.yaml
