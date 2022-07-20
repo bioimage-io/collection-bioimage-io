@@ -1,0 +1,32 @@
+bioimageio_spec_version: 0.4.6.post3
+rdf_sha256: da60e08ea1685f074ca8c0b861894b6ffcd526feb63396912b297365fd321503
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.6post3
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [{''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']},
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}
+  - bioimageio_spec_version: 0.4.6post3
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.6
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags for categories: [{''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']},
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'':
+        [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
+      weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
+          'pytorch_version'}
+  deepimagej: []
+  ilastik: []

@@ -1,0 +1,167 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/zero_mean_unit_variance.ijm
+authors:
+- name: Constantin Pape; @constantinpape
+cite:
+- text: training library
+  url: https://doi.org/10.5281/zenodo.5108853
+- text: architecture
+  url: https://doi.org/10.1007/978-3-319-46723-8_49
+- text: segmentation algorithm
+  url: https://doi.org/10.1038/nmeth.4151
+- text: data
+  url: https://doi.org/10.1101/2020.02.26.961037
+config:
+  _conceptdoi: 10.5281/zenodo.6028280
+  bioimageio:
+    created: '2022-06-15 22:12:29.012734'
+    doi: 10.5281/zenodo.6647695
+    nickname: willing-hedgehog
+    nickname_icon: 🦔
+    owners:
+    - 77626
+    status: accepted
+    version_id: '6647695'
+    version_name: version 2
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: zero_mean_unit_variance.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: sample_input_0.tif
+        pixel_size:
+          x: 1
+          y: 1
+          z: 1
+        size: 256 x 256 x 32 x 1
+      memory_peak:
+      outputs:
+      - name: sample_output_0.tif
+        size: 256 x 256 x 32 x 1
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png
+description: Cell segmentation in EM of platynereis.
+documentation: https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/documentation.md
+format_version: 0.4.6
+id: 10.5281/zenodo.6028280/6647695
+inputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: uint8
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: czyx
+      mode: per_sample
+    name: zero_mean_unit_variance
+  shape:
+    min:
+    - 1
+    - 1
+    - 32
+    - 32
+    - 32
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- deepimagej/deepimagej
+- ilastik/platynereis_em_training_data
+- ilastik/ilastik
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: constantinpape
+  name: constantinpape
+name: PlatynereisEMcellsSegmentationBoundaryModel
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 8
+  - 8
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6647695/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/sample_output_0.tif
+tags:
+- unet
+- cells
+- instance-segmentation
+- electron-microscopy
+- platynereis
+test_inputs:
+- https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/test_input_0.npy
+test_outputs:
+- https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/test_output_0.npy
+timestamp: '2022-02-09T16:24:38.391028'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/unet.py:AnisotropicUNet
+    architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
+    kwargs:
+      anisotropic_kernel: false
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 32
+      out_channels: 1
+      postprocessing:
+      return_side_outputs: false
+      scale_factors:
+      - - 2
+        - 2
+        - 2
+      - - 2
+        - 2
+        - 2
+      - - 2
+        - 2
+        - 2
+      - - 2
+        - 2
+        - 2
+    sha256: 0e91d6567ee59c2b1b583519b91329e4e8ec6cccb374cda8107d5ec3c6d745c2
+    source: https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/weights.pt
+  torchscript:
+    sha256: 1796d1c25e0eee21c953addda903a2eccd1a73a91b9de684743999c153297236
+    source: https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/weights-torchscript.pt
