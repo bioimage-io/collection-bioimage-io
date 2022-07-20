@@ -1,0 +1,16 @@
+status: blocked
+versions:
+- version_id: '5940479'
+  doi: 10.5281/zenodo.5940479
+  created: '2022-02-01 16:27:42.327446'
+  status: blocked
+  name: 3D U-Net - ZeroCostDL4Mic
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/92c3196a-02c6-4ebe-8b5c-326737e9d9d0/rdf.yaml
+id: 10.5281/zenodo.5940478
+doi: 10.5281/zenodo.5940478
+type: model
+owners:
+- 147356
+nickname: proactive-koala
+nickname_icon: '🐨'
