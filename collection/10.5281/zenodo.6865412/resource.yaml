@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6865412
+id: 10.5281/zenodo.6865412
+nickname: serious-hamster
+nickname_icon: 🐹
+owners:
+- 370412
+status: accepted
+type: model
+versions:
+- created: '2022-07-20 06:12:22.899844'
+  doi: 10.5281/zenodo.6865413
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6865413'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/3c83cf8b-ba95-4fb8-983e-91c473cd7367/rdf.yaml
