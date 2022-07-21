@@ -1,3 +1,4 @@
+bioimageio_core_version: 0.5.5
 bioimageio_spec_version: 0.4.6.post3
 rdf_sha256: da60e08ea1685f074ca8c0b861894b6ffcd526feb63396912b297365fd321503
 status: passed
@@ -28,5 +29,7 @@ tests:
         [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
+  - {bioimageio_core_version: 0.5.5, bioimageio_spec_version: 0.4.6post3, error: null,
+    name: reproduced test outputs from test inputs, status: passed, traceback: null}
   deepimagej: []
   ilastik: []
