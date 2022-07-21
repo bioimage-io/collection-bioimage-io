@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6827058
+id: 10.5281/zenodo.6827058
+nickname: reserved-hamster
+nickname_icon: 🐹
+owners:
+- 147356
+status: accepted
+type: model
+versions:
+- created: '2022-07-13 12:49:10.210429'
+  doi: 10.5281/zenodo.6827059
+  name: HeLa DIC Cell Segmentation (U-Net)
+  status: accepted
+  version_id: '6827059'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/8a755717-3253-4ac3-bb39-d57bb8c95240/rdf.yaml
