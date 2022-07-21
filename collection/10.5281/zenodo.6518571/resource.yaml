@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6518571
+id: 10.5281/zenodo.6518571
+nickname: tidy-flamingo
+nickname_icon: 🦩
+owners:
+- 147356
+status: accepted
+type: model
+versions:
+- created: '2022-05-04 17:12:16.707414'
+  doi: 10.5281/zenodo.6518572
+  name: Widefield Super-resolution (GAN - DAPI)
+  status: accepted
+  version_id: '6518572'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/a182eb09-17bf-40ca-a482-87bba7f2b2b2/rdf.yaml
