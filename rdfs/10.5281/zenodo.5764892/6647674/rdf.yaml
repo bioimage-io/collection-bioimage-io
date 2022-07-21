@@ -53,7 +53,7 @@ covers:
 - https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png
 description: Nucleus segmentation for fluorescence microscopy
 documentation: https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/documentation.md
-format_version: 0.4.6
+format_version: 0.4.7
 id: 10.5281/zenodo.5764892/6647674
 inputs:
 - axes: bcyx

@@ -53,7 +53,7 @@ covers:
 - https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png
 description: Cell segmentation for phase-contrast microscopy.
 documentation: https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/documentation.md
-format_version: 0.4.6
+format_version: 0.4.7
 id: 10.5281/zenodo.5869899/6647688
 inputs:
 - axes: bcyx

@@ -1,0 +1,27 @@
+bioimageio_spec_version: 0.4.7
+rdf_sha256: 15b689f917d5189ca765e3e95bcfc14d429da2986163fe2b7516e58c793e3e01
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.7
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.3 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_spec_version: 0.4.7
+    error: null
+    name: bioimageio.spec static validation of dataset RDF 0.2.3
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {}
+  deepimagej:
+  - {error: Missing/invalid weight formats for zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
+  - {error: Missing/invalid weight formats for zero/Dataset_YOLOv2_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

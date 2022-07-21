@@ -52,7 +52,7 @@ covers:
 - https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png
 description: Cell segmentation in EM of platynereis.
 documentation: https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/documentation.md
-format_version: 0.4.6
+format_version: 0.4.7
 id: 10.5281/zenodo.6028280/6647695
 inputs:
 - axes: bczyx

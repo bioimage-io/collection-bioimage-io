@@ -53,7 +53,7 @@ covers:
 - https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/cover.png
 description: Cell segmentation for immunofluorescence microscopy.
 documentation: https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/documentation.md
-format_version: 0.4.6
+format_version: 0.4.7
 id: 10.5281/zenodo.5847355/6647683
 inputs:
 - axes: bcyx

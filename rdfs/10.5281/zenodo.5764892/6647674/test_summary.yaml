@@ -1,12 +1,12 @@
 bioimageio_core_version: 0.5.5
-bioimageio_spec_version: 0.4.6.post3
-rdf_sha256: b48d4571c4c10863548430d35eb54b39921dba0d25f1d7d029e421e1d62a888b
-status: passed
+bioimageio_spec_version: 0.4.7
+rdf_sha256: c7c31846fc7daf111a0ac81d83a3bb89fe0ea218e6e4572a83c58bfc8d419ca8
+status: failed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.6post3
+  - bioimageio_spec_version: 0.4.7
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.7 with update to latest
       format version
     nested_errors: {}
     status: passed
@@ -16,9 +16,9 @@ tests:
         ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
         ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_spec_version: 0.4.6post3
+  - bioimageio_spec_version: 0.4.7
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6
+    name: bioimageio.spec static validation of model RDF 0.4.7
     nested_errors: {}
     status: passed
     traceback: null
@@ -27,7 +27,50 @@ tests:
         ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
         ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - {bioimageio_core_version: 0.5.5, bioimageio_spec_version: 0.4.6post3, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.5
+    bioimageio_spec_version: 0.4.6post3
+    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
+      0.4.5, 0.4.6.'']}'
+    name: load resource description
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_tests.py\",
+        line 117, in test_resource\n    rd = load_resource_description(rdf, weights_priority_order=None
+        if weight_format is None else [weight_format])\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/io_.py\",
+        line 177, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/marshmallow/schema.py\",
+        line 722, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/marshmallow/schema.py\",
+        line 909, in _do_load\n    raise exc\n"]
+  - bioimageio_core_version: 0.5.5
+    bioimageio_spec_version: 0.4.6post3
+    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
+      0.4.5, 0.4.6.'']}'
+    name: load resource description
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_tests.py\",
+        line 117, in test_resource\n    rd = load_resource_description(rdf, weights_priority_order=None
+        if weight_format is None else [weight_format])\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/io_.py\",
+        line 177, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/marshmallow/schema.py\",
+        line 722, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.10/site-packages/marshmallow/schema.py\",
+        line 909, in _do_load\n    raise exc\n"]
+  - bioimageio_core_version: 0.5.5
+    bioimageio_spec_version: 0.4.6post3
+    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
+      0.4.5, 0.4.6.'']}'
+    name: load resource description
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda/envs/6647674/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\",
+        line 117, in test_resource\n    rd = load_resource_description(rdf, weights_priority_order=None
+        if weight_format is None else [weight_format])\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.9/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.9/site-packages/bioimageio/spec/io_.py\",
+        line 177, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda/envs/6647674/lib/python3.9/site-packages/marshmallow/schema.py\",
+        line 722, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda/envs/6647674/lib/python3.9/site-packages/marshmallow/schema.py\",
+        line 909, in _do_load\n    raise exc\n"]
   deepimagej: []
   ilastik: []
