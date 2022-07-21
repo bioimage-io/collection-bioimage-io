@@ -37,7 +37,7 @@ versions:
     description: Labelled images for instance segmentation of cell nuclei in digital
       pathology datasets (MoNuSeg 2018 Challenge).
     documentation: https://monuseg.grand-challenge.org/
-    format_version: 0.2.2
+    format_version: 0.2.3
     id: deepimagej/MoNuSeg_digital_pathology_miccai2018
     maintainers: []
     name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018

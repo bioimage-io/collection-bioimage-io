@@ -58,7 +58,7 @@ versions:
       on and make sure you cite these.
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
-    format_version: 0.2.2
+    format_version: 0.2.3
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic
     links:

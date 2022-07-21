@@ -33,7 +33,7 @@ covers:
 description: Annotated images from the Human Protein Atlas for cell segmentation
 documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-cell-image-segmentation-dataset.md
 download_url: https://zenodo.org/record/4665863/files/hpa_cell_segmentation_dataset_v2_512x512_4train_159test.zip?download=1
-format_version: 0.2.1
+format_version: 0.2.3
 id: hpa/hpa-cell-image-segmentation-dataset/latest
 license: CC-BY-4.0
 name: HPA Cell Image Segmentation Dataset

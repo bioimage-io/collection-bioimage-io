@@ -26,7 +26,7 @@ config:
 covers: []
 description: ImageJ running in the browser
 documentation: https://imjoy.io/docs
-format_version: 0.2.2
+format_version: 0.2.3
 icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
 id: imjoy/ImageJ.JS/latest
 name: ImageJ.JS

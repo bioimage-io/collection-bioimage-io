@@ -27,7 +27,7 @@ covers:
 - https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png
 description: Train a 2d UNet for semgentation tasks
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/notebook_src/torch-em-3d-unet-notebook.md
-format_version: 0.2.2
+format_version: 0.2.3
 id: ilastik/torch-em-3d-unet-notebook/latest
 license: CC-BY-4.0
 maintainers:

@@ -33,7 +33,7 @@ versions:
       competition 2021
     documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-single-cell-classification.md
     download_url: https://www.kaggle.com/competitions/hpa-single-cell-image-classification/data
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: hpa/hpa-kaggle-2021-dataset
     license: CC-BY-4.0
     name: HPA Single Cell Classification Dataset 2021

@@ -53,7 +53,7 @@ versions:
       to use it in Google Colaboratory. It will download the original code and dataset,
       and make the inference connecting with Google's GPU.
     documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
-    format_version: 0.2.2
+    format_version: 0.2.3
     id: deepimagej/EVsTEMsegmentationFRUNet
     links:
     - deepimagej/FRUNet2DsEVSegmentation

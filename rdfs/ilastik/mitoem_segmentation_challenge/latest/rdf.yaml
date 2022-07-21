@@ -28,7 +28,7 @@ covers:
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png
 description: Training data for mitochondria segmentation in 3d EM.
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
-format_version: 0.2.1
+format_version: 0.2.3
 id: ilastik/mitoem_segmentation_challenge/latest
 maintainers:
 - affiliation: EMBL Heidelberg

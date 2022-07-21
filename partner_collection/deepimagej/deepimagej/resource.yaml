@@ -36,7 +36,7 @@ versions:
     description: Export BioImage.IO model packages for deepImageJ from a model description
       file
     documentation: https://deepimagej.github.io/deepimagej/
-    format_version: 0.2.2
+    format_version: 0.2.3
     icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     id: deepimagej/deepimagej
     maintainers: []

@@ -54,7 +54,7 @@ description: Single Molecule Localization Microscopy (SMLM) image reconstruction
   ThunderSTORM plugin.
 documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
 download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-format_version: 0.2.2
+format_version: 0.2.3
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ/latest
 links:

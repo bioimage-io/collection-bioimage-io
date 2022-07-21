@@ -32,7 +32,7 @@ versions:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_cover.jpg
     description: Training data for cell segmentation in Arabidopsis ovules.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/plantseg_ovules.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/plantseg_ovules
     license: CC-BY-4.0
     maintainers:

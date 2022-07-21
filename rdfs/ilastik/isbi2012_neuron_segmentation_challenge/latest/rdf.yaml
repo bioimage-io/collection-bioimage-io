@@ -28,7 +28,7 @@ covers:
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi2012-cover1.png
 description: Training data from challenge on 2d EM segmentation of neuronal processes.
 documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/isbi.md
-format_version: 0.2.1
+format_version: 0.2.3
 id: ilastik/isbi2012_neuron_segmentation_challenge/latest
 maintainers:
 - affiliation: EMBL Heidelberg

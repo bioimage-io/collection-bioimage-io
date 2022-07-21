@@ -31,7 +31,7 @@ versions:
     covers: []
     description: 'ImJoy: Supercharging interactivity and scalability!'
     documentation: https://imjoy.io/docs
-    format_version: 0.2.2
+    format_version: 0.2.3
     icon: https://imjoy.io/static/img/imjoy-icon.png
     id: imjoy/ImJoy
     name: ImJoy

@@ -16,7 +16,7 @@ config:
 description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
   deep learning models in ImageJ and Fiji.
 documentation: https://deepimagej.github.io/deepimagej/index.html
-format_version: 0.2.2
+format_version: 0.2.3
 git_repo: https://github.com/deepimagej/deepimagej-plugin
 icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
 id: deepimagej/deepimagej-web/latest

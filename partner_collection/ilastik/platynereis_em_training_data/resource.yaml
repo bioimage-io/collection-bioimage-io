@@ -33,7 +33,7 @@ versions:
     description: Training data for EM segmentation of cellular membranes, nuclei,
       cuticle and cilia in Platynereis.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/platynereis_em_training_data
     license: CC-BY-4.0
     maintainers:

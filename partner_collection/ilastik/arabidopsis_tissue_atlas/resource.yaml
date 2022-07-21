@@ -30,7 +30,7 @@ versions:
     description: 3D digital tissue atlas of Arabidopsis thaliana, containing image
       data and cell segmentations.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/arabidopsis_tissue_atlas.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/arabidopsis_tissue_atlas
     maintainers:
     - affiliation: EMBL Heidelberg

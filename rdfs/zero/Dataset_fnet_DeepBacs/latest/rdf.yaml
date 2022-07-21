@@ -1,0 +1,52 @@
+authors:
+- name: Christoph Spahn
+- name: Mike Heilemann
+cite:
+- doi: https://doi.org/10.1101/2021.11.03.467152
+  text: 'Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal,
+    Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus
+    Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using
+    open-source deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152'
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: application
+  explore_button_text: Start Exploring
+  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  id: zero
+  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  name: ZeroCostDL4Mic
+  resource_types:
+  - model
+  - application
+  - dataset
+  splash_feature_list: []
+  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
+    Microscopy
+  splash_title: ZeroCostDL4Mic
+  tags:
+  - ZeroCostDL4Mic
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  version: 1.7.1
+covers:
+- https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png
+description: Training and test images of E. coli cells for artificial labeling of
+  membranes in brightfield images using fnet or CARE, as well as trained models for
+  prediction of super-resolution membranes.
+documentation: https://github.com/HenriquesLab/DeepBacs/wiki
+download_url: https://zenodo.org/record/5551123
+format_version: 0.2.3
+id: zero/Dataset_fnet_DeepBacs/latest
+maintainers: []
+name: Artificial labeling of E. coli membranes dataset - DeepBacs
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
+tags:
+- fnet
+- CARE
+- artificial labelling
+- DeepBacs
+- 2D
+type: dataset

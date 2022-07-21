@@ -45,7 +45,7 @@ covers:
 description: Interactive instance segmentation using Kaibu and Cellpose.
 documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
 download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
-format_version: 0.2.2
+format_version: 0.2.3
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic/latest
 links:

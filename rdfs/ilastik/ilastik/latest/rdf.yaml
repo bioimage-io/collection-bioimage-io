@@ -28,7 +28,7 @@ config:
 covers: []
 description: the interactive learning and segmentation toolkit
 documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
-format_version: 0.2.2
+format_version: 0.2.3
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/master/image/ilastik-fist-icon.png
 id: ilastik/ilastik/latest
 maintainers:

@@ -1,0 +1,54 @@
+id: zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic
+status: accepted
+type: dataset
+versions:
+- name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
+  status: accepted
+  version_id: latest
+  version_name: latest
+  rdf_source:
+    authors:
+    - name: Guillaume Jacquemet
+    cite:
+    - doi: https://doi.org/10.1038/s41467-021-22518-0
+      text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
+        for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+    - doi: https://doi.org/10.1101/2020.09.22.306233
+      text: 'Elnaz Fazeli, Nathan H. Roy, Gautier Follain, Romain F. Laine, Lucas
+        von Chamier, Pekka E. Hänninen, John E. Eriksson, Jean-Yves Tinevez, Guillaume
+        Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv,
+        2020. DOI: https://doi.org/10.1101/2020.09.22.306233'
+    config:
+      background_image: static/img/zoo-background.svg
+      default_type: application
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      id: zero
+      logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      name: ZeroCostDL4Mic
+      resource_types:
+      - model
+      - application
+      - dataset
+      splash_feature_list: []
+      splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
+        in Microscopy
+      splash_title: ZeroCostDL4Mic
+      tags:
+      - ZeroCostDL4Mic
+      url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+      version: 1.7.1
+    covers:
+    - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
+    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via
+      manual segmentation
+    documentation: https://zenodo.org/record/4034976
+    download_url: https://zenodo.org/record/4034976
+    format_version: 0.2.3
+    id: zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic
+    maintainers: []
+    name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
+    tags:
+    - StarDist
+    - ZeroCostDL4Mic
+    type: dataset

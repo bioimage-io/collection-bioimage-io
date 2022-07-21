@@ -33,7 +33,7 @@ versions:
     covers: []
     description: Segmentation plugin for models that predict pixel affinities
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.md
-    format_version: 0.2.2
+    format_version: 0.2.3
     icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png
     id: ilastik/mws-segmentation
     maintainers:

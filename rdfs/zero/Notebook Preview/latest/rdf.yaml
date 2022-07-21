@@ -31,7 +31,7 @@ config:
 covers: []
 description: Previewing Jupyter notebook without a Jupyter server
 documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-format_version: 0.2.2
+format_version: 0.2.3
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
 id: zero/Notebook Preview/latest
 maintainers: []

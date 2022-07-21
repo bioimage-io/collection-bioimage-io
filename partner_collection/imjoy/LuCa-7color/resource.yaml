@@ -34,7 +34,7 @@ versions:
     description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
     documentation: https://imjoy.io/docs
     download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
-    format_version: 0.2.2
+    format_version: 0.2.3
     id: imjoy/LuCa-7color
     license: CC-BY-4.0
     links:

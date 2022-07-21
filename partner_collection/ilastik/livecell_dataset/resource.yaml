@@ -32,7 +32,7 @@ versions:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg
     description: LIVECell—A large-scale dataset for label-free live cell segmentation
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/livecell_dataset
     license: CC-BY-NC-4.0
     maintainers:

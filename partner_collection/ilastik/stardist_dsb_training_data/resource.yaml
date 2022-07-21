@@ -33,7 +33,7 @@ versions:
     description: Subset of the nucleus segmentation training data from the 2018 Kaggle
       Data Science Bowl.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/stardist_dsb_training_data
     license: CC0-1.0
     maintainers:

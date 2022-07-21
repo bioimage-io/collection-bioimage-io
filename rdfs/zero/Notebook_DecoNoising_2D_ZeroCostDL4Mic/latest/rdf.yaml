@@ -44,7 +44,7 @@ description: Self-supervised denoising of 2D images. DecoNoising 2D is deep-lear
   cite these.
 documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
 download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
-format_version: 0.2.2
+format_version: 0.2.3
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic/latest
 links:

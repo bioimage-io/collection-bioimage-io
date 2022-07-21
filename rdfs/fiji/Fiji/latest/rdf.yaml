@@ -27,7 +27,7 @@ config:
 description: Fiji is an image processing package — a "batteries-included" distribution
   of ImageJ, bundling many plugins which facilitate scientific image analysis.
 documentation: https://fiji.sc/
-format_version: 0.2.2
+format_version: 0.2.3
 git_repo: https://github.com/fiji/fiji,
 icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
 id: fiji/Fiji/latest

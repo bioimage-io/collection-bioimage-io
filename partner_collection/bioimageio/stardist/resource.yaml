@@ -43,7 +43,7 @@ versions:
     - https://raw.githubusercontent.com/stardist/stardist/master/images/stardist_logo.jpg
     description: Object Detection with Star-convex Shapes
     documentation: https://raw.githubusercontent.com/stardist/stardist/master/README.md
-    format_version: 0.2.2
+    format_version: 0.2.3
     git_repo: https://github.com/stardist/stardist
     icon: https://raw.githubusercontent.com/stardist/stardist/master/images/stardist_logo.jpg
     id: bioimageio/stardist

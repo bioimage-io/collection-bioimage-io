@@ -32,7 +32,7 @@ versions:
     - https://s3-eu-west-1.amazonaws.com/pfigshare-u-previews/1288336/preview.jpg
     description: Training data for cell segmentation in Arabidopsis lateral root.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/vnc.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/vnc
     license: CC-BY-4.0
     maintainers:

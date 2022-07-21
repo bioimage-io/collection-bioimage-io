@@ -26,7 +26,7 @@ config:
 covers: []
 description: Exporting BioImage.IO model packages from the model description file
 documentation: https://imjoy.io/docs
-format_version: 0.2.2
+format_version: 0.2.3
 icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
 id: imjoy/BioImageIO-Packager/latest
 name: BioImageIO-Packager

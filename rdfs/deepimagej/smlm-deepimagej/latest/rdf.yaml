@@ -35,7 +35,7 @@ description: Single molecule localization microscopy (SMLM) processing using dee
   and ThunderSTORM in an ImageJ macro.
 documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
 download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
-format_version: 0.2.2
+format_version: 0.2.3
 icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
 id: deepimagej/smlm-deepimagej/latest
 maintainers: []

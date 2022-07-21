@@ -33,7 +33,7 @@ versions:
     description: Dataset of H&E Brightfield images with nucleus instance annotations.
       Contains 50 annotated images, divided into 11 patients.
     documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/tnbc.md
-    format_version: 0.2.1
+    format_version: 0.2.3
     id: ilastik/tnbc
     license: CC-BY-4.0
     maintainers:

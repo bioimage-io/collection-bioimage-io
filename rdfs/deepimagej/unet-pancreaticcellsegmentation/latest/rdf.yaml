@@ -38,7 +38,7 @@ covers:
 description: Easy example to define a 2D U-Net for segmentation with Keras and import
   it into DeepImageJ format
 documentation: https://github.com/miura/NEUBIAS_AnalystSchool2020/tree/master/Ignacio
-format_version: 0.2.2
+format_version: 0.2.3
 id: deepimagej/unet-pancreaticcellsegmentation/latest
 links:
 - deepimagej/UNet2DPancreaticSegmentation

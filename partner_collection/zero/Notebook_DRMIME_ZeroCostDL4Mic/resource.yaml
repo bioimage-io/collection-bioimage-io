@@ -48,7 +48,7 @@ versions:
       (affine and perspective registration).
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
-    format_version: 0.2.2
+    format_version: 0.2.3
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_DRMIME_ZeroCostDL4Mic
     links:
