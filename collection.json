@@ -104,7 +104,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 7525,
+      "download_count": 7527,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -1342,6 +1342,39 @@
       "type": "model",
       "versions": [
         "6808413"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "SUSTech",
+          "name": "Zoufu"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/image.png",
+        "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png"
+      ],
+      "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
+      "download_count": 45,
+      "id": "10.5281/zenodo.6865412",
+      "license": "CC-BY-4.0",
+      "name": "Cells and gland Segmentation (FRUNet)",
+      "nickname": "impartial-shark",
+      "nickname_icon": "\ud83e\udd88",
+      "owners": [
+        370412
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6865412/6919253/rdf.yaml",
+      "tags": [
+        "deepimagej",
+        "segmentation",
+        "cells and gland",
+        "fourier channel attention"
+      ],
+      "type": "model",
+      "versions": [
+        "6919253"
       ]
     },
     {
@@ -4961,13 +4994,13 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 84,
-      "model": 106,
+      "model": 108,
       "notebook": 4
     },
     "n_resources": {
       "application": 52,
       "dataset": 42,
-      "model": 43,
+      "model": 44,
       "notebook": 2
     },
     "partners": [
