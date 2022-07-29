@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-07-28 07:37:36.393648'
+  doi: 10.5281/zenodo.6919253
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6919253'
+  version_name: version 8
+  rdf_source: https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/rdf.yaml
 - created: '2022-07-27 07:47:00.531598'
   doi: 10.5281/zenodo.6912049
   name: Cells and gland Segmentation (FRUNet)
