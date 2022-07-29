@@ -1,0 +1,134 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/exampleImage.tif
+  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/resultImage.tif
+  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/per_sample_scale_range.ijm
+  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/binarize.ijm
+authors:
+- affiliation: SUSTech
+  name: Zoufu
+cite:
+- doi: 10.5281/zenodo.6906897
+  text: Zoufu. (2022). Cells and gland Segmentation (FRUNet). Zenodo.
+config:
+  bioimageio:
+    created: '2022-07-28 07:37:36.393648'
+    doi: 10.5281/zenodo.6919253
+    nickname: impartial-shark
+    nickname_icon: 🦈
+    owners:
+    - 370412
+    status: accepted
+    version_id: '6919253'
+    version_name: version 8
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+      tensorflow_model_tag: tf.saved_model.tag_constants.SERVING
+      tensorflow_siganture_def: tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY
+    prediction:
+      postprocess:
+      - kwargs: binarize.ijm
+        spec: ij.IJ::runMacroFile
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      device:
+      inputs:
+        name: input
+        pixel_size:
+          x: 1.0 pixel
+          y: 1.0 pixel
+          z: 1.0 pixel
+        size: 256 x 256
+      memory_peak:
+      outputs:
+        name: output
+        size: 256 x 256
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/image.png
+- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png
+description: DeepImageJ compatible FRUNet trained to subtly segment cells and gland.
+documentation: https://github.com/deepimagej/models/u-net_pancreatic_segmentation/U_Net_PhC-C2DL-PSC_segmentation.ipynb
+format_version: 0.4.7
+git_repo: https://github.com/deepimagej/models/u-net_pancreatic_segmentation/
+id: 10.5281/zenodo.6865412/6919253
+inputs:
+- axes: byxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input
+  preprocessing:
+  - kwargs:
+      axes: xyc
+      max_percentile: 100
+      min_percentile: 0
+      mode: per_sample
+    name: scale_range
+  shape:
+  - 1
+  - 256
+  - 256
+  - 1
+license: CC-BY-4.0
+name: Cells and gland Segmentation (FRUNet)
+outputs:
+- axes: byxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 16
+  - 16
+  - 0
+  name: output
+  postprocessing:
+  - kwargs:
+      threshold: 0.9
+    name: binarize
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+packaged_by:
+- affiliation: PIP python package
+  name: pydeepimagej
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6865412/6919253/rdf.yaml
+run_mode:
+  name: deepimagej
+sample_inputs:
+- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/exampleImage.tif
+sample_outputs:
+- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/resultImage.tif
+tags:
+- deepimagej
+- segmentation
+- cells and gland
+- fourier channel attention
+test_inputs:
+- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/exampleImage.npy
+test_outputs:
+- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/resultImage.npy
+timestamp: '2022-07-12T16:53:00.296328'
+type: model
+weights:
+  keras_hdf5:
+    sha256: c0f7f23225ed6142f9ac5c7abfd7442afb11181dbe91c936b2d11a620f504655
+    source: https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/keras_model.h5
+    tensorflow_version: 2.6.0
