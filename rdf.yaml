@@ -7,7 +7,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 9740
+  download_count: 9801
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -25,7 +25,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png']
   description: Cell segmentation in EM of platynereis.
-  download_count: 7724
+  download_count: 7726
   id: 10.5281/zenodo.6028280
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/platynereis_em_training_data, ilastik/ilastik,
@@ -78,7 +78,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 5107
+  download_count: 5149
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -228,7 +228,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
   description: Segmentation of mitochondria in EM images.
-  download_count: 3091
+  download_count: 3127
   id: 10.5281/zenodo.6406803
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -248,7 +248,7 @@ collection:
     'https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png']
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 2702
+  download_count: 2704
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation]
@@ -367,7 +367,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 1941
+  download_count: 1943
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
@@ -425,7 +425,7 @@ collection:
   covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 1614
+  download_count: 1616
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
@@ -468,7 +468,7 @@ collection:
   description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
     apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 1519
+  download_count: 1521
   id: 10.5281/zenodo.6334881
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -485,7 +485,7 @@ collection:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png']
   description: The winning model of HPA image classification 2021 by Bestfitting
-  download_count: 1514
+  download_count: 1516
   id: 10.5281/zenodo.5910854
   license: MIT
   links: [imjoy/BioImageIO-Packager, hpa/hpa-kaggle-2021-dataset]
@@ -501,7 +501,7 @@ collection:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
-  download_count: 1508
+  download_count: 1510
   id: 10.5281/zenodo.5910163
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -559,7 +559,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth}
   covers: ['https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png']
   description: Prediction enhancer for segmenting cell boundaries in EM images.
-  download_count: 83
+  download_count: 85
   id: 10.5281/zenodo.6808325
   license: CC-BY-4.0
   links: [ilastik/ilastik, deepimagej/deepimagej, ilastik/torch-em-3d-unet-notebook,
