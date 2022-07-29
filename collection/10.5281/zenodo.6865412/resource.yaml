@@ -10,7 +10,7 @@ versions:
 - created: '2022-07-27 07:47:00.531598'
   doi: 10.5281/zenodo.6912049
   name: Cells and gland Segmentation (FRUNet)
-  status: accepted
+  status: blocked
   version_id: '6912049'
   version_name: version 7
   rdf_source: https://zenodo.org/api/files/f23de402-321a-4351-b3ff-717fdafa5c5a/rdf.yaml
