@@ -42,7 +42,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png']
   description: '{organelle} segmentation in EM of platynereis.'
-  download_count: 7641
+  download_count: 7679
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -94,6 +94,26 @@ collection:
   type: model
   versions: ['6338615']
 - authors:
+  - {github_user: uschmidt83, name: Uwe Schmidt}
+  - {github_user: maweigert, name: Martin Weigert}
+  covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
+    'https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg']
+  description: StarDist - Object Detection with Star-convex Shapes
+  download_count: 5018
+  id: 10.5281/zenodo.6348084
+  license: BSD-3-Clause
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
+  name: StarDist Fluorescence Nuclei Segmentation
+  nickname: fearless-crab
+  nickname_icon: "\U0001F980"
+  owners: [313404]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml
+  tags: [fluorescence-light-microscopy, whole-slide-imaging, other, 2d, cells, nuclei,
+    tensorflow, fiji, unet, instance-segmentation, object-detection, stardist]
+  training_data: {id: ilastik/stradist_dsb_training_data}
+  type: model
+  versions: ['6348085']
+- authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
@@ -111,26 +131,6 @@ collection:
   type: model
   versions: ['6348729']
 - authors:
-  - {github_user: uschmidt83, name: Uwe Schmidt}
-  - {github_user: maweigert, name: Martin Weigert}
-  covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
-    'https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg']
-  description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 4987
-  id: 10.5281/zenodo.6348084
-  license: BSD-3-Clause
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
-  name: StarDist Fluorescence Nuclei Segmentation
-  nickname: fearless-crab
-  nickname_icon: "\U0001F980"
-  owners: [313404]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml
-  tags: [fluorescence-light-microscopy, whole-slide-imaging, other, 2d, cells, nuclei,
-    tensorflow, fiji, unet, instance-segmentation, object-detection, stardist]
-  training_data: {id: ilastik/stradist_dsb_training_data}
-  type: model
-  versions: ['6348085']
-- authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
   covers: ['https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png',
@@ -138,7 +138,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 4274
+  download_count: 4302
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -173,7 +173,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png']
   description: Nucleus segmentation for fluorescence microscopy
-  download_count: 3842
+  download_count: 3844
   id: 10.5281/zenodo.5764892
   license: CC-BY-4.0
   links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
@@ -324,6 +324,27 @@ collection:
   type: model
   versions: ['6346500', '6334384']
 - authors:
+  - {name: V. Bondarenko}
+  - {name: A. Wolny}
+  covers: ['https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png',
+    'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png',
+    'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
+  description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
+    confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
+  download_count: 2020
+  id: 10.5281/zenodo.6383429
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Mouse Embryo Fixed
+  nickname: loyal-squid
+  nickname_icon: "\U0001F991"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/rdf.yaml
+  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, nuclei, animal,
+    tissue, confocal-microscopy, pytorch, fixed]
+  type: model
+  versions: ['6383430']
+- authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/cover.png']
   description: Cell segmentation for immunofluorescence microscopy.
@@ -342,27 +363,6 @@ collection:
   training_data: {id: ilastik/covid_if_training_data}
   type: model
   versions: ['6647683', '6322908']
-- authors:
-  - {name: V. Bondarenko}
-  - {name: A. Wolny}
-  covers: ['https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png',
-    'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png',
-    'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
-  description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
-    confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-  download_count: 2008
-  id: 10.5281/zenodo.6383429
-  license: MIT
-  links: [imjoy/BioImageIO-Packager]
-  name: 3D UNet Mouse Embryo Fixed
-  nickname: loyal-squid
-  nickname_icon: "\U0001F991"
-  owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, nuclei, animal,
-    tissue, confocal-microscopy, pytorch, fixed]
-  type: model
-  versions: ['6383430']
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
@@ -387,7 +387,7 @@ collection:
     'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
   description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
     of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
-  download_count: 1736
+  download_count: 1738
   id: 10.5281/zenodo.6334777
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -447,7 +447,7 @@ collection:
     'https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png']
   description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-  download_count: 1553
+  download_count: 1555
   id: 10.5281/zenodo.6334583
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -523,7 +523,7 @@ collection:
   covers: ['https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png']
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
-  download_count: 643
+  download_count: 648
   download_url: https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip
   id: 10.5281/zenodo.6559929
   license: MIT
@@ -578,7 +578,7 @@ collection:
   covers: ['https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/image.png',
     'https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png']
   description: DeepImageJ compatible FRUNet trained to subtly segment cells and gland.
-  download_count: 63
+  download_count: 65
   id: 10.5281/zenodo.6865412
   license: CC-BY-4.0
   name: Cells and gland Segmentation (FRUNet)
