@@ -155,7 +155,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 4280
+  download_count: 4282
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
