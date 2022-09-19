@@ -7,13 +7,6 @@ owners:
 status: accepted
 type: model
 versions:
-- created: '2022-09-06 07:19:47.520849'
-  doi: 10.5281/zenodo.7052801
-  name: CVD graphene SEM image segmentation
-  status: blocked
-  version_id: '7052801'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/f2caa6b1-8a70-4ade-ae81-5bae7c32b2a5/rdf.yaml
 - created: '2022-09-06 09:31:40.328628'
   doi: 10.5281/zenodo.7053391
   name: CVD graphene SEM image segmentation
