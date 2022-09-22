@@ -146,7 +146,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 7652,
+      "download_count": 7654,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -499,6 +499,51 @@
     {
       "authors": [
         {
+          "name": "A. Wolny"
+        },
+        {
+          "name": "V. Bondarenko"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
+        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
+      ],
+      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
+      "download_count": 3810,
+      "id": "10.5281/zenodo.6384845",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "3D UNet Mouse Embryo Live",
+      "nickname": "powerful-fish",
+      "nickname_icon": "\ud83d\udc1f",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
+      "tags": [
+        "plantseg",
+        "unet",
+        "3d",
+        "semantic-segmentation",
+        "mouse-embryo",
+        "cell-membrane",
+        "animal",
+        "tissue",
+        "light-sheet-microscopy",
+        "pytorch",
+        "live"
+      ],
+      "type": "model",
+      "versions": [
+        "6384846"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Hao Xu"
         },
         {
@@ -530,51 +575,6 @@
       "versions": [
         "6538890",
         "6200636"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "A. Wolny"
-        },
-        {
-          "name": "V. Bondarenko"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
-      ],
-      "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 3762,
-      "id": "10.5281/zenodo.6384845",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "3D UNet Mouse Embryo Live",
-      "nickname": "powerful-fish",
-      "nickname_icon": "\ud83d\udc1f",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
-      "tags": [
-        "plantseg",
-        "unet",
-        "3d",
-        "semantic-segmentation",
-        "mouse-embryo",
-        "cell-membrane",
-        "animal",
-        "tissue",
-        "light-sheet-microscopy",
-        "pytorch",
-        "live"
-      ],
-      "type": "model",
-      "versions": [
-        "6384846"
       ]
     },
     {
@@ -1356,7 +1356,7 @@
         "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png"
       ],
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 170,
+      "download_count": 172,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
