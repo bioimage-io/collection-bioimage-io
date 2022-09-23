@@ -1,6 +1,8 @@
 rdf_sha256: bd2d60fbf7fe0f5758754033dfa18a5652f9e199120fc0580151555021e3c1db
 tests:
   deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: '{''cite'': [''Field may not be null.''], ''authors'': {0: {''affiliation'':
@@ -103,29 +105,7 @@ tests:
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 717, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
-  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: '{''_schema'': [''Minimal shape [ 1. 20. 20.  1.] of output output is too
-      small for halo [0, 10, 10, 0].'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_js weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
   - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
@@ -146,3 +126,23 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: '{''_schema'': [''Minimal shape [ 1. 20. 20.  1.] of output output is too
+      small for halo [0, 10, 10, 0].'']}'
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_js weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
+        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
+        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
+        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
+        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
+        line 900, in _do_load\n    raise exc\n"]
+  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}

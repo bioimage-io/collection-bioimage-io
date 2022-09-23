@@ -37,8 +37,7 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
-      weights
+    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
@@ -48,7 +47,8 @@ tests:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
+    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
+      weights
     reason: error
     status: failed
     traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
@@ -56,34 +56,14 @@ tests:
         rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '''str'' object has no attribute ''decode'''
-    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 114, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 172, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_keras_model_adapter.py\",
-        line 41, in _load\n    self._model = keras.models.load_model(weight_file)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
-        line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
-        custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
-        line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
       weights, reason: null, status: passed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5817052/5850574, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.5817052/5850574, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '''str'' object has no attribute ''decode'''
@@ -102,3 +82,23 @@ tests:
         line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
+    error: '''str'' object has no attribute ''decode'''
+    name: reproduce test outputs with ilastik 1.4.0b27 using keras_hdf5 weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 148, in test_resource\n    bioimageio_model=model, devices=devices, weight_format=weight_format\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 114, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 172, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 41, in load\n    self._load(devices=devices or self.default_devices)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_keras_model_adapter.py\",
+        line 41, in _load\n    self._model = keras.models.load_model(weight_file)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
+        line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
+        custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
+        line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.5817052/5850574, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
