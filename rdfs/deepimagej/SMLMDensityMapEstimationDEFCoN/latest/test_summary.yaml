@@ -126,6 +126,9 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
+  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '{''_schema'': [''Minimal shape [ 1. 20. 20.  1.] of output output is too
@@ -143,6 +146,3 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for deepimagej/SMLMDensityMapEstimationDEFCoN/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

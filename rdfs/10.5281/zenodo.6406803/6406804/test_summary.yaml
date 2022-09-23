@@ -34,6 +34,16 @@ tests:
   deepimagej:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
+    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
+    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
+        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
+        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
     error: No module named 'torch'
     name: reproduce test outputs with deepimagej 2.1.13 using pytorch_state_dict weights
     reason: error
@@ -73,36 +83,7 @@ tests:
 
         ', "  File \"/tmp/bioimageio_cache/https/zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/unet.py\",
         line 2, in <module>\n    import torch\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using torchscript weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
-        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
-        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6406803/6406804, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
-      0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 197, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
@@ -120,6 +101,42 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
+  - bioimageio_core_version: 0.5.1
+    bioimageio_spec_version: 0.4.5post3
+    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
+      0.4.5.'']}'
+    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
+        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
+        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
+        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
+        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
+        line 900, in _do_load\n    raise exc\n"]
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post6
+    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
+      0.4.5.'']}'
+    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
+        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
+        line 197, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
+        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
+        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
+        line 900, in _do_load\n    raise exc\n"]
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6406803/6406804, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
@@ -138,21 +155,4 @@ tests:
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6406803/6406804, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
-      0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
