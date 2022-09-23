@@ -172,7 +172,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 4311
+  download_count: 4313
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -205,6 +205,26 @@ collection:
   type: model
   versions: ['6647674', '6322939']
 - authors:
+  - {name: A. Wolny}
+  - {name: V. Bondarenko}
+  covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
+    'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
+  description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
+    images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
+  download_count: 3852
+  id: 10.5281/zenodo.6384845
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Mouse Embryo Live
+  nickname: powerful-fish
+  nickname_icon: "\U0001F41F"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml
+  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, cell-membrane, animal,
+    tissue, light-sheet-microscopy, pytorch, live]
+  type: model
+  versions: ['6384846']
+- authors:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
   covers: ['https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png']
@@ -222,26 +242,6 @@ collection:
   tags: [nucleus-segmentation]
   type: model
   versions: ['6538890', '6200636']
-- authors:
-  - {name: A. Wolny}
-  - {name: V. Bondarenko}
-  covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
-    'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
-  description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
-    images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 3810
-  id: 10.5281/zenodo.6384845
-  license: MIT
-  links: [imjoy/BioImageIO-Packager]
-  name: 3D UNet Mouse Embryo Live
-  nickname: powerful-fish
-  nickname_icon: "\U0001F41F"
-  owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, cell-membrane, animal,
-    tissue, light-sheet-microscopy, pytorch, live]
-  type: model
-  versions: ['6384846']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png']
