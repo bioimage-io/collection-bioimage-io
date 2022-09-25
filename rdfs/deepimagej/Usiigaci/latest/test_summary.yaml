@@ -1,6 +1,8 @@
 rdf_sha256: 5eef35a2aac998039b92e9b84be5052e7f5cedef44e4aa333f762fc122406f46
 tests:
   deepimagej:
+  - {error: Missing/invalid weight formats for deepimagej/Usiigaci/latest, name: reproduce
+      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: '{''weights'': defaultdict(<class ''dict''>, {''tensorflow_saved_model_bundle'':
@@ -28,8 +30,6 @@ tests:
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 717, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for deepimagej/Usiigaci/latest, name: reproduce
-      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
@@ -69,6 +69,8 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
+  - {error: Missing/invalid weight formats for deepimagej/Usiigaci/latest, name: reproduce
+      test outputs with ilastik <todo version> (draft), reason: error, status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Cannot load file containing pickled data when allow_pickle=False
@@ -83,7 +85,5 @@ tests:
         model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/numpy/lib/npyio.py\",
         line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
         data \"\n"]
-  - {error: Missing/invalid weight formats for deepimagej/Usiigaci/latest, name: reproduce
-      test outputs with ilastik <todo version> (draft), reason: error, status: failed}
   - {error: Missing/invalid weight formats for deepimagej/Usiigaci/latest, name: reproduce
       test outputs with ilastik <todo version> (draft), reason: error, status: failed}
