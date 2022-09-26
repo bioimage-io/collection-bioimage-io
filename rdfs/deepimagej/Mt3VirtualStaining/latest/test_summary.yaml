@@ -1,8 +1,6 @@
 rdf_sha256: 14e7d15cdb20c36cf3e0ea6a4932e00fb96dd1481dcbc71586e63690a419c1f8
 tests:
   deepimagej:
-  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/preprocessing.txt
@@ -47,6 +45,8 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 406, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
+  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
@@ -92,9 +92,6 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
-  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: 'Shape (0, 0, 0, 0, 0) of test input 0 ''input_images'' does not match
@@ -106,6 +103,9 @@ tests:
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
         line 134, in test_resource\n    f\"Shape {tuple(ipt.shape)} of test input
         {idx} '{ipt_spec.name}' does not match \"\n"]
+  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
   - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
