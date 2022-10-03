@@ -2,7 +2,7 @@ id: deepimagej/Usiigaci
 status: accepted
 type: model
 versions:
-- name: NIH/3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
+- name: NIH 3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
   status: accepted
   version_id: latest
   version_name: latest
@@ -100,7 +100,7 @@ versions:
     - deepimagej/deepimagej
     - imjoy/BioImageIO-Packager
     maintainers: []
-    name: NIH/3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
+    name: NIH 3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
     outputs:
     - axes: bic
       data_range:
@@ -125,7 +125,7 @@ versions:
       - 28
       - 2
     sample_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/Composite.tif
+    - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/exampleImage.tif
     sample_outputs:
     - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/MAX_finalMask.tif
     - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/fibroblasts_detection.csv
@@ -139,7 +139,7 @@ versions:
     - segmentation
     - deepimagej-beta
     test_inputs:
-    - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/Composite.npy
+    - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/exampleImage.npy
     test_outputs:
     - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/MAX_finalMask.npy
     - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/fibroblasts_detection.npy
