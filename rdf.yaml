@@ -838,7 +838,7 @@ collection:
   id: deepimagej/Usiigaci
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: NIH/3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
+  name: NIH 3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Usiigaci/latest/rdf.yaml
   tags: [deepimagej, usiigaci, phase-contrast, fibroblasts, maskrcnn, 2d, segmentation,
     deepimagej-beta]
