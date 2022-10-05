@@ -1,4 +1,4 @@
-rdf_sha256: 4561332c1cebbba71760be43664e36fa0a2cb6a8c85160aa68bdb62790372714
+rdf_sha256: 33ef42f41f0d1ce22c1f7e376afa4a9bbf778d525d0bd99f0e3d19cf26a3e4a4
 tests:
   deepimagej:
   - {error: Missing/invalid weight formats for deepimagej/Usiigaci/latest, name: reproduce
