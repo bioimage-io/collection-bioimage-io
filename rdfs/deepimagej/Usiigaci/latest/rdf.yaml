@@ -139,7 +139,7 @@ test_inputs:
 test_outputs:
 - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/MAX_finalMask.npy
 - https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/fibroblasts_detection.npy
-timestamp: '2021-08-26T20:19:15.000544'
+timestamp: '2022-10-05T11:46:43.289878'
 type: model
 weights:
   tensorflow_saved_model_bundle:
@@ -149,4 +149,4 @@ weights:
     authors:
     - name: Carlos García López-de-Haro
     sha256: a5e697209327296076df4a414d9bf1ccf15ed4d4ab46f352a90398fd68f1a355
-    source: https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/tensorflow_saved_model_bundle.zip
+    source: https://zenodo.org/record/7139023/files/tensorflow_saved_model_bundle.zip?download=1
