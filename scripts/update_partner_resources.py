@@ -34,7 +34,7 @@ def main(
     updated_partner_ids = {r["id"] for r in updated_partner_resources}
     for p in new_partner_hashes:  # only check updated partners
         for r_path in (gh_pages / "partner_collection" / p).glob("*/resource.yaml"):
-            r_id = f"{p}/{r_path.name}"
+            r_id = f"{p}/{r_path.parent.name}"
             if r_id not in updated_partner_ids:
                 print(f"marking {r_id} as deleted")
                 updated_partner_resources.append(dict(status="deleted", id=r_id))
