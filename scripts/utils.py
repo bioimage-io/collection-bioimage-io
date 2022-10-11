@@ -236,7 +236,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         rdf = dict(resource_info)  # rdf is based on resource info
         rdf.update(version_info)  # version specific info overwrites resource info
 
-        rdf.pop("versions")
+        rdf.pop("versions", None)
 
         # ensure config:bioimageio exists
         if "config" not in rdf:
@@ -358,7 +358,7 @@ def iterate_known_resource_versions(
     for known_r in iterate_known_resources(
         collection=collection, gh_pages=gh_pages, resource_id=resource_id, status=status
     ):
-        for v_info in known_r.info["versions"]:
+        for v_info in known_r.info.get("versions", []):
             if status is None or v_info["status"] == status:
                 v_id = v_info["version_id"]
                 rdf_path = gh_pages / "rdfs" / known_r.resource_id / v_id / "rdf.yaml"
