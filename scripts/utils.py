@@ -221,7 +221,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
     resource_id = resource["id"]
     updated_versions = []
     resource_info = enrich_partial_rdf_with_imjoy_plugin(resource, pathlib.Path())
-    for version_info in resource["versions"]:
+    for version_info in resource.get("versions", []):
         version_id = version_info["version_id"]
         if (
             resource["status"] == "blocked"
@@ -292,7 +292,7 @@ def enforce_block_style_resource(resource: dict):
 
     rdf_sources = [v.pop("rdf_source") for v in resource.get("versions", [])]
     resource = enforce_block_style(resource)
-    assert len(rdf_sources) == len(resource["versions"])
+    assert len(rdf_sources) == len(resource.get("versions", []))
     for i in range(len(rdf_sources)):
         resource["versions"][i]["rdf_source"] = rdf_sources[i]
 
