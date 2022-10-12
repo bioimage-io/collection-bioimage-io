@@ -18,7 +18,7 @@ config:
   splash_feature_list:
     - Integrate with Fiji, Ilastik, ImJoy
     - Try model instantly with BioEngine
-    - Contribute your models via Github
+    - Contribute your models via Zenodo
     - Link models to datasets and applications
   explore_button_text: Start Exploring
   background_image: static/img/zoo-background.svg
@@ -30,12 +30,18 @@ config:
   url_root: >-
     https://raw.githubusercontent.com/bioimage-io/collection-bioimage-io/gh-pages
   partners:
+    - id: bioimageio
+      repository: bioimage-io/bioimage-io-resources
+      branch: main
+      collection_file_name: collection.bioimage.io.yaml
     - id: zero
-      source: >-
-        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/manifest.bioimage.io.yaml
+      repository: HenriquesLab/ZeroCostDL4Mic
+      branch: master
+      collection_file_name: manifest.bioimage.io.yaml
     - id: deepimagej
-      source: >-
-        https://raw.githubusercontent.com/deepimagej/models/master/manifest.bioimage.io.yaml
+      repository: deepimagej/models
+      branch: master
+      collection_file_name: manifest.bioimage.io.yaml
       test_summaries:
         repository: deepimagej/models
         deploy_branch: gh-pages
@@ -43,14 +49,17 @@ config:
         workflow: test_bioimageio_resources.yaml
         workflow_ref: refs/heads/master
     - id: fiji
-      source: >-
-        https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/manifest.bioimage.io.yaml
+      repository: bioimage-io/fiji-bioimage-io
+      branch: master
+      collection_file_name: manifest.bioimage.io.yaml
     - id: imjoy
-      source: >-
-        https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/manifest.bioimage.io.yaml
+      repository: imjoy-team/bioimage-io-resources
+      branch: master
+      collection_file_name: collection.bioimage.io.yaml
     - id: ilastik
-      source: >-
-        https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/collection.yaml
+      repository: ilastik/bioimage-io-resources
+      branch: main
+      collection_file_name: collection.yaml
       test_summaries:
         repository: ilastik/bioimage-io-resources
         deploy_branch: gh-pages
@@ -58,7 +67,8 @@ config:
         workflow: test_bioimageio_resources.yaml
         workflow_ref: refs/heads/main
     - id: hpa
-      source: >-
-        https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/manifest.bioimage.io.yaml
+      repository: CellProfiling/HPA-model-zoo
+      branch: master
+      collection_file_name: manifest.bioimage.io.yaml
 
 collection: []

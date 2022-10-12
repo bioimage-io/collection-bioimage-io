@@ -8,6 +8,9 @@ versions:
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/rdf.yaml
   tags: [whole-slide-imaging, 2d, nuclei, tensorflow, unet, instance-segmentation, object-detection, stardist]
+  training_data:
+    id: deepimagej/monuseg_digital_pathology_miccai2018
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist, bioimageio/qupath]
 id: 10.5281/zenodo.6338614
 doi: 10.5281/zenodo.6338614
 type: model

@@ -1,0 +1,6 @@
+bioimageio.core
+bioimageio.spec
+boltons
+lxml
+requests
+typer

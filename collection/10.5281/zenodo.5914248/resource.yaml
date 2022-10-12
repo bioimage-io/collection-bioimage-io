@@ -1,5 +1,7 @@
 doi: 10.5281/zenodo.5914248
 id: 10.5281/zenodo.5914248
+maintainers:
+- github_user: iarganda
 nickname: discreet-rooster
 nickname_icon: 🐓
 owners:
@@ -7,6 +9,27 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-06-08 00:04:57.581394'
+  doi: 10.5281/zenodo.6622089
+  name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+  status: blocked
+  version_id: '6622089'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/2c6aa544-1689-4cd6-a069-3061573bf1b4/rdf.yaml
+- created: '2022-05-31 08:21:25.880069'
+  doi: 10.5281/zenodo.6597361
+  name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+  status: blocked
+  version_id: '6597361'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/7ad26838-ca63-4330-89c6-78cfea98e620/rdf.yaml
+- created: '2022-05-03 14:50:12.368648'
+  doi: 10.5281/zenodo.6514622
+  name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
+  status: accepted
+  version_id: '6514622'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/rdf.yaml
 - created: '2022-05-03 14:26:34.050946'
   doi: 10.5281/zenodo.6514446
   name: Pancreatic Phase Contrast Cell Segmentation (U-Net)

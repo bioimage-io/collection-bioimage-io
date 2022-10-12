@@ -141,8 +141,8 @@ def prepare_dynamic_test_cases(
         for wf in rd.weights:
             # we skip the keras validation for now, see
             # https://github.com/bioimage-io/collection-bioimage-io/issues/16
-            if wf == "keras_hdf5":
-                warnings.warn("keras weights are currently not validated")
+            if wf in ("keras_hdf5", "tensorflow_js"):
+                warnings.warn(f"{wf} weights are currently not validated")
                 continue
 
             env_name = ensure_valid_conda_env_name(version_id)

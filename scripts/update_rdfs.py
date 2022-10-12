@@ -72,7 +72,7 @@ def main(
         else:
             updated_versions = []
             # check for each version if an update occurred or if only specific partners need to reevaluate
-            for v in r.info["versions"]:
+            for v in r.info.get("versions", []):
                 if v["status"] != "accepted":
                     continue
 
@@ -84,7 +84,7 @@ def main(
                 if rdf_path.exists() and test_summary_path.exists():
                     # check if version info has changed
                     matching_old_versions = [
-                        old_v for old_v in old_r_info["versions"] if old_v["version_id"] == version_id
+                        old_v for old_v in old_r_info.get("versions", []) if old_v["version_id"] == version_id
                     ]
                     version_has_update = not matching_old_versions or matching_old_versions[0] != v
                     if not version_has_update:

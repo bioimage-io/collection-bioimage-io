@@ -1,31 +1,41 @@
 doi: 10.5281/zenodo.6200999
 id: 10.5281/zenodo.6200999
+nickname: conscientious-seashell
+nickname_icon: 🐚
 owners:
 - 47882
 status: accepted
 type: model
 versions:
-- version_id: '6224243'
-  doi: 10.5281/zenodo.6224243
-  created: '2022-02-22 13:23:59.702632'
-  status: accepted
+- created: '2022-05-11 12:04:49.835074'
+  doi: 10.5281/zenodo.6538911
   name: HPA Nucleus Segmentation (DPNUnet)
+  status: accepted
+  version_id: '6538911'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/rdf.yaml
+- created: '2022-02-22 13:23:59.702632'
+  doi: 10.5281/zenodo.6224243
+  links:
+  - imjoy/BioImageIO-Packager
+  - imjoy/HPA-Single-Cell
+  - deepimagej/deepimagej
+  name: HPA Nucleus Segmentation (DPNUnet)
+  status: accepted
+  version_id: '6224243'
   version_name: revision 1
   rdf_source: https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/rdf.yaml
-  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell, deepimagej/deepimagej]
-- version_id: '6221443'
+- created: '2022-02-22 10:57:23.215355'
   doi: 10.5281/zenodo.6221443
-  created: '2022-02-22 10:57:23.215355'
-  status: blocked
   name: HPA Nucleus Segmentation (DPNUnet)
+  status: blocked
+  version_id: '6221443'
   version_name: revision 4
   rdf_source: https://zenodo.org/api/files/cbeebc4a-df16-4013-bc52-98c1b843baa4/rdf.yaml
-- version_id: '6201000'
+- created: '2022-02-21 10:58:25.147491'
   doi: 10.5281/zenodo.6201000
-  created: '2022-02-21 10:58:25.147491'
-  status: blocked
   name: HPA Nuclei Segmentation (DPNUnet)
+  status: blocked
+  version_id: '6201000'
   version_name: revision 4
   rdf_source: https://zenodo.org/api/files/e5e8cef4-9d11-4eb1-8403-6d04859ae2f0/rdf.yaml
-nickname: conscientious-seashell
-nickname_icon: 🐚
