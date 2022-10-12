@@ -662,27 +662,6 @@ collection:
   type: application
   versions: [latest]
 - authors:
-  - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
-  - {affiliation: Masaryk University, name: Martin Maška}
-  - {affiliation: Masaryk University, name: Anna Kotrbová}
-  - {affiliation: Masaryk University, name: Vendula Pospíchalová}
-  - {affiliation: Masaryk University, name: Pavel Matula}
-  - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/frunet_sev.jpg']
-  description: DeepImageJ compatible fully residual U-Net trained to segment small
-    extracellular vesicles in 2D TEM images
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/894459/files/deepimagej_fru-net_sev_segmentation.zip
-  id: deepimagej/FRUNet2DsEVSegmentation
-  license: BSD-3-Clause
-  links: [deepimagej/deepimagej, deepimagej/EVsTEMsegmentationFRUNet, imjoy/BioImageIO-Packager]
-  name: Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/FRUNet2DsEVSegmentation/latest/rdf.yaml
-  tags: [deepimagej, extracellular-vesicles, segmentation, tem, frunet, exosomes,
-    electron-microscopy, 2d-segmentation]
-  type: model
-  versions: [latest]
-- authors:
   - {affiliation: University of California, name: Yair Rivenson}
   - {affiliation: University of California, name: Hongda Wang}
   - {affiliation: University of California, name: Aydogan Ozcan}
@@ -803,45 +782,6 @@ collection:
   name: Glioblastoma Phase Contrast Cell Segmentation (U-Net)
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DGlioblastomaSegmentation/latest/rdf.yaml
   tags: [deepimagej, glioblastoma-cells, segmentation, phase-contrast]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/u-net_hela_segmentation/unet_hela_seg.jpg']
-  description: DeepImageJ compatible U-Net trained to segment Hela cells in 2D phase
-    contrast microscopy images
-  download_count: 1
-  download_url: https://sandbox.zenodo.org/record/913978/files/u-net_hela_segmentation.zip
-  id: deepimagej/UNet2DHeLaSegmentation
-  license: BSD-2
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: HeLa DIC Cell Segmentation (U-Net)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/UNet2DHeLaSegmentation/latest/rdf.yaml
-  tags: [deepimagej, hela-cells, segmentation, phase-contrast]
-  type: model
-  versions: [latest]
-- authors:
-  - {affiliation: 'AGH University of Science and Technology, Poland', name: Joanna
-      Gajda}
-  - {affiliation: 'Quorumetrix Solutions, Canada', name: Tyler F.W. Sloan}
-  - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
-      Graduate University, Japan', name: Hsieh-Fu Tsai}
-  - {affiliation: 'ImagineA, The Netherlands', name: Andrei Rares}
-  - {affiliation: 'Micro/Bio/Nanofluidics Unit, Okinawa Institute of Science and Technology
-      Graduate University, Japan', name: Amy Q. Shen}
-  covers: ['https://raw.githubusercontent.com/deepimagej/models/master/usiigaci/cover.jpg']
-  description: Trained model given in Usiigaci for instance segmentation of cells
-    in a 2D substrate and phase contrast microscopy images. The model is a Mask R-CNN
-    and the input is preprocessed to get an RGB image from the grayscale image.
-  download_count: 1
-  download_url: https://zenodo.org/record/4155785/files/usiigaci.bioimage.io.model.zip
-  id: deepimagej/Usiigaci
-  license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: NIH 3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/Usiigaci/latest/rdf.yaml
-  tags: [deepimagej, usiigaci, phase-contrast, fibroblasts, maskrcnn, 2d, segmentation,
-    deepimagej-beta]
   type: model
   versions: [latest]
 - authors:
@@ -1110,21 +1050,6 @@ collection:
   type: dataset
   versions: [latest]
 - authors:
-  - {name: ImJoy Team}
-  - {name: ilastik Team}
-  badges: []
-  covers: []
-  description: Run the live cell boundary model via the BioEngine
-  download_count: 1
-  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
-  id: ilastik/live-cell-boundary-model
-  name: Live cell boundary model preview
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/live-cell-boundary-model/latest/rdf.yaml
-  source: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/live-cell-boundary-preview.imjoy.html
-  tags: [bioengine]
-  type: application
-  versions: [latest]
-- authors:
   - {name: Constantin Pape}
   covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg']
   description: LIVECell—A large-scale dataset for label-free live cell segmentation
@@ -1215,21 +1140,6 @@ collection:
   license: CC0-1.0
   name: DSB Nucleus Segmentation Training Data
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/stardist_dsb_training_data/latest/rdf.yaml
-  source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
-  tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
-    2D]
-  type: dataset
-  versions: [latest]
-- authors:
-  - {name: Constantin Pape}
-  covers: ['https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg']
-  description: Subset of the nucleus segmentation training data from the 2018 Kaggle
-    Data Science Bowl.
-  download_count: 1
-  id: ilastik/stradist_dsb_training_data
-  license: CC0-1.0
-  name: DSB Nucleus Segmentation Training Data
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/stradist_dsb_training_data/latest/rdf.yaml
   source: https://github.com/stardist/stardist/releases/download/0.1.0/dsb2018.zip
   tags: [nuclei, instance-segmentation, fluorescence-light-microscopy, dsb-challenge,
     2D]
@@ -2208,31 +2118,6 @@ collection:
   type: application
   versions: [latest]
 - authors:
-  - {name: Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams}
-  badges:
-  - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
-      in Colab, url: 'https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb'}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png',
-    'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png',
-    'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png',
-    'https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png']
-  description: 2D instance segmentation of oval objects (ie nuclei). StarDist is a
-    deep-learning method that can be used to segment cell nuclei in 2D (xy) images.
-    Note - visit the ZeroCostDL4Mic wiki to check the original publications this network
-    is based on and make sure you cite these. Networks trained in this notebook can
-    be used in Fiji via deepImageJ and StarDist plugins for ImageJ.
-  download_count: 1
-  download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-  id: zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
-  links: [zero/Notebook Preview, zero/Dataset_StarDist_2D_ZeroCostDL4Mic_2D, zero/Dataset_StarDist_Fluo_ZeroCostDL4Mic,
-    zero/Dataset_StarDist_brightfield_ZeroCostDL4Mic, zero/Dataset_StarDist_brightfield2_ZeroCostDL4Mic,
-    zero/Dataset_StarDist_fluo2_ZeroCostDL4Mic, zero/Dataset_StarDist_2D_DeepBacs]
-  name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
-  tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-  type: application
-  versions: [latest]
-- authors:
   - {name: Guillaume Jacquemet and the ZeroCostDL4Mic Team}
   badges:
   - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
@@ -2271,28 +2156,6 @@ collection:
   name: U-Net (2D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_U-Net_2D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D]
-  type: application
-  versions: [latest]
-- authors:
-  - {name: Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams}
-  badges:
-  - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
-      in Colab, url: 'https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb'}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png']
-  description: 2D binary segmentation. U-Net is an encoder-decoder architecture originally
-    used for image segmentation. The first half of the U-Net architecture is a downsampling
-    convolutional neural network which acts as a feature extractor from input images.
-    The other half upsamples these results and restores an image by combining results
-    from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki
-    to check the original publications this network is based on and make sure you
-    cite these. Networks trained in this notebook can be used in Fiji via deepImageJ.
-  download_count: 1
-  download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-  id: zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
-  links: [zero/Notebook Preview]
-  name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
-  tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
   type: application
   versions: [latest]
 - authors:
@@ -2337,27 +2200,6 @@ collection:
   name: U-Net (3D) - ZeroCostDL4Mic
   rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_U-Net_3D_ZeroCostDL4Mic/latest/rdf.yaml
   tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D]
-  type: application
-  versions: [latest]
-- authors:
-  - {name: Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams}
-  badges:
-  - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
-      in Colab, url: 'https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb'}
-  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png']
-  description: 3D binary segmentation. The 3D U-Net was first introduced by Çiçek
-    et al for learning dense volumetric segmentations from sparsely annotated ground-truth
-    data building upon the original U-Net architecture by Ronneberger et al. Note
-    - visit the ZeroCostDL4Mic wiki to check the original publications this network
-    is based on and make sure you cite these. Networks trained in this notebook can
-    be used in Fiji via deepImageJ.
-  download_count: 1
-  download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-  id: zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
-  links: [zero/Notebook Preview]
-  name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ/latest/rdf.yaml
-  tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
   type: application
   versions: [latest]
 - authors:
@@ -2454,8 +2296,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 104, dataset: 84, model: 108, notebook: 4}
-  n_resources: {application: 52, dataset: 42, model: 44, notebook: 2}
+  n_resource_versions: {application: 96, dataset: 82, model: 102, notebook: 4}
+  n_resources: {application: 48, dataset: 41, model: 41, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
