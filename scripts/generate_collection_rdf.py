@@ -68,7 +68,7 @@ def main(
     n_accepted_versions = {}
     for r in iterate_known_resources(collection=collection, gh_pages=gh_pages):
         latest_version = None
-        for version_info in r.info["versions"]:
+        for version_info in r.info.get("versions", []):
             if version_info["status"] != "accepted":
                 continue
 
