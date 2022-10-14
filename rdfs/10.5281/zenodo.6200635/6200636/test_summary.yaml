@@ -63,9 +63,9 @@ tests:
     name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights,
     reason: null, status: passed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6200635/6200636, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,
     reason: null, status: passed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6200635/6200636, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
