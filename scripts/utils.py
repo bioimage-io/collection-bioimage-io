@@ -155,17 +155,16 @@ def resolve_partners(
                 print(e)
                 continue
 
-            new_partner_hashes[partner_id] = partner_hash
             if partner_collection.config:
                 partners[idx].update(partner_collection.config)
 
             partners[idx]["id"] = partner_id
-
             partner_hash = r.json()["sha"]
             # option to skip based on partner collection diff
             if partner_hash == previous_partner_hashes.get(partner_id):
                 continue  # no change in partner collection
 
+            new_partner_hashes[partner_id] = partner_hash
             for entry_idx, (entry_rdf, entry_error) in enumerate(
                 resolve_collection_entries(
                     partner_collection,
