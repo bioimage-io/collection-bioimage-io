@@ -44,7 +44,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 8053
+  download_count: 8139
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -80,7 +80,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png']
   description: Mitochondria segmentation for electron microscopy.
-  download_count: 7721
+  download_count: 7723
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
@@ -175,7 +175,7 @@ collection:
     'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 4636
+  download_count: 4697
   id: 10.5281/zenodo.6384845
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -192,7 +192,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 4379
+  download_count: 4381
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -367,7 +367,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 2137
+  download_count: 2139
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
