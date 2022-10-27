@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-10-14 15:49:01.923282'
+  doi: 10.5281/zenodo.7199160
+  name: NIH-3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
+  status: blocked
+  version_id: '7199160'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/55163c96-1400-4599-bf0f-08ccb013f7e6/rdf.yaml
 - created: '2022-10-03 11:47:23.908188'
   doi: 10.5281/zenodo.7139023
   name: NIH 3T3 Fibroblast Phase Contrast Segmentation (Usiigaci-Mask R-CNN)
