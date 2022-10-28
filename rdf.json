@@ -1534,47 +1534,6 @@
     {
       "authors": [
         {
-          "affiliation": "University of California",
-          "name": "Yair Rivenson"
-        },
-        {
-          "affiliation": "University of California",
-          "name": "Hongda Wang"
-        },
-        {
-          "affiliation": "University of California",
-          "name": "Aydogan Ozcan"
-        }
-      ],
-      "covers": [
-        "https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/exampleImage.png",
-        "https://raw.githubusercontent.com/deepimagej/models/master/jones_virtual_staining/resultImage.png"
-      ],
-      "description": "A trained GAN to transform wide-field autofluorescence images of unlabelled tissue sections into images that are equivalent to the bright-field images of histologically stained versions of the same samples.",
-      "download_count": 1,
-      "download_url": "https://sandbox.zenodo.org/record/906803/files/bioimage.io.model.zip",
-      "id": "deepimagej/JonesVirtualStaining",
-      "license": "CC BY 4.0",
-      "links": [
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "Jones Virtual Staining (GAN)",
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/JonesVirtualStaining/latest/rdf.yaml",
-      "tags": [
-        "deepimagej",
-        "gan",
-        "virtual-staining",
-        "histology"
-      ],
-      "type": "model",
-      "versions": [
-        "latest"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "Centre for Biomedical Image Analysis, Masaryk University",
           "name": "Filip Lux"
         },
@@ -4673,13 +4632,13 @@
     "n_resource_versions": {
       "application": 96,
       "dataset": 82,
-      "model": 102,
+      "model": 100,
       "notebook": 4
     },
     "n_resources": {
       "application": 48,
       "dataset": 41,
-      "model": 41,
+      "model": 40,
       "notebook": 2
     },
     "partners": [
