@@ -151,6 +151,47 @@
     {
       "authors": [
         {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
+      ],
+      "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
+      "download_count": 8184,
+      "id": "10.5281/zenodo.6348728",
+      "license": "MIT",
+      "links": [
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik",
+        "zero/notebook_u-net_3d_zerocostdl4mic"
+      ],
+      "name": "Arabidopsis Leaf Segmentation",
+      "nickname": "non-judgemental-eagle",
+      "nickname_icon": "\ud83e\udd85",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml",
+      "tags": [
+        "zerocostdl4mic",
+        "deepimagej",
+        "segmentation",
+        "unet"
+      ],
+      "training_data": {
+        "id": "ilastik/arabidopsis_tissue_atlas"
+      },
+      "type": "model",
+      "versions": [
+        "6348729"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "uschmidt83",
           "name": "Uwe Schmidt"
         },
@@ -205,47 +246,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
-      ],
-      "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 8107,
-      "id": "10.5281/zenodo.6348728",
-      "license": "MIT",
-      "links": [
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/ilastik",
-        "zero/notebook_u-net_3d_zerocostdl4mic"
-      ],
-      "name": "Arabidopsis Leaf Segmentation",
-      "nickname": "non-judgemental-eagle",
-      "nickname_icon": "\ud83e\udd85",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml",
-      "tags": [
-        "zerocostdl4mic",
-        "deepimagej",
-        "segmentation",
-        "unet"
-      ],
-      "training_data": {
-        "id": "ilastik/arabidopsis_tissue_atlas"
-      },
-      "type": "model",
-      "versions": [
-        "6348729"
-      ]
-    },
-    {
-      "authors": [
-        {
           "name": "Constantin Pape; @constantinpape"
         }
       ],
@@ -292,7 +292,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 7746,
+      "download_count": 7767,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -422,7 +422,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 5024,
+      "download_count": 5089,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -464,7 +464,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 4404,
+      "download_count": 4426,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -592,7 +592,7 @@
         "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 3823,
+      "download_count": 3878,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -684,7 +684,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 2923,
+      "download_count": 2944,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -1000,7 +1000,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 1835,
+      "download_count": 1856,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -1375,6 +1375,50 @@
       "type": "model",
       "versions": [
         "6919253"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "Instituto Gulbenkian de Ciencia",
+          "name": "Estibaliz Gomez de Mariscal"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/cover_1.png",
+        "https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/cover.png"
+      ],
+      "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current segmentation enables running further watershed segmentation to obtain a unique label for each individual bacteria detected in the image.",
+      "download_count": 9,
+      "id": "10.5281/zenodo.7261974",
+      "license": "MIT",
+      "links": [
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
+      ],
+      "name": " B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet",
+      "nickname": "placid-llama",
+      "nickname_icon": "\ud83e\udd99",
+      "owners": [
+        147356
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7261975/rdf.yaml",
+      "tags": [
+        "zerocostdl4mic",
+        "segmentation",
+        "2d",
+        "unet",
+        "bacillus-subtilis",
+        "fluorescence-light-microscopy",
+        "cells",
+        "semantic-segmentation",
+        "bacteria",
+        "microbiology"
+      ],
+      "type": "model",
+      "versions": [
+        "7261975"
       ]
     },
     {
@@ -4622,50 +4666,6 @@
       "type": "application",
       "versions": [
         "latest"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "affiliation": "Instituto Gulbenkian de Ciencia",
-          "name": "Estibaliz Gomez de Mariscal"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/cover_1.png",
-        "https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/cover.png"
-      ],
-      "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current segmentation enables running further watershed segmentation to obtain a unique label for each individual bacteria detected in the image.",
-      "download_count": 0,
-      "id": "10.5281/zenodo.7261974",
-      "license": "MIT",
-      "links": [
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/ilastik"
-      ],
-      "name": " B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet",
-      "nickname": "placid-llama",
-      "nickname_icon": "\ud83e\udd99",
-      "owners": [
-        147356
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7261975/rdf.yaml",
-      "tags": [
-        "zerocostdl4mic",
-        "segmentation",
-        "2d",
-        "unet",
-        "bacillus-subtilis",
-        "fluorescence-light-microscopy",
-        "cells",
-        "semantic-segmentation",
-        "bacteria",
-        "microbiology"
-      ],
-      "type": "model",
-      "versions": [
-        "7261975"
       ]
     }
   ],
