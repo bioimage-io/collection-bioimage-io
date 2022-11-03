@@ -1,0 +1,168 @@
+authors:
+- affiliation: EMBL Heidelberg
+  github_user: jhennies
+  name: Julian Hennies
+  orcid: 0000-0002-0555-151X
+cite:
+- doi: ''
+  text: 'Hennies et al., CebraEM: A practical workflow to segment cellular organelles
+    in volume SEM datasets, Manuscript in preparation'
+config:
+  bioimageio:
+    created: '2022-11-02 13:52:32.578744'
+    doi: 10.5281/zenodo.7274276
+    nickname: joyful-deer
+    nickname_icon: 🦌
+    owners:
+    - 432585
+    status: accepted
+    test_kwargs:
+      pytorch_state_dict:
+        decimal: 2
+    version_id: '7274276'
+    version_name: version 1
+covers:
+- https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/coverimage.jpg
+description: Cellular membrane prediction model for volume SEM datasets
+documentation: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/README.md
+format_version: 0.4.8
+id: 10.5281/zenodo.7274275/7274276
+inputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: uint8
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: xyz
+      gain: 0.00392156862745098
+      offset: 0
+    name: scale_linear
+  shape:
+    min:
+    - 1
+    - 1
+    - 64
+    - 64
+    - 64
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- imjoy/BioImageIO-Packager
+- ilastik/ilastik
+maintainers:
+- affiliation: EMBL Heidelberg
+  github_user: jhennies
+  name: Julian Hennies
+  orcid: 0000-0002-0555-151X
+name: CebraNET Cellular Membranes in Volume SEM
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 16
+  - 16
+  - 16
+  name: output0
+  shape:
+  - 1
+  - 1
+  - 64
+  - 64
+  - 64
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7274275/7274276/rdf.yaml
+tags:
+- unet
+- 3d
+- cells
+- whole-organism
+- ilastik
+- semantic-segmentation
+- electron-microscopy
+- pytorch
+- membranes
+- hela
+- macrophage
+- platynereis
+- calu-3
+test_inputs:
+- https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/test_data_raw.npy
+test_outputs:
+- https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/test_data_out.npy
+timestamp: '2022-11-02T14:40:51.515340'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/piled_unets.py:PiledUnet
+    architecture_sha256: 4b0f4759b35dfcd868f71acac492fc6c2c9c99897b30b2508126a8e6607e24c7
+    kwargs:
+      batch_norm: true
+      filter_sizes_bottleneck:
+      - - 64
+        - 128
+      - - 64
+        - 128
+      - - 64
+        - 128
+      filter_sizes_down:
+      - - - 8
+          - 16
+        - - 16
+          - 32
+        - - 32
+          - 64
+      - - - 8
+          - 16
+        - - 16
+          - 32
+        - - 32
+          - 64
+      - - - 8
+          - 16
+        - - 16
+          - 32
+        - - 32
+          - 64
+      filter_sizes_up:
+      - - - 64
+          - 64
+        - - 32
+          - 32
+        - - 16
+          - 16
+      - - - 64
+          - 64
+        - - 32
+          - 32
+        - - 16
+          - 16
+      - - - 64
+          - 64
+        - - 32
+          - 32
+        - - 16
+          - 16
+      in_channels: 1
+      n_nets: 3
+      out_channels:
+      - 1
+      - 1
+      - 1
+      output_activation: sigmoid
+      predict: true
+    pytorch_version: 1.12.1
+    sha256: 6b523c9a77916e75306563e39b79ef2cfb72a857540994958a8d0943f46a207c
+    source: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/model_0097.pt
