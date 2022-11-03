@@ -72,9 +72,6 @@ jobs:
         mv tmp_download_counts.json dist/download_counts.json
     - name: update partner resources
       run: python scripts/update_partner_resources.py
-    - name: add documentation files to preview
-      if: github.event_name == 'pull_request'
-      run: python scripts/download_documentation.py
     - name: Upload preview of updated partner resources
       if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v2
