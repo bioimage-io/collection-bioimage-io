@@ -9,10 +9,12 @@ from pathlib import Path
 from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 
 import numpy
+import requests
 from marshmallow import missing
+from requests import HTTPError
 from ruamel.yaml import YAML, comments
 
-from bare_utils import DEPLOYED_BASE_URL
+from bare_utils import DEPLOYED_BASE_URL, GH_API_URL
 from bioimageio.spec import (
     load_raw_resource_description,
     serialize_raw_resource_description_to_dict,
@@ -120,7 +122,10 @@ def resolve_partners(
         for idx in range(len(partners)):
             partner = partners[idx]
             try:
-                partner_collection = load_raw_resource_description(partner["source"], update_to_format=current_format)
+                partner_collection = load_raw_resource_description(
+                    f"https://raw.githubusercontent.com/{partner['repository']}/{partner['branch']}/{partner['collection_file_name']}",
+                    update_to_format=current_format,
+                )
                 assert isinstance(partner_collection, Collection)
             except Exception as e:
                 warnings.warn(
@@ -140,18 +145,26 @@ def resolve_partners(
                 ignored_partners.add(f"partner[{idx}]")
                 continue
 
-            serialized_partner_collection: str = serialize_raw_resource_description(partner_collection)
-            partner_hash = sha256(serialized_partner_collection.encode("utf-8")).hexdigest()
+            r = requests.get(
+                f"{ GH_API_URL }/repos/{ partner['repository'] }/commits/{ partner['branch'] }",
+                headers=dict(Accept="application/vnd.github.v3+json"),
+            )
+            try:
+                r.raise_for_status()
+            except HTTPError as e:
+                print(e)
+                continue
+
+            if partner_collection.config:
+                partners[idx].update(partner_collection.config)
+
+            partners[idx]["id"] = partner_id
+            partner_hash = r.json()["sha"]
             # option to skip based on partner collection diff
             if partner_hash == previous_partner_hashes.get(partner_id):
                 continue  # no change in partner collection
 
             new_partner_hashes[partner_id] = partner_hash
-            if partner_collection.config:
-                partners[idx].update(partner_collection.config)
-
-            partners[idx]["id"] = partner_id
-
             for entry_idx, (entry_rdf, entry_error) in enumerate(
                 resolve_collection_entries(
                     partner_collection,
@@ -207,7 +220,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
     resource_id = resource["id"]
     updated_versions = []
     resource_info = enrich_partial_rdf_with_imjoy_plugin(resource, pathlib.Path())
-    for version_info in resource["versions"]:
+    for version_info in resource.get("versions", []):
         version_id = version_info["version_id"]
         if (
             resource["status"] == "blocked"
@@ -222,7 +235,7 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         rdf = dict(resource_info)  # rdf is based on resource info
         rdf.update(version_info)  # version specific info overwrites resource info
 
-        rdf.pop("versions")
+        rdf.pop("versions", None)
 
         # ensure config:bioimageio exists
         if "config" not in rdf:
@@ -278,7 +291,7 @@ def enforce_block_style_resource(resource: dict):
 
     rdf_sources = [v.pop("rdf_source") for v in resource.get("versions", [])]
     resource = enforce_block_style(resource)
-    assert len(rdf_sources) == len(resource["versions"])
+    assert len(rdf_sources) == len(resource.get("versions", []))
     for i in range(len(rdf_sources)):
         resource["versions"][i]["rdf_source"] = rdf_sources[i]
 
@@ -344,7 +357,7 @@ def iterate_known_resource_versions(
     for known_r in iterate_known_resources(
         collection=collection, gh_pages=gh_pages, resource_id=resource_id, status=status
     ):
-        for v_info in known_r.info["versions"]:
+        for v_info in known_r.info.get("versions", []):
             if status is None or v_info["status"] == status:
                 v_id = v_info["version_id"]
                 rdf_path = gh_pages / "rdfs" / known_r.resource_id / v_id / "rdf.yaml"

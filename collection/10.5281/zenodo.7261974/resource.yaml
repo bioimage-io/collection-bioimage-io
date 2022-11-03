@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.7261974
+id: 10.5281/zenodo.7261974
+nickname: placid-llama
+nickname_icon: 🦙
+owners:
+- 147356
+status: accepted
+type: model
+versions:
+- created: '2022-10-28 17:06:39.509102'
+  doi: 10.5281/zenodo.7261975
+  name: ' B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet'
+  status: accepted
+  version_id: '7261975'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/rdf.yaml
