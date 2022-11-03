@@ -97,7 +97,7 @@ jobs:
     - name: dynamic validation
       shell: bash -l {0}
       timeout-minutes: 30
-      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }}
+      run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }} --${{ contains(inputs.deploy_to, 'gh-pages') && 'no-ignore' || 'ignore' }}-rdf-source-field-in-validation
     - name: Upload validation summary
       uses: actions/upload-artifact@v2
       with:
