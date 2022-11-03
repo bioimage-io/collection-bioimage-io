@@ -81,8 +81,8 @@ def get_default_env(
         conda_env["dependencies"].append("cpuonly")
 
     if tensorflow_version is not None:
-        # tensorflow 1.15 is not available on conda, so we need to inject this as a pip dependency
-        if (tensorflow_version.major, tensorflow_version.minor) == (1, 15):
+        # tensorflow 1 is not available on conda, so we need to inject this as a pip dependency
+        if tensorflow_version.major == 1:
             assert opset_version is None
             assert pytorch_version is None
             conda_env["dependencies"] = ["pip", "python >=3.7,<3.8"]  # tf 1.15 not available for py>=3.8
