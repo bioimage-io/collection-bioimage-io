@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6518890
+id: 10.5281/zenodo.6518890
+nickname: inventive-turkey
+nickname_icon: 🦃
+owners:
+- 147356
+status: blocked
+type: model
+versions:
+- created: '2022-05-04 19:14:26.146279'
+  doi: 10.5281/zenodo.6518891
+  name: Jones Virtual Staining (GAN)
+  status: accepted
+  version_id: '6518891'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/1a9a2958-31f4-4cb2-ba3c-26bfe13df3dc/rdf.yaml

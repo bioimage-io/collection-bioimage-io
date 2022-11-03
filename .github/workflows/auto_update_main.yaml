@@ -48,6 +48,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
+    - name: checkout gh-pages for update_partner_resources.py
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: gh-pages
     - name: install script deps
       run: pip install requests typer bioimageio.spec lxml
     - name: update external resources
@@ -67,6 +72,9 @@ jobs:
         mv tmp_download_counts.json dist/download_counts.json
     - name: update partner resources
       run: python scripts/update_partner_resources.py
+    - name: add documentation files to preview
+      if: github.event_name == 'pull_request'
+      run: python scripts/download_documentation.py
     - name: Upload preview of updated partner resources
       if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v2

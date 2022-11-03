@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.6821147
+id: 10.5281/zenodo.6821147
+nickname: non-judgemental-snail
+nickname_icon: 🐌
+owners:
+- 370412
+status: blocked
+type: model
+versions:
+- created: '2022-07-12 08:25:10.301123'
+  doi: 10.5281/zenodo.6821148
+  name: Cell and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6821148'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/d68f3dbe-b47d-4cb6-9948-052a1bbccb8a/rdf.yaml
