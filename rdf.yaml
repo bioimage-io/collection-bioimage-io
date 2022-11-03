@@ -611,6 +611,23 @@ collection:
   type: model
   versions: ['7261975']
 - authors:
+  - {affiliation: EMBL Heidelberg, github_user: jhennies, name: Julian Hennies, orcid: 0000-0002-0555-151X}
+  covers: ['https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/coverimage.jpg']
+  description: Cellular membrane prediction model for volume SEM datasets
+  download_count: 5
+  id: 10.5281/zenodo.7274275
+  license: CC-BY-4.0
+  links: [imjoy/BioImageIO-Packager, ilastik/ilastik]
+  name: CebraNET Cellular Membranes in Volume SEM
+  nickname: joyful-deer
+  nickname_icon: "\U0001F98C"
+  owners: [432585]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7274275/7274276/rdf.yaml
+  tags: [unet, 3d, cells, whole-organism, ilastik, semantic-segmentation, electron-microscopy,
+    pytorch, membranes, hela, macrophage, platynereis, calu-3]
+  type: model
+  versions: ['7274276']
+- authors:
   - {github_user: petebankhead, name: Pete Bankhead}
   covers: ['https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png']
   description: QuPath is an open, powerful, flexible, extensible software platform
@@ -2298,8 +2315,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 96, dataset: 82, model: 102, notebook: 4}
-  n_resources: {application: 48, dataset: 41, model: 41, notebook: 2}
+  n_resource_versions: {application: 96, dataset: 82, model: 104, notebook: 4}
+  n_resources: {application: 48, dataset: 41, model: 42, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
