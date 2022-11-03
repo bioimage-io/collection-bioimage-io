@@ -3,7 +3,9 @@ from pathlib import Path
 from typing import List, Optional
 
 import typer
+from marshmallow import missing
 
+from bioimageio.spec import load_raw_resource_description
 from bioimageio.spec.shared import yaml
 
 
@@ -20,6 +22,8 @@ def main(
     weight_format: Optional[str] = typer.Argument(..., help="weight format to test model with."),
     rdf_dirs: List[Path] = (Path(__file__).parent / "../artifacts/static_validation_artifact",),
     create_env_outcome: str = "success",
+    # rdf_source might assume a resource has been deployed, if not (e.g. in a PR), rdf_source is expected to be invalid.
+    ignore_rdf_source_field_in_validation: bool = False,
 ):
     if weight_format is None:
         # no dynamic tests for non-model resources...
@@ -45,9 +49,14 @@ def main(
                 summary = test_summary_from_exception("check for test kwargs", e)
             else:
                 try:
-                    summary = test_resource(rdf_path, weight_format=weight_format, **test_kwargs)
+                    rd = load_raw_resource_description(rdf_path)
+                    if ignore_rdf_source_field_in_validation:
+                        rd.rdf_source = missing
+
+                    summary = test_resource(rd, weight_format=weight_format, **test_kwargs)
                 except Exception as e:
                     summary = test_summary_from_exception("call 'test_resource'", e)
+
     else:
         env_path = dist / "static_validation_artifact" / resource_id / version_id / f"conda_env_{weight_format}.yaml"
         if env_path.exists():
