@@ -132,13 +132,6 @@ jobs:
       run: python scripts/download_partner_test_summaries.py
     - name: prepare to deploy
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
-    - name: Upload preview
-      if: contains(inputs.deploy_to, 'preview')
-      uses: actions/upload-artifact@v2
-      with:
-        name: preview
-        path: dist/gh_pages_update
-        retention-days: 90
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
       uses: JamesIves/github-pages-deploy-action@v4.2.3
@@ -146,3 +139,13 @@ jobs:
         branch: gh-pages
         clean: false  # Keeping the old files
         folder: dist/gh_pages_update
+    - name: add documentation files to preview
+      if: contains(inputs.deploy_to, 'preview')  # only download documentation for preview to ease review
+      run: python scripts/download_documentation.py --folder dist/gh_pages_update
+    - name: Upload preview
+      if: contains(inputs.deploy_to, 'preview')
+      uses: actions/upload-artifact@v2
+      with:
+        name: preview
+        path: dist/gh_pages_update
+        retention-days: 90
