@@ -1,0 +1,67 @@
+bioimageio_core_version: 0.5.7
+bioimageio_spec_version: 0.4.8.post1
+rdf_sha256: 6bc26e003919fbc6e579972ebd89107929a97426546d45f17e3f1c8b6600a259
+status: failed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.8post1
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.8 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags for categories: [{''network'': [''unet'', ''densenet'',
+        ''resnet'', ''inception'', ''shufflenet'']}]'}
+  - bioimageio_spec_version: 0.4.8post1
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.8
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags for categories: [{''network'': [''unet'', ''densenet'',
+        ''resnet'', ''inception'', ''shufflenet'']}]'}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8post1
+    error: null
+    name: load resource description
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8post1
+    error: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559474/6559475/rdf.yaml
+    name: All URLs and paths available
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda/envs/6559475/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 87, in _test_resource_urls\n    SourceNodeChecker(root_path=rd.root_path).visit(rd)\n",
+      "  File \"/usr/share/miniconda/envs/6559475/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 34, in visit\n    visitor(node)\n", "  File \"/usr/share/miniconda/envs/6559475/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 41, in generic_visit\n    self.visit(value)\n", "  File \"/usr/share/miniconda/envs/6559475/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 34, in visit\n    visitor(node)\n", "  File \"/usr/share/miniconda/envs/6559475/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 38, in visit_URI\n    self._visit_source(node)\n", "  File \"/usr/share/miniconda/envs/6559475/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8post1
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8post1
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: [Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Device management is not implemented for keras
+          yet, cannot unload model', 'Model tensorflow version (1, 12) does not match
+          1.13.2.The prediction results may be wrong', 'Passing (type, 1) or ''1type''
+          as a synonym of type is deprecated; in a future version of numpy, it will
+          be understood as (type, (1,)) / ''(1,)type''.']
+  deepimagej: []
+  ilastik: []
