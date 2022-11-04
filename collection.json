@@ -1304,6 +1304,73 @@
     {
       "authors": [
         {
+          "affiliation": "Universidad Carlos III de Madrid",
+          "name": "Estibaliz G\u00f3mez-de-Mariscal"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Martin Ma\u0161ka"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Anna Kotrbov\u00e1"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Vendula Posp\u00edchalov\u00e1"
+        },
+        {
+          "affiliation": "Masaryk University",
+          "name": "Pavel Matula"
+        },
+        {
+          "affiliation": "Universidad Carlos III de Madrid",
+          "name": "Arrate Mu\u00f1oz-Barrutia"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg"
+      ],
+      "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
+      "download_count": 598,
+      "download_url": "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip",
+      "id": "10.5281/zenodo.6559474",
+      "license": "BSD-3-Clause",
+      "links": [
+        "deepimagej/deepimagej",
+        "deepimagej/EVsTEMsegmentationFRUNet",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
+      ],
+      "name": "Small Extracellular Vesicle TEM Segmentation (Fully Residual U-Net)",
+      "nickname": "naked-microbe",
+      "nickname_icon": "\ud83e\udda0",
+      "owners": [
+        271523
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559474/6559475/rdf.yaml",
+      "tags": [
+        "deepimagej",
+        "extracellular-vesicles",
+        "segmentation",
+        "tem",
+        "frunet",
+        "exosomes",
+        "electron-microscopy",
+        "2d-segmentation",
+        "2d",
+        "tensorflow",
+        "segmentation",
+        "instance-segmentation"
+      ],
+      "type": "model",
+      "versions": [
+        "6559475"
+      ]
+    },
+    {
+      "authors": [
+        {
           "affiliation": "EMBL Heidelberg",
           "name": "Jonas Hellgoth"
         }
@@ -4723,13 +4790,13 @@
     "n_resource_versions": {
       "application": 96,
       "dataset": 82,
-      "model": 104,
+      "model": 106,
       "notebook": 4
     },
     "n_resources": {
       "application": 48,
       "dataset": 41,
-      "model": 42,
+      "model": 43,
       "notebook": 2
     },
     "partners": [
