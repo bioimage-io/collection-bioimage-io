@@ -83,12 +83,15 @@ def get_default_env(
     if tensorflow_version is not None:
         # tensorflow 1 is not available on conda, so we need to inject this as a pip dependency
         if tensorflow_version.major == 1:
+            tensorflow_version = max(tensorflow_version, Version("1.13"))  # tf <1.13 not available anymore
             assert opset_version is None
             assert pytorch_version is None
             conda_env["dependencies"] = ["pip", "python >=3.7,<3.8"]  # tf 1.15 not available for py>=3.8
             # get bioimageio.core (and its dependencies) via pip as well to avoid conda/pip mix
+            # protobuf pin: tf 1 does not pin an upper limit for protobuf,
+            #               but fails to load models saved with protobuf 3 when installing protobuf 4.
             conda_env["dependencies"].append(
-                {"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}"]}
+                {"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}", "protobuf <4.0"]}
             )
         else:  # use conda otherwise
             conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
