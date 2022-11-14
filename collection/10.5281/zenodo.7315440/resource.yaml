@@ -5,8 +5,22 @@ nickname_icon: 🦚
 owners:
 - 411780
 status: accepted
-type: model
+type: unknown
 versions:
+- created: '2022-11-12 13:05:26.286539'
+  doi: 10.5281/zenodo.7315469
+  name: EmbryoNet base model
+  status: accepted
+  version_id: '7315469'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/1e702076-b3c9-4d0f-aa10-353bd494e3e2/rdf.yaml
+- created: '2022-11-12 13:04:02.906742'
+  doi: 10.5281/zenodo.7315462
+  name: 10.5281/zenodo.7315462
+  status: accepted
+  version_id: '7315462'
+  version_name: version 2
+  rdf_source: unknown
 - created: '2022-11-12 12:53:32.701172'
   doi: 10.5281/zenodo.7315441
   name: EmbryoNet base model
