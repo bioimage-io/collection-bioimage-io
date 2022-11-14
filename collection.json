@@ -1538,6 +1538,62 @@
     {
       "authors": [
         {
+          "name": "Daniel Capek",
+          "orcid": "0000-0001-5199-9940"
+        },
+        {
+          "name": "Matvey Safroshkin",
+          "orcid": "0000-0003-3955-5081"
+        },
+        {
+          "name": "Hernan Morales",
+          "orcid": "0000-0002-9578-2556"
+        },
+        {
+          "name": "Grigory Arutyunov",
+          "orcid": "0000-0002-4372-9155"
+        },
+        {
+          "name": "Nikan Toulany"
+        },
+        {
+          "name": "Patrick Mueller"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/phenotypes_features.png"
+      ],
+      "description": "EmbryoNet Model by embryoNet Team",
+      "download_count": 9,
+      "id": "10.5281/zenodo.7315440",
+      "license": "GPL-3.0",
+      "links": [
+        "Embryonet.de",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "EmbryoNet base model",
+      "nickname": "nice-peacock",
+      "nickname_icon": "\ud83e\udd9a",
+      "owners": [
+        411780
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7315440/7315441/rdf.yaml",
+      "tags": [
+        "classification",
+        "resnet-18",
+        "embryology",
+        "onnx",
+        "embryo",
+        "developmental-biology"
+      ],
+      "type": "model",
+      "versions": [
+        "7315441"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "petebankhead",
           "name": "Pete Bankhead"
         }
@@ -4790,13 +4846,13 @@
     "n_resource_versions": {
       "application": 96,
       "dataset": 82,
-      "model": 106,
+      "model": 108,
       "notebook": 4
     },
     "n_resources": {
       "application": 48,
       "dataset": 41,
-      "model": 43,
+      "model": 44,
       "notebook": 2
     },
     "partners": [
