@@ -1,0 +1,117 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/EmbryoNet_labels.txt
+authors:
+- name: Daniel Capek
+  orcid: 0000-0001-5199-9940
+- name: Matvey Safroshkin
+  orcid: 0000-0003-3955-5081
+- name: Hernan Morales
+  orcid: 0000-0002-9578-2556
+- name: Grigory Arutyunov
+  orcid: 0000-0002-4372-9155
+- name: Nikan Toulany
+- name: Patrick Mueller
+cite:
+- doi: 'http://dx.doi.org/10.48606/15 '
+  text: Embryonet
+  url: https://embryonet.de
+config:
+  bioimageio:
+    created: '2022-11-12 12:53:32.701172'
+    doi: 10.5281/zenodo.7315441
+    nickname: nice-peacock
+    nickname_icon: 🦚
+    owners:
+    - 411780
+    status: accepted
+    version_id: '7315441'
+    version_name: version 1
+covers:
+- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/phenotypes_features.png
+description: EmbryoNet Model by embryoNet Team
+documentation: https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/README.md
+format_version: 0.4.8
+id: 10.5281/zenodo.7315440/7315441
+inputs:
+- axes: bcyx
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: float32
+  description: Embryo image (jpeg or png)
+  name: data
+  shape:
+  - 1
+  - 3
+  - 224
+  - 224
+- axes: bcyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  description: EmbryoAge channel. Same as t_for_fc but repeated.
+  name: t_for_conv
+  shape:
+  - 1
+  - 1
+  - 224
+  - 224
+- axes: bc
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  description: Embryo age for fc layer. 0 = 0hpf, 1 = 24 hpf (hpf = hours post fertilization)
+  name: t_for_fc
+  shape:
+  - 1
+  - 1
+license: GPL-3.0
+links:
+- Embryonet.de
+- imjoy/BioImageIO-Packager
+maintainers:
+- email: xaroplock@gmail.com
+  github_user: 'https://github.com/mueller-lab '
+  name: Matvey
+name: EmbryoNet base model
+outputs:
+- axes: c
+  data_range:
+  - 0.0
+  - .inf
+  data_type: float32
+  description: embryo phenotype classification probability
+  name: output
+  shape:
+  - 14
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7315440/7315441/rdf.yaml
+tags:
+- classification
+- resnet-18
+- embryology
+- onnx
+- embryo
+- developmental-biology
+test_inputs:
+- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/input_test_image.npy
+- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/input_test_time_for_conv.npy
+- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/input_test_time_for_fc.npy
+test_outputs:
+- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/result.npy
+timestamp: '2021-09-21T12:00:12+00:00'
+type: model
+version: 0.1.1
+weights:
+  onnx:
+    authors:
+    - name: Daniel Capek
+    - name: Matvey Safroshkin
+    - name: Hernan Morales
+    - name: Grigory Arutyunov
+    - name: Nikan Toulany
+    - name: Patrick Mueller
+    opset_version: 7
+    source: https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/EmbryoNet_GPU_batch_1.onnx
