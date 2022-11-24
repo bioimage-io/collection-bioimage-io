@@ -56,7 +56,7 @@ tests:
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5910163/5942853, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: No module named 'onnxruntime'
@@ -73,6 +73,8 @@ tests:
         line 138, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.5910163/5942853, name: reproduce
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: No module named 'onnxruntime'
@@ -89,5 +91,3 @@ tests:
         line 138, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.5910163/5942853, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
