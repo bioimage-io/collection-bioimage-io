@@ -14,3 +14,7 @@ versions:
   version_id: '7380172'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/36f85650-7541-4e02-ab2e-426ca923c874/rdf.yaml
+  maintainers:
+  - name: MB Smith
+    github_user: odinsbane
+    email: smithm3@crick.ac.uk
