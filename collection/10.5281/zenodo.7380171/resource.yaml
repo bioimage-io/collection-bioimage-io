@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.7380171
+id: 10.5281/zenodo.7380171
+nickname: easy-going-sauropod
+nickname_icon: 🦕
+owners:
+- 439786
+status: accepted
+type: model
+versions:
+- created: '2022-11-30 09:26:02.662432'
+  doi: 10.5281/zenodo.7380172
+  name: Boundary segmentation
+  status: accepted
+  version_id: '7380172'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/36f85650-7541-4e02-ab2e-426ca923c874/rdf.yaml
