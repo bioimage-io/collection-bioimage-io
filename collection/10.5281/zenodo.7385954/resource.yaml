@@ -4,7 +4,7 @@ nickname: patient-zebra
 nickname_icon: 🦓
 owners:
 - 85436
-status: accepted
+status: blocked
 type: model
 versions:
 - created: '2022-12-01 11:23:27.740924'
