@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-12-01 14:17:09.346211'
+  doi: 10.5281/zenodo.7386437
+  name: Drosophila epithelia cell boundary segmentation of 2D projections
+  status: accepted
+  version_id: '7386437'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/dcf720a0-b513-484c-9ea5-2455894a660d/rdf.yaml
 - created: '2022-11-30 09:26:02.662432'
   doi: 10.5281/zenodo.7380172
   name: Boundary segmentation
