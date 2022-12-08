@@ -81,13 +81,12 @@ jobs:
       id: create_env
       continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
       timeout-minutes: 30
-      uses: conda-incubator/setup-miniconda@v2
+      uses: mamba-org/provision-with-micromamba@main
       with:
-        auto-update-conda: true
-        mamba-version: "*"
         channel-priority: strict
-        activate-environment: ${{ matrix.env_name }}
+        cache-downloads: true
         environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
+        environment-name: ${{ matrix.env_name }}
     - name: install minimal script deps
       if: steps.create_env.outcome != 'success'
       run: pip install typer bioimageio.spec
