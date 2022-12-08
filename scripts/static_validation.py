@@ -97,7 +97,7 @@ def get_default_env(
             conda_env["dependencies"].append(f"main::tensorflow {get_version_range(tensorflow_version)}")
             if tensorflow_version.minor == 5:
                 # tf 2.5 is not available on conda-forge, but on main
-                conda_env["channels"] = ["defaults"]
+                conda_env["channels"] = ["defaults", "conda-forge"]
         else:
             raise NotImplementedError("tensorflow 3")
 
