@@ -84,7 +84,7 @@ jobs:
       uses: mamba-org/provision-with-micromamba@main
       with:
         channel-priority: strict
-        cache-downloads: true
+        cache-env: true
         environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
         environment-name: ${{ matrix.env_name }}
     - name: install minimal script deps
