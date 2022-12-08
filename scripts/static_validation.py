@@ -94,13 +94,13 @@ def get_default_env(
                 {"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}", "protobuf <4.0"]}
             )
         elif tensorflow_version.major == 2:  # use conda otherwise
+            conda_env["dependencies"].append(f"main::tensorflow {get_version_range(tensorflow_version)}")
             if tensorflow_version.minor == 5:
                 # tf 2.5 is not available on conda-forge, but on main
-                conda_env["dependencies"].append(f"main::tensorflow {get_version_range(tensorflow_version)}")
-            else:
-                conda_env["dependencies"].append(f"conda-forge::tensorflow {get_version_range(tensorflow_version)}")
+                conda_env["channels"] = ["defaults"]
         else:
             raise NotImplementedError("tensorflow 3")
+
     return conda_env
 
 
