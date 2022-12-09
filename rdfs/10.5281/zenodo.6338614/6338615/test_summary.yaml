@@ -37,7 +37,7 @@ tests:
         line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6338614/6338615, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
+      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
@@ -56,8 +56,6 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6338614/6338615, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
@@ -76,3 +74,5 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6338614/6338615, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
