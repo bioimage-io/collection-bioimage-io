@@ -74,6 +74,8 @@ tests:
   ilastik:
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6334777/6346524, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
+  - {error: Missing/invalid weight formats for 10.5281/zenodo.6334777/6346524, name: reproduce
+      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: "Output
       and expected output disagree:\n \nArrays are not almost equal to 4 decimals\n\nMismatched
       elements: 9097 / 1638400 (0.555%)\nMax absolute difference: 0.00042701\nMax
@@ -94,5 +96,3 @@ tests:
       0.0305, 0.018 , ..., 0.0247, 0.0351, 0.0563],\n          [0.0394, 0.0229, 0.014
       , ..., 0.0161, 0.0212, 0.0354],...", name: reproduce test outputs with ilastik
       1.4.0b26 using pytorch_state_dict weights, reason: error, status: failed, traceback: null}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6334777/6346524, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}

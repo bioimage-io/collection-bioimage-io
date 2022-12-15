@@ -39,7 +39,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
       0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -56,7 +56,7 @@ tests:
     bioimageio_spec_version: 0.4.5post6
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
       0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -73,7 +73,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
       0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -90,7 +90,7 @@ tests:
     bioimageio_spec_version: 0.4.5post3
     error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
       0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
