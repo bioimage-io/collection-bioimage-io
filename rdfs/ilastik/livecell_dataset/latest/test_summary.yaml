@@ -20,9 +20,6 @@ tests:
     traceback: null
     warnings: {license: CC-BY-NC-4.0 (Creative Commons Attribution Non Commercial
         4.0 International) is not FSF Free/libre.}
-  deepimagej:
-  - {error: Missing/invalid weight formats for ilastik/livecell_dataset/latest, name: reproduce
-      test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for ilastik/livecell_dataset/latest, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}

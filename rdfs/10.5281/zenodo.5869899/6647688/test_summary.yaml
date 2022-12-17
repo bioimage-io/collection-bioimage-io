@@ -59,5 +59,4 @@ tests:
       "  File \"/usr/share/miniconda/envs/6647688/lib/python3.9/site-packages/marshmallow/schema.py\",
         line 722, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda/envs/6647688/lib/python3.9/site-packages/marshmallow/schema.py\",
         line 909, in _do_load\n    raise exc\n"]
-  deepimagej: []
   ilastik: []

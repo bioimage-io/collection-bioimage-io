@@ -23,18 +23,6 @@ tests:
         ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej:
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
-        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
-        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6338614/6338615, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}

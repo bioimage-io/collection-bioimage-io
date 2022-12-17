@@ -39,32 +39,6 @@ tests:
         ''in-silico-labeling'']}]'}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post13, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej:
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: '[Errno 2] No such file or directory: ''/home/runner/work/models/models/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 97, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 97, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/numpy/lib/npyio.py\",
-        line 407, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: '[Errno 2] No such file or directory: ''/home/runner/work/models/models/bioimageio-gh-pages/rdfs/10.5281/zenodo.5914248/5914249/exampleImage.npy'''
-    name: reproduce test outputs with deepimagej 2.1.13 using keras_hdf5 weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 97, in test_resource\n    inputs = [np.load(str(in_path)) for in_path
-        in model.test_inputs]\n", "  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 97, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
-        model.test_inputs]\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/numpy/lib/npyio.py\",
-        line 407, in load\n    fid = stack.enter_context(open(os_fspath(file), \"rb\"))\n"]
   ilastik:
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5914248/5914249, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}

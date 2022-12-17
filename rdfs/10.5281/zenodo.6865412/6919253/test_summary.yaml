@@ -38,5 +38,4 @@ tests:
         ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  deepimagej: []
   ilastik: []

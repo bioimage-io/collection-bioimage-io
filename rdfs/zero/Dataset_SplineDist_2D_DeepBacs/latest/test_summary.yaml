@@ -18,9 +18,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  deepimagej:
-  - {error: Missing/invalid weight formats for zero/Dataset_SplineDist_2D_DeepBacs/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for zero/Dataset_SplineDist_2D_DeepBacs/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,

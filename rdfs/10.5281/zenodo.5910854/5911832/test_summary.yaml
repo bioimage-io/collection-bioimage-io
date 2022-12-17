@@ -43,28 +43,6 @@ tests:
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej:
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: Not found any of the specified weights formats ['pytorch_script']
-    name: reproduce test outputs with deepimagej 2.1.13 using pytorch_script weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 45, in test_model\n    model = load_resource_description(\n", "  File
-        \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 55, in load_resource_description\n    raise ValueError(f\"Not found any
-        of the specified weights formats {weights_priority_order}\")\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post7
-    error: 'unsupported operand type(s) for +: ''PosixPath'' and ''str'''
-    name: reproduce test outputs with deepimagej 2.1.13 using onnx weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
-        line 122, in test_resource\n    error = (error or \"\") + download_deepimagej_model(fiji_path,
-        rdf_path)\n", "  File \"/home/runner/work/models/models/scripts/utils.py\",
-        line 27, in download_deepimagej_model\n    os.makedirs(fiji_dir + \"//models\")\n"]
   ilastik:
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5910854/5911832, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}

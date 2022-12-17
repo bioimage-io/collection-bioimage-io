@@ -18,7 +18,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  deepimagej: []
   ilastik:
   - {error: Missing/invalid weight formats for ilastik/stardist_dsb_training_data/latest,
     name: reproduce test outputs with ilastik 1.4.0b26, reason: error, status: failed}

@@ -23,7 +23,6 @@ tests:
         Free/libre.}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post13, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej: []
   ilastik:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
