@@ -81,4 +81,5 @@ tests:
     warnings:
       non-validation-warnings: ['Device management is not implemented for onnx yet,
           cannot unload model']
+  deepimagej: []
   ilastik: []

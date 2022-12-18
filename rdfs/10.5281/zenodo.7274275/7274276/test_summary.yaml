@@ -55,4 +55,5 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  deepimagej: []
   ilastik: []

@@ -18,4 +18,5 @@ tests:
     status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  deepimagej: []
   ilastik: []

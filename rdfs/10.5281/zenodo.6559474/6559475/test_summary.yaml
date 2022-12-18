@@ -63,4 +63,5 @@ tests:
           1.13.2.The prediction results may be wrong', 'Passing (type, 1) or ''1type''
           as a synonym of type is deprecated; in a future version of numpy, it will
           be understood as (type, (1,)) / ''(1,)type''.']
+  deepimagej: []
   ilastik: []

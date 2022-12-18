@@ -22,4 +22,5 @@ tests:
     warnings: {tags: 'Missing tags for categories: [{''framework'': [''tensorflow'',
         ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'',
         ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
+  deepimagej: []
   ilastik: []

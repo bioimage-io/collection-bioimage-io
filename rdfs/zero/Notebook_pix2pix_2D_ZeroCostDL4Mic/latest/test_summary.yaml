@@ -18,6 +18,9 @@ tests:
     status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  deepimagej:
+  - {error: Missing/invalid weight formats for zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest,
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest,
     name: reproduce test outputs with ilastik 1.4.0b26, reason: error, status: failed}

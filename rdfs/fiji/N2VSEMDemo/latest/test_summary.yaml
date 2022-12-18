@@ -36,6 +36,24 @@ tests:
         ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'': [''tensorflow'',
         ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
         ''inception'', ''shufflenet'']}]'}
+  deepimagej:
+  - bioimageio_core_version: 0.5.3post2
+    bioimageio_spec_version: 0.4.5post7
+    error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
+      small for halo [0, 32, 32, 0].'']}'
+    name: reproduce test outputs with deepimagej 2.1.13 using tensorflow_saved_model_bundle
+      weights
+    reason: error
+    status: failed
+    traceback: ["  File \"/home/runner/work/models/models/scripts/check_rdf_and_test_model.py\",
+        line 45, in test_model\n    model = load_resource_description(\n", "  File
+        \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
+        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/bioimageio/spec/io_.py\",
+        line 197, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
+      "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
+        line 717, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
+        line 900, in _do_load\n    raise exc\n"]
   ilastik:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6

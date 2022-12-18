@@ -18,6 +18,7 @@ tests:
     status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  deepimagej: []
   ilastik:
   - {error: Missing/invalid weight formats for imjoy/GenericBioEngineApp/latest, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
