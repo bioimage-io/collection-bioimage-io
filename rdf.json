@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 16570,
+      "download_count": 16583,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 14080,
+      "download_count": 14093,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -340,7 +340,7 @@
         "https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 8138,
+      "download_count": 8140,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -468,7 +468,7 @@
         "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 5724,
+      "download_count": 5735,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -557,7 +557,7 @@
         "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 4402,
+      "download_count": 4404,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -684,7 +684,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 3117,
+      "download_count": 3119,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -778,7 +778,7 @@
         "https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 2812,
+      "download_count": 2821,
       "id": "10.5281/zenodo.6811491",
       "license": "CC-BY-4.0",
       "links": [
@@ -917,7 +917,7 @@
         "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 2356,
+      "download_count": 2358,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1004,7 +1004,7 @@
         "https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 2049,
+      "download_count": 2051,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -1126,44 +1126,6 @@
     {
       "authors": [
         {
-          "name": "Shubin Dai"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
-      ],
-      "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 1934,
-      "id": "10.5281/zenodo.5910854",
-      "license": "MIT",
-      "links": [
-        "imjoy/BioImageIO-Packager",
-        "hpa/hpa-kaggle-2021-dataset"
-      ],
-      "name": "HPA Bestfitting InceptionV3",
-      "nickname": "straightforward-crocodile",
-      "nickname_icon": "\ud83d\udc0a",
-      "owners": [
-        47882
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/6539073/rdf.yaml",
-      "tags": [
-        "classification",
-        "inception-v3",
-        "hpa",
-        "onnx",
-        "cells",
-        "protein-localization"
-      ],
-      "type": "model",
-      "versions": [
-        "6539073",
-        "5911832"
-      ]
-    },
-    {
-      "authors": [
-        {
           "name": "Lorenzo Cerrone"
         },
         {
@@ -1175,7 +1137,7 @@
         "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 1934,
+      "download_count": 1936,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -1214,10 +1176,48 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
+      ],
+      "description": "The winning model of HPA image classification 2021 by Bestfitting",
+      "download_count": 1934,
+      "id": "10.5281/zenodo.5910854",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager",
+        "hpa/hpa-kaggle-2021-dataset"
+      ],
+      "name": "HPA Bestfitting InceptionV3",
+      "nickname": "straightforward-crocodile",
+      "nickname_icon": "\ud83d\udc0a",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/6539073/rdf.yaml",
+      "tags": [
+        "classification",
+        "inception-v3",
+        "hpa",
+        "onnx",
+        "cells",
+        "protein-localization"
+      ],
+      "type": "model",
+      "versions": [
+        "6539073",
+        "5911832"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Shubin Dai"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png"
       ],
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 1923,
+      "download_count": 1925,
       "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
@@ -1274,7 +1274,7 @@
         "https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 1585,
+      "download_count": 1587,
       "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
       "id": "10.5281/zenodo.6559929",
       "license": "MIT",
