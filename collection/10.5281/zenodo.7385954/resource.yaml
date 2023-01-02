@@ -4,13 +4,13 @@ nickname: patient-zebra
 nickname_icon: 🦓
 owners:
 - 85436
-status: blocked
+status: accepted
 type: model
 versions:
 - created: '2022-12-01 11:23:27.740924'
   doi: 10.5281/zenodo.7385955
   name: N2V2 SEM demo
-  status: accepted
+  status: blocked
   version_id: '7385955'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/316b5d90-3742-40a4-9a6b-82d33aa26b07/rdf.yaml
