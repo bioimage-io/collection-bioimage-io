@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2022-12-01 12:04:15.088957'
+  doi: 10.5281/zenodo.7386107
+  name: N2V2 SEM demo
+  status: accepted
+  version_id: '7386107'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/5e02940b-9e9f-4d5b-a8d2-216bb72a66cf/rdf.yaml
 - created: '2022-12-01 11:23:27.740924'
   doi: 10.5281/zenodo.7385955
   name: N2V2 SEM demo
