@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 14225,
+      "download_count": 14268,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -468,7 +468,7 @@
         "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 5830,
+      "download_count": 5862,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
