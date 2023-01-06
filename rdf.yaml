@@ -25,7 +25,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png']
   description: '{organelle} segmentation in EM of platynereis.'
-  download_count: 14358
+  download_count: 14406
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -44,7 +44,7 @@ collection:
   covers: ['https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg',
     'https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 11908
+  download_count: 11954
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -63,7 +63,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 11110
+  download_count: 11155
   id: 10.5281/zenodo.6348728
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -82,7 +82,7 @@ collection:
   covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
     'https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 10860
+  download_count: 10905
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
@@ -104,7 +104,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 9644
+  download_count: 9684
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -196,7 +196,7 @@ collection:
     'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-  download_count: 5927
+  download_count: 5965
   id: 10.5281/zenodo.6383429
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -466,7 +466,7 @@ collection:
     'https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png']
   description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-  download_count: 1973
+  download_count: 1975
   id: 10.5281/zenodo.6334583
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -542,7 +542,7 @@ collection:
   covers: ['https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png']
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
-  download_count: 1635
+  download_count: 1640
   download_url: https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip
   id: 10.5281/zenodo.6559929
   license: MIT
@@ -641,7 +641,7 @@ collection:
   covers: ['https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/image.png',
     'https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png']
   description: DeepImageJ compatible FRUNet trained to subtly segment cells and gland.
-  download_count: 484
+  download_count: 486
   id: 10.5281/zenodo.6865412
   license: CC-BY-4.0
   name: Cells and gland Segmentation (FRUNet)
