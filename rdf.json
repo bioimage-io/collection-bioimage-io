@@ -1376,8 +1376,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/cover_1.png",
-        "https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/cover.png"
+        "https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/cover_1.png",
+        "https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current segmentation enables running further watershed segmentation to obtain a unique label for each individual bacteria detected in the image.",
       "download_count": 1309,
@@ -1386,7 +1386,8 @@
       "links": [
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager",
-        "ilastik/ilastik"
+        "ilastik/ilastik",
+        "zero/notebook_u-net_2d_multilabel_zerocostdl4mic"
       ],
       "name": " B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet",
       "nickname": "placid-llama",
@@ -1394,7 +1395,7 @@
       "owners": [
         147356
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7261975/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7546703/rdf.yaml",
       "tags": [
         "zerocostdl4mic",
         "segmentation",
@@ -1409,6 +1410,7 @@
       ],
       "type": "model",
       "versions": [
+        "7546703",
         "7261975"
       ]
     },
@@ -4846,7 +4848,7 @@
     "n_resource_versions": {
       "application": 96,
       "dataset": 82,
-      "model": 108,
+      "model": 109,
       "notebook": 4
     },
     "n_resources": {
