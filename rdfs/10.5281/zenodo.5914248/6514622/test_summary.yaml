@@ -71,6 +71,9 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights, reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Unable to open file (file signature not found)
@@ -100,6 +103,3 @@ tests:
         ', '  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
 
         ']
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights, reason: null, status: passed, traceback: null}

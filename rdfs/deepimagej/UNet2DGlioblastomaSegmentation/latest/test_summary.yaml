@@ -242,7 +242,8 @@ tests:
       ISC, MIT-advertising, GFDL-1.2-invariants-or-later, CC-BY-NC-SA-2.5, CC-BY-1.0,
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_js weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
+      weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -326,8 +327,7 @@ tests:
       ISC, MIT-advertising, GFDL-1.2-invariants-or-later, CC-BY-NC-SA-2.5, CC-BY-1.0,
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_js weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -414,7 +414,8 @@ tests:
       ISC, MIT-advertising, GFDL-1.2-invariants-or-later, CC-BY-NC-SA-2.5, CC-BY-1.0,
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_js weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
+      weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
@@ -498,8 +499,7 @@ tests:
       ISC, MIT-advertising, GFDL-1.2-invariants-or-later, CC-BY-NC-SA-2.5, CC-BY-1.0,
       OSL-2.1, CrystalStacker, FSFULLR, libselinux-1.0, MulanPSL-2.0, LGPL-3.0, OLDAP-2.5,
       Artistic-1.0-Perl, AFL-1.2, CAL-1.0, BSD-4-Clause, Interbase-1.0, NPOSL-3.0.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights
+    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_js weights
     reason: error
     status: failed
     traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",

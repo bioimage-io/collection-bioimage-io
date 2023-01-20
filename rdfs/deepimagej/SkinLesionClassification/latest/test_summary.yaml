@@ -1,8 +1,6 @@
 rdf_sha256: 87e6dc8a22a16636537b75ee9ee8a6437ec08524681e0d7bdcb66fc07b47bcc3
 tests:
   deepimagej:
-  - {error: Missing/invalid weight formats for deepimagej/SkinLesionClassification/latest,
-    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post7
     error: '{''run_mode'': [''Expected dictionary, but got list.''], ''license'':
@@ -88,10 +86,9 @@ tests:
       "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 717, in load\n    return self._do_load(\n", "  File \"/usr/share/miniconda3/envs/deepImageJEnv/lib/python3.8/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
-  ilastik:
   - {error: Missing/invalid weight formats for deepimagej/SkinLesionClassification/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
+    name: reproduce test outputs with deepimagej 2.1.13, reason: error, status: failed}
+  ilastik:
   - bioimageio_core_version: 0.5.3post2
     bioimageio_spec_version: 0.4.5post6
     error: '{''cite'': [''Shorter than minimum length 1.''], ''license'': [''Must
@@ -177,6 +174,9 @@ tests:
         line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 900, in _do_load\n    raise exc\n"]
+  - {error: Missing/invalid weight formats for deepimagej/SkinLesionClassification/latest,
+    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
+    status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: '{''license'': [''Must be one of: bzip2-1.0.6, Glulxe, Parity-7.0.0, OML,
