@@ -161,26 +161,9 @@
         "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main"
     },
     {
-        "about_url": "https://www.proteinatlas.org/",
-        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
-        "default_type": "model",
-        "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
         "id": "hpa",
-        "logo": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
-        "name": "HPA",
-        "repository": "CellProfiling/HPA-model-zoo",
-        "resource_types": [
-            "model",
-            "application"
-        ],
-        "splash_feature_list": [],
-        "splash_subtitle": null,
-        "splash_title": "The Human Protein Atlas",
-        "tags": [
-            "hpa"
-        ]
+        "repository": "CellProfiling/HPA-model-zoo"
     }
 ]
