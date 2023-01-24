@@ -4859,60 +4859,188 @@
     },
     "partners": [
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "main",
         "collection_file_name": "collection.bioimage.io.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
         "id": "bioimageio",
-        "repository": "bioimage-io/bioimage-io-resources"
+        "logo": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
+        "name": "BioImage.IO",
+        "repository": "bioimage-io/bioimage-io-resources",
+        "resource_types": [
+          "model",
+          "application",
+          "notebook",
+          "dataset"
+        ],
+        "splash_feature_list": [
+          "Integrate with Fiji, Ilastik, ImJoy",
+          "Try model instantly with BioEngine",
+          "Contribute your models via Zenodo",
+          "Link models to datasets and applications"
+        ],
+        "splash_subtitle": "Advanced AI models in one-click",
+        "splash_title": "BioImage Model Zoo",
+        "tags": [],
+        "url_root": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "default_type": "application",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png",
         "id": "zero",
-        "repository": "HenriquesLab/ZeroCostDL4Mic"
+        "logo": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png",
+        "name": "ZeroCostDL4Mic",
+        "repository": "HenriquesLab/ZeroCostDL4Mic",
+        "resource_types": [
+          "model",
+          "application",
+          "dataset"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": "A Google Colab based no-cost toolbox to explore Deep-Learning in Microscopy",
+        "splash_title": "ZeroCostDL4Mic",
+        "tags": [
+          "ZeroCostDL4Mic"
+        ],
+        "url_root": "https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master",
+        "version": "1.7.1"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png",
         "id": "deepimagej",
+        "logo": "https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png",
+        "name": "DeepImageJ",
         "repository": "deepimagej/models",
+        "resource_types": [
+          "model",
+          "notebook",
+          "application"
+        ],
+        "splash_feature_list": null,
+        "splash_subtitle": "A user-friendly plugin to run deep learning models in ImageJ",
+        "splash_title": "deepImageJ",
+        "tags": [
+          "deepimagej"
+        ],
         "test_summaries": {
           "deploy_branch": "gh-pages",
           "deploy_folder": "test_summaries",
           "repository": "deepimagej/models",
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/master"
-        }
+        },
+        "url_root": "https://raw.githubusercontent.com/deepimagej/models/master"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://fiji.sc/site/logo.png",
         "id": "fiji",
-        "repository": "bioimage-io/fiji-bioimage-io"
+        "logo": "https://fiji.sc/site/logo.png",
+        "name": "Fiji",
+        "repository": "bioimage-io/fiji-bioimage-io",
+        "resource_types": [
+          "model",
+          "notebook"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": "Fiji is just ImageJ",
+        "splash_title": "Fiji",
+        "tags": [
+          "fiji"
+        ],
+        "url_root": "https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "collection.bioimage.io.yaml",
+        "default_type": "application",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://imjoy.io/static/img/imjoy-icon.svg",
         "id": "imjoy",
-        "repository": "imjoy-team/bioimage-io-resources"
+        "logo": "https://imjoy.io/static/img/imjoy-icon.svg",
+        "name": "ImJoy",
+        "repository": "imjoy-team/bioimage-io-resources",
+        "resource_types": [
+          "notebook",
+          "application"
+        ],
+        "splash_feature_list": [
+          "Minimal and flexible plugin powered web application",
+          "Server-less progressive web application with offline support",
+          "Rich and interactive user interface powered by web technologies"
+        ],
+        "splash_subtitle": "Deep Learning Made Easy!",
+        "splash_title": "ImJoy",
+        "tags": [
+          "imjoy"
+        ],
+        "url_root": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "main",
         "collection_file_name": "collection.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
         "id": "ilastik",
+        "logo": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
+        "name": "ilastik",
         "repository": "ilastik/bioimage-io-resources",
+        "resource_types": [
+          "application"
+        ],
+        "splash_feature_list": null,
+        "splash_subtitle": "the interactive learning and segmentation toolkit",
+        "splash_title": "ilastik",
+        "tags": [
+          "ilastik"
+        ],
         "test_summaries": {
           "deploy_branch": "gh-pages",
           "deploy_folder": "test_summaries",
           "repository": "ilastik/bioimage-io-resources",
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/main"
-        }
+        },
+        "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main"
       },
       {
+        "about_url": "https://www.proteinatlas.org/",
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
         "id": "hpa",
-        "repository": "CellProfiling/HPA-model-zoo"
+        "logo": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
+        "name": "HPA",
+        "repository": "CellProfiling/HPA-model-zoo",
+        "resource_types": [
+          "model",
+          "application"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": null,
+        "splash_title": "The Human Protein Atlas",
+        "tags": [
+          "hpa"
+        ]
       }
     ],
     "resource_types": [
