@@ -7,7 +7,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 18041
+  download_count: 18109
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -63,7 +63,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 12200
+  download_count: 12272
   id: 10.5281/zenodo.6348728
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -104,7 +104,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 10578
+  download_count: 10637
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -121,7 +121,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
   description: Segmentation of mitochondria in EM images.
-  download_count: 9495
+  download_count: 9550
   id: 10.5281/zenodo.6406803
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -138,7 +138,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png']
   description: Cell segmentation in EM of platynereis.
-  download_count: 8222
+  download_count: 8225
   id: 10.5281/zenodo.6028280
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/platynereis_em_training_data, ilastik/ilastik,
@@ -155,7 +155,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png']
   description: Mitochondria segmentation for electron microscopy.
-  download_count: 8026
+  download_count: 8029
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
@@ -175,7 +175,7 @@ collection:
     'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 7885
+  download_count: 7933
   id: 10.5281/zenodo.6384845
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -213,7 +213,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 4683
+  download_count: 4686
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -308,7 +308,7 @@ collection:
     'https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png']
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 3203
+  download_count: 3205
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation]
@@ -349,7 +349,7 @@ collection:
     'https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png']
   description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
     of Arabidopsis thaliana ovules acquired on a confocal microscope.
-  download_count: 2679
+  download_count: 2681
   id: 10.5281/zenodo.5749843
   license: MIT
   links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -386,7 +386,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 2438
+  download_count: 2439
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
@@ -444,7 +444,7 @@ collection:
   covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 2111
+  download_count: 2112
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
@@ -528,7 +528,7 @@ collection:
   description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
     apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 2015
+  download_count: 2017
   id: 10.5281/zenodo.6334881
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -545,7 +545,7 @@ collection:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
-  download_count: 2004
+  download_count: 2006
   id: 10.5281/zenodo.5910163
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -588,7 +588,7 @@ collection:
     of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current
     segmentation enables running further watershed segmentation to obtain a unique
     label for each individual bacteria detected in the image.
-  download_count: 1345
+  download_count: 1347
   id: 10.5281/zenodo.7261974
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_2d_multilabel_zerocostdl4mic]
@@ -627,7 +627,7 @@ collection:
   - {name: Patrick Mueller}
   covers: ['https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/phenotypes_features.png']
   description: EmbryoNet Model by embryoNet Team
-  download_count: 710
+  download_count: 724
   id: 10.5281/zenodo.7315440
   license: GPL-3.0
   links: [Embryonet.de, imjoy/BioImageIO-Packager]
@@ -643,7 +643,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth}
   covers: ['https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png']
   description: Prediction enhancer for segmenting cell boundaries in EM images.
-  download_count: 579
+  download_count: 581
   id: 10.5281/zenodo.6808325
   license: CC-BY-4.0
   links: [ilastik/ilastik, deepimagej/deepimagej, ilastik/torch-em-3d-unet-notebook,
@@ -2364,126 +2364,25 @@ config:
   n_resource_versions: {application: 96, dataset: 82, model: 109, notebook: 4}
   n_resources: {application: 48, dataset: 41, model: 44, notebook: 2}
   partners:
-  - background_image: static/img/zoo-background.svg
-    branch: main
-    collection_file_name: collection.bioimage.io.yaml
-    default_type: model
-    explore_button_text: Start Exploring
-    icon: https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg
-    id: bioimageio
-    logo: https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg
-    name: BioImage.IO
-    repository: bioimage-io/bioimage-io-resources
-    resource_types: [model, application, notebook, dataset]
-    splash_feature_list: ['Integrate with Fiji, Ilastik, ImJoy', Try model instantly
-        with BioEngine, Contribute your models via Zenodo, Link models to datasets
-        and applications]
-    splash_subtitle: Advanced AI models in one-click
-    splash_title: BioImage Model Zoo
-    tags: []
-    url_root: https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main
-  - background_image: static/img/zoo-background.svg
-    branch: master
+  - {branch: main, collection_file_name: collection.bioimage.io.yaml, id: bioimageio,
+    repository: bioimage-io/bioimage-io-resources}
+  - {branch: master, collection_file_name: manifest.bioimage.io.yaml, id: zero, repository: HenriquesLab/ZeroCostDL4Mic}
+  - branch: master
     collection_file_name: manifest.bioimage.io.yaml
-    default_type: application
-    explore_button_text: Start Exploring
-    icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-    id: zero
-    logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-    name: ZeroCostDL4Mic
-    repository: HenriquesLab/ZeroCostDL4Mic
-    resource_types: [model, application, dataset]
-    splash_feature_list: []
-    splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
-      in Microscopy
-    splash_title: ZeroCostDL4Mic
-    tags: [ZeroCostDL4Mic]
-    url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-    version: 1.7.1
-  - background_image: static/img/zoo-background.svg
-    branch: master
-    collection_file_name: manifest.bioimage.io.yaml
-    explore_button_text: Start Exploring
-    icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     id: deepimagej
-    logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
-    name: DeepImageJ
     repository: deepimagej/models
-    resource_types: [model, notebook, application]
-    splash_feature_list: null
-    splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
-    splash_title: deepImageJ
-    tags: [deepimagej]
     test_summaries: {deploy_branch: gh-pages, deploy_folder: test_summaries, repository: deepimagej/models,
       workflow: test_bioimageio_resources.yaml, workflow_ref: refs/heads/master}
-    url_root: https://raw.githubusercontent.com/deepimagej/models/master
-  - background_image: static/img/zoo-background.svg
-    branch: master
-    collection_file_name: manifest.bioimage.io.yaml
-    explore_button_text: Start Exploring
-    icon: https://fiji.sc/site/logo.png
-    id: fiji
-    logo: https://fiji.sc/site/logo.png
-    name: Fiji
-    repository: bioimage-io/fiji-bioimage-io
-    resource_types: [model, notebook]
-    splash_feature_list: []
-    splash_subtitle: Fiji is just ImageJ
-    splash_title: Fiji
-    tags: [fiji]
-    url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-  - background_image: static/img/zoo-background.svg
-    branch: master
-    collection_file_name: collection.bioimage.io.yaml
-    default_type: application
-    explore_button_text: Start Exploring
-    icon: https://imjoy.io/static/img/imjoy-icon.svg
-    id: imjoy
-    logo: https://imjoy.io/static/img/imjoy-icon.svg
-    name: ImJoy
-    repository: imjoy-team/bioimage-io-resources
-    resource_types: [notebook, application]
-    splash_feature_list: [Minimal and flexible plugin powered web application, Server-less
-        progressive web application with offline support, Rich and interactive user
-        interface powered by web technologies]
-    splash_subtitle: Deep Learning Made Easy!
-    splash_title: ImJoy
-    tags: [imjoy]
-    url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
-  - background_image: static/img/zoo-background.svg
-    branch: main
+  - {branch: master, collection_file_name: manifest.bioimage.io.yaml, id: fiji, repository: bioimage-io/fiji-bioimage-io}
+  - {branch: master, collection_file_name: collection.bioimage.io.yaml, id: imjoy,
+    repository: imjoy-team/bioimage-io-resources}
+  - branch: main
     collection_file_name: collection.yaml
-    default_type: model
-    explore_button_text: Start Exploring
-    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
     id: ilastik
-    logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
-    name: ilastik
     repository: ilastik/bioimage-io-resources
-    resource_types: [application]
-    splash_feature_list: null
-    splash_subtitle: the interactive learning and segmentation toolkit
-    splash_title: ilastik
-    tags: [ilastik]
     test_summaries: {deploy_branch: gh-pages, deploy_folder: test_summaries, repository: ilastik/bioimage-io-resources,
       workflow: test_bioimageio_resources.yaml, workflow_ref: refs/heads/main}
-    url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
-  - about_url: https://www.proteinatlas.org/
-    background_image: static/img/zoo-background.svg
-    branch: master
-    collection_file_name: manifest.bioimage.io.yaml
-    default_type: model
-    explore_button_text: Start Exploring
-    icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
-    id: hpa
-    logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
-    name: HPA
-    repository: CellProfiling/HPA-model-zoo
-    resource_types: [model, application]
-    splash_feature_list: []
-    splash_subtitle: null
-    splash_title: The Human Protein Atlas
-    tags: [hpa]
+  - {branch: master, collection_file_name: manifest.bioimage.io.yaml, id: hpa, repository: CellProfiling/HPA-model-zoo}
   resource_types: [model, application, dataset]
   splash_feature_list: ['Integrate with Fiji, Ilastik, ImJoy', Try model instantly
       with BioEngine, Contribute your models via Zenodo, Link models to datasets and
