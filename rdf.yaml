@@ -7,7 +7,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png']
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 18315
+  download_count: 18338
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -25,7 +25,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png']
   description: '{organelle} segmentation in EM of platynereis.'
-  download_count: 15758
+  download_count: 15782
   id: 10.5281/zenodo.6028097
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -82,7 +82,7 @@ collection:
   covers: ['https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg',
     'https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg']
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 12123
+  download_count: 12148
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
@@ -121,7 +121,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
   description: Segmentation of mitochondria in EM images.
-  download_count: 9725
+  download_count: 9744
   id: 10.5281/zenodo.6406803
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
@@ -138,7 +138,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png']
   description: Cell segmentation in EM of platynereis.
-  download_count: 8235
+  download_count: 8237
   id: 10.5281/zenodo.6028280
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/platynereis_em_training_data, ilastik/ilastik,
@@ -196,7 +196,7 @@ collection:
     'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-  download_count: 6862
+  download_count: 6880
   id: 10.5281/zenodo.6383429
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -233,7 +233,7 @@ collection:
   covers: ['https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png']
   description: Cell segmentation model for segmenting images from the Human Protein
     Atlas
-  download_count: 4585
+  download_count: 4590
   id: 10.5281/zenodo.6200635
   license: CC-BY-4.0
   links: [imjoy/BioImageIO-Packager, hpa/hpa-cell-image-segmentation-dataset]
@@ -249,7 +249,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png']
   description: Nucleus segmentation for fluorescence microscopy
-  download_count: 4326
+  download_count: 4328
   id: 10.5281/zenodo.5764892
   license: CC-BY-4.0
   links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
@@ -308,7 +308,7 @@ collection:
     'https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png']
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 3215
+  download_count: 3217
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation]
@@ -386,7 +386,7 @@ collection:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
   description: affinity-model
-  download_count: 2445
+  download_count: 2447
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
@@ -406,7 +406,7 @@ collection:
     'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
   description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
     of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
-  download_count: 2220
+  download_count: 2222
   id: 10.5281/zenodo.6334777
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -425,7 +425,7 @@ collection:
   covers: ['https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png']
   description: Nuclei segmentation model for segmenting images from the Human Protein
     Atlas
-  download_count: 2138
+  download_count: 2140
   id: 10.5281/zenodo.6200999
   license: CC-BY-4.0
   links: [deepimagej/deepimagej]
@@ -444,7 +444,7 @@ collection:
   covers: ['https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png']
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
-  download_count: 2119
+  download_count: 2120
   id: 10.5281/zenodo.5817052
   license: MIT
   links: [imjoy/BioImageIO-Packager, zero/notebook_u-net_2d_zerocostdl4mic_deepimagej,
@@ -508,7 +508,7 @@ collection:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png']
   description: The winning model of HPA image classification 2021 by Bestfitting
-  download_count: 2023
+  download_count: 2025
   id: 10.5281/zenodo.5910854
   license: MIT
   links: [imjoy/BioImageIO-Packager, hpa/hpa-kaggle-2021-dataset]
@@ -545,7 +545,7 @@ collection:
   - {name: Shubin Dai}
   covers: ['https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png']
   description: The winning model of HPA image classification 2019 by Bestfitting
-  download_count: 2013
+  download_count: 2015
   id: 10.5281/zenodo.5910163
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -2432,15 +2432,58 @@ config:
     splash_title: Fiji
     tags: [fiji]
     url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-  - {branch: master, collection_file_name: collection.bioimage.io.yaml, id: imjoy,
-    repository: imjoy-team/bioimage-io-resources}
-  - branch: main
+  - background_image: static/img/zoo-background.svg
+    branch: master
+    collection_file_name: collection.bioimage.io.yaml
+    default_type: application
+    explore_button_text: Start Exploring
+    icon: https://imjoy.io/static/img/imjoy-icon.svg
+    id: imjoy
+    logo: https://imjoy.io/static/img/imjoy-icon.svg
+    name: ImJoy
+    repository: imjoy-team/bioimage-io-resources
+    resource_types: [notebook, application]
+    splash_feature_list: [Minimal and flexible plugin powered web application, Server-less
+        progressive web application with offline support, Rich and interactive user
+        interface powered by web technologies]
+    splash_subtitle: Deep Learning Made Easy!
+    splash_title: ImJoy
+    tags: [imjoy]
+    url_root: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master
+  - background_image: static/img/zoo-background.svg
+    branch: main
     collection_file_name: collection.yaml
+    default_type: model
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
     id: ilastik
+    logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    name: ilastik
     repository: ilastik/bioimage-io-resources
+    resource_types: [application]
+    splash_feature_list: null
+    splash_subtitle: the interactive learning and segmentation toolkit
+    splash_title: ilastik
+    tags: [ilastik]
     test_summaries: {deploy_branch: gh-pages, deploy_folder: test_summaries, repository: ilastik/bioimage-io-resources,
       workflow: test_bioimageio_resources.yaml, workflow_ref: refs/heads/main}
-  - {branch: master, collection_file_name: manifest.bioimage.io.yaml, id: hpa, repository: CellProfiling/HPA-model-zoo}
+    url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  - about_url: https://www.proteinatlas.org/
+    background_image: static/img/zoo-background.svg
+    branch: master
+    collection_file_name: manifest.bioimage.io.yaml
+    default_type: model
+    explore_button_text: Start Exploring
+    icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+    id: hpa
+    logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+    name: HPA
+    repository: CellProfiling/HPA-model-zoo
+    resource_types: [model, application]
+    splash_feature_list: []
+    splash_subtitle: null
+    splash_title: The Human Protein Atlas
+    tags: [hpa]
   resource_types: [model, application, dataset]
   splash_feature_list: ['Integrate with Fiji, Ilastik, ImJoy', Try model instantly
       with BioEngine, Contribute your models via Zenodo, Link models to datasets and
