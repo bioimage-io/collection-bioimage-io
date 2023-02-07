@@ -53,7 +53,7 @@ jobs:
       run: python scripts/static_validation.py '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
     - name: Upload static validation summaries and conda envs
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: static_validation_artifact
         path: dist/static_validation_artifact
@@ -73,7 +73,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: download environment.yaml
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: static_validation_artifact
         path: artifacts/static_validation_artifact
@@ -99,7 +99,7 @@ jobs:
       timeout-minutes: 30
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }} --${{ contains(inputs.deploy_to, 'gh-pages') && 'no-ignore' || 'ignore' }}-rdf-source-field-in-validation
     - name: Upload validation summary
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ steps.artifact_name.outputs.name }}
         path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
@@ -123,7 +123,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: download artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         path: artifacts
     - name: install script deps
@@ -144,7 +144,7 @@ jobs:
       run: python scripts/download_documentation.py --folder dist/gh_pages_update
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: preview
         path: dist/gh_pages_update

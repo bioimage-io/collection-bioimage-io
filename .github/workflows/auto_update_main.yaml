@@ -59,7 +59,7 @@ jobs:
       id: update_external
       run: python scripts/update_external_resources.py --max-resource-count 15 ${{ github.event_name == 'pull_request' && '--no-ignore-status-5xx' || '--ignore-status-5xx' }}
     - name: "Upload collection update"
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: collection-update
         path: dist
@@ -74,7 +74,7 @@ jobs:
       run: python scripts/update_partner_resources.py
     - name: Upload preview of updated partner resources
       if: github.event_name == 'pull_request'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: preview-partner-resources
         path: dist
@@ -119,7 +119,7 @@ jobs:
       run: python scripts/generate_collection_rdf.py
     - name: Upload preview of collection.json
       if: github.event_name == 'pull_request'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: preview-collection-json
         path: dist/collection.json
@@ -160,7 +160,7 @@ jobs:
     - run: cp gh-pages/pr_urls.json dist
       continue-on-error: true
     - name: download new collection
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: collection-update
         path: collection-update
