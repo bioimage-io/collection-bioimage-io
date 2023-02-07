@@ -45,11 +45,11 @@ jobs:
       found_new_resources: ${{ steps.update_external.outputs.found_new_resources || 'no' }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0  # get all branches to check for pending resources by checking if auto-update-... branch exists
     - name: checkout gh-pages for update_partner_resources.py
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: gh-pages
         path: gh-pages
@@ -108,8 +108,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
       with:
         ref: gh-pages
         path: gh-pages
@@ -151,8 +151,8 @@ jobs:
       matrix: ${{ fromJson(needs.update-resources.outputs.updated_resources_matrix) }}
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
       with:
         ref: gh-pages
         path: gh-pages
