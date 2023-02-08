@@ -100,8 +100,9 @@ def main(
             for sp in dyn_sums:
                 for sub_summary in get_sub_summaries(sp):
                     test_summary["tests"]["bioimageio"].append(sub_summary)
-                    core_versions.add(Version(sub_summary["bioimageio_core_version"]))
                     success &= sub_summary.get("status") == "passed"
+                    if "bioimageio_core_version" in sub_summary:
+                        core_versions.add(Version(sub_summary["bioimageio_core_version"]))
 
             if spec_versions:
                 test_summary["bioimageio_spec_version"] = str(max(spec_versions))

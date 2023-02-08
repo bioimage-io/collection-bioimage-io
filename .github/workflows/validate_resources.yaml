@@ -29,12 +29,12 @@ jobs:
       has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
       with:
         ref: last_ci_run
         path: last_ci_run
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         ref: gh-pages
         path: gh-pages
@@ -53,7 +53,7 @@ jobs:
       run: python scripts/static_validation.py '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
     - name: Upload static validation summaries and conda envs
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: static_validation_artifact
         path: dist/static_validation_artifact
@@ -71,35 +71,38 @@ jobs:
       matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # [{env_name: ..., resource_id: ..., version_id: ..., weight_format: ...}, ...]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: download environment.yaml
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: static_validation_artifact
         path: artifacts/static_validation_artifact
     - name: install validation dependencies
       id: create_env
-      continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
-      timeout-minutes: 30
-      uses: conda-incubator/setup-miniconda@v2
+      uses: mamba-org/provision-with-micromamba@main
       with:
-        auto-update-conda: true
-        mamba-version: "*"
-        channel-priority: strict
-        activate-environment: ${{ matrix.env_name }}
+        environment-name: ${{ matrix.env_name }}
         environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
-    - name: install minimal script deps
-      if: steps.create_env.outcome != 'success'
-      run: pip install typer bioimageio.spec
+        extra-specs: |  # script dependencies
+          typer
+          bioimageio.spec
+      continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
+      timeout-minutes: 60
+# atm bioimageio.core imports directly from tqdm, PR to import from spec is on the way...
+# todo: remove tqdm to avoid spamming logs
+#    - name: remove tqdm to avoid spamming logs
+#      shell: bash -l {0}
+#      run: conda remove --yes --force tqdm
+#      continue-on-error: true
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.resource_id }}_${{ matrix.version_id }}_${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
-      timeout-minutes: 30
+      timeout-minutes: 60
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }} --${{ contains(inputs.deploy_to, 'gh-pages') && 'no-ignore' || 'ignore' }}-rdf-source-field-in-validation
     - name: Upload validation summary
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ steps.artifact_name.outputs.name }}
         path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
@@ -117,13 +120,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
       with:
         ref: gh-pages
         path: gh-pages
     - name: download artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         path: artifacts
     - name: install script deps
@@ -144,7 +147,7 @@ jobs:
       run: python scripts/download_documentation.py --folder dist/gh_pages_update
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: preview
         path: dist/gh_pages_update
