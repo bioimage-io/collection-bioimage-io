@@ -159,7 +159,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 12909,
+      "download_count": 12934,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -257,7 +257,7 @@
         "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
       ],
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 11189,
+      "download_count": 11215,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -344,7 +344,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 8390,
+      "download_count": 8415,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -424,7 +424,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 8091,
+      "download_count": 8095,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -510,7 +510,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 4743,
+      "download_count": 4745,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -677,7 +677,7 @@
         "https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 3776,
+      "download_count": 3780,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -826,7 +826,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 2734,
+      "download_count": 2736,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -874,7 +874,7 @@
         "https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/cover.png"
       ],
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 2544,
+      "download_count": 2548,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
@@ -975,7 +975,7 @@
         "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 2303,
+      "download_count": 2319,
       "download_url": "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -1158,7 +1158,7 @@
         "https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 2082,
+      "download_count": 2086,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1341,7 +1341,7 @@
         "https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 1882,
+      "download_count": 1891,
       "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
       "id": "10.5281/zenodo.6559929",
       "license": "MIT",
@@ -1427,7 +1427,7 @@
         "https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current segmentation enables running further watershed segmentation to obtain a unique label for each individual bacteria detected in the image.",
-      "download_count": 1401,
+      "download_count": 1407,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1490,7 +1490,7 @@
         "https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/phenotypes_features.png"
       ],
       "description": "EmbryoNet Model by embryoNet Team",
-      "download_count": 932,
+      "download_count": 939,
       "id": "10.5281/zenodo.7315440",
       "license": "GPL-3.0",
       "links": [
@@ -1528,7 +1528,7 @@
         "https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png"
       ],
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 634,
+      "download_count": 638,
       "id": "10.5281/zenodo.6808325",
       "license": "CC-BY-4.0",
       "links": [
@@ -1572,7 +1572,7 @@
         "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png"
       ],
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 593,
+      "download_count": 597,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
@@ -4859,60 +4859,188 @@
     },
     "partners": [
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "main",
         "collection_file_name": "collection.bioimage.io.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
         "id": "bioimageio",
-        "repository": "bioimage-io/bioimage-io-resources"
+        "logo": "https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg",
+        "name": "BioImage.IO",
+        "repository": "bioimage-io/bioimage-io-resources",
+        "resource_types": [
+          "model",
+          "application",
+          "notebook",
+          "dataset"
+        ],
+        "splash_feature_list": [
+          "Integrate with Fiji, Ilastik, ImJoy",
+          "Try model instantly with BioEngine",
+          "Contribute your models via Zenodo",
+          "Link models to datasets and applications"
+        ],
+        "splash_subtitle": "Advanced AI models in one-click",
+        "splash_title": "BioImage Model Zoo",
+        "tags": [],
+        "url_root": "https://raw.githubusercontent.com/bioimage-io/bioimage-io-resources/main"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "default_type": "application",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png",
         "id": "zero",
-        "repository": "HenriquesLab/ZeroCostDL4Mic"
+        "logo": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png",
+        "name": "ZeroCostDL4Mic",
+        "repository": "HenriquesLab/ZeroCostDL4Mic",
+        "resource_types": [
+          "model",
+          "application",
+          "dataset"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": "A Google Colab based no-cost toolbox to explore Deep-Learning in Microscopy",
+        "splash_title": "ZeroCostDL4Mic",
+        "tags": [
+          "ZeroCostDL4Mic"
+        ],
+        "url_root": "https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master",
+        "version": "1.7.1"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png",
         "id": "deepimagej",
+        "logo": "https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png",
+        "name": "DeepImageJ",
         "repository": "deepimagej/models",
+        "resource_types": [
+          "model",
+          "notebook",
+          "application"
+        ],
+        "splash_feature_list": null,
+        "splash_subtitle": "A user-friendly plugin to run deep learning models in ImageJ",
+        "splash_title": "deepImageJ",
+        "tags": [
+          "deepimagej"
+        ],
         "test_summaries": {
           "deploy_branch": "gh-pages",
           "deploy_folder": "test_summaries",
           "repository": "deepimagej/models",
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/master"
-        }
+        },
+        "url_root": "https://raw.githubusercontent.com/deepimagej/models/master"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://fiji.sc/site/logo.png",
         "id": "fiji",
-        "repository": "bioimage-io/fiji-bioimage-io"
+        "logo": "https://fiji.sc/site/logo.png",
+        "name": "Fiji",
+        "repository": "bioimage-io/fiji-bioimage-io",
+        "resource_types": [
+          "model",
+          "notebook"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": "Fiji is just ImageJ",
+        "splash_title": "Fiji",
+        "tags": [
+          "fiji"
+        ],
+        "url_root": "https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "collection.bioimage.io.yaml",
+        "default_type": "application",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://imjoy.io/static/img/imjoy-icon.svg",
         "id": "imjoy",
-        "repository": "imjoy-team/bioimage-io-resources"
+        "logo": "https://imjoy.io/static/img/imjoy-icon.svg",
+        "name": "ImJoy",
+        "repository": "imjoy-team/bioimage-io-resources",
+        "resource_types": [
+          "notebook",
+          "application"
+        ],
+        "splash_feature_list": [
+          "Minimal and flexible plugin powered web application",
+          "Server-less progressive web application with offline support",
+          "Rich and interactive user interface powered by web technologies"
+        ],
+        "splash_subtitle": "Deep Learning Made Easy!",
+        "splash_title": "ImJoy",
+        "tags": [
+          "imjoy"
+        ],
+        "url_root": "https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master"
       },
       {
+        "background_image": "static/img/zoo-background.svg",
         "branch": "main",
         "collection_file_name": "collection.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
         "id": "ilastik",
+        "logo": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
+        "name": "ilastik",
         "repository": "ilastik/bioimage-io-resources",
+        "resource_types": [
+          "application"
+        ],
+        "splash_feature_list": null,
+        "splash_subtitle": "the interactive learning and segmentation toolkit",
+        "splash_title": "ilastik",
+        "tags": [
+          "ilastik"
+        ],
         "test_summaries": {
           "deploy_branch": "gh-pages",
           "deploy_folder": "test_summaries",
           "repository": "ilastik/bioimage-io-resources",
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/main"
-        }
+        },
+        "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main"
       },
       {
+        "about_url": "https://www.proteinatlas.org/",
+        "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
         "id": "hpa",
-        "repository": "CellProfiling/HPA-model-zoo"
+        "logo": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
+        "name": "HPA",
+        "repository": "CellProfiling/HPA-model-zoo",
+        "resource_types": [
+          "model",
+          "application"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": null,
+        "splash_title": "The Human Protein Atlas",
+        "tags": [
+          "hpa"
+        ]
       }
     ],
     "resource_types": [
