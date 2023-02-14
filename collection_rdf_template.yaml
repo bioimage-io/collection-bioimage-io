@@ -43,9 +43,9 @@ config:
       branch: master
       collection_file_name: manifest.bioimage.io.yaml
       test_summaries:
-        repository: deepimagej/models
+        repository: deepimagej/CI-deepimagej-bioimage-io
         deploy_branch: gh-pages
-        deploy_folder: test_summaries
+        deploy_folder: .
         workflow: test_bioimageio_resources.yaml
         workflow_ref: refs/heads/master
     - id: fiji
