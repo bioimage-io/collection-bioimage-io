@@ -38,5 +38,8 @@ tests:
         ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  deepimagej: []
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: 'test not yet available: rdf contains
+      the key run_mode with value deepimagej', name: initial compatibility checks
+      with deepimagej, status: failed}
   ilastik: []

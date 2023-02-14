@@ -22,5 +22,7 @@ tests:
     warnings: {tags: 'Missing tags for categories: [{''framework'': [''tensorflow'',
         ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'',
         ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
-  deepimagej: []
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
+      format, name: initial compatibility checks with deepimagej, status: failed}
   ilastik: []
