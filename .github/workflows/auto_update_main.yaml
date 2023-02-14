@@ -54,9 +54,18 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install requests typer bioimageio.spec lxml
+      uses: mamba-org/provision-with-micromamba@main
+      with:
+        cache-downloads: true
+        cache-env: true
+        extra-specs: |  # script dependencies
+          bioimageio.spec
+          lxml
+          requests
+          typer
     - name: update external resources
       id: update_external
+      shell: bash -l {0}
       run: python scripts/update_external_resources.py --max-resource-count 15 ${{ github.event_name == 'pull_request' && '--no-ignore-status-5xx' || '--ignore-status-5xx' }}
     - name: "Upload collection update"
       uses: actions/upload-artifact@v3
@@ -71,6 +80,7 @@ jobs:
         mkdir dist
         mv tmp_download_counts.json dist/download_counts.json
     - name: update partner resources
+      shell: bash -l {0}
       run: python scripts/update_partner_resources.py
     - name: Upload preview of updated partner resources
       if: github.event_name == 'pull_request'
