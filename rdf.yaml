@@ -2414,7 +2414,7 @@ config:
     splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
     splash_title: deepImageJ
     tags: [deepimagej]
-    test_summaries: {deploy_branch: gh-pages, deploy_folder: test_summaries, repository: deepimagej/models,
+    test_summaries: {deploy_branch: gh-pages, deploy_folder: ., repository: deepimagej/CI-deepimagej-bioimage-io,
       workflow: test_bioimageio_resources.yaml, workflow_ref: refs/heads/master}
     url_root: https://raw.githubusercontent.com/deepimagej/models/master
   - background_image: static/img/zoo-background.svg
