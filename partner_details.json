@@ -75,8 +75,8 @@
         ],
         "test_summaries": {
             "deploy_branch": "gh-pages",
-            "deploy_folder": "test_summaries",
-            "repository": "deepimagej/models",
+            "deploy_folder": ".",
+            "repository": "deepimagej/CI-deepimagej-bioimage-io",
             "workflow": "test_bioimageio_resources.yaml",
             "workflow_ref": "refs/heads/master"
         },
