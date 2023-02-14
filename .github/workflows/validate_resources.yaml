@@ -81,6 +81,7 @@ jobs:
       id: create_env
       uses: mamba-org/provision-with-micromamba@main
       with:
+        cache-downloads: true
         environment-name: ${{ matrix.env_name }}
         environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
         extra-specs: |  # script dependencies
