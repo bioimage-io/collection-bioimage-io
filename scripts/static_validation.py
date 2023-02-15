@@ -63,7 +63,7 @@ def get_env_from_deps(deps: Dependencies):
 
 
 def get_version_range(v: Version) -> str:
-    return f"={v.major}.{v.minor}.*"
+    return f"=={v.major}.{v.minor}.*"
 
 
 def get_default_env(
