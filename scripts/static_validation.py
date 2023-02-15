@@ -12,7 +12,7 @@ from packaging.version import Version
 from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
-from bioimageio.spec.rdf.raw_nodes import RDF
+from bioimageio.spec.rdf.raw_nodes import RDF_Base
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
 from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nickname
@@ -134,9 +134,7 @@ def ensure_valid_conda_env_name(name: str) -> str:
     return name or "empty"
 
 
-def prepare_dynamic_test_cases(
-    rd: Union[Model, RDF], resource_id: str, version_id: str, dist: Path
-) -> List[Dict[str, str]]:
+def prepare_dynamic_test_cases(rd: RDF_Base, resource_id: str, version_id: str, dist: Path) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
     if isinstance(rd, Model):
@@ -158,7 +156,7 @@ def prepare_dynamic_test_cases(
             validation_cases.append(
                 {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
             )
-    elif isinstance(rd, RDF):
+    elif isinstance(rd, RDF_Base):
         pass
     else:
         raise TypeError(rd)
@@ -211,7 +209,7 @@ def main(
             latest_static_summary = validate(rdf_path, update_format=True)
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(rdf_path, update_to_format="latest")
-                assert isinstance(rd, RDF)
+                assert isinstance(rd, RDF_Base)
                 dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)
 
             if "name" not in latest_static_summary:
