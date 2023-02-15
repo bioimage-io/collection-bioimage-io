@@ -1,6 +1,7 @@
 import copy
 import shutil
 from pathlib import Path
+from typing import Any, Dict, List
 
 import typer
 from packaging.version import Version
@@ -15,6 +16,37 @@ def get_sub_summaries(path: Path):
         subs = [subs]
 
     return [{k: v for k, v in sub.items() if k != "source_name"} for sub in subs]
+
+
+def filter_test_summaries(tests: Dict[str, List[Dict[str, Any]]]) -> Dict[str, List[Dict[str, Any]]]:
+    unique_tests = set()
+    ret = {}
+    for partner in ["bioimageio"] + [p for p in tests if p != "bioimageio"]:  # process 'bioimageio' first
+        for summary in tests.get(partner, []):
+            key = tuple(
+                [
+                    str(summary.get(k))
+                    for k in (
+                        "bioimageio_spec_version",
+                        "bioimageio_core_version",
+                        "name",
+                        "status",
+                        "error",
+                        "warnings",
+                        "nested_errors",
+                    )
+                ]
+            )
+            if key in unique_tests:
+                continue
+
+            unique_tests.add(key)
+            if partner not in ret:
+                ret[partner] = []
+
+            ret[partner].append(summary)
+
+    return ret
 
 
 def main(
@@ -127,6 +159,8 @@ def main(
                 test_summary["tests"][partner_id] = []
                 for sp in (partner_folder / krv.resource_id / krv.version_id).glob("*test_summary*.yaml"):
                     test_summary["tests"][partner_id] += get_sub_summaries(sp)
+
+        test_summary["tests"] = filter_test_summaries(test_summary["tests"])
 
         # write updated test summary
         if test_summary != previous_test_summary:
