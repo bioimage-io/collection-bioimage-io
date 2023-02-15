@@ -39,9 +39,22 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer bioimageio.spec lxml bioimageio.core packaging
+      uses: mamba-org/provision-with-micromamba@main
+      with:
+        cache-downloads: true
+        cache-env: true
+        environment-file: false
+        environment-name: scriptenv
+        channels: conda-forge
+        extra-specs: |  # script dependencies
+          bioimageio.core
+          bioimageio.spec
+          lxml
+          packaging
+          typer
     - name: update RDFs
       id: update_rdfs
+      shell: bash -l {0}
       run: python scripts/update_rdfs.py --branch ${{ github.head_ref || github.ref }}
     - name: check pending versions limit
       if: inputs.check_validation == 'yes' && steps.pending.outputs.retrigger == 'yes'
@@ -50,6 +63,7 @@ jobs:
     - name: static validation
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
       id: static_validation
+      shell: bash -l {0}
       run: python scripts/static_validation.py '${{ steps.update_rdfs.outputs.pending_matrix_bioimageio }}'
     - name: Upload static validation summaries and conda envs
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes'
@@ -60,6 +74,7 @@ jobs:
         retention-days: 1
     - name: check if validation passed
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes' && inputs.check_validation == 'yes'
+      shell: bash -l {0}
       run: python scripts/check_validation_passed.py dist/static_validation_artifact
 
   dynamic-validation:
@@ -86,33 +101,29 @@ jobs:
         environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
         extra-specs: |  # script dependencies
           typer
-          bioimageio.spec
+          conda-forge::bioimageio.spec
       continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
       timeout-minutes: 60
-# atm bioimageio.core imports directly from tqdm, PR to import from spec is on the way...
-# todo: remove tqdm to avoid spamming logs
-#    - name: remove tqdm to avoid spamming logs
-#      shell: bash -l {0}
-#      run: conda remove --yes --force tqdm
-#      continue-on-error: true
+    - name: remove tqdm to avoid spamming logs
+      shell: bash -l {0}
+      run: conda remove --yes --force tqdm
+      continue-on-error: true
     - name: get artifact name wo forward slashes
       id: artifact_name
       run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.resource_id }}_${{ matrix.version_id }}_${{ matrix.weight_format }} | sed 's#/##g')
     - name: dynamic validation
       shell: bash -l {0}
-      timeout-minutes: 60
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }} --${{ contains(inputs.deploy_to, 'gh-pages') && 'no-ignore' || 'ignore' }}-rdf-source-field-in-validation
+      timeout-minutes: 60
     - name: Upload validation summary
       uses: actions/upload-artifact@v3
       with:
         name: ${{ steps.artifact_name.outputs.name }}
         path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
         retention-days: 1
-    - name: install script deps
-      if: steps.create_env.outcome == 'success' && inputs.check_validation == 'yes'
-      run: pip install typer bioimageio.spec
     - name: check if validation passed
       if: inputs.check_validation == 'yes'
+      shell: bash -l {0}
       run: python scripts/check_validation_passed.py dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
 
   deploy:
@@ -131,10 +142,24 @@ jobs:
       with:
         path: artifacts
     - name: install script deps
-      run: pip install typer packaging numpy bioimageio.spec lxml
+      uses: mamba-org/provision-with-micromamba@main
+      with:
+        cache-downloads: true
+        cache-env: true
+        environment-file: false
+        environment-name: scriptenv
+        channels: conda-forge
+        extra-specs: |  # script dependencies
+          bioimageio.spec
+          lxml
+          numpy
+          packaging
+          typer
     - name: download partner test summaries
+      shell: bash -l {0}
       run: python scripts/download_partner_test_summaries.py
     - name: prepare to deploy
+      shell: bash -l {0}
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
@@ -145,6 +170,7 @@ jobs:
         folder: dist/gh_pages_update
     - name: add documentation files to preview
       if: contains(inputs.deploy_to, 'preview')  # only download documentation for preview to ease review
+      shell: bash -l {0}
       run: python scripts/download_documentation.py --folder dist/gh_pages_update
     - name: Upload preview
       if: contains(inputs.deploy_to, 'preview')

@@ -1,7 +1,6 @@
+import argparse
 import subprocess
 from pprint import pprint
-
-import typer
 
 from bare_utils import set_gh_actions_output
 
@@ -19,4 +18,10 @@ def main(prefix: str):
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "prefix",
+        help="prefix to identify branches, e.g. 'auto-update-'",
+    )
+    args = parser.parse_args()
+    main(args.prefix)

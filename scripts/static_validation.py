@@ -36,16 +36,13 @@ def get_env_from_deps(deps: Dependencies):
             dep_file_content = r.text
             if deps.manager == "conda":
                 conda_env = yaml.load(dep_file_content)
-                # add bioimageio.core if not present
-                channels = conda_env.get("channels", [])
-                if "conda-forge" not in channels:
-                    conda_env["channels"] = channels + ["conda-forge"]
 
+                # add bioimageio.core to dependencies
                 deps = conda_env.get("dependencies", [])
                 if not isinstance(deps, list):
                     raise TypeError(f"expected dependencies in conda environment.yaml to be a list, but got: {deps}")
                 if not any(isinstance(d, str) and d.startswith("bioimageio.core") for d in deps):
-                    conda_env["dependencies"] = deps + ["bioimageio.core"]
+                    conda_env["dependencies"] = deps + ["conda-forge::bioimageio.core"]
             elif deps.manager == "pip":
                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
                 conda_env["dependencies"].append("pip")
