@@ -1,0 +1,136 @@
+attachments: {}
+authors:
+- affiliation: EMBL Heidelberg
+  name: Fynn Beuttenmueller
+  orcid: 0000-0002-8567-6389
+cite:
+- doi: https://doi.org/10.1038/s41592-021-01136-0
+  text: Beuttenmueller, Wagner, N., F., Norlin, N. et al. Deep learning-enhanced light-field
+    imaging with continuous validation. Nat Methods 18, 557–563 (2021).
+config:
+  _conceptdoi: 10.5281/zenodo.7614645
+  bioimageio:
+    created: '2023-02-15 09:34:43.433531'
+    doi: 10.5281/zenodo.7642674
+    nickname: ambitious-sloth
+    nickname_icon: 🦥
+    owners:
+    - 96309
+    status: accepted
+    version_id: '7642674'
+    version_name: version 2
+covers:
+- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/cover.png
+description: HyLFM-Net trained on static images of arrested medaka hatchling hearts.
+  The network reconstructs a volumentric image from a given light-field.
+documentation: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/README.md
+format_version: 0.4.9
+git_repo: https://github.com/kreshuklab/hylfm-net
+id: 10.5281/zenodo.7614645/7642674
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  description: raw light-field
+  name: lf
+  preprocessing:
+  - kwargs:
+      axes: yx
+      max_percentile: 99.8
+      min_percentile: 5.0
+      mode: per_dataset
+    name: scale_range
+  shape:
+  - 1
+  - 1
+  - 1235
+  - 1425
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: fynnbe
+  name: Fynn Beuttenmueller
+name: HyLFM-Net-stat
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  description: predicted volume
+  halo:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  name: prediction
+  shape:
+  - 1
+  - 1
+  - 49
+  - 244
+  - 284
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7614645/7642674/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/sample_input.tif
+sample_outputs:
+- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/sample_output.tif
+tags:
+- light-field-microscopy
+- pytorch
+- fluorescence-light-microscopy
+- image-reconstruction
+- nuclei
+- hylfm
+test_inputs:
+- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/test_output.npy
+timestamp: '2021-02-11T11:40:46'
+training_data:
+  id: 10.5281/zenodo.7612115
+type: model
+version: 0.1.0
+weights:
+  onnx:
+    opset_version: 15
+    parent: pytorch_state_dict
+    sha256: 55ad061651840fe4b6da6733c52402ae3296392f74fed8a9482e4bc62040938f
+    source: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/weights.onnx
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/model.py:HyLFM_Net
+    architecture_sha256: fbd9428f7352a8c6bca8a47e9b85d9afe95edb35b716cc909f5cfc530f2280d3
+    dependencies: conda:https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/environment.yaml
+    kwargs:
+      c_in_3d: 64
+      c_res2d:
+      - 768
+      - 768
+      - 512
+      - 256
+      - u384
+      - 512
+      - 256
+      c_res3d:
+      - 32
+      - u16
+      - 8
+      - 8
+      init_fn: xavier_uniform
+      kernel2d: 3
+      kernel3d: 3
+      last_kernel2d: 5
+      nnum: 19
+      z_out: 49
+    pytorch_version: '1.7'
+    sha256: cc85d6da3bcb8c6ec7bb46939399018e29cfe06c5c90b39786fa92f7cb5b4e95
+    source: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/weights.pt
+  torchscript:
+    parent: pytorch_state_dict
+    pytorch_version: '1.7'
+    sha256: ec01e0c212b5eb422dda208af004665799637a2f2729d0ebf2e884e5d9966fc2
+    source: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/weights_torchscript.pt
