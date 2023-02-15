@@ -22,7 +22,7 @@ def filter_test_summaries(tests: Dict[str, List[Dict[str, Any]]]) -> Dict[str, L
     assert "bioimageio" in tests
     unique_tests = set()
     ret = {}
-    for partner in ["bioimageio", [p for p in tests if p != "bioimageio"]]:  # process 'bioimageio' first
+    for partner in ["bioimageio"] + [p for p in tests if p != "bioimageio"]:  # process 'bioimageio' first
         for summary in tests[partner]:
             key = tuple(
                 [
