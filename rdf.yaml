@@ -674,6 +674,25 @@ collection:
   type: model
   versions: ['6919253']
 - authors:
+  - {affiliation: EMBL Heidelberg, name: Fynn Beuttenmueller, orcid: 0000-0002-8567-6389}
+  covers: ['https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/cover.png']
+  description: HyLFM-Net trained on static images of arrested medaka hatchling hearts.
+    The network reconstructs a volumentric image from a given light-field.
+  download_count: 88
+  id: 10.5281/zenodo.7614645
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: HyLFM-Net-stat
+  nickname: ambitious-sloth
+  nickname_icon: "\U0001F9A5"
+  owners: [96309]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7614645/7642674/rdf.yaml
+  tags: [light-field-microscopy, pytorch, fluorescence-light-microscopy, image-reconstruction,
+    nuclei, hylfm]
+  training_data: {id: 10.5281/zenodo.7612115}
+  type: model
+  versions: ['7642674']
+- authors:
   - {github_user: petebankhead, name: Pete Bankhead}
   covers: ['https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png']
   description: QuPath is an open, powerful, flexible, extensible software platform
@@ -2361,8 +2380,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 96, dataset: 82, model: 109, notebook: 4}
-  n_resources: {application: 48, dataset: 41, model: 44, notebook: 2}
+  n_resource_versions: {application: 96, dataset: 82, model: 111, notebook: 4}
+  n_resources: {application: 48, dataset: 41, model: 45, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main

@@ -1596,6 +1596,47 @@
     {
       "authors": [
         {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Fynn Beuttenmueller",
+          "orcid": "0000-0002-8567-6389"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/cover.png"
+      ],
+      "description": "HyLFM-Net trained on static images of arrested medaka hatchling hearts. The network reconstructs a volumentric image from a given light-field.",
+      "download_count": 88,
+      "id": "10.5281/zenodo.7614645",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "HyLFM-Net-stat",
+      "nickname": "ambitious-sloth",
+      "nickname_icon": "\ud83e\udda5",
+      "owners": [
+        96309
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7614645/7642674/rdf.yaml",
+      "tags": [
+        "light-field-microscopy",
+        "pytorch",
+        "fluorescence-light-microscopy",
+        "image-reconstruction",
+        "nuclei",
+        "hylfm"
+      ],
+      "training_data": {
+        "id": "10.5281/zenodo.7612115"
+      },
+      "type": "model",
+      "versions": [
+        "7642674"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "petebankhead",
           "name": "Pete Bankhead"
         }
@@ -4848,13 +4889,13 @@
     "n_resource_versions": {
       "application": 96,
       "dataset": 82,
-      "model": 109,
+      "model": 111,
       "notebook": 4
     },
     "n_resources": {
       "application": 48,
       "dataset": 41,
-      "model": 44,
+      "model": 45,
       "notebook": 2
     },
     "partners": [
