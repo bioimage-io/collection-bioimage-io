@@ -1,5 +1,6 @@
 import shutil
 import warnings
+from functools import partialmethod
 from pathlib import Path
 from typing import Dict, List, Optional, Union
 
@@ -8,6 +9,7 @@ import typer
 from marshmallow import missing
 from marshmallow.utils import _Missing
 from packaging.version import Version
+from tqdm import tqdm
 
 from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
@@ -16,6 +18,8 @@ from bioimageio.spec.rdf.raw_nodes import RDF_Base
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
 from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nickname
+
+tqdm.__init__ = partialmethod(tqdm.__init__, disable=True)  # silence tqdm
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
@@ -59,7 +63,7 @@ def get_env_from_deps(deps: Dependencies):
 
 
 def get_version_range(v: Version) -> str:
-    return f"={v.major}.{v.minor}.*"
+    return f"=={v.major}.{v.minor}.*"
 
 
 def get_default_env(
