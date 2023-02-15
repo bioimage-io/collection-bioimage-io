@@ -12,14 +12,14 @@ from packaging.version import Version
 from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
-from bioimageio.spec.rdf.raw_nodes import RDF
+from bioimageio.spec.rdf.raw_nodes import RDF_Base
 from bioimageio.spec.shared import yaml
 from bioimageio.spec.shared.raw_nodes import Dependencies, URI
 from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nickname
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
-    return {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.core"]}
+    return {"channels": ["defaults"], "dependencies": ["conda-forge::bioimageio.core"]}
 
 
 def get_env_from_deps(deps: Dependencies):
@@ -36,20 +36,19 @@ def get_env_from_deps(deps: Dependencies):
             dep_file_content = r.text
             if deps.manager == "conda":
                 conda_env = yaml.load(dep_file_content)
-                # add bioimageio.core if not present
-                channels = conda_env.get("channels", [])
-                if "conda-forge" not in channels:
-                    conda_env["channels"] = channels + ["conda-forge"]
 
+                # add bioimageio.core to dependencies
                 deps = conda_env.get("dependencies", [])
                 if not isinstance(deps, list):
                     raise TypeError(f"expected dependencies in conda environment.yaml to be a list, but got: {deps}")
                 if not any(isinstance(d, str) and d.startswith("bioimageio.core") for d in deps):
-                    conda_env["dependencies"] = deps + ["bioimageio.core"]
+                    conda_env["dependencies"] = deps + ["conda-forge::bioimageio.core"]
             elif deps.manager == "pip":
                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
-                conda_env["dependencies"].append("pip")
-                conda_env["dependencies"].append({"pip": pip_req})
+                if "bioimageio.core" not in pip_req:
+                    pip_req.append("bioimageio.core")
+
+                conda_env = dict(channels=["defaults"], dependencies=["python=3.9", "pip", {"pip": pip_req}])
             else:
                 raise NotImplementedError(deps.manager)
 
@@ -60,7 +59,7 @@ def get_env_from_deps(deps: Dependencies):
 
 
 def get_version_range(v: Version) -> str:
-    return f">={v.major}.{v.minor},<{v.major}.{v.minor + 1}"
+    return f"={v.major}.{v.minor}.*"
 
 
 def get_default_env(
@@ -71,14 +70,13 @@ def get_default_env(
 ):
     conda_env = get_base_env()
     if opset_version is not None:
-        conda_env["dependencies"].append("onnxruntime")
+        conda_env["dependencies"].append("conda-forge::onnxruntime")
         # note: we should not need to worry about the opset version,
         # see https://github.com/microsoft/onnxruntime/blob/master/docs/Versioning.md
 
     if pytorch_version is not None:
         conda_env["channels"].insert(0, "pytorch")
-        conda_env["dependencies"].append(f"pytorch {get_version_range(pytorch_version)}")
-        conda_env["dependencies"].append("cpuonly")
+        conda_env["dependencies"].extend([f"pytorch {get_version_range(pytorch_version)}", "cpuonly"])
 
     if tensorflow_version is not None:
         # tensorflow 1 is not available on conda, so we need to inject this as a pip dependency
@@ -86,7 +84,7 @@ def get_default_env(
             tensorflow_version = max(tensorflow_version, Version("1.13"))  # tf <1.13 not available anymore
             assert opset_version is None
             assert pytorch_version is None
-            conda_env["dependencies"] = ["pip", "python >=3.7,<3.8"]  # tf 1.15 not available for py>=3.8
+            conda_env["dependencies"] = ["pip", "python=3.7.*"]  # tf 1.15 not available for py>=3.8
             # get bioimageio.core (and its dependencies) via pip as well to avoid conda/pip mix
             # protobuf pin: tf 1 does not pin an upper limit for protobuf,
             #               but fails to load models saved with protobuf 3 when installing protobuf 4.
@@ -134,9 +132,7 @@ def ensure_valid_conda_env_name(name: str) -> str:
     return name or "empty"
 
 
-def prepare_dynamic_test_cases(
-    rd: Union[Model, RDF], resource_id: str, version_id: str, dist: Path
-) -> List[Dict[str, str]]:
+def prepare_dynamic_test_cases(rd: RDF_Base, resource_id: str, version_id: str, dist: Path) -> List[Dict[str, str]]:
     validation_cases = []
     # construct test cases based on resource type
     if isinstance(rd, Model):
@@ -158,7 +154,7 @@ def prepare_dynamic_test_cases(
             validation_cases.append(
                 {"env_name": env_name, "resource_id": resource_id, "version_id": version_id, "weight_format": wf}
             )
-    elif isinstance(rd, RDF):
+    elif isinstance(rd, RDF_Base):
         pass
     else:
         raise TypeError(rd)
@@ -211,7 +207,7 @@ def main(
             latest_static_summary = validate(rdf_path, update_format=True)
             if not latest_static_summary["error"]:
                 rd = load_raw_resource_description(rdf_path, update_to_format="latest")
-                assert isinstance(rd, RDF)
+                assert isinstance(rd, RDF_Base)
                 dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)
 
             if "name" not in latest_static_summary:

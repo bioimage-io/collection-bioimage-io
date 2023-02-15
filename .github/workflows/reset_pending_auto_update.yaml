@@ -6,9 +6,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: install script deps
-      run: pip install typer
+    - uses: actions/checkout@v3
     - id: detect_auto_updates
       run: python scripts/detect_auto_updates.py auto-update-
     - name: Delete auto-update-* branches
