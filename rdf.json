@@ -4880,6 +4880,40 @@
       "versions": [
         "latest"
       ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Fynn Beuttenmueller",
+          "orcid": "0000-0002-8567-6389"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/abbc2f48-1514-4102-8393-eb03fa4a516c/cover.png"
+      ],
+      "description": "Light-sheet and light-field images of beating and arrested hatchling (8 dpf) medaka hearts used in \"Deep learning-enhanced light-field imaging with continuous validation\" to train and evaluate a HyLFM-Net.",
+      "download_count": 0,
+      "id": "10.5281/zenodo.7612115",
+      "license": "MIT",
+      "name": "Hatchling Medaka Heart (HyLFM)",
+      "owners": [
+        96309
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7612115/7612152/rdf.yaml",
+      "source": "https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BSST604",
+      "tags": [
+        "hylfm",
+        "light-field-microscopy",
+        "medaka",
+        "oryzias latipes",
+        "fluorescence-light-microscopy",
+        "image-reconstruction"
+      ],
+      "type": "dataset",
+      "versions": [
+        "7612152"
+      ]
     }
   ],
   "config": {
@@ -4888,13 +4922,13 @@
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
       "application": 96,
-      "dataset": 82,
+      "dataset": 84,
       "model": 111,
       "notebook": 4
     },
     "n_resources": {
       "application": 48,
-      "dataset": 41,
+      "dataset": 42,
       "model": 45,
       "notebook": 2
     },
