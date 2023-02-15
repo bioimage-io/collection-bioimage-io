@@ -58,6 +58,7 @@ jobs:
       with:
         cache-downloads: true
         cache-env: true
+        environment-file: false
         channels: conda-forge
         extra-specs: |  # script dependencies
           bioimageio.spec
@@ -129,6 +130,7 @@ jobs:
       with:
         cache-downloads: true
         cache-env: true
+        environment-file: false
         channels: conda-forge
         extra-specs: |  # script dependencies
           bioimageio.spec
