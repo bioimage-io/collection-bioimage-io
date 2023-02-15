@@ -24,14 +24,19 @@ def filter_test_summaries(tests: Dict[str, List[Dict[str, Any]]]) -> Dict[str, L
     ret = {}
     for partner in ["bioimageio", [p for p in tests if p != "bioimageio"]]:  # process 'bioimageio' first
         for summary in tests[partner]:
-            key = (
-                summary.get("bioimageio_spec_version"),
-                summary.get("bioimageio_core_version"),
-                summary.get("name"),
-                summary.get("status"),
-                summary.get("error"),
-                str(summary.get("warnings")),
-                str(summary.get("nested_errors")),
+            key = tuple(
+                map(
+                    lambda k: str(summary.get(k)),
+                    (
+                        "bioimageio_spec_version",
+                        "bioimageio_core_version",
+                        "name",
+                        "status",
+                        "error",
+                        "warnings",
+                        "nested_errors",
+                    ),
+                )
             )
             if key in unique_tests:
                 continue
