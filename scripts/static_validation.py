@@ -19,7 +19,7 @@ from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nick
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
-    return {"channels": ["conda-forge", "defaults"], "dependencies": ["bioimageio.core"]}
+    return {"channels": ["defaults"], "dependencies": ["conda-forge::bioimageio.core"]}
 
 
 def get_env_from_deps(deps: Dependencies):
@@ -45,8 +45,10 @@ def get_env_from_deps(deps: Dependencies):
                     conda_env["dependencies"] = deps + ["conda-forge::bioimageio.core"]
             elif deps.manager == "pip":
                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
-                conda_env["dependencies"].append("pip")
-                conda_env["dependencies"].append({"pip": pip_req})
+                if "bioimageio.core" not in pip_req:
+                    pip_req.append("bioimageio.core")
+
+                conda_env = dict(channels=["defaults"], dependencies=["python=3.9", "pip", {"pip": pip_req}])
             else:
                 raise NotImplementedError(deps.manager)
 
@@ -57,7 +59,7 @@ def get_env_from_deps(deps: Dependencies):
 
 
 def get_version_range(v: Version) -> str:
-    return f">={v.major}.{v.minor},<{v.major}.{v.minor + 1}"
+    return f"={v.major}.{v.minor}.*"
 
 
 def get_default_env(
@@ -68,14 +70,13 @@ def get_default_env(
 ):
     conda_env = get_base_env()
     if opset_version is not None:
-        conda_env["dependencies"].append("onnxruntime")
+        conda_env["dependencies"].append("conda-forge::onnxruntime")
         # note: we should not need to worry about the opset version,
         # see https://github.com/microsoft/onnxruntime/blob/master/docs/Versioning.md
 
     if pytorch_version is not None:
         conda_env["channels"].insert(0, "pytorch")
-        conda_env["dependencies"].append(f"pytorch {get_version_range(pytorch_version)}")
-        conda_env["dependencies"].append("cpuonly")
+        conda_env["dependencies"].extend([f"pytorch {get_version_range(pytorch_version)}", "cpuonly"])
 
     if tensorflow_version is not None:
         # tensorflow 1 is not available on conda, so we need to inject this as a pip dependency
@@ -83,7 +84,7 @@ def get_default_env(
             tensorflow_version = max(tensorflow_version, Version("1.13"))  # tf <1.13 not available anymore
             assert opset_version is None
             assert pytorch_version is None
-            conda_env["dependencies"] = ["pip", "python >=3.7,<3.8"]  # tf 1.15 not available for py>=3.8
+            conda_env["dependencies"] = ["pip", "python=3.7.*"]  # tf 1.15 not available for py>=3.8
             # get bioimageio.core (and its dependencies) via pip as well to avoid conda/pip mix
             # protobuf pin: tf 1 does not pin an upper limit for protobuf,
             #               but fails to load models saved with protobuf 3 when installing protobuf 4.
