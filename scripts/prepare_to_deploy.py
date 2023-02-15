@@ -19,11 +19,10 @@ def get_sub_summaries(path: Path):
 
 
 def filter_test_summaries(tests: Dict[str, List[Dict[str, Any]]]) -> Dict[str, List[Dict[str, Any]]]:
-    assert "bioimageio" in tests
     unique_tests = set()
     ret = {}
     for partner in ["bioimageio"] + [p for p in tests if p != "bioimageio"]:  # process 'bioimageio' first
-        for summary in tests[partner]:
+        for summary in tests.get(partner, []):
             key = tuple(
                 [
                     str(summary.get(k))
