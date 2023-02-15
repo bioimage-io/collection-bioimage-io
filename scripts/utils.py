@@ -11,7 +11,6 @@ from typing import Any, Dict, Generator, List, Optional, Tuple, Union
 import numpy
 import requests
 from marshmallow import missing
-from requests import HTTPError
 from ruamel.yaml import YAML, comments
 
 from bare_utils import DEPLOYED_BASE_URL, GH_API_URL
@@ -19,8 +18,8 @@ from bioimageio.spec import (
     load_raw_resource_description,
     serialize_raw_resource_description_to_dict,
 )
+from bioimageio.spec.collection.v0_2.raw_nodes import Collection
 from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
-from bioimageio.spec.io_ import serialize_raw_resource_description
 from bioimageio.spec.partner.utils import enrich_partial_rdf_with_imjoy_plugin
 
 
@@ -110,9 +109,6 @@ def iterate_over_gh_matrix(matrix: Union[str, Dict[str, list]]):
 def resolve_partners(
     rdf: dict, *, current_format: str, previous_partner_hashes: Dict[str, str]
 ) -> Tuple[List[dict], List[dict], Dict[str, str], set]:
-    from bioimageio.spec import load_raw_resource_description
-    from bioimageio.spec.collection.v0_2.raw_nodes import Collection
-
     partners = []
     updated_partner_resources = []
     new_partner_hashes = {}
@@ -151,7 +147,7 @@ def resolve_partners(
             )
             try:
                 r.raise_for_status()
-            except HTTPError as e:
+            except requests.HTTPError as e:
                 print(e)
                 continue
 

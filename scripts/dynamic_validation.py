@@ -1,12 +1,16 @@
 import traceback
+from functools import partialmethod
 from pathlib import Path
 from typing import List, Optional
 
 import typer
 from marshmallow import missing
+from tqdm import tqdm
 
 from bioimageio.spec import load_raw_resource_description
 from bioimageio.spec.shared import yaml
+
+tqdm.__init__ = partialmethod(tqdm.__init__, disable=True)  # silence tqdm
 
 
 def test_summary_from_exception(name, exception):
