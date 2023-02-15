@@ -58,6 +58,7 @@ jobs:
       with:
         cache-downloads: true
         cache-env: true
+        channels: conda-forge
         extra-specs: |  # script dependencies
           bioimageio.spec
           lxml
@@ -124,8 +125,19 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      run: pip install typer bioimageio.spec boltons lxml requests
+      uses: mamba-org/provision-with-micromamba@main
+      with:
+        cache-downloads: true
+        cache-env: true
+        channels: conda-forge
+        extra-specs: |  # script dependencies
+          bioimageio.spec
+          boltons
+          lxml
+          requests
+          typer
     - name: generate collection rdf
+      shell: bash -l {0}
       run: python scripts/generate_collection_rdf.py
     - name: Upload preview of collection.json
       if: github.event_name == 'pull_request'
@@ -179,8 +191,6 @@ jobs:
         mkdir -p "collection/${{ matrix.update.resource_id }}"
         cp -r "collection-update/${{ matrix.update.resource_id }}"/* "collection/${{ matrix.update.resource_id }}"
         rm -rf collection-update
-    - name: install script deps
-      run: pip install requests
     - name: get urls of previous PRs
       id: pr_urls
       run: python scripts/get_previous_pr_urls.py ${{ matrix.update.resource_id }}
