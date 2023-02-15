@@ -29,9 +29,6 @@ tests:
       weights: {torchscript: missing 'pytorch_version'}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej: []
   ilastik:
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,

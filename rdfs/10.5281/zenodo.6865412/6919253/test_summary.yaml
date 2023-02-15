@@ -42,4 +42,3 @@ tests:
   - {bioimageio_spec_version: 0.4.8post1, error: 'test not yet available: rdf contains
       the key run_mode with value deepimagej', name: initial compatibility checks
       with deepimagej, status: failed}
-  ilastik: []

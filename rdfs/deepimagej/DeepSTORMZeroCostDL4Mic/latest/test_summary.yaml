@@ -97,9 +97,6 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
-  - {error: Missing/invalid weight formats for deepimagej/DeepSTORMZeroCostDL4Mic/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3
     error: Cannot load file containing pickled data when allow_pickle=False

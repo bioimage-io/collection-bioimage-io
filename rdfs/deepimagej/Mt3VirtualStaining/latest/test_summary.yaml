@@ -63,6 +63,3 @@ tests:
         output)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 396, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\")\n"]
-  - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}
