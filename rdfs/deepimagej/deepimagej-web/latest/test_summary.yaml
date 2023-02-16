@@ -18,9 +18,6 @@ tests:
     status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
-      format, name: initial compatibility checks with deepimagej, status: failed}
   ilastik:
   - {error: Missing/invalid weight formats for deepimagej/deepimagej-web/latest, name: reproduce
       test outputs with ilastik 1.4.0b27, reason: error, status: failed}

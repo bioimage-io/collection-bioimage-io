@@ -86,3 +86,6 @@ tests:
           system. Please check that you have an NVIDIA GPU and installed a driver
           from http://www.nvidia.com/Download/index.aspx (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370151529/work/c10/cuda/CUDAFunctions.cpp:100.)',
         Computed dataset percentiles naively by averaging percentiles of samples.]
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
+      :deepimagej', name: initial compatibility checks with deepimagej, status: failed}
