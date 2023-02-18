@@ -29,6 +29,10 @@ tests:
       weights: {torchscript: missing 'pytorch_version'}
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
+      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
+      headless, status: failed}
   ilastik:
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,

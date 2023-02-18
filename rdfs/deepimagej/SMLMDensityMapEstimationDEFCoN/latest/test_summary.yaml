@@ -2,7 +2,7 @@ rdf_sha256: bd2d60fbf7fe0f5758754033dfa18a5652f9e199120fc0580151555021e3c1db
 tests:
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
-      format, name: initial compatibility checks with deepimagej, status: failed}
+      format, name: Initial compatibility checks with DeepImageJ, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3

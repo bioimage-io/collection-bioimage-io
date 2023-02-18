@@ -31,6 +31,10 @@ tests:
           'pytorch_version'}
   - {bioimageio_core_version: 0.5.5, bioimageio_spec_version: 0.4.6post3, error: null,
     name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
+      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
+      headless, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3

@@ -1,9 +1,9 @@
 rdf_sha256: 470bf6f981ee5085f2766c3dc241b64968c01038f836f8ad1ac5fc748f02c9be
 tests:
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: 'test not yet available: rdf contains
-      the key run_mode with value deepimagej', name: initial compatibility checks
-      with deepimagej, status: failed}
+  - {bioimageio_spec_version: 0.4.8post1, error: 'Test not yet available: rdf contains
+      the key run_mode with value deepimagej', name: Initial compatibility checks
+      with DeepImageJ, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.1
     bioimageio_spec_version: 0.4.5post3

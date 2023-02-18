@@ -1,8 +1,8 @@
 rdf_sha256: 0e2650d43589a193642f1bf0bb04d18bb046fa0cf8872f115d136e7b4eba7f6f
 tests:
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: sample image tiffs have not been
-      generated from numpy tests files, name: initial compatibility checks with deepimagej,
+  - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
+      generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,
     status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.1

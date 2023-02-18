@@ -39,6 +39,6 @@ tests:
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: 'test not yet available: rdf contains
-      the key run_mode with value deepimagej', name: initial compatibility checks
-      with deepimagej, status: failed}
+  - {bioimageio_spec_version: 0.4.8post1, error: 'Test not yet available: rdf contains
+      the key run_mode with value deepimagej', name: Initial compatibility checks
+      with DeepImageJ, status: failed}
