@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.7653695
+id: 10.5281/zenodo.7653695
+nickname: noisy-rooster
+nickname_icon: 🐓
+owners:
+- 458864
+status: accepted
+type: model
+versions:
+- created: '2023-02-18 23:40:21.652696'
+  doi: 10.5281/zenodo.7653696
+  name: Cell organelle segmentation of Nile Red fluorescent images
+  status: accepted
+  version_id: '7653696'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/85b6dd67-af1c-4e8e-b792-5f67b9d88716/rdf.yaml
