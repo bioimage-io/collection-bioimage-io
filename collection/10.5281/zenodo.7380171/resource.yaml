@@ -16,6 +16,8 @@ versions:
   rdf_source: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/rdf.yaml
   weights:
     tensorflow_saved_model_bundle:
+      source: drosophila-crb-d5.zip
+      sha256: ae5d5287b90d4b5406f2b6de8e40f50faaf7336d38a2a91d9a66364897a82bed
       tensorflow_version: 2.10
 - created: '2022-12-01 14:17:09.346211'
   doi: 10.5281/zenodo.7386437
