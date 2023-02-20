@@ -14,6 +14,9 @@ versions:
   version_id: '7405349'
   version_name: version 3
   rdf_source: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/rdf.yaml
+  weights:
+    tensorflow_saved_model_bundle:
+      tensorlow_version: 2.10
 - created: '2022-12-01 14:17:09.346211'
   doi: 10.5281/zenodo.7386437
   name: Drosophila epithelia cell boundary segmentation of 2D projections
