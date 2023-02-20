@@ -46,6 +46,9 @@ def main(
         yaml.dump(enforce_block_style_resource(r), r_path)
         write_rdfs_for_resource(resource=r, dist=dist)
 
+    missing_logos = [p["id"] for p in partners if "logo" not in p]
+    assert not missing_logos, missing_logos
+
     dist.mkdir(exist_ok=True, parents=True)
     with (dist / "partner_details.json").open("w", encoding="utf-8") as f:
         json.dump(partners, f, ensure_ascii=False, indent=4, sort_keys=True)

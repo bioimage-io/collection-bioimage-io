@@ -63,6 +63,8 @@ def main(
                 rdf["config"]["partners"] = json.load(f)
         else:
             print(f"Missing evaluated partner details at {partner_details_path}")
+    else:
+        print('Missing "partners" in rdf["config"]!')
 
     n_accepted = {}
     n_accepted_versions = {}
