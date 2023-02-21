@@ -674,6 +674,25 @@ collection:
   type: model
   versions: ['6919253']
 - authors:
+  - {name: 'Smith, MB'}
+  - {name: 'Herszterg, S'}
+  - {name: 'Salbreux, G'}
+  - {name: 'Vincent, JP'}
+  covers: ['https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png']
+  description: For segmenting 2D projections of drosophila epithelia
+  download_count: 312
+  id: 10.5281/zenodo.7380171
+  license: CC-BY-4.0
+  name: Drosophila epithelia cell boundary segmentation of 2D projections
+  nickname: easy-going-sauropod
+  nickname_icon: "\U0001F995"
+  owners: [439786]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7380171/7405349/rdf.yaml
+  tags: [drosophila, fluorescence-light-microscopy, 2d, unet, cells, image-classification,
+    tensorflow]
+  type: model
+  versions: ['7405349']
+- authors:
   - {affiliation: EMBL Heidelberg, name: Fynn Beuttenmueller, orcid: 0000-0002-8567-6389}
   covers: ['https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/cover.png']
   description: HyLFM-Net trained on static images of arrested medaka hatchling hearts.
@@ -2397,8 +2416,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 96, dataset: 84, model: 111, notebook: 4}
-  n_resources: {application: 48, dataset: 42, model: 45, notebook: 2}
+  n_resource_versions: {application: 96, dataset: 84, model: 113, notebook: 4}
+  n_resources: {application: 48, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
