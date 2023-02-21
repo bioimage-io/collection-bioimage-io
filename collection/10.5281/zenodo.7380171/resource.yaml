@@ -15,8 +15,7 @@ versions:
   version_name: version 3
   rdf_source: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/rdf.yaml
   maintainers:
-  - name: 
-    github_user: odinsbane
+  - github_user: odinsbane
   weights:
     tensorflow_saved_model_bundle:
       source: drosophila-crb-d5.zip
