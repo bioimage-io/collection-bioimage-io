@@ -1,0 +1,101 @@
+authors:
+- name: Smith, MB
+- name: Herszterg, S
+- name: Salbreux, G
+- name: Vincent, JP
+config:
+  bioimageio:
+    created: '2022-12-06 13:55:39.060882'
+    doi: 10.5281/zenodo.7405349
+    nickname: easy-going-sauropod
+    nickname_icon: 🦕
+    owners:
+    - 439786
+    status: accepted
+    test_kwargs:
+      tensorflow_saved_model_bundle:
+        decimal: 2
+    version_id: '7405349'
+    version_name: version 3
+covers:
+- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png
+description: For segmenting 2D projections of drosophila epithelia
+documentation: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/epithelia.md
+format_version: 0.4.9
+id: 10.5281/zenodo.7380171/7405349
+inputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: uint8
+  name: input0
+  shape:
+  - 1
+  - 1
+  - 3
+  - 64
+  - 64
+license: CC-BY-4.0
+maintainers:
+- github_user: odinsbane
+name: Drosophila epithelia cell boundary segmentation of 2D projections
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output0
+  shape:
+  - 1
+  - 1
+  - 3
+  - 64
+  - 64
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output1
+  shape:
+  - 1
+  - 2
+  - 3
+  - 64
+  - 64
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output2
+  shape:
+  - 1
+  - 2
+  - 3
+  - 64
+  - 64
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7380171/7405349/rdf.yaml
+tags:
+- drosophila
+- fluorescence-light-microscopy
+- 2d
+- unet
+- cells
+- image-classification
+- tensorflow
+test_inputs:
+- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/sample.npy
+test_outputs:
+- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/distance.npy
+- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/membrane-we.npy
+- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/membrane-dl.npy
+timestamp: '2022-12-01T14:42:37.285816'
+type: model
+weights:
+  tensorflow_saved_model_bundle:
+    sha256: ae5d5287b90d4b5406f2b6de8e40f50faaf7336d38a2a91d9a66364897a82bed
+    source: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/drosophila-crb-d5.zip
+    tensorflow_version: '2.10'

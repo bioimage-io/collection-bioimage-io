@@ -41,6 +41,66 @@ tests:
   - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
     name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,
     reason: null, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: load resource description
+    status: passed
+    traceback: null
+    warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights,
     reason: null, status: passed, traceback: null}
