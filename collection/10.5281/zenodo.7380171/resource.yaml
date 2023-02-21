@@ -18,7 +18,12 @@ versions:
     tensorflow_saved_model_bundle:
       source: drosophila-crb-d5.zip
       sha256: ae5d5287b90d4b5406f2b6de8e40f50faaf7336d38a2a91d9a66364897a82bed
-      tensorflow_version: '2.9'
+      tensorflow_version: '2.10'
+  config:
+    bioimageio:
+      test_kwargs:
+        tensorflow_saved_model_bundle:
+          decimal: 2
 - created: '2022-12-01 14:17:09.346211'
   doi: 10.5281/zenodo.7386437
   name: Drosophila epithelia cell boundary segmentation of 2D projections
