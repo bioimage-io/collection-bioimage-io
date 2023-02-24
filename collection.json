@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 17029,
+      "download_count": 17125,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -159,7 +159,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 13660,
+      "download_count": 13749,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -205,7 +205,7 @@
         "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 13282,
+      "download_count": 13371,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -257,7 +257,7 @@
         "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
       ],
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 11876,
+      "download_count": 11962,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -468,7 +468,7 @@
         "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 7737,
+      "download_count": 7807,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -557,7 +557,7 @@
         "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
       ],
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 4835,
+      "download_count": 4855,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -591,7 +591,7 @@
         "https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 4604,
+      "download_count": 4675,
       "id": "10.5281/zenodo.6811491",
       "license": "CC-BY-4.0",
       "links": [
@@ -634,7 +634,7 @@
         "https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png"
       ],
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 4469,
+      "download_count": 4473,
       "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
@@ -866,50 +866,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/cover.png"
-      ],
-      "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 2642,
-      "id": "10.5281/zenodo.5847355",
-      "license": "CC-BY-4.0",
-      "links": [
-        "ilastik/covid_if_training_data",
-        "ilastik/ilastik",
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "CovidIFCellSegmentationBoundaryModel",
-      "nickname": "powerful-chipmunk",
-      "nickname_icon": "\ud83d\udc3f",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6647683/rdf.yaml",
-      "tags": [
-        "unet",
-        "cells",
-        "transmission-light-microscopy",
-        "covid19",
-        "immunofluorescence",
-        "instance-segmentation"
-      ],
-      "training_data": {
-        "id": "ilastik/covid_if_training_data"
-      },
-      "type": "model",
-      "versions": [
-        "6647683",
-        "6322908"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "Universidad Carlos III de Madrid",
           "name": "Estibaliz G\u00f3mez-de-Mariscal"
         },
@@ -938,7 +894,7 @@
         "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 2638,
+      "download_count": 2678,
       "download_url": "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -972,6 +928,50 @@
       "type": "model",
       "versions": [
         "6559475"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/cover.png"
+      ],
+      "description": "Cell segmentation for immunofluorescence microscopy.",
+      "download_count": 2646,
+      "id": "10.5281/zenodo.5847355",
+      "license": "CC-BY-4.0",
+      "links": [
+        "ilastik/covid_if_training_data",
+        "ilastik/ilastik",
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "CovidIFCellSegmentationBoundaryModel",
+      "nickname": "powerful-chipmunk",
+      "nickname_icon": "\ud83d\udc3f",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6647683/rdf.yaml",
+      "tags": [
+        "unet",
+        "cells",
+        "transmission-light-microscopy",
+        "covid19",
+        "immunofluorescence",
+        "instance-segmentation"
+      ],
+      "training_data": {
+        "id": "ilastik/covid_if_training_data"
+      },
+      "type": "model",
+      "versions": [
+        "6647683",
+        "6322908"
       ]
     },
     {
@@ -1025,7 +1025,7 @@
         "https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 2391,
+      "download_count": 2401,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
@@ -1071,7 +1071,7 @@
         "https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png"
       ],
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 2281,
+      "download_count": 2285,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -1158,7 +1158,7 @@
         "https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 2209,
+      "download_count": 2219,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1341,7 +1341,7 @@
         "https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/sevs-segmentation.png"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 2029,
+      "download_count": 2043,
       "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
       "id": "10.5281/zenodo.6559929",
       "license": "MIT",
@@ -1381,7 +1381,7 @@
         "https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/coverimage.jpg"
       ],
       "description": "Cellular membrane prediction model for volume SEM datasets",
-      "download_count": 1883,
+      "download_count": 1924,
       "id": "10.5281/zenodo.7274275",
       "license": "CC-BY-4.0",
       "links": [
@@ -1572,7 +1572,7 @@
         "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png"
       ],
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 691,
+      "download_count": 695,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
@@ -1648,7 +1648,7 @@
         "https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/cover.png"
       ],
       "description": "HyLFM-Net trained on static images of arrested medaka hatchling hearts. The network reconstructs a volumentric image from a given light-field.",
-      "download_count": 164,
+      "download_count": 168,
       "id": "10.5281/zenodo.7614645",
       "license": "MIT",
       "links": [
