@@ -1426,7 +1426,7 @@
         "https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current segmentation enables running further watershed segmentation to obtain a unique label for each individual bacteria detected in the image.",
-      "download_count": 1580,
+      "download_count": 1581,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
