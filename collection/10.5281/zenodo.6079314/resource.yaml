@@ -7,14 +7,26 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-01 14:17:36.817910'
+  doi: 10.5281/zenodo.7688686
+  name: EpitheliaAffinityModel
+  status: accepted
+  version_id: '7688686'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/e3fa2c39-d3d0-4b48-805a-76464cc93b33/rdf.yaml
 - created: '2022-03-25 19:51:07.070222'
   doi: 10.5281/zenodo.6385590
+  links:
+  - deepimagej/deepimagej
+  - ilastik/ilastik
+  - imjoy/BioImageIO-Packager
+  - ilastik/torch-em-2d-unet-notebook
+  - ilastik/mws-segmentation
   name: EpitheliaAffinityModel
   status: accepted
   version_id: '6385590'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/rdf.yaml
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook, ilastik/mws-segmentation]
 - created: '2022-02-14 17:05:09.708440'
   doi: 10.5281/zenodo.6079315
   inputs:
