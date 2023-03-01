@@ -62,7 +62,7 @@ def main(
                     summary = test_summary_from_exception("call 'test_resource'", e)
 
     else:
-        env_path = dist / "static_validation_artifact" / resource_id / version_id / f"conda_env_{weight_format}.yaml"
+        env_path = root / resource_id / version_id / f"conda_env_{weight_format}.yaml"
         if env_path.exists():
             error = "Failed to install conda environment:\n" + env_path.read_text()
         else:
