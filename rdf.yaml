@@ -390,21 +390,20 @@ collection:
   versions: ['6559475']
 - authors:
   - {name: Constantin Pape; @constantinpape}
-  covers: ['https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png']
+  covers: ['https://zenodo.org/api/files/e3fa2c39-d3d0-4b48-805a-76464cc93b33/cover.png']
   description: affinity-model
   download_count: 2690
   id: 10.5281/zenodo.6079314
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
-    ilastik/mws-segmentation]
+  links: [ilastik/ilastik, imjoy/BioImageIO-Packager]
   name: EpitheliaAffinityModel
   nickname: wild-whale
   nickname_icon: "\U0001F433"
   owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6385590/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7688686/rdf.yaml
   tags: [u-net, segmentation]
   type: model
-  versions: ['6385590', '6079315']
+  versions: ['7688686', '6385590', '6079315']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/67864f33-063b-43e9-a40f-0f36bf6397d4/cover.png']
@@ -2416,7 +2415,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 96, dataset: 84, model: 114, notebook: 4}
+  n_resource_versions: {application: 96, dataset: 84, model: 115, notebook: 4}
   n_resources: {application: 48, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg

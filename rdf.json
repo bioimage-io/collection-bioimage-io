@@ -937,18 +937,15 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/cover.png"
+        "https://zenodo.org/api/files/e3fa2c39-d3d0-4b48-805a-76464cc93b33/cover.png"
       ],
       "description": "affinity-model",
       "download_count": 2690,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
-        "deepimagej/deepimagej",
         "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/torch-em-2d-unet-notebook",
-        "ilastik/mws-segmentation"
+        "imjoy/BioImageIO-Packager"
       ],
       "name": "EpitheliaAffinityModel",
       "nickname": "wild-whale",
@@ -956,13 +953,14 @@
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6385590/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7688686/rdf.yaml",
       "tags": [
         "u-net",
         "segmentation"
       ],
       "type": "model",
       "versions": [
+        "7688686",
         "6385590",
         "6079315"
       ]
@@ -4967,7 +4965,7 @@
     "n_resource_versions": {
       "application": 96,
       "dataset": 84,
-      "model": 114,
+      "model": 115,
       "notebook": 4
     },
     "n_resources": {
