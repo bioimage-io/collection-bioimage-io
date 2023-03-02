@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-02 05:53:45.695883'
+  doi: 10.5281/zenodo.7690494
+  name: HPA Nucleus Segmentation (DPNUnet)
+  status: accepted
+  version_id: '7690494'
+  version_name: version 6
+  rdf_source: https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/rdf.yaml
 - created: '2023-02-26 08:55:39.372330'
   doi: 10.5281/zenodo.7678300
   name: HPA Nucleus Segmentation (DPNUnet)
