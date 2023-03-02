@@ -597,26 +597,29 @@ collection:
   type: dataset
   versions: ['6559930']
 - authors:
-  - {affiliation: Instituto Gulbenkian de Ciencia, name: Estibaliz Gomez de Mariscal}
-  covers: ['https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/cover_1.png',
-    'https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/cover.png']
+  - {affiliation: Instituto Gulbenkian de Ciência, name: Estibaliz Gómez de Mariscal}
+  covers: ['https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover_1.png',
+    'https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover.png']
   description: This trained 2D U-Net model segments the contour, foreground and background
-    of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current
-    segmentation enables running further watershed segmentation to obtain a unique
-    label for each individual bacteria detected in the image.
+    of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
+    a unique label for each individual bacteria detected in the image one could run
+    further watershed segmentation using the label 1 as the seed.
   download_count: 1609
   id: 10.5281/zenodo.7261974
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_2d_multilabel_zerocostdl4mic]
-  name: ' B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet'
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, zero/dataset_u-net_2d_multilabel_deepbacs,
+    ilastik/ilastik, zero/notebook_u-net_2d_multilabel_zerocostdl4mic]
+  name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
   nickname: placid-llama
   nickname_icon: "\U0001F999"
   owners: [147356]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7546703/rdf.yaml
-  tags: [zerocostdl4mic, segmentation, 2d, unet, bacillus-subtilis, fluorescence-light-microscopy,
-    cells, semantic-segmentation, bacteria, microbiology]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7688940/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, segmentation, unet, semantic-segmentation, cells,
+    fluorescence-light-microscopy, bacillus-subtilis, deepbacs, 2d, tensorflow, microbiology,
+    bacteria]
+  training_data: {id: zero/dataset_u-net_2d_multilabel_deepbacs}
   type: model
-  versions: ['7546703', '7261975']
+  versions: ['7688940', '7546703', '7261975']
 - authors:
   - {name: Daniel Capek, orcid: 0000-0001-5199-9940}
   - {name: Matvey Safroshkin, orcid: 0000-0003-3955-5081}
@@ -2428,7 +2431,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 98, dataset: 84, model: 115, notebook: 4}
+  n_resource_versions: {application: 98, dataset: 84, model: 116, notebook: 4}
   n_resources: {application: 49, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
