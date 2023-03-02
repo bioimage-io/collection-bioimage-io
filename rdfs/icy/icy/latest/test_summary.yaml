@@ -1,5 +1,5 @@
 bioimageio_spec_version: 0.4.9
-rdf_sha256: 44f8e39448fe75150faf8b830693493c9347f57b4a0603cefe3d376347e4a4b9
+rdf_sha256: 37df5e2bcc11bb38e04e490bbcac3f8f6f9df0bcf5e5bace1795db275a9a213a
 status: passed
 tests:
   bioimageio:
@@ -18,3 +18,18 @@ tests:
     status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  ilastik:
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: Missing/invalid weight formats for icy/icy/latest
+    name: reproduce test outputs with ilastik 1.4.0
+    nested_errors: null
+    status: failed
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: Missing/invalid weight formats for icy/icy/latest
+    name: reproduce test outputs with ilastik 1.4.0rc8
+    nested_errors: null
+    status: failed
+    warnings: {}
