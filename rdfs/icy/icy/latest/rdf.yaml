@@ -24,9 +24,12 @@ config:
   tags:
   - icy
   url_root: https://github.com/bioimage-io/icy-bioimage-io
+covers:
+- https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png
 description: Icy is an open community platform for bioimage informatics
 documentation: https://icy.bioimageanalysis.org/
 format_version: 0.2.3
+icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png
 id: icy/icy/latest
 maintainers:
 - github_user: None
