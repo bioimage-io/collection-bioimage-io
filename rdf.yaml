@@ -63,7 +63,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png']
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
-  download_count: 14067
+  download_count: 14193
   id: 10.5281/zenodo.6348728
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
@@ -104,7 +104,7 @@ collection:
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
-  download_count: 12250
+  download_count: 12366
   id: 10.5281/zenodo.6346511
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -141,7 +141,7 @@ collection:
     'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
-  download_count: 9381
+  download_count: 9497
   id: 10.5281/zenodo.6384845
   license: MIT
   links: [imjoy/BioImageIO-Packager]
@@ -175,7 +175,7 @@ collection:
   - {name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png']
   description: Mitochondria segmentation for electron microscopy.
-  download_count: 8308
+  download_count: 8340
   id: 10.5281/zenodo.5874841
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, ilastik/mitoem_segmentation_challenge,
@@ -229,6 +229,24 @@ collection:
   type: model
   versions: ['6811492']
 - authors:
+  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
+  covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
+  description: Cell segmentation for phase-contrast microscopy.
+  download_count: 4985
+  id: 10.5281/zenodo.5869899
+  license: CC-BY-4.0
+  links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: LiveCellSegmentationBoundaryModel
+  nickname: hiding-tiger
+  nickname_icon: "\U0001F405"
+  owners: [77626]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6647688/rdf.yaml
+  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
+    unet]
+  training_data: {id: ilastik/livecell_dataset}
+  type: model
+  versions: ['6647688', '6321179', '5869900']
+- authors:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
   covers: ['https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png']
@@ -246,24 +264,6 @@ collection:
   tags: [nucleus-segmentation]
   type: model
   versions: ['6538890', '6200636']
-- authors:
-  - {affiliation: EMBL Heidelberg, name: Constantin Pape}
-  covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
-  description: Cell segmentation for phase-contrast microscopy.
-  download_count: 4953
-  id: 10.5281/zenodo.5869899
-  license: CC-BY-4.0
-  links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
-  name: LiveCellSegmentationBoundaryModel
-  nickname: hiding-tiger
-  nickname_icon: "\U0001F405"
-  owners: [77626]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/6647688/rdf.yaml
-  tags: [2d, transmission-light-microscopy, label-free, cells, instance-segmentation,
-    unet]
-  training_data: {id: ilastik/livecell_dataset}
-  type: model
-  versions: ['6647688', '6321179', '5869900']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png']
@@ -604,7 +604,7 @@ collection:
     of Bacillus Subtilis bacteria imaged with Widefield microscopy images. The current
     segmentation enables running further watershed segmentation to obtain a unique
     label for each individual bacteria detected in the image.
-  download_count: 1589
+  download_count: 1609
   id: 10.5281/zenodo.7261974
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_2d_multilabel_zerocostdl4mic]
@@ -679,7 +679,7 @@ collection:
   - {name: 'Vincent, JP'}
   covers: ['https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png']
   description: For segmenting 2D projections of drosophila epithelia
-  download_count: 349
+  download_count: 368
   id: 10.5281/zenodo.7380171
   license: CC-BY-4.0
   name: Drosophila epithelia cell boundary segmentation of 2D projections
