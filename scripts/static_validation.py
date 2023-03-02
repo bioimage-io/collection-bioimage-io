@@ -2,7 +2,7 @@ import shutil
 import warnings
 from functools import partialmethod
 from pathlib import Path
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Literal, Optional, Union
 
 import requests
 import typer
@@ -23,7 +23,7 @@ tqdm.__init__ = partialmethod(tqdm.__init__, disable=True)  # silence tqdm
 
 
 def get_base_env() -> Dict[str, Union[str, List[Union[str, Dict[str, List[str]]]]]]:
-    return {"channels": ["defaults"], "dependencies": ["conda-forge::bioimageio.core"]}
+    return {"channels": ["conda-forge"], "dependencies": ["bioimageio.core"]}
 
 
 def get_env_from_deps(deps: Dependencies):
@@ -49,10 +49,10 @@ def get_env_from_deps(deps: Dependencies):
                     conda_env["dependencies"] = deps + ["conda-forge::bioimageio.core"]
             elif deps.manager == "pip":
                 pip_req = [d for d in dep_file_content.split("\n") if not d.strip().startswith("#")]
-                if "bioimageio.core" not in pip_req:
+                if not any(r.startswith("bioimageio.core") for r in pip_req):
                     pip_req.append("bioimageio.core")
 
-                conda_env = dict(channels=["defaults"], dependencies=["python=3.9", "pip", {"pip": pip_req}])
+                conda_env = dict(channels=["conda-forge"], dependencies=["python=3.9", "pip", {"pip": pip_req}])
             else:
                 raise NotImplementedError(deps.manager)
 
@@ -74,7 +74,7 @@ def get_default_env(
 ):
     conda_env = get_base_env()
     if opset_version is not None:
-        conda_env["dependencies"].append("conda-forge::onnxruntime")
+        conda_env["dependencies"].append("onnxruntime")
         # note: we should not need to worry about the opset version,
         # see https://github.com/microsoft/onnxruntime/blob/master/docs/Versioning.md
 
@@ -93,9 +93,15 @@ def get_default_env(
             # protobuf pin: tf 1 does not pin an upper limit for protobuf,
             #               but fails to load models saved with protobuf 3 when installing protobuf 4.
             conda_env["dependencies"].append(
-                {"pip": [f"bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}", "protobuf <4.0"]}
+                {"pip": ["bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}", "protobuf <4.0"]}
             )
-        else:  # use conda otherwise
+        elif tensorflow_version.major == 2 and tensorflow_version.minor < 11:
+            # get older tf versions from defaults channel
+            conda_env = {
+                "channels": ["defaults"],
+                "dependencies": ["conda-forge::bioimageio.core", f"tensorflow {get_version_range(tensorflow_version)}"],
+            }
+        else:  # use conda-forge otherwise
             conda_env["dependencies"].append(f"tensorflow {get_version_range(tensorflow_version)}")
 
     return conda_env
