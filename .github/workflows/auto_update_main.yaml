@@ -10,6 +10,8 @@ on:
     - cron:  '0 3 * * *'
   workflow_dispatch:  # triggered by http endpoints (ref should be refs/head/main)
 
+env:
+  BIOIMAGEIO_COUNT_RDF_DOWNLOADS: 'false'
 
 jobs:
   clean-up-pr:

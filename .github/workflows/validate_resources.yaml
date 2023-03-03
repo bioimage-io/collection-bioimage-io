@@ -19,6 +19,9 @@ on:
         description: "yes/no if pending matrices are not empty"
         value: ${{ jobs.static-validation.outputs.has_pending_matrices }}
 
+env:
+  BIOIMAGEIO_COUNT_RDF_DOWNLOADS: 'false'
+
 jobs:
   static-validation:  # + update rdfs
     runs-on: ubuntu-latest
