@@ -937,7 +937,7 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/e3fa2c39-d3d0-4b48-805a-76464cc93b33/cover.png"
+        "https://zenodo.org/api/files/c816c201-c393-4ac4-8f68-927ee6927e23/cover.png"
       ],
       "description": "affinity-model",
       "download_count": 2731,
@@ -953,13 +953,14 @@
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7688686/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7689587/rdf.yaml",
       "tags": [
         "u-net",
         "segmentation"
       ],
       "type": "model",
       "versions": [
+        "7689587",
         "7688686",
         "6385590",
         "6079315"
@@ -4998,7 +4999,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 116,
+      "model": 117,
       "notebook": 4
     },
     "n_resources": {
