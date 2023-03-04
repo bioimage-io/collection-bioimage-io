@@ -1,0 +1,150 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/zero_mean_unit_variance.ijm
+authors:
+- name: Constantin Pape; @constantinpape
+cite:
+- text: training library
+  url: https://doi.org/10.5281/zenodo.5108853
+- text: architecture
+  url: https://doi.org/10.1007/978-3-319-24574-4_28
+- text: segmentation algorithm
+  url: https://doi.org/10.1109/TPAMI.2020.2980827
+config:
+  bioimageio:
+    created: '2023-03-03 13:09:05.981223'
+    doi: 10.5281/zenodo.7695872
+    nickname: wild-whale
+    nickname_icon: 🐳
+    owners:
+    - 77626
+    status: accepted
+    version_id: '7695872'
+    version_name: version 5
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: zero_mean_unit_variance.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input_0.npy
+        pixel_size:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+        size: 256 x 256 x 1 x 1
+      memory_peak:
+      outputs:
+      - name: test_output_0.npy
+        size: 256 x 256 x 1 x 8
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png
+description: affinity-model
+documentation: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/documentation.md
+format_version: 0.4.9
+id: 10.5281/zenodo.6079314/7695872
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: cyx
+      mode: per_sample
+    name: zero_mean_unit_variance
+  shape:
+    min:
+    - 1
+    - 1
+    - 64
+    - 64
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+license: CC-BY-4.0
+links:
+- imjoy/BioImageIO-Packager
+- ilastik/torch-em-2d-unet-notebook
+- ilastik/ilastik
+- ilastik/mws-segmentation
+- deepimagej/deepimagej
+maintainers:
+- github_user: Constantin Pape
+  name: Constantin Pape
+name: EpitheliaAffinityModel
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 8.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7695872/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/sample_output_0.tif
+tags:
+- torchscript
+- ilastik
+- deepimagej
+- unet
+- segmentation
+- u-net
+- pytorch
+test_inputs:
+- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/test_input_0.npy
+test_outputs:
+- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/test_output_0.npy
+timestamp: '2022-11-18T22:06:12.833156'
+type: model
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/unet.py:UNet2d
+    architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
+    kwargs:
+      depth: 4
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 32
+      out_channels: 8
+      postprocessing:
+      return_side_outputs: false
+    pytorch_version: 1.12.1
+    sha256: 45e08ab0d974bea0963f163d1d229022ea72d6305c929bbe868d365434080495
+    source: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/weights.pt
+  torchscript:
+    pytorch_version: 1.13.0
+    sha256: 04b6c0de2fc0c4e0bc688999dde83815529eedc1136823104bfaf14d4e6d9ecc
+    source: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/torchscript_tracing.pt
