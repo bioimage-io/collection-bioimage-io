@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-03 13:09:05.981223'
+  doi: 10.5281/zenodo.7695872
+  name: EpitheliaAffinityModel
+  status: accepted
+  version_id: '7695872'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/rdf.yaml
 - created: '2023-03-02 15:21:20.138996'
   doi: 10.5281/zenodo.7689587
   name: EpitheliaAffinityModel
