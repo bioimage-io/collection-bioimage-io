@@ -7,15 +7,22 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-03 18:14:34.172222'
+  doi: 10.5281/zenodo.7696907
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7696907'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/rdf.yaml
 - created: '2022-03-11 10:52:31.794285'
   doi: 10.5281/zenodo.6346477
+  maintainers:
+  - github_user: wolny
   name: 2D UNet Arabidopsis Apical Stem Cells
   status: accepted
   version_id: '6346477'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/rdf.yaml
-  maintainers:
-  - github_user: wolny
 - created: '2022-03-07 15:22:46.950734'
   doi: 10.5281/zenodo.6334882
   name: 2D UNet Arabidopsis Apical Stem Cells
