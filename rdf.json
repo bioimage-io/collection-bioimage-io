@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 20304,
+      "download_count": 20394,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -344,7 +344,7 @@
         "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 9638,
+      "download_count": 9649,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -424,7 +424,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 8357,
+      "download_count": 8373,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -553,7 +553,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5001,
+      "download_count": 5016,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -937,15 +937,18 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/c816c201-c393-4ac4-8f68-927ee6927e23/cover.png"
+        "https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 2739,
+      "download_count": 2744,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
+        "imjoy/BioImageIO-Packager",
+        "ilastik/torch-em-2d-unet-notebook",
         "ilastik/ilastik",
-        "imjoy/BioImageIO-Packager"
+        "ilastik/mws-segmentation",
+        "deepimagej/deepimagej"
       ],
       "name": "EpitheliaAffinityModel",
       "nickname": "wild-whale",
@@ -953,13 +956,19 @@
       "owners": [
         77626
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7689587/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7695872/rdf.yaml",
       "tags": [
+        "torchscript",
+        "ilastik",
+        "deepimagej",
+        "unet",
+        "segmentation",
         "u-net",
-        "segmentation"
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "7695872",
         "7689587",
         "7688686",
         "6385590",
@@ -1157,7 +1166,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 2315,
+      "download_count": 2322,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -1427,7 +1436,7 @@
         "https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 1623,
+      "download_count": 1635,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1620,7 +1629,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 378,
+      "download_count": 386,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -4999,7 +5008,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 117,
+      "model": 118,
       "notebook": 4
     },
     "n_resources": {
