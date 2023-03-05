@@ -7,17 +7,26 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-03 18:42:08.763791'
+  doi: 10.5281/zenodo.7697068
+  name: 2D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7697068'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/rdf.yaml
 - created: '2022-03-11 10:58:32.633796'
   doi: 10.5281/zenodo.6346500
+  maintainers:
+  - github_user: wolny
   name: 2D UNet Arabidopsis Ovules
   status: accepted
   version_id: '6346500'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/rdf.yaml
-  maintainers:
-  - github_user: wolny
 - created: '2022-03-07 11:59:05.839103'
   doi: 10.5281/zenodo.6334384
+  maintainers:
+  - github_user: wolny
   name: 2D UNet Arabidopsis Ovules
   status: accepted
   tags:
@@ -35,5 +44,3 @@ versions:
   version_id: '6334384'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/rdf.yaml
-  maintainers:
-  - github_user: wolny
