@@ -325,8 +325,8 @@ collection:
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png',
-    'https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png']
+  covers: ['https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/raw.png',
+    'https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/pred.png']
   description: A 2D U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Trained on z-slices of 3D confocal images.
   download_count: 3458
@@ -337,11 +337,11 @@ collection:
   nickname: pioneering-rhino
   nickname_icon: "\U0001F98F"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/7697068/rdf.yaml
   tags: [plantseg, unet, 2d, semantic-segmentation, arabidopsis, ovules, cell-membrane,
     plant, tissue, fluorescence-light-microscopy, pytorch]
   type: model
-  versions: ['6346500', '6334384']
+  versions: ['7697068', '6346500', '6334384']
 - authors:
   - {affiliation: Universidad Carlos III de Madrid, name: Estibaliz Gómez-de-Mariscal}
   - {affiliation: Masaryk University, name: Martin Maška}
@@ -2432,7 +2432,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 98, dataset: 84, model: 121, notebook: 4}
+  n_resource_versions: {application: 98, dataset: 84, model: 122, notebook: 4}
   n_resources: {application: 49, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg

@@ -774,8 +774,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/raw.png",
-        "https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/pred.png"
+        "https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/raw.png",
+        "https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/pred.png"
       ],
       "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
       "download_count": 3458,
@@ -790,7 +790,7 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6346500/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/7697068/rdf.yaml",
       "tags": [
         "plantseg",
         "unet",
@@ -806,6 +806,7 @@
       ],
       "type": "model",
       "versions": [
+        "7697068",
         "6346500",
         "6334384"
       ]
@@ -5011,7 +5012,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 121,
+      "model": 122,
       "notebook": 4
     },
     "n_resources": {
