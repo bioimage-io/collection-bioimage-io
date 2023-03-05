@@ -117,9 +117,9 @@ tests:
         allow_tensor, allow_operation)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/framework/ops.py\",
         line 3870, in _as_graph_element_locked\n    raise ValueError(err_msg)\n"]
     warnings:
-      non-validation-warnings: ['Device management is not implemented for keras yet,
-          cannot unload model', 'Model tensorflow version (2, 10) does not match 1.14.0.The
-          prediction results may be wrong']
+      non-validation-warnings: ['Model tensorflow version (2, 10) does not match 1.14.0.The
+          prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model']
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
