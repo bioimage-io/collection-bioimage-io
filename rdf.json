@@ -1112,9 +1112,9 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_raw.png",
-        "https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_sneak.png",
-        "https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/ilastik_pred.png"
+        "https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/ilastik_raw.png",
+        "https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/ilastik_sneak.png",
+        "https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
       "download_count": 2339,
@@ -1129,7 +1129,7 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/6346519/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/7696919/rdf.yaml",
       "tags": [
         "plantseg",
         "unet",
@@ -1145,6 +1145,7 @@
       ],
       "type": "model",
       "versions": [
+        "7696919",
         "6346519",
         "6334584"
       ]
@@ -5008,7 +5009,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 118,
+      "model": 119,
       "notebook": 4
     },
     "n_resources": {
