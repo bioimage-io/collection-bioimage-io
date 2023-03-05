@@ -1029,8 +1029,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/raw.png",
-        "https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png"
+        "https://zenodo.org/api/files/f3b45f90-1419-4f10-9034-fe301f357d57/raw.png",
+        "https://zenodo.org/api/files/f3b45f90-1419-4f10-9034-fe301f357d57/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
       "download_count": 2522,
@@ -1045,7 +1045,7 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6346524/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7696952/rdf.yaml",
       "tags": [
         "plantseg",
         "unet",
@@ -1062,6 +1062,7 @@
       ],
       "type": "model",
       "versions": [
+        "7696952",
         "6346524",
         "6334778"
       ]
@@ -1210,8 +1211,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png",
-        "https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png"
+        "https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/raw.png",
+        "https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
       "download_count": 2324,
@@ -1226,7 +1227,7 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/7696907/rdf.yaml",
       "tags": [
         "plantseg",
         "unet",
@@ -1242,6 +1243,7 @@
       ],
       "type": "model",
       "versions": [
+        "7696907",
         "6346477",
         "6334882"
       ]
@@ -5009,7 +5011,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 119,
+      "model": 121,
       "notebook": 4
     },
     "n_resources": {

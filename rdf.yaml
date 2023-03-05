@@ -427,8 +427,8 @@ collection:
 - authors:
   - {name: Adrian Wolny}
   - {name: Lorenzo Cerrone}
-  covers: ['https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/raw.png',
-    'https://zenodo.org/api/files/6955b0c0-b211-42a1-8251-0e3d82f612d5/pred.png']
+  covers: ['https://zenodo.org/api/files/f3b45f90-1419-4f10-9034-fe301f357d57/raw.png',
+    'https://zenodo.org/api/files/f3b45f90-1419-4f10-9034-fe301f357d57/pred.png']
   description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
     of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
   download_count: 2522
@@ -439,11 +439,11 @@ collection:
   nickname: thoughtful-turtle
   nickname_icon: "\U0001F422"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6346524/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7696952/rdf.yaml
   tags: [plantseg, unet, 3d, semantic-segmentation, arabidopsis, lateral-root, cell-membrane,
     plant, tissue, light-sheet-fluorescence-microscopy, pytorch, plantseg]
   type: model
-  versions: ['6346524', '6334778']
+  versions: ['7696952', '6346524', '6334778']
 - authors:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
@@ -507,8 +507,8 @@ collection:
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/raw.png',
-    'https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/pred.png']
+  covers: ['https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/raw.png',
+    'https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/pred.png']
   description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
     apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
     0.25, 0.25]'
@@ -520,11 +520,11 @@ collection:
   nickname: laid-back-lobster
   nickname_icon: "\U0001F99E"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6346477/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/7696907/rdf.yaml
   tags: [plantseg, unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
     plant, tissue, fluorescence-light-microscopy, pytorch]
   type: model
-  versions: ['6346477', '6334882']
+  versions: ['7696907', '6346477', '6334882']
 - authors:
   - {affiliation: EMBL Heidelberg, github_user: jhennies, name: Julian Hennies, orcid: 0000-0002-0555-151X}
   covers: ['https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/coverimage.jpg']
@@ -2432,7 +2432,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 98, dataset: 84, model: 119, notebook: 4}
+  n_resource_versions: {application: 98, dataset: 84, model: 121, notebook: 4}
   n_resources: {application: 49, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
