@@ -447,7 +447,7 @@ collection:
 - authors:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
-  covers: ['https://zenodo.org/api/files/0c6f4346-c936-420b-89be-322f6df574ae/hpaseg-cover.png']
+  covers: ['https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/hpaseg-cover.png']
   description: Nuclei segmentation model for segmenting images from the Human Protein
     Atlas
   download_count: 2349
@@ -458,10 +458,10 @@ collection:
   nickname: conscientious-seashell
   nickname_icon: "\U0001F41A"
   owners: [47882]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/7678300/rdf.yaml
-  tags: [nucleus-segmentation]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/7690494/rdf.yaml
+  tags: [torchscript, unet, nucleus-segmentation, deepimagej, pytorch]
   type: model
-  versions: ['7678300', '6538911', '6224243']
+  versions: ['7690494', '7678300', '6538911', '6224243']
 - authors:
   - {name: Adrian Wolny}
   - {name: Lorenzo Cerrone}
@@ -2432,7 +2432,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 98, dataset: 84, model: 122, notebook: 4}
+  n_resource_versions: {application: 98, dataset: 84, model: 123, notebook: 4}
   n_resources: {application: 49, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
