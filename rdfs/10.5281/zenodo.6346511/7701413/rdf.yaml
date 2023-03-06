@@ -1,0 +1,145 @@
+attachments:
+  files: []
+authors:
+- name: Lorenzo Cerrone
+- name: Adrian Wolny
+cite:
+- text: Wolny, Cerrone et al. Accurate and Versatile 3D Segmentation of Plant Tissues
+    at Cellular Resolution. eLife 2020.
+  url: https://elifesciences.org/articles/57613
+config:
+  bioimageio:
+    created: '2023-03-06 10:47:06.889723'
+    doi: 10.5281/zenodo.7701413
+    nickname: emotional-cricket
+    nickname_icon: 🦗
+    owners:
+    - 66700
+    status: accepted
+    version_id: '7701413'
+    version_name: version 3
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - spec:
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input.npy
+        pixel_size:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+        size: 128 x 128 x 100 x 1
+      memory_peak:
+      outputs:
+      - name: test_output.npy
+        size: 128 x 128 x 100 x 1
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/raw.png
+- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/pred.png
+description: '3D Unet trained on confocal images of Arabidopsis thaliana apical stem
+  cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25,
+  0.25]'
+documentation: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/unet3d.md
+format_version: 0.4.9
+id: 10.5281/zenodo.6346511/7701413
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: raw
+  shape:
+  - 1
+  - 1
+  - 100
+  - 128
+  - 128
+license: MIT
+links:
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: wolny
+name: 3D UNet Arabidopsis Apical Stem Cells
+outputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: raw
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/7701413/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/sample_output_0.tif
+tags:
+- 3d
+- torchscript
+- ilastik
+- unet
+- plant
+- plantseg
+- cell-membrane
+- stem-cells
+- tissue
+- semantic-segmentation
+- arabidopsis
+- deepimagej
+- pytorch
+- fluorescence-light-microscopy
+test_inputs:
+- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/test_output.npy
+timestamp: '2022-11-18T22:05:18.815887'
+type: model
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/unet.py:UNet3D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    kwargs:
+      f_maps: 32
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 1
+      testing: true
+    pytorch_version: 1.12.1
+    sha256: 636ceb89e6f798fe27b1c4c5ef237dee6815443b0d23915b850624270d91fa76
+    source: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/confocal_pnas_3d.pytorch
+  torchscript:
+    pytorch_version: 1.13.0
+    sha256: f1c0976293f5e50e68a283289ed4560adea53a2d59ea06070bbfd12769cfb7ad
+    source: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/torchscript_tracing.pt

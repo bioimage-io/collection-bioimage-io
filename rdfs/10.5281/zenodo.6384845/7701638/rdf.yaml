@@ -1,0 +1,149 @@
+attachments:
+  files: []
+authors:
+- name: A. Wolny
+- name: V. Bondarenko
+cite:
+- text: V. Bondarenko et al. Ex vivo Engineering Uterine Environment for Peri-implantation
+    Mouse Development
+  url: https://github.com/kreshuklab/mouse-embryo-seg
+config:
+  bioimageio:
+    created: '2023-03-06 12:29:05.261248'
+    doi: 10.5281/zenodo.7701638
+    nickname: powerful-fish
+    nickname_icon: 🐟
+    owners:
+    - 66700
+    status: accepted
+    version_id: '7701638'
+    version_name: version 3
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - spec:
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input.npy
+        pixel_size:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+        size: 128 x 128 x 32 x 1
+      memory_peak:
+      outputs:
+      - name: test_output.npy
+        size: 128 x 128 x 32 x 1
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/raw.png
+- https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/pred.png
+description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
+  images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
+documentation: https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/unet3d.md
+format_version: 0.4.9
+id: 10.5281/zenodo.6384845/7701638
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: raw
+  shape:
+  - 1
+  - 1
+  - 32
+  - 128
+  - 128
+license: MIT
+links:
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: wolny
+name: 3D UNet Mouse Embryo Live
+outputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: raw
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/7701638/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/sample_output_0.tif
+tags:
+- 3d
+- torchscript
+- ilastik
+- unet
+- live
+- plantseg
+- mouse-embryo
+- cell-membrane
+- animal
+- tissue
+- light-sheet-microscopy
+- semantic-segmentation
+- deepimagej
+- pytorch
+test_inputs:
+- https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/test_output.npy
+timestamp: '2022-11-18T22:04:18.132270'
+type: model
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/unet.py:UNet3D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    kwargs:
+      f_maps:
+      - 32
+      - 64
+      - 128
+      - 256
+      - 512
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 1
+      testing: true
+    pytorch_version: 1.12.1
+    sha256: dc267bebbd34da4a66ae55c15a4e056ae883f0bcc30176e5548625491690baf7
+    source: https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/unet-bce-dice-cell-boundary-311021.pytorch
+  torchscript:
+    pytorch_version: 1.13.0
+    sha256: 81543061236a71bed490d0bf2602a58c6e73ccff825ded132e1048a3f04f6976
+    source: https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/torchscript_tracing.pt
