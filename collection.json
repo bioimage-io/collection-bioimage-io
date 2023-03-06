@@ -545,6 +545,42 @@
     {
       "authors": [
         {
+          "name": "Hao Xu"
+        },
+        {
+          "name": "Wei Ouyang"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
+      ],
+      "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
+      "download_count": 5059,
+      "id": "10.5281/zenodo.6200635",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager",
+        "hpa/hpa-cell-image-segmentation-dataset"
+      ],
+      "name": "HPA Cell Segmentation (DPNUnet)",
+      "nickname": "loyal-parrot",
+      "nickname_icon": "\ud83e\udd9c",
+      "owners": [
+        47882
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml",
+      "tags": [
+        "nucleus-segmentation"
+      ],
+      "type": "model",
+      "versions": [
+        "6538890",
+        "6200636"
+      ]
+    },
+    {
+      "authors": [
+        {
           "affiliation": "EMBL Heidelberg",
           "name": "Constantin Pape"
         }
@@ -585,42 +621,6 @@
         "6647688",
         "6321179",
         "5869900"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Hao Xu"
-        },
-        {
-          "name": "Wei Ouyang"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png"
-      ],
-      "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 5039,
-      "id": "10.5281/zenodo.6200635",
-      "license": "CC-BY-4.0",
-      "links": [
-        "imjoy/BioImageIO-Packager",
-        "hpa/hpa-cell-image-segmentation-dataset"
-      ],
-      "name": "HPA Cell Segmentation (DPNUnet)",
-      "nickname": "loyal-parrot",
-      "nickname_icon": "\ud83e\udd9c",
-      "owners": [
-        47882
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml",
-      "tags": [
-        "nucleus-segmentation"
-      ],
-      "type": "model",
-      "versions": [
-        "6538890",
-        "6200636"
       ]
     },
     {

@@ -229,6 +229,24 @@ collection:
   type: model
   versions: ['6811492']
 - authors:
+  - {name: Hao Xu}
+  - {name: Wei Ouyang}
+  covers: ['https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png']
+  description: Cell segmentation model for segmenting images from the Human Protein
+    Atlas
+  download_count: 5059
+  id: 10.5281/zenodo.6200635
+  license: CC-BY-4.0
+  links: [imjoy/BioImageIO-Packager, hpa/hpa-cell-image-segmentation-dataset]
+  name: HPA Cell Segmentation (DPNUnet)
+  nickname: loyal-parrot
+  nickname_icon: "\U0001F99C"
+  owners: [47882]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml
+  tags: [nucleus-segmentation]
+  type: model
+  versions: ['6538890', '6200636']
+- authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
@@ -246,24 +264,6 @@ collection:
   training_data: {id: ilastik/livecell_dataset}
   type: model
   versions: ['6647688', '6321179', '5869900']
-- authors:
-  - {name: Hao Xu}
-  - {name: Wei Ouyang}
-  covers: ['https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/hpaseg-cover.png']
-  description: Cell segmentation model for segmenting images from the Human Protein
-    Atlas
-  download_count: 5039
-  id: 10.5281/zenodo.6200635
-  license: CC-BY-4.0
-  links: [imjoy/BioImageIO-Packager, hpa/hpa-cell-image-segmentation-dataset]
-  name: HPA Cell Segmentation (DPNUnet)
-  nickname: loyal-parrot
-  nickname_icon: "\U0001F99C"
-  owners: [47882]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6538890/rdf.yaml
-  tags: [nucleus-segmentation]
-  type: model
-  versions: ['6538890', '6200636']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png']
