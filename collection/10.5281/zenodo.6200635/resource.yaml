@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-06 19:01:04.321374'
+  doi: 10.5281/zenodo.7702687
+  name: HPA Cell Segmentation (DPNUnet)
+  status: accepted
+  version_id: '7702687'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/rdf.yaml
 - created: '2023-03-02 05:51:25.787728'
   doi: 10.5281/zenodo.7690491
   name: HPA Cell Segmentation (DPNUnet)
