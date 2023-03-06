@@ -1,0 +1,144 @@
+attachments:
+  files: []
+authors:
+- name: Adrian Wolny
+- name: Lorenzo Cerrone
+cite:
+- text: Wolny, Cerrone et al. Accurate and Versatile 3D Segmentation of Plant Tissues
+    at Cellular Resolution. eLife 2020.
+  url: https://elifesciences.org/articles/57613
+config:
+  bioimageio:
+    created: '2023-03-06 11:36:32.070606'
+    doi: 10.5281/zenodo.7701561
+    nickname: thoughtful-turtle
+    nickname_icon: 🐢
+    owners:
+    - 66700
+    status: accepted
+    version_id: '7701561'
+    version_name: version 4
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - spec:
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input.npy
+        pixel_size:
+          x: 1.0
+          y: 1.0
+          z: 1.0
+        size: 128 x 128 x 100 x 1
+      memory_peak:
+      outputs:
+      - name: test_output.npy
+        size: 128 x 128 x 100 x 1
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/raw.png
+- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/pred.png
+description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
+  of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
+documentation: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/unet3d.md
+format_version: 0.4.9
+id: 10.5281/zenodo.6334777/7701561
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: raw
+  shape:
+  - 1
+  - 1
+  - 100
+  - 128
+  - 128
+license: MIT
+links:
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: wolny
+name: 3D UNet Lateral Root Primordia Cells
+outputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 16
+  - 16
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: raw
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7701561/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/sample_output_0.tif
+tags:
+- 3d
+- torchscript
+- ilastik
+- light-sheet-fluorescence-microscopy
+- unet
+- plant
+- plantseg
+- cell-membrane
+- tissue
+- semantic-segmentation
+- arabidopsis
+- deepimagej
+- lateral-root
+- pytorch
+test_inputs:
+- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/test_output.npy
+timestamp: '2022-11-18T22:05:53.727690'
+type: model
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/unet.py:UNet3D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    kwargs:
+      f_maps: 32
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 1
+      testing: true
+    pytorch_version: 1.12.1
+    sha256: b8acbc7a6125bc5fc9109ca5126511e04d78dfebf6f983a8bf7f591ccdcb18a0
+    source: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/unet3d-lateral-root-lightsheet-ds1x.pytorch
+  torchscript:
+    pytorch_version: 1.13.0
+    sha256: 8ee2ef339e53eeb95d4fb818b74e2c4ff6aeba39a1d6468c1017198945d1b688
+    source: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/torchscript_tracing.pt
