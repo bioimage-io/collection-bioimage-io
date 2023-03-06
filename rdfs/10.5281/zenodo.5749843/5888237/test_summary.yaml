@@ -95,9 +95,9 @@ tests:
     traceback: null
     warnings:
       non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Device management is not implemented for keras
-          yet, cannot unload model', 'Model tensorflow version (1, 15) does not match
-          1.14.0.The prediction results may be wrong']
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model']
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -168,9 +168,9 @@ tests:
     status: passed
     traceback: null
     warnings:
-      non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Device management is not implemented for keras
-          yet, cannot unload model', 'Model tensorflow version (1, 15) does not match
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
           1.14.0.The prediction results may be wrong']
   - {error: Missing/invalid weight formats for 10.5281/zenodo.5749843/5888237, name: reproduce
       test outputs with ilastik 1.4.0b27, reason: error, status: failed}
