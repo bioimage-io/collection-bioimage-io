@@ -789,14 +789,15 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/raw.png",
-        "https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/pred.png"
+        "https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/raw.png",
+        "https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/pred.png"
       ],
       "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
       "download_count": 3484,
       "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
+        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
       ],
       "name": "2D UNet Arabidopsis Ovules",
@@ -805,22 +806,26 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/7697068/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/7701262/rdf.yaml",
       "tags": [
-        "plantseg",
+        "torchscript",
+        "ilastik",
         "unet",
-        "2d",
+        "plant",
+        "plantseg",
+        "cell-membrane",
+        "ovules",
+        "tissue",
         "semantic-segmentation",
         "arabidopsis",
-        "ovules",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
+        "deepimagej",
+        "pytorch",
+        "2d",
+        "fluorescence-light-microscopy"
       ],
       "type": "model",
       "versions": [
+        "7701262",
         "7697068",
         "6346500",
         "6334384"
@@ -1045,14 +1050,15 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/f3b45f90-1419-4f10-9034-fe301f357d57/raw.png",
-        "https://zenodo.org/api/files/f3b45f90-1419-4f10-9034-fe301f357d57/pred.png"
+        "https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/raw.png",
+        "https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
       "download_count": 2547,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
+        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
       ],
       "name": "3D UNet Lateral Root Primordia Cells",
@@ -1061,23 +1067,26 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7696952/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7701561/rdf.yaml",
       "tags": [
-        "plantseg",
-        "unet",
         "3d",
+        "torchscript",
+        "ilastik",
+        "light-sheet-fluorescence-microscopy",
+        "unet",
+        "plant",
+        "plantseg",
+        "cell-membrane",
+        "tissue",
         "semantic-segmentation",
         "arabidopsis",
+        "deepimagej",
         "lateral-root",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "light-sheet-fluorescence-microscopy",
-        "pytorch",
-        "plantseg"
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "7701561",
         "7696952",
         "6346524",
         "6334778"
@@ -1093,15 +1102,16 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/ilastik_raw.png",
-        "https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/ilastik_sneak.png",
-        "https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/ilastik_pred.png"
+        "https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/ilastik_raw.png",
+        "https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/ilastik_sneak.png",
+        "https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
       "download_count": 2365,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
+        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
       ],
       "name": "3D UNet Arabidopsis Ovules",
@@ -1110,22 +1120,26 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/7696919/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/7701492/rdf.yaml",
       "tags": [
-        "plantseg",
-        "unet",
         "3d",
+        "torchscript",
+        "ilastik",
+        "unet",
+        "plant",
+        "plantseg",
+        "cell-membrane",
+        "ovules",
+        "tissue",
         "semantic-segmentation",
         "arabidopsis",
-        "ovules",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
+        "deepimagej",
+        "pytorch",
+        "fluorescence-light-microscopy"
       ],
       "type": "model",
       "versions": [
+        "7701492",
         "7696919",
         "6346519",
         "6334584"
@@ -5037,7 +5051,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 127,
+      "model": 130,
       "notebook": 4
     },
     "n_resources": {
