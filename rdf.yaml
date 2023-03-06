@@ -486,24 +486,24 @@ collection:
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/raw.png',
-    'https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/pred.png']
+  covers: ['https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/raw.png',
+    'https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/pred.png']
   description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
     apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
     0.25, 0.25]'
   download_count: 2350
   id: 10.5281/zenodo.6334881
   license: MIT
-  links: [imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: 2D UNet Arabidopsis Apical Stem Cells
   nickname: laid-back-lobster
   nickname_icon: "\U0001F99E"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/7696907/rdf.yaml
-  tags: [plantseg, unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
-    plant, tissue, fluorescence-light-microscopy, pytorch]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/7701241/rdf.yaml
+  tags: [torchscript, ilastik, unet, plant, plantseg, cell-membrane, stem-cells, tissue,
+    semantic-segmentation, arabidopsis, deepimagej, pytorch, 2d, fluorescence-light-microscopy]
   type: model
-  versions: ['7696907', '6346477', '6334882']
+  versions: ['7701241', '7696907', '6346477', '6334882']
 - authors:
   - {affiliation: '', name: ZeroCostDL4Mic team}
   - {name: Constantin Pape}
@@ -2432,7 +2432,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 98, dataset: 84, model: 123, notebook: 4}
+  n_resource_versions: {application: 98, dataset: 84, model: 124, notebook: 4}
   n_resources: {application: 49, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
