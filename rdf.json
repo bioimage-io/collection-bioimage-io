@@ -253,14 +253,15 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png",
-        "https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png"
+        "https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/raw.png",
+        "https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/pred.png"
       ],
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
       "download_count": 12647,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
+        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
       ],
       "name": "3D UNet Arabidopsis Apical Stem Cells",
@@ -269,22 +270,26 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/7701413/rdf.yaml",
       "tags": [
-        "plantseg",
-        "unet",
         "3d",
+        "torchscript",
+        "ilastik",
+        "unet",
+        "plant",
+        "plantseg",
+        "cell-membrane",
+        "stem-cells",
+        "tissue",
         "semantic-segmentation",
         "arabidopsis",
-        "stem-cells",
-        "cell-membrane",
-        "plant",
-        "tissue",
-        "fluorescence-light-microscopy",
-        "pytorch"
+        "deepimagej",
+        "pytorch",
+        "fluorescence-light-microscopy"
       ],
       "type": "model",
       "versions": [
+        "7701413",
         "6346512"
       ]
     },
@@ -340,14 +345,15 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png",
-        "https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png"
+        "https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/raw.png",
+        "https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
       "download_count": 9757,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
+        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
       ],
       "name": "3D UNet Mouse Embryo Live",
@@ -356,22 +362,26 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/7701638/rdf.yaml",
       "tags": [
-        "plantseg",
-        "unet",
         "3d",
-        "semantic-segmentation",
+        "torchscript",
+        "ilastik",
+        "unet",
+        "live",
+        "plantseg",
         "mouse-embryo",
         "cell-membrane",
         "animal",
         "tissue",
         "light-sheet-microscopy",
-        "pytorch",
-        "live"
+        "semantic-segmentation",
+        "deepimagej",
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "7701638",
         "6384846"
       ]
     },
@@ -463,15 +473,16 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png",
-        "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png",
-        "https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png"
+        "https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/raw.png",
+        "https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-boundary.png",
+        "https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
       "download_count": 8382,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
+        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager"
       ],
       "name": "3D UNet Mouse Embryo Fixed",
@@ -480,22 +491,26 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/7701632/rdf.yaml",
       "tags": [
-        "plantseg",
-        "unet",
         "3d",
-        "semantic-segmentation",
+        "torchscript",
+        "ilastik",
+        "unet",
+        "plantseg",
         "mouse-embryo",
-        "nuclei",
+        "fixed",
         "animal",
         "tissue",
         "confocal-microscopy",
-        "pytorch",
-        "fixed"
+        "semantic-segmentation",
+        "deepimagej",
+        "nuclei",
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "7701632",
         "6383430"
       ]
     },
@@ -5022,7 +5037,7 @@
     "n_resource_versions": {
       "application": 98,
       "dataset": 84,
-      "model": 124,
+      "model": 127,
       "notebook": 4
     },
     "n_resources": {

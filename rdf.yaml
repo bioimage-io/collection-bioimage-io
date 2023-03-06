@@ -99,24 +99,24 @@ collection:
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/raw.png',
-    'https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/pred.png']
+  covers: ['https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/raw.png',
+    'https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/pred.png']
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
   download_count: 12647
   id: 10.5281/zenodo.6346511
   license: MIT
-  links: [imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: 3D UNet Arabidopsis Apical Stem Cells
   nickname: emotional-cricket
   nickname_icon: "\U0001F997"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
-    plant, tissue, fluorescence-light-microscopy, pytorch]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/7701413/rdf.yaml
+  tags: [3d, torchscript, ilastik, unet, plant, plantseg, cell-membrane, stem-cells,
+    tissue, semantic-segmentation, arabidopsis, deepimagej, pytorch, fluorescence-light-microscopy]
   type: model
-  versions: ['6346512']
+  versions: ['7701413', '6346512']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png']
@@ -137,23 +137,23 @@ collection:
 - authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
-  covers: ['https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/raw.png',
-    'https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/pred.png']
+  covers: ['https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/raw.png',
+    'https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
   download_count: 9757
   id: 10.5281/zenodo.6384845
   license: MIT
-  links: [imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: 3D UNet Mouse Embryo Live
   nickname: powerful-fish
   nickname_icon: "\U0001F41F"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, cell-membrane, animal,
-    tissue, light-sheet-microscopy, pytorch, live]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/7701638/rdf.yaml
+  tags: [3d, torchscript, ilastik, unet, live, plantseg, mouse-embryo, cell-membrane,
+    animal, tissue, light-sheet-microscopy, semantic-segmentation, deepimagej, pytorch]
   type: model
-  versions: ['6384846']
+  versions: ['7701638', '6384846']
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png']
@@ -191,24 +191,24 @@ collection:
 - authors:
   - {name: V. Bondarenko}
   - {name: A. Wolny}
-  covers: ['https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png',
-    'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png',
-    'https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png']
+  covers: ['https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/raw.png',
+    'https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-boundary.png',
+    'https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-nuclei.png']
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
   download_count: 8382
   id: 10.5281/zenodo.6383429
   license: MIT
-  links: [imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
   name: 3D UNet Mouse Embryo Fixed
   nickname: loyal-squid
   nickname_icon: "\U0001F991"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/rdf.yaml
-  tags: [plantseg, unet, 3d, semantic-segmentation, mouse-embryo, nuclei, animal,
-    tissue, confocal-microscopy, pytorch, fixed]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/7701632/rdf.yaml
+  tags: [3d, torchscript, ilastik, unet, plantseg, mouse-embryo, fixed, animal, tissue,
+    confocal-microscopy, semantic-segmentation, deepimagej, nuclei, pytorch]
   type: model
-  versions: ['6383430']
+  versions: ['7701632', '6383430']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png']
@@ -2432,7 +2432,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 98, dataset: 84, model: 124, notebook: 4}
+  n_resource_versions: {application: 98, dataset: 84, model: 127, notebook: 4}
   n_resources: {application: 49, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
