@@ -189,17 +189,17 @@
         "collection_file_name": "collection.yaml",
         "default_type": "model",
         "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png",
+        "icon": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg",
         "id": "icy",
-        "logo": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png",
-        "name": "icy",
+        "logo": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg",
+        "name": "Icy",
         "repository": "bioimage-io/icy-bioimage-io",
         "resource_types": [
             "application"
         ],
         "splash_feature_list": null,
         "splash_subtitle": "Icy is an open community platform for bioimage informatics",
-        "splash_title": "icy",
+        "splash_title": "Icy",
         "tags": [
             "icy"
         ],
