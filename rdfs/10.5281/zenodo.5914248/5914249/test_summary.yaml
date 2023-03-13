@@ -194,6 +194,6 @@ tests:
     traceback: null
     warnings:
       non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Device management is not implemented for keras
-          yet, cannot unload model', 'Model tensorflow version (1, 15) does not match
-          1.14.0.The prediction results may be wrong']
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model']

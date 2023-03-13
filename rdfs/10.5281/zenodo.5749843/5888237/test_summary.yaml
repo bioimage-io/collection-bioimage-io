@@ -200,10 +200,10 @@ tests:
         custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
         line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
     warnings:
-      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
-          prediction results may be wrong', 'Passing (type, 1) or ''1type'' as a synonym
-          of type is deprecated; in a future version of numpy, it will be understood
-          as (type, (1,)) / ''(1,)type''.']
+      non-validation-warnings: ['Passing (type, 1) or ''1type'' as a synonym of type
+          is deprecated; in a future version of numpy, it will be understood as (type,
+          (1,)) / ''(1,)type''.', 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong']
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -212,6 +212,6 @@ tests:
     traceback: null
     warnings:
       non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Device management is not implemented for keras
-          yet, cannot unload model', 'Model tensorflow version (1, 15) does not match
-          1.14.0.The prediction results may be wrong']
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model']
