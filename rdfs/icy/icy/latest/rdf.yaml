@@ -12,29 +12,30 @@ config:
     version_name: latest
   default_type: model
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png
+  icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
   id: icy
-  logo: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png
-  name: icy
+  logo: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
+  name: Icy
   resource_types:
   - application
+  - model
   splash_feature_list:
   splash_subtitle: Icy is an open community platform for bioimage informatics
-  splash_title: icy
+  splash_title: Icy
   tags:
   - icy
-  url_root: https://github.com/bioimage-io/icy-bioimage-io
+  url_root: https://github.com/bioimage-io/icy-bioimage-io/blob/main
 covers:
-- https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png
+- https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
 description: Icy is an open community platform for bioimage informatics
 documentation: https://icy.bioimageanalysis.org/
 format_version: 0.2.3
-icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/logo.png
+icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
 id: icy/icy/latest
 maintainers:
 - github_user: None
   name: the Icy Team
-name: icy
+name: Icy
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/icy/icy/latest/rdf.yaml
 source: https://gitlab.pasteur.fr/bia/
 tags:

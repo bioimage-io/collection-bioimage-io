@@ -195,7 +195,8 @@
         "name": "Icy",
         "repository": "bioimage-io/icy-bioimage-io",
         "resource_types": [
-            "application"
+            "application",
+            "model"
         ],
         "splash_feature_list": null,
         "splash_subtitle": "Icy is an open community platform for bioimage informatics",
@@ -203,6 +204,6 @@
         "tags": [
             "icy"
         ],
-        "url_root": "https://github.com/bioimage-io/icy-bioimage-io"
+        "url_root": "https://github.com/bioimage-io/icy-bioimage-io/blob/main"
     }
 ]
