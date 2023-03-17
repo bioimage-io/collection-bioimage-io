@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 21332,
+      "download_count": 21441,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -113,7 +113,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 16376,
+      "download_count": 16479,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -304,7 +304,7 @@
         "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
       ],
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 12342,
+      "download_count": 12427,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -349,7 +349,7 @@
         "https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 9911,
+      "download_count": 9919,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -395,7 +395,7 @@
         "https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png"
       ],
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 8709,
+      "download_count": 8717,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -434,7 +434,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 8541,
+      "download_count": 8554,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -610,7 +610,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5177,
+      "download_count": 5186,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -748,7 +748,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 3689,
+      "download_count": 3698,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -868,7 +868,7 @@
         "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 3325,
+      "download_count": 3353,
       "download_url": "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -920,7 +920,7 @@
         "https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png"
       ],
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 2962,
+      "download_count": 2966,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -967,7 +967,7 @@
         "https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 2889,
+      "download_count": 2898,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1212,7 +1212,7 @@
         "https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 2448,
+      "download_count": 2456,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -1351,7 +1351,7 @@
         "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
       ],
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 2297,
+      "download_count": 2300,
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
@@ -1541,7 +1541,7 @@
         "https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 1770,
+      "download_count": 1777,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1678,7 +1678,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 457,
+      "download_count": 460,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -2542,11 +2542,11 @@
         }
       ],
       "covers": [
-        "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg"
+        "https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg"
       ],
       "description": "Icy is an open community platform for bioimage informatics",
       "download_count": 1,
-      "icon": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg",
+      "icon": "https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg",
       "id": "icy/icy",
       "name": "Icy",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/icy/icy/latest/rdf.yaml",
@@ -5257,11 +5257,11 @@
         "collection_file_name": "collection.yaml",
         "default_type": "model",
         "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg",
+        "icon": "https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg",
         "id": "icy",
-        "logo": "https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg",
+        "logo": "https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg",
         "name": "Icy",
-        "repository": "bioimage-io/icy-bioimage-io",
+        "repository": "Icy-imaging/icy-bioimage-io",
         "resource_types": [
           "application",
           "model"
@@ -5272,7 +5272,7 @@
         "tags": [
           "icy"
         ],
-        "url_root": "https://github.com/bioimage-io/icy-bioimage-io/blob/main"
+        "url_root": "https://github.com/Icy-imaging/icy-bioimage-io/blob/main"
       }
     ],
     "resource_types": [
