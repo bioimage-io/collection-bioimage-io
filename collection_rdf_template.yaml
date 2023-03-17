@@ -71,7 +71,7 @@ config:
       branch: master
       collection_file_name: manifest.bioimage.io.yaml
     - id: icy
-      repository: bioimage-io/icy-bioimage-io
+      repository: Icy-imaging/icy-bioimage-io
       branch: main
       collection_file_name: collection.yaml
 
