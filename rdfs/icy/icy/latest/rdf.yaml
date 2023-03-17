@@ -12,9 +12,9 @@ config:
     version_name: latest
   default_type: model
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
+  icon: https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg
   id: icy
-  logo: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
+  logo: https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg
   name: Icy
   resource_types:
   - application
@@ -24,13 +24,13 @@ config:
   splash_title: Icy
   tags:
   - icy
-  url_root: https://github.com/bioimage-io/icy-bioimage-io/blob/main
+  url_root: https://github.com/Icy-imaging/icy-bioimage-io/blob/main
 covers:
-- https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
+- https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg
 description: Icy is an open community platform for bioimage informatics
 documentation: https://icy.bioimageanalysis.org/
 format_version: 0.2.3
-icon: https://raw.githubusercontent.com/bioimage-io/icy-bioimage-io/main/icy_logo.svg
+icon: https://raw.githubusercontent.com/Icy-imaging/icy-bioimage-io/main/icy_logo.svg
 id: icy/icy/latest
 maintainers:
 - github_user: None
