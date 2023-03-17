@@ -33,32 +33,40 @@ tests:
   - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
       headless, status: passed}
   ilastik:
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,
+    reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,
+    reason: null, status: passed, traceback: null}
+  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
+    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights,
+    reason: null, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: load resource description
-    nested_errors: null
     status: passed
     traceback: null
     warnings: {}
   - {error: null, name: has expected resource type, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: All URLs and paths available
     nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: reproduce test outputs from test inputs
     status: passed
@@ -66,46 +74,38 @@ tests:
     warnings:
       non-validation-warnings: [Computed dataset percentiles naively by averaging
           percentiles of samples.]
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights,
-    reason: null, status: passed, traceback: null}
   - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
     name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights,
     reason: null, status: passed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6406756/6406757, name: reproduce
       test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights,
-    reason: null, status: passed, traceback: null}
   - {error: Missing/invalid weight formats for 10.5281/zenodo.6406756/6406757, name: reproduce
       test outputs with ilastik 1.4.0b26, reason: error, status: failed}
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,
-    reason: null, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
+    nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: All URLs and paths available
     nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: reproduce test outputs from test inputs
     status: passed
