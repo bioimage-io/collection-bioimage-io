@@ -1,9 +1,9 @@
-bioimageio_spec_version: 0.4.5.post13
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 1bcb690d8b87252964af2bede660a4d73dcc0916535fb8b4d6f72882bce19c09
 status: failed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post13
+  - bioimageio_spec_version: 0.4.9
     error:
       _schema: ['Minimal shape [1. 4. 4. 1.] of output denoised is too small for halo
           [0, 32, 32, 0].']
@@ -12,30 +12,30 @@ tests:
     nested_errors: {}
     status: failed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
-        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'', ''nuclei'',
-        ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'', ''vasculature'',
-        ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'': [''tensorflow'',
-        ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
-        ''inception'', ''shufflenet'']}]'}
-  - bioimageio_spec_version: 0.4.5post13
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
+  - bioimageio_spec_version: 0.4.9
     error: null
     name: bioimageio.spec static validation of model RDF 0.3.6
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
-        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'', ''nuclei'',
-        ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'', ''vasculature'',
-        ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'': [''tensorflow'',
-        ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
-        ''inception'', ''shufflenet'']}]'}
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
       :deepimagej', name: Initial compatibility checks with DeepImageJ, status: failed}

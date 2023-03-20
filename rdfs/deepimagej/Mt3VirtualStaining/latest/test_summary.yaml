@@ -1,5 +1,88 @@
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 14e7d15cdb20c36cf3e0ea6a4932e00fb96dd1481dcbc71586e63690a419c1f8
+status: failed
 tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.3.6
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/tensorflow_saved_model_bundle.zip
+      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/tensorflow_saved_model_bundle.zip)'
+    name: load resource description
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 202, in _test_load_resource\n    rdf, weights_priority_order=None if
+        weight_format is None else [weight_format]\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
+        nodes_module=nodes)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 121, in resolve_raw_node\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
+        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
+        \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 65, in transform_dict\n    return {key: self.transform(value, **kwargs)
+        for key, value in node.items()}\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 65, in <dictcomp>\n    return {key: self.transform(value, **kwargs) for
+        key, value in node.items()}\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 339, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root)\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/functools.py\",
+        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 253, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
+        output, pbar=pbar)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
+        ({e})\") from e\n"]
+    warnings: {}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
       generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,
@@ -63,50 +146,6 @@ tests:
   - {error: Missing/invalid weight formats for deepimagej/Mt3VirtualStaining/latest,
     name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
     status: failed}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: 'Failed to download https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/tensorflow_saved_model_bundle.zip
-      (404 Client Error: Not Found for url: https://raw.githubusercontent.com/deepimagej/models/master/mt3_virtual_staining/tensorflow_saved_model_bundle.zip)'
-    name: load resource description
-    nested_errors: null
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 202, in _test_load_resource\n    rdf, weights_priority_order=None if
-        weight_format is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
-        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 121, in resolve_raw_node\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
-        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
-        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 65, in transform_dict\n    return {key: self.transform(value, **kwargs)
-        for key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 65, in <dictcomp>\n    return {key: self.transform(value, **kwargs) for
-        key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 339, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/functools.py\",
-        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 253, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
-        output, pbar=pbar)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
-        ({e})\") from e\n"]
-    warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: local variable 'rd' referenced before assignment

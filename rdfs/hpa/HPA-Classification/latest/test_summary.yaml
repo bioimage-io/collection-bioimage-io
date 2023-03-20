@@ -1,24 +1,21 @@
-bioimageio_spec_version: 0.4.5.post11
+bioimageio_spec_version: 0.4.9
 rdf_sha256: e6f85085178f963374fa7542c1d9102741f77905d53bf4d1c7afdb48b09cfc6a
-status: failed
+status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post11
-    error:
-      documentation:
-      - 'Errors in all options for this field. Fix any of the following errors:'
-      - [Empty URI scheme component]
-      - ["Invalid suffix (\n\nThis plugin allows to predict the subcellular protein
-          localization pattern for a provided image. \n\n## Main features\n* Prediction
-          is performed with the winner of the special price of the 2018 Kaggle challenge
-          (https:/github.com/CellProfiling/HPA-Special-Prize). \n* Annotated localization
-          classes are from the **HPA cell atlas**. \n* The plugin uses a trained **ShuffleNet
-          (v2)** to perform the prediction directly in the browser. \n* Class Activation
-          Map: https:/arxiv.org/pdf/1512.04150.pdf  \n\n): Replacement index 0 out
-          of range for positional args tuple"]
-    name: 'bioimageio.spec static validation of  RDF '
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of application RDF 0.2.3 with update to
+      latest format version
     nested_errors: {}
-    status: failed
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of application RDF 0.2.3
+    nested_errors: {}
+    status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
   ilastik:

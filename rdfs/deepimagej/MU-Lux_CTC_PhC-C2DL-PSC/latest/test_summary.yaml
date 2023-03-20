@@ -1,5 +1,52 @@
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 470bf6f981ee5085f2766c3dc241b64968c01038f836f8ad1ac5fc748f02c9be
+status: failed
 tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.9
+    error:
+      _schema: ['Minimal shape [ 1. 32. 32.  1.] of output output is too small for
+          halo [0, 97, 97, 0].']
+    name: bioimageio.spec static validation of  RDF  with update to latest format
+      version
+    nested_errors: {}
+    status: failed
+    traceback: null
+    warnings:
+      name: Unrecognized run mode 'deepimagej'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'
+      weights: {keras_hdf5: missing 'tensorflow_version' entry for weights format
+          keras_hdf5}
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.3.6
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings:
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'
+      weights: {keras_hdf5: missing 'tensorflow_version' entry for weights format
+          keras_hdf5}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: 'Test not yet available: rdf contains
       the key run_mode with value deepimagej', name: Initial compatibility checks

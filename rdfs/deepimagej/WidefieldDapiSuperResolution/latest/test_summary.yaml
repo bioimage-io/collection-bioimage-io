@@ -1,5 +1,45 @@
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 0e2650d43589a193642f1bf0bb04d18bb046fa0cf8872f115d136e7b4eba7f6f
+status: failed
 tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.9
+    error:
+      _schema: [Referenced tensor input_images with 3 dimensions does not match output
+          tensor output_images with 4 dimensions.]
+    name: bioimageio.spec static validation of  RDF  with update to latest format
+      version
+    nested_errors: {}
+    status: failed
+    traceback: null
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.3.6
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
+        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
       generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,
