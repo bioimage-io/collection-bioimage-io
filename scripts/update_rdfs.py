@@ -98,8 +98,8 @@ def main(
 
                         # check bioimageio library versions in test summary
                         if test_summary is not None:
-                            last_spec_version = test_summary.get("spec_version")
-                            last_core_version = test_summary.get("core_version")
+                            last_spec_version = test_summary.get("bioimageio_spec_version")
+                            last_core_version = test_summary.get("bioimageio_core_version")
                             if last_spec_version != spec_version or last_core_version != core_version:
                                 limited_reeval["bioimageio"].append(version_id)
 
