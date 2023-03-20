@@ -6,7 +6,7 @@ import warnings
 from hashlib import sha256
 from itertools import product
 from pathlib import Path
-from typing import Any, Dict, Generator, List, Optional, Tuple, Union
+from typing import Any, Dict, Generator, List, Optional, Sequence, Tuple, Union
 
 import numpy
 import requests
@@ -370,3 +370,18 @@ def iterate_known_resource_versions(
                     )
                 else:
                     warnings.warn(f"skipping undeployed r: {known_r.resource_id} v: {v_id}")
+
+
+def load_yaml_dict(path: Path, raise_missing_keys: Sequence[str]) -> Optional[Dict]:
+    if not path.exists():
+        return None
+
+    data = yaml.load(path)
+    if not isinstance(data, dict):
+        raise TypeError(f"Expected {path} to hold a dictionary, but got {type(data)}")
+
+    missing = [k for k in raise_missing_keys if k not in data]
+    if missing:
+        raise KeyError(f"Expected missing keys {missing} in {path}")
+
+    return data

@@ -8,7 +8,7 @@ from bioimageio.spec.shared import yaml
 
 
 def main(artifact_dir: Path = typer.Argument(..., help="folder with validation artifacts")):
-    # check validation summaries in artifact folder
+    """check validation summaries in artifact folder"""
     failed_val = []
     for sp in sorted(artifact_dir.glob(f"**/validation_summary*.yaml"), key=os.path.getmtime):
         summary = yaml.load(sp)

@@ -1,14 +1,16 @@
 import json
 import shutil
+import warnings
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
+from typing import Optional
 
 import typer
 from boltons.iterutils import remap
 
 from bioimageio.spec.shared import yaml
-from utils import iterate_known_resources, rec_sort
+from utils import iterate_known_resources, load_yaml_dict, rec_sort
 
 SUMMARY_FIELDS = [
     "authors",
@@ -35,6 +37,32 @@ SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
     "nickname_icon",
     "owners",
 ]
+
+
+def extend_links_from_test_summary(links: list, test_summary_path: Path) -> None:
+    try:
+        test_summary = load_yaml_dict(test_summary_path, raise_missing_keys=["tests"])
+    except Exception as e:
+        test_summary = None
+        msg = f": {e}"
+    else:
+        msg = ""
+
+    if test_summary is None:
+        warnings.warn(f"Failed to extend links from test summary {test_summary_path}{msg}")
+        return
+
+    # todo: improve condition to link link software application
+    # todo: maybe add link field to test_summary? maybe also link apps to failed tests?
+    # todo: maybe a test (failed or not) can link resource(s)?
+    for app in ["ilastik", "deepimage"]:
+        app_link = f"{app}/{app}"
+        if (
+            app in test_summary["tests"]
+            and all(t.get("status") == "passed" for t in test_summary["tests"][app])
+            and app_link not in links
+        ):
+            links.append(app_link)
 
 
 def main(
@@ -70,17 +98,18 @@ def main(
     n_accepted_versions = {}
     for r in iterate_known_resources(collection=collection, gh_pages=gh_pages):
         latest_version = None
+        version_id: Optional[str] = None
         for version_info in r.info.get("versions", []):
             if version_info["status"] != "accepted":
                 continue
 
             version_id = version_info["version_id"]
-            updated_rdf_source = gh_pages / "rdfs" / r.resource_id / version_id / "rdf.yaml"
-            if not updated_rdf_source.exists():
+            rdf_path = gh_pages / "rdfs" / r.resource_id / version_id / "rdf.yaml"
+            if not rdf_path.exists():
                 print(f"skipping undeployed rdf: {r.resource_id}/{version_id}")
                 continue
 
-            this_version = yaml.load(updated_rdf_source)
+            this_version = yaml.load(rdf_path)
             if this_version is None:
                 print(f"skipping empty rdf: {r.resource_id}/{version_id}")
                 continue
@@ -97,17 +126,24 @@ def main(
 
         if latest_version is None:
             print(f"Ignoring resource {r.resource_id} without any accepted/deployed versions")
-        else:
-            summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
-            for k in latest_version["config"]["bioimageio"]:
-                if k in SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO:
-                    summary[k] = latest_version["config"]["bioimageio"][k]
+            continue
 
-            summary["download_count"] = download_counts.get(r.resource_id, 1)
-            rdf["collection"].append(summary)
-            type_ = latest_version.get("type", "unknown")
-            n_accepted[type_] = n_accepted.get(type_, 0) + 1
-            n_accepted_versions[type_] = n_accepted_versions.get(type_, 0) + 1 + len(latest_version["versions"])
+        assert version_id is not None
+        summary = {k: latest_version[k] for k in latest_version if k in SUMMARY_FIELDS}
+        for k in latest_version["config"]["bioimageio"]:
+            if k in SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO:
+                summary[k] = latest_version["config"]["bioimageio"][k]
+
+        summary["download_count"] = download_counts.get(r.resource_id, 1)
+
+        extend_links_from_test_summary(
+            summary["links"], gh_pages / "rdfs" / r.resource_id / version_id / "test_summary.yaml"
+        )
+
+        rdf["collection"].append(summary)
+        type_ = latest_version.get("type", "unknown")
+        n_accepted[type_] = n_accepted.get(type_, 0) + 1
+        n_accepted_versions[type_] = n_accepted_versions.get(type_, 0) + 1 + len(latest_version["versions"])
 
     print(f"new collection rdf contains {sum(n_accepted.values())} accepted resources.")
     print("accepted resources per type:")
@@ -128,9 +164,10 @@ def main(
     # sort collection
     rdf["collection"].sort(key=lambda c: -c["download_count"])
 
-    rdf_path = dist / "rdf.yaml"
-    rdf_path.parent.mkdir(exist_ok=True)
-    yaml.dump(rec_sort(rdf), rdf_path)
+    # collection.json was previously saved as 'rdf.yaml'. # todo: remove 'rdf.yaml'
+    collection_file_path = dist / "rdf.yaml"
+    collection_file_path.parent.mkdir(exist_ok=True)
+    yaml.dump(rec_sort(rdf), collection_file_path)
 
     def convert_for_json(p, k, v):
         """convert anything not json compatible"""
@@ -145,13 +182,15 @@ def main(
 
         return True
 
-    rdf_path = dist / "collection.json"
+    collection_file_path = dist / "collection.json"
     rdf = remap(rdf, convert_for_json)
-    rdf_path.parent.mkdir(exist_ok=True)
-    with open(rdf_path, "w") as f:
+    collection_file_path.parent.mkdir(exist_ok=True)
+    with open(collection_file_path, "w") as f:
         json.dump(rdf, f, allow_nan=False, indent=2, sort_keys=True)
 
-    shutil.copy(str(rdf_path), str(rdf_path.with_name("rdf.json")))  # deprecated; todo: remove
+    shutil.copy(
+        str(collection_file_path), str(collection_file_path.with_name("rdf.json"))
+    )  # deprecated; todo: 'rdf.json'
 
 
 if __name__ == "__main__":

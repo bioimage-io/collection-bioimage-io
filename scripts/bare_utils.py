@@ -2,7 +2,7 @@
 import hashlib
 import json
 import os
-from typing import Any, Dict, Union
+from typing import Any, Dict, Optional, Sequence, Union
 
 GITHUB_REPOSITORY_OWNER = os.getenv("GITHUB_REPOSITORY_OWNER", "bioimage-io")
 DEPLOYED_BASE_URL = f"https://{GITHUB_REPOSITORY_OWNER}.github.io/collection-bioimage-io"
