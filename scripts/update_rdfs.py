@@ -88,26 +88,27 @@ def main(
                     ]
                     version_has_update = not matching_old_versions or matching_old_versions[0] != v
                     if not version_has_update:
-                        # check bioimageio library versions in test summary
                         if test_summary_path.exists():
                             test_summary: Optional[dict] = yaml.load(test_summary_path)
-                            if test_summary is not None and not isinstance(test_summary, dict):
+                            if not (isinstance(test_summary, dict) and "tests" in test_summary):
                                 warnings.warn(f"Ignoring invalid test summary {test_summary}")
                                 test_summary = None
                         else:
                             test_summary = None
 
-                        if test_summary and "bioimageio" in test_summary:
-                            last_spec_version = test_summary["bioimageio"].get("spec_version")
-                            last_core_version = test_summary["bioimageio"].get("core_version")
+                        # check bioimageio library versions in test summary
+                        if test_summary and "bioimageio" in test_summary["tests"]:
+                            last_spec_version = test_summary["tests"]["bioimageio"].get("spec_version")
+                            last_core_version = test_summary["tests"]["bioimageio"].get("core_version")
                             if last_spec_version != spec_version or last_core_version != core_version:
                                 limited_reeval["bioimageio"].append(version_id)
 
                         # check if partner test is present if it should be
                         for partner_id, partner_val_types in PARTNERS_TEST_TYPES.items():
-                            if not test_summary or partner_id not in test_summary:
-                                if r.info.get("type", "general") in partner_val_types:
-                                    limited_reeval[partner_id].append(version_id)
+                            if (not test_summary or partner_id not in test_summary["tests"]) and r.info.get(
+                                "type", "general"
+                            ) in partner_val_types:
+                                limited_reeval[partner_id].append(version_id)
                 else:
                     version_has_update = True
 
