@@ -1,36 +1,64 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post11
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: b2c494f461a69440bb035265acbb2bfcf5551f6b6c5b16e42cc9629b14ca4bf8
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
-        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
-        ''deepimagej'', ''n2v'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5
+    name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
-        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
-        ''deepimagej'', ''n2v'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
       headless, status: passed}
@@ -60,36 +88,6 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: load resource description
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
     error: null
     name: reproduce test outputs from test inputs
     status: passed
