@@ -18,7 +18,3 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  ilastik:
-  - {error: Missing/invalid weight formats for zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest,
-    name: reproduce test outputs with ilastik <todo version> (draft), reason: error,
-    status: failed}

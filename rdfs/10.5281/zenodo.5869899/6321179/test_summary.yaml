@@ -1,91 +1,68 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.6.post3
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: cbd57a1ff305a5bd770b72df550d74645a847575940426db3cc84e4dec3bf60a
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.6post3
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
-        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
-        ''deepimagej'', ''n2v'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
-  - bioimageio_spec_version: 0.4.6post3
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6
+    name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''framework'': [''tensorflow'', ''pytorch'',
-        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
-        ''deepimagej'', ''n2v'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6post3, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
       headless, status: passed}
   ilastik:
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
-      0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using torchscript weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 197, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
-      0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
-      0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 197, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -111,57 +88,6 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: '{''format_version'': [''Must be one of: 0.4.0, 0.4.1, 0.4.2, 0.4.3, 0.4.4,
-      0.4.5.'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using torchscript weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.5869899/6321179, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.5869899/6321179, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: load resource description
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
     error: null
     name: reproduce test outputs from test inputs
     status: passed

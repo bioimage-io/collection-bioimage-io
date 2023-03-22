@@ -27,12 +27,6 @@ tests:
   - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
       format, name: Initial compatibility checks with DeepImageJ, status: failed}
   ilastik:
-  - {bioimageio_core_version: 0.5.1, bioimageio_spec_version: 0.4.5post3, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b26 using pytorch_state_dict weights,
-    reason: null, status: passed, traceback: null}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post6, error: null,
-    name: reproduce test outputs with ilastik 1.4.0b27 using pytorch_state_dict weights,
-    reason: null, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -63,10 +57,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6334881/6346477, name: reproduce
-      test outputs with ilastik 1.4.0b27, reason: error, status: failed}
-  - {error: Missing/invalid weight formats for 10.5281/zenodo.6334881/6346477, name: reproduce
-      test outputs with ilastik 1.4.0b26, reason: error, status: failed}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null

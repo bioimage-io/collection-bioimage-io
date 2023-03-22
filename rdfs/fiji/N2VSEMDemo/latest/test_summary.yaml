@@ -1,16 +1,15 @@
+bioimageio_core_version: 0.5.8
 bioimageio_spec_version: 0.4.9
-rdf_sha256: 1bcb690d8b87252964af2bede660a4d73dcc0916535fb8b4d6f72882bce19c09
+rdf_sha256: 4618554f6503a6e48e698bec471c1df9ea87b1d600f75522bb6d7351ed42e12f
 status: failed
 tests:
   bioimageio:
   - bioimageio_spec_version: 0.4.9
-    error:
-      _schema: ['Minimal shape [1. 4. 4. 1.] of output denoised is too small for halo
-          [0, 32, 32, 0].']
-    name: bioimageio.spec static validation of  RDF  with update to latest format
-      version
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
+      format version
     nested_errors: {}
-    status: failed
+    status: passed
     traceback: null
     warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
         [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
@@ -36,46 +35,53 @@ tests:
         ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
         ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+    name: All URLs and paths available
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 87, in _test_resource_urls\n    SourceNodeChecker(root_path=rd.root_path).visit(rd)\n",
+      "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 52, in generic_visit\n    self.visit(value)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 38, in visit_URI\n    self._visit_source(node)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: Cannot load file containing pickled data when allow_pickle=False
+    name: reproduce test outputs from test inputs
+    status: failed
+    traceback: ["  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 135, in _test_model_inference\n    inputs = [np.load(str(in_path)) for
+        in_path in model.test_inputs]\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 135, in <listcomp>\n    inputs = [np.load(str(in_path)) for in_path in
+        model.test_inputs]\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/numpy/lib/npyio.py\",
+        line 445, in load\n    raise ValueError(\"Cannot load file containing pickled
+        data \"\n"]
+    warnings: {}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
       :deepimagej', name: Initial compatibility checks with DeepImageJ, status: failed}
   ilastik:
-  - bioimageio_core_version: 0.5.1
-    bioimageio_spec_version: 0.4.5post3
-    error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
-      small for halo [0, 32, 32, 0].'']}'
-    name: reproduce test outputs with ilastik 1.4.0b26 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 41, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 191, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
-  - bioimageio_core_version: 0.5.3post2
-    bioimageio_spec_version: 0.4.5post6
-    error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
-      small for halo [0, 32, 32, 0].'']}'
-    name: reproduce test outputs with ilastik 1.4.0b27 using tensorflow_saved_model_bundle
-      weights
-    reason: error
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 39, in test_model\n    model_rdf, weights_priority_order=None if weight_format
-        is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 47, in load_resource_description\n    raw_rd = load_raw_resource_description(source,
-        update_to_format=\"latest\")\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/io_.py\",
-        line 197, in load_raw_resource_description\n    raw_rd = schema.load(data)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 718, in load\n    data, many=many, partial=partial, unknown=unknown,
-        postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
-        line 900, in _do_load\n    raise exc\n"]
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
