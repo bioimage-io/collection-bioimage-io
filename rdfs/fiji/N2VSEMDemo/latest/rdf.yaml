@@ -44,8 +44,8 @@ inputs:
   shape:
     min:
     - 1
-    - 4
-    - 4
+    - 68
+    - 68
     - 1
     step:
     - 0
@@ -98,6 +98,7 @@ test_outputs:
 - https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/test_output.tif
 timestamp: '2021-06-03T13:34:19.685956'
 type: model
+version: 0.1.1
 weights:
   tensorflow_saved_model_bundle:
     authors:
