@@ -1,0 +1,50 @@
+id: qupath/QuPath
+status: accepted
+type: application
+versions:
+- name: QuPath
+  status: accepted
+  version_id: latest
+  version_name: latest
+  rdf_source:
+    authors:
+    - name: QuPath Team
+    cite:
+    - doi: 10.1038/s41598-017-17204-5
+      text: 'QuPath: Open source software for digital pathology image analysis. Scientific
+        Reports (2017).'
+    config:
+      background_image: static/img/zoo-background.svg
+      default_type: model
+      explore_button_text: Start Exploring
+      icon: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+      id: qupath
+      logo: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+      name: QuPath
+      resource_types:
+      - application
+      - model
+      splash_feature_list:
+      splash_subtitle: QuPath is open-source software for bioimage analysis and digital
+        pathology
+      splash_title: QuPath
+      tags:
+      - qupath
+      url_root: https://github.com/qupath/qupath-bioimage-io
+    covers:
+    - https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+    description: QuPath is open-source software for bioimage analysis and digital
+      pathology
+    documentation: https://qupath.readthedocs.io/
+    format_version: 0.2.3
+    icon: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+    id: qupath/QuPath
+    maintainers:
+    - github_user: None
+      name: QuPath Team
+    name: QuPath
+    source: https://github.com/qupath
+    tags:
+    - qupath
+    - bioimage.io
+    type: application
