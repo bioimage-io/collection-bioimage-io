@@ -136,9 +136,12 @@ def main(
 
         summary["download_count"] = download_counts.get(r.resource_id, 1)
 
+        links = summary.get("links", [])
         extend_links_from_test_summary(
-            summary["links"], gh_pages / "rdfs" / r.resource_id / version_id / "test_summary.yaml"
+           links, gh_pages / "rdfs" / r.resource_id / version_id / "test_summary.yaml"
         )
+        if links:
+            summary["links"] = links
 
         rdf["collection"].append(summary)
         type_ = latest_version.get("type", "unknown")
