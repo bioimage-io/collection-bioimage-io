@@ -48,7 +48,7 @@ collection:
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
-    bioimageio/qupath]
+    bioimageio/qupath, ilastik/ilastik]
   name: StarDist H&E Nuclei Segmentation
   nickname: chatty-frog
   nickname_icon: "\U0001F438"
@@ -85,7 +85,8 @@ collection:
   download_count: 15116
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath,
+    ilastik/ilastik]
   name: StarDist Fluorescence Nuclei Segmentation
   nickname: fearless-crab
   nickname_icon: "\U0001F980"
@@ -107,7 +108,7 @@ collection:
   download_count: 12861
   id: 10.5281/zenodo.6346511
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik]
   name: 3D UNet Arabidopsis Apical Stem Cells
   nickname: emotional-cricket
   nickname_icon: "\U0001F997"
@@ -144,7 +145,7 @@ collection:
   download_count: 9965
   id: 10.5281/zenodo.6384845
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik]
   name: 3D UNet Mouse Embryo Live
   nickname: powerful-fish
   nickname_icon: "\U0001F41F"
@@ -237,7 +238,8 @@ collection:
   download_count: 5259
   id: 10.5281/zenodo.6200635
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej, hpa/hpa-cell-image-segmentation-dataset, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, hpa/hpa-cell-image-segmentation-dataset, imjoy/BioImageIO-Packager,
+    ilastik/ilastik]
   name: HPA Cell Segmentation (DPNUnet)
   nickname: loyal-parrot
   nickname_icon: "\U0001F99C"
@@ -332,7 +334,7 @@ collection:
   download_count: 3637
   id: 10.5281/zenodo.6334383
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik]
   name: 2D UNet Arabidopsis Ovules
   nickname: pioneering-rhino
   nickname_icon: "\U0001F98F"
@@ -451,7 +453,7 @@ collection:
   download_count: 2699
   id: 10.5281/zenodo.6334777
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik]
   name: 3D UNet Lateral Root Primordia Cells
   nickname: thoughtful-turtle
   nickname_icon: "\U0001F422"
@@ -473,7 +475,7 @@ collection:
   download_count: 2516
   id: 10.5281/zenodo.6334583
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik]
   name: 3D UNet Arabidopsis Ovules
   nickname: passionate-t-rex
   nickname_icon: "\U0001F996"
@@ -494,7 +496,7 @@ collection:
   download_count: 2500
   id: 10.5281/zenodo.6334881
   license: MIT
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik]
   name: 2D UNet Arabidopsis Apical Stem Cells
   nickname: laid-back-lobster
   nickname_icon: "\U0001F99E"
@@ -513,7 +515,7 @@ collection:
   download_count: 2436
   id: 10.5281/zenodo.6200999
   license: CC-BY-4.0
-  links: [deepimagej/deepimagej]
+  links: [deepimagej/deepimagej, ilastik/ilastik]
   name: HPA Nucleus Segmentation (DPNUnet)
   nickname: conscientious-seashell
   nickname_icon: "\U0001F41A"

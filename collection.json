@@ -121,7 +121,8 @@
         "imjoy/BioImageIO-Packager",
         "ilastik/tnbc",
         "bioimageio/stardist",
-        "bioimageio/qupath"
+        "bioimageio/qupath",
+        "ilastik/ilastik"
       ],
       "name": "StarDist H&E Nuclei Segmentation",
       "nickname": "chatty-frog",
@@ -212,7 +213,8 @@
         "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager",
         "bioimageio/stardist",
-        "bioimageio/qupath"
+        "bioimageio/qupath",
+        "ilastik/ilastik"
       ],
       "name": "StarDist Fluorescence Nuclei Segmentation",
       "nickname": "fearless-crab",
@@ -262,7 +264,8 @@
       "license": "MIT",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "3D UNet Arabidopsis Apical Stem Cells",
       "nickname": "emotional-cricket",
@@ -354,7 +357,8 @@
       "license": "MIT",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "3D UNet Mouse Embryo Live",
       "nickname": "powerful-fish",
@@ -577,7 +581,8 @@
       "links": [
         "deepimagej/deepimagej",
         "hpa/hpa-cell-image-segmentation-dataset",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "HPA Cell Segmentation (DPNUnet)",
       "nickname": "loyal-parrot",
@@ -805,7 +810,8 @@
       "license": "MIT",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "2D UNet Arabidopsis Ovules",
       "nickname": "pioneering-rhino",
@@ -1113,7 +1119,8 @@
       "license": "MIT",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "3D UNet Lateral Root Primordia Cells",
       "nickname": "thoughtful-turtle",
@@ -1166,7 +1173,8 @@
       "license": "MIT",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "3D UNet Arabidopsis Ovules",
       "nickname": "passionate-t-rex",
@@ -1218,7 +1226,8 @@
       "license": "MIT",
       "links": [
         "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
       ],
       "name": "2D UNet Arabidopsis Apical Stem Cells",
       "nickname": "laid-back-lobster",
@@ -1268,7 +1277,8 @@
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
-        "deepimagej/deepimagej"
+        "deepimagej/deepimagej",
+        "ilastik/ilastik"
       ],
       "name": "HPA Nucleus Segmentation (DPNUnet)",
       "nickname": "conscientious-seashell",
