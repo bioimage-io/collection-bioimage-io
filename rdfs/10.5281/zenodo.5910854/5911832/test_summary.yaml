@@ -1,50 +1,44 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post11
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 25a27751a9effeb76c451c2a6c45873d227818b5d202403a4bc5721db310137d
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
-        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''framework'': [''tensorflow'', ''pytorch'',
-        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
-        ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
-        ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
-        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
-        ''image-reconstruction'', ''in-silico-labeling'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''framework'': [''tensorflow'',
+        ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'',
+        ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'',
+        ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_spec_version: 0.4.5post11
+  - bioimageio_spec_version: 0.4.9
     error: null
     name: bioimageio.spec static validation of model RDF 0.3.6
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
-        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''framework'': [''tensorflow'', ''pytorch'',
-        ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'',
-        ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'', ''resnet'',
-        ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
-        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
-        ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post11, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
-      format, name: Initial compatibility checks with DeepImageJ, status: failed}
-  ilastik:
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''framework'': [''tensorflow'',
+        ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'',
+        ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'',
+        ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
+        ''instance-segmentation'', ''object-detection'', ''image-classification'',
+        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -53,7 +47,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -69,6 +62,27 @@ tests:
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for onnx yet,
+          cannot unload model']
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
+      format, name: Initial compatibility checks with DeepImageJ, status: failed}
+  ilastik:
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: No module named 'onnxruntime'
