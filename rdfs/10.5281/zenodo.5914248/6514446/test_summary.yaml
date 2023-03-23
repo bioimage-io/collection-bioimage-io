@@ -1,28 +1,59 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post13
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: f1964f84c61abedaed1edd9605e7ed90c3b2e7c77f2d4a15929780e9469c6946
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post13
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
         Free/libre.}
-  - bioimageio_spec_version: 0.4.5post13
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5
+    name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
         Free/libre.}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post13, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples.]
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
       generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,
@@ -87,30 +118,7 @@ tests:
         line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\") from e\n"]
     warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: load resource description
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
   - {error: null, name: has expected resource type, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null

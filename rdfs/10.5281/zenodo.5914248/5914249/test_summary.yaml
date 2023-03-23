@@ -1,44 +1,75 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.5.post13
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 7a6002923c5aa5eaf2f61ff2849044a62fee325f4b2f4e3075ad2086ef00d505
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.5post13
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
-        Free/libre., tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''content'':
-        [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'',
-        ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']},
-        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
-        ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
-        ''in-silico-labeling'']}]'}
-  - bioimageio_spec_version: 0.4.5post13
+        Free/libre., tags: 'Missing tags corresponding to bioimage.io categories:
+        [{''modality'': [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''content'': [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'',
+        ''plant'', ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'',
+        ''whole-organism'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
+        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
+        ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.5
+    name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {license: BSD-2-Clause (BSD 2-Clause "Simplified" License) is not FSF
-        Free/libre., tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''content'':
-        [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'',
-        ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']},
-        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
-        ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
-        ''in-silico-labeling'']}]'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.5post13, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
+        Free/libre., tags: 'Missing tags corresponding to bioimage.io categories:
+        [{''modality'': [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''content'': [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'',
+        ''plant'', ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'',
+        ''whole-organism'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
+        ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
+        ''image-reconstruction'', ''in-silico-labeling'']}]'}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples.]
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
       headless, status: passed}
@@ -86,29 +117,6 @@ tests:
     warnings:
       non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
           prediction results may be wrong']
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: load resource description
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: '''str'' object has no attribute ''decode'''
