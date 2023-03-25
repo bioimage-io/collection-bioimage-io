@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-24 17:32:06.610900'
+  doi: 10.5281/zenodo.7768223
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7768223'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/e0b60143-0dc2-49e6-b62c-f2a36cf9afdc/rdf.yaml
 - created: '2023-03-06 11:08:17.979435'
   doi: 10.5281/zenodo.7701492
   name: 3D UNet Arabidopsis Ovules
