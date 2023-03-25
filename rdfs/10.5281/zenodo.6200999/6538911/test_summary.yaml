@@ -1,57 +1,52 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.6.post1
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: 9ca7e23f3500aa7f5b07a71716a8ffd0529dc9d0b3931436dfc486278a36e3ee
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.6post1
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
-        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'', ''nuclei'',
-        ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'', ''vasculature'',
-        ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'': [''tensorflow'',
-        ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'',
-        ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'',
-        ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
-        ''instance-segmentation'', ''object-detection'', ''image-classification'',
-        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}, {''network'':
+        [''unet'', ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'':
+        [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+        ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
+        ''in-silico-labeling'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_spec_version: 0.4.6post1
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6
+    name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
     status: passed
     traceback: null
     warnings:
-      tags: 'Missing tags for categories: [{''modality'': [''electron-microscopy'',
-        ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'', ''transmission-light-microscopy'',
-        ''super-resolution-microscopy'', ''x-ray-microscopy'', ''force-microscopy'',
-        ''high-content-imaging'', ''whole-slide-imaging'', ''other'']}, {''dims'':
-        [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'', ''nuclei'',
-        ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'', ''vasculature'',
-        ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'': [''tensorflow'',
-        ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'', ''imagej'',
-        ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}, {''network'': [''unet'', ''densenet'',
-        ''resnet'', ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'',
-        ''instance-segmentation'', ''object-detection'', ''image-classification'',
-        ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'
+      tags: 'Missing tags corresponding to bioimage.io categories: [{''modality'':
+        [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
+        ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
+        ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
+        {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
+        ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
+        ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}, {''network'':
+        [''unet'', ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}, {''task'':
+        [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+        ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
+        ''in-silico-labeling'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6post1, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
-      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
-      headless, status: failed}
-  ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -60,7 +55,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -85,6 +79,12 @@ tests:
     warnings:
       non-validation-warnings: [Implicit dimension choice for softmax has been deprecated.
           Change the call to include dim=X as an argument.]
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
+      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
+      headless, status: failed}
+  ilastik:
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
