@@ -77,7 +77,7 @@ jobs:
       with:
         name: collection-update
         path: dist
-        retention-days: 1
+        retention-days: 30
     - name: clean up dist
       run: |
         mv dist/download_counts.json tmp_download_counts.json

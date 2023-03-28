@@ -74,7 +74,7 @@ jobs:
       with:
         name: static_validation_artifact
         path: dist/static_validation_artifact
-        retention-days: 1
+        retention-days: 30
     - name: check if validation passed
       if: steps.update_rdfs.outputs.has_pending_matrix_bioimageio == 'yes' && inputs.check_validation == 'yes'
       shell: bash -l {0}
@@ -122,7 +122,7 @@ jobs:
       with:
         name: ${{ steps.artifact_name.outputs.name }}
         path: dist/dynamic_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/${{ matrix.weight_format }}
-        retention-days: 1
+        retention-days: 30
     - name: check if validation passed
       if: inputs.check_validation == 'yes'
       shell: bash -l {0}
