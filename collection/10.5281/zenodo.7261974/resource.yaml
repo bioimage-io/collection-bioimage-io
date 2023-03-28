@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-28 13:40:13.321650'
+  doi: 10.5281/zenodo.7778377
+  name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
+  status: accepted
+  version_id: '7778377'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/e90aabf3-44f9-46c3-b08e-d9044676fe2f/rdf.yaml
 - created: '2023-03-01 15:30:45.717892'
   doi: 10.5281/zenodo.7688940
   name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
