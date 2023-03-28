@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-27 12:14:49.467153'
+  doi: 10.5281/zenodo.7774505
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '7774505'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/6e40209a-1424-441e-a418-6fda06dd1a4b/rdf.yaml
 - created: '2023-03-06 11:42:20.587341'
   doi: 10.5281/zenodo.7701632
   name: 3D UNet Mouse Embryo Fixed
