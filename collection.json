@@ -1111,8 +1111,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/raw.png",
-        "https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/pred.png"
+        "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/raw.png",
+        "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
       "download_count": 2738,
@@ -1129,7 +1129,7 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7701561/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7765026/rdf.yaml",
       "tags": [
         "3d",
         "torchscript",
@@ -1148,6 +1148,7 @@
       ],
       "type": "model",
       "versions": [
+        "7765026",
         "7701561",
         "7696952",
         "6346524",
@@ -5095,7 +5096,7 @@
     "n_resource_versions": {
       "application": 100,
       "dataset": 84,
-      "model": 133,
+      "model": 134,
       "notebook": 4
     },
     "n_resources": {
