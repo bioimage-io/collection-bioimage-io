@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-27 12:11:52.357154'
+  doi: 10.5281/zenodo.7774490
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '7774490'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/rdf.yaml
 - created: '2023-03-06 12:29:05.261248'
   doi: 10.5281/zenodo.7701638
   name: 3D UNet Mouse Embryo Live
