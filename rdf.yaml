@@ -138,8 +138,8 @@ collection:
 - authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
-  covers: ['https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/raw.png',
-    'https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/pred.png']
+  covers: ['https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/raw.png',
+    'https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/pred.png']
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
   download_count: 9999
@@ -150,11 +150,11 @@ collection:
   nickname: powerful-fish
   nickname_icon: "\U0001F41F"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/7701638/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/7774490/rdf.yaml
   tags: [3d, torchscript, ilastik, unet, live, plantseg, mouse-embryo, cell-membrane,
     animal, tissue, light-sheet-microscopy, semantic-segmentation, deepimagej, pytorch]
   type: model
-  versions: ['7701638', '6384846']
+  versions: ['7774490', '7701638', '6384846']
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://zenodo.org/api/files/d2f261ff-8734-4ad0-a84a-6c80c05e5bd3/cover.png']
@@ -192,9 +192,9 @@ collection:
 - authors:
   - {name: V. Bondarenko}
   - {name: A. Wolny}
-  covers: ['https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/raw.png',
-    'https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-boundary.png',
-    'https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-nuclei.png']
+  covers: ['https://zenodo.org/api/files/6e40209a-1424-441e-a418-6fda06dd1a4b/raw.png',
+    'https://zenodo.org/api/files/6e40209a-1424-441e-a418-6fda06dd1a4b/pred-boundary.png',
+    'https://zenodo.org/api/files/6e40209a-1424-441e-a418-6fda06dd1a4b/pred-nuclei.png']
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
   download_count: 8620
@@ -205,11 +205,11 @@ collection:
   nickname: loyal-squid
   nickname_icon: "\U0001F991"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/7701632/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/7774505/rdf.yaml
   tags: [3d, torchscript, ilastik, unet, plantseg, mouse-embryo, fixed, animal, tissue,
     confocal-microscopy, semantic-segmentation, deepimagej, nuclei, pytorch]
   type: model
-  versions: ['7701632', '6383430']
+  versions: ['7774505', '7701632', '6383430']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png']
@@ -2448,7 +2448,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 100, dataset: 84, model: 134, notebook: 4}
+  n_resource_versions: {application: 100, dataset: 84, model: 136, notebook: 4}
   n_resources: {application: 50, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
