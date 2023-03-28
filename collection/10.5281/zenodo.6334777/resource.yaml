@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-23 21:42:30.250688'
+  doi: 10.5281/zenodo.7765026
+  name: 3D UNet Lateral Root Primordia Cells
+  status: accepted
+  version_id: '7765026'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/rdf.yaml
 - created: '2023-03-06 11:36:32.070606'
   doi: 10.5281/zenodo.7701561
   name: 3D UNet Lateral Root Primordia Cells
