@@ -1,30 +1,24 @@
-bioimageio_core_version: 0.5.3.post2
-bioimageio_spec_version: 0.4.6.post1
+bioimageio_core_version: 0.5.8
+bioimageio_spec_version: 0.4.9
 rdf_sha256: a5155ccefaed634f11e17967152e4752c1f2f23655c1622c32c4c9c18f0c0424
-status: passed
+status: failed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.6post1
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6 with update to latest
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_spec_version: 0.4.6post1
+  - bioimageio_spec_version: 0.4.9
     error: null
-    name: bioimageio.spec static validation of model RDF 0.4.6
+    name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
     status: passed
     traceback: null
     warnings: {}
-  - {bioimageio_core_version: 0.5.3post2, bioimageio_spec_version: 0.4.6, error: null,
-    name: reproduced test outputs from test inputs, status: passed, traceback: null}
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
-      headless, status: passed}
-  ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -33,7 +27,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -49,6 +42,59 @@ tests:
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: "Descriptors cannot not be created directly.\nIf this call came from a
+      _pb2.py file, your generated code is out of date and must be regenerated with
+      protoc >= 3.19.0.\nIf you cannot immediately regenerate your protos, some other
+      possible workarounds are:\n 1. Downgrade the protobuf package to 3.20.x or lower.\n
+      2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python
+      parsing and will be much slower).\n\nMore information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates"
+    name: reproduce test outputs from test inputs
+    status: failed
+    traceback: ["  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
+        weight_format=weight_format\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 205, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
+        devices=devices, weight_format=weight_format\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 132, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
+      "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 152, in _get_model_adapter\n    from ._tensorflow_model_adapter import
+        TensorflowModelAdapter\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
+        line 6, in <module>\n    import tensorflow as tf\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow/__init__.py\",
+        line 102, in <module>\n    from tensorflow_core import *\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/__init__.py\",
+        line 28, in <module>\n    from tensorflow.python import pywrap_tensorflow
+        \ # pylint: disable=unused-import\n", '  File "<frozen importlib._bootstrap>",
+        line 1019, in _handle_fromlist
+
+        ', "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow/__init__.py\",
+        line 50, in __getattr__\n    module = self._load()\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow/__init__.py\",
+        line 44, in _load\n    module = _importlib.import_module(self.__name__)\n",
+      "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/importlib/__init__.py\",
+        line 127, in import_module\n    return _bootstrap._gcd_import(name[level:],
+        package, level)\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/python/__init__.py\",
+        line 52, in <module>\n    from tensorflow.core.framework.graph_pb2 import
+        *\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/core/framework/graph_pb2.py\",
+        line 16, in <module>\n    from tensorflow.core.framework import node_def_pb2
+        as tensorflow_dot_core_dot_framework_dot_node__def__pb2\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/core/framework/node_def_pb2.py\",
+        line 16, in <module>\n    from tensorflow.core.framework import attr_value_pb2
+        as tensorflow_dot_core_dot_framework_dot_attr__value__pb2\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/core/framework/attr_value_pb2.py\",
+        line 16, in <module>\n    from tensorflow.core.framework import tensor_pb2
+        as tensorflow_dot_core_dot_framework_dot_tensor__pb2\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/core/framework/tensor_pb2.py\",
+        line 16, in <module>\n    from tensorflow.core.framework import resource_handle_pb2
+        as tensorflow_dot_core_dot_framework_dot_resource__handle__pb2\n", "  File
+        \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/core/framework/resource_handle_pb2.py\",
+        line 16, in <module>\n    from tensorflow.core.framework import tensor_shape_pb2
+        as tensorflow_dot_core_dot_framework_dot_tensor__shape__pb2\n", "  File \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/tensorflow_core/core/framework/tensor_shape_pb2.py\",
+        line 42, in <module>\n    serialized_options=None, file=DESCRIPTOR),\n", "  File
+        \"/home/runner/micromamba-root/envs/6348085/lib/python3.7/site-packages/google/protobuf/descriptor.py\",
+        line 561, in __new__\n    _message.Message._CheckCalledFromGeneratedFile()\n"]
+    warnings: {}
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
+      headless, status: passed}
+  ilastik:
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
