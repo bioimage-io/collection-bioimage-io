@@ -117,8 +117,8 @@ collection:
 - authors:
   - {name: Lorenzo Cerrone}
   - {name: Adrian Wolny}
-  covers: ['https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/raw.png',
-    'https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/pred.png']
+  covers: ['https://zenodo.org/api/files/f0c392e2-4c33-43ec-9a79-57d89a8ffff1/raw.png',
+    'https://zenodo.org/api/files/f0c392e2-4c33-43ec-9a79-57d89a8ffff1/pred.png']
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
@@ -130,11 +130,11 @@ collection:
   nickname: emotional-cricket
   nickname_icon: "\U0001F997"
   owners: [66700]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/7701413/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/7768142/rdf.yaml
   tags: [3d, torchscript, ilastik, unet, plant, plantseg, cell-membrane, stem-cells,
     tissue, semantic-segmentation, arabidopsis, deepimagej, pytorch, fluorescence-light-microscopy]
   type: model
-  versions: ['7701413', '6346512']
+  versions: ['7768142', '7701413', '6346512']
 - authors:
   - {name: A. Wolny}
   - {name: V. Bondarenko}
@@ -252,7 +252,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png']
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 5270
+  download_count: 5275
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -629,7 +629,7 @@ collection:
     of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
     a unique label for each individual bacteria detected in the image one could run
     further watershed segmentation using the label 1 as the seed.
-  download_count: 1846
+  download_count: 1851
   id: 10.5281/zenodo.7261974
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, zero/dataset_u-net_2d_multilabel_deepbacs,
@@ -649,7 +649,7 @@ collection:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth}
   covers: ['https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png']
   description: Prediction enhancer for segmenting cell boundaries in EM images.
-  download_count: 915
+  download_count: 920
   id: 10.5281/zenodo.6808325
   license: CC-BY-4.0
   links: [ilastik/ilastik, deepimagej/deepimagej, ilastik/torch-em-3d-unet-notebook,
@@ -2448,7 +2448,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 100, dataset: 84, model: 132, notebook: 4}
+  n_resource_versions: {application: 100, dataset: 84, model: 133, notebook: 4}
   n_resources: {application: 50, dataset: 42, model: 46, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
