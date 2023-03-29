@@ -7,6 +7,35 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-29 11:10:26.329999'
+  doi: 10.5281/zenodo.7781091
+  name: 3D UNet Arabidopsis Ovules Nuclei
+  status: accepted
+  version_id: '7781091'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/rdf.yaml
+  weights:
+    pytorch_state_dict:
+      architecture: unet.py:UNet3D
+      architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+      kwargs:
+        f_maps:
+          - 32
+          - 64
+          - 128
+          - 256
+        final_sigmoid: true
+        in_channels: 1
+        is_segmentation: true
+        layer_order: gcr
+        num_groups: 8
+        out_channels: 1
+        testing: true
+      sha256: a02824ac1a3ac43122ba6345804664be7d70124ac23b07cd1c488818b61895ef
+      source: confocal_3D_unet_ovules_nuclei_ds1x.pytorch
+    torchscript:
+      source: torchscript_tracing.pt
+      sha256: B3F6E6597DDF5D937F054020E596184612314B2B17A75EFF7FFE942CF652C3E5
 - created: '2023-03-29 09:48:21.596741'
   doi: 10.5281/zenodo.7780840
   name: 3D UNet Arabidopsis Ovules Nuclei
