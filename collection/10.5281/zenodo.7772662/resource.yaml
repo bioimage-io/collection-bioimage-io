@@ -14,6 +14,10 @@ versions:
   version_id: '7781091'
   version_name: version 5
   rdf_source: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/rdf.yaml
+  weights:
+    torchscript:
+      source: torchscript_tracing.pt
+      sha256: B3F6E6597DDF5D937F054020E596184612314B2B17A75EFF7FFE942CF652C3E5
 - created: '2023-03-29 09:48:21.596741'
   doi: 10.5281/zenodo.7780840
   name: 3D UNet Arabidopsis Ovules Nuclei
