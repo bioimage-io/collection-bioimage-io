@@ -808,7 +808,7 @@
         "https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/pred.png"
       ],
       "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
-      "download_count": 3685,
+      "download_count": 3696,
       "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
@@ -1226,7 +1226,7 @@
         "https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/pred.png"
       ],
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 2551,
+      "download_count": 2562,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
