@@ -14,6 +14,10 @@ versions:
   version_id: '7781054'
   version_name: version 7
   rdf_source: https://zenodo.org/api/files/a0e182d8-5f62-4604-9131-60509b76ca26/rdf.yaml
+  weights:
+    torchscript:
+      source: torchscript_tracing.pt
+      sha256: 91D4661A516018FB4EC5DCC060CDCEC2A6AE0CF53FC180B0BA7D0315AFD1B828
 - created: '2023-03-28 20:50:38.359689'
   doi: 10.5281/zenodo.7779424
   name: 2D UNet Arabidopsis Apical Stem Cells
