@@ -14,6 +14,10 @@ versions:
   version_id: '7781030'
   version_name: version 8
   rdf_source: https://zenodo.org/api/files/a2b1460c-40d1-4a0e-a962-9a3421470e67/rdf.yaml
+  weights:
+    torchscript:
+      source: torchscript_tracing.pt
+      sha256: 68622B04F696DEB4922963A7E0F4358BF53C50ECAA7F0D75A2E848DED7578DDA
 - created: '2023-03-27 00:28:36.108806'
   doi: 10.5281/zenodo.7772709
   name: 2D UNet Arabidopsis Ovules
