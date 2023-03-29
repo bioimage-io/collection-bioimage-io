@@ -7,6 +7,20 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-27 11:24:41.621868'
+  doi: 10.5281/zenodo.7774321
+  name: 3D UNet Arabidopsis Ovules Nuclei
+  status: blocked
+  version_id: '7774321'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/a08e26fb-03ce-4305-9a30-647ed8022fdf/rdf.yaml
+- created: '2023-03-26 23:29:53.084211'
+  doi: 10.5281/zenodo.7772668
+  name: 3D UNet Arabidopsis Ovules Nuclei
+  status: blocked
+  version_id: '7772668'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/6dad682b-67d0-498b-bbba-7c94b6bd2eb1/rdf.yaml
 - created: '2023-03-26 23:25:46.668299'
   doi: 10.5281/zenodo.7772663
   name: 3D UNet Arabidopsis Ovules Nuclei
