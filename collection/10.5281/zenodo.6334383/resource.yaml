@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-03-29 10:46:19.177072'
+  doi: 10.5281/zenodo.7781030
+  name: 2D UNet Arabidopsis Ovules
+  status: blocked
+  version_id: '7781030'
+  version_name: version 8
+  rdf_source: https://zenodo.org/api/files/a2b1460c-40d1-4a0e-a962-9a3421470e67/rdf.yaml
 - created: '2023-03-27 00:28:36.108806'
   doi: 10.5281/zenodo.7772709
   name: 2D UNet Arabidopsis Ovules
