@@ -1,0 +1,100 @@
+authors:
+- affiliation: EMBL
+  name: Qin Yu
+- name: Adrian Wolny
+cite:
+- text: Wolny, Cerrone et al. Accurate and Versatile 3D Segmentation of Plant Tissues
+    at Cellular Resolution. eLife 2020.
+  url: https://elifesciences.org/articles/57613
+config:
+  bioimageio:
+    created: '2023-03-29 11:10:26.329999'
+    doi: 10.5281/zenodo.7781091
+    nickname: noisy-fish
+    nickname_icon: 🐟
+    owners:
+    - 66700
+    status: accepted
+    version_id: '7781091'
+    version_name: version 5
+covers:
+- https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/raw.png
+- https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/pmaps.png
+description: Unet trained on confocal images of Arabidopsis Ovules nuclei
+documentation: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/doc.md
+format_version: 0.4.9
+id: 10.5281/zenodo.7772662/7781091
+inputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  shape:
+  - 1
+  - 1
+  - 100
+  - 100
+  - 100
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: wolny
+  name: Adrian Wolny
+name: 3D UNet Arabidopsis Ovules Nuclei
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output0
+  shape:
+  - 1
+  - 1
+  - 100
+  - 100
+  - 100
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7772662/7781091/rdf.yaml
+tags:
+- nuclei-segmentation
+- plantseg
+- unet
+- 3d
+- semantic-segmentation
+- arabidopsis
+- ovules
+- plant
+- confocal-microscopy
+- pytorch
+test_inputs:
+- https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/test-input.npy
+test_outputs:
+- https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/test-output.npy
+timestamp: '2023-03-29T12:44:10.415267'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/unet.py:UNet3D
+    architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
+    kwargs:
+      f_maps:
+      - 32
+      - 64
+      - 128
+      - 256
+      final_sigmoid: true
+      in_channels: 1
+      is_segmentation: true
+      layer_order: gcr
+      num_groups: 8
+      out_channels: 1
+      testing: true
+    sha256: a02824ac1a3ac43122ba6345804664be7d70124ac23b07cd1c488818b61895ef
+    source: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/confocal_3D_unet_ovules_nuclei_ds1x.pytorch
+  torchscript:
+    sha256: B3F6E6597DDF5D937F054020E596184612314B2B17A75EFF7FFE942CF652C3E5
+    source: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/torchscript_tracing.pt

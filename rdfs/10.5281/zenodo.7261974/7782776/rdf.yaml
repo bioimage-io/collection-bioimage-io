@@ -1,0 +1,154 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/training_evaluation.csv
+  - https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/Contours2InstanceSegmentation.ijm
+  - https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/per_sample_scale_range.ijm
+authors:
+- affiliation: Instituto Gulbenkian de Ciência
+  name: Estibaliz Gómez de Mariscal
+cite:
+- doi: 10.1038/s41592-018-0261-2
+  text: Falk et al. Nature Methods 2019
+  url: https://doi.org/10.1038/s41592-018-0261-2
+- doi: 10.1007/978-3-319-24574-4_28
+  text: Ronneberger et al. arXiv in 2015
+  url: https://doi.org/10.1007/978-3-319-24574-4_28
+- doi: 10.1101/2020.03.20.000133
+  text: Lucas von Chamier et al. biorXiv 2020
+  url: https://doi.org/10.1101/2020.03.20.000133
+- doi: 10.1038/s42003-022-03634-z
+  text: Christoph Spahn et al. Communications Biology 2022
+  url: https://doi.org/10.1038/s42003-022-03634-z
+config:
+  bioimageio:
+    created: '2023-03-29 18:14:39.826271'
+    doi: 10.5281/zenodo.7782776
+    nickname: placid-llama
+    nickname_icon: 🦙
+    owners:
+    - 147356
+    status: accepted
+    version_id: '7782776'
+    version_name: version 5
+  deepimagej:
+    allow_tiling: true
+    model_keys:
+    prediction:
+      postprocess:
+      - spec:
+      preprocess:
+      - kwargs: per_sample_scale_range.ijm
+        spec: ij.IJ::runMacroFile
+    pyramidal_model: false
+    test_information:
+      inputs:
+      - name: test_input.npy
+        pixel_size:
+          x: 0.065
+          y: 0.065
+          z: 1
+        size: 512 x 512 x 1 x 1
+      memory_peak:
+      outputs:
+      - name: test_output.npy
+        size: 512 x 512 x 1 x 3
+        type: image
+      runtime:
+covers:
+- https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover_1.png
+- https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png
+description: This trained 2D U-Net model segments the contour, foreground and background
+  of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
+  a unique label for each individual bacteria detected in the image one could run
+  further watershed segmentation using the label 1 as the seed.
+documentation: https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/README.md
+format_version: 0.4.9
+id: 10.5281/zenodo.7261974/7782776
+inputs:
+- axes: bxyc
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: uint8
+  name: input_1
+  preprocessing:
+  - kwargs:
+      axes: xyc
+      max_percentile: 99.8
+      min_percentile: 1
+      mode: per_sample
+    name: scale_range
+  shape:
+  - 1
+  - 512
+  - 512
+  - 1
+license: MIT
+links:
+- deepimagej/deepimagej
+- imjoy/BioImageIO-Packager
+- zero/dataset_u-net_2d_multilabel_deepbacs
+- ilastik/ilastik
+- zero/notebook_u-net_2d_multilabel_zerocostdl4mic
+- imjoy/BioImageIO-Packager
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: esgomezm
+  name: Estibaliz Gómez de Mariscal
+name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
+outputs:
+- axes: bxyc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: conv2d_19
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input_1
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 3.0
+rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7782776/rdf.yaml
+sample_inputs:
+- https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/sample_input_0.tif
+sample_outputs:
+- https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/sample_output_0.tif
+tags:
+- zerocostdl4mic
+- deepimagej
+- segmentation
+- unet
+- semantic-segmentation
+- cells
+- fluorescence-light-microscopy
+- bacillus-subtilis
+- deepbacs
+- 2d
+- tensorflow
+- microbiology
+- bacteria
+test_inputs:
+- https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/test_output.npy
+timestamp: '2023-03-30T17:55:31.503717'
+training_data:
+  id: zero/dataset_u-net_2d_multilabel_deepbacs
+type: model
+version: 0.1.0
+weights:
+  keras_hdf5:
+    sha256: 3b351ad5af1dab75c16993f9da06ce15d84b38435b2ce6f6a799c7d5fde3b80d
+    source: https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/keras_weights.hdf5
+    tensorflow_version: 2.11.0
+  tensorflow_saved_model_bundle:
+    sha256: 4780c1df39c35db679237acedc964dc58032474495042539a16941e8cb333d17
+    source: https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/tf_weights.zip
+    tensorflow_version: 2.11.0
