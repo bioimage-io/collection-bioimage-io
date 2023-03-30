@@ -100,7 +100,9 @@ def main(
                         if test_summary is not None:
                             last_spec_version = test_summary.get("bioimageio_spec_version")
                             last_core_version = test_summary.get("bioimageio_core_version")
-                            if last_spec_version != spec_version or last_core_version != core_version:
+                            if last_spec_version != spec_version or (
+                                last_core_version is not None and last_core_version != core_version
+                            ):
                                 limited_reeval["bioimageio"].append(version_id)
 
                         # check if partner test is present if it should be
