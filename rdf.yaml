@@ -623,8 +623,8 @@ collection:
   versions: ['7315441']
 - authors:
   - {affiliation: Instituto Gulbenkian de Ciência, name: Estibaliz Gómez de Mariscal}
-  covers: ['https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover_1.png',
-    'https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover.png']
+  covers: ['https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover_1.png',
+    'https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png']
   description: This trained 2D U-Net model segments the contour, foreground and background
     of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
     a unique label for each individual bacteria detected in the image one could run
@@ -633,18 +633,19 @@ collection:
   id: 10.5281/zenodo.7261974
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, zero/dataset_u-net_2d_multilabel_deepbacs,
-    ilastik/ilastik, zero/notebook_u-net_2d_multilabel_zerocostdl4mic]
+    ilastik/ilastik, zero/notebook_u-net_2d_multilabel_zerocostdl4mic, imjoy/BioImageIO-Packager,
+    imjoy/BioImageIO-Packager]
   name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
   nickname: placid-llama
   nickname_icon: "\U0001F999"
   owners: [147356]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7688940/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7782776/rdf.yaml
   tags: [zerocostdl4mic, deepimagej, segmentation, unet, semantic-segmentation, cells,
     fluorescence-light-microscopy, bacillus-subtilis, deepbacs, 2d, tensorflow, microbiology,
     bacteria]
   training_data: {id: zero/dataset_u-net_2d_multilabel_deepbacs}
   type: model
-  versions: ['7688940', '7546703', '7261975']
+  versions: ['7782776', '7778377', '7688940', '7546703', '7261975']
 - authors:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth}
   covers: ['https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png']
@@ -734,6 +735,25 @@ collection:
   training_data: {id: 10.5281/zenodo.7612115}
   type: model
   versions: ['7642674']
+- authors:
+  - {affiliation: EMBL, name: Qin Yu}
+  - {name: Adrian Wolny}
+  covers: ['https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/raw.png',
+    'https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/pmaps.png']
+  description: Unet trained on confocal images of Arabidopsis Ovules nuclei
+  download_count: 61
+  id: 10.5281/zenodo.7772662
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: 3D UNet Arabidopsis Ovules Nuclei
+  nickname: noisy-fish
+  nickname_icon: "\U0001F41F"
+  owners: [66700]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7772662/7781091/rdf.yaml
+  tags: [nuclei-segmentation, plantseg, unet, 3d, semantic-segmentation, arabidopsis,
+    ovules, plant, confocal-microscopy, pytorch]
+  type: model
+  versions: ['7781091']
 - authors:
   - {github_user: petebankhead, name: Pete Bankhead}
   covers: ['https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png']
@@ -2448,8 +2468,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 100, dataset: 84, model: 136, notebook: 4}
-  n_resources: {application: 50, dataset: 42, model: 46, notebook: 2}
+  n_resource_versions: {application: 100, dataset: 84, model: 140, notebook: 4}
+  n_resources: {application: 50, dataset: 42, model: 47, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
