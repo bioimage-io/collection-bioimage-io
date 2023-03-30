@@ -2464,12 +2464,54 @@ collection:
   tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
   type: application
   versions: [latest]
+- authors:
+  - {name: 'Ivan Hidalgo, Estibaliz Gómez de Mariscal, Ignacio Arganda-Carreras and
+      the ZeroCostDL4Mic Team'}
+  badges:
+  - {icon: 'https://colab.research.google.com/assets/colab-badge.svg', label: Open
+      in Colab, url: 'https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/WGAN_ZeroCostDL4Mic.ipynb'}
+  covers: ['https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/WGAN_notebook.png']
+  description: Super-resolution via super-pixelisation. Wasserstein GAN (DFCAN) is
+    a network created to transform low-resolution (LR) images to super-resolved (SR)
+    images, published by Gulrajani I. et al. arXiv 2017. The training is done using
+    LR-SR image pairs, taking the LR images as input and obtaining an output as close
+    to SR as posible.
+  download_count: 1
+  download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/WGAN_ZeroCostDL4Mic.ipynb
+  id: zero/WGAN_ZeroCostDL4Mic.ipynb
+  links: [zero/Notebook Preview]
+  name: WGAN - ZeroCostDL4Mic
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/WGAN_ZeroCostDL4Mic.ipynb/latest/rdf.yaml
+  tags: [colab, notebook, WGAN, Super Resolution, ZeroCostDL4Mic]
+  type: application
+  versions: [latest]
+- authors:
+  - {affiliation: Instituto Gulbenkian de Ciência, name: Iván Hidalgo}
+  - {affiliation: Instituto Gulbenkian de Ciência, name: Estibaliz Gómez de Mariscal}
+  - {affiliation: UPV/EHU, name: Ignacio Arganda}
+  covers: ['https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/cover.png']
+  description: Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning
+    microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with
+    MitoTracker and the model was trained to upsample the images by a factor of 4.
+  download_count: 0
+  id: 10.5281/zenodo.7786492
+  license: MIT
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager]
+  name: Mitochondria resolution enhancement Wasserstein GAN
+  nickname: organized-cricket
+  nickname_icon: "\U0001F997"
+  owners: [271523]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7786492/7786493/rdf.yaml
+  tags: [zerocostdl4mic, deepimagej, super-resolution, wgan, confocal, mitochondria,
+    mitotracker, fluorescence, upsampling]
+  type: model
+  versions: ['7786493']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 100, dataset: 84, model: 140, notebook: 4}
-  n_resources: {application: 50, dataset: 42, model: 47, notebook: 2}
+  n_resource_versions: {application: 102, dataset: 84, model: 142, notebook: 4}
+  n_resources: {application: 51, dataset: 42, model: 48, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
