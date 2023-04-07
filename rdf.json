@@ -353,7 +353,7 @@
         "https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 10083,
+      "download_count": 10092,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -619,7 +619,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5356,
+      "download_count": 5366,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -1215,22 +1215,23 @@
     {
       "authors": [
         {
-          "name": "Lorenzo Cerrone"
+          "affiliation": "EMBL",
+          "name": "Adrian Wolny"
         },
         {
-          "name": "Adrian Wolny"
+          "affiliation": "Heidelberg University",
+          "name": "Lorenzo Cerrone"
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/raw.png",
-        "https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/pred.png"
+        "https://zenodo.org/api/files/045f2183-0b8c-444a-bdd4-02c5a9a40ad0/raw.png",
+        "https://zenodo.org/api/files/045f2183-0b8c-444a-bdd4-02c5a9a40ad0/pred.png"
       ],
-      "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25, 0.25, 0.25]",
+      "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells",
       "download_count": 2629,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
-        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager",
         "ilastik/ilastik"
       ],
@@ -1240,25 +1241,21 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/7701241/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/7805026/rdf.yaml",
       "tags": [
-        "torchscript",
-        "ilastik",
-        "unet",
-        "plant",
+        "cell-segmentation",
         "plantseg",
-        "cell-membrane",
-        "stem-cells",
-        "tissue",
+        "unet",
+        "2d",
         "semantic-segmentation",
         "arabidopsis",
-        "deepimagej",
-        "pytorch",
-        "2d",
-        "fluorescence-light-microscopy"
+        "plant",
+        "confocal-microscopy",
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "7805026",
         "7701241",
         "7696907",
         "6346477",
@@ -1557,7 +1554,7 @@
         "https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 1934,
+      "download_count": 1944,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1698,7 +1695,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 595,
+      "download_count": 605,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -5233,7 +5230,7 @@
     "n_resource_versions": {
       "application": 102,
       "dataset": 84,
-      "model": 142,
+      "model": 143,
       "notebook": 4
     },
     "n_resources": {
