@@ -864,22 +864,19 @@
     {
       "authors": [
         {
-          "name": "Lorenzo Cerrone"
-        },
-        {
+          "affiliation": "EMBL",
           "name": "Adrian Wolny"
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/raw.png",
-        "https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/pred.png"
+        "https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/raw.png",
+        "https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/pred.png"
       ],
-      "description": "A 2D U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Trained on z-slices of 3D confocal images.",
+      "description": "2D Unet trained on confocal images of Arabidopsis Ovules",
       "download_count": 3763,
       "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
-        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager",
         "ilastik/ilastik"
       ],
@@ -889,25 +886,22 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/7701262/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/7805067/rdf.yaml",
       "tags": [
-        "torchscript",
-        "ilastik",
-        "unet",
-        "plant",
+        "cell-segmentation",
         "plantseg",
-        "cell-membrane",
-        "ovules",
-        "tissue",
+        "unet",
+        "2d",
         "semantic-segmentation",
         "arabidopsis",
-        "deepimagej",
-        "pytorch",
-        "2d",
-        "fluorescence-light-microscopy"
+        "ovules",
+        "plant",
+        "confocal-microscopy",
+        "pytorch"
       ],
       "type": "model",
       "versions": [
+        "7805067",
         "7701262",
         "7697068",
         "6346500",
@@ -1160,23 +1154,24 @@
     {
       "authors": [
         {
+          "affiliation": "EMBL",
           "name": "Adrian Wolny"
         },
         {
+          "affiliation": "Heidelberg University",
           "name": "Lorenzo Cerrone"
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/e0b60143-0dc2-49e6-b62c-f2a36cf9afdc/ilastik_raw.png",
-        "https://zenodo.org/api/files/e0b60143-0dc2-49e6-b62c-f2a36cf9afdc/ilastik_sneak.png",
-        "https://zenodo.org/api/files/e0b60143-0dc2-49e6-b62c-f2a36cf9afdc/ilastik_pred.png"
+        "https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_raw.png",
+        "https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_sneak.png",
+        "https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
       "download_count": 2645,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
-        "deepimagej/deepimagej",
         "imjoy/BioImageIO-Packager",
         "ilastik/ilastik"
       ],
@@ -1186,7 +1181,7 @@
       "owners": [
         66700
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/7768223/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/7805434/rdf.yaml",
       "tags": [
         "3d",
         "torchscript",
@@ -1205,6 +1200,7 @@
       ],
       "type": "model",
       "versions": [
+        "7805434",
         "7768223",
         "7701492",
         "7696919",
@@ -5230,7 +5226,7 @@
     "n_resource_versions": {
       "application": 102,
       "dataset": 84,
-      "model": 143,
+      "model": 145,
       "notebook": 4
     },
     "n_resources": {
