@@ -64,7 +64,6 @@ forceful
 frank
 friendly
 frisky
-frisky
 funny
 generous
 gentle
@@ -93,6 +92,7 @@ inventive
 jolly
 joyful
 kind
+knowledgeable
 kooky
 laid-back
 law-abiding
