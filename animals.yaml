@@ -1,102 +1,102 @@
-monkey: 🐒
-gorilla: 🦍
-orangutan: 🦧
-dog: 🐕
-poodle: 🐩
-wolf: 🐺
-fox: 🦊
-raccoon: 🦝
-cat: 🐈
-lion: 🦁
-tiger: 🐅
-leopard: 🐆
-horse: 🐎
-zebra: 🦓
-deer: 🦌
-ox: 🐂
-water-buffalo: 🐃  # water buffalo
-cow: 🐄
-pig: 🐖
-boar: 🐗
-sheep: 🐑
-goat: 🐐
-dromedary: 🐪
-camel: 🐫
-llama: 🦙
-elephant: 🐘
-rhino: 🦏  # rhinoceros
-hippo: 🦛  # hippopotamus
-mouse: 🐁
-rat: 🐀
-hamster: 🐹
-rabbit: 🐇
-chipmunk: 🐿
-hedgehog: 🦔
+angelfish: 🐠    # tropical fish
+ant: 🐜
+badger: 🦡
 bat: 🦇
 bear: 🐻
-koala: 🐨
-panda: 🐼
-sloth: 🦥
-otter: 🦦
-skunk: 🦨
-kangaroo: 🦘
-badger: 🦡
-turkey: 🦃
-chicken: 🐔
-rooster: 🐓
-chick: 🐤  # baby chick
-penguin: 🐧
-dove: 🕊
-eagle: 🦅
-duck: 🦆
-swan: 🦢
-owl: 🦉
-flamingo: 🦩
-peacock: 🦚
-parrot: 🦜
-frog: 🐸
-crocodile: 🐊
-turtle: 🐢
-lizard: 🦎
-snake: 🐍
-sauropod: 🦕
-t-rex: 🦖
-whale: 🐳  # spouting whale
-dolphin: 🐬
-fish: 🐟
-angelfish: 🐠    # tropical fish
+bird: 🐦
 blowfish: 🐡
-shark: 🦈
-octopus: 🐙
-seashell: 🐚  # spiral shell
-snail: 🐌
-butterfly: 🦋
+boar: 🐗
 bug: 🐛
-ant: 🐜
-honeybee: 🐝
-lady beetle: 🐞
-cricket: 🦗
-spider: 🕷
-scorpion: 🦂
-mosquito: 🦟
-microbe: 🦠
+butterfly: 🦋
+camel: 🐫
+cat: 🐈
+chick: 🐤  # baby chick
+chicken: 🐔
+chipmunk: 🐿
+cow: 🐄
 crab: 🦀
+cricket: 🦗
+crocodile: 🐊
+deer: 🦌
+dog: 🐕
+dolphin: 🐬
+dove: 🕊
+dromedary: 🐪
+duck: 🦆
+eagle: 🦅
+elephant: 🐘
+fish: 🐟
+flamingo: 🦩
+fox: 🦊
+frog: 🐸
+goat: 🐐
+gorilla: 🦍
+hamster: 🐹
+hedgehog: 🦔
+hippo: 🦛  # hippopotamus
+honeybee: 🐝
+horse: 🐎
+kangaroo: 🦘
+koala: 🐨
+lady beetle: 🐞
+leopard: 🐆
+lion: 🦁
+lizard: 🦎
+llama: 🦙
 lobster: 🦞
+microbe: 🦠
+monkey: 🐒
+mosquito: 🦟
+mouse: 🐁
+octopus: 🐙
+orangutan: 🦧
+otter: 🦦
+owl: 🦉
+ox: 🐂
+panda: 🐼
+parrot: 🦜
+peacock: 🦚
+penguin: 🐧
+pig: 🐖
+poodle: 🐩
+rabbit: 🐇
+raccoon: 🦝
+rat: 🐀
+rhino: 🦏  # rhinoceros
+rooster: 🐓
+sauropod: 🦕
+scorpion: 🦂
+seashell: 🐚  # spiral shell
+shark: 🦈
+sheep: 🐑
 shrimp: 🦐
+skunk: 🦨
+sloth: 🦥
+snail: 🐌
+snake: 🐍
+spider: 🕷
 squid: 🦑
+swan: 🦢
+t-rex: 🦖
+tiger: 🐅
+turkey: 🦃
+turtle: 🐢
+water-buffalo: 🐃  # water buffalo
+whale: 🐳  # spouting whale
+wolf: 🐺
+zebra: 🦓
 
-# not so catchy/close duplicates
-# bird: 🐦   # too general?!
-# ram: 🐏
-# ewe: 🐑
+# close duplicates
+# ram: 🐏  # already have sheep
+# ewe: 🐑  # already have sheep
 # whale:🐋  # we use spouting whale as whale
-# hatching chick: 🐣
-# front-facing baby chick: 🐥
+# hatching chick: 🐣  # already have chick
+# front-facing baby chick: 🐥  # already have chick
 
 # reserved for bioimageio
 # giraffe: 🦒
 
-# too new? not available on all common systems
+# too new. not available on all common systems
 # black cat: 🐈‍⬛
 # bison: 🦬
 # mammoth: 🦣
