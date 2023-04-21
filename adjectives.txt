@@ -71,7 +71,6 @@ greedy
 gregarious
 handsome
 happy
-hard-working
 hardworking
 helpful
 heroic
