@@ -15,9 +15,11 @@ config:
     version_name: latest
   default_type: application
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  icon: 
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   id: zero
-  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  logo: 
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   name: ZeroCostDL4Mic
   resource_types:
   - model
@@ -41,7 +43,8 @@ format_version: 0.2.3
 id: zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest
 maintainers: []
 name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_U-Net_2D_multilabel_DeepBacs/latest/rdf.yaml
 tags:
 - U-Net
 - multilabel

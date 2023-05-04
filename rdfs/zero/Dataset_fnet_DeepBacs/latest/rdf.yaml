@@ -15,9 +15,11 @@ config:
     version_name: latest
   default_type: application
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  icon: 
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   id: zero
-  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  logo: 
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   name: ZeroCostDL4Mic
   resource_types:
   - model
@@ -42,7 +44,8 @@ format_version: 0.2.3
 id: zero/Dataset_fnet_DeepBacs/latest
 maintainers: []
 name: Artificial labeling of E. coli membranes dataset - DeepBacs
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Dataset_fnet_DeepBacs/latest/rdf.yaml
 tags:
 - fnet
 - CARE

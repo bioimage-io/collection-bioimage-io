@@ -3,7 +3,8 @@ authors:
 badges:
 - icon: https://colab.research.google.com/assets/colab-badge.svg
   label: Open in Colab
-  url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
+  url: 
+    https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
 cite:
 - doi: https://doi.org/10.1038/s41467-021-22518-0
   text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -19,9 +20,11 @@ config:
     version_name: latest
   default_type: application
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  icon: 
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   id: zero
-  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  logo: 
+    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   name: ZeroCostDL4Mic
   resource_types:
   - model
@@ -44,8 +47,10 @@ description: Paired image-to-image translation of 2D images. pix2pix is a deep-l
   that it can be used to predict a fluorescent image from another fluorescent image.
   Note - visit the ZeroCostDL4Mic wiki to check the original publications this network
   is based on and make sure you cite these.
-documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
+documentation: 
+  https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+download_url: 
+  https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
 format_version: 0.2.3
 git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
 id: zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest
@@ -54,7 +59,8 @@ links:
 - zero/Dataset_pix2pix_ZeroCostDL4Mic
 maintainers: []
 name: pix2pix (2D) - ZeroCostDL4Mic
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/zero/Notebook_pix2pix_2D_ZeroCostDL4Mic/latest/rdf.yaml
 tags:
 - colab
 - notebook

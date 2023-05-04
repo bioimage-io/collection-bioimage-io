@@ -17,9 +17,11 @@ versions:
       background_image: static/img/zoo-background.svg
       default_type: application
       explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      icon: 
+        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
       id: zero
-      logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+      logo: 
+        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
       name: ZeroCostDL4Mic
       resource_types:
       - model
@@ -37,11 +39,13 @@ versions:
     description: Previewing Jupyter notebook without a Jupyter server
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     format_version: 0.2.3
-    icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
+    icon: 
+      https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/preview-icon-small.png
     id: zero/Notebook Preview
     maintainers: []
     name: Notebook Preview
-    source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
+    source: 
+      https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
     tags:
     - imjoy
     - notebook
