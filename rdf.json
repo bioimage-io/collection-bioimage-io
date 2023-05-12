@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 22401,
+      "download_count": 22479,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -206,7 +206,7 @@
         "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 18121,
+      "download_count": 18192,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -301,7 +301,7 @@
         "https://zenodo.org/api/files/f0c392e2-4c33-43ec-9a79-57d89a8ffff1/pred.png"
       ],
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 13105,
+      "download_count": 13108,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -353,7 +353,7 @@
         "https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 10205,
+      "download_count": 10207,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -484,7 +484,7 @@
         "https://zenodo.org/api/files/6e40209a-1424-441e-a418-6fda06dd1a4b/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 8828,
+      "download_count": 8831,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -619,7 +619,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5475,
+      "download_count": 5478,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -656,49 +656,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL Heidelberg",
-          "name": "Constantin Pape"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png"
-      ],
-      "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 4861,
-      "id": "10.5281/zenodo.5764892",
-      "license": "CC-BY-4.0",
-      "links": [
-        "ilastik/stardist_dsb_training_data",
-        "ilastik/ilastik",
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "NucleiSegmentationBoundaryModel",
-      "nickname": "affable-shark",
-      "nickname_icon": "\ud83e\udd88",
-      "owners": [
-        77626
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6647674/rdf.yaml",
-      "tags": [
-        "fluorescence-light-microscopy",
-        "nuclei",
-        "instance-segmentation",
-        "unet",
-        "2d"
-      ],
-      "training_data": {
-        "id": "ilastik/stradist_dsb_training_data"
-      },
-      "type": "model",
-      "versions": [
-        "6647674",
-        "6322939"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "Universidad Carlos III de Madrid",
           "name": "Estibaliz G\u00f3mez-de-Mariscal"
         },
@@ -727,7 +684,7 @@
         "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 4818,
+      "download_count": 4865,
       "download_url": "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -771,10 +728,53 @@
         }
       ],
       "covers": [
+        "https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png"
+      ],
+      "description": "Nucleus segmentation for fluorescence microscopy",
+      "download_count": 4864,
+      "id": "10.5281/zenodo.5764892",
+      "license": "CC-BY-4.0",
+      "links": [
+        "ilastik/stardist_dsb_training_data",
+        "ilastik/ilastik",
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "NucleiSegmentationBoundaryModel",
+      "nickname": "affable-shark",
+      "nickname_icon": "\ud83e\udd88",
+      "owners": [
+        77626
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6647674/rdf.yaml",
+      "tags": [
+        "fluorescence-light-microscopy",
+        "nuclei",
+        "instance-segmentation",
+        "unet",
+        "2d"
+      ],
+      "training_data": {
+        "id": "ilastik/stradist_dsb_training_data"
+      },
+      "type": "model",
+      "versions": [
+        "6647674",
+        "6322939"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Constantin Pape"
+        }
+      ],
+      "covers": [
         "https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 4457,
+      "download_count": 4460,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -1111,7 +1111,7 @@
         "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 2941,
+      "download_count": 2944,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
@@ -1282,7 +1282,7 @@
         "https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 2758,
+      "download_count": 2761,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1550,7 +1550,7 @@
         "https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 2053,
+      "download_count": 2056,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1651,7 +1651,7 @@
         "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png"
       ],
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 1083,
+      "download_count": 1086,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
@@ -1725,7 +1725,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 714,
+      "download_count": 717,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
