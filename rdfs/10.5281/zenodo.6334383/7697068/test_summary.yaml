@@ -62,15 +62,6 @@ tests:
   - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
       format, name: Initial compatibility checks with DeepImageJ, status: failed}
   ilastik:
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -78,6 +69,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -97,6 +89,14 @@ tests:
     bioimageio_spec_version: 0.4.8
     error: null
     name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
     status: passed
     traceback: null
     warnings: {}
