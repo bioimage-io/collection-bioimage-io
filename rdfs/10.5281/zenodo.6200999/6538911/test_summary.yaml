@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 9ca7e23f3500aa7f5b07a71716a8ffd0529dc9d0b3931436dfc486278a36e3ee
 status: passed
@@ -47,6 +47,43 @@ tests:
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'
       weights: {torchscript: missing 'pytorch_version'}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: [Implicit dimension choice for softmax has been deprecated.
+          Change the call to include dim=X as an argument.]
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
+      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
+      headless, status: failed}
+  ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -55,6 +92,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -79,12 +117,6 @@ tests:
     warnings:
       non-validation-warnings: [Implicit dimension choice for softmax has been deprecated.
           Change the call to include dim=X as an argument.]
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
-      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
-      headless, status: failed}
-  ilastik:
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null

@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 3b605dc00ce9bbcbf204c9c246d2e174b41d0a74ee27a6b2878f15cdd21a7821
 status: passed
@@ -47,7 +47,7 @@ tests:
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version'}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
@@ -55,7 +55,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: All URLs and paths available
@@ -63,17 +63,17 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
-    name: reproduce test outputs from test inputs
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
     traceback: null
     warnings: {}
@@ -106,6 +106,36 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: reproduce test outputs from test inputs
     status: passed

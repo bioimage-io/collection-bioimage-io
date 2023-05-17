@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 7a6002923c5aa5eaf2f61ff2849044a62fee325f4b2f4e3075ad2086ef00d505
 status: passed
@@ -37,7 +37,7 @@ tests:
         ''whole-organism'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
         ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
         ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
@@ -45,7 +45,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: All URLs and paths available
@@ -53,23 +53,23 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
-    name: reproduce test outputs from test inputs
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
     traceback: null
     warnings:
-      non-validation-warnings: ['Device management is not implemented for keras yet,
-          cannot unload model', Computed dataset percentiles naively by averaging
-          percentiles of samples.]
+      non-validation-warnings: [Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Device management is not implemented for keras
+          yet, cannot unload model']
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
       headless, status: passed}
@@ -128,6 +128,29 @@ tests:
           prediction results may be wrong', 'Device management is not implemented
           for keras yet, cannot unload model', Computed dataset percentiles naively
           by averaging percentiles of samples.]
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: '''str'' object has no attribute ''decode'''

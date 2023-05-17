@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 8cb24ed7098ff940050627223cdfcc1ebdef0e2c71d81673f420c6a22a886915
 status: passed
@@ -45,7 +45,7 @@ tests:
         [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
@@ -53,7 +53,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: All URLs and paths available
@@ -61,17 +61,17 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
-    name: reproduce test outputs from test inputs
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
     traceback: null
     warnings:
@@ -120,6 +120,29 @@ tests:
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
     warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: No module named 'onnxruntime'

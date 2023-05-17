@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 225c30f1cf5c2c7d141702946592a6e109e556e1ef20b172ae72a9d909b472a0
 status: failed
@@ -35,42 +35,43 @@ tests:
         ''inception'', ''shufflenet'']}, {''task'': [''semantic-segmentation'', ''instance-segmentation'',
         ''object-detection'', ''image-classification'', ''denoising'', ''image-restoration'',
         ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
-    error: null
+    error: 'Failed to download https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/cover.png
+      (500 Server Error: INTERNAL SERVER ERROR for url: https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/cover.png)'
     name: load resource description
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7786492/7786493/rdf.yaml
-    name: All URLs and paths available
     nested_errors: null
     status: failed
     traceback: ["  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/core/resource_tests.py\",
-        line 87, in _test_resource_urls\n    SourceNodeChecker(root_path=rd.root_path).visit(rd)\n",
+        line 201, in _test_load_resource\n    rd: Optional[ResourceDescription] =
+        load_resource_description(\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
+        nodes_module=nodes)\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 121, in resolve_raw_node\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
+        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
+        \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
       "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 52, in generic_visit\n    self.visit(value)\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 38, in visit_URI\n    self._visit_source(node)\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 62, in transform_list\n    return [self.transform(subnode, **kwargs)
+        for subnode in node]\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 62, in <listcomp>\n    return [self.transform(subnode, **kwargs) for
+        subnode in node]\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 339, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root)\n",
+      "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/functools.py\",
+        line 889, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
+      "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 253, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
+        output, pbar=pbar)\n", "  File \"/home/runner/micromamba-root/envs/7786493/lib/python3.10/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
+        ({e})\") from e\n"]
     warnings: {}
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless

@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 4618554f6503a6e48e698bec471c1df9ea87b1d600f75522bb6d7351ed42e12f
 status: failed
@@ -35,7 +35,7 @@ tests:
         ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
         ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
@@ -43,7 +43,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
     name: All URLs and paths available
@@ -58,17 +58,17 @@ tests:
         line 38, in visit_URI\n    self._visit_source(node)\n", "  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
         line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: Cannot load file containing pickled data when allow_pickle=False
-    name: reproduce test outputs from test inputs
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: failed
     traceback: ["  File \"/home/runner/micromamba-root/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
         line 135, in _test_model_inference\n    inputs = [np.load(str(in_path)) for

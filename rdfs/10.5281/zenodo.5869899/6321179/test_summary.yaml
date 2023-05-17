@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: cbd57a1ff305a5bd770b72df550d74645a847575940426db3cc84e4dec3bf60a
 status: passed
@@ -29,6 +29,40 @@ tests:
         ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings: {}
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
+      headless, status: passed}
+  ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -37,6 +71,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -59,11 +94,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
-      headless, status: passed}
-  ilastik:
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null

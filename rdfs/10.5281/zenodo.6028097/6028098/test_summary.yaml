@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 3293496af050ec118874491737c7a21867a70cce5fa0b64971560d763791f68c
 status: passed
@@ -31,6 +31,55 @@ tests:
         ''deepimagej'', ''n2v'']}]'
       weights: {pytorch_state_dict: missing 'pytorch_version', torchscript: missing
           'pytorch_version'}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
+          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
+          function NOT ''floor''). This results in incorrect rounding for negative
+          values.
+
+          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
+          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
+          (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811723911/work/aten/src/ATen/native/BinaryOps.cpp:601.)']
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
+      headless, status: passed}
+  ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -39,6 +88,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -61,26 +111,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
-          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
-          function NOT ''floor''). This results in incorrect rounding for negative
-          values.
-
-          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
-          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
-          (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811723911/work/aten/src/ATen/native/BinaryOps.cpp:601.)']
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
-      headless, status: passed}
-  ilastik:
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null

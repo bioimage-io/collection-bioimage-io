@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: 971ed799d609f2044bdcfd490555aac567acf1a0ea1ef34276c3e7293533e219
 status: failed
@@ -21,7 +21,7 @@ tests:
     traceback: null
     warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''software'':
         [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
@@ -29,7 +29,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: All URLs and paths available
@@ -37,14 +37,14 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
+  - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9
     error: "Descriptors cannot not be created directly.\nIf this call came from a
       _pb2.py file, your generated code is out of date and must be regenerated with
@@ -52,7 +52,7 @@ tests:
       possible workarounds are:\n 1. Downgrade the protobuf package to 3.20.x or lower.\n
       2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python
       parsing and will be much slower).\n\nMore information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates"
-    name: reproduce test outputs from test inputs
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: failed
     traceback: ["  File \"/home/runner/micromamba-root/envs/6338615/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
         line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
@@ -132,6 +132,29 @@ tests:
           as (type, (1,)) / ''(1,)type''.', 'Device management is not implemented
           for keras yet, cannot unload model', 'Model tensorflow version (1, 15) does
           not match 1.14.0.The prediction results may be wrong']
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null

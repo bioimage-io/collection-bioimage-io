@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.8
+bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
 rdf_sha256: a14d8173880a7e040f8e4ae8a89d5c7ab79271c63ca5664ef3fff33a8517b7ac
 status: passed
@@ -47,6 +47,42 @@ tests:
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'
       weights: {torchscript: missing 'pytorch_version'}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: [Implicit dimension choice for softmax has been deprecated.
+          Change the call to include dim=X as an argument.]
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
+      :deepimagej', name: Initial compatibility checks with DeepImageJ, status: failed}
+  ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -55,6 +91,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -79,11 +116,6 @@ tests:
     warnings:
       non-validation-warnings: [Implicit dimension choice for softmax has been deprecated.
           Change the call to include dim=X as an argument.]
-  deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
-      :deepimagej', name: Initial compatibility checks with DeepImageJ, status: failed}
-  ilastik:
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
