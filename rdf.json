@@ -65,7 +65,7 @@
         "https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/cover.png"
       ],
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 22897,
+      "download_count": 23009,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -160,7 +160,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 19085,
+      "download_count": 19216,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -206,7 +206,7 @@
         "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 18575,
+      "download_count": 18683,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -301,7 +301,7 @@
         "https://zenodo.org/api/files/f0c392e2-4c33-43ec-9a79-57d89a8ffff1/pred.png"
       ],
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 13123,
+      "download_count": 13129,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -527,7 +527,7 @@
         "https://zenodo.org/api/files/6e40209a-1424-441e-a418-6fda06dd1a4b/pred-nuclei.png"
       ],
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 8845,
+      "download_count": 8851,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -684,7 +684,7 @@
         "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg"
       ],
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 5139,
+      "download_count": 5212,
       "download_url": "https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -731,7 +731,7 @@
         "https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png"
       ],
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 4878,
+      "download_count": 4882,
       "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
@@ -774,7 +774,7 @@
         "https://zenodo.org/api/files/c0cfb6e4-94b3-499b-aadf-34bea560e8df/cover.png"
       ],
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 4474,
+      "download_count": 4481,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -1100,6 +1100,60 @@
     {
       "authors": [
         {
+          "name": "Adrian Wolny"
+        },
+        {
+          "name": "Lorenzo Cerrone"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/raw.png",
+        "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/pred.png"
+      ],
+      "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
+      "download_count": 2964,
+      "id": "10.5281/zenodo.6334777",
+      "license": "MIT",
+      "links": [
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/ilastik"
+      ],
+      "name": "3D UNet Lateral Root Primordia Cells",
+      "nickname": "thoughtful-turtle",
+      "nickname_icon": "\ud83d\udc22",
+      "owners": [
+        66700
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7765026/rdf.yaml",
+      "tags": [
+        "3d",
+        "torchscript",
+        "ilastik",
+        "light-sheet-fluorescence-microscopy",
+        "unet",
+        "plant",
+        "plantseg",
+        "cell-membrane",
+        "tissue",
+        "semantic-segmentation",
+        "arabidopsis",
+        "deepimagej",
+        "lateral-root",
+        "pytorch"
+      ],
+      "type": "model",
+      "versions": [
+        "7765026",
+        "7701561",
+        "7696952",
+        "6346524",
+        "6334778"
+      ]
+    },
+    {
+      "authors": [
+        {
           "name": "Daniel Capek",
           "orcid": "0000-0001-5199-9940"
         },
@@ -1151,60 +1205,6 @@
       "type": "model",
       "versions": [
         "7315441"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "name": "Adrian Wolny"
-        },
-        {
-          "name": "Lorenzo Cerrone"
-        }
-      ],
-      "covers": [
-        "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/raw.png",
-        "https://zenodo.org/api/files/a8bea285-b765-448a-b186-8c6bc2f44860/pred.png"
-      ],
-      "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 2958,
-      "id": "10.5281/zenodo.6334777",
-      "license": "MIT",
-      "links": [
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/ilastik"
-      ],
-      "name": "3D UNet Lateral Root Primordia Cells",
-      "nickname": "thoughtful-turtle",
-      "nickname_icon": "\ud83d\udc22",
-      "owners": [
-        66700
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7765026/rdf.yaml",
-      "tags": [
-        "3d",
-        "torchscript",
-        "ilastik",
-        "light-sheet-fluorescence-microscopy",
-        "unet",
-        "plant",
-        "plantseg",
-        "cell-membrane",
-        "tissue",
-        "semantic-segmentation",
-        "arabidopsis",
-        "deepimagej",
-        "lateral-root",
-        "pytorch"
-      ],
-      "type": "model",
-      "versions": [
-        "7765026",
-        "7701561",
-        "7696952",
-        "6346524",
-        "6334778"
       ]
     },
     {
@@ -1282,7 +1282,7 @@
         "https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_pred.png"
       ],
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 2775,
+      "download_count": 2781,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1474,7 +1474,7 @@
         "https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/diagram-of-InceptionV3.png"
       ],
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 2571,
+      "download_count": 2575,
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
@@ -1651,7 +1651,7 @@
         "https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png"
       ],
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 1100,
+      "download_count": 1104,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
