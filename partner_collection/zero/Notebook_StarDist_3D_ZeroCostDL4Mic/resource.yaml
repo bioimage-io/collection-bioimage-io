@@ -19,9 +19,9 @@ versions:
       text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
     - doi: https://arxiv.org/abs/1908.03636
-      text: "Martin Weigert, Uwe Schmidt, Robert Haase, Ko Sugawara, Gene Myers. Star-convex\
-        \ Polyhedra for 3D Object Detection and Segmentation in Microscopy. \tarXiv.\
-        \ https://arxiv.org/abs/1908.03636"
+      text: "Martin Weigert, Uwe Schmidt, Robert Haase, Ko Sugawara, Gene Myers. Star-convex
+        Polyhedra for 3D Object Detection and Segmentation in Microscopy. \tarXiv.
+        https://arxiv.org/abs/1908.03636"
     config:
       background_image: static/img/zoo-background.svg
       default_type: application
