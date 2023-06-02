@@ -113,7 +113,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 21680,
+      "download_count": 21818,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -206,7 +206,7 @@
         "https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 19459,
+      "download_count": 19530,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -353,7 +353,7 @@
         "https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 10274,
+      "download_count": 10277,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -483,7 +483,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 8910,
+      "download_count": 8914,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -686,7 +686,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5539,
+      "download_count": 5542,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -1018,7 +1018,7 @@
         "https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 3242,
+      "download_count": 3244,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1550,7 +1550,7 @@
         "https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 2115,
+      "download_count": 2118,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1774,7 +1774,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 776,
+      "download_count": 779,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
