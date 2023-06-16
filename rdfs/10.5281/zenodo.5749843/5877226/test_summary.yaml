@@ -87,6 +87,17 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
+          prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model', Computed dataset percentiles naively
+          by averaging percentiles of samples.]
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: '''str'' object has no attribute ''decode'''
     name: reproduce test outputs from test inputs
     status: failed
@@ -130,6 +141,17 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong']
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: '''str'' object has no attribute ''decode'''
     name: reproduce test outputs from test inputs
     status: failed
@@ -148,25 +170,3 @@ tests:
     warnings:
       non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
           prediction results may be wrong']
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
-          prediction results may be wrong', 'Device management is not implemented
-          for keras yet, cannot unload model', Computed dataset percentiles naively
-          by averaging percentiles of samples.]
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: ['Device management is not implemented for keras yet,
-          cannot unload model', Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Model tensorflow version (1, 15) does not match
-          1.14.0.The prediction results may be wrong']
