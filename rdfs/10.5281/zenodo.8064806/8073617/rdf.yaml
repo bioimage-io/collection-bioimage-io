@@ -1,0 +1,110 @@
+authors:
+- name: Justin Sonneck
+- name: Jianxu Chen
+cite:
+- text: 'MMV_Im2Im: An Open Source Microscopy Machine Vision Toolbox for Image-to-Image
+    Transformation'
+  url: https://arxiv.org/abs/2209.02498
+- text: HeLa "Kyoto" cells under the scope
+  url: https://doi.org/10.5281/zenodo.6139958
+- text: 'MONAI: Medical Open Network for AI'
+  url: https://doi.org/10.5281/zenodo.8018287
+config:
+  bioimageio:
+    created: '2023-06-23 10:23:37.255827'
+    doi: 10.5281/zenodo.8073617
+    nickname: noisy-hedgehog
+    nickname_icon: 🦔
+    owners:
+    - 546538
+    status: accepted
+    test_kwargs:
+      pytorch_state_dict:
+        decimal: 2
+      torchscript:
+        decimal: 2
+    version_id: '8073617'
+    version_name: version 2
+covers:
+- https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/cover.png
+description: Label-free prediction of fluorescence images from brightield images
+documentation: https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/doc.md
+format_version: 0.4.9
+id: 10.5281/zenodo.8064806/8073617
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: xy
+      mode: per_sample
+    name: zero_mean_unit_variance
+  shape:
+  - 1
+  - 1
+  - 512
+  - 512
+license: Apache-2.0
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- github_user: Justin-Sonneck
+  name: Justin Sonneck
+name: 2D UNet for label-free prediction of mCherry-H2B
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output0
+  shape:
+  - 1
+  - 1
+  - 512
+  - 512
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8064806/8073617/rdf.yaml
+tags:
+- label-free
+- 2d
+- fluorescence
+- brightfield
+- unet
+- cells
+test_inputs:
+- https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/test-input.npy
+test_outputs:
+- https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/test-output.npy
+timestamp: '2023-06-21T15:37:03.563382'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: monai.networks.nets.UNet
+    dependencies: 
+      conda:https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/environment.yaml
+    kwargs:
+      channels:
+      - 32
+      - 64
+      - 128
+      - 256
+      in_channels: 1
+      out_channels: 1
+      spatial_dims: 2
+      strides:
+      - 2
+      - 2
+      - 2
+    sha256: 4fe14770e04b79854c3b29b735b72ca406cf6f4b824be0510a25f496a4c1c309
+    source: https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/weights.pt
+  torchscript:
+    pytorch_version: 2.0.0
+    sha256: 0e9f91a8ce399632b3a3ec3bc5529afc5610651b5c142c6e7be975352c9c5c89
+    source: 
+      https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/weights_torchscript.pt
