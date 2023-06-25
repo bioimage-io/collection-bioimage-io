@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-06-23 10:23:37.255827'
+  doi: 10.5281/zenodo.8073617
+  name: 2D UNet for label-free prediction of mCherry-H2B
+  status: accepted
+  version_id: '8073617'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/rdf.yaml
 - created: '2023-06-21 13:59:59.433558'
   doi: 10.5281/zenodo.8064807
   name: 2D UNet for label-free prediction of mCherry-H2B
