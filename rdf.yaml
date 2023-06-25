@@ -773,6 +773,23 @@ collection:
   type: model
   versions: ['7781091']
 - authors:
+  - {name: Justin Sonneck}
+  - {name: Jianxu Chen}
+  covers: ['https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/cover.png']
+  description: Label-free prediction of fluorescence images from brightield images
+  download_count: 19
+  id: 10.5281/zenodo.8064806
+  license: Apache-2.0
+  links: [imjoy/BioImageIO-Packager]
+  name: 2D UNet for label-free prediction of mCherry-H2B
+  nickname: noisy-hedgehog
+  nickname_icon: "\U0001F994"
+  owners: [546538]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8064806/8073617/rdf.yaml
+  tags: [label-free, 2d, fluorescence, brightfield, unet, cells]
+  type: model
+  versions: ['8073617']
+- authors:
   - {github_user: petebankhead, name: Pete Bankhead}
   covers: ['https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png']
   description: QuPath is an open, powerful, flexible, extensible software platform
@@ -2507,8 +2524,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 102, dataset: 84, model: 145, notebook: 4}
-  n_resources: {application: 51, dataset: 42, model: 48, notebook: 2}
+  n_resource_versions: {application: 102, dataset: 84, model: 147, notebook: 4}
+  n_resources: {application: 51, dataset: 42, model: 49, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main

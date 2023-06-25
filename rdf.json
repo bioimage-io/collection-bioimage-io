@@ -1887,6 +1887,45 @@
     {
       "authors": [
         {
+          "name": "Justin Sonneck"
+        },
+        {
+          "name": "Jianxu Chen"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/cover.png"
+      ],
+      "description": "Label-free prediction of fluorescence images from brightield images",
+      "download_count": 19,
+      "id": "10.5281/zenodo.8064806",
+      "license": "Apache-2.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "2D UNet for label-free prediction of mCherry-H2B",
+      "nickname": "noisy-hedgehog",
+      "nickname_icon": "\ud83e\udd94",
+      "owners": [
+        546538
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8064806/8073617/rdf.yaml",
+      "tags": [
+        "label-free",
+        "2d",
+        "fluorescence",
+        "brightfield",
+        "unet",
+        "cells"
+      ],
+      "type": "model",
+      "versions": [
+        "8073617"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "petebankhead",
           "name": "Pete Bankhead"
         }
@@ -5226,13 +5265,13 @@
     "n_resource_versions": {
       "application": 102,
       "dataset": 84,
-      "model": 145,
+      "model": 147,
       "notebook": 4
     },
     "n_resources": {
       "application": 51,
       "dataset": 42,
-      "model": 48,
+      "model": 49,
       "notebook": 2
     },
     "partners": [
