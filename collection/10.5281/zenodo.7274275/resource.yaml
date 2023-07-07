@@ -10,7 +10,7 @@ versions:
 - created: '2023-07-06 08:12:02.329226'
   doi: 10.5281/zenodo.8119068
   name: CebraNET Cellular Membranes in Volume SEM
-  status: accepted
+  status: blocked  # invalid sample_inputs/sample_outputs
   version_id: '8119068'
   version_name: version 2
   rdf_source: https://zenodo.org/api/files/34d12fe0-da40-47f7-9795-3af0e9c1baf6/rdf.yaml
