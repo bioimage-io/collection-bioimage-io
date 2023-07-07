@@ -124,8 +124,7 @@ tests:
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: local variable 'rd' referenced before assignment
-    name: reproduce test outputs with ilastik 1.4.0rc8 using tensorflow_saved_model_bundle
-      weights
+    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
     nested_errors: null
     status: failed
     traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
@@ -140,7 +139,8 @@ tests:
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: local variable 'rd' referenced before assignment
-    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
+    name: reproduce test outputs with ilastik 1.4.0rc8 using tensorflow_saved_model_bundle
+      weights
     nested_errors: null
     status: failed
     traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
