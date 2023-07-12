@@ -686,7 +686,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5673,
+      "download_count": 5676,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -1550,7 +1550,7 @@
         "https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 2247,
+      "download_count": 2250,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1656,7 +1656,7 @@
         "https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png"
       ],
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 1315,
+      "download_count": 1318,
       "id": "10.5281/zenodo.6808325",
       "license": "CC-BY-4.0",
       "links": [
