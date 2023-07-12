@@ -14,7 +14,7 @@ versions:
   version_id: '8123818'
   version_name: version 3
   rdf_source: https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/rdf.yaml
-  - config:
+  config:
     bioimageio:
       test_kwargs:
         torchscript:
