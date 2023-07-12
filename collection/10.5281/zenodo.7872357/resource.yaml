@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.7872357
+id: 10.5281/zenodo.7872357
+nickname: creative-chipmunk
+nickname_icon: 🐿
+owners:
+- 539136
+status: accepted
+type: model
+versions:
+- created: '2023-04-27 19:15:44.765219'
+  doi: 10.5281/zenodo.7872358
+  name: TAGAN-axons
+  status: blocked
+  version_id: '7872358'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/d355994f-2155-4923-bba4-83be60e153d4/rdf.yaml
