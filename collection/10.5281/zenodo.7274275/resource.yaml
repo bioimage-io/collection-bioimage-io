@@ -16,7 +16,7 @@ versions:
   rdf_source: https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/rdf.yaml
   cite:
   - {doi: '10.1101/2023.04.06.535829', text: 'Hennies et al. 2023, CebraEM: A practical workflow to segment cellular organelles in volume SEM datasets using a transferable CNN-based membrane prediction'}
-  parent: {sha256: f19d75e9ea394fd7b0bd9c86276de41b10318245315fa4d2cc6e24e63c6371a1, uri: https://doi.org/10.5281/zenodo.7274275}
+  parent: {sha256: f19d75e9ea394fd7b0bd9c86276de41b10318245315fa4d2cc6e24e63c6371a1, uri: 'https://doi.org/10.5281/zenodo.7274275'}
   config:
     bioimageio:
       test_kwargs:
