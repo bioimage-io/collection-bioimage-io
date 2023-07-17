@@ -56,14 +56,15 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
-        cache-env: true
-        environment-file: false
+        cache-environment: true
         environment-name: scriptenv
-        channels: conda-forge
-        extra-specs: |  # script dependencies
+        condarc: |
+          channels:
+          - conda-forge
+        create-args: >-  # script dependencies
           bioimageio.spec
           lxml
           requests
@@ -129,14 +130,15 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
-        cache-env: true
-        environment-file: false
+        cache-environment: true
         environment-name: scriptenv
-        channels: conda-forge
-        extra-specs: |  # script dependencies
+        condarc: |
+          channels:
+          - conda-forge
+        create-args: >-  # script dependencies
           bioimageio.spec
           boltons
           lxml
