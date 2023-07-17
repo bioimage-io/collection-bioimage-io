@@ -208,7 +208,7 @@ jobs:
         token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
         commit-message: 'Update ${{ matrix.update.resource_id }}'
         committer: GitHub <noreply@github.com>
-        author: BioImage.IO Bot <bioimageiobot@users.noreply.github.com>
+        author: bioimage.io Bot <bioimageiobot@users.noreply.github.com>
         signoff: false
         branch: auto-update-${{ matrix.update.resource_id }}
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
@@ -219,14 +219,14 @@ jobs:
           ${{ matrix.update.new_version_ids_md }}
 
           Please review the changes and make sure the new item or version(s) pass the following check list:
-          - [ ] Passed the BioImage.IO CI tests: static (and dynamic) validations
+          - [ ] Passed the bioimage.io CI tests: static (and dynamic) validations
           - [ ] The meta information for the RDF item is complete
             - [ ] The tags are complete and describe the model
             - [ ] Naming is intuitive and descriptive, example:  Multi-Organ Nucleus Segmentation (StarDist 2D)
             - [ ] Authors are provided
             - [ ] Documentation is complete
               * For models, include an overview, describe how the model is trained, what is the training data, how to use the model, how to validate the results and list the references. TODO: Model documentation template.
-          - [ ] Approved by at least one of the BioImage.IO admin team member.
+          - [ ] Approved by at least one of the bioimage.io admin team member.
 
           Maintainers: ${{ matrix.update.maintainers }}
 
