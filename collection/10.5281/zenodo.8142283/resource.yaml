@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.8142283
+id: 10.5281/zenodo.8142283
+nickname: amiable-crocodile
+nickname_icon: 🐊
+owners:
+- 582192
+status: accepted
+type: model
+versions:
+- created: '2023-07-13 08:15:26.698316'
+  doi: 10.5281/zenodo.8142284
+  name: EnhancerBoundaryEM2D
+  status: accepted
+  version_id: '8142284'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/c5e5b288-cd2c-4307-b68b-b0e6adb532a0/rdf.yaml
