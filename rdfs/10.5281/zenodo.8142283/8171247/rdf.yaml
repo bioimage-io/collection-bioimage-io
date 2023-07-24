@@ -1,0 +1,112 @@
+authors:
+- affiliation: EMBL Heidelberg
+  name: Jonas Hellgoth
+  orcid: 0000-0003-0758-1680
+cite:
+- doi: https://doi.org/10.5281/zenodo.5108853
+  text: training library
+- doi: https://doi.org/10.1007/978-3-319-46723-8_49
+  text: architecture
+- doi: https://doi.org/10.1038/nmeth.4151
+  text: segmentation algorithm
+- doi: https://doi.org/10.3389/fcomp.2022.805166
+  text: shallow2deep
+config:
+  bioimageio:
+    created: '2023-07-21 09:09:49.349470'
+    doi: 10.5281/zenodo.8171247
+    nickname: amiable-crocodile
+    nickname_icon: 🐊
+    owners:
+    - 582192
+    status: accepted
+    version_id: '8171247'
+    version_name: version 2
+covers:
+- https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/cover.png
+description: Prediction enhancer for segmenting cell boundaries in EM images.
+documentation: https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/doc.md
+format_version: 0.4.9
+id: 10.5281/zenodo.8142283/8171247
+inputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input0
+  shape:
+    min:
+    - 1
+    - 1
+    - 32
+    - 32
+    step:
+    - 0
+    - 0
+    - 16
+    - 16
+license: MIT
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- email: jonas.hellgoth@embl.de
+  github_user: JonasHell
+  name: Jonas Hellgoth
+name: EnhancerBoundaryEM2D
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 0
+  - 8
+  - 8
+  name: output0
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reference_tensor: input0
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8142283/8171247/rdf.yaml
+tags:
+- unet
+- cells
+- electron-microscopy
+- instance-segmentation
+- 2d
+- shallow2deep
+test_inputs:
+- https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/test-input.npy
+test_outputs:
+- https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/test-output.npy
+timestamp: '2023-07-13T10:02:28.301615'
+type: model
+version: 0.1.0
+weights:
+  pytorch_state_dict:
+    architecture: https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/unet.py:UNet2d
+    architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
+    kwargs:
+      depth: 4
+      final_activation: Sigmoid
+      gain: 2
+      in_channels: 1
+      initial_features: 32
+      norm: BatchNorm
+      out_channels: 1
+      postprocessing:
+      return_side_outputs: false
+    sha256: 86ca482cf9e6e62df27166d8aba9c83397d0a17a262f8350d6cac9665deb77c1
+    source: https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/weights.pt
