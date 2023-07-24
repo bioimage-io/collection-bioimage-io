@@ -1926,6 +1926,44 @@
     {
       "authors": [
         {
+          "affiliation": "EMBL Heidelberg",
+          "name": "Jonas Hellgoth",
+          "orcid": "0000-0003-0758-1680"
+        }
+      ],
+      "covers": [
+        "https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/cover.png"
+      ],
+      "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
+      "download_count": 49,
+      "id": "10.5281/zenodo.8142283",
+      "license": "MIT",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "EnhancerBoundaryEM2D",
+      "nickname": "amiable-crocodile",
+      "nickname_icon": "\ud83d\udc0a",
+      "owners": [
+        582192
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8142283/8171247/rdf.yaml",
+      "tags": [
+        "unet",
+        "cells",
+        "electron-microscopy",
+        "instance-segmentation",
+        "2d",
+        "shallow2deep"
+      ],
+      "type": "model",
+      "versions": [
+        "8171247"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "petebankhead",
           "name": "Pete Bankhead"
         }
@@ -5265,13 +5303,13 @@
     "n_resource_versions": {
       "application": 102,
       "dataset": 84,
-      "model": 148,
+      "model": 150,
       "notebook": 4
     },
     "n_resources": {
       "application": 51,
       "dataset": 42,
-      "model": 49,
+      "model": 50,
       "notebook": 2
     },
     "partners": [

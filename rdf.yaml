@@ -790,6 +790,22 @@ collection:
   type: model
   versions: ['8073617']
 - authors:
+  - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth, orcid: 0000-0003-0758-1680}
+  covers: ['https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/cover.png']
+  description: Prediction enhancer for segmenting cell boundaries in EM images.
+  download_count: 49
+  id: 10.5281/zenodo.8142283
+  license: MIT
+  links: [imjoy/BioImageIO-Packager]
+  name: EnhancerBoundaryEM2D
+  nickname: amiable-crocodile
+  nickname_icon: "\U0001F40A"
+  owners: [582192]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8142283/8171247/rdf.yaml
+  tags: [unet, cells, electron-microscopy, instance-segmentation, 2d, shallow2deep]
+  type: model
+  versions: ['8171247']
+- authors:
   - {github_user: petebankhead, name: Pete Bankhead}
   covers: ['https://raw.githubusercontent.com/qupath/qupath/e96e7f228c2a9e27e7236108808540a4dbf503e8/qupath-gui-fx/src/main/resources/icons/QuPath_512.png']
   description: QuPath is an open, powerful, flexible, extensible software platform
@@ -2524,8 +2540,8 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 102, dataset: 84, model: 148, notebook: 4}
-  n_resources: {application: 51, dataset: 42, model: 49, notebook: 2}
+  n_resource_versions: {application: 102, dataset: 84, model: 150, notebook: 4}
+  n_resources: {application: 51, dataset: 42, model: 50, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
