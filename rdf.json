@@ -21,7 +21,7 @@
         "https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png"
       ],
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 30231,
+      "download_count": 30304,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -113,7 +113,7 @@
         "https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg"
       ],
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 25454,
+      "download_count": 25532,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -160,7 +160,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 23418,
+      "download_count": 23485,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -256,7 +256,7 @@
         "https://zenodo.org/api/files/a7eb8d94-9217-4276-8b0d-ff88e1ac78c7/cover.png"
       ],
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 20112,
+      "download_count": 20172,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -396,7 +396,7 @@
         "https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 10468,
+      "download_count": 10472,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -483,7 +483,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 9102,
+      "download_count": 9106,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -686,7 +686,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5737,
+      "download_count": 5741,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -918,7 +918,7 @@
         "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 4240,
+      "download_count": 4242,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -1074,7 +1074,7 @@
         "https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 3432,
+      "download_count": 3436,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1431,7 +1431,7 @@
         "https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png"
       ],
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 2904,
+      "download_count": 2908,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -1550,7 +1550,7 @@
         "https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 2308,
+      "download_count": 2312,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1700,7 +1700,7 @@
         "https://zenodo.org/api/files/abbc2f48-1514-4102-8393-eb03fa4a516c/cover.png"
       ],
       "description": "Light-sheet and light-field images of beating and arrested hatchling (8 dpf) medaka hearts used in \"Deep learning-enhanced light-field imaging with continuous validation\" to train and evaluate a HyLFM-Net.",
-      "download_count": 1353,
+      "download_count": 1360,
       "id": "10.5281/zenodo.7612115",
       "license": "MIT",
       "name": "Hatchling Medaka Heart (HyLFM)",
@@ -1774,7 +1774,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 964,
+      "download_count": 968,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -1935,7 +1935,7 @@
         "https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/cover.png"
       ],
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 53,
+      "download_count": 59,
       "id": "10.5281/zenodo.8142283",
       "license": "MIT",
       "links": [
