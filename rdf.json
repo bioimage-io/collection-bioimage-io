@@ -914,8 +914,8 @@
         }
       ],
       "covers": [
-        "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/exampleImage.png",
-        "https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png"
+        "https://zenodo.org/api/files/2fd942b6-6a38-4b89-a9c5-600047d6d079/exampleImage.png",
+        "https://zenodo.org/api/files/2fd942b6-6a38-4b89-a9c5-600047d6d079/resultImage.png"
       ],
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
       "download_count": 4242,
@@ -925,7 +925,8 @@
         "imjoy/BioImageIO-Packager",
         "deepimagej/deepimagej",
         "ilastik/ilastik",
-        "deepimagej/unet-pancreaticcellsegmentation"
+        "deepimagej/unet-pancreaticcellsegmentation",
+        "imjoy/BioImageIO-Packager"
       ],
       "name": "Pancreatic Phase Contrast Cell Segmentation (U-Net)",
       "nickname": "discreet-rooster",
@@ -933,7 +934,7 @@
       "owners": [
         147356
       ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/6514622/rdf.yaml",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/8186255/rdf.yaml",
       "tags": [
         "deepimagej",
         "pancreatic-stem-cells",
@@ -950,6 +951,7 @@
       ],
       "type": "model",
       "versions": [
+        "8186255",
         "6514622",
         "6514446",
         "5914249"
@@ -5303,7 +5305,7 @@
     "n_resource_versions": {
       "application": 102,
       "dataset": 84,
-      "model": 150,
+      "model": 151,
       "notebook": 4
     },
     "n_resources": {

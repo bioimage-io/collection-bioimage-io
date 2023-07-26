@@ -366,24 +366,25 @@ collection:
 - authors:
   - {affiliation: Ikerbasque EHU UPV, name: Ignacio Arganda Carreras}
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
-  covers: ['https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/exampleImage.png',
-    'https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png']
+  covers: ['https://zenodo.org/api/files/2fd942b6-6a38-4b89-a9c5-600047d6d079/exampleImage.png',
+    'https://zenodo.org/api/files/2fd942b6-6a38-4b89-a9c5-600047d6d079/resultImage.png']
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
   download_count: 4242
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
-  links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation]
+  links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation,
+    imjoy/BioImageIO-Packager]
   name: Pancreatic Phase Contrast Cell Segmentation (U-Net)
   nickname: discreet-rooster
   nickname_icon: "\U0001F413"
   owners: [147356]
-  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/6514622/rdf.yaml
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/8186255/rdf.yaml
   tags: [deepimagej, pancreatic-stem-cells, segmentation, phase-contrast, unet, neubias,
     cell-tracking-challenge, transmission-light-microscopy, 2d, cells, semantic-segmentation,
     tensorflow]
   type: model
-  versions: ['6514622', '6514446', '5914249']
+  versions: ['8186255', '6514622', '6514446', '5914249']
 - authors:
   - {name: Daniel Capek, orcid: 0000-0001-5199-9940}
   - {name: Matvey Safroshkin, orcid: 0000-0003-3955-5081}
@@ -2540,7 +2541,7 @@ config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 102, dataset: 84, model: 150, notebook: 4}
+  n_resource_versions: {application: 102, dataset: 84, model: 151, notebook: 4}
   n_resources: {application: 51, dataset: 42, model: 50, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
