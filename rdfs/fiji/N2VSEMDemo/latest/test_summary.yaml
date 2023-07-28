@@ -79,8 +79,8 @@ tests:
         data \"\n"]
     warnings: {}
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
-      :deepimagej', name: Initial compatibility checks with DeepImageJ, status: failed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: No correct
+      sample images to test, name: Downloading testing resources for DeepImageJ, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9

@@ -58,5 +58,5 @@ tests:
         ({e})\") from e\n"]
     warnings: {}
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
-      headless, status: passed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
+      test outputs with DeepImageJ headless, status: passed}

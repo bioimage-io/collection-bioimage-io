@@ -91,8 +91,8 @@ tests:
         line 561, in __new__\n    _message.Message._CheckCalledFromGeneratedFile()\n"]
     warnings: {}
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
-      headless, status: passed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
+      test outputs with DeepImageJ headless, status: passed}
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9

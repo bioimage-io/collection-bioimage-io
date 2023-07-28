@@ -56,8 +56,9 @@ tests:
       non-validation-warnings: ['Device management is not implemented for keras yet,
           cannot unload model']
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: 'rdf does not have keys for :config
-      :deepimagej', name: Initial compatibility checks with DeepImageJ, status: failed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: Error
+      while running DeepImageJ headless (CI did not produce an output image), name: Reproduce
+      test outputs with DeepImageJ headless, status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9

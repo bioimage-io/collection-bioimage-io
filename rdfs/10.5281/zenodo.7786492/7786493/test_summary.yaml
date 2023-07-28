@@ -74,6 +74,6 @@ tests:
         ({e})\") from e\n"]
     warnings: {}
   deepimagej:
-  - {bioimageio_spec_version: 0.4.8post1, error: Error while running DeepImageJ headless
-      (CI did not produce an output image), name: Reproduce test outputs with DeepImageJ
-      headless, status: failed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: Error
+      while running DeepImageJ headless (CI did not produce an output image), name: Reproduce
+      test outputs with DeepImageJ headless, status: failed}
