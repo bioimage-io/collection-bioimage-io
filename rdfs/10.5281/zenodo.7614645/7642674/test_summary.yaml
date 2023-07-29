@@ -80,9 +80,8 @@ tests:
           from http://www.nvidia.com/Download/index.aspx (Triggered internally at  /opt/conda/conda-bld/pytorch_1607370151529/work/c10/cuda/CUDAFunctions.cpp:100.)',
         Computed dataset percentiles naively by averaging percentiles of samples.]
   deepimagej:
-  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: Error
-      while running DeepImageJ headless (CI did not produce an output image), name: Reproduce
-      test outputs with DeepImageJ headless, status: failed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
+      test outputs with DeepImageJ GUI (manually tested), status: passed}
   ilastik:
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8

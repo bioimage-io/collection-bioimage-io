@@ -115,9 +115,8 @@ tests:
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
   deepimagej:
-  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: 'Test
-      not yet available: rdf contains the key run_mode with value deepimagej', name: Initial
-      compatibility checks with DeepImageJ, status: failed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
+      test outputs with DeepImageJ GUI (manually tested), status: passed}
   ilastik:
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
