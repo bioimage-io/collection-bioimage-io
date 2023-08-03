@@ -118,8 +118,8 @@ tests:
         ''in-silico-labeling'']}]'}
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: Failure
-      to download model with 'bioimageio.core.export_resource_package', name: Downloading
-      testing resources for DeepImageJ, status: failed}
+      to download model with 'bioimageio.core.export_resource_package'., name: Downloading
+      testing resources for DeepImageJ., status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9

@@ -59,8 +59,8 @@ tests:
           by averaging percentiles of samples.]
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: Error
-      while running DeepImageJ headless (CI did not produce an output image), name: Reproduce
-      test outputs with DeepImageJ headless, status: failed}
+      while running DeepImageJ headless (CI did not produce an output image)., name: Reproduce
+      test outputs with DeepImageJ headless., status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9

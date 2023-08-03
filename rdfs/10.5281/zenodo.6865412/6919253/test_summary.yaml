@@ -42,8 +42,8 @@ tests:
         ''in-silico-labeling'']}]'}
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: 'Test
-      not yet available: rdf contains the key run_mode with value deepimagej', name: Initial
-      compatibility checks with DeepImageJ, status: failed}
+      not yet available: rdf contains the key run_mode with value deepimagej.', name: Initial
+      compatibility checks with DeepImageJ., status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9

@@ -78,8 +78,9 @@ tests:
       non-validation-warnings: ['Device management is not implemented for onnx yet,
           cannot unload model']
   deepimagej:
-  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: No correct
-      sample images to test, name: Downloading testing resources for DeepImageJ, status: failed}
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: 'Model
+      incompatible with DeepImageJ, requires more than 1 input image.', name: Initial
+      compatibility checks with DeepImageJ., status: failed}
   ilastik:
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8

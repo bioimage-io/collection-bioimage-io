@@ -83,7 +83,7 @@ tests:
           (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811723911/work/aten/src/ATen/native/BinaryOps.cpp:601.)']
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
-      test outputs with DeepImageJ headless, status: passed}
+      test outputs with DeepImageJ headless., status: passed}
   ilastik:
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
