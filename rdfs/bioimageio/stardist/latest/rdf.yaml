@@ -16,9 +16,11 @@ config:
     version_name: latest
   default_type: model
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg
+  icon: 
+    https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg
   id: bioimageio
-  logo: https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg
+  logo: 
+    https://raw.githubusercontent.com/bioimage-io/bioimage.io/main/public/static/img/bioimage-io-icon.svg
   name: BioImage.IO
   resource_types:
   - model
@@ -40,13 +42,15 @@ description: Object Detection with Star-convex Shapes
 documentation: https://raw.githubusercontent.com/stardist/stardist/master/README.md
 format_version: 0.2.3
 git_repo: https://github.com/stardist/stardist
-icon: https://raw.githubusercontent.com/stardist/stardist/master/images/stardist_logo.jpg
+icon: 
+  https://raw.githubusercontent.com/stardist/stardist/master/images/stardist_logo.jpg
 id: bioimageio/stardist/latest
 maintainers:
 - github_user: uschmidt83
   name: Uwe Schmidt
 name: StarDist
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/stardist/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/stardist/latest/rdf.yaml
 tags:
 - stardist
 type: application
