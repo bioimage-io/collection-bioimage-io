@@ -11,9 +11,11 @@ config:
     version_name: latest
   default_type: model
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  icon: 
+    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
   id: ilastik
-  logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  logo: 
+    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -28,7 +30,8 @@ covers:
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png
 description: Training data from the challenge on 3d EM segmentation on neuronal processes.
-documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
+documentation: 
+  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
 format_version: 0.2.3
 id: ilastik/cremi_training_data/latest
 maintainers:
@@ -42,7 +45,8 @@ maintainers:
   orcid: 0000-0001-6562-7187
 name: 'CREMI: MICCAI Challenge on Circuit Reconstruction from Electron Microscopy
   Images'
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/cremi_training_data/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/cremi_training_data/latest/rdf.yaml
 source: https://cremi.org/
 tags:
 - electron-microscopy

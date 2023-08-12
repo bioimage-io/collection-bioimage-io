@@ -16,9 +16,11 @@ versions:
       background_image: static/img/zoo-background.svg
       default_type: model
       explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      icon: 
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
       id: ilastik
-      logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      logo: 
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
       name: ilastik
       resource_types:
       - application
@@ -32,7 +34,8 @@ versions:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover0.jpg
     - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png
     description: Training data for mitochondria segmentation in 3d EM.
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
+    documentation: 
+      https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
     format_version: 0.2.3
     id: ilastik/mitoem_segmentation_challenge
     maintainers:

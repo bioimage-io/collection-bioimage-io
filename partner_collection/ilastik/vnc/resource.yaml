@@ -16,9 +16,11 @@ versions:
       background_image: static/img/zoo-background.svg
       default_type: model
       explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      icon: 
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
       id: ilastik
-      logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      logo: 
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
       name: ilastik
       resource_types:
       - application
@@ -31,7 +33,8 @@ versions:
     covers:
     - https://s3-eu-west-1.amazonaws.com/pfigshare-u-previews/1288336/preview.jpg
     description: Training data for cell segmentation in Arabidopsis lateral root.
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/vnc.md
+    documentation: 
+      https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/vnc.md
     format_version: 0.2.3
     id: ilastik/vnc
     license: CC-BY-4.0

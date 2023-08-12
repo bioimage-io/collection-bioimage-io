@@ -16,9 +16,11 @@ versions:
       background_image: static/img/zoo-background.svg
       default_type: model
       explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      icon: 
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
       id: ilastik
-      logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+      logo: 
+        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
       name: ilastik
       resource_types:
       - application
@@ -31,7 +33,8 @@ versions:
     covers:
     - https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/misc/targets.png
     description: Train a 2d UNet for semgentation tasks
-    documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/notebook_src/torch-em-2d-unet-notebook.md
+    documentation: 
+      https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/notebook_src/torch-em-2d-unet-notebook.md
     format_version: 0.2.3
     id: ilastik/torch-em-2d-unet-notebook
     license: CC-BY-4.0
@@ -45,7 +48,8 @@ versions:
       name: Constantin Pape
       orcid: 0000-0001-6562-7187
     name: 2D UNet Training
-    source: https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/2D-UNet-Training.ipynb
+    source: 
+      https://raw.githubusercontent.com/constantinpape/torch-em/main/experiments/2D-UNet-Training.ipynb
     tags:
     - instance-segmentation
     - semantic-segmentation

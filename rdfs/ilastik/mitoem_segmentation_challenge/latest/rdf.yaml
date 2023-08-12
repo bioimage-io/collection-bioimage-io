@@ -11,9 +11,11 @@ config:
     version_name: latest
   default_type: model
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  icon: 
+    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
   id: ilastik
-  logo: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+  logo: 
+    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -27,7 +29,8 @@ covers:
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover0.jpg
 - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png
 description: Training data for mitochondria segmentation in 3d EM.
-documentation: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
+documentation: 
+  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem.md
 format_version: 0.2.3
 id: ilastik/mitoem_segmentation_challenge/latest
 maintainers:
@@ -40,7 +43,8 @@ maintainers:
   name: Constantin Pape
   orcid: 0000-0001-6562-7187
 name: 'MitoEM Challenge: Large-scale 3D Mitochondria Instance Segmentation'
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mitoem_segmentation_challenge/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mitoem_segmentation_challenge/latest/rdf.yaml
 source: https://mitoem.grand-challenge.org/
 tags:
 - mitochondria
