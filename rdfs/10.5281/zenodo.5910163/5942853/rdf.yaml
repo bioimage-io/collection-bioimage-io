@@ -22,7 +22,7 @@ covers:
 - https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png
 description: The winning model of HPA image classification 2019 by Bestfitting
 documentation: https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/README.md
-format_version: 0.4.5
+format_version: 0.4.9
 id: 10.5281/zenodo.5910163/5942853
 inputs:
 - axes: bcyx
@@ -54,6 +54,9 @@ inputs:
 license: MIT
 links:
 - imjoy/BioImageIO-Packager
+maintainers:
+- github_user: oeway
+  name: Wei Ouyang
 name: HPA Bestfitting Densenet
 outputs:
 - axes: bc
@@ -76,7 +79,8 @@ outputs:
   shape:
   - 1
   - 1024
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/rdf.yaml
 tags:
 - classification
 - densenet-121
@@ -97,4 +101,5 @@ weights:
     authors:
     - name: Wei OUYANG
     sha256: 0ef125632b0058b2f04448de56dc23339fcbfe4f628601e836e17cef6f344e3f
-    source: https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/densenet_model.onnx
+    source: 
+      https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/densenet_model.onnx
