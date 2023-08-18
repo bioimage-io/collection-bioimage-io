@@ -314,5 +314,8 @@
     "10.5281/zenodo.8142283": [
         "https://github.com/bioimage-io/collection-bioimage-io/pull/615",
         "https://github.com/bioimage-io/collection-bioimage-io/pull/616"
+    ],
+    "10.5281/zenodo.8260660": [
+        "https://github.com/bioimage-io/collection-bioimage-io/pull/626"
     ]
 }
