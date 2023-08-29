@@ -9,9 +9,9 @@ cite:
 - doi: https://doi.org/10.1038/s41467-021-22518-0
   text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
     for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-- doi: https://arxiv.org/abs/2101.10033
-  text: Manan Lalit, Pavel Tomancak, Florian Jug. Embedding-based Instance Segmentation
+- text: Manan Lalit, Pavel Tomancak, Florian Jug. Embedding-based Instance Segmentation
     in Microscopy. arXiv:2101.10033.
+  url: https://arxiv.org/abs/2101.10033
 config:
   background_image: static/img/zoo-background.svg
   bioimageio:

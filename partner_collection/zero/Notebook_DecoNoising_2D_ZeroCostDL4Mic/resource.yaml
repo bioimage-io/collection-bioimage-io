@@ -18,9 +18,9 @@ versions:
     - doi: https://doi.org/10.1038/s41467-021-22518-0
       text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
         for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
-    - doi: https://arxiv.org/abs/2008.08414
-      text: Anna S. Goncharova, Alf Honigmann, Florian Jug, Alexander Krull. Improving
+    - text: Anna S. Goncharova, Alf Honigmann, Florian Jug, Alexander Krull. Improving
         Blind Spot Denoising for Microscopy. arXiv:2008.08414
+      url: https://arxiv.org/abs/2008.08414
     config:
       background_image: static/img/zoo-background.svg
       default_type: application
