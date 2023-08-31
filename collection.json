@@ -160,7 +160,7 @@
         "https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png"
       ],
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 25026,
+      "download_count": 25070,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -396,7 +396,7 @@
         "https://zenodo.org/api/files/a1d653c8-5b67-4720-a69a-4bf747a1c5ff/pred.png"
       ],
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 10590,
+      "download_count": 10591,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -550,7 +550,7 @@
         "https://zenodo.org/api/files/ac8ecde9-bafd-4c2c-9ede-0f4a47077d31/cover.png"
       ],
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 9220,
+      "download_count": 9225,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -686,7 +686,7 @@
         "https://zenodo.org/api/files/8e1dc6e7-bdc9-412c-b06c-e79ee375989f/cover.png"
       ],
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 5857,
+      "download_count": 5860,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -1134,7 +1134,7 @@
         "https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png"
       ],
       "description": "affinity-model",
-      "download_count": 3548,
+      "download_count": 3551,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1552,7 +1552,7 @@
         "https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/cover.png"
       ],
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 2424,
+      "download_count": 2429,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1776,7 +1776,7 @@
         "https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png"
       ],
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 1079,
+      "download_count": 1084,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
