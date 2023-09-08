@@ -165,7 +165,25 @@
         "background_image": "static/img/zoo-background.svg",
         "branch": "master",
         "collection_file_name": "manifest.bioimage.io.yaml",
+        "contact": [
+            {
+                "affiliation": [
+                    {
+                        "name": "KTH",
+                        "url": "https://kth.se"
+                    },
+                    {
+                        "name": "Stanford",
+                        "url": "https://stanford.edu"
+                    }
+                ],
+                "email": "fredbn@stanford.edu",
+                "github": "OmFrederic",
+                "name": "Frederic Ballllosera Navarro"
+            }
+        ],
         "default_type": "model",
+        "docs": "https://www.proteinatlas.org/about",
         "explore_button_text": "Start Exploring",
         "icon": "https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif",
         "id": "hpa",

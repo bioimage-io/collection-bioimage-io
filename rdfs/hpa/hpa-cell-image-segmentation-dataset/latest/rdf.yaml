@@ -14,11 +14,23 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://kth.se
+    - name: Stanford
+      url: https://stanford.edu
+    email: fredbn@stanford.edu
+    github: OmFrederic
+    name: Frederic Ballllosera Navarro
   default_type: model
+  docs: https://www.proteinatlas.org/about
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  icon: 
+    https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
   id: hpa
-  logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+  logo: 
+    https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
   name: HPA
   resource_types:
   - model
@@ -31,13 +43,16 @@ config:
 covers:
 - https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/hpaseg-cover.png
 description: Annotated images from the Human Protein Atlas for cell segmentation
-documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-cell-image-segmentation-dataset.md
-download_url: https://zenodo.org/record/4665863/files/hpa_cell_segmentation_dataset_v2_512x512_4train_159test.zip?download=1
+documentation: 
+  https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-cell-image-segmentation-dataset.md
+download_url: 
+  https://zenodo.org/record/4665863/files/hpa_cell_segmentation_dataset_v2_512x512_4train_159test.zip?download=1
 format_version: 0.2.3
 id: hpa/hpa-cell-image-segmentation-dataset/latest
 license: CC-BY-4.0
 name: HPA Cell Image Segmentation Dataset
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/hpa-cell-image-segmentation-dataset/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/hpa/hpa-cell-image-segmentation-dataset/latest/rdf.yaml
 source: https://zenodo.org/record/4665863
 tags:
 - fluorescence-light-microscopy

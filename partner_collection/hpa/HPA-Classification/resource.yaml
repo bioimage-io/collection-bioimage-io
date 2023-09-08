@@ -11,11 +11,23 @@ versions:
     config:
       about_url: https://www.proteinatlas.org/
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: KTH
+          url: https://kth.se
+        - name: Stanford
+          url: https://stanford.edu
+        email: fredbn@stanford.edu
+        github: OmFrederic
+        name: Frederic Ballllosera Navarro
       default_type: model
+      docs: https://www.proteinatlas.org/about
       explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      icon: 
+        https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
       id: hpa
-      logo: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+      logo: 
+        https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
       name: HPA
       resource_types:
       - model
@@ -28,12 +40,15 @@ versions:
     covers:
     - https://imjoy-team.github.io/imjoy-plugins/hpa-classification/hpa-classification-cover.gif
     description: ShuffleNetV2 for HPA.
-    documentation: https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-classification-app.md
+    documentation: 
+      https://raw.githubusercontent.com/CellProfiling/HPA-model-zoo/master/collection/hpa-classification-app.md
     format_version: 0.2.3
-    icon: https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
+    icon: 
+      https://raw.githubusercontent.com/bioimage-io/tfjs-bioimage-io/master/apps/hpa-logo.gif
     id: hpa/HPA-Classification
     name: HPA-Classification
-    source: https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
+    source: 
+      https://raw.githubusercontent.com/imjoy-team/imjoy-plugins/master/repository/HPA-Classification.imjoy.html
     tags:
     - bioengine
     type: application
