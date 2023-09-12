@@ -35,6 +35,7 @@ SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
     "nickname",
     "nickname_icon",
     "owners",
+    "created",
 ]
 
 
