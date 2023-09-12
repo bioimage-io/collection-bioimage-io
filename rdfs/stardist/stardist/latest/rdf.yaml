@@ -1,0 +1,52 @@
+authors:
+- github_user: maweigert
+  name: Martin Weigert
+- github_user: uschmidt83
+  name: Uwe Schmidt
+cite:
+- doi: 10.1007/978-3-030-00934-2_30
+  text: Cell Detection with Star-convex Polygons. MICCAI (2018).
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: 
+    https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png
+  id: stardist
+  logo: 
+    https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png
+  name: StarDist
+  resource_types:
+  - application
+  - model
+  splash_feature_list:
+  splash_subtitle: StarDist - object detection with star-convex shapes
+  splash_title: StarDist
+  tags:
+  - stardist
+  url_root: https://github.com/stardist/stardist-bioimage-io
+covers:
+- https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png
+description: StarDist - object detection with star-convex shapes
+documentation: https://github.com/stardist/stardist
+format_version: 0.2.3
+icon: 
+  https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png
+id: stardist/stardist/latest
+maintainers:
+- github_user: maweigert
+  name: Martin Weigert
+- github_user: uschmidt83
+  name: Uwe Schmidt
+name: StarDist
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/stardist/stardist/latest/rdf.yaml
+source: https://github.com/stardist
+tags:
+- stardist
+- bioimage.io
+type: application

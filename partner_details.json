@@ -246,5 +246,28 @@
             "qupath"
         ],
         "url_root": "https://github.com/qupath/qupath-bioimage-io"
+    },
+    {
+        "background_image": "static/img/zoo-background.svg",
+        "branch": "main",
+        "collection_file_name": "collection.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png",
+        "id": "stardist",
+        "logo": "https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png",
+        "name": "StarDist",
+        "repository": "stardist/stardist-bioimage-io",
+        "resource_types": [
+            "application",
+            "model"
+        ],
+        "splash_feature_list": null,
+        "splash_subtitle": "StarDist - object detection with star-convex shapes",
+        "splash_title": "StarDist",
+        "tags": [
+            "stardist"
+        ],
+        "url_root": "https://github.com/stardist/stardist-bioimage-io"
     }
 ]
