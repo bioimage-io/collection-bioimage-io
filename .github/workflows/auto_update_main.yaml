@@ -144,6 +144,8 @@ jobs:
           lxml
           requests
           typer
+          pooch
+          pillow
     - name: generate collection rdf and thumbnails
       shell: bash -l {0}
       run: python scripts/generate_collection_rdf_and_thumbnails.py
