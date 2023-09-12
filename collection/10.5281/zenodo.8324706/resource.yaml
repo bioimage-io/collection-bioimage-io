@@ -5,6 +5,13 @@ owners:
 status: accepted
 type: unknown
 versions:
+- created: '2023-09-11 17:33:18.459077'
+  doi: 10.5281/zenodo.8335782
+  name: 10.5281/zenodo.8335782
+  status: accepted
+  version_id: '8335782'
+  version_name: version 2
+  rdf_source: unknown
 - created: '2023-09-07 08:29:42.327946'
   doi: 10.5281/zenodo.8324707
   name: 10.5281/zenodo.8324707
