@@ -9,16 +9,16 @@ from pprint import pprint
 
 import requests
 import typer
-
 from bare_utils import GH_API_URL, GITHUB_REPOSITORY_OWNER
 from dynamic_validation import main as dynamic_validation_script
-from generate_collection_rdf import main as generate_collection_rdf_script
 from prepare_to_deploy import main as prepare_to_deploy_script
 from static_validation import main as static_validation_script
 from update_external_resources import main as update_external_resources_script
 from update_partner_resources import main as update_partner_resources_script
 from update_rdfs import main as update_rdfs_script
 from utils import iterate_over_gh_matrix
+
+from scripts.generate_collection_rdf_and_thumbnails import main as generate_collection_rdf_and_thumbnails_script
 
 
 def download_from_gh(owner: str, repo: str, branch: str, folder: Path):
@@ -161,7 +161,7 @@ def main(always_continue: bool = True, skip_update_external: bool = True, with_s
     ##################
     # build-collection
     ##################
-    generate_collection_rdf_script()
+    generate_collection_rdf_and_thumbnails_script()
 
     fake_deploy(dist, gh_pages)
     if pending["retrigger"]:
