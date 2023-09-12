@@ -7,6 +7,7 @@ collection:
   - {affiliation: EMBL, name: Adrian Wolny}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6334384/94a5be829af45d67e06053ee0f6199ed-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334383/6334384/c67134b7b17254f58a08490e8949a9d4-pred.png']
+  created: '2023-04-06 10:47:26.453147'
   description: 2D Unet trained on confocal images of Arabidopsis Ovules
   download_count: 3110
   id: 10.5281/zenodo.6334383
@@ -24,6 +25,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/5869900/0a5fe0c20014d336dc2c07909b6351f3-cover.png']
+  created: '2022-06-15 22:09:35.368273'
   description: Cell segmentation for phase-contrast microscopy.
   download_count: 2610
   id: 10.5281/zenodo.5869899
@@ -44,6 +46,7 @@ collection:
   - {name: Constantin Pape}
   - {name: DeepImageJ team}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5850574/0e2a9ad8491474af12256bf36b1454ac-cover.png']
+  created: '2022-01-27 14:00:17.489637'
   description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
     for neuron segmentation in Transmission Electron Microscopy images.
   download_count: 2527
@@ -63,6 +66,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6322939/81f328b6319591e09a6a5e555fe291de-cover.png']
+  created: '2022-06-15 22:06:22.658325'
   description: Nucleus segmentation for fluorescence microscopy
   download_count: 2375
   id: 10.5281/zenodo.5764892
@@ -84,6 +88,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/6334584/0cf519ff1d8911b80941c9b2045928a1-ilastik_raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/6334584/cf0ede4bd938a93698711b946702a7c6-ilastik_sneak.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/6334584/26ee6c8b92020c7fcd8b5e592c45c3a3-ilastik_pred.png']
+  created: '2023-04-06 12:43:33.436336'
   description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
     of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
   download_count: 2210
@@ -107,6 +112,7 @@ collection:
   - {affiliation: Masaryk University, name: Pavel Matula}
   - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559929/6559930/88d74a467608c6ff5caeb73c4a4bfbcc-sevs-segmentation.png']
+  created: '2022-05-18 10:12:14.635800'
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
   download_count: 2103
@@ -125,6 +131,7 @@ collection:
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/6079315/32435adf3c969f65abc31144dc51276d-cover.png']
+  created: '2023-03-03 13:09:05.981223'
   description: affinity-model
   download_count: 2083
   id: 10.5281/zenodo.6079314
@@ -144,6 +151,7 @@ collection:
   - {affiliation: Heidelberg University, name: Lorenzo Cerrone}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6334882/3dbee41039ce3c945f0de2dd1122212a-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334881/6334882/e8e121d2762b8bd9c5bdf8d3c0d4d211-pred.png']
+  created: '2023-04-06 10:26:25.873589'
   description: 2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
     apical stem cells
   download_count: 1895
@@ -163,6 +171,7 @@ collection:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/43503aa7efa753d03b7eef70488c303e-hpaseg-cover.png']
+  created: '2023-03-02 05:53:45.695883'
   description: Nuclei segmentation model for segmenting images from the Human Protein
     Atlas
   download_count: 1836
@@ -182,6 +191,7 @@ collection:
   - {name: Lorenzo Cerrone}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6334778/6d4cb2f9eab06ee95a8e84740f8371d3-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/6334778/7fce60e2e5ae303c97e23fc3785074fa-pred.png']
+  created: '2023-03-23 21:42:30.250688'
   description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
     of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
   download_count: 1792
@@ -204,6 +214,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/22b0d4bad18ced9f3126e7ffbb47cebb-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/e4bd1b98d5a80066459aeb42aef391cf-pred-boundary.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/6383430/b83d8a4dc11e81fba5b821a8582e90ae-pred-nuclei.png']
+  created: '2023-03-27 12:14:49.467153'
   description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
     confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
   download_count: 1563
@@ -222,6 +233,7 @@ collection:
 - authors:
   - {name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874741/5874742/01687c447d05d918853756c8b9016f0b-cover.png']
+  created: '2022-01-18 22:01:09.315638'
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
   download_count: 1561
   id: 10.5281/zenodo.5874741
@@ -241,6 +253,7 @@ collection:
   - {name: Hao Xu}
   - {name: Wei Ouyang}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/6200636/f5fe63ed7bb8f27612e4bae2743c08d6-hpaseg-cover.png']
+  created: '2023-03-06 19:01:04.321374'
   description: Cell segmentation model for segmenting images from the Human Protein
     Atlas
   download_count: 1555
@@ -259,6 +272,7 @@ collection:
 - authors:
   - {name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874841/5874842/201c99f63a88e4d6e267a8d3d623e581-cover.png']
+  created: '2022-06-10 06:22:28.465944'
   description: Mitochondria segmentation for electron microscopy.
   download_count: 1523
   id: 10.5281/zenodo.5874841
@@ -278,6 +292,7 @@ collection:
   - {github_user: maweigert, name: Martin Weigert}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/215103f365933bf25f3ddcc1b8e0bbc7-stardist_logo.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/36c38defea6df094d3d00d2d62916760-example_histo.png']
+  created: '2022-03-08 18:36:28.378522'
   description: StarDist - Object Detection with Star-convex Shapes
   download_count: 1468
   id: 10.5281/zenodo.6338614
@@ -297,6 +312,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5847355/6322908/4e48963f23ce095ce5c962f628f9cebf-cover.png']
+  created: '2022-06-15 22:08:13.874556'
   description: Cell segmentation for immunofluorescence microscopy.
   download_count: 1412
   id: 10.5281/zenodo.5847355
@@ -318,6 +334,7 @@ collection:
   - {github_user: maweigert, name: Martin Weigert}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/a164d6380b9d47797063994d3356b44f-stardist_logo.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/b2cd3ba0dbee8ec1fb7e93b2faff0aab-example_fluo.png']
+  created: '2022-03-11 22:32:05.554959'
   description: StarDist - Object Detection with Star-convex Shapes
   download_count: 1369
   id: 10.5281/zenodo.6348084
@@ -339,6 +356,7 @@ collection:
   - {name: Adrian Wolny}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/12d3f843c2dac5061483f013d2d674e2-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/6346512/ea8e1fea5974807666fe1422be5259cb-pred.png']
+  created: '2023-03-24 17:08:34.402776'
   description: '3D Unet trained on confocal images of Arabidopsis thaliana apical
     stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25,
     0.25, 0.25]'
@@ -358,6 +376,7 @@ collection:
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6028281/9651ea359e743187c6c75da5c3672cdf-cover.png']
+  created: '2022-06-15 22:12:29.012734'
   description: Cell segmentation in EM of platynereis.
   download_count: 1339
   id: 10.5281/zenodo.6028280
@@ -375,6 +394,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406756/6406757/8c89913c3ccc787b6920be4bcc170143-cover.png']
+  created: '2022-07-08 17:02:28.049385'
   description: Prediction enhancer for segmenting mitochondria in EM images.
   download_count: 1313
   id: 10.5281/zenodo.6406756
@@ -395,6 +415,7 @@ collection:
   - {affiliation: Instituto Gulbenkian de Ciência, name: Estibaliz Gómez de Mariscal}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7261975/00e19ca8ad7ba4a111ec26a3b53dbe10-cover_1.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7261975/f9f097c35e588df8d02a85143cd0bc52-cover.png']
+  created: '2023-03-29 18:14:39.826271'
   description: This trained 2D U-Net model segments the contour, foreground and background
     of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
     a unique label for each individual bacteria detected in the image one could run
@@ -419,6 +440,7 @@ collection:
 - authors:
   - {name: Constantin Pape; @constantinpape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028097/6028098/c0b0af200ff3636a3c9115816b404be3-cover.png']
+  created: '2022-02-09 21:14:46.430029'
   description: '{organelle} segmentation in EM of platynereis.'
   download_count: 1111
   id: 10.5281/zenodo.6028097
@@ -436,6 +458,7 @@ collection:
 - authors:
   - {name: Shubin Dai}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910163/5942853/eb797d0a45654d307d9e6ff5ed50589b-bestfitting-densenet-diagram.png']
+  created: '2022-02-01 22:38:38.088910'
   description: The winning model of HPA image classification 2019 by Bestfitting
   download_count: 1051
   id: 10.5281/zenodo.5910163
@@ -454,6 +477,7 @@ collection:
   - {name: V. Bondarenko}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/29faab607fa161c57910bf51ee0a2c5f-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6384845/6384846/810c8cbc135376f74cd08cc4360c2adc-pred.png']
+  created: '2023-03-27 12:11:52.357154'
   description: 'A 3D U-Net trained to predict the cell boundaries in live light sheet
     images of developing mouse embryo. Voxel size: 0.2×0.2×1.0 µm^3'
   download_count: 1026
@@ -472,6 +496,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Fynn Beuttenmueller, orcid: 0000-0002-8567-6389}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7612115/7612152/ce16d493de92086ab28a4b52c6c9db08-cover.png']
+  created: '2023-02-06 13:30:05.714615'
   description: Light-sheet and light-field images of beating and arrested hatchling
     (8 dpf) medaka hearts used in "Deep learning-enhanced light-field imaging with
     continuous validation" to train and evaluate a HyLFM-Net.
@@ -489,6 +514,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6406803/6406804/a520f2efa695c75237effa91d2b403c0-cover.png']
+  created: '2022-04-01 16:06:28.519947'
   description: Segmentation of mitochondria in EM images.
   download_count: 724
   id: 10.5281/zenodo.6406803
@@ -506,6 +532,7 @@ collection:
 - authors:
   - {name: Shubin Dai}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/5911832/6f61ba88c8ff5ee72de4914e9a8bd233-diagram-of-InceptionV3.png']
+  created: '2022-05-11 12:52:23.766143'
   description: The winning model of HPA image classification 2021 by Bestfitting
   download_count: 719
   id: 10.5281/zenodo.5910854
@@ -522,6 +549,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/2d43dca34c5836a0bb8f4989feecc719-cover.png']
+  created: '2022-03-12 09:56:33.055323'
   description: Perform leaf segmentation in light microscopy images of Arabidopsis
   download_count: 665
   id: 10.5281/zenodo.6348728
@@ -541,6 +569,7 @@ collection:
   - {affiliation: 'UCL, University of Turku and Åbo Akademi University', name: ZeroCostDL4Mic}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5877226/c3ee1c7a1f985a8ee159e16c21538dd2-input.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5877226/31b9aa318b78b991ae1e891ba4f49c6c-output.png']
+  created: '2022-01-21 14:50:48.356997'
   description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
     of Arabidopsis thaliana ovules acquired on a confocal microscope.
   download_count: 647
@@ -562,6 +591,7 @@ collection:
   - {affiliation: 'EPFL, UC3M', name: DeepImageJ}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/5914249/9fa3eee13f0ca5293c919275c6e7410c-exampleImage.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/5914249/a7de4895e64141de54a50847fdb8c325-resultImage.png']
+  created: '2023-07-26 10:47:44.642355'
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
   download_count: 630
@@ -582,6 +612,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, github_user: jhennies, name: Julian Hennies, orcid: 0000-0002-0555-151X}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7274275/7274276/95a88834c6b6d6d18a38d862f287013d-coverimage.png']
+  created: '2023-07-07 10:12:51.478763'
   description: Cellular membrane prediction model for volume SEM datasets
   download_count: 513
   id: 10.5281/zenodo.7274275
@@ -604,6 +635,7 @@ collection:
   - {affiliation: Masaryk University, name: Pavel Matula}
   - {affiliation: Universidad Carlos III de Madrid, name: Arrate Muñoz-Barrutia}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559474/6559475/77c10d858047b542677d91e70b93ebc2-frunet_sev.png']
+  created: '2022-05-18 09:42:30.953891'
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
   download_count: 312
@@ -624,6 +656,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Constantin Pape}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6811491/6811492/abe71eae80a2f9eb114eeaf8eef62fec-cover.png']
+  created: '2022-07-08 14:35:48.861260'
   description: Prediction enhancer for segmenting mitochondria in EM images.
   download_count: 270
   id: 10.5281/zenodo.6811491
@@ -643,6 +676,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6808325/6808413/197a1a098f77e51f89eed59f8a06d7df-cover.png']
+  created: '2022-07-07 21:30:58.116303'
   description: Prediction enhancer for segmenting cell boundaries in EM images.
   download_count: 267
   id: 10.5281/zenodo.6808325
@@ -666,6 +700,7 @@ collection:
   - {name: Nikan Toulany}
   - {name: Patrick Mueller}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7315440/7315441/fde5fa391b0e4929988947469df4faf5-phenotypes_features.png']
+  created: '2022-11-12 12:53:32.701172'
   description: EmbryoNet Model by embryoNet Team
   download_count: 191
   id: 10.5281/zenodo.7315440
@@ -685,6 +720,7 @@ collection:
   - {name: 'Salbreux, G'}
   - {name: 'Vincent, JP'}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7380171/7405349/1e9c68dbf9a69e638d779d6d6e684204-cover.png']
+  created: '2022-12-06 13:55:39.060882'
   description: For segmenting 2D projections of drosophila epithelia
   download_count: 122
   id: 10.5281/zenodo.7380171
@@ -701,6 +737,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Fynn Beuttenmueller, orcid: 0000-0002-8567-6389}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7614645/7642674/92765fbf23e3ed69b779279305b64da0-cover.png']
+  created: '2023-02-15 09:34:43.433531'
   description: HyLFM-Net trained on static images of arrested medaka hatchling hearts.
     The network reconstructs a volumentric image from a given light-field.
   download_count: 110
@@ -722,6 +759,7 @@ collection:
   - {affiliation: Instituto Gulbenkian de Ciência, name: Estibaliz Gómez de Mariscal}
   - {affiliation: UPV/EHU, name: Ignacio Arganda}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7786492/7786493/752b97c325db94b1bcb02ca3fae4b42e-cover.png']
+  created: '2023-03-30 16:57:43.433376'
   description: Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning
     microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with
     MitoTracker and the model was trained to upsample the images by a factor of 4.
@@ -742,6 +780,7 @@ collection:
   - {name: Justin Sonneck}
   - {name: Jianxu Chen}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8064806/8073617/5a94d46b1aeacd8b241c3c79a8660a8b-cover.png']
+  created: '2023-06-23 10:23:37.255827'
   description: Label-free prediction of fluorescence images from brightield images
   download_count: 48
   id: 10.5281/zenodo.8064806
@@ -759,6 +798,7 @@ collection:
   - {affiliation: SUSTech, name: Zoufu}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6865412/6919253/0e5085a55f65fb793a7fa6aaf3dd51a8-image.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6865412/6919253/2fb29696b9e90cfb1b2784d6aba8e873-lable.png']
+  created: '2022-07-28 07:37:36.393648'
   description: DeepImageJ compatible FRUNet trained to subtly segment cells and gland.
   download_count: 38
   id: 10.5281/zenodo.6865412
@@ -776,6 +816,7 @@ collection:
   - {name: Adrian Wolny}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7772662/7781091/a21d81e2e2928509588e8e250c95a7c9-raw.png',
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7772662/7781091/092c3f1d2fe3d365e50829cb23648a8c-pmaps.png']
+  created: '2023-03-29 11:10:26.329999'
   description: Unet trained on confocal images of Arabidopsis Ovules nuclei
   download_count: 27
   id: 10.5281/zenodo.7772662
@@ -793,6 +834,7 @@ collection:
 - authors:
   - {affiliation: EMBL Heidelberg, name: Jonas Hellgoth, orcid: 0000-0003-0758-1680}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8142283/8171247/b8a9fc413eb22df6dbbe4fda717f0f28-cover.png']
+  created: '2023-07-21 09:09:49.349470'
   description: Prediction enhancer for segmenting cell boundaries in EM images.
   download_count: 10
   id: 10.5281/zenodo.8142283
