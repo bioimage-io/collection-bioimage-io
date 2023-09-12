@@ -78,6 +78,9 @@ config:
       repository: qupath/qupath-bioimage-io
       branch: main
       collection_file_name: collection.yaml
-
+    - id: stardist
+      repository: stardist/stardist-bioimage-io
+      branch: main
+      collection_file_name: collection.yaml
 
 collection: []
