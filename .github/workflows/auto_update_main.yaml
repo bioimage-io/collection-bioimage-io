@@ -144,15 +144,17 @@ jobs:
           lxml
           requests
           typer
-    - name: generate collection rdf
+          pooch
+          pillow
+    - name: generate collection rdf and thumbnails
       shell: bash -l {0}
-      run: python scripts/generate_collection_rdf.py
+      run: python scripts/generate_collection_rdf_and_thumbnails.py
     - name: Upload preview of collection.json
       if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v3
       with:
         name: preview-collection-json
-        path: dist/collection.json
+        path: dist  # /collection.json include all thumbnails in preview for now; todo: preview only collection.json again
         retention-days: 90
     - name: Deploy collection.json to gh-pages 🚀
       if: github.event_name != 'pull_request'

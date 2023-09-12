@@ -7,12 +7,11 @@ from pprint import pprint
 from typing import Optional
 
 import typer
-from boltons.iterutils import remap
-
 from bioimageio.spec.shared import yaml
-from utils import iterate_known_resources, load_yaml_dict, rec_sort
+from boltons.iterutils import remap
+from utils import deploy_thumbnails, iterate_known_resources, load_yaml_dict, rec_sort
 
-SUMMARY_FIELDS = [
+SUMMARY_FIELDS = (
     "authors",
     "badges",
     "covers",
@@ -30,7 +29,7 @@ SUMMARY_FIELDS = [
     "type",
     "versions",
     "training_data",
-]
+)
 
 SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
     "nickname",
@@ -138,12 +137,11 @@ def main(
         summary["download_count"] = download_counts.get(r.resource_id, 1)
 
         links = summary.get("links", [])
-        extend_links_from_test_summary(
-           links, gh_pages / "rdfs" / r.resource_id / version_id / "test_summary.yaml"
-        )
+        extend_links_from_test_summary(links, gh_pages / "rdfs" / r.resource_id / version_id / "test_summary.yaml")
         if links:
             summary["links"] = links
 
+        deploy_thumbnails(summary, dist, r.resource_id, version_id)
         rdf["collection"].append(summary)
         type_ = latest_version.get("type", "unknown")
         n_accepted[type_] = n_accepted.get(type_, 0) + 1
