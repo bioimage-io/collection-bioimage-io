@@ -10,13 +10,13 @@ from bioimageio.spec.shared import yaml
 def main(artifact_dir: Path = typer.Argument(..., help="folder with validation artifacts")):
     """check validation summaries in artifact folder"""
     failed_val = []
-    for sp in sorted(artifact_dir.glob(f"**/validation_summary*.yaml"), key=os.path.getmtime):
+    for sp in sorted(artifact_dir.glob("**/validation_summary*.yaml"), key=os.path.getmtime):
         summary = yaml.load(sp)
         if isinstance(summary, dict):
             summary = [summary]
 
         for s in summary:
-            if s["error"]:
+            if s["status"] != "passed":
                 s["id"] = sp.stem
                 failed_val.append(summary)
 
