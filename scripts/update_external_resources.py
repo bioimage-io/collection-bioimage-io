@@ -9,7 +9,6 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 
 import requests
 import typer
-
 from bare_utils import set_gh_actions_outputs
 from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, split_animal_nickname, yaml
 
@@ -145,7 +144,7 @@ def update_from_zenodo(
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]],
     ignore_status_5xx: bool,
 ):
-    download_counts = {}
+    download_counts: Dict[str, int] = {}
     for page in range(1, 1000):
         zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
         r = requests.get(zenodo_request)
@@ -160,8 +159,8 @@ def update_from_zenodo(
             break
 
         for hit in hits:
-            resource_doi = hit["conceptdoi"]
-            doi = hit["doi"]  # "version" doi
+            resource_doi: str = hit["conceptdoi"]
+            doi: str = hit["doi"]  # "version" doi
             created = datetime.fromisoformat(hit["created"]).replace(tzinfo=None)
             assert isinstance(created, datetime), created
             resource_path = collection / resource_doi / "resource.yaml"
@@ -227,6 +226,11 @@ def update_from_zenodo(
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
+
+    with Path("download_counts_offsets.json").open() as f:
+        download_counts_offsets = json.load(f)
+
+    download_counts = {k: v + download_counts_offsets.get(k, 0) for k, v in download_counts.items()}
 
     dist.mkdir(parents=True, exist_ok=True)
     with (dist / "download_counts.json").open("w", encoding="utf-8") as f:
