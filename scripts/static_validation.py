@@ -212,10 +212,10 @@ def main(
         static_summary_path = dist / resource_id / version_id / "validation_summary_static.yaml"
         static_summary_path.parent.mkdir(parents=True, exist_ok=True)
         yaml.dump(static_summary, static_summary_path)
-        if not static_summary["error"]:
+        if static_summary["status"] == "passed":
             # validate rdf using the latest format version
             latest_static_summary = validate(rdf_path, update_format=True)
-            if not latest_static_summary["error"]:
+            if latest_static_summary["status"] == "passed":
                 rd = load_raw_resource_description(rdf_path, update_to_format="latest")
                 assert isinstance(rd, RDF_Base)
                 dynamic_test_cases += prepare_dynamic_test_cases(rd, resource_id, version_id, dist)

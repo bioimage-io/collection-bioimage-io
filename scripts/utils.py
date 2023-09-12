@@ -2,6 +2,7 @@ import copy
 import dataclasses
 import json
 import pathlib
+import shutil
 import warnings
 from hashlib import sha256
 from itertools import product
@@ -10,9 +11,6 @@ from typing import Any, Dict, Generator, List, Optional, Sequence, Tuple, Union
 
 import numpy
 import requests
-from marshmallow import missing
-from ruamel.yaml import YAML, comments
-
 from bare_utils import DEPLOYED_BASE_URL, GH_API_URL
 from bioimageio.spec import (
     load_raw_resource_description,
@@ -21,6 +19,7 @@ from bioimageio.spec import (
 from bioimageio.spec.collection.v0_2.raw_nodes import Collection
 from bioimageio.spec.collection.v0_2.utils import resolve_collection_entries
 from bioimageio.spec.partner.utils import enrich_partial_rdf_with_imjoy_plugin
+from ruamel.yaml import YAML, comments
 
 
 # todo: use MyYAML from bioimageio.spec. see comment below
@@ -268,7 +267,6 @@ def write_rdfs_for_resource(resource: dict, dist: Path, only_for_version_id: Opt
         rdf["rdf_source"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/rdf.yaml"
 
         rdf.pop("root_path", None)
-        assert missing not in rdf.values(), rdf
 
         # sort rdf to avoid random diffs
         rdf = rec_sort(rdf)
@@ -385,3 +383,63 @@ def load_yaml_dict(path: Path, raise_missing_keys: Sequence[str]) -> Optional[Di
         raise KeyError(f"Expected missing keys {missing} in {path}")
 
     return data
+
+
+def downsize_image(image_path: Path, dist: Path, size: Tuple[int, int]):
+    """downsize or copy an image"""
+    from PIL import Image
+
+    output_path = dist / f"{image_path.stem}.png"
+    try:
+        with Image.open(image_path) as img:
+            img.thumbnail(size)
+            img.save(output_path, "PNG")
+    except Exception as e:
+        warnings.warn(str(e))
+        output_path = output_path.with_name(image_path.name)
+        shutil.copy(image_path, output_path)
+
+    return output_path
+
+
+def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, resource_id: str, version_id: str) -> None:
+    import pooch
+
+    dist /= f"rdfs/{resource_id}/{version_id}"
+    dist.mkdir(exist_ok=True, parents=True)
+    covers: Union[Any, List[Any]] = rdf_like.get("covers")
+    if isinstance(covers, list):
+        for i, cover_url in enumerate(covers):
+            if not isinstance(cover_url, str) or cover_url.startswith(DEPLOYED_BASE_URL):
+                continue  # invalid or already cached
+
+            try:
+                downloaded_cover = Path(pooch.retrieve(cover_url, None))  # type: ignore
+            except Exception as e:
+                warnings.warn(str(e))
+                continue
+
+            resized_cover = downsize_image(downloaded_cover, dist, size=(600, 340))
+
+            rdf_like["covers"][i] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/{resized_cover.name}"
+
+    badges: Union[Any, List[Union[Any, Dict[Any, Any]]]] = rdf_like.get("badges")
+    if isinstance(badges, list):
+        for i, badge in enumerate(badges):
+            if not isinstance(badge, dict):
+                continue
+
+            icon = badge.get("icon")
+            if not isinstance(icon, str) or not icon.startswith("https://zenodo.org/api/files/"):
+                # only cache badges stored on zenodo
+                continue
+
+            try:
+                downloaded_icon = Path(pooch.retrieve(icon, None, path=dist))  # type: ignore
+            except Exception as e:
+                warnings.warn(str(e))
+                continue
+
+            resized_icon = downsize_image(downloaded_icon, dist, size=(320, 320))
+
+            rdf_like["badges"][i]["icon"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/{resized_icon.name}"
