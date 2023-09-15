@@ -141,7 +141,7 @@ def main(
         if links:
             summary["links"] = links
 
-        deploy_thumbnails(summary, dist, r.resource_id, version_id)
+        deploy_thumbnails(summary, dist, gh_pages, r.resource_id, version_id)
         rdf["collection"].append(summary)
         type_ = latest_version.get("type", "unknown")
         n_accepted[type_] = n_accepted.get(type_, 0) + 1

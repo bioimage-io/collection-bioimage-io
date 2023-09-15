@@ -6,8 +6,9 @@ import shutil
 import warnings
 from hashlib import sha256
 from itertools import product
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any, Dict, Generator, List, Optional, Sequence, Tuple, Union
+from urllib.parse import urlsplit
 
 import numpy
 import requests
@@ -385,27 +386,24 @@ def load_yaml_dict(path: Path, raise_missing_keys: Sequence[str]) -> Optional[Di
     return data
 
 
-def downsize_image(image_path: Path, dist: Path, size: Tuple[int, int]):
+def downsize_image(image_path: Path, output_path: Path, size: Tuple[int, int]):
     """downsize or copy an image"""
     from PIL import Image
 
-    output_path = dist / f"{image_path.stem}.png"
     try:
         with Image.open(image_path) as img:
             img.thumbnail(size)
             img.save(output_path, "PNG")
     except Exception as e:
         warnings.warn(str(e))
-        output_path = output_path.with_name(image_path.name)
         shutil.copy(image_path, output_path)
 
-    return output_path
 
-
-def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, resource_id: str, version_id: str) -> None:
+def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, gh_pages: Path, resource_id: str, version_id: str) -> None:
     import pooch
 
     dist /= f"rdfs/{resource_id}/{version_id}"
+    gh_pages /= f"rdfs/{resource_id}/{version_id}"
     dist.mkdir(exist_ok=True, parents=True)
     covers: Union[Any, List[Any]] = rdf_like.get("covers")
     if isinstance(covers, list):
@@ -413,15 +411,17 @@ def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, resource_id: str, ve
             if not isinstance(cover_url, str) or cover_url.startswith(DEPLOYED_BASE_URL):
                 continue  # invalid or already cached
 
-            try:
-                downloaded_cover = Path(pooch.retrieve(cover_url, None))  # type: ignore
-            except Exception as e:
-                warnings.warn(str(e))
-                continue
+            cover_file_name = PurePosixPath(urlsplit(cover_url).path).name
+            if not (gh_pages / cover_file_name).exists():
+                try:
+                    downloaded_cover = Path(pooch.retrieve(cover_url, None))  # type: ignore
+                except Exception as e:
+                    warnings.warn(str(e))
+                    continue
 
-            resized_cover = downsize_image(downloaded_cover, dist, size=(600, 340))
+                downsize_image(downloaded_cover, dist / cover_file_name, size=(600, 340))
 
-            rdf_like["covers"][i] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/{resized_cover.name}"
+            rdf_like["covers"][i] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/{cover_file_name}"
 
     badges: Union[Any, List[Union[Any, Dict[Any, Any]]]] = rdf_like.get("badges")
     if isinstance(badges, list):
