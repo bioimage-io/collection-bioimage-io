@@ -125,7 +125,7 @@ def resolve_partners(
                 assert isinstance(partner_collection, Collection)
             except Exception as e:
                 warnings.warn(
-                    f"Invalid partner source {partner['source']} (Cannot update to format {current_format}): {e}"
+                    f"Invalid partner source {partner.get('source')} (Cannot update to format {current_format}): {e}"
                 )
                 ignored_partners.add(f"partner[{idx}]")
                 continue
