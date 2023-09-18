@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.8346993
+id: 10.5281/zenodo.8346993
+nickname: amusing-sloth
+nickname_icon: 🦥
+owners:
+- 604446
+status: accepted
+type: model
+versions:
+- created: '2023-09-14 20:40:55.222847'
+  doi: 10.5281/zenodo.8346994
+  name: filoTips default
+  status: accepted
+  version_id: '8346994'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/8ff973b9-35e9-4ef0-86a9-65123a6a82bf/rdf.yaml
