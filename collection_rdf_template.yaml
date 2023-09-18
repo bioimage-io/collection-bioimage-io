@@ -39,7 +39,7 @@ config:
       branch: master
       collection_file_name: manifest.bioimage.io.yaml
     - id: deepimagej
-      repository: deepimagej/models
+      repository: fynnbe/models
       branch: master
       collection_file_name: manifest.bioimage.io.yaml
       test_summaries:
