@@ -10,7 +10,15 @@ versions:
     badges: []
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: KTH
+          url: https://www.kth.se/en
+        email: wei.ouyang@scilifelab.se
+        github: oeway
+        name: Wei Ouyang
       default_type: application
+      docs: https://imjoy.io/docs/#/
       explore_button_text: Start Exploring
       icon: https://imjoy.io/static/img/imjoy-icon.svg
       id: imjoy
@@ -32,10 +40,12 @@ versions:
     description: ImageJ running in the browser
     documentation: https://imjoy.io/docs
     format_version: 0.2.3
-    icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
+    icon: 
+      https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
     id: imjoy/ImageJ.JS
     name: ImageJ.JS
-    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
+    source: 
+      https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
     tags:
     - software
     - bioengine

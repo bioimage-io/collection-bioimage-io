@@ -10,7 +10,15 @@ versions:
     badges: []
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: KTH
+          url: https://www.kth.se/en
+        email: wei.ouyang@scilifelab.se
+        github: oeway
+        name: Wei Ouyang
       default_type: application
+      docs: https://imjoy.io/docs/#/
       explore_button_text: Start Exploring
       icon: https://imjoy.io/static/img/imjoy-icon.svg
       id: imjoy
@@ -32,10 +40,12 @@ versions:
     description: Run the HPA single cell classification model via the the BioEngine
     documentation: https://imjoy.io/docs
     format_version: 0.2.3
-    icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
+    icon: 
+      https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
     id: imjoy/HPA-Single-Cell
     name: HPA Single Cell
-    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html
+    source: 
+      https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html
     tags:
     - bioengine
     type: application

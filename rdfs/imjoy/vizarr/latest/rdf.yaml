@@ -5,7 +5,15 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://www.kth.se/en
+    email: wei.ouyang@scilifelab.se
+    github: oeway
+    name: Wei Ouyang
   default_type: application
+  docs: https://imjoy.io/docs/#/
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg
   id: imjoy
@@ -31,8 +39,10 @@ format_version: 0.2.3
 icon: https://raw.githubusercontent.com/hms-dbmi/vizarr/main/assets/logo.png
 id: imjoy/vizarr/latest
 name: vizarr
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml
-source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/vizarr/latest/rdf.yaml
+source: 
+  https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/vizarr.imjoy.html
 tags:
 - bioengine
 type: application

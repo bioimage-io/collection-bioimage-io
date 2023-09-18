@@ -5,7 +5,15 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://www.kth.se/en
+    email: wei.ouyang@scilifelab.se
+    github: oeway
+    name: Wei Ouyang
   default_type: application
+  docs: https://imjoy.io/docs/#/
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg
   id: imjoy
@@ -27,11 +35,14 @@ covers: []
 description: Run the HPA single cell classification model via the the BioEngine
 documentation: https://imjoy.io/docs
 format_version: 0.2.3
-icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
+icon: 
+  https://raw.githubusercontent.com/ilastik/bioimage-io-models/07147313b07f6842f0b9890ee7a79e47c44258e5/image/circular-play-button.png
 id: imjoy/HPA-Single-Cell/latest
 name: HPA Single Cell
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/HPA-Single-Cell/latest/rdf.yaml
-source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/HPA-Single-Cell/latest/rdf.yaml
+source: 
+  https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/hpa-single-cell-bioengine.imjoy.html
 tags:
 - bioengine
 type: application

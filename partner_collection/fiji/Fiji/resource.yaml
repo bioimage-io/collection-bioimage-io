@@ -15,6 +15,14 @@ versions:
         platform for biological-image analysis. Nat Methods 9, 676–682 (2012).'
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: HT
+          url: https://humantechnopole.it/en/
+        email: florian.jug@fht.org
+        github: fjug
+        name: Florian Jug
+      docs: https://imagej.net/software/fiji/
       explore_button_text: Start Exploring
       icon: https://fiji.sc/site/logo.png
       id: fiji
@@ -34,7 +42,8 @@ versions:
     documentation: https://fiji.sc/
     format_version: 0.2.3
     git_repo: https://github.com/fiji/fiji,
-    icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
+    icon: 
+      https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
     id: fiji/Fiji
     name: Fiji
     source: https://fiji.sc/

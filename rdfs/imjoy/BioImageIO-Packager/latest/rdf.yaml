@@ -5,7 +5,15 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://www.kth.se/en
+    email: wei.ouyang@scilifelab.se
+    github: oeway
+    name: Wei Ouyang
   default_type: application
+  docs: https://imjoy.io/docs/#/
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg
   id: imjoy
@@ -27,11 +35,14 @@ covers: []
 description: Exporting BioImage.IO model packages from the model description file
 documentation: https://imjoy.io/docs
 format_version: 0.2.3
-icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
+icon: 
+  https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/download-icon.png
 id: imjoy/BioImageIO-Packager/latest
 name: BioImageIO-Packager
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml
-source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/BioImageIO-Packager/latest/rdf.yaml
+source: 
+  https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/bioimageio-packager.imjoy.html
 tags:
 - bioengine
 type: application

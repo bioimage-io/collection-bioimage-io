@@ -14,7 +14,8 @@ authors:
 badges:
 - icon: https://colab.research.google.com/assets/colab-badge.svg
   label: Open in Colab
-  url: https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb
+  url: 
+    https://colab.research.google.com/github/BIIG-UC3M/FRU-Net-TEM-segmentation/blob/main/FRUnet_TEM_Exosomes_sEV.ipynb
 cite:
 - doi: https://doi.org/10.1038/s41598-019-49431-3
   text: Gómez-de-Mariscal, E. et al., Deep-Learning-Based Segmentation of SmallExtracellular
@@ -25,6 +26,20 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: UC3M
+      url: https://www.uc3m.es/home
+    email: mamunozb@ing.uc3m.es
+    github: arratemunoz
+    name: Arrate Muñoz Barrutia
+  - affiliation:
+    - name: EPFL
+      url: https://www.epfl.ch/en/
+    email: daniel.sage@epfl.ch
+    github: dasv74
+    name: Daniel Sage
+  docs: https://github.com/deepimagej/deepimagej-plugin/wiki
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej
@@ -47,15 +62,18 @@ description: Ready to use notebook for the segmentation of small extrcaellular v
   in transmission electron microscopy (TEM) images. The notebook is optimized to use
   it in Google Colaboratory. It will download the original code and dataset, and make
   the inference connecting with Google's GPU.
-documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
+documentation: 
+  https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
 format_version: 0.2.3
 id: deepimagej/EVsTEMsegmentationFRUNet/latest
 links:
 - deepimagej/FRUNet2DsEVSegmentation
 maintainers: []
 name: Small extracellular vesicle instance segmentation (FRU-Net)
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
-source: https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/EVsTEMsegmentationFRUNet/latest/rdf.yaml
+source: 
+  https://raw.githubusercontent.com/BIIG-UC3M/FRU-Net-TEM-segmentation/master/FRUnet_TEM_Exosomes_sEV.ipynb
 tags:
 - extracellular-vesicles
 - segmentation

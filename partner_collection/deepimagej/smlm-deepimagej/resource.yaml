@@ -19,6 +19,20 @@ versions:
       text: M. Ovesný, et al., Bioinformatics 2014
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: UC3M
+          url: https://www.uc3m.es/home
+        email: mamunozb@ing.uc3m.es
+        github: arratemunoz
+        name: Arrate Muñoz Barrutia
+      - affiliation:
+        - name: EPFL
+          url: https://www.epfl.ch/en/
+        email: daniel.sage@epfl.ch
+        github: dasv74
+        name: Daniel Sage
+      docs: https://github.com/deepimagej/deepimagej-plugin/wiki
       explore_button_text: Start Exploring
       icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
       id: deepimagej
@@ -38,14 +52,17 @@ versions:
     - https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/cover.png
     description: Single molecule localization microscopy (SMLM) processing using deepImageJ
       and ThunderSTORM in an ImageJ macro.
-    documentation: https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
-    download_url: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+    documentation: 
+      https://raw.githubusercontent.com/deepimagej/models/master/workflows/smlm_deepstorm/README.md
+    download_url: 
+      https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     format_version: 0.2.3
     icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
     id: deepimagej/smlm-deepimagej
     maintainers: []
     name: SMLM-superresolution
-    source: https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
+    source: 
+      https://raw.githubusercontent.com/deepimagej/imagej-macros/master/DeepSTORM4stacksThunderSTORM.ijm
     tags:
     - deepimagej
     - smlm

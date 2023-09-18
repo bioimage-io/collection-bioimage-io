@@ -17,7 +17,18 @@ versions:
       text: Cell Detection with Star-convex Polygons. MICCAI (2018).
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - email: research@uweschmidt.org
+        github: uschmidt83
+        name: Uwe Schmidt
+      - affiliation:
+        - name: EPFL
+          url: https://www.epfl.ch/en/
+        email: martin.weigert@epfl.ch
+        github: maweigert
+        name: Martin Weigert
       default_type: model
+      docs: https://github.com/stardist/stardist
       explore_button_text: Start Exploring
       icon: 
         https://raw.githubusercontent.com/stardist/stardist-bioimage-io/main/logos/stardist_256.png

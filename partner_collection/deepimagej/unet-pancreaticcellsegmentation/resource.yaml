@@ -15,13 +15,28 @@ versions:
     badges:
     - icon: https://colab.research.google.com/assets/colab-badge.svg
       label: Open in Colab
-      url: https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+      url: 
+        https://colab.research.google.com/github/deepimagej/models/blob/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     cite:
     - doi: https://doi.org/10.1038/s41592-018-0261-2
       text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting,
         detection, and morphometry. Nat Methods 16, 67–70 (2019).'
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: UC3M
+          url: https://www.uc3m.es/home
+        email: mamunozb@ing.uc3m.es
+        github: arratemunoz
+        name: Arrate Muñoz Barrutia
+      - affiliation:
+        - name: EPFL
+          url: https://www.epfl.ch/en/
+        email: daniel.sage@epfl.ch
+        github: dasv74
+        name: Daniel Sage
+      docs: https://github.com/deepimagej/deepimagej-plugin/wiki
       explore_button_text: Start Exploring
       icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
       id: deepimagej
@@ -49,7 +64,8 @@ versions:
     - deepimagej/UNet2DPancreaticSegmentation
     maintainers: []
     name: 2D U-Net for binary segmentation
-    source: https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
+    source: 
+      https://raw.githubusercontent.com/deepimagej/models/master/u-net_pancreatic_segmentation/U_Net_PhC_C2DL_PSC_segmentation.ipynb
     tags:
     - unet
     - segmentation

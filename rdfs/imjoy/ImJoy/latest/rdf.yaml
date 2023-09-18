@@ -5,7 +5,15 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://www.kth.se/en
+    email: wei.ouyang@scilifelab.se
+    github: oeway
+    name: Wei Ouyang
   default_type: application
+  docs: https://imjoy.io/docs/#/
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg
   id: imjoy
@@ -30,8 +38,10 @@ format_version: 0.2.3
 icon: https://imjoy.io/static/img/imjoy-icon.png
 id: imjoy/ImJoy/latest
 name: ImJoy
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml
-source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImJoy/latest/rdf.yaml
+source: 
+  https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
 tags:
 - software
 - imjoy

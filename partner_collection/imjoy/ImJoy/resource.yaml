@@ -10,7 +10,15 @@ versions:
     badges: []
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: KTH
+          url: https://www.kth.se/en
+        email: wei.ouyang@scilifelab.se
+        github: oeway
+        name: Wei Ouyang
       default_type: application
+      docs: https://imjoy.io/docs/#/
       explore_button_text: Start Exploring
       icon: https://imjoy.io/static/img/imjoy-icon.svg
       id: imjoy
@@ -35,7 +43,8 @@ versions:
     icon: https://imjoy.io/static/img/imjoy-icon.png
     id: imjoy/ImJoy
     name: ImJoy
-    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
+    source: 
+      https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imjoy-app.imjoy.html
     tags:
     - software
     - imjoy

@@ -6,7 +6,15 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://www.kth.se/en
+    email: wei.ouyang@scilifelab.se
+    github: oeway
+    name: Wei Ouyang
   default_type: application
+  docs: https://imjoy.io/docs/#/
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg
   id: imjoy
@@ -28,14 +36,16 @@ covers:
 - https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png
 description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
 documentation: https://imjoy.io/docs
-download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
+download_url: 
+  https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
 format_version: 0.2.3
 id: imjoy/LuCa-7color/latest
 license: CC-BY-4.0
 links:
 - imjoy/vizarr
 name: LuCa-7color
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/LuCa-7color/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/LuCa-7color/latest/rdf.yaml
 source: https://viv-demo.storage.googleapis.com/LuCa-7color_Scan1/data.zarr/0
 tags:
 - OME-TIFF

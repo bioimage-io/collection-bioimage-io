@@ -5,7 +5,15 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: KTH
+      url: https://www.kth.se/en
+    email: wei.ouyang@scilifelab.se
+    github: oeway
+    name: Wei Ouyang
   default_type: application
+  docs: https://imjoy.io/docs/#/
   explore_button_text: Start Exploring
   icon: https://imjoy.io/static/img/imjoy-icon.svg
   id: imjoy
@@ -27,11 +35,14 @@ covers: []
 description: ImageJ running in the browser
 documentation: https://imjoy.io/docs
 format_version: 0.2.3
-icon: https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
+icon: 
+  https://raw.githubusercontent.com/imjoy-team/imagej.js/master/src/assets/icons/chrome/chrome-installprocess-128-128.png
 id: imjoy/ImageJ.JS/latest
 name: ImageJ.JS
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
-source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/imjoy/ImageJ.JS/latest/rdf.yaml
+source: 
+  https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/imagej-js.imjoy.html
 tags:
 - software
 - bioengine

@@ -15,6 +15,20 @@ versions:
       text: Neeraj Kumar et al. Transactions on medical imaging 2020
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: UC3M
+          url: https://www.uc3m.es/home
+        email: mamunozb@ing.uc3m.es
+        github: arratemunoz
+        name: Arrate Muñoz Barrutia
+      - affiliation:
+        - name: EPFL
+          url: https://www.epfl.ch/en/
+        email: daniel.sage@epfl.ch
+        github: dasv74
+        name: Daniel Sage
+      docs: https://github.com/deepimagej/deepimagej-plugin/wiki
       explore_button_text: Start Exploring
       icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
       id: deepimagej

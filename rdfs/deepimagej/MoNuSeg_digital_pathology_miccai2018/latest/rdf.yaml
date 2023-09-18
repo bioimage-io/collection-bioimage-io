@@ -10,6 +10,20 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: UC3M
+      url: https://www.uc3m.es/home
+    email: mamunozb@ing.uc3m.es
+    github: arratemunoz
+    name: Arrate Muñoz Barrutia
+  - affiliation:
+    - name: EPFL
+      url: https://www.epfl.ch/en/
+    email: daniel.sage@epfl.ch
+    github: dasv74
+    name: Daniel Sage
+  docs: https://github.com/deepimagej/deepimagej-plugin/wiki
   explore_button_text: Start Exploring
   icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
   id: deepimagej
@@ -36,7 +50,8 @@ format_version: 0.2.3
 id: deepimagej/MoNuSeg_digital_pathology_miccai2018/latest
 maintainers: []
 name: Multi-Organ Nucleus Segmentation Challenge - MICCAI 2018
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/MoNuSeg_digital_pathology_miccai2018/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/MoNuSeg_digital_pathology_miccai2018/latest/rdf.yaml
 source: https://monuseg.grand-challenge.org/Data/
 tags:
 - StarDist

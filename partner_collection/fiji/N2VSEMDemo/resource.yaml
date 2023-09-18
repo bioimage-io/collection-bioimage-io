@@ -27,8 +27,10 @@ versions:
     covers:
     - https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/thumbnail.png
     description: Demo model for denoising trained on a single SEM image with Noise2Void
-    documentation: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/README.md
-    download_url: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+    documentation: 
+      https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/README.md
+    download_url: 
+      https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
     format_version: 0.3.6
     framework: tensorflow
     id: fiji/N2VSEMDemo
@@ -109,5 +111,6 @@ versions:
         - affiliation: MDC Berlin
           name: Deborah Schmidt
         sha256: c55ab5528ec0dd8b3e00062df155ba00aef4971d7eacc3ed2d41db1f25917994
-        source: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.3.1/n2v-sem-demo_savedmodelbundle.zip
+        source: 
+          https://github.com/bioimage-io/fiji-bioimage-io/releases/download/v0.3.1/n2v-sem-demo_savedmodelbundle.zip
         tensorflow_version: 1.13.1

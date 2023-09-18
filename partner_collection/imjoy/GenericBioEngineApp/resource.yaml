@@ -10,7 +10,15 @@ versions:
     badges: []
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: KTH
+          url: https://www.kth.se/en
+        email: wei.ouyang@scilifelab.se
+        github: oeway
+        name: Wei Ouyang
       default_type: application
+      docs: https://imjoy.io/docs/#/
       explore_button_text: Start Exploring
       icon: https://imjoy.io/static/img/imjoy-icon.svg
       id: imjoy
@@ -32,10 +40,12 @@ versions:
     description: An generic BioEngine for processing images
     documentation: https://imjoy.io/docs
     format_version: 0.2.3
-    icon: https://raw.githubusercontent.com/imjoy-team/bioimage-io-resources/master/src/bioengine-icon.svg
+    icon: 
+      https://raw.githubusercontent.com/imjoy-team/bioimage-io-resources/master/src/bioengine-icon.svg
     id: imjoy/GenericBioEngineApp
     name: GenericBioEngineApp
-    source: https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/generic-bioengine-app.imjoy.html
+    source: 
+      https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/src/generic-bioengine-app.imjoy.html
     tags:
     - bioengine
     type: application

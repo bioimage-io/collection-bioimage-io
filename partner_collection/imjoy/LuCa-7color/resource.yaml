@@ -11,7 +11,15 @@ versions:
     - name: Perkin Elmer
     config:
       background_image: static/img/zoo-background.svg
+      contact:
+      - affiliation:
+        - name: KTH
+          url: https://www.kth.se/en
+        email: wei.ouyang@scilifelab.se
+        github: oeway
+        name: Wei Ouyang
       default_type: application
+      docs: https://imjoy.io/docs/#/
       explore_button_text: Start Exploring
       icon: https://imjoy.io/static/img/imjoy-icon.svg
       id: imjoy
@@ -33,7 +41,8 @@ versions:
     - https://raw.githubusercontent.com/imjoy-team/bioimage-io-models/master/asset/LuCa-7color_Scan1.png
     description: Sample PerkinElmer Vectra QPTIFF files (c) PerkinElmer (http://www.perkinelmer.com)
     documentation: https://imjoy.io/docs
-    download_url: https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
+    download_url: 
+      https://downloads.openmicroscopy.org/images/Vectra-QPTIFF/perkinelmer/PKI_scans/LuCa-7color_Scan1.qptiff
     format_version: 0.2.3
     id: imjoy/LuCa-7color
     license: CC-BY-4.0

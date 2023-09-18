@@ -10,6 +10,14 @@ config:
     status: accepted
     version_id: latest
     version_name: latest
+  contact:
+  - affiliation:
+    - name: HT
+      url: https://humantechnopole.it/en/
+    email: florian.jug@fht.org
+    github: fjug
+    name: Florian Jug
+  docs: https://imagej.net/software/fiji/
   explore_button_text: Start Exploring
   icon: https://fiji.sc/site/logo.png
   id: fiji
@@ -29,10 +37,12 @@ description: Fiji is an image processing package — a "batteries-included" dist
 documentation: https://fiji.sc/
 format_version: 0.2.3
 git_repo: https://github.com/fiji/fiji,
-icon: https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
+icon: 
+  https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/Fiji-icon.png
 id: fiji/Fiji/latest
 name: Fiji
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/Fiji/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/fiji/Fiji/latest/rdf.yaml
 source: https://fiji.sc/
 tags:
 - fiji
