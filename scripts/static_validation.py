@@ -2,21 +2,18 @@ import shutil
 import warnings
 from functools import partialmethod
 from pathlib import Path
-from typing import Dict, List, Literal, Optional, Union
+from typing import Dict, List, Optional, Union
 
 import requests
 import typer
-from marshmallow import missing
-from marshmallow.utils import _Missing
-from packaging.version import Version
-from tqdm import tqdm
-
 from bare_utils import set_gh_actions_outputs
 from bioimageio.spec import load_raw_resource_description, validate
 from bioimageio.spec.model.raw_nodes import Model, WeightsFormat
 from bioimageio.spec.rdf.raw_nodes import RDF_Base
 from bioimageio.spec.shared import yaml
-from bioimageio.spec.shared.raw_nodes import Dependencies, URI
+from bioimageio.spec.shared.raw_nodes import URI, Dependencies
+from packaging.version import Version
+from tqdm import tqdm
 from utils import ADJECTIVES, ANIMALS, iterate_over_gh_matrix, split_animal_nickname
 
 tqdm.__init__ = partialmethod(tqdm.__init__, disable=True)  # silence tqdm
@@ -109,7 +106,7 @@ def get_default_env(
 
 def write_conda_env_file(*, rd: Model, weight_format: WeightsFormat, path: Path, env_name: str):
     assert isinstance(rd, Model)
-    given_versions: Dict[str, Union[_Missing, Version]] = {}
+    given_versions: Dict[str, Union[None, Version]] = {}
     default_versions = dict(pytorch_version=Version("1.10"), tensorflow_version=Version("1.15"), opset_version=15)
     if weight_format in ["pytorch_state_dict", "torchscript"]:
         given_versions["pytorch_version"] = rd.weights[weight_format].pytorch_version
@@ -121,7 +118,7 @@ def write_conda_env_file(*, rd: Model, weight_format: WeightsFormat, path: Path,
         raise NotImplementedError(weight_format)
 
     deps = rd.weights[weight_format].dependencies
-    if deps is missing:
+    if not deps:
         conda_env = get_default_env(**{vn: v or default_versions[vn] for vn, v in given_versions.items()})
     else:
         if any(given_versions.values()):
@@ -194,8 +191,8 @@ def main(
 
         # validate nickname and nickname_icon
         rdf = yaml.load(rdf_path)
-        nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname", missing)
-        if nickname is not missing:
+        nickname = rdf.get("config", {}).get("bioimageio", {}).get("nickname")
+        if nickname:
             adjective, animal = split_animal_nickname(nickname)
             assert adjective in ADJECTIVES, f"'{adjective}' not in adjectives.txt"
             assert animal in ANIMALS
