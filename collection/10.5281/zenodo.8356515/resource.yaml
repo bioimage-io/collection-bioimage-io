@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.8356515
+id: 10.5281/zenodo.8356515
+nickname: unassuming-dove
+nickname_icon: 🕊
+owners:
+- 611313
+status: accepted
+type: model
+versions:
+- created: '2023-09-18 17:40:36.855733'
+  doi: 10.5281/zenodo.8356516
+  name: BasicUNet-Pathology nuclick annotation
+  status: blocked  # test output shape mismatch
+  version_id: '8356516'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/764ad620-aef1-42b3-b226-93650ae58166/rdf.yaml
