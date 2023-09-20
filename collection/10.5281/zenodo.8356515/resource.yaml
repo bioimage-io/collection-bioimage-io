@@ -7,10 +7,17 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-09-19 08:51:03.752019'
+  doi: 10.5281/zenodo.8358778
+  name: BasicUNet-Pathology nuclick annotation
+  status: accepted
+  version_id: '8358778'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/aca608d0-8495-4011-8f31-b7ce27c259d9/rdf.yaml
 - created: '2023-09-18 17:40:36.855733'
   doi: 10.5281/zenodo.8356516
   name: BasicUNet-Pathology nuclick annotation
-  status: blocked  # test output shape mismatch
+  status: blocked
   version_id: '8356516'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/764ad620-aef1-42b3-b226-93650ae58166/rdf.yaml
