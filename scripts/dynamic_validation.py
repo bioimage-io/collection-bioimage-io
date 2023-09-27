@@ -1,14 +1,13 @@
 import traceback
 from functools import partialmethod
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Sequence
 
 import typer
-from marshmallow import missing
-from tqdm import tqdm
-
 from bioimageio.spec import load_raw_resource_description
 from bioimageio.spec.shared import yaml
+from marshmallow import missing
+from tqdm import tqdm
 
 tqdm.__init__ = partialmethod(tqdm.__init__, disable=True)  # silence tqdm
 
@@ -24,7 +23,7 @@ def main(
     resource_id: str,
     version_id: str,
     weight_format: Optional[str] = typer.Argument(..., help="weight format to test model with."),
-    rdf_dirs: List[Path] = (Path(__file__).parent / "../artifacts/static_validation_artifact",),
+    rdf_dirs: Sequence[Path] = (Path(__file__).parent / "../artifacts/static_validation_artifact",),
     create_env_outcome: str = "success",
     # rdf_source might assume a resource has been deployed, if not (e.g. in a PR), rdf_source is expected to be invalid.
     ignore_rdf_source_field_in_validation: bool = False,
