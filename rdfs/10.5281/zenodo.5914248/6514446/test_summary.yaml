@@ -61,6 +61,56 @@ tests:
   ilastik:
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong']
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: local variable 'rd' referenced before assignment
+    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
+        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
+        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 224, in _test_load_resource\n    return rd, load_summary\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: 'Failed to download https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/unet_pancreatic_cell_segmentation.h5
       (404 Client Error: NOT FOUND for url: https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/unet_pancreatic_cell_segmentation.h5)'
     name: load resource description
@@ -103,41 +153,6 @@ tests:
         line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\") from e\n"]
     warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: load resource description
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: ['Device management is not implemented for keras yet,
-          cannot unload model', Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Model tensorflow version (1, 15) does not match
-          1.14.0.The prediction results may be wrong']
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -171,18 +186,3 @@ tests:
           prediction results may be wrong', 'Device management is not implemented
           for keras yet, cannot unload model', Computed dataset percentiles naively
           by averaging percentiles of samples.]
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: local variable 'rd' referenced before assignment
-    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
-    nested_errors: null
-    status: failed
-    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
-        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
-        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 224, in _test_load_resource\n    return rd, load_summary\n"]
-    warnings: {}
