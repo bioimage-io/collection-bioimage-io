@@ -124,22 +124,6 @@ tests:
           To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
           or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
           (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755885937/work/aten/src/ATen/native/BinaryOps.cpp:607.)']
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: No module named 'onnxruntime'
-    name: reproduce test outputs from test inputs
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
-        weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 205, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
-        devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 132, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
-        line 5, in <module>\n    import onnxruntime as rt\n"]
-    warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -168,28 +152,6 @@ tests:
     name: reproduce test outputs from test inputs
     status: passed
     traceback: null
-    warnings:
-      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
-          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
-          function NOT ''floor''). This results in incorrect rounding for negative
-          values.
-
-          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
-          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
-          (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755885937/work/aten/src/ATen/native/BinaryOps.cpp:607.)']
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
@@ -206,4 +168,42 @@ tests:
         line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: No module named 'onnxruntime'
+    name: reproduce test outputs from test inputs
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
+        weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 205, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
+        devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 132, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
+        line 5, in <module>\n    import onnxruntime as rt\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
+          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
+          function NOT ''floor''). This results in incorrect rounding for negative
+          values.
+
+          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
+          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
+          (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755885937/work/aten/src/ATen/native/BinaryOps.cpp:607.)']
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
     warnings: {}

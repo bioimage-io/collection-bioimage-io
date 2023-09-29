@@ -53,32 +53,31 @@ tests:
   - {bioimageio_spec_version: 0.4.8post1, error: rdf does not have a compatible weight
       format, name: Initial compatibility checks with DeepImageJ, status: failed}
   ilastik:
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: load resource description
-    nested_errors: null
     status: passed
     traceback: null
     warnings: {}
   - {error: null, name: has expected resource type, status: passed, traceback: null}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: All URLs and paths available
     nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: "Output and expected output disagree:\n \nArrays are not almost equal to
       4 decimals\n\nMismatched elements: 8695 / 262144 (3.32%)\nMax absolute difference:
       0.00055829\nMax relative difference: 0.00579266\n x: array([[[[[3.4632e-01,
@@ -90,30 +89,31 @@ tests:
     status: failed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: load resource description
+    nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: All URLs and paths available
     nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
     error: "Output and expected output disagree:\n \nArrays are not almost equal to
       4 decimals\n\nMismatched elements: 8695 / 262144 (3.32%)\nMax absolute difference:
       0.00055829\nMax relative difference: 0.00579266\n x: array([[[[[3.4632e-01,
