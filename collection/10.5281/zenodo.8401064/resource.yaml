@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.8401064
+id: 10.5281/zenodo.8401064
+nickname: efficient-chipmunk
+nickname_icon: 🐿
+owners:
+- 611919
+status: accepted
+type: model
+versions:
+- created: '2023-10-02 22:50:52.979764'
+  doi: 10.5281/zenodo.8401065
+  name: PlantSeg Plant Nuclei 3D UNet
+  status: accepted
+  version_id: '8401065'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/rdf.yaml
