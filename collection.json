@@ -71,7 +71,7 @@
       ],
       "created": "2022-06-15 22:09:35.368273",
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 2696,
+      "download_count": 2697,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -123,7 +123,7 @@
       ],
       "created": "2022-01-27 14:00:17.489637",
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 2612,
+      "download_count": 2615,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -328,7 +328,7 @@
       ],
       "created": "2023-03-03 13:09:05.981223",
       "description": "affinity-model",
-      "download_count": 2168,
+      "download_count": 2171,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -431,7 +431,7 @@
       ],
       "created": "2022-03-08 18:36:28.378522",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 1954,
+      "download_count": 1963,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -576,7 +576,7 @@
       ],
       "created": "2022-01-18 22:01:09.315638",
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 1816,
+      "download_count": 1824,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -775,7 +775,7 @@
       ],
       "created": "2022-06-10 06:22:28.465944",
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 1609,
+      "download_count": 1612,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -1044,7 +1044,7 @@
       ],
       "created": "2023-03-29 18:14:39.826271",
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 1313,
+      "download_count": 1316,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1142,7 +1142,7 @@
       ],
       "created": "2023-03-27 12:11:52.357154",
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 1112,
+      "download_count": 1115,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -1192,7 +1192,7 @@
       ],
       "created": "2022-04-01 16:06:28.519947",
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 957,
+      "download_count": 965,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -1410,7 +1410,7 @@
       ],
       "created": "2023-07-26 10:47:44.642355",
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 716,
+      "download_count": 719,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -1730,7 +1730,7 @@
       ],
       "created": "2023-03-30 16:57:43.433376",
       "description": "Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with MitoTracker and the model was trained to upsample the images by a factor of 4.",
-      "download_count": 325,
+      "download_count": 335,
       "id": "10.5281/zenodo.7786492",
       "license": "MIT",
       "links": [
@@ -1780,7 +1780,7 @@
       ],
       "created": "2022-12-06 13:55:39.060882",
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 208,
+      "download_count": 211,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
