@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.7634388
+id: 10.5281/zenodo.7634388
+nickname: hilarious-monkey
+nickname_icon: 🐒
+owners:
+- 458864
+status: accepted
+type: model
+versions:
+- created: '2023-02-13 07:25:14.731860'
+  doi: 10.5281/zenodo.7634389
+  name: LiCAI5
+  status: accepted
+  version_id: '7634389'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/48e9590d-9b09-4cd7-bd42-5e82aa98a9bd/rdf.yaml
