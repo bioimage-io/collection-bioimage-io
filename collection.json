@@ -71,7 +71,7 @@
       ],
       "created": "2022-06-15 22:09:35.368273",
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 2704,
+      "download_count": 2707,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -366,6 +366,59 @@
     {
       "authors": [
         {
+          "github_user": "uschmidt83",
+          "name": "Uwe Schmidt"
+        },
+        {
+          "github_user": "maweigert",
+          "name": "Martin Weigert"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/stardist_logo.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/example_histo.jpg"
+      ],
+      "created": "2022-03-08 18:36:28.378522",
+      "description": "StarDist - Object Detection with Star-convex Shapes",
+      "download_count": 1994,
+      "id": "10.5281/zenodo.6338614",
+      "license": "BSD-3-Clause",
+      "links": [
+        "deepimagej/deepimagej",
+        "imjoy/BioImageIO-Packager",
+        "ilastik/tnbc",
+        "bioimageio/stardist",
+        "bioimageio/qupath",
+        "ilastik/ilastik"
+      ],
+      "name": "StarDist H&E Nuclei Segmentation",
+      "nickname": "chatty-frog",
+      "nickname_icon": "\ud83d\udc38",
+      "owners": [
+        313404
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml",
+      "tags": [
+        "whole-slide-imaging",
+        "2d",
+        "nuclei",
+        "tensorflow",
+        "unet",
+        "instance-segmentation",
+        "object-detection",
+        "stardist"
+      ],
+      "training_data": {
+        "id": "deepimagej/monuseg_digital_pathology_miccai2018"
+      },
+      "type": "model",
+      "versions": [
+        "6338615"
+      ]
+    },
+    {
+      "authors": [
+        {
           "affiliation": "EMBL",
           "name": "Adrian Wolny"
         },
@@ -412,59 +465,6 @@
         "7696907",
         "6346477",
         "6334882"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "github_user": "uschmidt83",
-          "name": "Uwe Schmidt"
-        },
-        {
-          "github_user": "maweigert",
-          "name": "Martin Weigert"
-        }
-      ],
-      "covers": [
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/stardist_logo.jpg",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/example_histo.jpg"
-      ],
-      "created": "2022-03-08 18:36:28.378522",
-      "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 1974,
-      "id": "10.5281/zenodo.6338614",
-      "license": "BSD-3-Clause",
-      "links": [
-        "deepimagej/deepimagej",
-        "imjoy/BioImageIO-Packager",
-        "ilastik/tnbc",
-        "bioimageio/stardist",
-        "bioimageio/qupath",
-        "ilastik/ilastik"
-      ],
-      "name": "StarDist H&E Nuclei Segmentation",
-      "nickname": "chatty-frog",
-      "nickname_icon": "\ud83d\udc38",
-      "owners": [
-        313404
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml",
-      "tags": [
-        "whole-slide-imaging",
-        "2d",
-        "nuclei",
-        "tensorflow",
-        "unet",
-        "instance-segmentation",
-        "object-detection",
-        "stardist"
-      ],
-      "training_data": {
-        "id": "deepimagej/monuseg_digital_pathology_miccai2018"
-      },
-      "type": "model",
-      "versions": [
-        "6338615"
       ]
     },
     {
@@ -775,7 +775,7 @@
       ],
       "created": "2022-06-10 06:22:28.465944",
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 1617,
+      "download_count": 1620,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -1044,7 +1044,7 @@
       ],
       "created": "2023-03-29 18:14:39.826271",
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 1319,
+      "download_count": 1324,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1142,7 +1142,7 @@
       ],
       "created": "2023-03-27 12:11:52.357154",
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 1120,
+      "download_count": 1121,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -1639,7 +1639,7 @@
       ],
       "created": "2022-11-12 12:53:32.701172",
       "description": "EmbryoNet Model by embryoNet Team",
-      "download_count": 384,
+      "download_count": 391,
       "id": "10.5281/zenodo.7315440",
       "license": "GPL-3.0",
       "links": [
@@ -1780,7 +1780,7 @@
       ],
       "created": "2022-12-06 13:55:39.060882",
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 216,
+      "download_count": 219,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -2003,6 +2003,54 @@
       "type": "model",
       "versions": [
         "8171247"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL",
+          "email": "qin.yu@embl.de",
+          "github_user": "qin-yu",
+          "name": "Qin Yu",
+          "orcid": "0000-0002-4652-0795"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/cover.png"
+      ],
+      "created": "2023-10-02 22:50:52.979764",
+      "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
+      "download_count": 8,
+      "id": "10.5281/zenodo.8401064",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "PlantSeg Plant Nuclei 3D UNet",
+      "nickname": "efficient-chipmunk",
+      "nickname_icon": "\ud83d\udc3f",
+      "owners": [
+        611919
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/rdf.yaml",
+      "tags": [
+        "3d",
+        "unet",
+        "pytorch",
+        "plantseg",
+        "segmentation",
+        "nucleus-segmentation",
+        "instance-segmentation",
+        "boundary-segmentation",
+        "confocal-microscopy",
+        "to-pro-3",
+        "nuclei",
+        "ovules",
+        "plant"
+      ],
+      "type": "model",
+      "versions": [
+        "8401065"
       ]
     },
     {
@@ -5032,13 +5080,13 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 84,
-      "model": 133,
+      "model": 135,
       "notebook": 4
     },
     "n_resources": {
       "application": 52,
       "dataset": 42,
-      "model": 41,
+      "model": 42,
       "notebook": 2
     },
     "partners": [
