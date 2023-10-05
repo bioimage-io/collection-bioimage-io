@@ -113,7 +113,7 @@ jobs:
       run: pip install typer bioimageio.spec
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.resource_id }}_${{ matrix.version_id }}_${{ matrix.weight_format }} | sed 's#/##g')
+      run: echo name=dynamic_validation_artifact_$(echo ${{ matrix.resource_id }}_${{ matrix.version_id }}_${{ matrix.weight_format }} | sed 's#/##g') >> $GITHUB_OUTPUT
     - name: dynamic validation
       shell: bash -l {0}
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }} --${{ contains(inputs.deploy_to, 'gh-pages') && 'no-ignore' || 'ignore' }}-rdf-source-field-in-validation

@@ -321,7 +321,7 @@ class KnownResourceVersion:
     resource_id: str
     version_id: str
     info: Dict[str, Any]
-    rdf: dict
+    rdf: Dict[str, Any]
     rdf_sha256: Optional[str]
     rdf_path: Path
 
