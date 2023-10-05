@@ -15,7 +15,7 @@ jobs:
       id: ls-remote
       run: |
         out=$(git ls-remote --heads origin ${{ github.event.pull_request.head.ref }})
-        echo "::set-output name=out::$out"
+        echo "out=(echo $out)" >> $GITHUB_OUTPUT
     - name: delete PR branch ${{ github.event.pull_request.head.ref }}
       if: contains(steps.ls-remote.outputs.out, 'auto-update-')  # only delete existing auto-update- branches
       run: git push origin --delete ${{ github.event.pull_request.head.ref }}

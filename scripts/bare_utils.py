@@ -25,7 +25,8 @@ def set_gh_actions_output(name: str, output: Union[str, Any]):
 
     # escape special characters when setting github actions step output
     output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
+    with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+        print(f"{name}={output}", file=fh)
 
 
 def get_sha256(path):
