@@ -10,7 +10,7 @@ versions:
 - created: '2023-10-09 04:36:44.469101'
   doi: 10.5281/zenodo.8419846
   name: UniFMIRSuperResolutionOnMicrotubes
-  status: accepted
+  status: blocked
   version_id: '8419846'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/074cd452-db55-44fa-af42-a99d8df3a483/rdf.yaml
