@@ -1,0 +1,80 @@
+authors:
+- affiliation: Fudan University
+  name: Chenxi Ma
+- affiliation: Fudan University
+  name: Weimin Tan
+- affiliation: Fudan University
+  name: Ruian He
+- affiliation: Fudan University
+  name: Bo Yan
+cite:
+- doi: 10.21203/rs.3.rs-3208267/v1
+  text: Chenxi Ma, Weimin Tan, Ruian He and Bo Yan. Pre-training a Foundation Model
+    for Universal Fluorescence Microscopy Image Restoration. (2023).
+config:
+  bioimageio:
+    created: '2023-10-09 06:57:28.189519'
+    doi: 10.5281/zenodo.8420081
+    nickname: ambitious-ant
+    nickname_icon: 🐜
+    owners:
+    - 610358
+    status: accepted
+    version_id: '8420081'
+    version_name: version 4
+covers:
+- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/cover1.png
+- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/cover2.png
+description: Pre-training a Foundation Model for Universal Fluorescence Microscopy
+  Image Restoration
+documentation: https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/doc.md
+format_version: 0.4.9
+git_repo: https://github.com/cxm12/UNiFMIR/
+id: 10.5281/zenodo.8419845/8420081
+inputs:
+- axes: bcyx
+  data_range:
+  - 0.0
+  - 1.0
+  data_type: float32
+  name: input0
+  shape:
+  - 1
+  - 1
+  - 128
+  - 128
+license: CC-BY-4.0
+maintainers:
+- github_user: ryanhe312
+  name: Ruian He
+name: UniFMIRSuperResolutionOnMicrotubules
+outputs:
+- axes: bcyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output0
+  shape:
+  - 1
+  - 1
+  - 256
+  - 256
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/rdf.yaml
+tags:
+- fluorescence-light-microscopy
+- 2d
+- pytorch
+- image-restoration
+test_inputs:
+- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/test-input.npy
+test_outputs:
+- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/test-output.npy
+timestamp: '2023-10-09T14:31:46.944172'
+type: model
+weights:
+  torchscript:
+    pytorch_version: 1.10.0
+    sha256: ecbcfc7a1574f1136b31e5ac252f93eaf6fedf36ffe870a434825ece98860219
+    source: https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/weights.pt

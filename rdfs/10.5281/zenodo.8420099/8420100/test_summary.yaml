@@ -1,0 +1,68 @@
+bioimageio_core_version: 0.5.9
+bioimageio_spec_version: 0.4.9
+rdf_sha256: 2d5a3d956df1ac1ded9e6906f403ccd639ab111a1ceb22ab920c195a7181b93d
+status: failed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
+      format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''content'':
+        [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'',
+        ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']},
+        {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'',
+        ''n2v'']}, {''network'': [''unet'', ''densenet'', ''resnet'', ''inception'',
+        ''shufflenet'']}]'}
+  - bioimageio_spec_version: 0.4.9
+    error: null
+    name: bioimageio.spec static validation of model RDF 0.4.9
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''content'':
+        [''cells'', ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'',
+        ''mitochondria'', ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']},
+        {''software'': [''ilastik'', ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'',
+        ''n2v'']}, {''network'': [''unet'', ''densenet'', ''resnet'', ''inception'',
+        ''shufflenet'']}]'}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post1
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post1
+    error: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/rdf.yaml
+    name: All URLs and paths available
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/micromamba/envs/8420100/lib/python3.9/site-packages/bioimageio/core/resource_tests.py\",
+        line 87, in _test_resource_urls\n    SourceNodeChecker(root_path=rd.root_path).visit(rd)\n",
+      "  File \"/home/runner/micromamba/envs/8420100/lib/python3.9/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba/envs/8420100/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 52, in generic_visit\n    self.visit(value)\n", "  File \"/home/runner/micromamba/envs/8420100/lib/python3.9/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba/envs/8420100/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 38, in visit_URI\n    self._visit_source(node)\n", "  File \"/home/runner/micromamba/envs/8420100/lib/python3.9/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post1
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post1
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings: {}
