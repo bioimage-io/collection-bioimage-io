@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.8421755
+id: 10.5281/zenodo.8421755
+nickname: modest-octopus
+nickname_icon: 🐙
+owners:
+- 611919
+status: accepted
+type: model
+versions:
+- created: '2023-10-09 13:39:11.911427'
+  doi: 10.5281/zenodo.8421756
+  name: StarDist Plant Nuclei 3D ResNet
+  status: accepted
+  version_id: '8421756'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/81d8dae0-92d0-4852-9c0e-54574664e005/rdf.yaml
