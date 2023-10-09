@@ -14,3 +14,4 @@ versions:
   version_id: '8420100'
   version_name: version 1
   rdf_source: https://zenodo.org/api/files/60ca4a2b-f948-4f76-81a9-1d66a77c4dac/rdf.yaml
+  github_repo: https://github.com/cxm12/UNiFMIR/
