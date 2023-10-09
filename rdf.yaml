@@ -872,6 +872,27 @@ collection:
   type: model
   versions: ['8401065']
 - authors:
+  - {affiliation: Fudan University, name: Chenxi Ma}
+  - {affiliation: Fudan University, name: Weimin Tan}
+  - {affiliation: Fudan University, name: Ruian He}
+  - {affiliation: Fudan University, name: Bo Yan}
+  covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/cover1.png',
+    'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/cover2.png']
+  created: '2023-10-09 06:57:28.189519'
+  description: Pre-training a Foundation Model for Universal Fluorescence Microscopy
+    Image Restoration
+  download_count: 6
+  id: 10.5281/zenodo.8419845
+  license: CC-BY-4.0
+  name: UniFMIRSuperResolutionOnMicrotubules
+  nickname: ambitious-ant
+  nickname_icon: "\U0001F41C"
+  owners: [610358]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/rdf.yaml
+  tags: [fluorescence-light-microscopy, 2d, pytorch, image-restoration]
+  type: model
+  versions: ['8420081']
+- authors:
   - {github_user: petebankhead, name: Pete Bankhead}
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/bioimageio/qupath/latest/QuPath_512.png']
   description: QuPath is an open, powerful, flexible, extensible software platform
@@ -2452,12 +2473,34 @@ collection:
   tags: [imjoy, notebook, jupyter, bioengine]
   type: application
   versions: [latest]
+- authors:
+  - {affiliation: Fudan University, name: Chenxi Ma}
+  - {affiliation: Fudan University, name: Weimin Tan}
+  - {affiliation: Fudan University, name: Ruian He}
+  - {affiliation: Fudan University, name: Bo Yan}
+  covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/cover1.png',
+    'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/cover2.png']
+  created: '2023-10-09 07:05:52.763368'
+  description: Pre-training a Foundation Model for Universal Fluorescence Microscopy
+    Image Restoration
+  download_count: 0
+  id: 10.5281/zenodo.8420099
+  license: CC-BY-4.0
+  links: [imjoy/BioImageIO-Packager]
+  name: UniFMIRSuperResolutionOnFactin
+  nickname: courteous-otter
+  nickname_icon: "\U0001F9A6"
+  owners: [610358]
+  rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/rdf.yaml
+  tags: [fluorescence-light-microscopy, 2d, pytorch, image-restoration]
+  type: model
+  versions: ['8420100']
 config:
   background_image: static/img/zoo-background.svg
   default_type: model
   explore_button_text: Start Exploring
-  n_resource_versions: {application: 104, dataset: 84, model: 135, notebook: 4}
-  n_resources: {application: 52, dataset: 42, model: 42, notebook: 2}
+  n_resource_versions: {application: 104, dataset: 84, model: 139, notebook: 4}
+  n_resources: {application: 52, dataset: 42, model: 44, notebook: 2}
   partners:
   - background_image: static/img/zoo-background.svg
     branch: main
