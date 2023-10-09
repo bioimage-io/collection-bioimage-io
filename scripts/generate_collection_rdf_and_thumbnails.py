@@ -17,7 +17,6 @@ SUMMARY_FIELDS = (
     "covers",
     "description",
     "download_url",
-    "github_repo",
     "icon",
     "id",
     "license",
@@ -26,9 +25,9 @@ SUMMARY_FIELDS = (
     "rdf_source",
     "source",
     "tags",
+    "training_data",
     "type",
     "versions",
-    "training_data",
 )
 
 SUMMARY_FIELDS_FROM_CONFIG_BIOIMAGEIO = [
