@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.8420099
+id: 10.5281/zenodo.8420099
+nickname: courteous-otter
+nickname_icon: 🦦
+owners:
+- 610358
+status: accepted
+type: model
+versions:
+- created: '2023-10-09 07:05:52.763368'
+  doi: 10.5281/zenodo.8420100
+  name: UniFMIRSuperResolutionOnFactin
+  status: accepted
+  version_id: '8420100'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/60ca4a2b-f948-4f76-81a9-1d66a77c4dac/rdf.yaml
