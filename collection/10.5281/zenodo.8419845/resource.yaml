@@ -7,6 +7,27 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-10-09 06:57:28.189519'
+  doi: 10.5281/zenodo.8420081
+  name: UniFMIRSuperResolutionOnMicrotubules
+  status: accepted
+  version_id: '8420081'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/rdf.yaml
+- created: '2023-10-09 06:33:03.625502'
+  doi: 10.5281/zenodo.8420028
+  name: UniFMIRSuperResolutionOnMicrotubules
+  status: accepted
+  version_id: '8420028'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/6941ca73-78e8-43c1-a633-e5329b7befaa/rdf.yaml
+- created: '2023-10-09 06:15:35.715781'
+  doi: 10.5281/zenodo.8419986
+  name: UniFMIRSuperResolutionOnF-actin
+  status: accepted
+  version_id: '8419986'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/5cb37f9e-52ee-4036-8ea5-96b66089315f/rdf.yaml
 - created: '2023-10-09 04:36:44.469101'
   doi: 10.5281/zenodo.8419846
   name: UniFMIRSuperResolutionOnMicrotubes
