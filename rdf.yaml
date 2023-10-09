@@ -27,7 +27,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/5869900/cover.png']
   created: '2022-06-15 22:09:35.368273'
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 2724
+  download_count: 2727
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -438,7 +438,7 @@ collection:
     of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
     a unique label for each individual bacteria detected in the image one could run
     further watershed segmentation using the label 1 as the seed.
-  download_count: 1342
+  download_count: 1345
   id: 10.5281/zenodo.7261974
   license: MIT
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, zero/dataset_u-net_2d_multilabel_deepbacs,
@@ -744,7 +744,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7380171/7405349/cover.png']
   created: '2022-12-06 13:55:39.060882'
   description: For segmenting 2D projections of drosophila epithelia
-  download_count: 237
+  download_count: 240
   id: 10.5281/zenodo.7380171
   license: CC-BY-4.0
   name: Drosophila epithelia cell boundary segmentation of 2D projections
