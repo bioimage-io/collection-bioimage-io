@@ -2154,6 +2154,56 @@
     {
       "authors": [
         {
+          "affiliation": "EMBL",
+          "email": "qin.yu@embl.de",
+          "github_user": "qin-yu",
+          "name": "Qin Yu",
+          "orcid": "0000-0002-4652-0795"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw_and_segmentation.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw_and_probability_lit.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw.jpg"
+      ],
+      "created": "2023-10-11 17:13:48.737609",
+      "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
+      "download_count": 30,
+      "id": "10.5281/zenodo.8421755",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "StarDist Plant Nuclei 3D ResNet",
+      "nickname": "modest-octopus",
+      "nickname_icon": "\ud83d\udc19",
+      "owners": [
+        611919
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/rdf.yaml",
+      "tags": [
+        "3d",
+        "resnet",
+        "stardist",
+        "tensorflow",
+        "segmentation",
+        "nucleus-segmentation",
+        "instance-segmentation",
+        "boundary-segmentation",
+        "confocal-microscopy",
+        "to-pro-3",
+        "nuclei",
+        "ovules",
+        "plant"
+      ],
+      "type": "model",
+      "versions": [
+        "8432366"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "petebankhead",
           "name": "Pete Bankhead"
         }
@@ -5178,13 +5228,13 @@
     "n_resource_versions": {
       "application": 104,
       "dataset": 84,
-      "model": 140,
+      "model": 142,
       "notebook": 4
     },
     "n_resources": {
       "application": 52,
       "dataset": 42,
-      "model": 44,
+      "model": 45,
       "notebook": 2
     },
     "partners": [
