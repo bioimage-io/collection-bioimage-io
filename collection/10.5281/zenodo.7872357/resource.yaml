@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-04-28 17:56:01.888721'
+  doi: 10.5281/zenodo.7876764
+  name: TAGAN-axons
+  status: accepted
+  version_id: '7876764'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/db19ef0b-c067-4aa8-b58b-0428797c3fc3/rdf.yaml
 - created: '2023-04-27 19:15:44.765219'
   doi: 10.5281/zenodo.7872358
   name: TAGAN-axons
