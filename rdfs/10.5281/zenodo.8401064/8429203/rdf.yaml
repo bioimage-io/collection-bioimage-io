@@ -1,0 +1,110 @@
+authors:
+- affiliation: EMBL
+  email: qin.yu@embl.de
+  github_user: qin-yu
+  name: Qin Yu
+  orcid: 0000-0002-4652-0795
+cite:
+- text: Qin Yu
+  url: https://github.com/qin-yu/ovules-instance-segmentation
+config:
+  bioimageio:
+    created: '2023-10-11 00:39:40.958129'
+    doi: 10.5281/zenodo.8429203
+    nickname: efficient-chipmunk
+    nickname_icon: 🐿
+    owners:
+    - 611919
+    status: accepted
+    version_id: '8429203'
+    version_name: version 2
+covers:
+- https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/plantseg_raw_and_gasp_segmentation.jpg
+- https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/plantseg_raw_and_probability_map.jpg
+- https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/plantseg_raw.jpg
+description: This widely applicable model is trained for 3D nuclei instance segmentation
+  and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei
+  stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear
+  DNA quantification and 3D volumetric nuclei extraction. This model is trained with
+  dataset 1136, 1137, 1139, 1170 and validated with 1135. Patch size for this model
+  during inference can be flexible.
+documentation: https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/doc.md
+format_version: 0.4.9
+id: 10.5281/zenodo.8401064/8429203
+inputs:
+- axes: bczyx
+  data_range:
+  - 0.0
+  - 255.0
+  data_type: uint8
+  name: input0
+  preprocessing:
+  - kwargs:
+      axes: zyx
+      eps: 1e-10
+      mode: per_dataset
+    name: zero_mean_unit_variance
+  shape:
+  - 1
+  - 1
+  - 96
+  - 96
+  - 96
+license: CC-BY-4.0
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- affiliation: EMBL
+  email: qin.yu@embl.de
+  github_user: qin-yu
+  name: Qin Yu
+  orcid: 0000-0002-4652-0795
+name: PlantSeg Plant Nuclei 3D UNet
+outputs:
+- axes: bczyx
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: output0
+  shape:
+  - 1
+  - 2
+  - 96
+  - 96
+  - 96
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8429203/rdf.yaml
+tags:
+- 3d
+- unet
+- pytorch
+- plantseg
+- segmentation
+- nucleus-segmentation
+- instance-segmentation
+- boundary-segmentation
+- confocal-microscopy
+- to-pro-3
+- nuclei
+- ovules
+- plant
+test_inputs:
+- https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/test-input.npy
+test_outputs:
+- https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/test-output.npy
+timestamp: '2023-10-11T02:35:10.804715'
+type: model
+version: 0.1.1
+weights:
+  pytorch_state_dict:
+    architecture: plantseg.models.model.UNet3D
+    dependencies: 
+      conda:https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/dependencies.yaml
+    kwargs:
+      f_maps: 16
+      in_channels: 1
+      out_channels: 2
+    sha256: fd115b1cfd908774d4289bc78e944cec1ab58458d0aae6eb5792b4477be0e2fc
+    source: 
+      https://zenodo.org/api/files/0cc49b0d-17e4-472a-b3b3-12c3ee54daa4/FOR2581_PlantSeg_Plant_Nuclei_3D.pytorch
