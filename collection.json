@@ -2020,7 +2020,7 @@
       ],
       "created": "2023-10-02 22:50:52.979764",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
-      "download_count": 61,
+      "download_count": 68,
       "id": "10.5281/zenodo.8401064",
       "license": "CC-BY-4.0",
       "links": [
