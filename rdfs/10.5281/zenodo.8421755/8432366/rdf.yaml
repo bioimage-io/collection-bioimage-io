@@ -1,0 +1,207 @@
+attachments:
+  files:
+  - https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_weights.h5
+authors:
+- affiliation: EMBL
+  email: qin.yu@embl.de
+  github_user: qin-yu
+  name: Qin Yu
+  orcid: 0000-0002-4652-0795
+cite:
+- text: Qin Yu
+  url: https://github.com/qin-yu/ovules-instance-segmentation
+config:
+  bioimageio:
+    created: '2023-10-11 17:13:48.737609'
+    doi: 10.5281/zenodo.8432366
+    nickname: modest-octopus
+    nickname_icon: 🐙
+    owners:
+    - 611919
+    status: accepted
+    version_id: '8432366'
+    version_name: version 4
+  stardist:
+    config:
+      anisotropy:
+      - 2
+      - 1
+      - 1
+      axes: ZYXC
+      backbone: resnet
+      grid:
+      - 2
+      - 4
+      - 4
+      n_channel_in: 1
+      n_channel_out: 97
+      n_classes:
+      n_dim: 3
+      n_rays: 96
+      net_conv_after_resnet: 128
+      net_input_shape:
+      - 
+      - 
+      - 
+      - 1
+      net_mask_shape:
+      - 
+      - 
+      - 
+      - 1
+      rays_json:
+        kwargs:
+          anisotropy:
+          - 2
+          - 1
+          - 1
+          n: 96
+        name: Rays_GoldenSpiral
+      resnet_activation: relu
+      resnet_batch_norm: false
+      resnet_kernel_init: he_normal
+      resnet_kernel_size:
+      - 3
+      - 3
+      - 3
+      resnet_n_blocks: 4
+      resnet_n_conv_per_block: 3
+      resnet_n_filter_base: 32
+      train_background_reg: 0.0001
+      train_batch_size: 8
+      train_checkpoint: weights_best.h5
+      train_checkpoint_epoch: weights_now.h5
+      train_checkpoint_last: weights_last.h5
+      train_class_weights:
+      - 1
+      - 1
+      train_dist_loss: mae
+      train_epochs: 1000
+      train_foreground_only: 0.9
+      train_learning_rate: 0.0003
+      train_loss_weights:
+      - 1
+      - 0.2
+      train_n_val_patches: 16
+      train_patch_size:
+      - 96
+      - 96
+      - 96
+      train_reduce_lr:
+        factor: 0.5
+        min_delta: 0
+        patience: 40
+      train_sample_cache: true
+      train_steps_per_epoch: 400
+      train_tensorboard: true
+      use_gpu: false
+    python_version: 0.8.5
+    thresholds:
+      nms: 0.3
+      prob: 0.5056117135432784
+    weights: stardist_weights.h5
+covers:
+- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_raw_and_segmentation.jpg
+- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_raw_and_probability_lit.jpg
+- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_raw.jpg
+description: This widely applicable model is trained for 3D nuclei instance segmentation
+  and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei
+  stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear
+  DNA quantification and 3D volumetric nuclei extraction. This model is trained with
+  dataset 1136, 1137, 1139, 1170 and validated with 1135.
+documentation: https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/doc.md
+format_version: 0.4.9
+id: 10.5281/zenodo.8421755/8432366
+inputs:
+- axes: bzyxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  name: input
+  preprocessing:
+  - kwargs:
+      axes: zyx
+      max_percentile: 99.8
+      min_percentile: 1
+      mode: per_sample
+    name: scale_range
+  shape:
+    min:
+    - 1
+    - 66
+    - 116
+    - 116
+    - 1
+    step:
+    - 0
+    - 2
+    - 4
+    - 4
+    - 0
+license: CC-BY-4.0
+links:
+- imjoy/BioImageIO-Packager
+maintainers:
+- affiliation: EMBL
+  email: qin.yu@embl.de
+  github_user: qin-yu
+  name: Qin Yu
+  orcid: 0000-0002-4652-0795
+name: StarDist Plant Nuclei 3D ResNet
+outputs:
+- axes: bzyxc
+  data_range:
+  - -.inf
+  - .inf
+  data_type: float32
+  halo:
+  - 0
+  - 32
+  - 56
+  - 56
+  - 0
+  name: output
+  shape:
+    offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 48.5
+    reference_tensor: input
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 0.0
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/rdf.yaml
+tags:
+- 3d
+- resnet
+- stardist
+- tensorflow
+- segmentation
+- nucleus-segmentation
+- instance-segmentation
+- boundary-segmentation
+- confocal-microscopy
+- to-pro-3
+- nuclei
+- ovules
+- plant
+test_inputs:
+- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/test_input.npy
+test_outputs:
+- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/test_output.npy
+timestamp: '2023-10-11T18:56:39.706090'
+type: model
+version: 0.1.3
+weights:
+  tensorflow_saved_model_bundle:
+    sha256: 232272e34820992b0b1f0e30337ad5913d2e91b3d609ffb7a64e40257ada63ab
+    source: 
+      https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/TF_SavedModel.zip
+    tensorflow_version: 1.15.3
