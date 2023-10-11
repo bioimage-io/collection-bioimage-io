@@ -2081,7 +2081,7 @@
       ],
       "created": "2023-10-09 07:05:52.763368",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 43,
+      "download_count": 52,
       "id": "10.5281/zenodo.8420099",
       "license": "CC-BY-4.0",
       "links": [
@@ -2130,7 +2130,7 @@
       ],
       "created": "2023-10-09 06:57:28.189519",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 30,
+      "download_count": 35,
       "id": "10.5281/zenodo.8419845",
       "license": "CC-BY-4.0",
       "name": "UniFMIRSuperResolutionOnMicrotubules",
