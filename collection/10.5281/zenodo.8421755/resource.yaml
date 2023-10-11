@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-10-11 01:05:10.849644'
+  doi: 10.5281/zenodo.8429223
+  name: StarDist Plant Nuclei 3D ResNet
+  status: blocked
+  version_id: '8429223'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/569c9cff-a628-4843-8321-c9703294bec2/rdf.yaml
 - created: '2023-10-11 00:45:13.339803'
   doi: 10.5281/zenodo.8429205
   name: StarDist Plant Nuclei 3D ResNet
