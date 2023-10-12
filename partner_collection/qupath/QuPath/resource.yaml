@@ -17,9 +17,11 @@ versions:
       background_image: static/img/zoo-background.svg
       default_type: model
       explore_button_text: Start Exploring
-      icon: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+      icon: 
+        https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
       id: qupath
-      logo: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+      logo: 
+        https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
       name: QuPath
       resource_types:
       - application
@@ -37,7 +39,8 @@ versions:
       pathology
     documentation: https://qupath.readthedocs.io/
     format_version: 0.2.3
-    icon: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+    icon: 
+      https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
     id: qupath/QuPath
     maintainers:
     - github_user: None

@@ -36,7 +36,8 @@ maintainers:
 - github_user: None
   name: the Icy Team
 name: Icy
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/icy/icy/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/icy/icy/latest/rdf.yaml
 source: https://gitlab.pasteur.fr/bia/
 tags:
 - icy

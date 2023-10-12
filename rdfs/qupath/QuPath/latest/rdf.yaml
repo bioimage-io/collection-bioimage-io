@@ -12,9 +12,11 @@ config:
     version_name: latest
   default_type: model
   explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+  icon: 
+    https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
   id: qupath
-  logo: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+  logo: 
+    https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
   name: QuPath
   resource_types:
   - application
@@ -31,13 +33,15 @@ covers:
 description: QuPath is open-source software for bioimage analysis and digital pathology
 documentation: https://qupath.readthedocs.io/
 format_version: 0.2.3
-icon: https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
+icon: 
+  https://raw.githubusercontent.com/qupath/qupath-bioimage-io/main/logos/QuPath_256.png
 id: qupath/QuPath/latest
 maintainers:
 - github_user: None
   name: QuPath Team
 name: QuPath
-rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/qupath/QuPath/latest/rdf.yaml
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/qupath/QuPath/latest/rdf.yaml
 source: https://github.com/qupath
 tags:
 - qupath
