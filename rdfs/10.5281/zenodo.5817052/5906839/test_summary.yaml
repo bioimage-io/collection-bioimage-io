@@ -1,10 +1,10 @@
 bioimageio_core_version: 0.5.9
-bioimageio_spec_version: 0.4.9
+bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: e00744886e03b8c48ae1c6816e3be730ec910402acd10a5f425e20692bd77785
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.9
+  - bioimageio_spec_version: 0.4.9post1
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
@@ -15,7 +15,7 @@ tests:
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''task'': [''semantic-segmentation'',
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - bioimageio_spec_version: 0.4.9
+  - bioimageio_spec_version: 0.4.9post1
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
@@ -26,7 +26,7 @@ tests:
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: load resource description
     nested_errors: null
@@ -34,7 +34,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: All URLs and paths available
     nested_errors: null
@@ -42,22 +42,22 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
     traceback: null
     warnings:
-      non-validation-warnings: ['Device management is not implemented for keras yet,
-          cannot unload model', Computed dataset percentiles naively by averaging
-          percentiles of samples.]
+      non-validation-warnings: [Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Device management is not implemented for keras
+          yet, cannot unload model']
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
       test outputs with DeepImageJ headless., status: passed}

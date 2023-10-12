@@ -1,10 +1,10 @@
 bioimageio_core_version: 0.5.9
-bioimageio_spec_version: 0.4.9
+bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: c7c31846fc7daf111a0ac81d83a3bb89fe0ea218e6e4572a83c58bfc8d419ca8
 status: passed
 tests:
   bioimageio:
-  - bioimageio_spec_version: 0.4.9
+  - bioimageio_spec_version: 0.4.9post1
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.9 with update to latest
       format version
@@ -16,7 +16,7 @@ tests:
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
         ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_spec_version: 0.4.9
+  - bioimageio_spec_version: 0.4.9post1
     error: null
     name: bioimageio.spec static validation of model RDF 0.4.9
     nested_errors: {}
@@ -28,7 +28,7 @@ tests:
         ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: load resource description
     nested_errors: null
@@ -36,7 +36,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: All URLs and paths available
     nested_errors: null
@@ -44,14 +44,14 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
@@ -60,14 +60,14 @@ tests:
       non-validation-warnings: ['Device management is not implemented for onnx yet,
           cannot unload model']
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9
+    bioimageio_spec_version: 0.4.9post1
     error: null
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
