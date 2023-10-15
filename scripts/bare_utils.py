@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import uuid
+from pathlib import Path
 from typing import Any, Dict, Union
 
 GITHUB_REPOSITORY_OWNER = os.getenv("GITHUB_REPOSITORY_OWNER", "bioimage-io")
@@ -35,7 +36,7 @@ def set_gh_actions_output(name: str, output: Union[str, Any]):
             print(f"{name}={output}", file=fh)
 
 
-def get_sha256(path: os.PathLike[str]):
+def get_sha256(path: Path):
     h = hashlib.sha256()
     with open(path, "rb") as f:
         while True:
