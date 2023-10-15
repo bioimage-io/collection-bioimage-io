@@ -146,7 +146,9 @@ def update_from_zenodo(
 ):
     download_counts: Dict[str, int] = {}
     for page in range(1, 1000):
-        zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
+        zenodo_request = (
+            f"https://zenodo.org/api/records?&sort=newest&page={page}&size=1000&all_versions=1&q=keywords:bioimage.io"
+        )
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
             print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")

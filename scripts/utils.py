@@ -411,7 +411,7 @@ def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, gh_pages: Path, reso
             if not isinstance(cover_url, str) or cover_url.startswith(DEPLOYED_BASE_URL):
                 continue  # invalid or already cached
 
-            cover_file_name = PurePosixPath(urlsplit(cover_url).path).name
+            cover_file_name = PurePosixPath(urlsplit(cover_url.strip("/content")).path).name
             if not (gh_pages / cover_file_name).exists():
                 try:
                     downloaded_cover = Path(pooch.retrieve(cover_url, None))  # type: ignore
@@ -430,7 +430,7 @@ def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, gh_pages: Path, reso
                 continue
 
             icon = badge.get("icon")
-            if not isinstance(icon, str) or not icon.startswith("https://zenodo.org/api/files/"):
+            if not isinstance(icon, str) or not icon.startswith("https://zenodo.org/api"):
                 # only cache badges stored on zenodo
                 continue
 
@@ -440,6 +440,7 @@ def deploy_thumbnails(rdf_like: Dict[str, Any], dist: Path, gh_pages: Path, reso
                 warnings.warn(str(e))
                 continue
 
-            resized_icon = downsize_image(downloaded_icon, dist, size=(320, 320))
+            icon_file_name = PurePosixPath(urlsplit(icon.strip("/content")).path).name
+            downsize_image(downloaded_icon, dist / icon_file_name, size=(320, 320))
 
-            rdf_like["badges"][i]["icon"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/{resized_icon.name}"
+            rdf_like["badges"][i]["icon"] = f"{DEPLOYED_BASE_URL}/rdfs/{resource_id}/{version_id}/{icon_file_name}"
