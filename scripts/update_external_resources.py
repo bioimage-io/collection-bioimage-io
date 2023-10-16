@@ -146,7 +146,9 @@ def update_from_zenodo(
 ):
     download_counts: Dict[str, int] = {}
     for page in range(1, 1000):
-        zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
+        zenodo_request = (
+            f"https://zenodo.org/api/records?&sort=newest&page={page}&size=1000&all_versions=1&q=keywords:bioimage.io"
+        )
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
             print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
@@ -154,7 +156,7 @@ def update_from_zenodo(
 
         print(f"Collecting items from zenodo: {zenodo_request}")
 
-        hits = r.json()["hits"]["hits"]
+        hits = r.json()  #  ["hits"]["hits"]
         if not hits:
             break
 
@@ -165,8 +167,12 @@ def update_from_zenodo(
             assert isinstance(created, datetime), created
             resource_path = collection / resource_doi / "resource.yaml"
             resource_output_path = dist / resource_doi / "resource.yaml"
-            version_name = f"version {hit['metadata']['relations']['version'][0]['index'] + 1}"
-            rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
+            version_name = f"version from {hit['metadata']['publication_date']}"
+            rdf_urls = [
+                f"https://zenodo.org/api/records/{hit['record_id']}/files/{file_hit['filename']}/content"
+                for file_hit in hit["files"]
+                if (file_hit["filename"] == "rdf.yaml" or file_hit["filename"].endswith("bioimageio.yaml"))
+            ]
             rdf = {}
             rdf_source = "unknown"
             name = doi
@@ -195,7 +201,7 @@ def update_from_zenodo(
                         resource_type = rdf.get("type")
 
             try:
-                download_count = int(hit["stats"]["unique_downloads"])
+                download_count = int(hit["stats"]["unique_downloads"])  # todo: update zenodo api
             except Exception as e:
                 warnings.warn(f"Could not determine download count: {e}")
                 download_count = 1
@@ -206,7 +212,7 @@ def update_from_zenodo(
             new_version = {
                 "version_id": version_id,
                 "doi": doi,
-                "owners": hit["owners"],
+                "owners": [hit["owner"]],
                 "created": str(created),
                 "status": "accepted",  # default to accepted
                 "rdf_source": rdf_source,

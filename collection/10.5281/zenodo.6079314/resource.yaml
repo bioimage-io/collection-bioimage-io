@@ -1,73 +1,44 @@
 doi: 10.5281/zenodo.6079314
 id: 10.5281/zenodo.6079314
 nickname: wild-whale
-nickname_icon: 🐳
-owners:
-- 77626
+nickname_icon: "\U0001F433"
+owners: [77626]
 status: accepted
 type: model
 versions:
-- created: '2023-03-03 13:09:05.981223'
-  doi: 10.5281/zenodo.7695872
-  name: EpitheliaAffinityModel
-  status: accepted
-  version_id: '7695872'
-  version_name: version 5
-  rdf_source: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/rdf.yaml
-- created: '2023-03-02 15:21:20.138996'
-  doi: 10.5281/zenodo.7689587
-  name: EpitheliaAffinityModel
-  status: accepted
-  version_id: '7689587'
-  version_name: version 4
-  rdf_source: https://zenodo.org/api/files/c816c201-c393-4ac4-8f68-927ee6927e23/rdf.yaml
-- created: '2023-03-01 14:17:36.817910'
-  doi: 10.5281/zenodo.7688686
-  name: EpitheliaAffinityModel
-  status: accepted
-  version_id: '7688686'
-  version_name: version 3
-  rdf_source: https://zenodo.org/api/files/e3fa2c39-d3d0-4b48-805a-76464cc93b33/rdf.yaml
+- {created: '2023-03-03 13:09:05.981223', doi: 10.5281/zenodo.7695872, name: EpitheliaAffinityModel,
+  rdf_source: 'https://zenodo.org/api/records/7695872/files/rdf.yaml/content', status: accepted,
+  version_id: '7695872', version_name: version 5}
+- {created: '2023-03-02 15:21:20.138996', doi: 10.5281/zenodo.7689587, name: EpitheliaAffinityModel,
+  rdf_source: 'https://zenodo.org/api/files/c816c201-c393-4ac4-8f68-927ee6927e23/rdf.yaml',
+  status: accepted, version_id: '7689587', version_name: version 4}
+- {created: '2023-03-01 14:17:36.817910', doi: 10.5281/zenodo.7688686, name: EpitheliaAffinityModel,
+  rdf_source: 'https://zenodo.org/api/files/e3fa2c39-d3d0-4b48-805a-76464cc93b33/rdf.yaml',
+  status: accepted, version_id: '7688686', version_name: version 3}
 - created: '2022-03-25 19:51:07.070222'
   doi: 10.5281/zenodo.6385590
-  links:
-  - deepimagej/deepimagej
-  - ilastik/ilastik
-  - imjoy/BioImageIO-Packager
-  - ilastik/torch-em-2d-unet-notebook
-  - ilastik/mws-segmentation
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook,
+    ilastik/mws-segmentation]
   name: EpitheliaAffinityModel
+  rdf_source: https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/rdf.yaml
   status: accepted
   version_id: '6385590'
   version_name: version 2
-  rdf_source: https://zenodo.org/api/files/573e9a49-d156-46ea-838e-55ec9ebe9e00/rdf.yaml
 - created: '2022-02-14 17:05:09.708440'
   doi: 10.5281/zenodo.6079315
   inputs:
   - axes: bcyx
-    data_range:
-    - -.inf
-    - .inf
+    data_range: [-.inf, .inf]
     data_type: float32
     name: input0
     preprocessing:
-    - kwargs:
-        axes: cyx
-        mode: per_sample
+    - kwargs: {axes: cyx, mode: per_sample}
       name: zero_mean_unit_variance
     shape:
-      min:
-      - 1
-      - 1
-      - 48
-      - 48
-      step:
-      - 0
-      - 0
-      - 16
-      - 16
+      min: [1, 1, 48, 48]
+      step: [0, 0, 16, 16]
   name: EpitheliaAffinityModel
+  rdf_source: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/rdf.yaml
   status: accepted
   version_id: '6079315'
   version_name: version 1
-  rdf_source: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/rdf.yaml

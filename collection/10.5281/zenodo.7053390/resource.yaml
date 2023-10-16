@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.7053390
 id: 10.5281/zenodo.7053390
 nickname: courageous-goat
-nickname_icon: 🐐
-owners:
-- 400944
+nickname_icon: "\U0001F410"
+owners: [400944]
 status: accepted
 type: model
 versions:
-- created: '2022-09-06 09:31:40.328628'
-  doi: 10.5281/zenodo.7053391
-  name: CVD graphene SEM image segmentation
-  status: blocked
-  version_id: '7053391'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/59db7240-73ad-4da0-bc9e-160a4e3cb9aa/rdf.yaml
+- {created: '2022-09-06 09:31:40.328628', doi: 10.5281/zenodo.7053391, name: CVD graphene
+    SEM image segmentation, rdf_source: 'https://zenodo.org/api/records/7053391/files/rdf.yaml/content',
+  status: blocked, version_id: '7053391', version_name: version 1}

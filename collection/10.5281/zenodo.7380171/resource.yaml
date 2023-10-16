@@ -1,42 +1,30 @@
 doi: 10.5281/zenodo.7380171
 id: 10.5281/zenodo.7380171
 nickname: easy-going-sauropod
-nickname_icon: 🦕
-owners:
-- 439786
+nickname_icon: "\U0001F995"
+owners: [439786]
 status: accepted
 type: model
 versions:
-- created: '2022-12-06 13:55:39.060882'
+- config:
+    bioimageio:
+      test_kwargs:
+        tensorflow_saved_model_bundle: {decimal: 2}
+  created: '2022-12-06 13:55:39.060882'
   doi: 10.5281/zenodo.7405349
+  maintainers:
+  - {github_user: odinsbane}
   name: Drosophila epithelia cell boundary segmentation of 2D projections
+  rdf_source: https://zenodo.org/api/records/7405349/files/rdf.yaml/content
   status: accepted
   version_id: '7405349'
   version_name: version 3
-  rdf_source: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/rdf.yaml
-  maintainers:
-  - github_user: odinsbane
   weights:
-    tensorflow_saved_model_bundle:
-      source: drosophila-crb-d5.zip
-      sha256: ae5d5287b90d4b5406f2b6de8e40f50faaf7336d38a2a91d9a66364897a82bed
-      tensorflow_version: '2.10'
-  config:
-    bioimageio:
-      test_kwargs:
-        tensorflow_saved_model_bundle:
-          decimal: 2
-- created: '2022-12-01 14:17:09.346211'
-  doi: 10.5281/zenodo.7386437
-  name: Drosophila epithelia cell boundary segmentation of 2D projections
-  status: blocked
-  version_id: '7386437'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/dcf720a0-b513-484c-9ea5-2455894a660d/rdf.yaml
-- created: '2022-11-30 09:26:02.662432'
-  doi: 10.5281/zenodo.7380172
-  name: Boundary segmentation
-  status: blocked
-  version_id: '7380172'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/36f85650-7541-4e02-ab2e-426ca923c874/rdf.yaml
+    tensorflow_saved_model_bundle: {sha256: ae5d5287b90d4b5406f2b6de8e40f50faaf7336d38a2a91d9a66364897a82bed,
+      source: drosophila-crb-d5.zip, tensorflow_version: '2.10'}
+- {created: '2022-12-01 14:17:09.346211', doi: 10.5281/zenodo.7386437, name: Drosophila
+    epithelia cell boundary segmentation of 2D projections, rdf_source: 'https://zenodo.org/api/files/dcf720a0-b513-484c-9ea5-2455894a660d/rdf.yaml',
+  status: blocked, version_id: '7386437', version_name: version 2}
+- {created: '2022-11-30 09:26:02.662432', doi: 10.5281/zenodo.7380172, name: Boundary
+    segmentation, rdf_source: 'https://zenodo.org/api/files/36f85650-7541-4e02-ab2e-426ca923c874/rdf.yaml',
+  status: blocked, version_id: '7380172', version_name: version 1}

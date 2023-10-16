@@ -1,19 +1,17 @@
-status: accepted
-versions:
-- version_id: '6028098'
-  doi: 10.5281/zenodo.6028098
-  created: '2022-02-09 21:14:46.430029'
-  status: accepted
-  name: PlatynereisEMnucleiSegmentationBoundaryModel
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/334f9dd9-ae1e-46e2-9a6a-5445758c4e9c/rdf.yaml
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
-  training_data:
-    id: ilastik/platynereis_em_training_data
-id: 10.5281/zenodo.6028097
 doi: 10.5281/zenodo.6028097
-type: model
-owners:
-- 77626
+id: 10.5281/zenodo.6028097
 nickname: organized-badger
-nickname_icon: 🦡
+nickname_icon: "\U0001F9A1"
+owners: [77626]
+status: accepted
+type: model
+versions:
+- created: '2022-02-09 21:14:46.430029'
+  doi: 10.5281/zenodo.6028098
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
+  name: PlatynereisEMnucleiSegmentationBoundaryModel
+  rdf_source: https://zenodo.org/api/records/6028098/files/rdf.yaml/content
+  status: accepted
+  training_data: {id: ilastik/platynereis_em_training_data}
+  version_id: '6028098'
+  version_name: revision 1

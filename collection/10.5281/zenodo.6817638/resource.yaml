@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.6817638
 id: 10.5281/zenodo.6817638
 nickname: affable-shark
-nickname_icon: 🦈
-owners:
-- 370412
+nickname_icon: "\U0001F988"
+owners: [370412]
 status: blocked
 type: model
 versions:
-- created: '2022-07-11 11:28:42.706087'
-  doi: 10.5281/zenodo.6817639
-  name: NSce
-  status: blocked
-  version_id: '6817639'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/cf860214-56d7-4c3a-a8df-54bd8a804263/rdf.yaml
+- {created: '2022-07-11 11:28:42.706087', doi: 10.5281/zenodo.6817639, name: NSce,
+  rdf_source: 'https://zenodo.org/api/records/6817639/files/rdf.yaml/content', status: blocked,
+  version_id: '6817639', version_name: version 1}

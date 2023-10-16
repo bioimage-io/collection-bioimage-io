@@ -1,29 +1,24 @@
 doi: 10.5281/zenodo.7772662
 id: 10.5281/zenodo.7772662
 nickname: noisy-fish
-nickname_icon: 🐟
-owners:
-- 66700
+nickname_icon: "\U0001F41F"
+owners: [66700]
 status: accepted
 type: model
 versions:
 - created: '2023-03-29 11:10:26.329999'
   doi: 10.5281/zenodo.7781091
   name: 3D UNet Arabidopsis Ovules Nuclei
+  rdf_source: https://zenodo.org/api/records/7781091/files/rdf.yaml/content
   status: accepted
   version_id: '7781091'
   version_name: version 5
-  rdf_source: https://zenodo.org/api/files/223d2bb4-8def-41a8-b499-a948f9b17183/rdf.yaml
   weights:
     pytorch_state_dict:
       architecture: unet.py:UNet3D
       architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
       kwargs:
-        f_maps:
-          - 32
-          - 64
-          - 128
-          - 256
+        f_maps: [32, 64, 128, 256]
         final_sigmoid: true
         in_channels: 1
         is_segmentation: true
@@ -33,34 +28,17 @@ versions:
         testing: true
       sha256: a02824ac1a3ac43122ba6345804664be7d70124ac23b07cd1c488818b61895ef
       source: confocal_3D_unet_ovules_nuclei_ds1x.pytorch
-    torchscript:
-      source: torchscript_tracing.pt
-      sha256: B3F6E6597DDF5D937F054020E596184612314B2B17A75EFF7FFE942CF652C3E5
-- created: '2023-03-29 09:48:21.596741'
-  doi: 10.5281/zenodo.7780840
-  name: 3D UNet Arabidopsis Ovules Nuclei
-  status: blocked
-  version_id: '7780840'
-  version_name: version 4
-  rdf_source: https://zenodo.org/api/files/a772113f-13d2-47fa-90f9-cb8b7729990a/rdf.yaml
-- created: '2023-03-27 11:24:41.621868'
-  doi: 10.5281/zenodo.7774321
-  name: 3D UNet Arabidopsis Ovules Nuclei
-  status: blocked
-  version_id: '7774321'
-  version_name: version 3
-  rdf_source: https://zenodo.org/api/files/a08e26fb-03ce-4305-9a30-647ed8022fdf/rdf.yaml
-- created: '2023-03-26 23:29:53.084211'
-  doi: 10.5281/zenodo.7772668
-  name: 3D UNet Arabidopsis Ovules Nuclei
-  status: blocked
-  version_id: '7772668'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/6dad682b-67d0-498b-bbba-7c94b6bd2eb1/rdf.yaml
-- created: '2023-03-26 23:25:46.668299'
-  doi: 10.5281/zenodo.7772663
-  name: 3D UNet Arabidopsis Ovules Nuclei
-  status: blocked
-  version_id: '7772663'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/a7863a51-8d14-4fd7-89e9-3f5615fa765b/rdf.yaml
+    torchscript: {sha256: B3F6E6597DDF5D937F054020E596184612314B2B17A75EFF7FFE942CF652C3E5,
+      source: torchscript_tracing.pt}
+- {created: '2023-03-29 09:48:21.596741', doi: 10.5281/zenodo.7780840, name: 3D UNet
+    Arabidopsis Ovules Nuclei, rdf_source: 'https://zenodo.org/api/files/a772113f-13d2-47fa-90f9-cb8b7729990a/rdf.yaml',
+  status: blocked, version_id: '7780840', version_name: version 4}
+- {created: '2023-03-27 11:24:41.621868', doi: 10.5281/zenodo.7774321, name: 3D UNet
+    Arabidopsis Ovules Nuclei, rdf_source: 'https://zenodo.org/api/files/a08e26fb-03ce-4305-9a30-647ed8022fdf/rdf.yaml',
+  status: blocked, version_id: '7774321', version_name: version 3}
+- {created: '2023-03-26 23:29:53.084211', doi: 10.5281/zenodo.7772668, name: 3D UNet
+    Arabidopsis Ovules Nuclei, rdf_source: 'https://zenodo.org/api/files/6dad682b-67d0-498b-bbba-7c94b6bd2eb1/rdf.yaml',
+  status: blocked, version_id: '7772668', version_name: version 2}
+- {created: '2023-03-26 23:25:46.668299', doi: 10.5281/zenodo.7772663, name: 3D UNet
+    Arabidopsis Ovules Nuclei, rdf_source: 'https://zenodo.org/api/files/a7863a51-8d14-4fd7-89e9-3f5615fa765b/rdf.yaml',
+  status: blocked, version_id: '7772663', version_name: version 1}

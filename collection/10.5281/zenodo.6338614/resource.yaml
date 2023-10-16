@@ -1,20 +1,20 @@
-status: accepted
-versions:
-- version_id: '6338615'
-  doi: 10.5281/zenodo.6338615
-  created: '2022-03-08 18:36:28.378522'
-  status: accepted
-  name: StarDist H&E Nuclei Segmentation
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/rdf.yaml
-  tags: [whole-slide-imaging, 2d, nuclei, tensorflow, unet, instance-segmentation, object-detection, stardist]
-  training_data:
-    id: deepimagej/monuseg_digital_pathology_miccai2018
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist, bioimageio/qupath]
-id: 10.5281/zenodo.6338614
 doi: 10.5281/zenodo.6338614
-type: model
-owners:
-- 313404
+id: 10.5281/zenodo.6338614
 nickname: chatty-frog
-nickname_icon: 🐸
+nickname_icon: "\U0001F438"
+owners: [313404]
+status: accepted
+type: model
+versions:
+- created: '2022-03-08 18:36:28.378522'
+  doi: 10.5281/zenodo.6338615
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
+    bioimageio/qupath]
+  name: StarDist H&E Nuclei Segmentation
+  rdf_source: https://zenodo.org/api/records/6338615/files/rdf.yaml/content
+  status: accepted
+  tags: [whole-slide-imaging, 2d, nuclei, tensorflow, unet, instance-segmentation,
+    object-detection, stardist]
+  training_data: {id: deepimagej/monuseg_digital_pathology_miccai2018}
+  version_id: '6338615'
+  version_name: revision 1

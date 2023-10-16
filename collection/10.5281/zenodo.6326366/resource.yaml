@@ -1,37 +1,20 @@
-status: blocked
-versions:
-- version_id: '6334888'
-  doi: 10.5281/zenodo.6334888
-  created: '2022-03-07 15:23:36.540825'
-  status: blocked
-  name: bioimageio_model
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/e6b1c734-176b-4f20-bd76-eb1ce559ef5a/rdf.yaml
-- version_id: '6334806'
-  doi: 10.5281/zenodo.6334806
-  created: '2022-03-07 14:39:45.578852'
-  status: blocked
-  name: 10.5281/zenodo.6334806
-  version_name: revision 1
-  rdf_source: unknown
-- version_id: '6334698'
-  doi: 10.5281/zenodo.6334698
-  created: '2022-03-07 13:37:12.025245'
-  status: blocked
-  name: bioimageio_model
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/df674d68-b670-4153-b1fc-de812664f954/rdf.yaml
-- version_id: '6326367'
-  doi: 10.5281/zenodo.6326367
-  created: '2022-03-03 21:20:03.850168'
-  status: blocked
-  name: bioimageio_model
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/7d28f5af-90df-4219-af60-0a00045f4f0f/rdf.yaml
-id: 10.5281/zenodo.6326366
 doi: 10.5281/zenodo.6326366
-type: model
-owners:
-- 77626
+id: 10.5281/zenodo.6326366
 nickname: content-microbe
-nickname_icon: 🦠
+nickname_icon: "\U0001F9A0"
+owners: [77626]
+status: blocked
+type: model
+versions:
+- {created: '2022-03-07 15:23:36.540825', doi: 10.5281/zenodo.6334888, name: bioimageio_model,
+  rdf_source: 'https://zenodo.org/api/records/6334888/files/rdf.yaml/content', status: blocked,
+  version_id: '6334888', version_name: revision 1}
+- {created: '2022-03-07 14:39:45.578852', doi: 10.5281/zenodo.6334806, name: 10.5281/zenodo.6334806,
+  rdf_source: unknown, status: blocked, version_id: '6334806', version_name: revision
+    1}
+- {created: '2022-03-07 13:37:12.025245', doi: 10.5281/zenodo.6334698, name: bioimageio_model,
+  rdf_source: 'https://zenodo.org/api/files/df674d68-b670-4153-b1fc-de812664f954/rdf.yaml',
+  status: blocked, version_id: '6334698', version_name: revision 1}
+- {created: '2022-03-03 21:20:03.850168', doi: 10.5281/zenodo.6326367, name: bioimageio_model,
+  rdf_source: 'https://zenodo.org/api/files/7d28f5af-90df-4219-af60-0a00045f4f0f/rdf.yaml',
+  status: blocked, version_id: '6326367', version_name: revision 1}
