@@ -1,41 +1,25 @@
 doi: 10.5281/zenodo.6200635
 id: 10.5281/zenodo.6200635
 nickname: loyal-parrot
-nickname_icon: 🦜
-owners:
-- 47882
+nickname_icon: "\U0001F99C"
+owners: [47882]
 status: accepted
 type: model
 versions:
-- created: '2023-03-06 19:01:04.321374'
-  doi: 10.5281/zenodo.7702687
-  name: HPA Cell Segmentation (DPNUnet)
-  status: accepted
-  version_id: '7702687'
-  version_name: version 4
-  rdf_source: https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/rdf.yaml
-- created: '2023-03-02 05:51:25.787728'
-  doi: 10.5281/zenodo.7690491
-  name: HPA Cell Segmentation (DPNUnet)
-  status: blocked
-  version_id: '7690491'
-  version_name: version 3
-  rdf_source: https://zenodo.org/api/files/a7bce3a4-8a7e-4087-bf06-cddbc0169bce/rdf.yaml
-- created: '2022-05-11 11:56:22.181865'
-  doi: 10.5281/zenodo.6538890
-  name: HPA Cell Segmentation (DPNUnet)
-  status: accepted
-  version_id: '6538890'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/rdf.yaml
+- {created: '2023-03-06 19:01:04.321374', doi: 10.5281/zenodo.7702687, name: HPA Cell
+    Segmentation (DPNUnet), rdf_source: 'https://zenodo.org/api/records/7702687/files/rdf.yaml/content',
+  status: accepted, version_id: '7702687', version_name: version 4}
+- {created: '2023-03-02 05:51:25.787728', doi: 10.5281/zenodo.7690491, name: HPA Cell
+    Segmentation (DPNUnet), rdf_source: 'https://zenodo.org/api/files/a7bce3a4-8a7e-4087-bf06-cddbc0169bce/rdf.yaml',
+  status: blocked, version_id: '7690491', version_name: version 3}
+- {created: '2022-05-11 11:56:22.181865', doi: 10.5281/zenodo.6538890, name: HPA Cell
+    Segmentation (DPNUnet), rdf_source: 'https://zenodo.org/api/files/858dbb84-174e-48cb-b2ef-9f1db2d0b275/rdf.yaml',
+  status: accepted, version_id: '6538890', version_name: version 2}
 - created: '2022-02-21 10:32:57.406609'
   doi: 10.5281/zenodo.6200636
-  links:
-  - imjoy/BioImageIO-Packager
-  - imjoy/HPA-Single-Cell
-  - deepimagej/deepimagej
+  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell, deepimagej/deepimagej]
   name: HPA Cell Segmentation (DPNUnet)
+  rdf_source: https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/rdf.yaml
   status: accepted
   version_id: '6200636'
   version_name: revision 2
-  rdf_source: https://zenodo.org/api/files/a24a1e8a-cdc5-4b56-b9c3-0b82417e74a5/rdf.yaml

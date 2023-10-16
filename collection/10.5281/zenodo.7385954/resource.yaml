@@ -1,23 +1,14 @@
 doi: 10.5281/zenodo.7385954
 id: 10.5281/zenodo.7385954
 nickname: patient-zebra
-nickname_icon: 🦓
-owners:
-- 85436
+nickname_icon: "\U0001F993"
+owners: [85436]
 status: accepted
 type: model
 versions:
-- created: '2022-12-01 12:04:15.088957'
-  doi: 10.5281/zenodo.7386107
-  name: N2V2 SEM demo
-  status: blocked
-  version_id: '7386107'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/5e02940b-9e9f-4d5b-a8d2-216bb72a66cf/rdf.yaml
-- created: '2022-12-01 11:23:27.740924'
-  doi: 10.5281/zenodo.7385955
-  name: N2V2 SEM demo
-  status: blocked
-  version_id: '7385955'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/316b5d90-3742-40a4-9a6b-82d33aa26b07/rdf.yaml
+- {created: '2022-12-01 12:04:15.088957', doi: 10.5281/zenodo.7386107, name: N2V2
+    SEM demo, rdf_source: 'https://zenodo.org/api/records/7386107/files/rdf.yaml/content',
+  status: blocked, version_id: '7386107', version_name: version 2}
+- {created: '2022-12-01 11:23:27.740924', doi: 10.5281/zenodo.7385955, name: N2V2
+    SEM demo, rdf_source: 'https://zenodo.org/api/files/316b5d90-3742-40a4-9a6b-82d33aa26b07/rdf.yaml',
+  status: blocked, version_id: '7385955', version_name: version 1}

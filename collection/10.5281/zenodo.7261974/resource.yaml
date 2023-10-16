@@ -1,44 +1,23 @@
 doi: 10.5281/zenodo.7261974
 id: 10.5281/zenodo.7261974
 nickname: placid-llama
-nickname_icon: 🦙
-owners:
-- 147356
+nickname_icon: "\U0001F999"
+owners: [147356]
 status: accepted
 type: model
 versions:
-- created: '2023-03-29 18:14:39.826271'
-  doi: 10.5281/zenodo.7782776
-  name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
-  status: accepted
-  version_id: '7782776'
-  version_name: version 5
-  rdf_source: https://zenodo.org/api/files/8a54859f-3e23-4767-9add-0c58c98b4bd6/rdf.yaml
-- created: '2023-03-28 13:40:13.321650'
-  doi: 10.5281/zenodo.7778377
-  name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
-  status: accepted
-  version_id: '7778377'
-  version_name: version 4
-  rdf_source: https://zenodo.org/api/files/e90aabf3-44f9-46c3-b08e-d9044676fe2f/rdf.yaml
-- created: '2023-03-01 15:30:45.717892'
-  doi: 10.5281/zenodo.7688940
-  name: B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet
-  status: accepted
-  version_id: '7688940'
-  version_name: version 3
-  rdf_source: https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/rdf.yaml
-- created: '2023-01-18 09:30:49.495107'
-  doi: 10.5281/zenodo.7546703
-  name: ' B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet'
-  status: accepted
-  version_id: '7546703'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/rdf.yaml
-- created: '2022-10-28 17:06:39.509102'
-  doi: 10.5281/zenodo.7261975
-  name: ' B. Sutilist bacteria segmentation - Widefield microscopy - 2D UNet'
-  status: accepted
-  version_id: '7261975'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/rdf.yaml
+- {created: '2023-03-29 18:14:39.826271', doi: 10.5281/zenodo.7782776, name: B. Sutilist
+    bacteria segmentation - Widefield microscopy - 2D UNet, rdf_source: 'https://zenodo.org/api/records/7782776/files/rdf.yaml/content',
+  status: accepted, version_id: '7782776', version_name: version 5}
+- {created: '2023-03-28 13:40:13.321650', doi: 10.5281/zenodo.7778377, name: B. Sutilist
+    bacteria segmentation - Widefield microscopy - 2D UNet, rdf_source: 'https://zenodo.org/api/files/e90aabf3-44f9-46c3-b08e-d9044676fe2f/rdf.yaml',
+  status: accepted, version_id: '7778377', version_name: version 4}
+- {created: '2023-03-01 15:30:45.717892', doi: 10.5281/zenodo.7688940, name: B. Sutilist
+    bacteria segmentation - Widefield microscopy - 2D UNet, rdf_source: 'https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/rdf.yaml',
+  status: accepted, version_id: '7688940', version_name: version 3}
+- {created: '2023-01-18 09:30:49.495107', doi: 10.5281/zenodo.7546703, name: ' B.
+    Sutilist bacteria segmentation - Widefield microscopy - 2D UNet', rdf_source: 'https://zenodo.org/api/files/9ea15be9-4f23-4c40-94ca-a6bf0e8a2f77/rdf.yaml',
+  status: accepted, version_id: '7546703', version_name: version 2}
+- {created: '2022-10-28 17:06:39.509102', doi: 10.5281/zenodo.7261975, name: ' B.
+    Sutilist bacteria segmentation - Widefield microscopy - 2D UNet', rdf_source: 'https://zenodo.org/api/files/dbb607ce-e545-494f-a492-fdc87f974bb4/rdf.yaml',
+  status: accepted, version_id: '7261975', version_name: version 1}

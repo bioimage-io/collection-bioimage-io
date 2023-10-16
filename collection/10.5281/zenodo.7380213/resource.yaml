@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.7380213
 id: 10.5281/zenodo.7380213
 nickname: hardworking-rat
-nickname_icon: 🐀
-owners:
-- 439786
-status: blocked  # duplicate of 10.5281/zenodo.7380171
+nickname_icon: "\U0001F400"
+owners: [439786]
+status: blocked
 type: model
 versions:
-- created: '2022-11-30 09:44:25.370930'
-  doi: 10.5281/zenodo.7380214
-  name: Boundary segmentation
-  status: blocked  # missing files in record
-  version_id: '7380214'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/7509172e-48eb-4199-b9fc-d0988f8daf47/rdf.yaml
+- {created: '2022-11-30 09:44:25.370930', doi: 10.5281/zenodo.7380214, name: Boundary
+    segmentation, rdf_source: 'https://zenodo.org/api/records/7380214/files/rdf.yaml/content',
+  status: blocked, version_id: '7380214', version_name: version 1}

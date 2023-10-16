@@ -1,13 +1,17 @@
 doi: 10.5281/zenodo.5874741
 id: 10.5281/zenodo.5874741
+nickname: impartial-shrimp
+nickname_icon: "\U0001F990"
 owners: [77626]
 status: accepted
 type: model
 versions:
-- {created: '2022-01-18 22:01:09.315638', doi: 10.5281/zenodo.5874742, name: Neuron Segmentation in EM (Membrane Prediction),
-  rdf_source: 'https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/rdf.yaml',
-  status: accepted, version_id: '5874742', version_name: revision 1,
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook],
-  training_data: {id: ilastik/cremi_training_data}}
-nickname: impartial-shrimp
-nickname_icon: 🦐
+- created: '2022-01-18 22:01:09.315638'
+  doi: 10.5281/zenodo.5874742
+  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
+  name: Neuron Segmentation in EM (Membrane Prediction)
+  rdf_source: https://zenodo.org/api/records/5874742/files/rdf.yaml/content
+  status: accepted
+  training_data: {id: ilastik/cremi_training_data}
+  version_id: '5874742'
+  version_name: revision 1

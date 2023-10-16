@@ -1,51 +1,40 @@
 doi: 10.5281/zenodo.5910854
 id: 10.5281/zenodo.5910854
 nickname: straightforward-crocodile
-nickname_icon: 🐊
-owners:
-- 47882
+nickname_icon: "\U0001F40A"
+owners: [47882]
 status: accepted
 type: model
 versions:
-- created: '2022-05-11 12:52:23.766143'
+- config:
+    bioimageio:
+      nickname: straightforward-crocodile
+      nickname_icon: "\U0001F40A"
+      test_kwargs:
+        onnx: {decimal: 2}
+        torchscript: {decimal: 2}
+  created: '2022-05-11 12:52:23.766143'
   doi: 10.5281/zenodo.6539073
   name: HPA Bestfitting InceptionV3
+  rdf_source: https://zenodo.org/api/records/6539073/files/rdf.yaml/content
   status: accepted
   version_id: '6539073'
   version_name: version 3
-  rdf_source: https://zenodo.org/api/files/9d3f4b43-f5b6-4596-adc4-12cfb0ab83c6/rdf.yaml
-  config:
+- config:
     bioimageio:
       nickname: straightforward-crocodile
-      nickname_icon: 🐊
+      nickname_icon: "\U0001F40A"
       test_kwargs:
-        onnx:
-          decimal: 2
-        torchscript:
-          decimal: 2
-- created: '2022-01-27 20:53:33.181598'
+        onnx: {decimal: 2}
+        torchscript: {decimal: 2}
+  created: '2022-01-27 20:53:33.181598'
   doi: 10.5281/zenodo.5911832
-  links:
-  - imjoy/BioImageIO-Packager
-  - imjoy/HPA-Single-Cell
+  links: [imjoy/BioImageIO-Packager, imjoy/HPA-Single-Cell]
   name: HPA Bestfitting InceptionV3
+  rdf_source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/rdf.yaml
   status: accepted
   version_id: '5911832'
   version_name: Version 1
-  rdf_source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/rdf.yaml
-  config:
-    bioimageio:
-      nickname: straightforward-crocodile
-      nickname_icon: 🐊
-      test_kwargs:
-        onnx:
-          decimal: 2
-        torchscript:
-          decimal: 2
-- created: '2022-01-27 14:38:36.287116'
-  doi: 10.5281/zenodo.5910855
-  name: HPA Bestfitting InceptionV3
-  status: blocked
-  version_id: '5910855'
-  version_name: revision 1
-  rdf_source: https://zenodo.org/api/files/474cde37-dc44-46f3-8343-aed6bafdd0bb/rdf.yaml
+- {created: '2022-01-27 14:38:36.287116', doi: 10.5281/zenodo.5910855, name: HPA Bestfitting
+    InceptionV3, rdf_source: 'https://zenodo.org/api/files/474cde37-dc44-46f3-8343-aed6bafdd0bb/rdf.yaml',
+  status: blocked, version_id: '5910855', version_name: revision 1}

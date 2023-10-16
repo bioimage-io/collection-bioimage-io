@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.7786492
 id: 10.5281/zenodo.7786492
 nickname: organized-cricket
-nickname_icon: 🦗
-owners:
-- 271523
+nickname_icon: "\U0001F997"
+owners: [271523]
 status: accepted
 type: model
 versions:
-- created: '2023-03-30 16:57:43.433376'
-  doi: 10.5281/zenodo.7786493
-  name: Mitochondria resolution enhancement Wasserstein GAN
-  status: accepted
-  version_id: '7786493'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/rdf.yaml
+- {created: '2023-03-30 16:57:43.433376', doi: 10.5281/zenodo.7786493, name: Mitochondria
+    resolution enhancement Wasserstein GAN, rdf_source: 'https://zenodo.org/api/records/7786493/files/rdf.yaml/content',
+  status: accepted, version_id: '7786493', version_name: version 1}

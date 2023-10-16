@@ -1,23 +1,14 @@
 doi: 10.5281/zenodo.8064806
 id: 10.5281/zenodo.8064806
 nickname: noisy-hedgehog
-nickname_icon: 🦔
-owners:
-- 546538
+nickname_icon: "\U0001F994"
+owners: [546538]
 status: accepted
 type: model
 versions:
-- created: '2023-06-23 10:23:37.255827'
-  doi: 10.5281/zenodo.8073617
-  name: 2D UNet for label-free prediction of mCherry-H2B
-  status: accepted
-  version_id: '8073617'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/670646e2-af1f-4bc5-be01-904999767471/rdf.yaml
-- created: '2023-06-21 13:59:59.433558'
-  doi: 10.5281/zenodo.8064807
-  name: 2D UNet for label-free prediction of mCherry-H2B
-  status: blocked
-  version_id: '8064807'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/3597d5b4-a55e-4be6-89b1-43b21494db91/rdf.yaml
+- {created: '2023-06-23 10:23:37.255827', doi: 10.5281/zenodo.8073617, name: 2D UNet
+    for label-free prediction of mCherry-H2B, rdf_source: 'https://zenodo.org/api/records/8073617/files/rdf.yaml/content',
+  status: accepted, version_id: '8073617', version_name: version 2}
+- {created: '2023-06-21 13:59:59.433558', doi: 10.5281/zenodo.8064807, name: 2D UNet
+    for label-free prediction of mCherry-H2B, rdf_source: 'https://zenodo.org/api/files/3597d5b4-a55e-4be6-89b1-43b21494db91/rdf.yaml',
+  status: blocked, version_id: '8064807', version_name: version 1}

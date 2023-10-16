@@ -1,14 +1,9 @@
 doi: 10.5281/zenodo.7612115
 id: 10.5281/zenodo.7612115
-owners:
-- 96309
+owners: [96309]
 status: accepted
 type: dataset
 versions:
-- created: '2023-02-06 13:30:05.714615'
-  doi: 10.5281/zenodo.7612152
-  name: Hatchling Medaka Heart (HyLFM)
-  status: accepted
-  version_id: '7612152'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/abbc2f48-1514-4102-8393-eb03fa4a516c/rdf.yaml
+- {created: '2023-02-06 13:30:05.714615', doi: 10.5281/zenodo.7612152, name: Hatchling
+    Medaka Heart (HyLFM), rdf_source: 'https://zenodo.org/api/records/7612152/files/rdf.yaml/content',
+  status: accepted, version_id: '7612152', version_name: version 2}

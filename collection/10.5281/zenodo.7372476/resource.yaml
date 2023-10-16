@@ -1,14 +1,9 @@
 doi: 10.5281/zenodo.7372476
 id: 10.5281/zenodo.7372476
-owners:
-- 96309
+owners: [96309]
 status: blocked
 type: unknown
 versions:
-- created: '2023-02-06 09:15:21.894885'
-  doi: 10.5281/zenodo.7609747
-  name: 10.5281/zenodo.7609747
-  status: accepted
-  version_id: '7609747'
-  version_name: version 2
-  rdf_source: unknown
+- {created: '2023-02-06 09:15:21.894885', doi: 10.5281/zenodo.7609747, name: 10.5281/zenodo.7609747,
+  rdf_source: unknown, status: accepted, version_id: '7609747', version_name: version
+    2}

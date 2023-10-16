@@ -1,23 +1,14 @@
 doi: 10.5281/zenodo.6808325
 id: 10.5281/zenodo.6808325
 nickname: determined-chipmunk
-nickname_icon: 🐿
-owners:
-- 77626
+nickname_icon: "\U0001F43F"
+owners: [77626]
 status: accepted
 type: model
 versions:
-- created: '2022-07-07 21:30:58.116303'
-  doi: 10.5281/zenodo.6808413
-  name: EM3DBoundaryEnhancer
-  status: accepted
-  version_id: '6808413'
-  version_name: version 2
-  rdf_source: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/rdf.yaml
-- created: '2022-07-07 19:57:46.482832'
-  doi: 10.5281/zenodo.6808326
-  name: EM3DBoundaryEnhancer
-  status: blocked
-  version_id: '6808326'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/d60f6e26-04ce-4bb3-bf13-4b9387bb7208/rdf.yaml
+- {created: '2022-07-07 21:30:58.116303', doi: 10.5281/zenodo.6808413, name: EM3DBoundaryEnhancer,
+  rdf_source: 'https://zenodo.org/api/records/6808413/files/rdf.yaml/content', status: accepted,
+  version_id: '6808413', version_name: version 2}
+- {created: '2022-07-07 19:57:46.482832', doi: 10.5281/zenodo.6808326, name: EM3DBoundaryEnhancer,
+  rdf_source: 'https://zenodo.org/api/files/d60f6e26-04ce-4bb3-bf13-4b9387bb7208/rdf.yaml',
+  status: blocked, version_id: '6808326', version_name: version 1}
