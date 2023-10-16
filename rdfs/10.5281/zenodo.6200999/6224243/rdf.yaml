@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/fixed_zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/6224243/files/fixed_zero_mean_unit_variance.ijm/content
 authors:
 - name: Hao Xu
 - name: Wei Ouyang
@@ -44,10 +44,10 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/hpaseg-cover.png
+- https://zenodo.org/api/records/6224243/files/hpaseg-cover.png/content
 description: Nuclei segmentation model for segmenting images from the Human Protein
   Atlas
-documentation: https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/README.md
+documentation: https://zenodo.org/api/records/6224243/files/README.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.6200999/6224243
 inputs:
@@ -95,18 +95,18 @@ outputs:
   - 512
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/6224243/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/sample_input_0.tif
+- https://zenodo.org/api/records/6224243/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/sample_output_0.tif
+- https://zenodo.org/api/records/6224243/files/sample_output_0.tif/content
 tags:
 - nucleus-segmentation
 test_inputs:
-- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/test_nuclei_input.npy
+- https://zenodo.org/api/records/6224243/files/test_nuclei_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/test_nuclei_output.npy
+- https://zenodo.org/api/records/6224243/files/test_nuclei_output.npy/content
 timestamp: '2022-02-21T21:35:34.392135'
 type: model
 weights:
   torchscript:
     sha256: 8d3af116378b12d54a15d880b942c2d7e74ba52e11421a7ba16c702d1a112ba5
-    source: https://zenodo.org/api/files/9f580ca7-5f85-41ac-be2b-201172ed09b3/nuclei_model.pt
+    source: https://zenodo.org/api/records/6224243/files/nuclei_model.pt/content

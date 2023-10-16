@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/per_sample_scale_range.ijm
+  - https://zenodo.org/api/records/6808413/files/per_sample_scale_range.ijm/content
 authors:
 - affiliation: EMBL Heidelberg
   name: Jonas Hellgoth
@@ -47,9 +47,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/cover.png
+- https://zenodo.org/api/records/6808413/files/cover.png/content
 description: Prediction enhancer for segmenting cell boundaries in EM images.
-documentation: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/documentation.md
+documentation: https://zenodo.org/api/records/6808413/files/documentation.md/content
 format_version: 0.4.6
 id: 10.5281/zenodo.6808325/6808413
 inputs:
@@ -118,9 +118,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6808325/6808413/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/sample_input_0.tif
+- https://zenodo.org/api/records/6808413/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/sample_output_0.tif
+- https://zenodo.org/api/records/6808413/files/sample_output_0.tif/content
 tags:
 - unet
 - cells
@@ -129,9 +129,9 @@ tags:
 - 3d
 - shallow2deep
 test_inputs:
-- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/test_input_0.npy
+- https://zenodo.org/api/records/6808413/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/test_output_0.npy
+- https://zenodo.org/api/records/6808413/files/test_output_0.npy/content
 timestamp: '2022-07-07T22:19:35.377364'
 training_data:
   id: ilastik/vnc
@@ -139,9 +139,9 @@ type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/unet.py:UNet3d
+    architecture: https://zenodo.org/api/records/6808413/files/unet.py/content:UNet3d
     architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
-    dependencies: conda:https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6808413/files/environment.yaml/content
     kwargs:
       depth: 4
       final_activation: Sigmoid
@@ -152,7 +152,7 @@ weights:
       postprocessing:
       return_side_outputs: false
     sha256: 613211374a1b7955848f5261dedbfe439c6cf12f74dd363426af8bfde37e099e
-    source: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/weights.pt
+    source: https://zenodo.org/api/records/6808413/files/weights.pt/content
   torchscript:
     sha256: e9c75b6b789b980caf605876e6651cc8b5db0325047cbf5ee24f7d2e4ac65499
-    source: https://zenodo.org/api/files/594b8635-b6ad-4507-a944-e23d691a933c/weights-torchscript.pt
+    source: https://zenodo.org/api/records/6808413/files/weights-torchscript.pt/content

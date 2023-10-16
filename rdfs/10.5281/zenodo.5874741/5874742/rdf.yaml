@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/5874742/files/zero_mean_unit_variance.ijm/content
 authors:
 - name: Constantin Pape
 cite:
@@ -48,9 +48,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/cover.png
+- https://zenodo.org/api/records/5874742/files/cover.png/content
 description: Neuron segmentation in EM, trained on the CREMI challenge data.
-documentation: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/documentation.md
+documentation: https://zenodo.org/api/records/5874742/files/documentation.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.5874741/5874742
 inputs:
@@ -117,9 +117,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874741/5874742/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_input_0.tif
+- https://zenodo.org/api/records/5874742/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/sample_output_0.tif
+- https://zenodo.org/api/records/5874742/files/sample_output_0.tif/content
 tags:
 - unet
 - neurons
@@ -130,9 +130,9 @@ tags:
 - 3d
 - affinity-prediction
 test_inputs:
-- https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_input_0.npy
+- https://zenodo.org/api/records/5874742/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/test_output_0.npy
+- https://zenodo.org/api/records/5874742/files/test_output_0.npy/content
 timestamp: '2022-01-15T20:27:01.644120'
 training_data:
   id: ilastik/cremi_training_data
@@ -140,7 +140,7 @@ type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/unet.py:AnisotropicUNet
+    architecture: https://zenodo.org/api/records/5874742/files/unet.py/content:AnisotropicUNet
     architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
     kwargs:
       anisotropic_kernel: false
@@ -168,7 +168,7 @@ weights:
         - 2
         - 2
     sha256: 9123de8cd1b9e7d4eaef56cb9d780a4dcbcfdf4b33f85559f6f392eeb06f6920
-    source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/weights.pt
+    source: https://zenodo.org/api/records/5874742/files/weights.pt/content
   torchscript:
     sha256: b3ebddbf6fbf6b8c080bcdecb4fe52b6fa9f71802e502f3c65283794e6fefec8
-    source: https://zenodo.org/api/files/a6d65a8b-4fed-453f-89f6-515a2a73a99e/weights-torchscript.pt
+    source: https://zenodo.org/api/records/5874742/files/weights-torchscript.pt/content

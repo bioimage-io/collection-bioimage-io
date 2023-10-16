@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/scale_linear.ijm
+  - https://zenodo.org/api/records/8123818/files/scale_linear.ijm/content
 authors:
 - affiliation: EMBL Heidelberg
   github_user: jhennies
@@ -27,10 +27,10 @@ config:
     version_id: '8123818'
     version_name: version 3
 covers:
-- https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/coverimage.jpg
+- https://zenodo.org/api/records/8123818/files/coverimage.jpg/content
 description: Cellular membrane prediction model for volume SEM datasets
 documentation: 
-  https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/CebraNET_README.md
+  https://zenodo.org/api/records/8123818/files/CebraNET_README.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.7274275/8123818
 inputs:
@@ -93,9 +93,9 @@ parent:
 rdf_source: 
   https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7274275/8123818/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/sample_input_0.tif
+- https://zenodo.org/api/records/8123818/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/sample_output_0.tif
+- https://zenodo.org/api/records/8123818/files/sample_output_0.tif/content
 tags:
 - unet
 - 3d
@@ -111,15 +111,15 @@ tags:
 - platynereis
 - calu-3
 test_inputs:
-- https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/test_data_raw.npy
+- https://zenodo.org/api/records/8123818/files/test_data_raw.npy/content
 test_outputs:
-- https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/test_data_out.npy
+- https://zenodo.org/api/records/8123818/files/test_data_out.npy/content
 timestamp: '2023-07-05T14:09:59.474209'
 type: model
 weights:
   pytorch_state_dict:
     architecture: 
-      https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/piled_unets.py:PiledUnet
+      https://zenodo.org/api/records/8123818/files/piled_unets.py/content:PiledUnet
     architecture_sha256: 4b0f4759b35dfcd868f71acac492fc6c2c9c99897b30b2508126a8e6607e24c7
     kwargs:
       batch_norm: true
@@ -178,9 +178,9 @@ weights:
       predict: true
     pytorch_version: 1.13.1
     sha256: 6b523c9a77916e75306563e39b79ef2cfb72a857540994958a8d0943f46a207c
-    source: https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/model_0097.pt
+    source: https://zenodo.org/api/records/8123818/files/model_0097.pt/content
   torchscript:
     pytorch_version: 1.13.1
     sha256: edbb4da356b1d79b0ed0ee73dd80d3760ddf99ebdd969900aba7ff8d1c521734
     source: 
-      https://zenodo.org/api/files/8a94ef33-32d5-4a83-a4fd-cfb74ae6b217/weights.torchscript
+      https://zenodo.org/api/records/8123818/files/weights.torchscript/content

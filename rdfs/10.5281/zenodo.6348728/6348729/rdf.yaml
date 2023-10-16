@@ -1,7 +1,7 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/training_evaluation.csv
-  - https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/per_sample_scale_range.ijm
+  - https://zenodo.org/api/records/6348729/files/training_evaluation.csv/content
+  - https://zenodo.org/api/records/6348729/files/per_sample_scale_range.ijm/content
 authors:
 - affiliation: EMBL Heidelberg
   name: Constantin Pape
@@ -48,9 +48,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/cover.png
+- https://zenodo.org/api/records/6348729/files/cover.png/content
 description: Perform leaf segmentation in light microscopy images of Arabidopsis
-documentation: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/README.md
+documentation: https://zenodo.org/api/records/6348729/files/README.md/content
 format_version: 0.4.6
 id: 10.5281/zenodo.6348728/6348729
 inputs:
@@ -103,18 +103,18 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348728/6348729/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/sample_input_0.tif
+- https://zenodo.org/api/records/6348729/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/sample_output_0.tif
+- https://zenodo.org/api/records/6348729/files/sample_output_0.tif/content
 tags:
 - zerocostdl4mic
 - deepimagej
 - segmentation
 - unet
 test_inputs:
-- https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/test_input.npy
+- https://zenodo.org/api/records/6348729/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/test_output.npy
+- https://zenodo.org/api/records/6348729/files/test_output.npy/content
 timestamp: '2022-03-11T17:00:18.455992'
 training_data:
   id: ilastik/arabidopsis_tissue_atlas
@@ -123,9 +123,9 @@ version: 0.1.0
 weights:
   keras_hdf5:
     sha256: 754607fe5932eeee029f988127cebe43fa93d0df075e54f1abd6e21c57e861e2
-    source: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/keras_weights.hdf5
+    source: https://zenodo.org/api/records/6348729/files/keras_weights.hdf5/content
     tensorflow_version: 1.15.2
   tensorflow_saved_model_bundle:
     sha256: 3548156e4c67e628a3505fb49252ce3c9d4450672466c8a6f9d09cee90bbedf0
-    source: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/tf_weights.zip
+    source: https://zenodo.org/api/records/6348729/files/tf_weights.zip/content
     tensorflow_version: 1.15.2

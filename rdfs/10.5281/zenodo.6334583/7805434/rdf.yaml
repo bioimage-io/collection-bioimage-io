@@ -19,12 +19,12 @@ config:
     version_id: '7805434'
     version_name: version 6
 covers:
-- https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_raw.png
-- https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_sneak.png
-- https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/ilastik_pred.png
+- https://zenodo.org/api/records/7805434/files/ilastik_raw.png/content
+- https://zenodo.org/api/records/7805434/files/ilastik_sneak.png/content
+- https://zenodo.org/api/records/7805434/files/ilastik_pred.png/content
 description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
   of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-documentation: https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/doc.md
+documentation: https://zenodo.org/api/records/7805434/files/doc.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6334583/7805434
 inputs:
@@ -77,15 +77,15 @@ tags:
 - pytorch
 - fluorescence-light-microscopy
 test_inputs:
-- https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/test_input.npy
+- https://zenodo.org/api/records/7805434/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/test_output.npy
+- https://zenodo.org/api/records/7805434/files/test_output.npy/content
 timestamp: '2023-04-06T14:04:23.266519'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/7805434/files/unet.py/content:UNet3D
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
     kwargs:
       f_maps: 32
@@ -96,8 +96,8 @@ weights:
       num_groups: 8
       out_channels: 1
     sha256: 0f11cbd0608d12ef161892586408c6ec1a074f1f27ea6afef9d1ceece3dd3c1f
-    source: https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/unet3d-arabidopsis-ovules-confocal-ds2x.pytorch
+    source: https://zenodo.org/api/records/7805434/files/unet3d-arabidopsis-ovules-confocal-ds2x.pytorch/content
   torchscript:
     pytorch_version: 2.0.0
     sha256: 09be0d33ca00fb8137cca507a69f5e95719a159ada0d709286ae9dc183093aaf
-    source: https://zenodo.org/api/files/a61672cf-94ef-468d-8bc1-ae8db92ca323/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7805434/files/torchscript_tracing.pt/content

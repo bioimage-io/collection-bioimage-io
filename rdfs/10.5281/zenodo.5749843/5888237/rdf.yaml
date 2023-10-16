@@ -1,10 +1,10 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/exampleImage.tif
-  - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/resultImage.tif
-  - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/per_sample_scale_range.ijm
-  - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/binarize.ijm
-  - https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/params.csv
+  - https://zenodo.org/api/records/5888237/files/exampleImage.tif/content
+  - https://zenodo.org/api/records/5888237/files/resultImage.tif/content
+  - https://zenodo.org/api/records/5888237/files/per_sample_scale_range.ijm/content
+  - https://zenodo.org/api/records/5888237/files/binarize.ijm/content
+  - https://zenodo.org/api/records/5888237/files/params.csv/content
 authors:
 - affiliation: UC3M, EPFL
   name: DeepImageJ
@@ -57,11 +57,11 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/input.png
-- https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/output.png
+- https://zenodo.org/api/records/5888237/files/input.png/content
+- https://zenodo.org/api/records/5888237/files/output.png/content
 description: A 3D U-net to predict cell membranes in plant tissues, trained on volumes
   of Arabidopsis thaliana ovules acquired on a confocal microscope.
-documentation: https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/README.md
+documentation: https://zenodo.org/api/records/5888237/files/README.md/content
 format_version: 0.4.6
 id: 10.5281/zenodo.5749843/5888237
 inputs:
@@ -128,9 +128,9 @@ packaged_by:
   name: pydeepimagej
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5888237/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/exampleImage.tif
+- https://zenodo.org/api/records/5888237/files/exampleImage.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/resultImage.tif
+- https://zenodo.org/api/records/5888237/files/resultImage.tif/content
 tags:
 - zerocostdl4mic
 - deepimagej
@@ -143,9 +143,9 @@ tags:
 - arabidopsis
 - tensorflow
 test_inputs:
-- https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/exampleImage.npy
+- https://zenodo.org/api/records/5888237/files/exampleImage.npy/content
 test_outputs:
-- https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/resultImage.npy
+- https://zenodo.org/api/records/5888237/files/resultImage.npy/content
 timestamp: '2021-10-14T11:37:36.531183'
 training_data:
   id: ilastik/plantseg_ovules
@@ -154,10 +154,10 @@ version: 0.1.0
 weights:
   keras_hdf5:
     sha256: 4e34b2b630899a28f087ba607f6c8df9f32fd04240e75ee1c5ee50187070eb7c
-    source: https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/keras_model.h5
+    source: https://zenodo.org/api/records/5888237/files/keras_model.h5/content
     tensorflow_version: 1.15.2
   tensorflow_saved_model_bundle:
     parent: keras_hdf5
     sha256: e8e9550ffb58b96ae223a196ffe2366402251a2bc40b8d75e43c6c7aa5f0474e
-    source: https://zenodo.org/api/files/eb8f4259-001c-4989-b8ea-d2997918599d/tensorflow_saved_model_bundle.zip
+    source: https://zenodo.org/api/records/5888237/files/tensorflow_saved_model_bundle.zip/content
     tensorflow_version: 1.15.2

@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/fixed_zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/7702687/files/fixed_zero_mean_unit_variance.ijm/content
 authors:
 - name: Hao Xu
 - name: Wei Ouyang
@@ -44,10 +44,10 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/hpaseg-cover.png
+- https://zenodo.org/api/records/7702687/files/hpaseg-cover.png/content
 description: Cell segmentation model for segmenting images from the Human Protein
   Atlas
-documentation: https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/README.md
+documentation: https://zenodo.org/api/records/7702687/files/README.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6200635/7702687
 inputs:
@@ -98,9 +98,9 @@ outputs:
   - 512
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200635/7702687/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/sample_input_0.tif
+- https://zenodo.org/api/records/7702687/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/sample_output_0.tif
+- https://zenodo.org/api/records/7702687/files/sample_output_0.tif/content
 tags:
 - torchscript
 - unet
@@ -108,9 +108,9 @@ tags:
 - deepimagej
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/test_cell_input.npy
+- https://zenodo.org/api/records/7702687/files/test_cell_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/test_cell_output.npy
+- https://zenodo.org/api/records/7702687/files/test_cell_output.npy/content
 timestamp: '2023-03-01T11:40:00.439253'
 type: model
 version: 0.1.0
@@ -118,4 +118,4 @@ weights:
   torchscript:
     pytorch_version: 1.13.0
     sha256: 7e94848c41f2a8a2e881a194fbd0228af15d3df864313c53bf3b130e90ca0275
-    source: https://zenodo.org/api/files/cc7bae73-b42f-4594-a357-4b467f0b1106/cell_model.pt
+    source: https://zenodo.org/api/records/7702687/files/cell_model.pt/content

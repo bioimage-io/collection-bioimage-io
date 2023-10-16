@@ -1,10 +1,10 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/exampleImage.tif
-  - https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/resultImage.tif
-  - https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/per_sample_scale_range.ijm
-  - https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/binarize.ijm
-  - https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/params.csv
+  - https://zenodo.org/api/records/5877226/files/exampleImage.tif/content
+  - https://zenodo.org/api/records/5877226/files/resultImage.tif/content
+  - https://zenodo.org/api/records/5877226/files/per_sample_scale_range.ijm/content
+  - https://zenodo.org/api/records/5877226/files/binarize.ijm/content
+  - https://zenodo.org/api/records/5877226/files/params.csv/content
 authors:
 - affiliation: UC3M, EPFL
   name: DeepImageJ
@@ -57,11 +57,11 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/input.png
-- https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/output.png
+- https://zenodo.org/api/records/5877226/files/input.png/content
+- https://zenodo.org/api/records/5877226/files/output.png/content
 description: Trained 3D U-Net to segment arabidopsis ovaries boundaries in confocal
   microscopy 3D volumes.
-documentation: https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/README.md
+documentation: https://zenodo.org/api/records/5877226/files/README.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.5749843/5877226
 inputs:
@@ -127,9 +127,9 @@ packaged_by:
   name: pydeepimagej
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5749843/5877226/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/exampleImage.tif
+- https://zenodo.org/api/records/5877226/files/exampleImage.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/resultImage.tif
+- https://zenodo.org/api/records/5877226/files/resultImage.tif/content
 tags:
 - zerocostdl4mic
 - deepimagej
@@ -141,19 +141,19 @@ tags:
 - plant
 - tensorflow
 test_inputs:
-- https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/exampleImage.npy
+- https://zenodo.org/api/records/5877226/files/exampleImage.npy/content
 test_outputs:
-- https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/resultImage.npy
+- https://zenodo.org/api/records/5877226/files/resultImage.npy/content
 timestamp: '2021-10-14T11:37:36.531183'
 type: model
 version: 0.1.0
 weights:
   keras_hdf5:
     sha256: 4e34b2b630899a28f087ba607f6c8df9f32fd04240e75ee1c5ee50187070eb7c
-    source: https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/keras_model.h5
+    source: https://zenodo.org/api/records/5877226/files/keras_model.h5/content
     tensorflow_version: 1.15.2
   tensorflow_saved_model_bundle:
     parent: keras_hdf5
     sha256: e8e9550ffb58b96ae223a196ffe2366402251a2bc40b8d75e43c6c7aa5f0474e
-    source: https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/tensorflow_saved_model_bundle.zip
+    source: https://zenodo.org/api/records/5877226/files/tensorflow_saved_model_bundle.zip/content
     tensorflow_version: 1.15.2

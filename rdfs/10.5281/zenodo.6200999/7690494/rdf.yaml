@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/fixed_zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/7690494/files/fixed_zero_mean_unit_variance.ijm/content
 authors:
 - name: Hao Xu
 - name: Wei Ouyang
@@ -44,10 +44,10 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/hpaseg-cover.png
+- https://zenodo.org/api/records/7690494/files/hpaseg-cover.png/content
 description: Nuclei segmentation model for segmenting images from the Human Protein
   Atlas
-documentation: https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/README.md
+documentation: https://zenodo.org/api/records/7690494/files/README.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6200999/7690494
 inputs:
@@ -96,9 +96,9 @@ outputs:
   - 512
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6200999/7690494/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/sample_input_0.tif
+- https://zenodo.org/api/records/7690494/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/sample_output_0.tif
+- https://zenodo.org/api/records/7690494/files/sample_output_0.tif/content
 tags:
 - torchscript
 - unet
@@ -106,9 +106,9 @@ tags:
 - deepimagej
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/test_nuclei_input.npy
+- https://zenodo.org/api/records/7690494/files/test_nuclei_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/test_nuclei_output.npy
+- https://zenodo.org/api/records/7690494/files/test_nuclei_output.npy/content
 timestamp: '2023-03-01T11:40:29.467170'
 type: model
 version: 0.1.0
@@ -116,4 +116,4 @@ weights:
   torchscript:
     pytorch_version: 1.13.0
     sha256: 8d3af116378b12d54a15d880b942c2d7e74ba52e11421a7ba16c702d1a112ba5
-    source: https://zenodo.org/api/files/b45c85f7-1931-4e8d-8625-2c5f0fad4666/nuclei_model.pt
+    source: https://zenodo.org/api/records/7690494/files/nuclei_model.pt/content

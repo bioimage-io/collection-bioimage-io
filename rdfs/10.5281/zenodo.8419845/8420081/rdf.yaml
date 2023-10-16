@@ -23,11 +23,11 @@ config:
     version_id: '8420081'
     version_name: version 4
 covers:
-- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/cover1.png
-- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/cover2.png
+- https://zenodo.org/api/records/8420081/files/cover1.png/content
+- https://zenodo.org/api/records/8420081/files/cover2.png/content
 description: Pre-training a Foundation Model for Universal Fluorescence Microscopy
   Image Restoration
-documentation: https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/doc.md
+documentation: https://zenodo.org/api/records/8420081/files/doc.md/content
 format_version: 0.4.9
 git_repo: https://github.com/cxm12/UNiFMIR/
 id: 10.5281/zenodo.8419845/8420081
@@ -68,13 +68,13 @@ tags:
 - pytorch
 - image-restoration
 test_inputs:
-- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/test-input.npy
+- https://zenodo.org/api/records/8420081/files/test-input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/test-output.npy
+- https://zenodo.org/api/records/8420081/files/test-output.npy/content
 timestamp: '2023-10-09T14:31:46.944172'
 type: model
 weights:
   torchscript:
     pytorch_version: 1.10.0
     sha256: ecbcfc7a1574f1136b31e5ac252f93eaf6fedf36ffe870a434825ece98860219
-    source: https://zenodo.org/api/files/f261f1ca-a296-46a7-a1e7-b81808c8afa6/weights.pt
+    source: https://zenodo.org/api/records/8420081/files/weights.pt/content

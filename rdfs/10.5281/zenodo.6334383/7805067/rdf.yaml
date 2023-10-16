@@ -17,10 +17,10 @@ config:
     version_id: '7805067'
     version_name: version 9
 covers:
-- https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/raw.png
-- https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/pred.png
+- https://zenodo.org/api/records/7805067/files/raw.png/content
+- https://zenodo.org/api/records/7805067/files/pred.png/content
 description: 2D Unet trained on confocal images of Arabidopsis Ovules
-documentation: https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/doc.md
+documentation: https://zenodo.org/api/records/7805067/files/doc.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6334383/7805067
 inputs:
@@ -67,15 +67,15 @@ tags:
 - confocal-microscopy
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/test-input.npy
+- https://zenodo.org/api/records/7805067/files/test-input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/test-output.npy
+- https://zenodo.org/api/records/7805067/files/test-output.npy/content
 timestamp: '2023-04-06T12:22:27.777634'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/unet.py:UNet2D
+    architecture: https://zenodo.org/api/records/7805067/files/unet.py/content:UNet2D
     architecture_sha256: f905821f2882ca182ffcfcb1a4c7fd2737c0548dda88fcb58721f3159a54837f
     kwargs:
       f_maps: 64
@@ -86,8 +86,8 @@ weights:
       num_groups: 8
       out_channels: 1
     sha256: 4163e310baf0a826640b9a7016b3f2fe2cb6ac38e310b479d9cfee23085c5534
-    source: https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/confocal_2D_unet_ovules_ds2x.pytorch
+    source: https://zenodo.org/api/records/7805067/files/confocal_2D_unet_ovules_ds2x.pytorch/content
   torchscript:
     pytorch_version: 2.0.0
     sha256: c6d2e01f99d4dedd9c1f5a9093b3525f062d6e2c1f377b0e76c531cdee06cec9
-    source: https://zenodo.org/api/files/007d530f-a270-4e8c-812f-4459dad6f079/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7805067/files/torchscript_tracing.pt/content

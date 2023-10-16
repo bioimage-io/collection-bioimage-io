@@ -1,7 +1,7 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/per_sample_scale_range.ijm
-  - https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/binarize.ijm
+  - https://zenodo.org/api/records/5906839/files/per_sample_scale_range.ijm/content
+  - https://zenodo.org/api/records/5906839/files/binarize.ijm/content
   unknown: {}
 authors:
 - affiliation: ''
@@ -54,10 +54,10 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/cover.png
+- https://zenodo.org/api/records/5906839/files/cover.png/content
 description: 2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge
   for neuron segmentation in Transmission Electron Microscopy images.
-documentation: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/README.md
+documentation: https://zenodo.org/api/records/5906839/files/README.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.5817052/5906839
 inputs:
@@ -103,9 +103,9 @@ outputs:
   - 1
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5817052/5906839/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/sample_input_0.tif
+- https://zenodo.org/api/records/5906839/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/sample_output_0.tif
+- https://zenodo.org/api/records/5906839/files/sample_output_0.tif/content
 tags:
 - zerocostdl4mic
 - deepimagej
@@ -118,18 +118,18 @@ tags:
 - boundary-segmentation
 - 2d
 test_inputs:
-- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_input.npy
+- https://zenodo.org/api/records/5906839/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/test_output.npy
+- https://zenodo.org/api/records/5906839/files/test_output.npy/content
 timestamp: '2021-12-09T15:03:20.680270'
 type: model
 version: 0.1.0
 weights:
   keras_hdf5:
     sha256: cdc0cfcc13d01f75a93b25599167bf7cf1572c0c276ea415dccbbe1d143b1489
-    source: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/keras_weights.hdf5
+    source: https://zenodo.org/api/records/5906839/files/keras_weights.hdf5/content
     tensorflow_version: '1.15'
   tensorflow_saved_model_bundle:
     sha256: 34269e6da7caf38a604bb68f2aaa39662f306064f9a35e7cc81bc42049db87af
-    source: https://zenodo.org/api/files/5a9cfb56-3a5d-4796-986d-8f46b7987b92/tf_weights.zip
+    source: https://zenodo.org/api/records/5906839/files/tf_weights.zip/content
     tensorflow_version: '1.15'

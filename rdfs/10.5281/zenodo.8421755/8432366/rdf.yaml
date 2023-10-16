@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_weights.h5
+  - https://zenodo.org/api/records/8432366/files/stardist_weights.h5/content
 authors:
 - affiliation: EMBL
   email: qin.yu@embl.de
@@ -101,15 +101,15 @@ config:
       prob: 0.5056117135432784
     weights: stardist_weights.h5
 covers:
-- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_raw_and_segmentation.jpg
-- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_raw_and_probability_lit.jpg
-- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/stardist_raw.jpg
+- https://zenodo.org/api/records/8432366/files/stardist_raw_and_segmentation.jpg/content
+- https://zenodo.org/api/records/8432366/files/stardist_raw_and_probability_lit.jpg/content
+- https://zenodo.org/api/records/8432366/files/stardist_raw.jpg/content
 description: This widely applicable model is trained for 3D nuclei instance segmentation
   and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei
   stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear
   DNA quantification and 3D volumetric nuclei extraction. This model is trained with
   dataset 1136, 1137, 1139, 1170 and validated with 1135.
-documentation: https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/doc.md
+documentation: https://zenodo.org/api/records/8432366/files/doc.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.8421755/8432366
 inputs:
@@ -193,9 +193,9 @@ tags:
 - ovules
 - plant
 test_inputs:
-- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/test_input.npy
+- https://zenodo.org/api/records/8432366/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/test_output.npy
+- https://zenodo.org/api/records/8432366/files/test_output.npy/content
 timestamp: '2023-10-11T18:56:39.706090'
 type: model
 version: 0.1.3
@@ -203,5 +203,5 @@ weights:
   tensorflow_saved_model_bundle:
     sha256: 232272e34820992b0b1f0e30337ad5913d2e91b3d609ffb7a64e40257ada63ab
     source: 
-      https://zenodo.org/api/files/70891daf-e746-4552-8824-9e0120ff962d/TF_SavedModel.zip
+      https://zenodo.org/api/records/8432366/files/TF_SavedModel.zip/content
     tensorflow_version: 1.15.3

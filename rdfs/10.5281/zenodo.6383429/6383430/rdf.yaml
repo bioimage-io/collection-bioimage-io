@@ -17,12 +17,12 @@ config:
     version_id: '6383430'
     version_name: version 1
 covers:
-- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/raw.png
-- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-boundary.png
-- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/pred-nuclei.png
+- https://zenodo.org/api/records/6383430/files/raw.png/content
+- https://zenodo.org/api/records/6383430/files/pred-boundary.png/content
+- https://zenodo.org/api/records/6383430/files/pred-nuclei.png/content
 description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
   confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-documentation: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/unet3d.md
+documentation: https://zenodo.org/api/records/6383430/files/unet3d.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.6383429/6383430
 inputs:
@@ -83,17 +83,17 @@ tags:
 - pytorch
 - fixed
 test_inputs:
-- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/test_input.npy
+- https://zenodo.org/api/records/6383430/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/test_output.npy
+- https://zenodo.org/api/records/6383430/files/test_output.npy/content
 timestamp: '2022-03-25T02:38:38.013210'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/6383430/files/unet.py/content:UNet3D
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
-    dependencies: conda:https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6383430/files/environment.yaml/content
     kwargs:
       f_maps: 16
       final_sigmoid: true
@@ -104,4 +104,4 @@ weights:
       out_channels: 2
       testing: true
     sha256: c7c73485fd17273f8018e7e8ba76c030d7b0c8553a242ac1303b23904f6303ef
-    source: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/unet-bce-dice-ab-nuclei-boundary-090121.pytorch
+    source: https://zenodo.org/api/records/6383430/files/unet-bce-dice-ab-nuclei-boundary-090121.pytorch/content

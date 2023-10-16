@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/5869900/files/zero_mean_unit_variance.ijm/content
 authors:
 - affiliation: EMBL Heidelberg
   name: Constantin Pape
@@ -49,9 +49,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/cover.png
+- https://zenodo.org/api/records/5869900/files/cover.png/content
 description: Cell segmentation for phase-contrast microscopy.
-documentation: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/documentation.md
+documentation: https://zenodo.org/api/records/5869900/files/documentation.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.5869899/5869900
 inputs:
@@ -114,9 +114,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/5869900/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_input_0.tif
+- https://zenodo.org/api/records/5869900/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/sample_output_0.tif
+- https://zenodo.org/api/records/5869900/files/sample_output_0.tif/content
 tags:
 - 2d
 - transmission-light-microscopy
@@ -125,15 +125,15 @@ tags:
 - instance-segmentation
 - unet
 test_inputs:
-- https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_input_0.npy
+- https://zenodo.org/api/records/5869900/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/test_output_0.npy
+- https://zenodo.org/api/records/5869900/files/test_output_0.npy/content
 timestamp: '2022-01-16T20:02:19.833552'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/unet.py:UNet2d
+    architecture: https://zenodo.org/api/records/5869900/files/unet.py/content:UNet2d
     architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
     kwargs:
       depth: 4
@@ -145,7 +145,7 @@ weights:
       postprocessing:
       return_side_outputs: false
     sha256: 39c61381dd63e7152ecae132ff17b3189b515ae6ac23f8450777003fbbec722c
-    source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/weights.pt
+    source: https://zenodo.org/api/records/5869900/files/weights.pt/content
   torchscript:
     sha256: 4453051c9604d68390b1a61b24a8d947f5af380e4f90c6065d8430b89150ef5c
-    source: https://zenodo.org/api/files/a6d477fe-9412-4064-b7e6-67f057fec920/weights-torchscript.pt
+    source: https://zenodo.org/api/records/5869900/files/weights-torchscript.pt/content

@@ -1,10 +1,10 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/U_Net_PhC_C2DL_PSC_segmentation.ipynb
-  - https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.tiff
-  - https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/exampleImage.tiff
-  - https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/binarize.ijm
-  - https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/per_sample_scale_range.ijm
+  - https://zenodo.org/api/records/6514622/files/U_Net_PhC_C2DL_PSC_segmentation.ipynb/content
+  - https://zenodo.org/api/records/6514622/files/resultImage.tiff/content
+  - https://zenodo.org/api/records/6514622/files/exampleImage.tiff/content
+  - https://zenodo.org/api/records/6514622/files/binarize.ijm/content
+  - https://zenodo.org/api/records/6514622/files/per_sample_scale_range.ijm/content
 authors:
 - affiliation: Ikerbasque EHU UPV
   name: Ignacio Arganda Carreras
@@ -56,11 +56,11 @@ config:
         type: image
       runtime: 2.8 s
 covers:
-- https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/exampleImage.png
-- https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.png
+- https://zenodo.org/api/records/6514622/files/exampleImage.png/content
+- https://zenodo.org/api/records/6514622/files/resultImage.png/content
 description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
   images of pancreatic stem cells on a 2D polystyrene substrate.
-documentation: https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/README.md
+documentation: https://zenodo.org/api/records/6514622/files/README.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.5914248/6514622
 inputs:
@@ -127,9 +127,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5914248/6514622/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/exampleImage.tiff
+- https://zenodo.org/api/records/6514622/files/exampleImage.tiff/content
 sample_outputs:
-- https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.tiff
+- https://zenodo.org/api/records/6514622/files/resultImage.tiff/content
 tags:
 - deepimagej
 - pancreatic-stem-cells
@@ -144,18 +144,18 @@ tags:
 - semantic-segmentation
 - tensorflow
 test_inputs:
-- https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/exampleImage.npy
+- https://zenodo.org/api/records/6514622/files/exampleImage.npy/content
 test_outputs:
-- https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/resultImage.npy
+- https://zenodo.org/api/records/6514622/files/resultImage.npy/content
 timestamp: '2021-02-17T10:13:32.618000'
 type: model
 version: 0.1.0
 weights:
   keras_hdf5:
     sha256: d31fd8c4e764ae4b315a33f9ee9cc17e94764a93f2097542a80d0337327e872b
-    source: https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/unet_pancreatic_cell_segmentation.h5
+    source: https://zenodo.org/api/records/6514622/files/unet_pancreatic_cell_segmentation.h5/content
     tensorflow_version: '1.15'
   tensorflow_saved_model_bundle:
     sha256: e0775a1d99afe6492946166f72fa6879a2c5e0315ea1e5292340f7e4ee73b842
-    source: https://zenodo.org/api/files/2d92e820-1b25-40f5-a2af-3219df97d7f7/tensorflow_saved_model_bundle.zip
+    source: https://zenodo.org/api/records/6514622/files/tensorflow_saved_model_bundle.zip/content
     tensorflow_version: '1.15'

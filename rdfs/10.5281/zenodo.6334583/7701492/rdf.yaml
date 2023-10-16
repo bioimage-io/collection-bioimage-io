@@ -42,12 +42,12 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/ilastik_raw.png
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/ilastik_sneak.png
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/ilastik_pred.png
+- https://zenodo.org/api/records/7701492/files/ilastik_raw.png/content
+- https://zenodo.org/api/records/7701492/files/ilastik_sneak.png/content
+- https://zenodo.org/api/records/7701492/files/ilastik_pred.png/content
 description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
   of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-documentation: https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/unet3d.md
+documentation: https://zenodo.org/api/records/7701492/files/unet3d.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6334583/7701492
 inputs:
@@ -99,9 +99,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334583/7701492/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/sample_input_0.tif
+- https://zenodo.org/api/records/7701492/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/sample_output_0.tif
+- https://zenodo.org/api/records/7701492/files/sample_output_0.tif/content
 tags:
 - 3d
 - torchscript
@@ -118,14 +118,14 @@ tags:
 - pytorch
 - fluorescence-light-microscopy
 test_inputs:
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/test_input.npy
+- https://zenodo.org/api/records/7701492/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/test_output.npy
+- https://zenodo.org/api/records/7701492/files/test_output.npy/content
 timestamp: '2022-11-18T22:06:59.181014'
 type: model
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/7701492/files/unet.py/content:UNet3D
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
     kwargs:
       f_maps:
@@ -142,8 +142,8 @@ weights:
       testing: true
     pytorch_version: 1.12.1
     sha256: fcf29937ffa404230513e5d572a4cfb29b3c35d72683cbf951851ed857701809
-    source: https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/unet3d-arabidopsis-ovules-confocal-ds2x.pytorch
+    source: https://zenodo.org/api/records/7701492/files/unet3d-arabidopsis-ovules-confocal-ds2x.pytorch/content
   torchscript:
     pytorch_version: 1.13.0
     sha256: 3873efd149b1485b33134bc31b686ca9d6f16b44b676fc7169a39b7316391e97
-    source: https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7701492/files/torchscript_tracing.pt/content

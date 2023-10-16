@@ -18,9 +18,9 @@ config:
     version_id: '7405349'
     version_name: version 3
 covers:
-- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/cover.png
+- https://zenodo.org/api/records/7405349/files/cover.png/content
 description: For segmenting 2D projections of drosophila epithelia
-documentation: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/epithelia.md
+documentation: https://zenodo.org/api/records/7405349/files/epithelia.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.7380171/7405349
 inputs:
@@ -87,15 +87,15 @@ tags:
 - image-classification
 - tensorflow
 test_inputs:
-- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/sample.npy
+- https://zenodo.org/api/records/7405349/files/sample.npy/content
 test_outputs:
-- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/distance.npy
-- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/membrane-we.npy
-- https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/membrane-dl.npy
+- https://zenodo.org/api/records/7405349/files/distance.npy/content
+- https://zenodo.org/api/records/7405349/files/membrane-we.npy/content
+- https://zenodo.org/api/records/7405349/files/membrane-dl.npy/content
 timestamp: '2022-12-01T14:42:37.285816'
 type: model
 weights:
   tensorflow_saved_model_bundle:
     sha256: ae5d5287b90d4b5406f2b6de8e40f50faaf7336d38a2a91d9a66364897a82bed
-    source: https://zenodo.org/api/files/24c8b78e-4387-471d-be0e-c393825b1295/drosophila-crb-d5.zip
+    source: https://zenodo.org/api/records/7405349/files/drosophila-crb-d5.zip/content
     tensorflow_version: '2.10'
