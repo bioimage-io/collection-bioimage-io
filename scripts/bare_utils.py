@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import uuid
+import warnings
 from pathlib import Path
 from typing import Any, Dict, Union
 
@@ -24,6 +25,10 @@ def set_gh_actions_output(name: str, output: Union[str, Any]):
 
     if not isinstance(output, str):
         output = json.dumps(output, sort_keys=True)
+
+    if "GITHUB_OUTPUT" not in os.environ:
+        print(output)
+        return
 
     if "\n" in output:
         with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
