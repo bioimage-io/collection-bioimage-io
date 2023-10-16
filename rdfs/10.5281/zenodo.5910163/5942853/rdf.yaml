@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/hpa_labels.txt
+  - https://zenodo.org/api/records/5942853/files/hpa_labels.txt/content
 authors:
 - name: Shubin Dai
 cite:
@@ -19,9 +19,9 @@ config:
     version_id: '5942853'
     version_name: revision 1
 covers:
-- https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/bestfitting-densenet-diagram.png
+- https://zenodo.org/api/records/5942853/files/bestfitting-densenet-diagram.png/content
 description: The winning model of HPA image classification 2019 by Bestfitting
-documentation: https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/README.md
+documentation: https://zenodo.org/api/records/5942853/files/README.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.5910163/5942853
 inputs:
@@ -89,10 +89,10 @@ tags:
 - cells
 - protein-localization
 test_inputs:
-- https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/test_input.npy
+- https://zenodo.org/api/records/5942853/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/test_output_classes.npy
-- https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/test_output_features.npy
+- https://zenodo.org/api/records/5942853/files/test_output_classes.npy/content
+- https://zenodo.org/api/records/5942853/files/test_output_features.npy/content
 timestamp: '2021-09-21T12:00:12+00:00'
 type: model
 version: 0.1.1
@@ -102,4 +102,4 @@ weights:
     - name: Wei OUYANG
     sha256: 0ef125632b0058b2f04448de56dc23339fcbfe4f628601e836e17cef6f344e3f
     source: 
-      https://zenodo.org/api/files/91895c21-4e8e-4cd0-98c3-1fae496b6068/densenet_model.onnx
+      https://zenodo.org/api/records/5942853/files/densenet_model.onnx/content

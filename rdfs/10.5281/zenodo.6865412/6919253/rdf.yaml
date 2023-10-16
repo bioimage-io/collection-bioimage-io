@@ -1,9 +1,9 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/exampleImage.tif
-  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/resultImage.tif
-  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/per_sample_scale_range.ijm
-  - https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/binarize.ijm
+  - https://zenodo.org/api/records/6919253/files/exampleImage.tif/content
+  - https://zenodo.org/api/records/6919253/files/resultImage.tif/content
+  - https://zenodo.org/api/records/6919253/files/per_sample_scale_range.ijm/content
+  - https://zenodo.org/api/records/6919253/files/binarize.ijm/content
 authors:
 - affiliation: SUSTech
   name: Zoufu
@@ -50,8 +50,8 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/image.png
-- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/lable.png
+- https://zenodo.org/api/records/6919253/files/image.png/content
+- https://zenodo.org/api/records/6919253/files/lable.png/content
 description: DeepImageJ compatible FRUNet trained to subtly segment cells and gland.
 documentation: https://github.com/deepimagej/models/u-net_pancreatic_segmentation/U_Net_PhC-C2DL-PSC_segmentation.ipynb
 format_version: 0.4.7
@@ -113,22 +113,22 @@ rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/ze
 run_mode:
   name: deepimagej
 sample_inputs:
-- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/exampleImage.tif
+- https://zenodo.org/api/records/6919253/files/exampleImage.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/resultImage.tif
+- https://zenodo.org/api/records/6919253/files/resultImage.tif/content
 tags:
 - deepimagej
 - segmentation
 - cells and gland
 - fourier channel attention
 test_inputs:
-- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/exampleImage.npy
+- https://zenodo.org/api/records/6919253/files/exampleImage.npy/content
 test_outputs:
-- https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/resultImage.npy
+- https://zenodo.org/api/records/6919253/files/resultImage.npy/content
 timestamp: '2022-07-12T16:53:00.296328'
 type: model
 weights:
   keras_hdf5:
     sha256: c0f7f23225ed6142f9ac5c7abfd7442afb11181dbe91c936b2d11a620f504655
-    source: https://zenodo.org/api/files/d92e7d96-f4c9-4fd3-a23b-c51b6b1cda66/keras_model.h5
+    source: https://zenodo.org/api/records/6919253/files/keras_model.h5/content
     tensorflow_version: 2.6.0

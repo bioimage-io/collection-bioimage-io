@@ -17,7 +17,7 @@ config:
     version_id: '7612152'
     version_name: version 2
 covers:
-- https://zenodo.org/api/files/abbc2f48-1514-4102-8393-eb03fa4a516c/cover.png
+- https://zenodo.org/api/records/7612152/files/cover.png/content
 description: Light-sheet and light-field images of beating and arrested hatchling
   (8 dpf) medaka hearts used in "Deep learning-enhanced light-field imaging with continuous
   validation" to train and evaluate a HyLFM-Net.

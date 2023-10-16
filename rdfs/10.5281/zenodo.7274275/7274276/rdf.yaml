@@ -22,9 +22,9 @@ config:
     version_id: '7274276'
     version_name: version 1
 covers:
-- https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/coverimage.jpg
+- https://zenodo.org/api/records/7274276/files/coverimage.jpg/content
 description: Cellular membrane prediction model for volume SEM datasets
-documentation: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/README.md
+documentation: https://zenodo.org/api/records/7274276/files/README.md/content
 format_version: 0.4.8
 id: 10.5281/zenodo.7274275/7274276
 inputs:
@@ -98,15 +98,15 @@ tags:
 - platynereis
 - calu-3
 test_inputs:
-- https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/test_data_raw.npy
+- https://zenodo.org/api/records/7274276/files/test_data_raw.npy/content
 test_outputs:
-- https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/test_data_out.npy
+- https://zenodo.org/api/records/7274276/files/test_data_out.npy/content
 timestamp: '2022-11-02T14:40:51.515340'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/piled_unets.py:PiledUnet
+    architecture: https://zenodo.org/api/records/7274276/files/piled_unets.py:PiledUnet/content
     architecture_sha256: 4b0f4759b35dfcd868f71acac492fc6c2c9c99897b30b2508126a8e6607e24c7
     kwargs:
       batch_norm: true
@@ -165,4 +165,4 @@ weights:
       predict: true
     pytorch_version: 1.12.1
     sha256: 6b523c9a77916e75306563e39b79ef2cfb72a857540994958a8d0943f46a207c
-    source: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/model_0097.pt
+    source: https://zenodo.org/api/records/7274276/files/model_0097.pt/content

@@ -17,11 +17,11 @@ config:
     version_id: '6334384'
     version_name: version 1
 covers:
-- https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/raw.png
-- https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/pred.png
+- https://zenodo.org/api/records/6334384/files/raw.png/content
+- https://zenodo.org/api/records/6334384/files/pred.png/content
 description: A 2D U-Net trained to predict the cell boundaries in confocal stacks
   of Arabidopsis ovules. Trained on z-slices of 3D confocal images.
-documentation: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/unet2d.md
+documentation: https://zenodo.org/api/records/6334384/files/unet2d.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.6334383/6334384
 inputs:
@@ -84,17 +84,17 @@ tags:
 - pytorch
 - plantseg
 test_inputs:
-- https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/test_input.npy
+- https://zenodo.org/api/records/6334384/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/test_output.npy
+- https://zenodo.org/api/records/6334384/files/test_output.npy/content
 timestamp: '2022-03-07T12:28:21.446577'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/unet.py:UNet2D
+    architecture: https://zenodo.org/api/records/6334384/files/unet.py:UNet2D/content
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
-    dependencies: conda:https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6334384/files/environment.yaml/content
     kwargs:
       f_maps: 64
       final_sigmoid: true
@@ -105,4 +105,4 @@ weights:
       out_channels: 1
       testing: true
     sha256: 5dcd21a84ed23931bb324e9c5ab38f730bb5cf90699dab5bfba1c1829c914895
-    source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/unet2d-arabidopsis-ovules-confocal-ds2x.pytorch
+    source: https://zenodo.org/api/records/6334384/files/unet2d-arabidopsis-ovules-confocal-ds2x.pytorch/content

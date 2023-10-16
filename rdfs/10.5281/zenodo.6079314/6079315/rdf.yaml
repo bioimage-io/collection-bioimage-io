@@ -37,9 +37,9 @@ config:
     - - 0
       - -27
 covers:
-- https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/cover.png
+- https://zenodo.org/api/records/6079315/files/cover.png/content
 description: affinity-model
-documentation: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/documentation.md
+documentation: https://zenodo.org/api/records/6079315/files/documentation.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.6079314/6079315
 inputs:
@@ -102,15 +102,15 @@ tags:
 - u-net
 - segmentation
 test_inputs:
-- https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/test_input_0.npy
+- https://zenodo.org/api/records/6079315/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/test_output_0.npy
+- https://zenodo.org/api/records/6079315/files/test_output_0.npy/content
 timestamp: '2022-01-11T10:06:01.735636'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/unet.py:UNet2d
+    architecture: https://zenodo.org/api/records/6079315/files/unet.py:UNet2d/content
     architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
     kwargs:
       depth: 4
@@ -122,4 +122,4 @@ weights:
       postprocessing:
       return_side_outputs: false
     sha256: 45e08ab0d974bea0963f163d1d229022ea72d6305c929bbe868d365434080495
-    source: https://zenodo.org/api/files/47bb6d2a-fe02-4303-9ada-12043eee17fe/weights.pt
+    source: https://zenodo.org/api/records/6079315/files/weights.pt/content

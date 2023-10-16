@@ -42,12 +42,12 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/raw.png
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-boundary.png
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/pred-nuclei.png
+- https://zenodo.org/api/records/7701632/files/raw.png/content
+- https://zenodo.org/api/records/7701632/files/pred-boundary.png/content
+- https://zenodo.org/api/records/7701632/files/pred-nuclei.png/content
 description: 'A 3D U-Net trained to predict the nuclei and their boundaries in fixed
   confocal images of developing mouse embryo.Voxel size: (0.2×0.2×1 µm^3) (XYZ).'
-documentation: https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/unet3d.md
+documentation: https://zenodo.org/api/records/7701632/files/unet3d.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6383429/7701632
 inputs:
@@ -97,9 +97,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6383429/7701632/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/sample_input_0.tif
+- https://zenodo.org/api/records/7701632/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/sample_output_0.tif
+- https://zenodo.org/api/records/7701632/files/sample_output_0.tif/content
 tags:
 - 3d
 - torchscript
@@ -116,14 +116,14 @@ tags:
 - nuclei
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/test_input.npy
+- https://zenodo.org/api/records/7701632/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/test_output.npy
+- https://zenodo.org/api/records/7701632/files/test_output.npy/content
 timestamp: '2022-11-18T22:06:06.265931'
 type: model
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/7701632/files/unet.py:UNet3D/content
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
     kwargs:
       f_maps: 16
@@ -136,8 +136,8 @@ weights:
       testing: true
     pytorch_version: 1.12.1
     sha256: c7c73485fd17273f8018e7e8ba76c030d7b0c8553a242ac1303b23904f6303ef
-    source: https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/unet-bce-dice-ab-nuclei-boundary-090121.pytorch
+    source: https://zenodo.org/api/records/7701632/files/unet-bce-dice-ab-nuclei-boundary-090121.pytorch/content
   torchscript:
     pytorch_version: 1.13.0
     sha256: 01b197c06500ab96d5ef051901fcd07add7f5b96ef3bbac9473f34be9c4d7ba0
-    source: https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7701632/files/torchscript_tracing.pt/content

@@ -19,13 +19,13 @@ config:
     version_id: '8401065'
     version_name: version 1
 covers:
-- https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/cover.png
+- https://zenodo.org/api/records/8401065/files/cover.png/content
 description: This widely applicable model is trained for 3D nuclei instance segmentation
   and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei
   stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear
   DNA quantification and 3D volumetric nuclei extraction. This model is trained with
   dataset 1136, 1137, 1139, 1170 and validated with 1135.
-documentation: https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/doc.md
+documentation: https://zenodo.org/api/records/8401065/files/doc.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.8401064/8401065
 inputs:
@@ -81,9 +81,9 @@ tags:
 - ovules
 - plant
 test_inputs:
-- https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/test-input.npy
+- https://zenodo.org/api/records/8401065/files/test-input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/test-output.npy
+- https://zenodo.org/api/records/8401065/files/test-output.npy/content
 timestamp: '2023-10-03T00:34:21.051018'
 type: model
 version: 0.1.0
@@ -91,11 +91,11 @@ weights:
   pytorch_state_dict:
     architecture: plantseg.models.model.UNet3D
     dependencies: 
-      conda:https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/dependencies.yaml
+      conda:https://zenodo.org/api/records/8401065/files/dependencies.yaml/content
     kwargs:
       f_maps: 16
       in_channels: 1
       out_channels: 2
     sha256: fd115b1cfd908774d4289bc78e944cec1ab58458d0aae6eb5792b4477be0e2fc
     source: 
-      https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/FOR2581_PlantSeg_Plant_Nuclei_3D.pytorch
+      https://zenodo.org/api/records/8401065/files/FOR2581_PlantSeg_Plant_Nuclei_3D.pytorch/content

@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/hpa_labels.txt
+  - https://zenodo.org/api/records/5911832/files/hpa_labels.txt/content
 authors:
 - name: Shubin Dai
 cite:
@@ -24,9 +24,9 @@ config:
     version_id: '5911832'
     version_name: Version 1
 covers:
-- https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/diagram-of-InceptionV3.png
+- https://zenodo.org/api/records/5911832/files/diagram-of-InceptionV3.png/content
 description: The winning model of HPA image classification 2021 by Bestfitting
-documentation: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/README.md
+documentation: https://zenodo.org/api/records/5911832/files/README.md/content
 format_version: 0.3.6
 id: 10.5281/zenodo.5910854/5911832
 inputs:
@@ -84,7 +84,7 @@ outputs:
   - 2048
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5910854/5911832/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/sample_image.tif
+- https://zenodo.org/api/records/5911832/files/sample_image.tif/content
 tags:
 - classification
 - inception-v3
@@ -93,10 +93,10 @@ tags:
 - cells
 - protein-localization
 test_inputs:
-- https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/test_input.npy
+- https://zenodo.org/api/records/5911832/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/test_output_classes.npy
-- https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/test_output_features.npy
+- https://zenodo.org/api/records/5911832/files/test_output_classes.npy/content
+- https://zenodo.org/api/records/5911832/files/test_output_features.npy/content
 timestamp: '2022-01-27T08:00:12+00:00'
 type: model
 version: 0.1.0
@@ -106,9 +106,9 @@ weights:
     - name: Wei OUYANG
     opset_version: 15
     sha256: cce5fccae3434f5bf6310d8671a4f8720a4db2c9769adb407b5c2a2bdd292fc7
-    source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/bestfitting-inceptionv3-single-cell.onnx
+    source: https://zenodo.org/api/records/5911832/files/bestfitting-inceptionv3-single-cell.onnx/content
   pytorch_script:
     authors:
     - name: Wei OUYANG
     sha256: 3eb4d8ca9907223c6f79c73cec32cd8a9db0ba642da4967d9b110a0a16e2680e
-    source: https://zenodo.org/api/files/c8028ef3-de08-459c-b88a-2f0bfd11485b/bestfitting-inceptionv3-single-cell.pt
+    source: https://zenodo.org/api/records/5911832/files/bestfitting-inceptionv3-single-cell.pt/content

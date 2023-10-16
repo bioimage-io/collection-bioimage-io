@@ -17,12 +17,12 @@ config:
     version_id: '6334584'
     version_name: version 1
 covers:
-- https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/ilastik_raw.png
-- https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/ilastik_sneak.png
-- https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/ilastik_pred.png
+- https://zenodo.org/api/records/6334584/files/ilastik_raw.png/content
+- https://zenodo.org/api/records/6334584/files/ilastik_sneak.png/content
+- https://zenodo.org/api/records/6334584/files/ilastik_pred.png/content
 description: 'A 3d U-Net trained to predict the cell boundaries in confocal stacks
   of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX'
-documentation: https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/unet3d.md
+documentation: https://zenodo.org/api/records/6334584/files/unet3d.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.6334583/6334584
 inputs:
@@ -84,17 +84,17 @@ tags:
 - fluorescence-light-microscopy
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/test_input.npy
+- https://zenodo.org/api/records/6334584/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/test_output.npy
+- https://zenodo.org/api/records/6334584/files/test_output.npy/content
 timestamp: '2022-03-07T13:57:21.847457'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/6334584/files/unet.py:UNet3D/content
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
-    dependencies: conda:https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6334584/files/environment.yaml/content
     kwargs:
       f_maps:
       - 32
@@ -109,4 +109,4 @@ weights:
       out_channels: 1
       testing: true
     sha256: fcf29937ffa404230513e5d572a4cfb29b3c35d72683cbf951851ed857701809
-    source: https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/unet3d-arabidopsis-ovules-confocal-ds2x.pytorch
+    source: https://zenodo.org/api/records/6334584/files/unet3d-arabidopsis-ovules-confocal-ds2x.pytorch/content

@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/per_sample_scale_range.ijm
+  - https://zenodo.org/api/records/6811492/files/per_sample_scale_range.ijm/content
 authors:
 - affiliation: EMBL Heidelberg
   name: Constantin Pape
@@ -49,9 +49,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/cover.png
+- https://zenodo.org/api/records/6811492/files/cover.png/content
 description: Prediction enhancer for segmenting mitochondria in EM images.
-documentation: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/documentation.md
+documentation: https://zenodo.org/api/records/6811492/files/documentation.md/content
 format_version: 0.4.6
 id: 10.5281/zenodo.6811491/6811492
 inputs:
@@ -120,9 +120,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6811491/6811492/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/sample_input_0.tif
+- https://zenodo.org/api/records/6811492/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/sample_output_0.tif
+- https://zenodo.org/api/records/6811492/files/sample_output_0.tif/content
 tags:
 - unet
 - mitochondria
@@ -131,9 +131,9 @@ tags:
 - shallow2deep
 - 3d
 test_inputs:
-- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/test_input_0.npy
+- https://zenodo.org/api/records/6811492/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/test_output_0.npy
+- https://zenodo.org/api/records/6811492/files/test_output_0.npy/content
 timestamp: '2022-07-08T13:55:44.346024'
 training_data:
   id: ilastik/mitoem_segmentation_challenge
@@ -141,9 +141,9 @@ type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/unet.py:AnisotropicUNet
+    architecture: https://zenodo.org/api/records/6811492/files/unet.py:AnisotropicUNet/content
     architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
-    dependencies: conda:https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6811492/files/environment.yaml/content
     kwargs:
       anisotropic_kernel: false
       final_activation: Sigmoid
@@ -167,7 +167,7 @@ weights:
         - 2
         - 2
     sha256: 72e755ec59f31a714956cf136c0fb2f28177230e8abe906ffc12d76cf3844628
-    source: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/weights.pt
+    source: https://zenodo.org/api/records/6811492/files/weights.pt/content
   torchscript:
     sha256: e9b8085c55caca5c1fc264ad06b0861a69728f50fc6b1e51a94d878c6f97f21f
-    source: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/weights-torchscript.pt
+    source: https://zenodo.org/api/records/6811492/files/weights-torchscript.pt/content

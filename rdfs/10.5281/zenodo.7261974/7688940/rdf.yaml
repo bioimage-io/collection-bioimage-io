@@ -1,8 +1,8 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/training_evaluation.csv
-  - https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/Contours2InstanceSegmentation.ijm
-  - https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/per_sample_scale_range.ijm
+  - https://zenodo.org/api/records/7688940/files/training_evaluation.csv/content
+  - https://zenodo.org/api/records/7688940/files/Contours2InstanceSegmentation.ijm/content
+  - https://zenodo.org/api/records/7688940/files/per_sample_scale_range.ijm/content
 authors:
 - affiliation: Instituto Gulbenkian de Ciência
   name: Estibaliz Gómez de Mariscal
@@ -55,13 +55,13 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover_1.png
-- https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/cover.png
+- https://zenodo.org/api/records/7688940/files/cover_1.png/content
+- https://zenodo.org/api/records/7688940/files/cover.png/content
 description: This trained 2D U-Net model segments the contour, foreground and background
   of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain
   a unique label for each individual bacteria detected in the image one could run
   further watershed segmentation using the label 1 as the seed.
-documentation: https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/README.md
+documentation: https://zenodo.org/api/records/7688940/files/README.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.7261974/7688940
 inputs:
@@ -115,9 +115,9 @@ outputs:
     - 3.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7261974/7688940/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/sample_input_0.tif
+- https://zenodo.org/api/records/7688940/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/sample_output_0.tif
+- https://zenodo.org/api/records/7688940/files/sample_output_0.tif/content
 tags:
 - zerocostdl4mic
 - deepimagej
@@ -133,9 +133,9 @@ tags:
 - microbiology
 - bacteria
 test_inputs:
-- https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/test_input.npy
+- https://zenodo.org/api/records/7688940/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/test_output.npy
+- https://zenodo.org/api/records/7688940/files/test_output.npy/content
 timestamp: '2023-02-27T17:55:31.503717'
 training_data:
   id: zero/dataset_u-net_2d_multilabel_deepbacs
@@ -144,9 +144,9 @@ version: 0.1.0
 weights:
   keras_hdf5:
     sha256: 3b351ad5af1dab75c16993f9da06ce15d84b38435b2ce6f6a799c7d5fde3b80d
-    source: https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/keras_weights.hdf5
+    source: https://zenodo.org/api/records/7688940/files/keras_weights.hdf5/content
     tensorflow_version: 2.11.0
   tensorflow_saved_model_bundle:
     sha256: 4780c1df39c35db679237acedc964dc58032474495042539a16941e8cb333d17
-    source: https://zenodo.org/api/files/5ac388a1-a326-4b93-9973-7a07d85f5b04/tf_weights.zip
+    source: https://zenodo.org/api/records/7688940/files/tf_weights.zip/content
     tensorflow_version: 2.11.0

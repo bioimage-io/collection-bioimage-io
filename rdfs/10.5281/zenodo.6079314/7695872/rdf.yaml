@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/7695872/files/zero_mean_unit_variance.ijm/content
 authors:
 - name: Constantin Pape; @constantinpape
 cite:
@@ -46,9 +46,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/cover.png
+- https://zenodo.org/api/records/7695872/files/cover.png/content
 description: affinity-model
-documentation: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/documentation.md
+documentation: https://zenodo.org/api/records/7695872/files/documentation.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6079314/7695872
 inputs:
@@ -111,9 +111,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6079314/7695872/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/sample_input_0.tif
+- https://zenodo.org/api/records/7695872/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/sample_output_0.tif
+- https://zenodo.org/api/records/7695872/files/sample_output_0.tif/content
 tags:
 - torchscript
 - ilastik
@@ -123,14 +123,14 @@ tags:
 - u-net
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/test_input_0.npy
+- https://zenodo.org/api/records/7695872/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/test_output_0.npy
+- https://zenodo.org/api/records/7695872/files/test_output_0.npy/content
 timestamp: '2022-11-18T22:06:12.833156'
 type: model
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/unet.py:UNet2d
+    architecture: https://zenodo.org/api/records/7695872/files/unet.py:UNet2d/content
     architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
     kwargs:
       depth: 4
@@ -143,8 +143,8 @@ weights:
       return_side_outputs: false
     pytorch_version: 1.12.1
     sha256: 45e08ab0d974bea0963f163d1d229022ea72d6305c929bbe868d365434080495
-    source: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/weights.pt
+    source: https://zenodo.org/api/records/7695872/files/weights.pt/content
   torchscript:
     pytorch_version: 1.13.0
     sha256: 04b6c0de2fc0c4e0bc688999dde83815529eedc1136823104bfaf14d4e6d9ecc
-    source: https://zenodo.org/api/files/1e6b2fd8-53cd-4961-8b04-7c808b307027/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7695872/files/torchscript_tracing.pt/content

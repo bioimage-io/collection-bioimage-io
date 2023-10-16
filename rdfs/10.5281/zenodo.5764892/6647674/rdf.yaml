@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/6647674/files/zero_mean_unit_variance.ijm/content
 authors:
 - affiliation: EMBL Heidelberg
   name: Constantin Pape
@@ -50,9 +50,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/cover.png
+- https://zenodo.org/api/records/6647674/files/cover.png/content
 description: Nucleus segmentation for fluorescence microscopy
-documentation: https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/documentation.md
+documentation: https://zenodo.org/api/records/6647674/files/documentation.md/content
 format_version: 0.4.7
 id: 10.5281/zenodo.5764892/6647674
 inputs:
@@ -114,9 +114,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6647674/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/sample_input_0.tif
+- https://zenodo.org/api/records/6647674/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/sample_output_0.tif
+- https://zenodo.org/api/records/6647674/files/sample_output_0.tif/content
 tags:
 - fluorescence-light-microscopy
 - nuclei
@@ -124,9 +124,9 @@ tags:
 - unet
 - 2d
 test_inputs:
-- https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/test_input_0.npy
+- https://zenodo.org/api/records/6647674/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/test_output_0.npy
+- https://zenodo.org/api/records/6647674/files/test_output_0.npy/content
 timestamp: '2021-12-07T18:43:26.889129'
 training_data:
   id: ilastik/stradist_dsb_training_data
@@ -136,11 +136,11 @@ weights:
   onnx:
     opset_version: 12
     sha256: df913b85947f5132bcdaf81d91af0963f60d44f4caf8a4fec672d96a2f327b44
-    source: https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/weights.onnx
+    source: https://zenodo.org/api/records/6647674/files/weights.onnx/content
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/unet.py:UNet2d
+    architecture: https://zenodo.org/api/records/6647674/files/unet.py:UNet2d/content
     architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
-    dependencies: conda:https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6647674/files/environment.yaml/content
     kwargs:
       depth: 4
       final_activation: Sigmoid
@@ -151,7 +151,7 @@ weights:
       postprocessing:
       return_side_outputs: false
     sha256: 608f52cd7f5119f7a7b8272395b0c169714e8be34536eaf159820f72a1d6a5b7
-    source: https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/weights.pt
+    source: https://zenodo.org/api/records/6647674/files/weights.pt/content
   torchscript:
     sha256: 8410950508655a300793b389c815dc30b1334062fc1dadb1e15e55a93cbb99a0
-    source: https://zenodo.org/api/files/61da5c68-e09b-49a6-899b-94c22cdfc4d9/weights-torchscript.pt
+    source: https://zenodo.org/api/records/6647674/files/weights-torchscript.pt/content

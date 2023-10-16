@@ -18,12 +18,12 @@ config:
     version_id: '7696907'
     version_name: version 3
 covers:
-- https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/raw.png
-- https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/pred.png
+- https://zenodo.org/api/records/7696907/files/raw.png/content
+- https://zenodo.org/api/records/7696907/files/pred.png/content
 description: '2D Unet trained on z-slices of confocal images of Arabidopsis thaliana
   apical stem cells. Trained on z-slices of 3D confocal images. Voxel size: [0.25,
   0.25, 0.25]'
-documentation: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/unet2d.md
+documentation: https://zenodo.org/api/records/7696907/files/unet2d.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6334881/7696907
 inputs:
@@ -86,17 +86,17 @@ tags:
 - fluorescence-light-microscopy
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/test_input.npy
+- https://zenodo.org/api/records/7696907/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/test_output.npy
+- https://zenodo.org/api/records/7696907/files/test_output.npy/content
 timestamp: '2022-03-11T11:47:13.075928'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/unet.py:UNet2D
+    architecture: https://zenodo.org/api/records/7696907/files/unet.py:UNet2D/content
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
-    dependencies: conda:https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/7696907/files/environment.yaml/content
     kwargs:
       f_maps: 32
       final_sigmoid: true
@@ -107,4 +107,4 @@ weights:
       out_channels: 1
       testing: true
     sha256: 13bbeb9a2403f5ff840951d8907586cf1ceded3072d36466db3e592b5ad53649
-    source: https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/confocal_pnas_2d.pytorch
+    source: https://zenodo.org/api/records/7696907/files/confocal_pnas_2d.pytorch/content

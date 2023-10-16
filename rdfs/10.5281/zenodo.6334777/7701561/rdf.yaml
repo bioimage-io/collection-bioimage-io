@@ -42,11 +42,11 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/raw.png
-- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/pred.png
+- https://zenodo.org/api/records/7701561/files/raw.png/content
+- https://zenodo.org/api/records/7701561/files/pred.png/content
 description: A 3D U-Net trained to predict the cell boundaries in lightsheet stacks
   of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX
-documentation: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/unet3d.md
+documentation: https://zenodo.org/api/records/7701561/files/unet3d.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6334777/7701561
 inputs:
@@ -98,9 +98,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6334777/7701561/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/sample_input_0.tif
+- https://zenodo.org/api/records/7701561/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/sample_output_0.tif
+- https://zenodo.org/api/records/7701561/files/sample_output_0.tif/content
 tags:
 - 3d
 - torchscript
@@ -117,14 +117,14 @@ tags:
 - lateral-root
 - pytorch
 test_inputs:
-- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/test_input.npy
+- https://zenodo.org/api/records/7701561/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/test_output.npy
+- https://zenodo.org/api/records/7701561/files/test_output.npy/content
 timestamp: '2022-11-18T22:05:53.727690'
 type: model
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/7701561/files/unet.py:UNet3D/content
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
     kwargs:
       f_maps: 32
@@ -137,8 +137,8 @@ weights:
       testing: true
     pytorch_version: 1.12.1
     sha256: b8acbc7a6125bc5fc9109ca5126511e04d78dfebf6f983a8bf7f591ccdcb18a0
-    source: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/unet3d-lateral-root-lightsheet-ds1x.pytorch
+    source: https://zenodo.org/api/records/7701561/files/unet3d-lateral-root-lightsheet-ds1x.pytorch/content
   torchscript:
     pytorch_version: 1.13.0
     sha256: 8ee2ef339e53eeb95d4fb818b74e2c4ff6aeba39a1d6468c1017198945d1b688
-    source: https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7701561/files/torchscript_tracing.pt/content

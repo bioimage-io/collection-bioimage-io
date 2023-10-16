@@ -20,10 +20,10 @@ config:
     version_id: '7642674'
     version_name: version 2
 covers:
-- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/cover.png
+- https://zenodo.org/api/records/7642674/files/cover.png/content
 description: HyLFM-Net trained on static images of arrested medaka hatchling hearts.
   The network reconstructs a volumentric image from a given light-field.
-documentation: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/README.md
+documentation: https://zenodo.org/api/records/7642674/files/README.md/content
 format_version: 0.4.9
 git_repo: https://github.com/kreshuklab/hylfm-net
 id: 10.5281/zenodo.7614645/7642674
@@ -76,9 +76,9 @@ outputs:
   - 284
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7614645/7642674/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/sample_input.tif
+- https://zenodo.org/api/records/7642674/files/sample_input.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/sample_output.tif
+- https://zenodo.org/api/records/7642674/files/sample_output.tif/content
 tags:
 - light-field-microscopy
 - pytorch
@@ -87,9 +87,9 @@ tags:
 - nuclei
 - hylfm
 test_inputs:
-- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/test_input.npy
+- https://zenodo.org/api/records/7642674/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/test_output.npy
+- https://zenodo.org/api/records/7642674/files/test_output.npy/content
 timestamp: '2021-02-11T11:40:46'
 training_data:
   id: 10.5281/zenodo.7612115
@@ -100,11 +100,11 @@ weights:
     opset_version: 15
     parent: pytorch_state_dict
     sha256: 55ad061651840fe4b6da6733c52402ae3296392f74fed8a9482e4bc62040938f
-    source: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/weights.onnx
+    source: https://zenodo.org/api/records/7642674/files/weights.onnx/content
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/model.py:HyLFM_Net
+    architecture: https://zenodo.org/api/records/7642674/files/model.py:HyLFM_Net/content
     architecture_sha256: fbd9428f7352a8c6bca8a47e9b85d9afe95edb35b716cc909f5cfc530f2280d3
-    dependencies: conda:https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/7642674/files/environment.yaml/content
     kwargs:
       c_in_3d: 64
       c_res2d:
@@ -128,9 +128,9 @@ weights:
       z_out: 49
     pytorch_version: '1.7'
     sha256: cc85d6da3bcb8c6ec7bb46939399018e29cfe06c5c90b39786fa92f7cb5b4e95
-    source: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/weights.pt
+    source: https://zenodo.org/api/records/7642674/files/weights.pt/content
   torchscript:
     parent: pytorch_state_dict
     pytorch_version: '1.7'
     sha256: ec01e0c212b5eb422dda208af004665799637a2f2729d0ebf2e884e5d9966fc2
-    source: https://zenodo.org/api/files/3b9385ff-0083-476e-9a6d-425437e8801d/weights_torchscript.pt
+    source: https://zenodo.org/api/records/7642674/files/weights_torchscript.pt/content

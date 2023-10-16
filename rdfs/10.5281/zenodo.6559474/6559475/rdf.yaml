@@ -1,11 +1,11 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/exampleImage.tiff
-  - https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/resultImage.tiff
-  - https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/resultImage_labels.tiff
-  - https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/preprocessing.txt
-  - https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/postprocessing.txt
-  - https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/postprocessingWatershed.txt
+  - https://zenodo.org/api/records/6559475/files/exampleImage.tiff/content
+  - https://zenodo.org/api/records/6559475/files/resultImage.tiff/content
+  - https://zenodo.org/api/records/6559475/files/resultImage_labels.tiff/content
+  - https://zenodo.org/api/records/6559475/files/preprocessing.txt/content
+  - https://zenodo.org/api/records/6559475/files/postprocessing.txt/content
+  - https://zenodo.org/api/records/6559475/files/postprocessingWatershed.txt/content
 authors:
 - affiliation: Universidad Carlos III de Madrid
   name: Estibaliz Gómez-de-Mariscal
@@ -62,11 +62,11 @@ config:
         type: image
       runtime: 78.8 s
 covers:
-- https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/frunet_sev.jpg
+- https://zenodo.org/api/records/6559475/files/frunet_sev.jpg/content
 description: DeepImageJ compatible fully residual U-Net trained to segment small extracellular
   vesicles in 2D TEM images
 documentation: https://raw.githubusercontent.com/deepimagej/models/master/fru-net_sev_segmentation/README.md
-download_url: https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/deepimagej_fru-net_sev_segmentation.zip
+download_url: https://zenodo.org/api/records/6559475/files/deepimagej_fru-net_sev_segmentation.zip/content
 format_version: 0.4.8
 id: 10.5281/zenodo.6559474/6559475
 inputs:
@@ -128,9 +128,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6559474/6559475/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/exampleImage.tiff
+- https://zenodo.org/api/records/6559475/files/exampleImage.tiff/content
 sample_outputs:
-- https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/resultImage.tiff
+- https://zenodo.org/api/records/6559475/files/resultImage.tiff/content
 tags:
 - deepimagej
 - extracellular-vesicles
@@ -145,16 +145,16 @@ tags:
 - segmentation
 - instance-segmentation
 test_inputs:
-- https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/exampleImage.npy
+- https://zenodo.org/api/records/6559475/files/exampleImage.npy/content
 test_outputs:
-- https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/resultImage.npy
+- https://zenodo.org/api/records/6559475/files/resultImage.npy/content
 timestamp: '2021-02-17T10:13:32.618903'
 type: model
 version: 0.1.0
 weights:
   keras_hdf5:
     sha256: 5122cbff7451136102eabfc8c80771dbba5ec477d5dac186f729cdfbb4605ff6
-    source: https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/fully_residual_dropout_segmentation.h5
+    source: https://zenodo.org/api/records/6559475/files/fully_residual_dropout_segmentation.h5/content
     tensorflow_version: '1.12'
   tensorflow_js:
     sha256: eb27d8f3df23ce5d1d6ae4112cf36117c70a2257ca6f1b56869b9537fa60531e
@@ -162,5 +162,5 @@ weights:
     tensorflow_version: '1.12'
   tensorflow_saved_model_bundle:
     sha256: 20bff1da933cc78027690fa311fea3e562cf60df1f0a2018527c45b9fafe8099
-    source: https://zenodo.org/api/files/e1fbb083-1395-4786-bb14-96785b5c990a/tensorflow_saved_model_bundle.zip
+    source: https://zenodo.org/api/records/6559475/files/tensorflow_saved_model_bundle.zip/content
     tensorflow_version: '1.12'

@@ -1,8 +1,8 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_postprocessing.ijm
-  - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_weights.h5
-  - https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/per_sample_scale_range.ijm
+  - https://zenodo.org/api/records/6348085/files/stardist_postprocessing.ijm/content
+  - https://zenodo.org/api/records/6348085/files/stardist_weights.h5/content
+  - https://zenodo.org/api/records/6348085/files/per_sample_scale_range.ijm/content
 authors:
 - github_user: uschmidt83
   name: Uwe Schmidt
@@ -119,10 +119,10 @@ config:
       prob: 0.479071463157368
     weights: stardist_weights.h5
 covers:
-- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/stardist_logo.jpg
-- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/example_fluo.jpg
+- https://zenodo.org/api/records/6348085/files/stardist_logo.jpg/content
+- https://zenodo.org/api/records/6348085/files/example_fluo.jpg/content
 description: StarDist - Object Detection with Star-convex Shapes
-documentation: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/README.md
+documentation: https://zenodo.org/api/records/6348085/files/README.md/content
 format_version: 0.4.6
 id: 10.5281/zenodo.6348084/6348085
 inputs:
@@ -185,9 +185,9 @@ outputs:
     - 0.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/sample_input_0.tif
+- https://zenodo.org/api/records/6348085/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/sample_output_0.tif
+- https://zenodo.org/api/records/6348085/files/sample_output_0.tif/content
 tags:
 - fluorescence-light-microscopy
 - whole-slide-imaging
@@ -202,9 +202,9 @@ tags:
 - object-detection
 - stardist
 test_inputs:
-- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/test_input.npy
+- https://zenodo.org/api/records/6348085/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/test_output.npy
+- https://zenodo.org/api/records/6348085/files/test_output.npy/content
 timestamp: '2022-03-11T23:26:52.248097'
 training_data:
   id: ilastik/stradist_dsb_training_data
@@ -212,7 +212,7 @@ type: model
 version: 0.1.0
 weights:
   tensorflow_saved_model_bundle:
-    dependencies: conda:https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6348085/files/environment.yaml/content
     sha256: e4b609e0ef20f4b1daba5d0a508fc8993376cb0302e0b43f7ce3b6af7e9a3176
-    source: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/TF_SavedModel.zip
+    source: https://zenodo.org/api/records/6348085/files/TF_SavedModel.zip/content
     tensorflow_version: 1.15.3

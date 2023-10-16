@@ -42,12 +42,12 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/raw.png
-- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/pred.png
+- https://zenodo.org/api/records/7701413/files/raw.png/content
+- https://zenodo.org/api/records/7701413/files/pred.png/content
 description: '3D Unet trained on confocal images of Arabidopsis thaliana apical stem
   cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25,
   0.25]'
-documentation: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/unet3d.md
+documentation: https://zenodo.org/api/records/7701413/files/unet3d.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.6346511/7701413
 inputs:
@@ -99,9 +99,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6346511/7701413/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/sample_input_0.tif
+- https://zenodo.org/api/records/7701413/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/sample_output_0.tif
+- https://zenodo.org/api/records/7701413/files/sample_output_0.tif/content
 tags:
 - 3d
 - torchscript
@@ -118,14 +118,14 @@ tags:
 - pytorch
 - fluorescence-light-microscopy
 test_inputs:
-- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/test_input.npy
+- https://zenodo.org/api/records/7701413/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/test_output.npy
+- https://zenodo.org/api/records/7701413/files/test_output.npy/content
 timestamp: '2022-11-18T22:05:18.815887'
 type: model
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/unet.py:UNet3D
+    architecture: https://zenodo.org/api/records/7701413/files/unet.py:UNet3D/content
     architecture_sha256: 2da9f7149e144b63fee715fb8fe5154e96bf9aa230d176c91e923d528ef0c4e1
     kwargs:
       f_maps: 32
@@ -138,8 +138,8 @@ weights:
       testing: true
     pytorch_version: 1.12.1
     sha256: 636ceb89e6f798fe27b1c4c5ef237dee6815443b0d23915b850624270d91fa76
-    source: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/confocal_pnas_3d.pytorch
+    source: https://zenodo.org/api/records/7701413/files/confocal_pnas_3d.pytorch/content
   torchscript:
     pytorch_version: 1.13.0
     sha256: f1c0976293f5e50e68a283289ed4560adea53a2d59ea06070bbfd12769cfb7ad
-    source: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/torchscript_tracing.pt
+    source: https://zenodo.org/api/records/7701413/files/torchscript_tracing.pt/content

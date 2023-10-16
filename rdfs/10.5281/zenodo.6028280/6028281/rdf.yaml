@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/zero_mean_unit_variance.ijm
+  - https://zenodo.org/api/records/6028281/files/zero_mean_unit_variance.ijm/content
 authors:
 - name: Constantin Pape; @constantinpape
 cite:
@@ -48,9 +48,9 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/cover.png
+- https://zenodo.org/api/records/6028281/files/cover.png/content
 description: Cell segmentation in EM of platynereis.
-documentation: https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/documentation.md
+documentation: https://zenodo.org/api/records/6028281/files/documentation.md/content
 format_version: 0.4.5
 id: 10.5281/zenodo.6028280/6028281
 inputs:
@@ -117,9 +117,9 @@ outputs:
     - 1.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6028280/6028281/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/sample_input_0.tif
+- https://zenodo.org/api/records/6028281/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/sample_output_0.tif
+- https://zenodo.org/api/records/6028281/files/sample_output_0.tif/content
 tags:
 - unet
 - cells
@@ -127,9 +127,9 @@ tags:
 - electron-microscopy
 - platynereis
 test_inputs:
-- https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/test_input_0.npy
+- https://zenodo.org/api/records/6028281/files/test_input_0.npy/content
 test_outputs:
-- https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/test_output_0.npy
+- https://zenodo.org/api/records/6028281/files/test_output_0.npy/content
 timestamp: '2022-02-09T16:24:38.391028'
 training_data:
   id: ilastik/platynereis_em_training_data
@@ -137,7 +137,7 @@ type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/unet.py:AnisotropicUNet
+    architecture: https://zenodo.org/api/records/6028281/files/unet.py:AnisotropicUNet/content
     architecture_sha256: 7f5b15948e8e2c91f78dcff34fbf30af517073e91ba487f3edb982b948d099b3
     kwargs:
       anisotropic_kernel: false
@@ -162,7 +162,7 @@ weights:
         - 2
         - 2
     sha256: 0e91d6567ee59c2b1b583519b91329e4e8ec6cccb374cda8107d5ec3c6d745c2
-    source: https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/weights.pt
+    source: https://zenodo.org/api/records/6028281/files/weights.pt/content
   torchscript:
     sha256: 1796d1c25e0eee21c953addda903a2eccd1a73a91b9de684743999c153297236
-    source: https://zenodo.org/api/files/9a4c6150-10d1-4c82-9305-8ac21bc435b5/weights-torchscript.pt
+    source: https://zenodo.org/api/records/6028281/files/weights-torchscript.pt/content

@@ -1,8 +1,8 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/per_sample_scale_range.ijm
-  - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_postprocessing.ijm
-  - https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_weights.h5
+  - https://zenodo.org/api/records/6338615/files/per_sample_scale_range.ijm/content
+  - https://zenodo.org/api/records/6338615/files/stardist_postprocessing.ijm/content
+  - https://zenodo.org/api/records/6338615/files/stardist_weights.h5/content
 authors:
 - github_user: uschmidt83
   name: Uwe Schmidt
@@ -119,10 +119,10 @@ config:
       prob: 0.6924782541382084
     weights: stardist_weights.h5
 covers:
-- https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/stardist_logo.jpg
-- https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/example_histo.jpg
+- https://zenodo.org/api/records/6338615/files/stardist_logo.jpg/content
+- https://zenodo.org/api/records/6338615/files/example_histo.jpg/content
 description: StarDist - Object Detection with Star-convex Shapes
-documentation: https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/README.md
+documentation: https://zenodo.org/api/records/6338615/files/README.md/content
 format_version: 0.4.6
 id: 10.5281/zenodo.6338614/6338615
 inputs:
@@ -184,9 +184,9 @@ outputs:
     - 0.0
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/sample_input_0.tif
+- https://zenodo.org/api/records/6338615/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/sample_output_0.tif
+- https://zenodo.org/api/records/6338615/files/sample_output_0.tif/content
 tags:
 - whole-slide-imaging
 - 2d
@@ -197,9 +197,9 @@ tags:
 - object-detection
 - stardist
 test_inputs:
-- https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/test_input.npy
+- https://zenodo.org/api/records/6338615/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/test_output.npy
+- https://zenodo.org/api/records/6338615/files/test_output.npy/content
 timestamp: '2022-03-08T19:28:53.578207'
 training_data:
   id: deepimagej/monuseg_digital_pathology_miccai2018
@@ -207,7 +207,7 @@ type: model
 version: 0.1.0
 weights:
   tensorflow_saved_model_bundle:
-    dependencies: conda:https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/environment.yaml
+    dependencies: conda:https://zenodo.org/api/records/6338615/files/environment.yaml/content
     sha256: 32394dc07a98bb18b0b06082dbeb1a1f5df50a403fcdfe658548284adb77c69b
-    source: https://zenodo.org/api/files/9ae447ab-07e8-4f44-bc0a-b750d72fe478/TF_SavedModel.zip
+    source: https://zenodo.org/api/records/6338615/files/TF_SavedModel.zip/content
     tensorflow_version: 1.15.3

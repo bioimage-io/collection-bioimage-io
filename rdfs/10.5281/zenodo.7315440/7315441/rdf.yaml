@@ -1,6 +1,6 @@
 attachments:
   files:
-  - https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/EmbryoNet_labels.txt
+  - https://zenodo.org/api/records/7315441/files/EmbryoNet_labels.txt/content
 authors:
 - name: Daniel Capek
   orcid: 0000-0001-5199-9940
@@ -28,9 +28,9 @@ config:
     version_id: '7315441'
     version_name: version 1
 covers:
-- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/phenotypes_features.png
+- https://zenodo.org/api/records/7315441/files/phenotypes_features.png/content
 description: EmbryoNet Model by embryoNet Team
-documentation: https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/README.md
+documentation: https://zenodo.org/api/records/7315441/files/README.md/content
 format_version: 0.4.8
 id: 10.5281/zenodo.7315440/7315441
 inputs:
@@ -96,11 +96,11 @@ tags:
 - embryo
 - developmental-biology
 test_inputs:
-- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/input_test_image.npy
-- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/input_test_time_for_conv.npy
-- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/input_test_time_for_fc.npy
+- https://zenodo.org/api/records/7315441/files/input_test_image.npy/content
+- https://zenodo.org/api/records/7315441/files/input_test_time_for_conv.npy/content
+- https://zenodo.org/api/records/7315441/files/input_test_time_for_fc.npy/content
 test_outputs:
-- https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/result.npy
+- https://zenodo.org/api/records/7315441/files/result.npy/content
 timestamp: '2021-09-21T12:00:12+00:00'
 type: model
 version: 0.1.1
@@ -114,4 +114,4 @@ weights:
     - name: Nikan Toulany
     - name: Patrick Mueller
     opset_version: 7
-    source: https://zenodo.org/api/files/1e6b7502-1c32-4f3a-98ff-bbed8f2b808f/EmbryoNet_GPU_batch_1.onnx
+    source: https://zenodo.org/api/records/7315441/files/EmbryoNet_GPU_batch_1.onnx/content

@@ -23,9 +23,9 @@ config:
     version_id: '8171247'
     version_name: version 2
 covers:
-- https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/cover.png
+- https://zenodo.org/api/records/8171247/files/cover.png/content
 description: Prediction enhancer for segmenting cell boundaries in EM images.
-documentation: https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/doc.md
+documentation: https://zenodo.org/api/records/8171247/files/doc.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.8142283/8171247
 inputs:
@@ -88,15 +88,15 @@ tags:
 - 2d
 - shallow2deep
 test_inputs:
-- https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/test-input.npy
+- https://zenodo.org/api/records/8171247/files/test-input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/test-output.npy
+- https://zenodo.org/api/records/8171247/files/test-output.npy/content
 timestamp: '2023-07-13T10:02:28.301615'
 type: model
 version: 0.1.0
 weights:
   pytorch_state_dict:
-    architecture: https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/unet.py:UNet2d
+    architecture: https://zenodo.org/api/records/8171247/files/unet.py:UNet2d/content
     architecture_sha256: 64af2e39972beb94019a1c97d42b29a8d8827d1b0f0845207c3b82c1a242f354
     kwargs:
       depth: 4
@@ -109,4 +109,4 @@ weights:
       postprocessing:
       return_side_outputs: false
     sha256: 86ca482cf9e6e62df27166d8aba9c83397d0a17a262f8350d6cac9665deb77c1
-    source: https://zenodo.org/api/files/abd9570f-4758-4c41-90b8-95dafceecbff/weights.pt
+    source: https://zenodo.org/api/records/8171247/files/weights.pt/content

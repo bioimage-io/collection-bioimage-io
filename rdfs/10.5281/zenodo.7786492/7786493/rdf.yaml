@@ -47,11 +47,11 @@ config:
         type: image
       runtime:
 covers:
-- https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/cover.png
+- https://zenodo.org/api/records/7786493/files/cover.png/content
 description: Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning
   microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with
   MitoTracker and the model was trained to upsample the images by a factor of 4.
-documentation: https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/README.md
+documentation: https://zenodo.org/api/records/7786493/files/README.md/content
 format_version: 0.4.9
 id: 10.5281/zenodo.7786492/7786493
 inputs:
@@ -90,9 +90,9 @@ outputs:
   - 512
 rdf_source: https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.7786492/7786493/rdf.yaml
 sample_inputs:
-- https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/sample_input_0.tif
+- https://zenodo.org/api/records/7786493/files/sample_input_0.tif/content
 sample_outputs:
-- https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/sample_output_0.tif
+- https://zenodo.org/api/records/7786493/files/sample_output_0.tif/content
 tags:
 - zerocostdl4mic
 - deepimagej
@@ -104,9 +104,9 @@ tags:
 - fluorescence
 - upsampling
 test_inputs:
-- https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/test_input.npy
+- https://zenodo.org/api/records/7786493/files/test_input.npy/content
 test_outputs:
-- https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/test_output.npy
+- https://zenodo.org/api/records/7786493/files/test_output.npy/content
 timestamp: '2023-03-27T13:56:53.717745'
 type: model
 version: 0.1.0
@@ -114,4 +114,4 @@ weights:
   torchscript:
     pytorch_version: 1.13.1+cu116
     sha256: 98938b3135ccdc1dba8ad96c65027746712a6d470b8fcdb12f53b7de35bb471d
-    source: https://zenodo.org/api/files/e4c6af78-f693-4214-844a-05b08ef5fa27/weights.pt
+    source: https://zenodo.org/api/records/7786493/files/weights.pt/content
