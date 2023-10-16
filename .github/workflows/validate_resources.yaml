@@ -32,12 +32,12 @@ jobs:
       has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       with:
         ref: last_ci_run
         path: last_ci_run
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: gh-pages
         path: gh-pages
@@ -90,7 +90,7 @@ jobs:
       matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # [{env_name: ..., resource_id: ..., version_id: ..., weight_format: ...}, ...]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: download environment.yaml
       uses: actions/download-artifact@v3
       with:
@@ -135,8 +135,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       with:
         ref: gh-pages
         path: gh-pages
@@ -167,7 +167,7 @@ jobs:
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         branch: gh-pages
         clean: false  # Keeping the old files

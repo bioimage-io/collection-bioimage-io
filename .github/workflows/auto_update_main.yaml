@@ -97,7 +97,7 @@ jobs:
         retention-days: 90
     - name: Deploy updated partner resources to gh-pages 🚀
       if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         clean: false
         branch: gh-pages
@@ -158,7 +158,7 @@ jobs:
         retention-days: 90
     - name: Deploy collection.json to gh-pages 🚀
       if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         clean: false
         branch: gh-pages
@@ -250,7 +250,7 @@ jobs:
       run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
     - name: deploy PR url to gh-pages 🚀
       if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         clean: false
         branch: gh-pages
