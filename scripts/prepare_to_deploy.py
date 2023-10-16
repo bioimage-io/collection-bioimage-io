@@ -4,9 +4,8 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 import typer
-from packaging.version import Version
-
 from bioimageio.spec.shared import yaml
+from packaging.version import Version
 from utils import iterate_known_resource_versions
 
 
@@ -72,6 +71,7 @@ def main(
     for updated_rdf_path in static_validation_artifact_dir.glob(f"{resource_id_pattern}/*/rdf.yaml"):
         updated_rdf_gh_pages_path = gh_pages / "rdfs" / updated_rdf_path.relative_to(static_validation_artifact_dir)
         updated_rdf_gh_pages_path.parent.mkdir(exist_ok=True, parents=True)
+        print(f"copy to deploy: {updated_rdf_path} -> {updated_rdf_gh_pages_path}")
         shutil.copy(str(updated_rdf_path), str(updated_rdf_gh_pages_path))
 
         updated_rdf_deploy_path = dist / "rdfs" / updated_rdf_path.relative_to(static_validation_artifact_dir)
