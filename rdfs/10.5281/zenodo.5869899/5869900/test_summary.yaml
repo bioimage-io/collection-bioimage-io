@@ -1,6 +1,6 @@
 bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9
-rdf_sha256: 89d0d27173c75613e8fb3f5ff61112affcaf6d025468989c8f75df0d0c58c326
+rdf_sha256: e4680af026103986293ef140acc8d6446c4772828617d82aac54371cf24684c2
 status: passed
 tests:
   bioimageio:
