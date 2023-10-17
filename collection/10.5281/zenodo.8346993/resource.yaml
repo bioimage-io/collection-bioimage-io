@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2023-10-17 16:18:17.840075'
+  doi: 10.5281/zenodo.10014968
+  name: filoTips default
+  status: accepted
+  version_id: '10014968'
+  version_name: version from 2023-09-14
+  rdf_source: https://zenodo.org/api/records/10014968/files/rdf.yaml/content
 - created: '2023-10-16 21:32:04.227267'
   doi: 10.5281/zenodo.8408739
   name: 10.5281/zenodo.8408739
