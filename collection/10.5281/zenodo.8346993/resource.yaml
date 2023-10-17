@@ -14,6 +14,13 @@ versions:
   version_id: '10014968'
   version_name: version from 2023-09-14
   rdf_source: https://zenodo.org/api/records/10014968/files/rdf.yaml/content
+  authors:
+  - {affiliation: University of Minnesota, name: Casey Eddington, github_user: eddin022}
+  weights:
+    keras_hdf5: {sha256: a82b845cb72190d2305e6fc017f55de45c24310b2f254cd48404c662d0319b58,
+      source: keras_weights.hdf5, tensorflow_version: 2.12.0}
+    tensorflow_saved_model_bundle: {sha256: 9758ada65be38f127a993426c2486c736d44a69b82734b7d029bbfd353381bd8,
+      source: tf_weights.zip, tensorflow_version: 2.12.0}
 - created: '2023-10-16 21:32:04.227267'
   doi: 10.5281/zenodo.8408739
   name: 10.5281/zenodo.8408739
