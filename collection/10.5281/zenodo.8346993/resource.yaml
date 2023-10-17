@@ -5,12 +5,12 @@ nickname_icon: 🦥
 owners:
 - 604446
 status: accepted
-type: unknown
+type: model
 versions:
 - created: '2023-10-16 21:32:04.227267'
   doi: 10.5281/zenodo.8408739
   name: 10.5281/zenodo.8408739
-  status: accepted
+  status: blocked
   version_id: '8408739'
   version_name: version from 2023-09-14
   rdf_source: unknown
