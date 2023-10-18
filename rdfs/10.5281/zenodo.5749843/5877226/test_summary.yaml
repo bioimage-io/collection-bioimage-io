@@ -26,7 +26,7 @@ tests:
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: null
     name: load resource description
     nested_errors: null
@@ -34,7 +34,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: null
     name: All URLs and paths available
     nested_errors: null
@@ -42,14 +42,14 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: '[Errno 20] Not a directory: ''/tmp/runner/bioimageio_cache/https/zenodo.org/api/records/5877226/files/tensorflow_saved_model_bundle.zip/content/saved_model.pb'''
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: failed
@@ -71,6 +71,40 @@ tests:
   - {bioimageio_spec_version: 0.4.8post1, name: Reproduce test outputs with DeepImageJ
       headless, status: passed}
   ilastik:
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: load resource description
+    status: passed
+    traceback: null
+    warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
+          prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model', Computed dataset percentiles naively
+          by averaging percentiles of samples.]
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -79,7 +113,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - {error: null, name: has expected resource type, status: passed, traceback: null}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: null
@@ -97,6 +130,26 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
+    error: '''str'' object has no attribute ''decode'''
+    name: reproduce test outputs from test inputs
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
+        weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 122, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 180, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 57, in load\n    self._load(devices=devices or self.default_devices)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_keras_model_adapter.py\",
+        line 41, in _load\n    self._model = keras.models.load_model(weight_file)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
+        line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
+        custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
+        line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
+    warnings:
+      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
+          prediction results may be wrong']
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
     error: '''str'' object has no attribute ''decode'''
     name: reproduce test outputs from test inputs
     status: failed
@@ -126,56 +179,3 @@ tests:
           cannot unload model', Computed dataset percentiles naively by averaging
           percentiles of samples., 'Model tensorflow version (1, 15) does not match
           1.14.0.The prediction results may be wrong']
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: load resource description
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
-          prediction results may be wrong', 'Device management is not implemented
-          for keras yet, cannot unload model', Computed dataset percentiles naively
-          by averaging percentiles of samples.]
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: '''str'' object has no attribute ''decode'''
-    name: reproduce test outputs from test inputs
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
-        weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 122, in __enter__\n    self.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 180, in load\n    self._model.load()\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 57, in load\n    self._load(devices=devices or self.default_devices)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_keras_model_adapter.py\",
-        line 41, in _load\n    self._model = keras.models.load_model(weight_file)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py\",
-        line 146, in load_model\n    return hdf5_format.load_model_from_hdf5(filepath,
-        custom_objects, compile)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py\",
-        line 210, in load_model_from_hdf5\n    model_config = json.loads(model_config.decode('utf-8'))\n"]
-    warnings:
-      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
-          prediction results may be wrong']

@@ -36,7 +36,7 @@ tests:
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
         ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: null
     name: load resource description
     nested_errors: null
@@ -44,7 +44,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
     name: All URLs and paths available
     nested_errors: null
@@ -59,14 +59,14 @@ tests:
         line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post3
+    bioimageio_spec_version: 0.4.9post4
     error: Cannot load file containing pickled data when allow_pickle=False
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: failed
@@ -83,6 +83,22 @@ tests:
       while running DeepImageJ headless (CI did not produce an output image)., name: Reproduce
       test outputs with DeepImageJ headless., status: failed}
   ilastik:
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: local variable 'rd' referenced before assignment
+    name: reproduce test outputs with ilastik 1.4.0rc8 using tensorflow_saved_model_bundle
+      weights
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
+        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
+        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 224, in _test_load_resource\n    return rd, load_summary\n"]
+    warnings: {}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: '{''_schema'': [''Minimal shape [1. 4. 4. 1.] of output denoised is too
@@ -101,20 +117,4 @@ tests:
         line 723, in load\n    data, many=many, partial=partial, unknown=unknown,
         postprocess=True\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/marshmallow/schema.py\",
         line 909, in _do_load\n    raise exc\n"]
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: local variable 'rd' referenced before assignment
-    name: reproduce test outputs with ilastik 1.4.0rc8 using tensorflow_saved_model_bundle
-      weights
-    nested_errors: null
-    status: failed
-    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
-        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
-        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 224, in _test_load_resource\n    return rd, load_summary\n"]
     warnings: {}
