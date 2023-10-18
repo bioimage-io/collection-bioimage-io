@@ -14,6 +14,202 @@
     {
       "authors": [
         {
+          "affiliation": "EMBL",
+          "email": "qin.yu@embl.de",
+          "github_user": "qin-yu",
+          "name": "Qin Yu",
+          "orcid": "0000-0002-4652-0795"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/plantseg_raw_and_gasp_segmentation.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/plantseg_raw_and_probability_map.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/plantseg_raw.jpg"
+      ],
+      "created": "2023-10-11 00:39:40.958129",
+      "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135. Patch size for this model during inference can be flexible.",
+      "download_count": 290,
+      "id": "10.5281/zenodo.8401064",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "PlantSeg Plant Nuclei 3D UNet",
+      "nickname": "efficient-chipmunk",
+      "nickname_icon": "\ud83d\udc3f",
+      "owners": [
+        611919
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8429203/rdf.yaml",
+      "tags": [
+        "3d",
+        "unet",
+        "pytorch",
+        "plantseg",
+        "segmentation",
+        "nucleus-segmentation",
+        "instance-segmentation",
+        "boundary-segmentation",
+        "confocal-microscopy",
+        "to-pro-3",
+        "nuclei",
+        "ovules",
+        "plant"
+      ],
+      "type": "model",
+      "versions": [
+        "8429203",
+        "8401065"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "Fudan University",
+          "name": "Chenxi Ma"
+        },
+        {
+          "affiliation": "Fudan University",
+          "name": "Weimin Tan"
+        },
+        {
+          "affiliation": "Fudan University",
+          "name": "Ruian He"
+        },
+        {
+          "affiliation": "Fudan University",
+          "name": "Bo Yan"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/cover1.png",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/cover2.png"
+      ],
+      "created": "2023-10-09 06:57:28.189519",
+      "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
+      "download_count": 287,
+      "id": "10.5281/zenodo.8419845",
+      "license": "CC-BY-4.0",
+      "name": "UniFMIRSuperResolutionOnMicrotubules",
+      "nickname": "ambitious-ant",
+      "nickname_icon": "\ud83d\udc1c",
+      "owners": [
+        610358
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/rdf.yaml",
+      "tags": [
+        "fluorescence-light-microscopy",
+        "2d",
+        "pytorch",
+        "image-restoration"
+      ],
+      "type": "model",
+      "versions": [
+        "8420081"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "EMBL",
+          "email": "qin.yu@embl.de",
+          "github_user": "qin-yu",
+          "name": "Qin Yu",
+          "orcid": "0000-0002-4652-0795"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw_and_segmentation.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw_and_probability_lit.jpg",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw.jpg"
+      ],
+      "created": "2023-10-11 17:13:48.737609",
+      "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
+      "download_count": 247,
+      "id": "10.5281/zenodo.8421755",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "StarDist Plant Nuclei 3D ResNet",
+      "nickname": "modest-octopus",
+      "nickname_icon": "\ud83d\udc19",
+      "owners": [
+        611919
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/rdf.yaml",
+      "tags": [
+        "3d",
+        "resnet",
+        "stardist",
+        "tensorflow",
+        "segmentation",
+        "nucleus-segmentation",
+        "instance-segmentation",
+        "boundary-segmentation",
+        "confocal-microscopy",
+        "to-pro-3",
+        "nuclei",
+        "ovules",
+        "plant"
+      ],
+      "type": "model",
+      "versions": [
+        "8432366"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "affiliation": "Fudan University",
+          "name": "Chenxi Ma"
+        },
+        {
+          "affiliation": "Fudan University",
+          "name": "Weimin Tan"
+        },
+        {
+          "affiliation": "Fudan University",
+          "name": "Ruian He"
+        },
+        {
+          "affiliation": "Fudan University",
+          "name": "Bo Yan"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/cover1.png",
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/cover2.png"
+      ],
+      "created": "2023-10-09 07:05:52.763368",
+      "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
+      "download_count": 155,
+      "id": "10.5281/zenodo.8420099",
+      "license": "CC-BY-4.0",
+      "links": [
+        "imjoy/BioImageIO-Packager"
+      ],
+      "name": "UniFMIRSuperResolutionOnFactin",
+      "nickname": "courteous-otter",
+      "nickname_icon": "\ud83e\udda6",
+      "owners": [
+        610358
+      ],
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/rdf.yaml",
+      "tags": [
+        "fluorescence-light-microscopy",
+        "2d",
+        "pytorch",
+        "image-restoration"
+      ],
+      "type": "model",
+      "versions": [
+        "8420100"
+      ]
+    },
+    {
+      "authors": [
+        {
           "github_user": "petebankhead",
           "name": "Pete Bankhead"
         }
@@ -553,7 +749,7 @@
       "license": "GPL-2.0-or-later",
       "name": "ilastik",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/ilastik/latest/rdf.yaml",
-      "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html",
+      "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/src/ilastik-app.imjoy.html",
       "tags": [
         "software",
         "bioengine"
@@ -627,8 +823,8 @@
         }
       ],
       "covers": [
-        "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover0.jpg",
-        "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/mitoem-cover1.png"
+        "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/mitoem-cover0.jpg",
+        "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/mitoem-cover1.png"
       ],
       "description": "Training data for mitochondria segmentation in 3d EM.",
       "download_count": 1,
@@ -662,7 +858,7 @@
       "id": "ilastik/mws-segmentation",
       "name": "Mutex Watershed Plugin",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml",
-      "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html",
+      "source": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/src/mws-segmentation.imjoy.html",
       "tags": [
         "bioengine"
       ],
@@ -3166,202 +3362,6 @@
     {
       "authors": [
         {
-          "affiliation": "EMBL",
-          "email": "qin.yu@embl.de",
-          "github_user": "qin-yu",
-          "name": "Qin Yu",
-          "orcid": "0000-0002-4652-0795"
-        }
-      ],
-      "covers": [
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/plantseg_raw_and_gasp_segmentation.jpg",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/plantseg_raw_and_probability_map.jpg",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8401065/plantseg_raw.jpg"
-      ],
-      "created": "2023-10-11 00:39:40.958129",
-      "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135. Patch size for this model during inference can be flexible.",
-      "download_count": 1,
-      "id": "10.5281/zenodo.8401064",
-      "license": "CC-BY-4.0",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "PlantSeg Plant Nuclei 3D UNet",
-      "nickname": "efficient-chipmunk",
-      "nickname_icon": "\ud83d\udc3f",
-      "owners": [
-        611919
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8401064/8429203/rdf.yaml",
-      "tags": [
-        "3d",
-        "unet",
-        "pytorch",
-        "plantseg",
-        "segmentation",
-        "nucleus-segmentation",
-        "instance-segmentation",
-        "boundary-segmentation",
-        "confocal-microscopy",
-        "to-pro-3",
-        "nuclei",
-        "ovules",
-        "plant"
-      ],
-      "type": "model",
-      "versions": [
-        "8429203",
-        "8401065"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "affiliation": "Fudan University",
-          "name": "Chenxi Ma"
-        },
-        {
-          "affiliation": "Fudan University",
-          "name": "Weimin Tan"
-        },
-        {
-          "affiliation": "Fudan University",
-          "name": "Ruian He"
-        },
-        {
-          "affiliation": "Fudan University",
-          "name": "Bo Yan"
-        }
-      ],
-      "covers": [
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/cover1.png",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/cover2.png"
-      ],
-      "created": "2023-10-09 06:57:28.189519",
-      "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 1,
-      "id": "10.5281/zenodo.8419845",
-      "license": "CC-BY-4.0",
-      "name": "UniFMIRSuperResolutionOnMicrotubules",
-      "nickname": "ambitious-ant",
-      "nickname_icon": "\ud83d\udc1c",
-      "owners": [
-        610358
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8419845/8420081/rdf.yaml",
-      "tags": [
-        "fluorescence-light-microscopy",
-        "2d",
-        "pytorch",
-        "image-restoration"
-      ],
-      "type": "model",
-      "versions": [
-        "8420081"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "affiliation": "Fudan University",
-          "name": "Chenxi Ma"
-        },
-        {
-          "affiliation": "Fudan University",
-          "name": "Weimin Tan"
-        },
-        {
-          "affiliation": "Fudan University",
-          "name": "Ruian He"
-        },
-        {
-          "affiliation": "Fudan University",
-          "name": "Bo Yan"
-        }
-      ],
-      "covers": [
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/cover1.png",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/cover2.png"
-      ],
-      "created": "2023-10-09 07:05:52.763368",
-      "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 1,
-      "id": "10.5281/zenodo.8420099",
-      "license": "CC-BY-4.0",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "UniFMIRSuperResolutionOnFactin",
-      "nickname": "courteous-otter",
-      "nickname_icon": "\ud83e\udda6",
-      "owners": [
-        610358
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8420099/8420100/rdf.yaml",
-      "tags": [
-        "fluorescence-light-microscopy",
-        "2d",
-        "pytorch",
-        "image-restoration"
-      ],
-      "type": "model",
-      "versions": [
-        "8420100"
-      ]
-    },
-    {
-      "authors": [
-        {
-          "affiliation": "EMBL",
-          "email": "qin.yu@embl.de",
-          "github_user": "qin-yu",
-          "name": "Qin Yu",
-          "orcid": "0000-0002-4652-0795"
-        }
-      ],
-      "covers": [
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw_and_segmentation.jpg",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw_and_probability_lit.jpg",
-        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/stardist_raw.jpg"
-      ],
-      "created": "2023-10-11 17:13:48.737609",
-      "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
-      "download_count": 1,
-      "id": "10.5281/zenodo.8421755",
-      "license": "CC-BY-4.0",
-      "links": [
-        "imjoy/BioImageIO-Packager"
-      ],
-      "name": "StarDist Plant Nuclei 3D ResNet",
-      "nickname": "modest-octopus",
-      "nickname_icon": "\ud83d\udc19",
-      "owners": [
-        611919
-      ],
-      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.8421755/8432366/rdf.yaml",
-      "tags": [
-        "3d",
-        "resnet",
-        "stardist",
-        "tensorflow",
-        "segmentation",
-        "nucleus-segmentation",
-        "instance-segmentation",
-        "boundary-segmentation",
-        "confocal-microscopy",
-        "to-pro-3",
-        "nuclei",
-        "ovules",
-        "plant"
-      ],
-      "type": "model",
-      "versions": [
-        "8432366"
-      ]
-    },
-    {
-      "authors": [
-        {
           "affiliation": "EMBL Heidelberg",
           "name": "Jonas Hellgoth",
           "orcid": "0000-0003-0758-1680"
@@ -5429,9 +5429,9 @@
         "collection_file_name": "collection.yaml",
         "default_type": "model",
         "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
+        "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png",
         "id": "ilastik",
-        "logo": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
+        "logo": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png",
         "name": "ilastik",
         "repository": "ilastik/bioimage-io-resources",
         "resource_types": [
@@ -5450,7 +5450,7 @@
           "workflow": "test_bioimageio_resources.yaml",
           "workflow_ref": "refs/heads/main"
         },
-        "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main"
+        "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main"
       },
       {
         "about_url": "https://www.proteinatlas.org/",
