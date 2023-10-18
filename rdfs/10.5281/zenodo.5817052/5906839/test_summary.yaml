@@ -26,7 +26,7 @@ tests:
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: null
     name: load resource description
     nested_errors: null
@@ -34,7 +34,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: null
     name: All URLs and paths available
     nested_errors: null
@@ -42,14 +42,14 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: '[Errno 20] Not a directory: ''/tmp/runner/bioimageio_cache/https/zenodo.org/api/records/5906839/files/tf_weights.zip/content/saved_model.pb'''
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: failed

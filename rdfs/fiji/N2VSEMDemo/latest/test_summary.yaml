@@ -36,7 +36,7 @@ tests:
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
         ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: null
     name: load resource description
     nested_errors: null
@@ -44,7 +44,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
     name: All URLs and paths available
     nested_errors: null
@@ -59,14 +59,14 @@ tests:
         line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post2
+    bioimageio_spec_version: 0.4.9post3
     error: Cannot load file containing pickled data when allow_pickle=False
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: failed
