@@ -10,6 +10,7 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 import requests
 import typer
 from bare_utils import set_gh_actions_outputs
+from bs4 import BeautifulSoup
 from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, split_animal_nickname, yaml
 
 
@@ -138,6 +139,41 @@ def update_with_new_version(
     updated_resources[resource_id].append(new_version)
 
 
+# adapted from https://github.com/bioimage-io/collection-bioimage-io/issues/653#issuecomment-1768225518
+def extract_download_count(recid: str):
+    # Fetch the webpage content
+    url = f"https://zenodo.org/records/{recid}"
+    response = requests.get(url)
+
+    # Parse the webpage using BeautifulSoup
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Find the table with the specific ID
+    table = soup.find("table", {"id": "record-statistics"})
+
+    # Initialize an empty dictionary to store the results
+    stats = {}
+
+    # Iterate through each row in the table body
+    for row in table.find("tbody").find_all("tr"):
+        # Extracting the columns (td) in each row
+        cols = row.find_all("td")
+
+        # The first column is the statistics type (Views, Downloads, Data)
+        stat_type = cols[0].text.strip().split()[0]
+
+        # The second column is "All versions"
+        all_versions = cols[1].text.strip()
+
+        # The third column is "This version"
+        this_version = cols[2].text.strip()
+
+        # Add the extracted data to the stats dictionary
+        stats[stat_type] = {"All versions": all_versions, "This version": this_version}
+
+    return int(stats["Downloads"]["All versions"])
+
+
 def update_from_zenodo(
     collection: Path,
     dist: Path,
@@ -200,14 +236,14 @@ def update_from_zenodo(
                         name = rdf.get("name", doi)
                         resource_type = rdf.get("type")
 
+            version_id = str(hit["id"])
             try:
-                download_count = int(hit["stats"]["unique_downloads"])  # todo: update zenodo api
+                download_count = extract_download_count(version_id)
             except Exception as e:
                 warnings.warn(f"Could not determine download count: {e}")
                 download_count = 1
 
             download_counts[resource_doi] = download_count
-            version_id = str(hit["id"])
 
             new_version = {
                 "version_id": version_id,

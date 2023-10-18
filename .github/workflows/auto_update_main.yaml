@@ -66,6 +66,7 @@ jobs:
           - conda-forge
         create-args: >-  # script dependencies
           bioimageio.spec
+          bs4
           lxml
           requests
           typer
