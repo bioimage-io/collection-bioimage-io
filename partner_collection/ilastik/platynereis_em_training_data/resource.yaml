@@ -17,10 +17,10 @@ versions:
       default_type: model
       explore_button_text: Start Exploring
       icon: 
-        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+        https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
       id: ilastik
       logo: 
-        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+        https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
       name: ilastik
       resource_types:
       - application
@@ -29,13 +29,13 @@ versions:
       splash_title: ilastik
       tags:
       - ilastik
-      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
     covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy-cover0.png
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/platy-cover0.png
     description: Training data for EM segmentation of cellular membranes, nuclei,
       cuticle and cilia in Platynereis.
     documentation: 
-      https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/platy.md
+      https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/platy.md
     format_version: 0.2.3
     id: ilastik/platynereis_em_training_data
     license: CC-BY-4.0

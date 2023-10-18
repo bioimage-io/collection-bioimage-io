@@ -12,10 +12,10 @@ config:
   default_type: model
   explore_button_text: Start Exploring
   icon: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   id: ilastik
   logo: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -24,13 +24,13 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers:
-- https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb-cover0.jpg
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/dsb-cover0.jpg
 description: Subset of the nucleus segmentation training data from the 2018 Kaggle
   Data Science Bowl.
 documentation: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/dsb.md
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/dsb.md
 format_version: 0.2.3
 id: ilastik/stardist_dsb_training_data/latest
 license: CC0-1.0

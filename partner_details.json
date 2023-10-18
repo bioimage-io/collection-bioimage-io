@@ -190,9 +190,9 @@
         "collection_file_name": "collection.yaml",
         "default_type": "model",
         "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
+        "icon": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png",
         "id": "ilastik",
-        "logo": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png",
+        "logo": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png",
         "name": "ilastik",
         "repository": "ilastik/bioimage-io-resources",
         "resource_types": [
@@ -211,7 +211,7 @@
             "workflow": "test_bioimageio_resources.yaml",
             "workflow_ref": "refs/heads/main"
         },
-        "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-models/main"
+        "url_root": "https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main"
     },
     {
         "about_url": "https://www.proteinatlas.org/",

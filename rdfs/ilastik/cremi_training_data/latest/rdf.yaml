@@ -12,10 +12,10 @@ config:
   default_type: model
   explore_button_text: Start Exploring
   icon: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   id: ilastik
   logo: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -24,14 +24,14 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers:
-- https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover0.png
-- https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover1.png
-- https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi-cover2.png
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/cremi-cover0.png
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/cremi-cover1.png
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/cremi-cover2.png
 description: Training data from the challenge on 3d EM segmentation on neuronal processes.
 documentation: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/cremi.md
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/cremi.md
 format_version: 0.2.3
 id: ilastik/cremi_training_data/latest
 maintainers:

@@ -13,10 +13,10 @@ config:
   default_type: model
   explore_button_text: Start Exploring
   icon: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   id: ilastik
   logo: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -25,11 +25,11 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers: []
 description: Segmentation plugin for models that predict pixel affinities
 documentation: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.md
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/src/mws-segmentation.md
 format_version: 0.2.3
 icon: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/mws.png
 id: ilastik/mws-segmentation/latest
@@ -40,7 +40,7 @@ name: Mutex Watershed Plugin
 rdf_source: 
   https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/mws-segmentation/latest/rdf.yaml
 source: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/mws-segmentation.imjoy.html
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/src/mws-segmentation.imjoy.html
 tags:
 - bioengine
 type: application

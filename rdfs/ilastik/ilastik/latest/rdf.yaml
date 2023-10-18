@@ -14,10 +14,10 @@ config:
   default_type: model
   explore_button_text: Start Exploring
   icon: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   id: ilastik
   logo: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -26,7 +26,7 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers: []
 description: the interactive learning and segmentation toolkit
 documentation: https://raw.githubusercontent.com/ilastik/ilastik/main/Readme.md
@@ -42,7 +42,7 @@ name: ilastik
 rdf_source: 
   https://bioimage-io.github.io/collection-bioimage-io/rdfs/ilastik/ilastik/latest/rdf.yaml
 source: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/src/ilastik-app.imjoy.html
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/src/ilastik-app.imjoy.html
 tags:
 - software
 - bioengine

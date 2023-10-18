@@ -12,10 +12,10 @@ config:
   default_type: model
   explore_button_text: Start Exploring
   icon: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   id: ilastik
   logo: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -24,12 +24,12 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers:
-- https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell-cover0.jpg
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/livecell-cover0.jpg
 description: LIVECell—A large-scale dataset for label-free live cell segmentation
 documentation: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/livecell.md
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/livecell.md
 format_version: 0.2.3
 id: ilastik/livecell_dataset/latest
 license: CC-BY-NC-4.0

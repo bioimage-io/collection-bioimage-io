@@ -1,11 +1,11 @@
 {
   "bioimageio": "f549651922eba99405e291b42bfb3440ad466670",
-  "bioimageio_spec_version": "0.4.9post1",
+  "bioimageio_spec_version": "0.4.9post4",
   "deepimagej": "902bb357c0ee03919689f6e1384f3dc5aca861d3",
   "fiji": "3a9637d4ba0cbb04691a7d4948bd93dffc935bda",
   "hpa": "8b166c0fc23cfa5f06de838cab07b4651a546951",
   "icy": "ffa9fb4d5ed89317a0f126bc9a416f62451cf3d8",
-  "ilastik": "c74fc1429d79e78bcc58cb650006edcc2f37f731",
+  "ilastik": "c173addab8c5423f3eb4aa4e2cdac2442c240132",
   "imjoy": "f8f594dd4ff89210549e96e1949d34728852ba18",
   "qupath": "d1c9f00e2dc05c340cf8b6f7c1d8d10773f0ccfc",
   "stardist": "b5bf5043a07eda17dd23acf969f18e9a64d8962c",

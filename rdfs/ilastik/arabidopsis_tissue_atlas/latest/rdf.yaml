@@ -9,10 +9,10 @@ config:
   default_type: model
   explore_button_text: Start Exploring
   icon: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   id: ilastik
   logo: 
-    https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+    https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
   name: ilastik
   resource_types:
   - application
@@ -21,13 +21,13 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+  url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers:
-- https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/arabidopsis_atlas.jpg
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/arabidopsis_atlas.jpg
 description: 3D digital tissue atlas of Arabidopsis thaliana, containing image data
   and cell segmentations.
 documentation: 
-  https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/arabidopsis_tissue_atlas.md
+  https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/arabidopsis_tissue_atlas.md
 format_version: 0.2.3
 id: ilastik/arabidopsis_tissue_atlas/latest
 maintainers:

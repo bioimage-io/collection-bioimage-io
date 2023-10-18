@@ -17,10 +17,10 @@ versions:
       default_type: model
       explore_button_text: Start Exploring
       icon: 
-        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+        https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
       id: ilastik
       logo: 
-        https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/image/ilastik-fist-icon.png
+        https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/image/ilastik-fist-icon.png
       name: ilastik
       resource_types:
       - application
@@ -29,15 +29,15 @@ versions:
       splash_title: ilastik
       tags:
       - ilastik
-      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-models/main
+      url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
     covers:
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover0.jpg
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover1.jpg
-    - https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if-cover2.jpg
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/covid-if-cover0.jpg
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/covid-if-cover1.jpg
+    - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/covid-if-cover2.jpg
     description: Training data for cell and nucleus segmentation as well as infection
       classification in IF data of Covid-19 infected cells.
     documentation: 
-      https://raw.githubusercontent.com/ilastik/bioimage-io-models/main/dataset_src/covid-if.md
+      https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/covid-if.md
     format_version: 0.2.3
     id: ilastik/covid_if_training_data
     license: CC-BY-4.0
