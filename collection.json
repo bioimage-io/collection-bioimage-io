@@ -28,7 +28,7 @@
       ],
       "created": "2023-10-11 00:39:40.958129",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135. Patch size for this model during inference can be flexible.",
-      "download_count": 290,
+      "download_count": 294,
       "id": "10.5281/zenodo.8401064",
       "license": "CC-BY-4.0",
       "links": [
@@ -87,7 +87,7 @@
       ],
       "created": "2023-10-09 06:57:28.189519",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 287,
+      "download_count": 291,
       "id": "10.5281/zenodo.8419845",
       "license": "CC-BY-4.0",
       "name": "UniFMIRSuperResolutionOnMicrotubules",
@@ -125,7 +125,7 @@
       ],
       "created": "2023-10-11 17:13:48.737609",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
-      "download_count": 247,
+      "download_count": 254,
       "id": "10.5281/zenodo.8421755",
       "license": "CC-BY-4.0",
       "links": [
@@ -183,7 +183,7 @@
       ],
       "created": "2023-10-09 07:05:52.763368",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 155,
+      "download_count": 160,
       "id": "10.5281/zenodo.8420099",
       "license": "CC-BY-4.0",
       "links": [
