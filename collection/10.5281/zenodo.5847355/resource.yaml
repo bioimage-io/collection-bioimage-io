@@ -1,26 +1,65 @@
 doi: 10.5281/zenodo.5847355
 id: 10.5281/zenodo.5847355
 nickname: powerful-chipmunk
-nickname_icon: "\U0001F43F"
-owners: [77626]
+nickname_icon: 🐿
+owners:
+- 77626
 status: accepted
 type: model
 versions:
-- {created: '2022-06-15 22:08:13.874556', doi: 10.5281/zenodo.6647683, name: CovidIFCellSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/records/6647683/files/rdf.yaml/content', status: accepted,
-  version_id: '6647683', version_name: version 4}
+- created: '2022-06-15 22:08:13.874556'
+  doi: 10.5281/zenodo.6647683
+  name: CovidIFCellSegmentationBoundaryModel
+  status: accepted
+  version_id: '6647683'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/records/6647683/files/rdf.yaml/content
 - created: '2022-03-02 11:57:10.309729'
   doi: 10.5281/zenodo.6322908
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
+  links:
+  - deepimagej/deepimagej
+  - ilastik/ilastik
+  - imjoy/BioImageIO-Packager
+  - ilastik/torch-em-2d-unet-notebook
   name: CovidIFCellSegmentationBoundaryModel
-  rdf_source: https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/rdf.yaml
   status: accepted
-  training_data: {id: ilastik/covid_if_training_data}
+  training_data:
+    id: ilastik/covid_if_training_data
   version_id: '6322908'
   version_name: revision 1
-- {created: '2022-01-18 21:31:33.668428', doi: 10.5281/zenodo.5874728, name: Cell
-    Segmentation Immunofluorescence (Membrane Prediction), rdf_source: 'https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/rdf.yaml',
-  status: blocked, version_id: '5874728', version_name: revision 1}
-- {created: '2022-01-13 21:13:49.264581', doi: 10.5281/zenodo.5847356, name: CovidIFCellSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/rdf.yaml',
-  status: blocked, version_id: '5847356', version_name: revision 1}
+  rdf_source: https://zenodo.org/api/files/be41e515-ce79-48f5-a482-35e1f11701c2/rdf.yaml
+- created: '2022-03-02 11:57:10.309729'
+  doi: 10.5281/zenodo.6322908
+  name: CovidIFCellSegmentationBoundaryModel
+  status: accepted
+  version_id: '6322908'
+  version_name: version from 2022-03-02
+  rdf_source: https://zenodo.org/api/records/6322908/files/rdf.yaml/content
+- created: '2022-01-18 21:31:33.668428'
+  doi: 10.5281/zenodo.5874728
+  name: CovidIFCellSegmentationBoundaryModel
+  status: accepted
+  version_id: '5874728'
+  version_name: version from 2022-01-18
+  rdf_source: https://zenodo.org/api/records/5874728/files/rdf.yaml/content
+- created: '2022-01-18 21:31:33.668428'
+  doi: 10.5281/zenodo.5874728
+  name: Cell Segmentation Immunofluorescence (Membrane Prediction)
+  status: blocked
+  version_id: '5874728'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/612ad5b1-5978-4481-9c8c-e28b97d6b927/rdf.yaml
+- created: '2022-01-13 21:13:49.264581'
+  doi: 10.5281/zenodo.5847356
+  name: CovidIFCellSegmentationBoundaryModel
+  status: blocked
+  version_id: '5847356'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/5b0d4c67-6d0a-462c-914c-07bebe594bd8/rdf.yaml
+- created: '2022-01-13 21:13:49.264581'
+  doi: 10.5281/zenodo.5847356
+  name: CovidIFCellSegmentationBoundaryModel
+  status: accepted
+  version_id: '5847356'
+  version_name: version from 2022-01-13
+  rdf_source: https://zenodo.org/api/records/5847356/files/rdf.yaml/content
