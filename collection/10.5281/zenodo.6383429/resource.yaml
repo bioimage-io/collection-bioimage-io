@@ -1,34 +1,85 @@
 doi: 10.5281/zenodo.6383429
 id: 10.5281/zenodo.6383429
 nickname: loyal-squid
-nickname_icon: "\U0001F991"
-owners: [66700]
+nickname_icon: 🦑
+owners:
+- 66700
 status: accepted
 type: model
 versions:
-- {created: '2023-03-27 12:14:49.467153', doi: 10.5281/zenodo.7774505, name: 3D UNet
-    Mouse Embryo Fixed, rdf_source: 'https://zenodo.org/api/records/7774505/files/rdf.yaml/content',
-  status: accepted, version_id: '7774505', version_name: version 4}
-- {created: '2023-03-06 11:42:20.587341', doi: 10.5281/zenodo.7701632, name: 3D UNet
-    Mouse Embryo Fixed, rdf_source: 'https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/rdf.yaml',
-  status: accepted, version_id: '7701632', version_name: version 3}
-- {created: '2023-03-03 18:45:59.699029', doi: 10.5281/zenodo.7697076, name: 3D UNet
-    Mouse Embryo Fixed, rdf_source: 'https://zenodo.org/api/files/fad8b573-b31e-4a47-b1b6-b9a557194abc/rdf.yaml',
-  status: blocked, version_id: '7697076', version_name: version 2}
+- created: '2023-03-27 12:14:49.467153'
+  doi: 10.5281/zenodo.7774505
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '7774505'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/records/7774505/files/rdf.yaml/content
+- created: '2023-03-06 11:42:20.587341'
+  doi: 10.5281/zenodo.7701632
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '7701632'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/rdf.yaml
+- created: '2023-03-06 11:42:20.587341'
+  doi: 10.5281/zenodo.7701632
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '7701632'
+  version_name: version from 2022-03-25
+  rdf_source: https://zenodo.org/api/records/7701632/files/rdf.yaml/content
+- created: '2023-03-03 18:45:59.699029'
+  doi: 10.5281/zenodo.7697076
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '7697076'
+  version_name: version from 2022-03-25
+  rdf_source: https://zenodo.org/api/records/7697076/files/rdf.yaml/content
+- created: '2023-03-03 18:45:59.699029'
+  doi: 10.5281/zenodo.7697076
+  name: 3D UNet Mouse Embryo Fixed
+  status: blocked
+  version_id: '7697076'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/fad8b573-b31e-4a47-b1b6-b9a557194abc/rdf.yaml
 - created: '2022-03-25 01:46:26.819763'
   doi: 10.5281/zenodo.6383430
   name: 3D UNet Mouse Embryo Fixed
   outputs:
   - axes: bczyx
-    data_range: [0, 1]
+    data_range:
+    - 0
+    - 1
     data_type: float32
-    halo: [0, 0, 8, 16, 16]
+    halo:
+    - 0
+    - 0
+    - 8
+    - 16
+    - 16
     name: output0
     shape:
-      offset: [0, 0, 0, 0, 0]
+      offset:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
       reference_tensor: raw
-      scale: [1, 2, 1, 1, 1]
-  rdf_source: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/rdf.yaml
+      scale:
+      - 1
+      - 2
+      - 1
+      - 1
+      - 1
   status: accepted
   version_id: '6383430'
   version_name: version 1
+  rdf_source: https://zenodo.org/api/files/4a1f1eaf-685f-4564-810a-25e1e268b3e5/rdf.yaml
+- created: '2022-03-25 01:46:26.819763'
+  doi: 10.5281/zenodo.6383430
+  name: 3D UNet Mouse Embryo Fixed
+  status: accepted
+  version_id: '6383430'
+  version_name: version from 2022-03-25
+  rdf_source: https://zenodo.org/api/records/6383430/files/rdf.yaml/content
