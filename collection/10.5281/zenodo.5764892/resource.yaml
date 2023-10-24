@@ -1,35 +1,107 @@
 doi: 10.5281/zenodo.5764892
 id: 10.5281/zenodo.5764892
 nickname: affable-shark
-nickname_icon: "\U0001F988"
-owners: [77626]
+nickname_icon: 🦈
+owners:
+- 77626
 status: accepted
 type: model
 versions:
-- {created: '2022-06-15 22:06:22.658325', doi: 10.5281/zenodo.6647674, name: NucleiSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/records/6647674/files/rdf.yaml/content', status: accepted,
-  version_id: '6647674', version_name: version 7}
+- created: '2022-06-15 22:06:22.658325'
+  doi: 10.5281/zenodo.6647674
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '6647674'
+  version_name: version 7
+  rdf_source: https://zenodo.org/api/records/6647674/files/rdf.yaml/content
 - created: '2022-03-02 12:07:39.352008'
   doi: 10.5281/zenodo.6322939
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-2d-unet-notebook]
   name: NucleiSegmentationBoundaryModel
-  rdf_source: https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/rdf.yaml
   status: accepted
-  training_data: {id: ilastik/stardist_dsb_training_data}
+  version_id: '6322939'
+  version_name: version from 2022-03-02
+  rdf_source: https://zenodo.org/api/records/6322939/files/rdf.yaml/content
+- created: '2022-03-02 12:07:39.352008'
+  doi: 10.5281/zenodo.6322939
+  links:
+  - deepimagej/deepimagej
+  - ilastik/ilastik
+  - imjoy/BioImageIO-Packager
+  - ilastik/torch-em-2d-unet-notebook
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  training_data:
+    id: ilastik/stardist_dsb_training_data
   version_id: '6322939'
   version_name: revision 1
-- {created: '2022-03-01 09:27:03.758432', doi: 10.5281/zenodo.6319663, name: NucleiSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/1cf7ce1f-f1a1-4207-9e3e-60ee4d4a0803/rdf.yaml',
-  status: blocked, version_id: '6319663', version_name: revision 2}
-- {created: '2022-02-25 20:18:26.146167', doi: 10.5281/zenodo.6287342, name: NucleiSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/0f39fc4f-e8ea-4af5-be7d-e756b566c09f/rdf.yaml',
-  status: blocked, version_id: '6287342', version_name: revision 3}
-- {created: '2022-02-25 20:10:17.778295', doi: 10.5281/zenodo.6287207, name: NucleiSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/7d930716-b8c4-4a23-922c-91e561d237b7/rdf.yaml',
-  status: blocked, version_id: '6287207', version_name: revision 4}
-- {created: '2022-02-09 20:56:44.509499', doi: 10.5281/zenodo.6028056, name: NucleiSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/50a4c576-db4c-49a6-a691-59f9d96e6d5f/rdf.yaml',
-  status: blocked, version_id: '6028056', version_name: revision 5}
-- {created: '2021-12-07 18:02:09.736653+00:00', doi: 10.5281/zenodo.5764893, name: NucleiSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml',
-  status: blocked, version_id: '5764893', version_name: revision 1}
+  rdf_source: https://zenodo.org/api/files/a3d790f1-5203-4bd3-a975-d0fff38c0d97/rdf.yaml
+- created: '2022-03-01 09:27:03.758432'
+  doi: 10.5281/zenodo.6319663
+  name: NucleiSegmentationBoundaryModel
+  status: blocked
+  version_id: '6319663'
+  version_name: revision 2
+  rdf_source: https://zenodo.org/api/files/1cf7ce1f-f1a1-4207-9e3e-60ee4d4a0803/rdf.yaml
+- created: '2022-03-01 09:27:03.758432'
+  doi: 10.5281/zenodo.6319663
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '6319663'
+  version_name: version from 2022-03-01
+  rdf_source: https://zenodo.org/api/records/6319663/files/rdf.yaml/content
+- created: '2022-02-25 20:18:26.146167'
+  doi: 10.5281/zenodo.6287342
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '6287342'
+  version_name: version from 2022-02-25
+  rdf_source: https://zenodo.org/api/records/6287342/files/rdf.yaml/content
+- created: '2022-02-25 20:18:26.146167'
+  doi: 10.5281/zenodo.6287342
+  name: NucleiSegmentationBoundaryModel
+  status: blocked
+  version_id: '6287342'
+  version_name: revision 3
+  rdf_source: https://zenodo.org/api/files/0f39fc4f-e8ea-4af5-be7d-e756b566c09f/rdf.yaml
+- created: '2022-02-25 20:10:17.778295'
+  doi: 10.5281/zenodo.6287207
+  name: NucleiSegmentationBoundaryModel
+  status: blocked
+  version_id: '6287207'
+  version_name: revision 4
+  rdf_source: https://zenodo.org/api/files/7d930716-b8c4-4a23-922c-91e561d237b7/rdf.yaml
+- created: '2022-02-25 20:10:17.778295'
+  doi: 10.5281/zenodo.6287207
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '6287207'
+  version_name: version from 2022-02-25
+  rdf_source: https://zenodo.org/api/records/6287207/files/rdf.yaml/content
+- created: '2022-02-09 20:56:44.509499'
+  doi: 10.5281/zenodo.6028056
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '6028056'
+  version_name: version from 2022-02-09
+  rdf_source: https://zenodo.org/api/records/6028056/files/rdf.yaml/content
+- created: '2022-02-09 20:56:44.509499'
+  doi: 10.5281/zenodo.6028056
+  name: NucleiSegmentationBoundaryModel
+  status: blocked
+  version_id: '6028056'
+  version_name: revision 5
+  rdf_source: https://zenodo.org/api/files/50a4c576-db4c-49a6-a691-59f9d96e6d5f/rdf.yaml
+- created: '2021-12-07 18:02:09.736653+00:00'
+  doi: 10.5281/zenodo.5764893
+  name: NucleiSegmentationBoundaryModel
+  status: blocked
+  version_id: '5764893'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/8137780b-871f-4d7e-b130-a63847ece4d8/rdf.yaml
+- created: '2021-12-07 18:02:09.736653'
+  doi: 10.5281/zenodo.5764893
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '5764893'
+  version_name: version from 2021-12-07
+  rdf_source: https://zenodo.org/api/records/5764893/files/rdf.yaml/content
