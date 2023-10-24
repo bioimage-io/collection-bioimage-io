@@ -192,7 +192,7 @@ def update_from_zenodo(
 
         print(f"Collecting items from zenodo: {zenodo_request}")
 
-        hits = r.json()  #  ["hits"]["hits"]
+        hits = r.json()["hits"]["hits"]
         if not hits:
             break
 
