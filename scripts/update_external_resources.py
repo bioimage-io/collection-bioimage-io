@@ -213,7 +213,7 @@ def update_from_zenodo(
             new_version = {
                 "version_id": version_id,
                 "doi": doi,
-                "owners": [hit["owner"]],
+                "owners": [owner["id"] for owner in hit["owners"]],
                 "created": str(created),
                 "status": "accepted",  # default to accepted
                 "rdf_source": rdf_source,
