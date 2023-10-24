@@ -144,7 +144,7 @@ collection:
   created: '2023-07-26 10:47:44.642355'
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 27041
+  download_count: 27044
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation,
@@ -248,7 +248,7 @@ collection:
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6348084/6348085/example_fluo.jpg']
   created: '2022-03-11 22:32:05.554959'
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 25842
+  download_count: 25861
   id: 10.5281/zenodo.6348084
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath,
