@@ -1,38 +1,90 @@
 doi: 10.5281/zenodo.6334583
 id: 10.5281/zenodo.6334583
 nickname: passionate-t-rex
-nickname_icon: "\U0001F996"
-owners: [66700]
+nickname_icon: 🦖
+owners:
+- 66700
 status: accepted
 type: model
 versions:
-- {created: '2023-04-06 12:43:33.436336', doi: 10.5281/zenodo.7805434, name: 3D UNet
-    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/records/7805434/files/rdf.yaml/content',
-  status: accepted, version_id: '7805434', version_name: version 6}
-- {created: '2023-03-24 17:32:06.610900', doi: 10.5281/zenodo.7768223, name: 3D UNet
-    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/e0b60143-0dc2-49e6-b62c-f2a36cf9afdc/rdf.yaml',
-  status: accepted, version_id: '7768223', version_name: version 5}
-- {created: '2023-03-06 11:08:17.979435', doi: 10.5281/zenodo.7701492, name: 3D UNet
-    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/rdf.yaml',
-  status: accepted, version_id: '7701492', version_name: version 4}
-- {created: '2023-03-03 18:24:43.192731', doi: 10.5281/zenodo.7696919, name: 3D UNet
-    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/rdf.yaml',
-  status: accepted, version_id: '7696919', version_name: version 3}
+- created: '2023-04-06 12:43:33.436336'
+  doi: 10.5281/zenodo.7805434
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7805434'
+  version_name: version 6
+  rdf_source: https://zenodo.org/api/records/7805434/files/rdf.yaml/content
+- created: '2023-03-24 17:32:06.610900'
+  doi: 10.5281/zenodo.7768223
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7768223'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/e0b60143-0dc2-49e6-b62c-f2a36cf9afdc/rdf.yaml
+- created: '2023-03-24 17:32:06.610900'
+  doi: 10.5281/zenodo.7768223
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7768223'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7768223/files/rdf.yaml/content
+- created: '2023-03-06 11:08:17.979435'
+  doi: 10.5281/zenodo.7701492
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7701492'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7701492/files/rdf.yaml/content
+- created: '2023-03-06 11:08:17.979435'
+  doi: 10.5281/zenodo.7701492
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7701492'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/2ac87549-3ccf-4805-abd7-fac31a4bbb7c/rdf.yaml
+- created: '2023-03-03 18:24:43.192731'
+  doi: 10.5281/zenodo.7696919
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7696919'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/a8058f9c-ab66-4836-abcb-b1387945f39e/rdf.yaml
+- created: '2023-03-03 18:24:43.192731'
+  doi: 10.5281/zenodo.7696919
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '7696919'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7696919/files/rdf.yaml/content
+- created: '2022-03-11 11:06:37.200594'
+  doi: 10.5281/zenodo.6346519
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '6346519'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/6346519/files/rdf.yaml/content
 - created: '2022-03-11 11:06:37.200594'
   doi: 10.5281/zenodo.6346519
   maintainers:
-  - {github_user: wolny}
+  - github_user: wolny
   name: 3D UNet Arabidopsis Ovules
-  rdf_source: https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/rdf.yaml
   status: accepted
   version_id: '6346519'
   version_name: version 2
+  rdf_source: https://zenodo.org/api/files/9a608180-9f71-43d9-9242-b4e0a4aec21d/rdf.yaml
 - created: '2022-03-07 13:00:12.305646'
   doi: 10.5281/zenodo.6334584
   maintainers:
-  - {github_user: wolny}
+  - github_user: wolny
   name: 3D UNet Arabidopsis Ovules
-  rdf_source: https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/rdf.yaml
   status: accepted
   version_id: '6334584'
   version_name: version 1
+  rdf_source: https://zenodo.org/api/files/e1ae2d4a-a52a-4d7c-802d-892b01b263ff/rdf.yaml
+- created: '2022-03-07 13:00:12.305646'
+  doi: 10.5281/zenodo.6334584
+  name: 3D UNet Arabidopsis Ovules
+  status: accepted
+  version_id: '6334584'
+  version_name: version from 2022-03-07
+  rdf_source: https://zenodo.org/api/records/6334584/files/rdf.yaml/content
