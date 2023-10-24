@@ -73,7 +73,7 @@ jobs:
     - name: update external resources
       id: update_external
       shell: bash -l {0}
-      run: python scripts/update_external_resources.py --max-resource-count 30 ${{ github.event_name == 'pull_request' && '--no-ignore-status-5xx' || '--ignore-status-5xx' }}
+      run: python scripts/update_external_resources.py --max-resource-count 20 ${{ github.event_name == 'pull_request' && '--no-ignore-status-5xx' || '--ignore-status-5xx' }}
     - name: "Upload collection update"
       uses: actions/upload-artifact@v3
       with:
