@@ -1,32 +1,114 @@
 doi: 10.5281/zenodo.6865412
 id: 10.5281/zenodo.6865412
 nickname: impartial-shark
-nickname_icon: "\U0001F988"
-owners: [370412]
+nickname_icon: 🦈
+owners:
+- 370412
 status: accepted
 type: model
 versions:
-- {created: '2022-07-28 07:37:36.393648', doi: 10.5281/zenodo.6919253, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/records/6919253/files/rdf.yaml/content',
-  status: accepted, version_id: '6919253', version_name: version 8}
-- {created: '2022-07-27 07:47:00.531598', doi: 10.5281/zenodo.6912049, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/f23de402-321a-4351-b3ff-717fdafa5c5a/rdf.yaml',
-  status: blocked, version_id: '6912049', version_name: version 7}
-- {created: '2022-07-27 07:38:22.271495', doi: 10.5281/zenodo.6912002, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/83400ecf-4ee0-431c-af29-92334f15b901/rdf.yaml',
-  status: blocked, version_id: '6912002', version_name: version 6}
-- {created: '2022-07-27 07:36:07.799488', doi: 10.5281/zenodo.6911999, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/b331723f-36e6-43f4-bf42-4b1ead900f44/rdf.yaml',
-  status: blocked, version_id: '6911999', version_name: version 5}
-- {created: '2022-07-27 04:37:56.219869', doi: 10.5281/zenodo.6906897, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/61faf126-b477-47e8-9c9e-ae82f8a7ef1e/rdf.yaml',
-  status: blocked, version_id: '6906897', version_name: version 4}
-- {created: '2022-07-26 04:19:28.993417', doi: 10.5281/zenodo.6904944, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/3bb00754-b9ce-4fdc-afe1-06bba929f7c1/rdf.yaml',
-  status: blocked, version_id: '6904944', version_name: version 3}
-- {created: '2022-07-26 02:08:37.941142', doi: 10.5281/zenodo.6904460, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/4055aa27-de92-497c-979a-76c52cc7992a/rdf.yaml',
-  status: blocked, version_id: '6904460', version_name: version 2}
-- {created: '2022-07-20 06:12:22.899844', doi: 10.5281/zenodo.6865413, name: Cells
-    and gland Segmentation (FRUNet), rdf_source: 'https://zenodo.org/api/files/3c83cf8b-ba95-4fb8-983e-91c473cd7367/rdf.yaml',
-  status: blocked, version_id: '6865413', version_name: version 1}
+- created: '2022-07-28 07:37:36.393648'
+  doi: 10.5281/zenodo.6919253
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6919253'
+  version_name: version 8
+  rdf_source: https://zenodo.org/api/records/6919253/files/rdf.yaml/content
+- created: '2022-07-27 07:47:00.531598'
+  doi: 10.5281/zenodo.6912049
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6912049'
+  version_name: version 7
+  rdf_source: https://zenodo.org/api/files/f23de402-321a-4351-b3ff-717fdafa5c5a/rdf.yaml
+- created: '2022-07-27 07:47:00.531598'
+  doi: 10.5281/zenodo.6912049
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6912049'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6912049/files/rdf.yaml/content
+- created: '2022-07-27 07:38:22.271495'
+  doi: 10.5281/zenodo.6912002
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6912002'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6912002/files/rdf.yaml/content
+- created: '2022-07-27 07:38:22.271495'
+  doi: 10.5281/zenodo.6912002
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6912002'
+  version_name: version 6
+  rdf_source: https://zenodo.org/api/files/83400ecf-4ee0-431c-af29-92334f15b901/rdf.yaml
+- created: '2022-07-27 07:36:07.799488'
+  doi: 10.5281/zenodo.6911999
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6911999'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/b331723f-36e6-43f4-bf42-4b1ead900f44/rdf.yaml
+- created: '2022-07-27 07:36:07.799488'
+  doi: 10.5281/zenodo.6911999
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6911999'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6911999/files/rdf.yaml/content
+- created: '2022-07-27 04:37:56.219869'
+  doi: 10.5281/zenodo.6906897
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6906897'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6906897/files/rdf.yaml/content
+- created: '2022-07-27 04:37:56.219869'
+  doi: 10.5281/zenodo.6906897
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6906897'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/61faf126-b477-47e8-9c9e-ae82f8a7ef1e/rdf.yaml
+- created: '2022-07-26 04:19:28.993417'
+  doi: 10.5281/zenodo.6904944
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6904944'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/3bb00754-b9ce-4fdc-afe1-06bba929f7c1/rdf.yaml
+- created: '2022-07-26 04:19:28.993417'
+  doi: 10.5281/zenodo.6904944
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6904944'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6904944/files/rdf.yaml/content
+- created: '2022-07-26 02:08:37.941142'
+  doi: 10.5281/zenodo.6904460
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6904460'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6904460/files/rdf.yaml/content
+- created: '2022-07-26 02:08:37.941142'
+  doi: 10.5281/zenodo.6904460
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6904460'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/4055aa27-de92-497c-979a-76c52cc7992a/rdf.yaml
+- created: '2022-07-20 06:12:22.899844'
+  doi: 10.5281/zenodo.6865413
+  name: Cells and gland Segmentation (FRUNet)
+  status: blocked
+  version_id: '6865413'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/3c83cf8b-ba95-4fb8-983e-91c473cd7367/rdf.yaml
+- created: '2022-07-20 06:12:22.899844'
+  doi: 10.5281/zenodo.6865413
+  name: Cells and gland Segmentation (FRUNet)
+  status: accepted
+  version_id: '6865413'
+  version_name: version from 2022-07-20
+  rdf_source: https://zenodo.org/api/records/6865413/files/rdf.yaml/content
