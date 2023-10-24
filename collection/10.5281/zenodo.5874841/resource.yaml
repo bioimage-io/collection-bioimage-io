@@ -1,21 +1,44 @@
 doi: 10.5281/zenodo.5874841
 id: 10.5281/zenodo.5874841
 nickname: kind-seashell
-nickname_icon: "\U0001F41A"
-owners: [77626]
+nickname_icon: 🐚
+owners:
+- 77626
 status: accepted
 type: model
 versions:
-- {created: '2022-06-10 06:22:28.465944', doi: 10.5281/zenodo.6630266, name: MitochondriaEMSegmentationBoundaryModel,
-  rdf_source: 'https://zenodo.org/api/records/6630266/files/rdf.yaml/content', status: accepted,
-  version_id: '6630266', version_name: version 2}
+- created: '2022-06-10 06:22:28.465944'
+  doi: 10.5281/zenodo.6630266
+  name: MitochondriaEMSegmentationBoundaryModel
+  status: accepted
+  version_id: '6630266'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/records/6630266/files/rdf.yaml/content
 - created: '2022-01-18 23:04:49.485980'
   doi: 10.5281/zenodo.5874842
-  links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
+  links:
+  - deepimagej/deepimagej
+  - ilastik/ilastik
+  - imjoy/BioImageIO-Packager
+  - ilastik/torch-em-3d-unet-notebook
   name: Mitochondria Segmentation for EM
-  rdf_source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml
   status: accepted
-  tags: [3d, electron-microscopy, mitochondria, instance-segmentation, unet, brain]
-  training_data: {id: ilastik/mitoem_segmentation_challenge}
+  tags:
+  - 3d
+  - electron-microscopy
+  - mitochondria
+  - instance-segmentation
+  - unet
+  - brain
+  training_data:
+    id: ilastik/mitoem_segmentation_challenge
   version_id: '5874842'
   version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/2d9489cd-a4dd-4730-8a71-577d0fcd0f5c/rdf.yaml
+- created: '2022-01-18 23:04:49.485980'
+  doi: 10.5281/zenodo.5874842
+  name: MitochondriaEMSegmentationBoundaryModel
+  status: accepted
+  version_id: '5874842'
+  version_name: version from 2022-01-18
+  rdf_source: https://zenodo.org/api/records/5874842/files/rdf.yaml/content
