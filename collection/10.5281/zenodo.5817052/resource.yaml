@@ -1,23 +1,55 @@
 doi: 10.5281/zenodo.5817052
 id: 10.5281/zenodo.5817052
 nickname: creative-panda
-nickname_icon: "\U0001F43C"
-owners: [271523]
+nickname_icon: 🐼
+owners:
+- 271523
 status: accepted
 type: model
 versions:
 - created: '2022-01-27 14:00:17.489637'
   doi: 10.5281/zenodo.5906839
   name: Neuron Segmentation in 2D EM (Membrane)
-  rdf_source: https://zenodo.org/api/records/5906839/files/rdf.yaml/content
   status: accepted
-  tags: [zerocostdl4mic, deepimagej, segmentation, electron-microscopy, unet, isbi2012-challenge,
-    neurons, brain, boundary-segmentation, 2d]
+  tags:
+  - zerocostdl4mic
+  - deepimagej
+  - segmentation
+  - electron-microscopy
+  - unet
+  - isbi2012-challenge
+  - neurons
+  - brain
+  - boundary-segmentation
+  - 2d
   version_id: '5906839'
   version_name: revision 1
-- {created: '2022-01-14 15:26:42.112259', doi: 10.5281/zenodo.5850574, name: Mitochondria
-    segmentation - TEM - 2D U-Net - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/rdf.yaml',
-  status: accepted, version_id: '5850574', version_name: revision 1}
-- {created: '2022-01-04 11:33:05.251713', doi: 10.5281/zenodo.5817053, name: Mitochondria
-    segmentation - TEM - 2D U-Net - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/e14f65fa-f480-4503-944a-209e3119b38b/rdf.yaml',
-  status: blocked, version_id: '5817053', version_name: revision 1}
+  rdf_source: https://zenodo.org/api/records/5906839/files/rdf.yaml/content
+- created: '2022-01-14 15:26:42.112259'
+  doi: 10.5281/zenodo.5850574
+  name: Mitochondria segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  status: accepted
+  version_id: '5850574'
+  version_name: version from 2022-01-04
+  rdf_source: https://zenodo.org/api/records/5850574/files/rdf.yaml/content
+- created: '2022-01-14 15:26:42.112259'
+  doi: 10.5281/zenodo.5850574
+  name: Mitochondria segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  status: accepted
+  version_id: '5850574'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/5ff5e52c-a708-4c93-98c2-160c29204800/rdf.yaml
+- created: '2022-01-04 11:33:05.251713'
+  doi: 10.5281/zenodo.5817053
+  name: Mitochondria segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  status: blocked
+  version_id: '5817053'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/e14f65fa-f480-4503-944a-209e3119b38b/rdf.yaml
+- created: '2022-01-04 11:33:05.251713'
+  doi: 10.5281/zenodo.5817053
+  name: Mitochondria segmentation - TEM - 2D U-Net - ZeroCostDL4Mic
+  status: accepted
+  version_id: '5817053'
+  version_name: version from 2022-01-04
+  rdf_source: https://zenodo.org/api/records/5817053/files/rdf.yaml/content
