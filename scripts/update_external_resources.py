@@ -41,10 +41,8 @@ def update_resource(
         else:
             raise ValueError(resource["status"])
 
-        for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id and new_version.get("rdf_source") == known_version.get(
-                "rdf_source"
-            ):
+        for known_version in resource["versions"]:
+            if known_version["version_id"] == version_id:
                 # fetched resource is known
                 return "old_hit"
 
