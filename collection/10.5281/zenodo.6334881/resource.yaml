@@ -1,44 +1,128 @@
 doi: 10.5281/zenodo.6334881
 id: 10.5281/zenodo.6334881
 nickname: laid-back-lobster
-nickname_icon: "\U0001F99E"
-owners: [66700]
+nickname_icon: 🦞
+owners:
+- 66700
 status: accepted
 type: model
 versions:
-- {created: '2023-04-06 10:26:25.873589', doi: 10.5281/zenodo.7805026, name: 2D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/records/7805026/files/rdf.yaml/content',
-  status: accepted, version_id: '7805026', version_name: version 8}
-- {created: '2023-03-29 10:33:23.534600', doi: 10.5281/zenodo.7781054, name: 2D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/a0e182d8-5f62-4604-9131-60509b76ca26/rdf.yaml',
-  status: blocked, version_id: '7781054', version_name: version 7}
-- {created: '2023-03-28 20:50:38.359689', doi: 10.5281/zenodo.7779424, name: 2D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/be048d89-c770-4961-b23d-324a0b7ad567/rdf.yaml',
-  status: blocked, version_id: '7779424', version_name: version 6}
-- {created: '2023-03-27 00:46:54.256459', doi: 10.5281/zenodo.7772721, name: 2D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/238c94e1-cad5-4598-9e59-ddd416eacb0b/rdf.yaml',
-  status: blocked, version_id: '7772721', version_name: version 5}
-- {created: '2023-03-06 10:03:33.084146', doi: 10.5281/zenodo.7701241, name: 2D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/rdf.yaml',
-  status: accepted, version_id: '7701241', version_name: version 4}
-- {created: '2023-03-03 18:14:34.172222', doi: 10.5281/zenodo.7696907, name: 2D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/rdf.yaml',
-  status: accepted, version_id: '7696907', version_name: version 3}
+- created: '2023-04-06 10:26:25.873589'
+  doi: 10.5281/zenodo.7805026
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7805026'
+  version_name: version 8
+  rdf_source: https://zenodo.org/api/records/7805026/files/rdf.yaml/content
+- created: '2023-03-29 10:33:23.534600'
+  doi: 10.5281/zenodo.7781054
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: blocked
+  version_id: '7781054'
+  version_name: version 7
+  rdf_source: https://zenodo.org/api/files/a0e182d8-5f62-4604-9131-60509b76ca26/rdf.yaml
+- created: '2023-03-29 10:33:23.534600'
+  doi: 10.5281/zenodo.7781054
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7781054'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7781054/files/rdf.yaml/content
+- created: '2023-03-28 20:50:38.359689'
+  doi: 10.5281/zenodo.7779424
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7779424'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7779424/files/rdf.yaml/content
+- created: '2023-03-28 20:50:38.359689'
+  doi: 10.5281/zenodo.7779424
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: blocked
+  version_id: '7779424'
+  version_name: version 6
+  rdf_source: https://zenodo.org/api/files/be048d89-c770-4961-b23d-324a0b7ad567/rdf.yaml
+- created: '2023-03-27 00:46:54.256459'
+  doi: 10.5281/zenodo.7772721
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: blocked
+  version_id: '7772721'
+  version_name: version 5
+  rdf_source: https://zenodo.org/api/files/238c94e1-cad5-4598-9e59-ddd416eacb0b/rdf.yaml
+- created: '2023-03-27 00:46:54.256459'
+  doi: 10.5281/zenodo.7772721
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7772721'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7772721/files/rdf.yaml/content
+- created: '2023-03-06 10:03:33.084146'
+  doi: 10.5281/zenodo.7701241
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7701241'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7701241/files/rdf.yaml/content
+- created: '2023-03-06 10:03:33.084146'
+  doi: 10.5281/zenodo.7701241
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7701241'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/files/6ae96411-4423-4fba-9cff-d4a2556851d6/rdf.yaml
+- created: '2023-03-03 18:14:34.172222'
+  doi: 10.5281/zenodo.7696907
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7696907'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/52336d04-6d1f-4bfd-b063-a26bb9179d36/rdf.yaml
+- created: '2023-03-03 18:14:34.172222'
+  doi: 10.5281/zenodo.7696907
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7696907'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7696907/files/rdf.yaml/content
+- created: '2022-03-11 10:52:31.794285'
+  doi: 10.5281/zenodo.6346477
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '6346477'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/6346477/files/rdf.yaml/content
 - created: '2022-03-11 10:52:31.794285'
   doi: 10.5281/zenodo.6346477
   maintainers:
-  - {github_user: wolny}
+  - github_user: wolny
   name: 2D UNet Arabidopsis Apical Stem Cells
-  rdf_source: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/rdf.yaml
   status: accepted
   version_id: '6346477'
   version_name: version 2
+  rdf_source: https://zenodo.org/api/files/4a69ddca-3874-4469-b11d-b9ed626d197f/rdf.yaml
 - created: '2022-03-07 15:22:46.950734'
   doi: 10.5281/zenodo.6334882
   name: 2D UNet Arabidopsis Apical Stem Cells
-  rdf_source: https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/rdf.yaml
   status: accepted
-  tags: [unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
-    plant, tissue, fluorescence-light-microscopy, pytorch, plantset]
+  tags:
+  - unet
+  - 2d
+  - semantic-segmentation
+  - arabidopsis
+  - stem-cells
+  - cell-membrane
+  - plant
+  - tissue
+  - fluorescence-light-microscopy
+  - pytorch
+  - plantset
   version_id: '6334882'
   version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/f6423a28-b78e-48ef-808a-6073d9518901/rdf.yaml
+- created: '2022-03-07 15:22:46.950734'
+  doi: 10.5281/zenodo.6334882
+  name: 2D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '6334882'
+  version_name: version from 2022-03-07
+  rdf_source: https://zenodo.org/api/records/6334882/files/rdf.yaml/content
