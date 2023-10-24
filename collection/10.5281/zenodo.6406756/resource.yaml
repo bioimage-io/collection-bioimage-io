@@ -1,22 +1,46 @@
 doi: 10.5281/zenodo.6406756
 id: 10.5281/zenodo.6406756
 nickname: hiding-blowfish
-nickname_icon: "\U0001F421"
-owners: [77626]
+nickname_icon: 🐡
+owners:
+- 77626
 status: accepted
 type: model
 versions:
-- {created: '2022-07-08 17:02:28.049385', doi: 10.5281/zenodo.6811922, name: EnhancerMitochondriaEM2D,
-  rdf_source: 'https://zenodo.org/api/records/6811922/files/rdf.yaml/content', status: accepted,
-  version_id: '6811922', version_name: version 3}
-- {created: '2022-07-08 14:41:44.879575', doi: 10.5281/zenodo.6811498, name: EnhancerMitochondriaEM2D,
-  rdf_source: 'https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/rdf.yaml',
-  status: accepted, version_id: '6811498', version_name: version 2}
+- created: '2022-07-08 17:02:28.049385'
+  doi: 10.5281/zenodo.6811922
+  name: EnhancerMitochondriaEM2D
+  status: accepted
+  version_id: '6811922'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/records/6811922/files/rdf.yaml/content
+- created: '2022-07-08 14:41:44.879575'
+  doi: 10.5281/zenodo.6811498
+  name: EnhancerMitochondriaEM2D
+  status: accepted
+  version_id: '6811498'
+  version_name: version from 2022-07-08
+  rdf_source: https://zenodo.org/api/records/6811498/files/rdf.yaml/content
+- created: '2022-07-08 14:41:44.879575'
+  doi: 10.5281/zenodo.6811498
+  name: EnhancerMitochondriaEM2D
+  status: accepted
+  version_id: '6811498'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/9f98dae2-875b-4b22-adeb-1bb065e0697e/rdf.yaml
 - created: '2022-04-01 15:46:55.680792'
   doi: 10.5281/zenodo.6406757
   name: EnhancerMitochondriaEM2D
-  rdf_source: https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/rdf.yaml
   status: accepted
-  training_data: {id: ilastik/vnc}
+  training_data:
+    id: ilastik/vnc
   version_id: '6406757'
   version_name: version 1
+  rdf_source: https://zenodo.org/api/files/73fe6e10-5600-44ac-b8ab-f8c38568a529/rdf.yaml
+- created: '2022-04-01 15:46:55.680792'
+  doi: 10.5281/zenodo.6406757
+  name: EnhancerMitochondriaEM2D
+  status: accepted
+  version_id: '6406757'
+  version_name: version from 2022-04-01
+  rdf_source: https://zenodo.org/api/records/6406757/files/rdf.yaml/content
