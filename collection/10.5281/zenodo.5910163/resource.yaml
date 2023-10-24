@@ -1,20 +1,33 @@
 doi: 10.5281/zenodo.5910163
 id: 10.5281/zenodo.5910163
 nickname: polite-pig
-nickname_icon: "\U0001F416"
-owners: [47882]
+nickname_icon: 🐖
+owners:
+- 47882
 status: accepted
 type: model
 versions:
 - created: '2022-02-01 22:38:38.088910'
   doi: 10.5281/zenodo.5942853
   maintainers:
-  - {github_user: oeway, name: Wei Ouyang}
+  - github_user: oeway
+    name: Wei Ouyang
   name: HPA Bestfitting Densenet
-  rdf_source: https://zenodo.org/api/records/5942853/files/rdf.yaml/content
   status: accepted
   version_id: '5942853'
   version_name: revision 1
-- {created: '2022-01-27 10:28:20.092577', doi: 10.5281/zenodo.5910164, name: HPA Bestfitting
-    Densenet, rdf_source: 'https://zenodo.org/api/files/5be7a94a-0f23-4658-bee3-d160c6eb1c83/rdf.yaml',
-  status: blocked, version_id: '5910164', version_name: revision 1}
+  rdf_source: https://zenodo.org/api/records/5942853/files/rdf.yaml/content
+- created: '2022-01-27 10:28:20.092577'
+  doi: 10.5281/zenodo.5910164
+  name: HPA Bestfitting Densenet
+  status: blocked
+  version_id: '5910164'
+  version_name: revision 1
+  rdf_source: https://zenodo.org/api/files/5be7a94a-0f23-4658-bee3-d160c6eb1c83/rdf.yaml
+- created: '2022-01-27 10:28:20.092577'
+  doi: 10.5281/zenodo.5910164
+  name: HPA Bestfitting Densenet
+  status: accepted
+  version_id: '5910164'
+  version_name: version from 2022-01-27
+  rdf_source: https://zenodo.org/api/records/5910164/files/rdf.yaml/content
