@@ -1,26 +1,60 @@
 doi: 10.5281/zenodo.6346511
 id: 10.5281/zenodo.6346511
 nickname: emotional-cricket
-nickname_icon: "\U0001F997"
-owners: [66700]
+nickname_icon: 🦗
+owners:
+- 66700
 status: accepted
 type: model
 versions:
-- {created: '2023-03-24 17:08:34.402776', doi: 10.5281/zenodo.7768142, name: 3D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/records/7768142/files/rdf.yaml/content',
-  status: accepted, version_id: '7768142', version_name: version 4}
-- {created: '2023-03-06 10:47:06.889723', doi: 10.5281/zenodo.7701413, name: 3D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/rdf.yaml',
-  status: accepted, version_id: '7701413', version_name: version 3}
-- {created: '2023-03-03 19:02:17.347026', doi: 10.5281/zenodo.7697101, name: 3D UNet
-    Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/8c29a2f2-bda6-4985-9049-bca96c558ca5/rdf.yaml',
-  status: blocked, version_id: '7697101', version_name: version 2}
+- created: '2023-03-24 17:08:34.402776'
+  doi: 10.5281/zenodo.7768142
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7768142'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/records/7768142/files/rdf.yaml/content
+- created: '2023-03-06 10:47:06.889723'
+  doi: 10.5281/zenodo.7701413
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7701413'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/ba194984-1a5e-4583-9785-d471df2d78f0/rdf.yaml
+- created: '2023-03-06 10:47:06.889723'
+  doi: 10.5281/zenodo.7701413
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7701413'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7701413/files/rdf.yaml/content
+- created: '2023-03-03 19:02:17.347026'
+  doi: 10.5281/zenodo.7697101
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '7697101'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/7697101/files/rdf.yaml/content
+- created: '2023-03-03 19:02:17.347026'
+  doi: 10.5281/zenodo.7697101
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  status: blocked
+  version_id: '7697101'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/8c29a2f2-bda6-4985-9049-bca96c558ca5/rdf.yaml
 - created: '2022-03-11 11:02:48.889495'
   doi: 10.5281/zenodo.6346512
   maintainers:
-  - {github_user: wolny}
+  - github_user: wolny
   name: 3D UNet Arabidopsis Apical Stem Cells
-  rdf_source: https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/rdf.yaml
   status: accepted
   version_id: '6346512'
   version_name: version 1
+  rdf_source: https://zenodo.org/api/files/9c2e422f-08fd-4692-bcf9-41e1a74e193d/rdf.yaml
+- created: '2022-03-11 11:02:48.889495'
+  doi: 10.5281/zenodo.6346512
+  name: 3D UNet Arabidopsis Apical Stem Cells
+  status: accepted
+  version_id: '6346512'
+  version_name: version from 2022-03-11
+  rdf_source: https://zenodo.org/api/records/6346512/files/rdf.yaml/content
