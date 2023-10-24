@@ -1,26 +1,60 @@
 doi: 10.5281/zenodo.6384845
 id: 10.5281/zenodo.6384845
 nickname: powerful-fish
-nickname_icon: "\U0001F41F"
-owners: [66700]
+nickname_icon: 🐟
+owners:
+- 66700
 status: accepted
 type: model
 versions:
-- {created: '2023-03-27 12:11:52.357154', doi: 10.5281/zenodo.7774490, name: 3D UNet
-    Mouse Embryo Live, rdf_source: 'https://zenodo.org/api/records/7774490/files/rdf.yaml/content',
-  status: accepted, version_id: '7774490', version_name: version 4}
-- {created: '2023-03-06 12:29:05.261248', doi: 10.5281/zenodo.7701638, name: 3D UNet
-    Mouse Embryo Live, rdf_source: 'https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/rdf.yaml',
-  status: accepted, version_id: '7701638', version_name: version 3}
-- {created: '2023-03-03 19:07:31.654219', doi: 10.5281/zenodo.7697085, name: 3D UNet
-    Mouse Embryo Live, rdf_source: 'https://zenodo.org/api/files/a7dfd121-682f-4c55-9708-8daf7d950f2f/rdf.yaml',
-  status: blocked, version_id: '7697085', version_name: version 2}
+- created: '2023-03-27 12:11:52.357154'
+  doi: 10.5281/zenodo.7774490
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '7774490'
+  version_name: version 4
+  rdf_source: https://zenodo.org/api/records/7774490/files/rdf.yaml/content
+- created: '2023-03-06 12:29:05.261248'
+  doi: 10.5281/zenodo.7701638
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '7701638'
+  version_name: version 3
+  rdf_source: https://zenodo.org/api/files/1b7c135e-c455-411a-9949-928a51653cfa/rdf.yaml
+- created: '2023-03-06 12:29:05.261248'
+  doi: 10.5281/zenodo.7701638
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '7701638'
+  version_name: version from 2022-03-25
+  rdf_source: https://zenodo.org/api/records/7701638/files/rdf.yaml/content
+- created: '2023-03-03 19:07:31.654219'
+  doi: 10.5281/zenodo.7697085
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '7697085'
+  version_name: version from 2022-03-25
+  rdf_source: https://zenodo.org/api/records/7697085/files/rdf.yaml/content
+- created: '2023-03-03 19:07:31.654219'
+  doi: 10.5281/zenodo.7697085
+  name: 3D UNet Mouse Embryo Live
+  status: blocked
+  version_id: '7697085'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/a7dfd121-682f-4c55-9708-8daf7d950f2f/rdf.yaml
 - created: '2022-03-25 14:22:07.280404'
   doi: 10.5281/zenodo.6384846
   maintainers:
-  - {github_user: wolny}
+  - github_user: wolny
   name: 3D UNet Mouse Embryo Live
-  rdf_source: https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/rdf.yaml
   status: accepted
   version_id: '6384846'
   version_name: version 1
+  rdf_source: https://zenodo.org/api/files/87d721be-2c22-4b0c-b6e0-0aed3b4bdc33/rdf.yaml
+- created: '2022-03-25 14:22:07.280404'
+  doi: 10.5281/zenodo.6384846
+  name: 3D UNet Mouse Embryo Live
+  status: accepted
+  version_id: '6384846'
+  version_name: version from 2022-03-25
+  rdf_source: https://zenodo.org/api/records/6384846/files/rdf.yaml/content
