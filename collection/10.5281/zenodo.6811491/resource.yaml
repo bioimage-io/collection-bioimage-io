@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.6811491
 id: 10.5281/zenodo.6811491
 nickname: independent-shrimp
-nickname_icon: 🦐
-owners:
-- 77626
+nickname_icon: "\U0001F990"
+owners: [77626]
 status: accepted
 type: model
 versions:
-- created: '2022-07-08 14:35:48.861260'
-  doi: 10.5281/zenodo.6811492
-  name: EnhancerMitochondriaEM3D
-  status: accepted
-  version_id: '6811492'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/0e7404c7-daad-4a1f-9fa8-f12aaa7842cb/rdf.yaml
+- {created: '2022-07-08 14:35:48.861260', doi: 10.5281/zenodo.6811492, name: EnhancerMitochondriaEM3D,
+  rdf_source: 'https://zenodo.org/api/records/6811492/files/rdf.yaml/content', status: accepted,
+  version_id: '6811492', version_name: version 1}

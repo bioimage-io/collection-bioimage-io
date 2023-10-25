@@ -1,0 +1,11 @@
+doi: 10.5281/zenodo.8260660
+id: 10.5281/zenodo.8260660
+nickname: reserved-dove
+nickname_icon: "\U0001F54A"
+owners: [596151]
+status: accepted
+type: model
+versions:
+- {created: '2023-08-18 07:15:20.021465', doi: 10.5281/zenodo.8260661, name: Urediomodel
+    1.0, rdf_source: 'https://zenodo.org/api/records/8260661/files/rdf.yaml/content',
+  status: blocked, version_id: '8260661', version_name: version 1}

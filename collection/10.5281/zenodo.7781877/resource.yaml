@@ -13,11 +13,11 @@ versions:
   status: blocked
   version_id: '7786225'
   version_name: version 2
-  rdf_source: https://zenodo.org/api/files/e04f30a6-91d4-4d76-8ade-0b914b6e4b77/rdf.yaml
+  rdf_source: 'https://zenodo.org/api/records/7786225/files/rdf.yaml/content'
 - created: '2023-03-29 14:03:53.845746'
   doi: 10.5281/zenodo.7781878
   name: Mitochondria confocal microscopy inference DFCAN
   status: blocked
   version_id: '7781878'
   version_name: version 1
-  rdf_source: https://zenodo.org/api/files/404c9b30-e6a8-4033-9545-1a79fe15be0b/rdf.yaml
+  rdf_source: 'https://zenodo.org/api/records/7781878/files/rdf.yaml/content'

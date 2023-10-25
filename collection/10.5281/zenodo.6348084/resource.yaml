@@ -1,21 +1,19 @@
-status: accepted
-versions:
-- version_id: '6348085'
-  doi: 10.5281/zenodo.6348085
-  created: '2022-03-11 22:32:05.554959'
-  status: accepted
-  name: StarDist Fluorescence Nuclei Segmentation
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/7ad06458-46e3-444b-b018-55a3c7a9fe27/rdf.yaml
-  maintainers:
-  - github_user: uschmidt83
-  training_data:
-    id: ilastik/stradist_dsb_training_data
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
-id: 10.5281/zenodo.6348084
 doi: 10.5281/zenodo.6348084
-type: model
-owners:
-- 313404
+id: 10.5281/zenodo.6348084
 nickname: fearless-crab
-nickname_icon: 🦀
+nickname_icon: "\U0001F980"
+owners: [313404]
+status: accepted
+type: model
+versions:
+- created: '2022-03-11 22:32:05.554959'
+  doi: 10.5281/zenodo.6348085
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, bioimageio/stardist, bioimageio/qupath]
+  maintainers:
+  - {github_user: uschmidt83}
+  name: StarDist Fluorescence Nuclei Segmentation
+  rdf_source: https://zenodo.org/api/records/6348085/files/rdf.yaml/content
+  status: accepted
+  training_data: {id: ilastik/stradist_dsb_training_data}
+  version_id: '6348085'
+  version_name: version 1

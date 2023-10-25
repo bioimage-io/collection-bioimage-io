@@ -1,14 +1,9 @@
 doi: 10.5281/zenodo.6559929
 id: 10.5281/zenodo.6559929
-owners:
-- 271523
+owners: [271523]
 status: accepted
 type: dataset
 versions:
-- created: '2022-05-18 10:12:14.635800'
-  doi: 10.5281/zenodo.6559930
-  name: Small Extracellular Vesicle TEM Instance Segmentation annotated data
-  status: accepted
-  version_id: '6559930'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/32af4225-91c2-4d08-aea5-7882ef8d0120/rdf.yaml
+- {created: '2022-05-18 10:12:14.635800', doi: 10.5281/zenodo.6559930, name: Small
+    Extracellular Vesicle TEM Instance Segmentation annotated data, rdf_source: 'https://zenodo.org/api/records/6559930/files/rdf.yaml/content',
+  status: accepted, version_id: '6559930', version_name: version 1}

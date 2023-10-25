@@ -1,0 +1,20 @@
+doi: 10.5281/zenodo.8419845
+id: 10.5281/zenodo.8419845
+nickname: ambitious-ant
+nickname_icon: "\U0001F41C"
+owners: [610358]
+status: accepted
+type: model
+versions:
+- {created: '2023-10-09 06:57:28.189519', doi: 10.5281/zenodo.8420081, name: UniFMIRSuperResolutionOnMicrotubules,
+  rdf_source: 'https://zenodo.org/api/records/8420081/files/rdf.yaml/content', status: accepted,
+  version_id: '8420081', version_name: version 4}
+- {created: '2023-10-09 06:33:03.625502', doi: 10.5281/zenodo.8420028, name: UniFMIRSuperResolutionOnMicrotubules,
+  rdf_source: 'https://zenodo.org/api/files/6941ca73-78e8-43c1-a633-e5329b7befaa/rdf.yaml',
+  status: blocked, version_id: '8420028', version_name: version 3}
+- {created: '2023-10-09 06:15:35.715781', doi: 10.5281/zenodo.8419986, name: UniFMIRSuperResolutionOnF-actin,
+  rdf_source: 'https://zenodo.org/api/files/5cb37f9e-52ee-4036-8ea5-96b66089315f/rdf.yaml',
+  status: blocked, version_id: '8419986', version_name: version 2}
+- {created: '2023-10-09 04:36:44.469101', doi: 10.5281/zenodo.8419846, name: UniFMIRSuperResolutionOnMicrotubes,
+  rdf_source: 'https://zenodo.org/api/files/074cd452-db55-44fa-af42-a99d8df3a483/rdf.yaml',
+  status: blocked, version_id: '8419846', version_name: version 1}

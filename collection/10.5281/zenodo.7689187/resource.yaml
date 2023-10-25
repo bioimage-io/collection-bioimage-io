@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.7689187
 id: 10.5281/zenodo.7689187
 nickname: lucky-spider
-nickname_icon: 🕷
-owners:
-- 187273
+nickname_icon: "\U0001F577"
+owners: [187273]
 status: blocked
 type: model
 versions:
-- created: '2023-03-01 16:38:02.883867'
-  doi: 10.5281/zenodo.7689188
-  name: 2D Arabidopsis Apical Stem Cells
-  status: accepted
-  version_id: '7689188'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/3bb914b0-72d9-4547-bfaf-1a1d87483b56/rdf.yaml
+- {created: '2023-03-01 16:38:02.883867', doi: 10.5281/zenodo.7689188, name: 2D Arabidopsis
+    Apical Stem Cells, rdf_source: 'https://zenodo.org/api/records/7689188/files/rdf.yaml/content',
+  status: accepted, version_id: '7689188', version_name: version 1}

@@ -9,8 +9,8 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 
 import requests
 import typer
-
 from bare_utils import set_gh_actions_outputs
+from bs4 import BeautifulSoup
 from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, split_animal_nickname, yaml
 
 
@@ -41,10 +41,8 @@ def update_resource(
         else:
             raise ValueError(resource["status"])
 
-        for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id and new_version.get("rdf_source") == known_version.get(
-                "rdf_source"
-            ):
+        for known_version in resource["versions"]:
+            if known_version["version_id"] == version_id:
                 # fetched resource is known
                 return "old_hit"
 
@@ -145,9 +143,11 @@ def update_from_zenodo(
     updated_resources: DefaultDict[str, List[Dict[str, Union[str, datetime]]]],
     ignore_status_5xx: bool,
 ):
-    download_counts = {}
+    download_counts: Dict[str, int] = {}
     for page in range(1, 1000):
-        zenodo_request = f"https://zenodo.org/api/records/?&sort=mostrecent&page={page}&size=1000&all_versions=1&keywords=bioimage.io"
+        zenodo_request = (
+            f"https://zenodo.org/api/records?&sort=newest&page={page}&size=1000&all_versions=1&q=keywords:bioimage.io"
+        )
         r = requests.get(zenodo_request)
         if not r.status_code == 200:
             print(f"Could not get zenodo records page {page}: {r.status_code}: {r.reason}")
@@ -160,14 +160,18 @@ def update_from_zenodo(
             break
 
         for hit in hits:
-            resource_doi = hit["conceptdoi"]
-            doi = hit["doi"]  # "version" doi
+            resource_doi: str = hit["conceptdoi"]
+            doi: str = hit["doi"]  # "version" doi
             created = datetime.fromisoformat(hit["created"]).replace(tzinfo=None)
             assert isinstance(created, datetime), created
             resource_path = collection / resource_doi / "resource.yaml"
             resource_output_path = dist / resource_doi / "resource.yaml"
-            version_name = f"version {hit['metadata']['relations']['version'][0]['index'] + 1}"
-            rdf_urls = [file_hit["links"]["self"] for file_hit in hit["files"] if file_hit["key"] == "rdf.yaml"]
+            version_name = f"version from {hit['metadata']['publication_date']}"
+            rdf_urls = [
+                f"https://zenodo.org/api/records/{hit['recid']}/files/{file_hit['filename']}/content"
+                for file_hit in hit["files"]
+                if (file_hit["filename"] == "rdf.yaml" or file_hit["filename"].endswith("bioimageio.yaml"))
+            ]
             rdf = {}
             rdf_source = "unknown"
             name = doi
@@ -195,19 +199,19 @@ def update_from_zenodo(
                         name = rdf.get("name", doi)
                         resource_type = rdf.get("type")
 
+            version_id = str(hit["id"])
             try:
-                download_count = int(hit["stats"]["unique_downloads"])
+                download_count = hit["stats"]["unique_downloads"]
             except Exception as e:
                 warnings.warn(f"Could not determine download count: {e}")
                 download_count = 1
 
             download_counts[resource_doi] = download_count
-            version_id = str(hit["id"])
 
             new_version = {
                 "version_id": version_id,
                 "doi": doi,
-                "owners": hit["owners"],
+                "owners": [owner["id"] for owner in hit["owners"]],
                 "created": str(created),
                 "status": "accepted",  # default to accepted
                 "rdf_source": rdf_source,
@@ -227,6 +231,11 @@ def update_from_zenodo(
             if resource not in ("blocked", "old_hit"):
                 assert isinstance(resource, dict)
                 update_with_new_version(new_version, resource_doi, rdf, updated_resources)
+
+    with Path("download_counts_offsets.json").open() as f:
+        download_counts_offsets = json.load(f)
+
+    download_counts = {k: v + download_counts_offsets.get(k, 0) for k, v in download_counts.items()}
 
     dist.mkdir(parents=True, exist_ok=True)
     with (dist / "download_counts.json").open("w", encoding="utf-8") as f:

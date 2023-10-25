@@ -1,0 +1,20 @@
+doi: 10.5281/zenodo.8421755
+id: 10.5281/zenodo.8421755
+nickname: modest-octopus
+nickname_icon: "\U0001F419"
+owners: [611919]
+status: accepted
+type: model
+versions:
+- {created: '2023-10-11 17:13:48.737609', doi: 10.5281/zenodo.8432366, name: StarDist
+    Plant Nuclei 3D ResNet, rdf_source: 'https://zenodo.org/api/records/8432366/files/rdf.yaml/content',
+  status: accepted, version_id: '8432366', version_name: version 4}
+- {created: '2023-10-11 01:05:10.849644', doi: 10.5281/zenodo.8429223, name: StarDist
+    Plant Nuclei 3D ResNet, rdf_source: 'https://zenodo.org/api/files/569c9cff-a628-4843-8321-c9703294bec2/rdf.yaml',
+  status: blocked, version_id: '8429223', version_name: version 3}
+- {created: '2023-10-11 00:45:13.339803', doi: 10.5281/zenodo.8429205, name: StarDist
+    Plant Nuclei 3D ResNet, rdf_source: 'https://zenodo.org/api/files/a3b96515-eba6-4dea-9bbb-67db8ac58204/rdf.yaml',
+  status: blocked, version_id: '8429205', version_name: version 2}
+- {created: '2023-10-09 13:39:11.911427', doi: 10.5281/zenodo.8421756, name: StarDist
+    Plant Nuclei 3D ResNet, rdf_source: 'https://zenodo.org/api/files/81d8dae0-92d0-4852-9c0e-54574664e005/rdf.yaml',
+  status: blocked, version_id: '8421756', version_name: version 1}

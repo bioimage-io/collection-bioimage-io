@@ -3,9 +3,8 @@ from functools import partial
 from pathlib import Path
 
 import typer
-from tqdm import tqdm
-
 from bioimageio.spec.shared import resolve_source
+from tqdm import tqdm
 from utils import yaml
 
 
@@ -33,7 +32,12 @@ def main(
         else:
             type_ext = "md"
 
-        resolve_source(doc_uri, output=rdf_path.with_name(f"documentation.{type_ext}"), pbar=partial(tqdm, disable=True))
+        try:
+            resolve_source(
+                doc_uri, output=rdf_path.with_name(f"documentation.{type_ext}"), pbar=partial(tqdm, disable=True)
+            )
+        except ValueError:
+            _ = rdf_path.with_name("documentation.md").write_text(doc_uri)
 
 
 if __name__ == "__main__":

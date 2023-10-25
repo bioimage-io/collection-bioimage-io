@@ -1,6 +1,6 @@
-name: BioImage.IO
+name: bioimage.io
 type: collection
-description: BioImage.IO collection RDF
+description: bioimage.io collection RDF
 tags: []
 version: 0.2.2
 authors:
@@ -39,7 +39,7 @@ config:
       branch: master
       collection_file_name: manifest.bioimage.io.yaml
     - id: deepimagej
-      repository: deepimagej/models
+      repository: fynnbe/models
       branch: master
       collection_file_name: manifest.bioimage.io.yaml
       test_summaries:
@@ -78,6 +78,9 @@ config:
       repository: qupath/qupath-bioimage-io
       branch: main
       collection_file_name: collection.yaml
-    
+    - id: stardist
+      repository: stardist/stardist-bioimage-io
+      branch: main
+      collection_file_name: collection.yaml
 
 collection: []

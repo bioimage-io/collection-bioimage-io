@@ -32,24 +32,25 @@ jobs:
       has_dynamic_test_cases: ${{ steps.static_validation.outputs.has_dynamic_test_cases }}
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       with:
         ref: last_ci_run
         path: last_ci_run
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
-        cache-env: true
-        environment-file: false
+        cache-environment: true
         environment-name: scriptenv
-        channels: conda-forge
-        extra-specs: |  # script dependencies
+        condarc: |
+          channels:
+          - conda-forge
+        create-args: >-  # script dependencies
           bioimageio.core
           bioimageio.spec
           lxml
@@ -89,7 +90,7 @@ jobs:
       matrix: ${{ fromJson(needs.static-validation.outputs.dynamic_test_cases) }}  # [{env_name: ..., resource_id: ..., version_id: ..., weight_format: ...}, ...]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: download environment.yaml
       uses: actions/download-artifact@v3
       with:
@@ -97,12 +98,12 @@ jobs:
         path: artifacts/static_validation_artifact
     - name: install validation dependencies
       id: create_env
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
         environment-name: ${{ matrix.env_name }}
         environment-file: artifacts/static_validation_artifact/${{ matrix.resource_id }}/${{ matrix.version_id }}/conda_env_${{ matrix.weight_format }}.yaml
-        extra-specs: |  # script dependencies
+        create-args: >-  # script dependencies
           typer
           conda-forge::bioimageio.spec
       continue-on-error: true  # we inspect this step's outcome in dynamic_validation.py
@@ -112,7 +113,7 @@ jobs:
       run: pip install typer bioimageio.spec
     - name: get artifact name wo forward slashes
       id: artifact_name
-      run: echo ::set-output name=name::dynamic_validation_artifact_$(echo ${{ matrix.resource_id }}_${{ matrix.version_id }}_${{ matrix.weight_format }} | sed 's#/##g')
+      run: echo name=dynamic_validation_artifact_$(echo ${{ matrix.resource_id }}_${{ matrix.version_id }}_${{ matrix.weight_format }} | sed 's#/##g') >> $GITHUB_OUTPUT
     - name: dynamic validation
       shell: bash -l {0}
       run: python scripts/dynamic_validation.py dist/dynamic_validation_artifact ${{ matrix.resource_id }} ${{ matrix.version_id }} ${{ matrix.weight_format }} --create-env-outcome ${{ steps.create_env.outcome }} --${{ contains(inputs.deploy_to, 'gh-pages') && 'no-ignore' || 'ignore' }}-rdf-source-field-in-validation
@@ -134,8 +135,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       with:
         ref: gh-pages
         path: gh-pages
@@ -144,14 +145,15 @@ jobs:
       with:
         path: artifacts
     - name: install script deps
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
-        cache-env: true
-        environment-file: false
+        cache-environment: true
         environment-name: scriptenv
-        channels: conda-forge
-        extra-specs: |  # script dependencies
+        condarc: |
+          channels:
+          - conda-forge
+        create-args: >-  # script dependencies
           bioimageio.spec
           lxml
           numpy
@@ -165,7 +167,7 @@ jobs:
       run: python scripts/prepare_to_deploy.py --branch ${{ github.head_ref || github.ref }}
     - name: Deploy to gh-pages 🚀
       if: contains(inputs.deploy_to, 'gh-pages')
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         branch: gh-pages
         clean: false  # Keeping the old files

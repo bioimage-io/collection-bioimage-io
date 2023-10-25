@@ -1,81 +1,49 @@
 doi: 10.5281/zenodo.6334383
 id: 10.5281/zenodo.6334383
 nickname: pioneering-rhino
-nickname_icon: 🦏
-owners:
-- 66700
+nickname_icon: "\U0001F98F"
+owners: [66700]
 status: accepted
 type: model
 versions:
-- created: '2023-03-29 10:46:19.177072'
-  doi: 10.5281/zenodo.7781030
-  name: 2D UNet Arabidopsis Ovules
-  status: blocked
-  version_id: '7781030'
-  version_name: version 8
-  rdf_source: https://zenodo.org/api/files/a2b1460c-40d1-4a0e-a962-9a3421470e67/rdf.yaml
-- created: '2023-03-27 00:28:36.108806'
-  doi: 10.5281/zenodo.7772709
-  name: 2D UNet Arabidopsis Ovules
-  status: blocked
-  version_id: '7772709'
-  version_name: version 7
-  rdf_source: https://zenodo.org/api/files/80145fb0-3292-4018-ac8e-e62a884d60c8/rdf.yaml
-- created: '2023-03-27 00:27:18.251839'
-  doi: 10.5281/zenodo.7772702
-  name: 10.5281/zenodo.7772702
-  status: blocked
-  version_id: '7772702'
-  version_name: version 6
-  rdf_source: unknown
-- created: '2023-03-27 00:05:05.949230'
-  doi: 10.5281/zenodo.7772678
-  name: 2D UNet Arabidopsis Ovules
-  status: blocked
-  version_id: '7772678'
-  version_name: version 5
-  rdf_source: https://zenodo.org/api/files/d9578d83-d060-4849-8a75-c1d38253eb8c/rdf.yaml
-- created: '2023-03-06 10:21:31.082347'
-  doi: 10.5281/zenodo.7701262
-  name: 2D UNet Arabidopsis Ovules
-  status: accepted
-  version_id: '7701262'
-  version_name: version 4
-  rdf_source: https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/rdf.yaml
-- created: '2023-03-03 18:42:08.763791'
-  doi: 10.5281/zenodo.7697068
-  name: 2D UNet Arabidopsis Ovules
-  status: accepted
-  version_id: '7697068'
-  version_name: version 3
-  rdf_source: https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/rdf.yaml
+- {created: '2023-04-06 10:47:26.453147', doi: 10.5281/zenodo.7805067, name: 2D UNet
+    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/records/7805067/files/rdf.yaml/content',
+  status: accepted, version_id: '7805067', version_name: version 9}
+- {created: '2023-03-29 10:46:19.177072', doi: 10.5281/zenodo.7781030, name: 2D UNet
+    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/a2b1460c-40d1-4a0e-a962-9a3421470e67/rdf.yaml',
+  status: blocked, version_id: '7781030', version_name: version 8}
+- {created: '2023-03-27 00:28:36.108806', doi: 10.5281/zenodo.7772709, name: 2D UNet
+    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/80145fb0-3292-4018-ac8e-e62a884d60c8/rdf.yaml',
+  status: blocked, version_id: '7772709', version_name: version 7}
+- {created: '2023-03-27 00:27:18.251839', doi: 10.5281/zenodo.7772702, name: 10.5281/zenodo.7772702,
+  rdf_source: unknown, status: blocked, version_id: '7772702', version_name: version
+    6}
+- {created: '2023-03-27 00:05:05.949230', doi: 10.5281/zenodo.7772678, name: 2D UNet
+    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/d9578d83-d060-4849-8a75-c1d38253eb8c/rdf.yaml',
+  status: blocked, version_id: '7772678', version_name: version 5}
+- {created: '2023-03-06 10:21:31.082347', doi: 10.5281/zenodo.7701262, name: 2D UNet
+    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/049595a1-687e-4b29-ba9e-93202322a8a1/rdf.yaml',
+  status: accepted, version_id: '7701262', version_name: version 4}
+- {created: '2023-03-03 18:42:08.763791', doi: 10.5281/zenodo.7697068, name: 2D UNet
+    Arabidopsis Ovules, rdf_source: 'https://zenodo.org/api/files/b259cb79-b631-415c-b98b-bc27cf61d4e4/rdf.yaml',
+  status: accepted, version_id: '7697068', version_name: version 3}
 - created: '2022-03-11 10:58:32.633796'
   doi: 10.5281/zenodo.6346500
   maintainers:
-  - github_user: wolny
+  - {github_user: wolny}
   name: 2D UNet Arabidopsis Ovules
+  rdf_source: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/rdf.yaml
   status: accepted
   version_id: '6346500'
   version_name: version 2
-  rdf_source: https://zenodo.org/api/files/990c06ad-189d-4cfa-8168-46bb2858a634/rdf.yaml
 - created: '2022-03-07 11:59:05.839103'
   doi: 10.5281/zenodo.6334384
   maintainers:
-  - github_user: wolny
+  - {github_user: wolny}
   name: 2D UNet Arabidopsis Ovules
+  rdf_source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/rdf.yaml
   status: accepted
-  tags:
-  - unet
-  - 2d
-  - semantic-segmentation
-  - arabidopsis
-  - ovules
-  - cell-membrane
-  - plant
-  - tissue
-  - fluorescence-light-microscopy
-  - pytorch
-  - plantseg
+  tags: [unet, 2d, semantic-segmentation, arabidopsis, ovules, cell-membrane, plant,
+    tissue, fluorescence-light-microscopy, pytorch, plantseg]
   version_id: '6334384'
   version_name: version 1
-  rdf_source: https://zenodo.org/api/files/63b44f05-a187-4fc9-81c8-c4568535531b/rdf.yaml

@@ -56,15 +56,17 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
-        cache-env: true
-        environment-file: false
+        cache-environment: true
         environment-name: scriptenv
-        channels: conda-forge
-        extra-specs: |  # script dependencies
+        condarc: |
+          channels:
+          - conda-forge
+        create-args: >-  # script dependencies
           bioimageio.spec
+          bs4
           lxml
           requests
           typer
@@ -96,7 +98,7 @@ jobs:
         retention-days: 90
     - name: Deploy updated partner resources to gh-pages 🚀
       if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         clean: false
         branch: gh-pages
@@ -129,22 +131,25 @@ jobs:
         ref: gh-pages
         path: gh-pages
     - name: install script deps
-      uses: mamba-org/provision-with-micromamba@main
+      uses: mamba-org/setup-micromamba@v1
       with:
         cache-downloads: true
-        cache-env: true
-        environment-file: false
+        cache-environment: true
         environment-name: scriptenv
-        channels: conda-forge
-        extra-specs: |  # script dependencies
+        condarc: |
+          channels:
+          - conda-forge
+        create-args: >-  # script dependencies
           bioimageio.spec
           boltons
           lxml
           requests
           typer
-    - name: generate collection rdf
+          pooch
+          pillow
+    - name: generate collection rdf and thumbnails
       shell: bash -l {0}
-      run: python scripts/generate_collection_rdf.py
+      run: python scripts/generate_collection_rdf_and_thumbnails.py
     - name: Upload preview of collection.json
       if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v3
@@ -154,7 +159,7 @@ jobs:
         retention-days: 90
     - name: Deploy collection.json to gh-pages 🚀
       if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         clean: false
         branch: gh-pages
@@ -208,7 +213,7 @@ jobs:
         token: ${{ secrets.PAT }}  # using a PAT will make sure we can trigger the CI in PR
         commit-message: 'Update ${{ matrix.update.resource_id }}'
         committer: GitHub <noreply@github.com>
-        author: BioImage.IO Bot <bioimageiobot@users.noreply.github.com>
+        author: bioimage.io Bot <bioimageiobot@users.noreply.github.com>
         signoff: false
         branch: auto-update-${{ matrix.update.resource_id }}
         delete-branch: false  # true does not seem to actually delete the PR branch...? we delete the branch in block_pending.yaml
@@ -219,14 +224,14 @@ jobs:
           ${{ matrix.update.new_version_ids_md }}
 
           Please review the changes and make sure the new item or version(s) pass the following check list:
-          - [ ] Passed the BioImage.IO CI tests: static (and dynamic) validations
+          - [ ] Passed the bioimage.io CI tests: static (and dynamic) validations
           - [ ] The meta information for the RDF item is complete
             - [ ] The tags are complete and describe the model
             - [ ] Naming is intuitive and descriptive, example:  Multi-Organ Nucleus Segmentation (StarDist 2D)
             - [ ] Authors are provided
             - [ ] Documentation is complete
               * For models, include an overview, describe how the model is trained, what is the training data, how to use the model, how to validate the results and list the references. TODO: Model documentation template.
-          - [ ] Approved by at least one of the BioImage.IO admin team member.
+          - [ ] Approved by at least one of the bioimage.io admin team member.
 
           Maintainers: ${{ matrix.update.maintainers }}
 
@@ -246,7 +251,7 @@ jobs:
       run: python scripts/save_pr_url.py ${{ matrix.update.resource_id }} ${{ steps.cpr.outputs.pull-request-url }}
     - name: deploy PR url to gh-pages 🚀
       if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         clean: false
         branch: gh-pages

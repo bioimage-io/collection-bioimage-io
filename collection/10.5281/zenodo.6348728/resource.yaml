@@ -1,19 +1,17 @@
-status: accepted
-versions:
-- version_id: '6348729'
-  doi: 10.5281/zenodo.6348729
-  created: '2022-03-12 09:56:33.055323'
-  status: accepted
-  name: Arabidopsis Leaf Segmentation
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/647f8e3d-3f05-4e3d-a43e-e72717a076a0/rdf.yaml
-  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
-  training_data:
-    id: ilastik/arabidopsis_tissue_atlas
-id: 10.5281/zenodo.6348728
 doi: 10.5281/zenodo.6348728
-type: model
-owners:
-- 77626
+id: 10.5281/zenodo.6348728
 nickname: non-judgemental-eagle
-nickname_icon: 🦅
+nickname_icon: "\U0001F985"
+owners: [77626]
+status: accepted
+type: model
+versions:
+- created: '2022-03-12 09:56:33.055323'
+  doi: 10.5281/zenodo.6348729
+  links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/ilastik, zero/notebook_u-net_3d_zerocostdl4mic]
+  name: Arabidopsis Leaf Segmentation
+  rdf_source: https://zenodo.org/api/records/6348729/files/rdf.yaml/content
+  status: accepted
+  training_data: {id: ilastik/arabidopsis_tissue_atlas}
+  version_id: '6348729'
+  version_name: version 1

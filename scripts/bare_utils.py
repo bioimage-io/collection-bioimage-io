@@ -2,7 +2,10 @@
 import hashlib
 import json
 import os
-from typing import Any, Dict, Optional, Sequence, Union
+import uuid
+import warnings
+from pathlib import Path
+from typing import Any, Dict, Union
 
 GITHUB_REPOSITORY_OWNER = os.getenv("GITHUB_REPOSITORY_OWNER", "bioimage-io")
 DEPLOYED_BASE_URL = f"https://{GITHUB_REPOSITORY_OWNER}.github.io/collection-bioimage-io"
@@ -23,12 +26,22 @@ def set_gh_actions_output(name: str, output: Union[str, Any]):
     if not isinstance(output, str):
         output = json.dumps(output, sort_keys=True)
 
-    # escape special characters when setting github actions step output
-    output = output.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-    print(f"::set-output name={name}::{output}")
+    if "GITHUB_OUTPUT" not in os.environ:
+        print(output)
+        return
+
+    if "\n" in output:
+        with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+            delimiter = uuid.uuid1()
+            print(f"{name}<<{delimiter}", file=fh)
+            print(output, file=fh)
+            print(delimiter, file=fh)
+    else:
+        with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+            print(f"{name}={output}", file=fh)
 
 
-def get_sha256(path):
+def get_sha256(path: Path):
     h = hashlib.sha256()
     with open(path, "rb") as f:
         while True:

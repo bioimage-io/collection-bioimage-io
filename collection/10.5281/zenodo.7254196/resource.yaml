@@ -1,16 +1,11 @@
 doi: 10.5281/zenodo.7254196
 id: 10.5281/zenodo.7254196
 nickname: humorous-owl
-nickname_icon: 🦉
-owners:
-- 271523
+nickname_icon: "\U0001F989"
+owners: [271523]
 status: blocked
 type: model
 versions:
-- created: '2022-10-26 14:01:06.682181'
-  doi: 10.5281/zenodo.7254197
-  name: Cell Segmentation from Membrane Staining for Plant Tissues
-  status: accepted
-  version_id: '7254197'
-  version_name: version 1
-  rdf_source: https://zenodo.org/api/files/47b93f0e-477a-4491-801e-ba8daa4722d7/rdf.yaml
+- {created: '2022-10-26 14:01:06.682181', doi: 10.5281/zenodo.7254197, name: Cell
+    Segmentation from Membrane Staining for Plant Tissues, rdf_source: 'https://zenodo.org/api/records/7254197/files/rdf.yaml/content',
+  status: accepted, version_id: '7254197', version_name: version 1}
