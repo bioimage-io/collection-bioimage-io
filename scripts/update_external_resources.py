@@ -168,9 +168,9 @@ def update_from_zenodo(
             resource_output_path = dist / resource_doi / "resource.yaml"
             version_name = f"version from {hit['metadata']['publication_date']}"
             rdf_urls = [
-                f"https://zenodo.org/api/records/{hit['recid']}/files/{file_hit['filename']}/content"
+                f"https://zenodo.org/api/records/{hit['recid']}/files/{file_hit['key']}/content"
                 for file_hit in hit["files"]
-                if (file_hit["filename"] == "rdf.yaml" or file_hit["filename"].endswith("bioimageio.yaml"))
+                if (file_hit["key"] == "rdf.yaml" or file_hit["key"].endswith(".bioimageio.yaml"))
             ]
             rdf = {}
             rdf_source = "unknown"
