@@ -1,40 +1,63 @@
 doi: 10.5281/zenodo.7274275
 id: 10.5281/zenodo.7274275
 nickname: joyful-deer
-nickname_icon: "\U0001F98C"
-owners: [432585]
+nickname_icon: 🦌
+owners:
+- 432585
 status: accepted
 type: model
 versions:
+- created: '2023-10-27 11:34:30.252675'
+  doi: 10.5281/zenodo.10047226
+  name: CebraNET Cellular Membranes in Volume SEM
+  status: accepted
+  version_id: '10047226'
+  version_name: version from 2023-10-27
+  rdf_source: https://zenodo.org/api/records/10047226/files/rdf.yaml/content
+- created: '2023-10-27 11:32:10.061066'
+  doi: 10.5281/zenodo.10047209
+  name: CebraNET Cellular Membranes in Volume SEM
+  status: accepted
+  version_id: '10047209'
+  version_name: version from 2023-10-27
+  rdf_source: https://zenodo.org/api/records/10047209/files/rdf.yaml/content
 - cite:
-  - {doi: 10.1101/2023.04.06.535829, text: 'Hennies et al. 2023, CebraEM: A practical
-      workflow to segment cellular organelles in volume SEM datasets using a transferable
-      CNN-based membrane prediction'}
+  - doi: 10.1101/2023.04.06.535829
+    text: 'Hennies et al. 2023, CebraEM: A practical workflow to segment cellular
+      organelles in volume SEM datasets using a transferable CNN-based membrane prediction'
   config:
     bioimageio:
       test_kwargs:
-        pytorch_state_dict: {decimal: 2}
-        torchscript: {decimal: 2}
+        pytorch_state_dict:
+          decimal: 2
+        torchscript:
+          decimal: 2
   created: '2023-07-07 10:12:51.478763'
   doi: 10.5281/zenodo.8123818
   name: CebraNET Cellular Membranes in Volume SEM
-  parent: {sha256: f19d75e9ea394fd7b0bd9c86276de41b10318245315fa4d2cc6e24e63c6371a1,
-    uri: 'https://doi.org/10.5281/zenodo.7274275'}
-  rdf_source: https://zenodo.org/api/records/8123818/files/rdf.yaml/content
+  parent:
+    sha256: f19d75e9ea394fd7b0bd9c86276de41b10318245315fa4d2cc6e24e63c6371a1
+    uri: https://doi.org/10.5281/zenodo.7274275
   status: accepted
   version_id: '8123818'
   version_name: version 3
-- {created: '2023-07-06 08:12:02.329226', doi: 10.5281/zenodo.8119068, name: CebraNET
-    Cellular Membranes in Volume SEM, rdf_source: 'https://zenodo.org/api/files/34d12fe0-da40-47f7-9795-3af0e9c1baf6/rdf.yaml',
-  status: blocked, version_id: '8119068', version_name: version 2}
+  rdf_source: https://zenodo.org/api/records/8123818/files/rdf.yaml/content
+- created: '2023-07-06 08:12:02.329226'
+  doi: 10.5281/zenodo.8119068
+  name: CebraNET Cellular Membranes in Volume SEM
+  status: blocked
+  version_id: '8119068'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/files/34d12fe0-da40-47f7-9795-3af0e9c1baf6/rdf.yaml
 - config:
     bioimageio:
       test_kwargs:
-        pytorch_state_dict: {decimal: 2}
+        pytorch_state_dict:
+          decimal: 2
   created: '2022-11-02 13:52:32.578744'
   doi: 10.5281/zenodo.7274276
   name: CebraNET Cellular Membranes in Volume SEM
-  rdf_source: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/rdf.yaml
   status: accepted
   version_id: '7274276'
   version_name: version 1
+  rdf_source: https://zenodo.org/api/files/c95661ca-b06a-464f-810c-5c9804ebe982/rdf.yaml
