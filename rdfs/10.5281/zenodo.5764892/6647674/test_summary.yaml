@@ -1,7 +1,7 @@
 bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: 9165e7bb81d499f3064cf86061efe521b6307dec718da190fbaf7ab7fb4ef1e6
-status: failed
+status: passed
 tests:
   bioimageio:
   - bioimageio_spec_version: 0.4.9post1
@@ -28,7 +28,7 @@ tests:
         ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post4
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: load resource description
     nested_errors: null
@@ -36,7 +36,7 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post4
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: All URLs and paths available
     nested_errors: null
@@ -44,14 +44,14 @@ tests:
     traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post4
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post4
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
@@ -60,43 +60,14 @@ tests:
       non-validation-warnings: ['Device management is not implemented for onnx yet,
           cannot unload model']
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post4
-    error: ''
-    name: load resource description
-    nested_errors: null
-    status: failed
-    traceback: ["  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_tests.py\",
-        line 201, in _test_load_resource\n    rd: Optional[ResourceDescription] =
-        load_resource_description(\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
-        nodes_module=nodes)\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 122, in resolve_raw_node\n    rd = SourceNodeTransformer().transform(rd)\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 145, in generic_transformer\n    node, **{name: self.transform(value,
-        **kwargs) for name, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 145, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
-        for name, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 65, in transform_dict\n    return {key: self.transform(value, **kwargs)
-        for key, value in node.items()}\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 65, in <dictcomp>\n    return {key: self.transform(value, **kwargs) for
-        key, value in node.items()}\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 145, in generic_transformer\n    node, **{name: self.transform(value,
-        **kwargs) for name, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 145, in <dictcomp>\n    node, **{name: self.transform(value, **kwargs)
-        for name, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.10/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 84, in transform_ResolvedImportableSourceFile\n    assert importlib_spec
-        is not None\n"]
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post4
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
     status: passed
@@ -140,19 +111,10 @@ tests:
     warnings: {documentation: No '# Validation' (sub)section found.}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
-    error: No module named 'onnxruntime'
+    error: null
     name: reproduce test outputs from test inputs
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
-        weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 205, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
-        devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 132, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
-        line 5, in <module>\n    import onnxruntime as rt\n"]
+    status: passed
+    traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
@@ -182,6 +144,29 @@ tests:
     name: reproduce test outputs from test inputs
     status: passed
     traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: No module named 'onnxruntime'
+    name: reproduce test outputs from test inputs
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
+        weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
+        line 205, in create_prediction_pipeline\n    bioimageio_model=bioimageio_model,
+        devices=devices, weight_format=weight_format\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 132, in create_model_adapter\n    adapter_cls = _get_model_adapter(weight)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
+        line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
+        line 5, in <module>\n    import onnxruntime as rt\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
     warnings:
       non-validation-warnings: ['floor_divide is deprecated, and will be removed in
           a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
@@ -221,18 +206,4 @@ tests:
         line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
     warnings: {}

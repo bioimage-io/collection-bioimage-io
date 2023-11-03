@@ -45,6 +45,21 @@ tests:
       not yet available: rdf contains the key run_mode with value deepimagej.', name: Initial
       compatibility checks with DeepImageJ., status: failed}
   ilastik:
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: local variable 'rd' referenced before assignment
+    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
+        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
+        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 224, in _test_load_resource\n    return rd, load_summary\n"]
+    warnings: {}
   - bioimageio_core_version: 0.5.8
     bioimageio_spec_version: 0.4.9
     error: 'Failed to download https://github.com/deepimagej/models/u-net_pancreatic_segmentation/U_Net_PhC-C2DL-PSC_segmentation.ipynb
@@ -76,19 +91,4 @@ tests:
         output, pbar=pbar)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
         line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
         ({e})\") from e\n"]
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: local variable 'rd' referenced before assignment
-    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
-    nested_errors: null
-    status: failed
-    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
-        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
-        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
-      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 224, in _test_load_resource\n    return rd, load_summary\n"]
     warnings: {}
