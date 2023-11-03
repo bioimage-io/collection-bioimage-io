@@ -13,7 +13,7 @@ versions:
     - icon: https://colab.research.google.com/assets/colab-badge.svg
       label: Open in Colab
       url: 
-        https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
+        https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/3D_RCAN_ZeroCostDL4Mic.ipynb
     cite:
     - doi: https://doi.org/10.1038/s41467-021-22518-0
       text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning
@@ -57,7 +57,7 @@ versions:
     documentation: 
       https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     download_url: 
-      https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
+      https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/3D_RCAN_ZeroCostDL4Mic.ipynb
     format_version: 0.2.3
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     id: zero/Notebook_RCAN_3D_ZeroCostDL4Mic
