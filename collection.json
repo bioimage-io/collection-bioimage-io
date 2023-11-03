@@ -23,7 +23,7 @@
       ],
       "created": "2022-06-15 22:06:22.658325",
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 44369,
+      "download_count": 44533,
       "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
@@ -66,7 +66,7 @@
       ],
       "created": "2022-01-18 22:01:09.315638",
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 33673,
+      "download_count": 33775,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -112,7 +112,7 @@
       ],
       "created": "2022-06-15 22:09:35.368273",
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 32786,
+      "download_count": 32846,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -157,7 +157,7 @@
       ],
       "created": "2022-02-09 21:14:46.430029",
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 30652,
+      "download_count": 30692,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -200,7 +200,7 @@
       ],
       "created": "2022-06-10 06:22:28.465944",
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 30515,
+      "download_count": 30560,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -246,7 +246,7 @@
       ],
       "created": "2022-03-08 18:36:28.378522",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 29606,
+      "download_count": 29753,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -293,7 +293,7 @@
       ],
       "created": "2022-06-15 22:12:29.012734",
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 28682,
+      "download_count": 28719,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -339,7 +339,7 @@
       ],
       "created": "2023-07-26 10:47:44.642355",
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 27372,
+      "download_count": 27473,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -392,7 +392,7 @@
       ],
       "created": "2023-03-06 19:01:04.321374",
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 27137,
+      "download_count": 27202,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -439,7 +439,7 @@
       ],
       "created": "2022-01-21 14:50:48.356997",
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 26863,
+      "download_count": 26916,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -491,7 +491,7 @@
       ],
       "created": "2023-03-24 17:08:34.402776",
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 26502,
+      "download_count": 26533,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -541,7 +541,7 @@
       ],
       "created": "2022-03-12 09:56:33.055323",
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 26419,
+      "download_count": 26481,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -588,7 +588,7 @@
       ],
       "created": "2022-03-11 22:32:05.554959",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 26270,
+      "download_count": 26361,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -639,7 +639,7 @@
       ],
       "created": "2022-06-15 22:08:13.874556",
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 24755,
+      "download_count": 24802,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
@@ -684,7 +684,7 @@
       ],
       "created": "2022-04-01 16:06:28.519947",
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 24735,
+      "download_count": 24785,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -729,7 +729,7 @@
       ],
       "created": "2023-03-02 05:53:45.695883",
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 23129,
+      "download_count": 23146,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -776,7 +776,7 @@
       ],
       "created": "2022-01-27 14:00:17.489637",
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 22950,
+      "download_count": 22983,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -824,7 +824,7 @@
       ],
       "created": "2023-03-27 12:11:52.357154",
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 22877,
+      "download_count": 22882,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -874,7 +874,7 @@
       ],
       "created": "2022-07-08 17:02:28.049385",
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 21646,
+      "download_count": 21673,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -924,7 +924,7 @@
       ],
       "created": "2023-03-27 12:14:49.467153",
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 20916,
+      "download_count": 20946,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -975,7 +975,7 @@
       ],
       "created": "2023-04-06 10:47:26.453147",
       "description": "2D Unet trained on confocal images of Arabidopsis Ovules",
-      "download_count": 20598,
+      "download_count": 20650,
       "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
@@ -1021,7 +1021,7 @@
       ],
       "created": "2023-03-03 13:09:05.981223",
       "description": "affinity-model",
-      "download_count": 19010,
+      "download_count": 19049,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1073,7 +1073,7 @@
       ],
       "created": "2023-04-06 10:26:25.873589",
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells",
-      "download_count": 18595,
+      "download_count": 18664,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -1125,7 +1125,7 @@
       ],
       "created": "2023-04-06 12:43:33.436336",
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 17290,
+      "download_count": 17325,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1178,7 +1178,7 @@
       ],
       "created": "2022-07-28 07:37:36.393648",
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 17259,
+      "download_count": 17276,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
@@ -1214,7 +1214,7 @@
       ],
       "created": "2023-03-23 21:42:30.250688",
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 16686,
+      "download_count": 16732,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
@@ -1265,7 +1265,7 @@
       ],
       "created": "2022-05-11 12:52:23.766143",
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 16526,
+      "download_count": 16552,
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
@@ -1304,7 +1304,7 @@
       ],
       "created": "2022-02-01 22:38:38.088910",
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 15122,
+      "download_count": 15138,
       "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
@@ -1342,7 +1342,7 @@
       ],
       "created": "2022-07-08 14:35:48.861260",
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 14988,
+      "download_count": 15006,
       "id": "10.5281/zenodo.6811491",
       "license": "CC-BY-4.0",
       "links": [
@@ -1387,7 +1387,7 @@
       ],
       "created": "2023-03-29 18:14:39.826271",
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 12422,
+      "download_count": 12467,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1465,7 +1465,7 @@
       ],
       "created": "2022-05-18 09:42:30.953891",
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 10579,
+      "download_count": 10593,
       "download_url": "https://zenodo.org/api/records/6559475/files/deepimagej_fru-net_sev_segmentation.zip/content",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -1513,7 +1513,7 @@
       ],
       "created": "2022-07-07 21:30:58.116303",
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 9467,
+      "download_count": 9470,
       "id": "10.5281/zenodo.6808325",
       "license": "CC-BY-4.0",
       "links": [
@@ -1559,7 +1559,7 @@
       ],
       "created": "2023-07-07 10:12:51.478763",
       "description": "Cellular membrane prediction model for volume SEM datasets",
-      "download_count": 8051,
+      "download_count": 8101,
       "id": "10.5281/zenodo.7274275",
       "license": "CC-BY-4.0",
       "links": [
@@ -1623,7 +1623,7 @@
       ],
       "created": "2022-11-12 12:53:32.701172",
       "description": "EmbryoNet Model by embryoNet Team",
-      "download_count": 6427,
+      "download_count": 6448,
       "id": "10.5281/zenodo.7315440",
       "license": "GPL-3.0",
       "links": [
@@ -1670,7 +1670,7 @@
       ],
       "created": "2022-12-06 13:55:39.060882",
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 5993,
+      "download_count": 6000,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -1726,7 +1726,7 @@
       ],
       "created": "2022-05-18 10:12:14.635800",
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 5923,
+      "download_count": 5925,
       "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
       "id": "10.5281/zenodo.6559929",
       "license": "MIT",
@@ -1769,7 +1769,7 @@
       ],
       "created": "2023-03-29 11:10:26.329999",
       "description": "Unet trained on confocal images of Arabidopsis Ovules nuclei",
-      "download_count": 5868,
+      "download_count": 5882,
       "id": "10.5281/zenodo.7772662",
       "license": "MIT",
       "links": [
@@ -1812,7 +1812,7 @@
       ],
       "created": "2023-02-15 09:34:43.433531",
       "description": "HyLFM-Net trained on static images of arrested medaka hatchling hearts. The network reconstructs a volumentric image from a given light-field.",
-      "download_count": 4399,
+      "download_count": 4408,
       "id": "10.5281/zenodo.7614645",
       "license": "MIT",
       "links": [
@@ -1861,7 +1861,7 @@
       ],
       "created": "2023-03-30 16:57:43.433376",
       "description": "Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with MitoTracker and the model was trained to upsample the images by a factor of 4.",
-      "download_count": 3036,
+      "download_count": 3061,
       "id": "10.5281/zenodo.7786492",
       "license": "MIT",
       "links": [
@@ -1904,7 +1904,7 @@
       ],
       "created": "2023-02-06 13:30:05.714615",
       "description": "Light-sheet and light-field images of beating and arrested hatchling (8 dpf) medaka hearts used in \"Deep learning-enhanced light-field imaging with continuous validation\" to train and evaluate a HyLFM-Net.",
-      "download_count": 1966,
+      "download_count": 1967,
       "id": "10.5281/zenodo.7612115",
       "license": "MIT",
       "name": "Hatchling Medaka Heart (HyLFM)",
@@ -1940,7 +1940,7 @@
       ],
       "created": "2023-06-23 10:23:37.255827",
       "description": "Label-free prediction of fluorescence images from brightield images",
-      "download_count": 1734,
+      "download_count": 1742,
       "id": "10.5281/zenodo.8064806",
       "license": "Apache-2.0",
       "links": [
@@ -1979,7 +1979,7 @@
       ],
       "created": "2023-07-21 09:09:49.349470",
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 1229,
+      "download_count": 1231,
       "id": "10.5281/zenodo.8142283",
       "license": "MIT",
       "links": [
@@ -2030,7 +2030,7 @@
       ],
       "created": "2023-10-09 06:57:28.189519",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 463,
+      "download_count": 467,
       "id": "10.5281/zenodo.8419845",
       "license": "CC-BY-4.0",
       "name": "UniFMIRSuperResolutionOnMicrotubules",
@@ -2068,7 +2068,7 @@
       ],
       "created": "2023-10-11 17:13:48.737609",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
-      "download_count": 443,
+      "download_count": 463,
       "id": "10.5281/zenodo.8421755",
       "license": "CC-BY-4.0",
       "links": [
@@ -2118,7 +2118,7 @@
       ],
       "created": "2023-10-11 00:39:40.958129",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135. Patch size for this model during inference can be flexible.",
-      "download_count": 424,
+      "download_count": 433,
       "id": "10.5281/zenodo.8401064",
       "license": "CC-BY-4.0",
       "links": [
@@ -2177,7 +2177,7 @@
       ],
       "created": "2023-10-09 07:05:52.763368",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 224,
+      "download_count": 227,
       "id": "10.5281/zenodo.8420099",
       "license": "CC-BY-4.0",
       "links": [
@@ -4087,7 +4087,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4099,7 +4099,7 @@
       ],
       "description": "Instance segmentation of 2D and 3D images. Cellpose is a generalist algorithm for cellular segmentation.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_Cellpose_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -4171,7 +4171,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/DFCAN_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4179,7 +4179,7 @@
       ],
       "description": "Super-resolution via super-pixelisation. Deep Fourier channel attention network (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Qiao, Chang and Li, Di and Guo, Yuting and Liu, Chong and Jiang, Tao and Dai, Qionghai and Li, Dong. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DFCAN_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_DFCAN_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
@@ -4208,7 +4208,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4216,7 +4216,7 @@
       ],
       "description": "DRMIME is an network that can be used to register microscopy images (affine and perspective registration).",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_DRMIME_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
@@ -4245,7 +4245,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4253,7 +4253,7 @@
       ],
       "description": "Self-supervised denoising of 2D images. DecoNoising 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_DecoNoising_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -4368,7 +4368,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4376,7 +4376,7 @@
       ],
       "description": "Joint denoising and binary segmentation of 2D images. DenoiSeg 2D is deep-learning method that can be used to jointly denoise and segment 2D microscopy images. The benefits of using DenoiSeg (compared to other Deep Learning-based segmentation methods) are more prononced when only a few annotated images are available. However, the denoising part requires many images to perform well. All the noisy images don't need to be labeled to train DenoiSeg. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_DenoiSeg_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
@@ -4405,7 +4405,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4414,7 +4414,7 @@
       ],
       "description": "Object detection of 2D images. Detectron2 is an object detection network developed by Facebook AI Research, which identifies objects in images and draws bounding boxes around them.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_Detectron2_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -4446,7 +4446,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4454,7 +4454,7 @@
       ],
       "description": "Instance segmentation of 2D images. EmbedSeg 2D is a deep-learning method that can be used to segment object from bioimages and was first published by Lalit et al. in 2021, on arXiv.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_EmbedSeg_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -4488,7 +4488,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb"
         }
       ],
       "covers": [
@@ -4500,7 +4500,7 @@
       ],
       "description": "Interactive instance segmentation using Kaibu and Cellpose.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb",
       "id": "zero/Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
@@ -4529,7 +4529,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4537,7 +4537,7 @@
       ],
       "description": "Instance segmentation of 2D images. MaskRCNN is a is an object detection and segmentation network, which identifies objects in images and draws bounding boxes around them.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_MaskRCNN_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview"
@@ -4685,7 +4685,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/3D_RCAN_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4693,7 +4693,7 @@
       ],
       "description": "Supervised restoration of 3D images. RCAN is a neural network capable of image restoration from corrupted bio-images. The network allows image denoising and resolution improvement in 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/3D_RCAN_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_RCAN_3D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -4724,7 +4724,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/RetinaNet_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4733,7 +4733,7 @@
       ],
       "description": "Object detection of 2D images. RetinaNet is a is an object detection network, which identifies objects in images and draws bounding boxes around them.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/RetinaNet_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_RetinaNet_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -4765,7 +4765,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -4773,7 +4773,7 @@
       ],
       "description": "Instance segmentation of 2D images. SplineDist is a neural network inspired by StarDist, capable of performing image instance segmentation. Unlike StarDist, SplineDist uses cubic splines to describe the contour of each object and therefore can potentially segment objects of any shapes. This version is only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb",
       "id": "zero/Notebook_SplineDist_2D_ZeroCostDL4Mic",
       "links": [
         "zero/Notebook Preview",
@@ -5171,7 +5171,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/WGAN_ZeroCostDL4Mic.ipynb"
+          "url": "https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/WGAN_ZeroCostDL4Mic.ipynb"
         }
       ],
       "covers": [
@@ -5179,7 +5179,7 @@
       ],
       "description": "Super-resolution via super-pixelisation. Wasserstein GAN (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Gulrajani I. et al. arXiv 2017. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/WGAN_ZeroCostDL4Mic.ipynb",
+      "download_url": "https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/WGAN_ZeroCostDL4Mic.ipynb",
       "id": "zero/WGAN_ZeroCostDL4Mic.ipynb",
       "links": [
         "zero/Notebook Preview"
