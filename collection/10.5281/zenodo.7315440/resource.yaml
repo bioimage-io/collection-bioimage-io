@@ -13,6 +13,10 @@ versions:
   status: accepted
   version_id: '7315441'
   version_name: version 1
+  cite:
+  - doi: '10.48606/15'
+    text: Embryonet
+    url: https://embryonet.de
   weights:
   onnx:
     authors:
