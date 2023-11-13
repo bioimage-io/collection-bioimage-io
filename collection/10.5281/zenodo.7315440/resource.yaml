@@ -6,6 +6,22 @@ owners: [411780]
 status: accepted
 type: model
 versions:
-- {created: '2022-11-12 12:53:32.701172', doi: 10.5281/zenodo.7315441, name: EmbryoNet
-    base model, rdf_source: 'https://zenodo.org/api/records/7315441/files/rdf.yaml/content',
-  status: accepted, version_id: '7315441', version_name: version 1}
+- created: '2022-11-12 12:53:32.701172'
+  doi: 10.5281/zenodo.7315441
+  name: EmbryoNet base model
+  rdf_source: 'https://zenodo.org/api/records/7315441/files/rdf.yaml/content'
+  status: accepted
+  version_id: '7315441'
+  version_name: version 1
+  weights:
+  onnx:
+    authors:
+      - name: Daniel Capek
+      - name: Matvey Safroshkin
+      - name: Hernan Morales
+      - name: Grigory Arutyunov
+      - name: Nikan Toulany
+      - name: Patrick Mueller
+    source: ./EmbryoNet_GPU_batch_1.onnx
+    sha256: c47512096a27a9f9efb8798d8d8f4f4c131c2063706c6ecee6fb3112e47bab0f
+    opset_version: 7
