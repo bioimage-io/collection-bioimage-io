@@ -10,6 +10,7 @@ from typing import DefaultDict, Dict, List, Literal, Optional, Tuple, Union
 import requests
 import typer
 from bare_utils import set_gh_actions_outputs
+from bs4 import BeautifulSoup
 from utils import ADJECTIVES, ANIMALS, enforce_block_style_resource, get_animal_nickname, split_animal_nickname, yaml
 
 
@@ -40,10 +41,8 @@ def update_resource(
         else:
             raise ValueError(resource["status"])
 
-        for idx, known_version in enumerate(list(resource["versions"])):
-            if known_version["version_id"] == version_id and new_version.get("rdf_source") == known_version.get(
-                "rdf_source"
-            ):
+        for known_version in resource["versions"]:
+            if known_version["version_id"] == version_id:
                 # fetched resource is known
                 return "old_hit"
 
@@ -156,7 +155,7 @@ def update_from_zenodo(
 
         print(f"Collecting items from zenodo: {zenodo_request}")
 
-        hits = r.json()  #  ["hits"]["hits"]
+        hits = r.json()["hits"]["hits"]
         if not hits:
             break
 
@@ -169,9 +168,9 @@ def update_from_zenodo(
             resource_output_path = dist / resource_doi / "resource.yaml"
             version_name = f"version from {hit['metadata']['publication_date']}"
             rdf_urls = [
-                f"https://zenodo.org/api/records/{hit['record_id']}/files/{file_hit['filename']}/content"
+                f"https://zenodo.org/api/records/{hit['recid']}/files/{file_hit['key']}/content"
                 for file_hit in hit["files"]
-                if (file_hit["filename"] == "rdf.yaml" or file_hit["filename"].endswith("bioimageio.yaml"))
+                if (file_hit["key"] == "rdf.yaml" or file_hit["key"].endswith(".bioimageio.yaml"))
             ]
             rdf = {}
             rdf_source = "unknown"
@@ -200,19 +199,19 @@ def update_from_zenodo(
                         name = rdf.get("name", doi)
                         resource_type = rdf.get("type")
 
+            version_id = str(hit["id"])
             try:
-                download_count = int(hit["stats"]["unique_downloads"])  # todo: update zenodo api
+                download_count = hit["stats"]["unique_downloads"]
             except Exception as e:
                 warnings.warn(f"Could not determine download count: {e}")
                 download_count = 1
 
             download_counts[resource_doi] = download_count
-            version_id = str(hit["id"])
 
             new_version = {
                 "version_id": version_id,
                 "doi": doi,
-                "owners": [hit["owner"]],
+                "owners": [owner["id"] for owner in hit["owners"]],
                 "created": str(created),
                 "status": "accepted",  # default to accepted
                 "rdf_source": rdf_source,

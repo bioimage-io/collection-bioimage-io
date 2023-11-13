@@ -1,11 +1,23 @@
 doi: 10.5281/zenodo.7781877
 id: 10.5281/zenodo.7781877
 nickname: frank-bear
-nickname_icon: "\U0001F43B"
-owners: [271523]
+nickname_icon: 🐻
+owners:
+- 271523
 status: accepted
 type: model
 versions:
-- {created: '2023-03-29 14:03:53.845746', doi: 10.5281/zenodo.7781878, name: Mitochondria
-    confocal microscopy inference DFCAN, rdf_source: 'https://zenodo.org/api/records/7781878/files/rdf.yaml/content',
-  status: blocked, version_id: '7781878', version_name: version 1}
+- created: '2023-03-30 15:29:03.400368'
+  doi: 10.5281/zenodo.7786225
+  name: Mitochondria confocal microscopy inference DFCAN
+  status: blocked
+  version_id: '7786225'
+  version_name: version 2
+  rdf_source: 'https://zenodo.org/api/records/7786225/files/rdf.yaml/content'
+- created: '2023-03-29 14:03:53.845746'
+  doi: 10.5281/zenodo.7781878
+  name: Mitochondria confocal microscopy inference DFCAN
+  status: blocked
+  version_id: '7781878'
+  version_name: version 1
+  rdf_source: 'https://zenodo.org/api/records/7781878/files/rdf.yaml/content'
