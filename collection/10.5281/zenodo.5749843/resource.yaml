@@ -18,7 +18,17 @@ versions:
     cell-membrane, plant, arabidopsis, tensorflow]
   training_data: {id: ilastik/plantseg_ovules}
   version_id: '5888237'
-  version_name: revision 1
+  version_name: version 3
+  weights:
+  keras_hdf5:
+    sha256: 4e34b2b630899a28f087ba607f6c8df9f32fd04240e75ee1c5ee50187070eb7c
+    source: https://zenodo.org/api/records/5888237/files/keras_model.h5/content
+    tensorflow_version: 1.15.2
+  tensorflow_saved_model_bundle:
+    parent: keras_hdf5
+    sha256: 8ae5edc5dad08a00b6c3a22e06414fd950fac751e16c7de6df60a569421b330d
+    source: https://zenodo.org/api/records/5888237/files/tensorflow_saved_model_bundle.zip/content
+    tensorflow_version: 1.15.2
 - created: '2022-01-19 10:16:02.455027'
   doi: 10.5281/zenodo.5877226
   links: [imjoy/BioImageIO-Packager, ilastik/ilastik, deepimagej/deepimagej]
@@ -26,7 +36,7 @@ versions:
   rdf_source: https://zenodo.org/api/files/3759664b-38bf-4ba8-b61d-b017dcf420d1/rdf.yaml
   status: accepted
   version_id: '5877226'
-  version_name: revision 2
+  version_name: version 2
 - {created: '2021-12-02 14:27:16.753974+00:00', doi: 10.5281/zenodo.5749844, name: 3D
     UNet - arabidopsis - ZeroCostDL4Mic, rdf_source: 'https://zenodo.org/api/files/3320859e-af1a-45bc-bfaa-3d4110b3bc41/rdf.yaml',
-  status: blocked, version_id: '5749844', version_name: revision 1}
+  status: blocked, version_id: '5749844', version_name: version 1}
