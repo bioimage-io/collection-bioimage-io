@@ -1,7 +1,7 @@
 bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: 744346fcb6c493f6f9f1014424852db537f91f6660619e5a836ac760f57e01cc
-status: passed
+status: failed
 tests:
   bioimageio:
   - bioimageio_spec_version: 0.4.9post1
@@ -35,37 +35,48 @@ tests:
         ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9post5
-    error: null
+    error: 'Failed to download https://zenodo.org/api/records/5850574/files/per_sample_scale_range.ijm/content
+      (503 Server Error: Service Unavailable for url: https://zenodo.org/api/records/5850574/files/per_sample_scale_range.ijm/content)'
     name: load resource description
     nested_errors: null
-    status: passed
-    traceback: null
+    status: failed
+    traceback: ["  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 202, in _test_load_resource\n    rdf, weights_priority_order=None if
+        weight_format is None else [weight_format]\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
+        nodes_module=nodes)\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 121, in resolve_raw_node\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
+        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
+        \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 62, in transform_list\n    return [self.transform(subnode, **kwargs)
+        for subnode in node]\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 62, in <listcomp>\n    return [self.transform(subnode, **kwargs) for
+        subnode in node]\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 339, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root)\n",
+      "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/functools.py\",
+        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
+      "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 235, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
+        output, pbar=pbar)\n", "  File \"/home/runner/micromamba/envs/5850574/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 490, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
+        ({e})\") from e\n"]
     warnings: {}
-  - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post5
-    error: null
-    name: All URLs and paths available
-    nested_errors: null
-    status: passed
-    traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post5
-    error: null
-    name: Test documentation completeness.
-    status: passed
-    traceback: null
-    warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.9
-    bioimageio_spec_version: 0.4.9post5
-    error: null
-    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Device management is not implemented for keras
-          yet, cannot unload model']
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
       generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,

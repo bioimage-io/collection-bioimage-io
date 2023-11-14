@@ -1,6 +1,6 @@
 bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9.post1
-rdf_sha256: 3dbe2c5783d3492d4f2323148da32bef92e1dc139cde9d38d86c582d63ce3c9a
+rdf_sha256: 0ad5ce44fce721de8aae02f094689710a946fd989568c1717533cf57b6102b88
 status: failed
 tests:
   bioimageio:
@@ -45,18 +45,11 @@ tests:
     warnings: {}
   - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9post5
-    error: https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
+    error: null
     name: All URLs and paths available
     nested_errors: null
-    status: failed
-    traceback: ["  File \"/home/runner/micromamba/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 87, in _test_resource_urls\n    SourceNodeChecker(root_path=rd.root_path).visit(rd)\n",
-      "  File \"/home/runner/micromamba/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 52, in generic_visit\n    self.visit(value)\n", "  File \"/home/runner/micromamba/envs/latest/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 34, in visit\n    visitor(node)\n", "  File \"/home/runner/micromamba/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 38, in visit_URI\n    self._visit_source(node)\n", "  File \"/home/runner/micromamba/envs/latest/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 35, in _visit_source\n    raise FileNotFoundError(leaf)\n"]
+    status: passed
+    traceback: null
     warnings: {}
   - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9post5
