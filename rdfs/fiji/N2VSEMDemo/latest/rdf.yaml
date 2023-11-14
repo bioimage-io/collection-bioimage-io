@@ -24,8 +24,6 @@ covers:
 description: Demo model for denoising trained on a single SEM image with Noise2Void
 documentation: 
   https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/README.md
-download_url: 
-  https://github.com/bioimage-io/fiji-bioimage-io/releases/download/0.3.1/n2v-sem-demo.zip
 format_version: 0.3.6
 framework: tensorflow
 id: fiji/N2VSEMDemo/latest
@@ -101,7 +99,7 @@ test_outputs:
 - https://raw.githubusercontent.com/bioimage-io/fiji-bioimage-io/master/models/n2v-sem-demo/test_output.tif
 timestamp: '2021-06-03T13:34:19.685956'
 type: model
-version: 0.1.1
+version: 0.1.2
 weights:
   tensorflow_saved_model_bundle:
     authors:
