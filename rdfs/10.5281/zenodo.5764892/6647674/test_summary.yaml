@@ -1,7 +1,7 @@
 bioimageio_core_version: 0.5.9
 bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: 9165e7bb81d499f3064cf86061efe521b6307dec718da190fbaf7ab7fb4ef1e6
-status: failed
+status: passed
 tests:
   bioimageio:
   - bioimageio_spec_version: 0.4.9post1
@@ -29,57 +29,58 @@ tests:
       weights: {torchscript: missing 'pytorch_version'}
   - bioimageio_core_version: 0.5.9
     bioimageio_spec_version: 0.4.9post5
-    error: 'Failed to download https://zenodo.org/api/records/6647674/files/zero_mean_unit_variance.ijm/content
-      (503 Server Error: Service Unavailable for url: https://zenodo.org/api/records/6647674/files/zero_mean_unit_variance.ijm/content)'
+    error: null
     name: load resource description
     nested_errors: null
-    status: failed
-    traceback: ["  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/core/resource_tests.py\",
-        line 201, in _test_load_resource\n    rd: Optional[ResourceDescription] =
-        load_resource_description(\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
-        nodes_module=nodes)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/core/resource_io/utils.py\",
-        line 121, in resolve_raw_node\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
-        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
-        parent=node) for n, value in iter_fields(node)}\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
-        for n, value in iter_fields(node)}\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 62, in transform_list\n    return [self.transform(subnode, **kwargs)
-        for subnode in node]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 62, in <listcomp>\n    return [self.transform(subnode, **kwargs) for
-        subnode in node]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", "  File
-        \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/node_transformer.py\",
-        line 339, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root)\n
-        \                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/functools.py\",
-        line 909, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n
-        \          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 235, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
-        output, pbar=pbar)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
-      "  File \"/home/runner/micromamba/envs/6647674/lib/python3.11/site-packages/bioimageio/spec/shared/_resolve_source.py\",
-        line 490, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
-        ({e})\") from e\n"]
+    status: passed
+    traceback: null
     warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for onnx yet,
+          cannot unload model']
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.9
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
+          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
+          function NOT ''floor''). This results in incorrect rounding for negative
+          values.
+
+          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
+          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
+          (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811723911/work/aten/src/ATen/native/BinaryOps.cpp:601.)']
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
       test outputs with DeepImageJ headless., status: passed}
