@@ -1,7 +1,7 @@
-bioimageio_core_version: 0.5.10
+bioimageio_core_version: 0.5.11
 bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: 6cfc7728d7247fcd715d4659a2d6959aa13ac59ab986fcf55d61ac89c77c603c
-status: failed
+status: passed
 tests:
   bioimageio:
   - bioimageio_spec_version: 0.4.9post1
@@ -25,48 +25,39 @@ tests:
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''task'': [''semantic-segmentation'',
         ''instance-segmentation'', ''object-detection'', ''image-classification'',
         ''denoising'', ''image-restoration'', ''image-reconstruction'', ''in-silico-labeling'']}]'}
-  - bioimageio_core_version: 0.5.10
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.11
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: load resource description
     nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.10
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.11
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: All URLs and paths available
     nested_errors: null
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.10
-    bioimageio_spec_version: 0.4.9
+  - bioimageio_core_version: 0.5.11
+    bioimageio_spec_version: 0.4.9post5
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.10
-    bioimageio_spec_version: 0.4.9
-    error: '[Errno 20] Not a directory: ''/tmp/runner/bioimageio_cache/https/zenodo.org/api/records/5906839/files/tf_weights.zip/content/saved_model.pb'''
-    name: reproduce test outputs from test inputs (bioimageio.core 0.5.10)
-    status: failed
-    traceback: ["  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 157, in _test_model_inference\n    bioimageio_model=model, devices=devices,
-        weight_format=weight_format\n", "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 122, in __enter__\n    self.load()\n", "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_prediction_pipeline.py\",
-        line 180, in load\n    self._model.load()\n", "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_model_adapter.py\",
-        line 57, in load\n    self._load(devices=devices or self.default_devices)\n",
-      "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
-        line 65, in _load\n    weight_file = self.require_unzipped(self.bioimageio_model.weights[self.weight_format].source)\n",
-      "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_tensorflow_model_adapter.py\",
-        line 25, in require_unzipped\n    f.extractall(out_path)\n", "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/zipfile.py\",
-        line 1636, in extractall\n    self._extract_member(zipinfo, path, pwd)\n",
-      "  File \"/home/runner/micromamba/envs/5906839/lib/python3.7/zipfile.py\", line
-        1690, in _extract_member\n    open(targetpath, \"wb\") as target:\n"]
-    warnings: {}
+  - bioimageio_core_version: 0.5.11
+    bioimageio_spec_version: 0.4.9post5
+    error: null
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.11)
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: [Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Device management is not implemented for keras
+          yet, cannot unload model']
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
       test outputs with DeepImageJ headless., status: passed}
