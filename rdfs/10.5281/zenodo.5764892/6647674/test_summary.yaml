@@ -1,4 +1,4 @@
-bioimageio_core_version: 0.5.9
+bioimageio_core_version: 0.5.11
 bioimageio_spec_version: 0.4.9.post1
 rdf_sha256: 9165e7bb81d499f3064cf86061efe521b6307dec718da190fbaf7ab7fb4ef1e6
 status: passed
@@ -27,7 +27,7 @@ tests:
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
         ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
       weights: {torchscript: missing 'pytorch_version'}
-  - bioimageio_core_version: 0.5.9
+  - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
     name: load resource description
@@ -35,7 +35,7 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.9
+  - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
     name: All URLs and paths available
@@ -43,33 +43,33 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.9
+  - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
     name: Test documentation completeness.
     status: passed
     traceback: null
     warnings: {documentation: No '# Validation' (sub)section found.}
-  - bioimageio_core_version: 0.5.9
+  - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
-    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.11)
     status: passed
     traceback: null
     warnings:
       non-validation-warnings: ['Device management is not implemented for onnx yet,
           cannot unload model']
-  - bioimageio_core_version: 0.5.9
+  - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
-    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.11)
     status: passed
     traceback: null
     warnings: {}
-  - bioimageio_core_version: 0.5.9
+  - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
-    name: reproduce test outputs from test inputs (bioimageio.core 0.5.9)
+    name: reproduce test outputs from test inputs (bioimageio.core 0.5.11)
     status: passed
     traceback: null
     warnings:
