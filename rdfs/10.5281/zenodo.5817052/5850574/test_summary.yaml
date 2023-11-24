@@ -15,8 +15,9 @@ tests:
         [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
         ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
         ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
-        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''task'':
-        [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''method'':
+        [''stardist'', ''cellpose'', ''yolo'', ''care'', ''n2v'', ''denoiseg'']},
+        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
   - bioimageio_spec_version: 0.4.9post1
@@ -29,8 +30,9 @@ tests:
         [''electron-microscopy'', ''cryo-electron-microscopy'', ''fluorescence-light-microscopy'',
         ''transmission-light-microscopy'', ''super-resolution-microscopy'', ''x-ray-microscopy'',
         ''force-microscopy'', ''high-content-imaging'', ''whole-slide-imaging'', ''other'']},
-        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''task'':
-        [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+        {''framework'': [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''method'':
+        [''stardist'', ''cellpose'', ''yolo'', ''care'', ''n2v'', ''denoiseg'']},
+        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.11
@@ -63,9 +65,9 @@ tests:
     status: passed
     traceback: null
     warnings:
-      non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., 'Device management is not implemented for keras
-          yet, cannot unload model']
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples.]
   deepimagej:
   - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
       generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,

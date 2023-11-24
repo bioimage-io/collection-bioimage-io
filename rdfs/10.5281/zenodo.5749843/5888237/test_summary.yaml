@@ -11,8 +11,9 @@ tests:
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''task'':
-        [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''method'':
+        [''stardist'', ''cellpose'', ''yolo'', ''care'', ''n2v'', ''denoiseg'']},
+        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
   - bioimageio_spec_version: 0.4.9post1
@@ -21,8 +22,9 @@ tests:
     nested_errors: {}
     status: passed
     traceback: null
-    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''task'':
-        [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
+    warnings: {tags: 'Missing tags corresponding to bioimage.io categories: [{''method'':
+        [''stardist'', ''cellpose'', ''yolo'', ''care'', ''n2v'', ''denoiseg'']},
+        {''task'': [''semantic-segmentation'', ''instance-segmentation'', ''object-detection'',
         ''image-classification'', ''denoising'', ''image-restoration'', ''image-reconstruction'',
         ''in-silico-labeling'']}]'}
   - bioimageio_core_version: 0.5.11
@@ -55,9 +57,9 @@ tests:
     status: passed
     traceback: null
     warnings:
-      non-validation-warnings: ['Device management is not implemented for keras yet,
-          cannot unload model', Computed dataset percentiles naively by averaging
-          percentiles of samples.]
+      non-validation-warnings: [Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Device management is not implemented for keras
+          yet, cannot unload model']
   deepimagej:
   - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
       test outputs with DeepImageJ headless., status: passed}

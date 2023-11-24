@@ -14,7 +14,8 @@ tests:
     warnings:
       tags: 'Missing tags corresponding to bioimage.io categories: [{''framework'':
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
-        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''napari'']}, {''method'':
+        [''stardist'', ''cellpose'', ''yolo'', ''care'', ''n2v'', ''denoiseg'']}]'
       weights: {torchscript: missing 'pytorch_version'}
   - bioimageio_spec_version: 0.4.9post1
     error: null
@@ -25,7 +26,8 @@ tests:
     warnings:
       tags: 'Missing tags corresponding to bioimage.io categories: [{''framework'':
         [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
-        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''n2v'']}]'
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''napari'']}, {''method'':
+        [''stardist'', ''cellpose'', ''yolo'', ''care'', ''n2v'', ''denoiseg'']}]'
       weights: {torchscript: missing 'pytorch_version'}
   - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5

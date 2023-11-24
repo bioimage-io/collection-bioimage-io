@@ -18,8 +18,9 @@ tests:
         {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
         ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
         ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
-        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
-        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''napari'']}, {''network'':
+        [''unet'', ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
   - bioimageio_spec_version: 0.4.9post1
     error: null
     name: bioimageio.spec static validation of model RDF 0.3.6
@@ -33,8 +34,9 @@ tests:
         {''dims'': [''2d'', ''3d'', ''2d-t'', ''3d-t'']}, {''content'': [''cells'',
         ''nuclei'', ''extracellular-vesicles'', ''tissue'', ''plant'', ''mitochondria'',
         ''vasculature'', ''cell-membrane'', ''brain'', ''whole-organism'']}, {''framework'':
-        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''network'': [''unet'',
-        ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
+        [''tensorflow'', ''pytorch'', ''tensorflow.js'']}, {''software'': [''ilastik'',
+        ''imagej'', ''fiji'', ''imjoy'', ''deepimagej'', ''napari'']}, {''network'':
+        [''unet'', ''densenet'', ''resnet'', ''inception'', ''shufflenet'']}]'}
   - bioimageio_core_version: 0.5.11
     bioimageio_spec_version: 0.4.9post5
     error: null
