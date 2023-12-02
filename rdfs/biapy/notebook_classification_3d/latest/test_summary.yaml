@@ -1,0 +1,20 @@
+bioimageio_spec_version: 0.4.9.post1
+rdf_sha256: 793bf2bcc743c77eb75b1fdfe473e81a234f8c05cd076d06d312a770cab56c1d
+status: passed
+tests:
+  bioimageio:
+  - bioimageio_spec_version: 0.4.9post1
+    error: null
+    name: bioimageio.spec static validation of application RDF 0.2.3 with update to
+      latest format version
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'application'. Validating as rdf.}
+  - bioimageio_spec_version: 0.4.9post1
+    error: null
+    name: bioimageio.spec static validation of application RDF 0.2.3
+    nested_errors: {}
+    status: passed
+    traceback: null
+    warnings: {type: Unrecognized type 'application'. Validating as rdf.}
