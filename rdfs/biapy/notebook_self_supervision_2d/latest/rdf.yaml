@@ -1,0 +1,96 @@
+authors:
+- name: BiaPy Team
+badges:
+- icon: https://colab.research.google.com/assets/colab-badge.svg
+  label: Open in Colab
+  url: 
+    https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb
+cite:
+- doi: 10.1109/ISBI53787.2023.10230593
+  text: 'BiaPy: a ready-to-use library for Bioimage Analysis Pipelines. 2023 IEEE
+    20th International Symposium on Biomedical Imaging (ISBI)'
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  contact:
+  - affiliation:
+    - name: DIPC
+      url: https://dipc.ehu.eus/en
+    email: daniel.franco@dipc.org
+    github: danifranco
+    name: Daniel Franco-Barranco
+  default_type: model
+  docs: https://biapy.readthedocs.io/en/latest/
+  explore_button_text: Start Exploring
+  icon: 
+    https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+  id: biapy
+  logo: 
+    https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+  name: BiaPy
+  resource_types:
+  - model
+  - application
+  splash_feature_list: []
+  splash_subtitle: BiaPy is an open source Python library for building bioimage analysis
+    pipelines
+  splash_title: BiaPy
+  tags:
+  - BiaPy
+  url_root: https://github.com/danifranco/BiaPy-bioimage-io
+  version: 3.1.0
+covers:
+- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_self-supervised.png
+description: 2D Self Supervision workflow where the idea is to pretrain the backbone
+  model by solving a so-called pretext task without labels. This way, the model learns
+  a representation that can be later transferred to solve a downstream task in a labeled
+  (but smaller) dataset. There is no restriction in the type of images that can be
+  used as long as they are 2D files.
+documentation: https://biapy.readthedocs.io/en/latest/workflows/self_supervision.html
+download_url: 
+  https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb
+format_version: 0.2.3
+git_repo: https://github.com/danifranco/BiaPy
+id: biapy/notebook_self_supervision_2d/latest
+links:
+- biapy/Notebook Preview
+maintainers:
+- affiliation: Donostia International Physics Center
+  github_user: danifranco
+  name: Daniel Franco-Barranco
+  orcid: 0000-0002-1109-110X
+- affiliation: University of the Basque Country (UPV/EHU)
+  github_user: iarganda
+  name: Ignacio Arganda-Carreras
+  orcid: 0000-0003-0229-5722
+- affiliation: Biofisika Institute
+  github_user: lenkaback
+  name: Lenka Backová
+  orcid: 0000-0002-3076-2618
+- affiliation: University of the Basque Country (UPV/EHU)
+  github_user: AAitorG
+  name: Aitor Gonzalez-Marfil
+  orcid: 0000-0003-1367-4154
+name: Self_Supervision (2D) - BiaPy
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_self_supervision_2d/latest/rdf.yaml
+tags:
+- colab
+- workflow
+- pipeline
+- notebook
+- U-Net
+- ResU-Net
+- ResUNet++
+- Attention U-Net
+- MultiResUNet
+- SE U-Net
+- self-supervision
+- self-supervised
+- SSL
+- BiaPy
+- 2D
+type: application

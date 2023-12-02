@@ -341,5 +341,43 @@
             "stardist"
         ],
         "url_root": "https://github.com/stardist/stardist-bioimage-io"
+    },
+    {
+        "background_image": "static/img/zoo-background.svg",
+        "branch": "main",
+        "collection_file_name": "collection.yaml",
+        "contact": [
+            {
+                "affiliation": [
+                    {
+                        "name": "DIPC",
+                        "url": "https://dipc.ehu.eus/en"
+                    }
+                ],
+                "email": "daniel.franco@dipc.org",
+                "github": "danifranco",
+                "name": "Daniel Franco-Barranco"
+            }
+        ],
+        "default_type": "model",
+        "docs": "https://biapy.readthedocs.io/en/latest/",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "id": "biapy",
+        "logo": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "name": "BiaPy",
+        "repository": "danifranco/BiaPy-bioimage-io",
+        "resource_types": [
+            "model",
+            "application"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": "BiaPy is an open source Python library for building bioimage analysis pipelines",
+        "splash_title": "BiaPy",
+        "tags": [
+            "BiaPy"
+        ],
+        "url_root": "https://github.com/danifranco/BiaPy-bioimage-io",
+        "version": "3.1.0"
     }
 ]
