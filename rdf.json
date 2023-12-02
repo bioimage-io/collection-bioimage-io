@@ -66,7 +66,7 @@
       ],
       "created": "2022-01-18 22:01:09.315638",
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 35254,
+      "download_count": 35257,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -163,7 +163,7 @@
       ],
       "created": "2022-03-08 18:36:28.378522",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 31787,
+      "download_count": 31791,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -210,7 +210,7 @@
       ],
       "created": "2022-06-10 06:22:28.465944",
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 31737,
+      "download_count": 31739,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -293,7 +293,7 @@
       ],
       "created": "2022-06-15 22:12:29.012734",
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 29648,
+      "download_count": 29650,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -493,7 +493,7 @@
       ],
       "created": "2022-03-11 22:32:05.554959",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 27894,
+      "download_count": 27895,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -684,7 +684,7 @@
       ],
       "created": "2022-04-01 16:06:28.519947",
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 26014,
+      "download_count": 26016,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -780,7 +780,7 @@
       ],
       "created": "2023-03-02 05:53:45.695883",
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 24356,
+      "download_count": 24362,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -824,7 +824,7 @@
       ],
       "created": "2023-03-27 12:11:52.357154",
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 23897,
+      "download_count": 23901,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -874,7 +874,7 @@
       ],
       "created": "2022-07-08 17:02:28.049385",
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 22750,
+      "download_count": 22753,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -1125,7 +1125,7 @@
       ],
       "created": "2023-04-06 12:43:33.436336",
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 17749,
+      "download_count": 17755,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1180,7 +1180,7 @@
       ],
       "created": "2023-03-23 21:42:30.250688",
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 17689,
+      "download_count": 17696,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
@@ -1233,7 +1233,7 @@
       ],
       "created": "2022-07-28 07:37:36.393648",
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 17680,
+      "download_count": 17688,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
@@ -1305,7 +1305,7 @@
       ],
       "created": "2022-07-08 14:35:48.861260",
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 15885,
+      "download_count": 15886,
       "id": "10.5281/zenodo.6811491",
       "license": "CC-BY-4.0",
       "links": [
@@ -1559,7 +1559,7 @@
       ],
       "created": "2023-07-07 10:12:51.478763",
       "description": "Cellular membrane prediction model for volume SEM datasets",
-      "download_count": 9235,
+      "download_count": 9240,
       "id": "10.5281/zenodo.7274275",
       "license": "CC-BY-4.0",
       "links": [
@@ -1623,7 +1623,7 @@
       ],
       "created": "2022-11-12 12:53:32.701172",
       "description": "EmbryoNet Model by embryoNet Team",
-      "download_count": 7227,
+      "download_count": 7229,
       "id": "10.5281/zenodo.7315440",
       "license": "GPL-3.0",
       "links": [
@@ -1670,7 +1670,7 @@
       ],
       "created": "2022-12-06 13:55:39.060882",
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 6712,
+      "download_count": 6715,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -1710,7 +1710,7 @@
       ],
       "created": "2023-03-29 11:10:26.329999",
       "description": "Unet trained on confocal images of Arabidopsis Ovules nuclei",
-      "download_count": 6605,
+      "download_count": 6610,
       "id": "10.5281/zenodo.7772662",
       "license": "MIT",
       "links": [
@@ -1812,7 +1812,7 @@
       ],
       "created": "2023-02-15 09:34:43.433531",
       "description": "HyLFM-Net trained on static images of arrested medaka hatchling hearts. The network reconstructs a volumentric image from a given light-field.",
-      "download_count": 5271,
+      "download_count": 5273,
       "id": "10.5281/zenodo.7614645",
       "license": "MIT",
       "links": [
@@ -1904,7 +1904,7 @@
       ],
       "created": "2023-02-06 13:30:05.714615",
       "description": "Light-sheet and light-field images of beating and arrested hatchling (8 dpf) medaka hearts used in \"Deep learning-enhanced light-field imaging with continuous validation\" to train and evaluate a HyLFM-Net.",
-      "download_count": 2014,
+      "download_count": 2015,
       "id": "10.5281/zenodo.7612115",
       "license": "MIT",
       "name": "Hatchling Medaka Heart (HyLFM)",
@@ -1940,7 +1940,7 @@
       ],
       "created": "2023-06-23 10:23:37.255827",
       "description": "Label-free prediction of fluorescence images from brightield images",
-      "download_count": 1914,
+      "download_count": 1916,
       "id": "10.5281/zenodo.8064806",
       "license": "Apache-2.0",
       "links": [
@@ -2022,7 +2022,7 @@
       ],
       "created": "2023-10-11 17:13:48.737609",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
-      "download_count": 1392,
+      "download_count": 1396,
       "id": "10.5281/zenodo.8421755",
       "license": "CC-BY-4.0",
       "links": [
@@ -2080,7 +2080,7 @@
       ],
       "created": "2023-10-09 06:57:28.189519",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 1045,
+      "download_count": 1049,
       "id": "10.5281/zenodo.8419845",
       "license": "CC-BY-4.0",
       "name": "UniFMIRSuperResolutionOnMicrotubules",
@@ -2199,6 +2199,672 @@
       "type": "model",
       "versions": [
         "8420100"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/semantic_segmentation/BiaPy_3D_Semantic_Segmentation.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_semantic_segmentation.png"
+      ],
+      "description": "3D Semantic Segmentation workflow where the goal is to associate a label to every pixel of the input image. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/semantic_segmentation/BiaPy_3D_Semantic_Segmentation.ipynb",
+      "id": "biapy/Notebook_semantic_segmentation_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Semantic Segmentation (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/Notebook_semantic_segmentation_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "segmentation",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/biapy/latest/BiaPy_256.png"
+      ],
+      "description": "BiaPy is an open source Python library for building bioimage analysis pipelines",
+      "download_count": 1,
+      "icon": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+      "id": "biapy/biapy",
+      "name": "BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/biapy/latest/rdf.yaml",
+      "source": "https://github.com/danifranco",
+      "tags": [
+        "biapy",
+        "bioimage.io"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/classification/BiaPy_2D_Classification.ipynb"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_classification_2d/latest/2d_classification.png"
+      ],
+      "description": "2D Classification workflow where full input images are labeled as belonging to a predefined set of classes. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/classification/BiaPy_2D_Classification.ipynb",
+      "id": "biapy/notebook_classification_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Classification (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_classification_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "classification",
+        "ViT",
+        "EfficientNet",
+        "Simple CNN",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/classification/BiaPy_3D_Classification.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_classification.png"
+      ],
+      "description": "3D Classification workflow where full input images are labeled as belonging to a predefined set of classes. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/classification/BiaPy_3D_Classification.ipynb",
+      "id": "biapy/notebook_classification_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Classification (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_classification_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "classification",
+        "ViT",
+        "EfficientNet",
+        "Simple CNN",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_denoising_2d/latest/2d_denoising.png"
+      ],
+      "description": "2D Denoising workflow where the goal is to remove the noise from the input image. Our library includes Noise2Void without relying on noise image pairs nor clean target images to train the model. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb",
+      "id": "biapy/notebook_denoising_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Denoising (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_denoising_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "denoising",
+        "Noise2Void",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/denoising/BiaPy_3D_Denoising.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_denoising.png"
+      ],
+      "description": "3D Denoising workflow where the goal is to remove the noise from the input image. Our library includes Noise2Void without relying on noise image pairs nor clean target images to train the model. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/denoising/BiaPy_3D_Denoising.ipynb",
+      "id": "biapy/notebook_denoising_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Denoising (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_denoising_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "denoising",
+        "Noise2Void",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/detection/BiaPy_2D_Detection.ipynb"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_detection_2d/latest/2d_detection.png"
+      ],
+      "description": "2D Detection workflow where the goal is localize objects in the input image, not requiring a pixel-level class, by extracting individual points at their center of mass. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/detection/BiaPy_2D_Detection.ipynb",
+      "id": "biapy/notebook_detection_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Detection (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_detection_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "detection",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/detection/BiaPy_3D_Detection.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_detection.png"
+      ],
+      "description": "3D Detection workflow where the goal is localize objects in the input image, not requiring a pixel-level class, by extracting individual points at their center of mass. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/detection/BiaPy_3D_Detection.ipynb",
+      "id": "biapy/notebook_detection_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Detection (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_detection_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "detection",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/instance_segmentation/BiaPy_2D_Instance_Segmentation.ipynb"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_instance_segmentation_2d/latest/2d_instance_segmentation.png"
+      ],
+      "description": "2D Instance Segmentation workflow where the goal is to detect, segment, and classify the individual objects of interest in the input image. BiaPy uses a bottom-up approach in instance segmentation workflows by learning the binary masks, contours, and (optionally) the distance map of the objects of interest. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/instance_segmentation/BiaPy_2D_Instance_Segmentation.ipynb",
+      "id": "biapy/notebook_instance_segmentation_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Instance Segmentation (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_instance_segmentation_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "segmentation",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/instance_segmentation/BiaPy_3D_Instance_Segmentation.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_instance_segmentation.png"
+      ],
+      "description": "3D Instance Segmentation workflow where the goal is to detect, segment, and classify the individual objects of interest in the input image. BiaPy uses a bottom-up approach in instance segmentation workflows by learning the binary masks, contours, and (optionally) the distance map of the objects of interest. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/instance_segmentation/BiaPy_3D_Instance_Segmentation.ipynb",
+      "id": "biapy/notebook_instance_segmentation_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Instance Segmentation (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_instance_segmentation_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "segmentation",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_self-supervised.png"
+      ],
+      "description": "2D Self Supervision workflow where the idea is to pretrain the backbone model by solving a so-called pretext task without labels. This way, the model learns a representation that can be later transferred to solve a downstream task in a labeled (but smaller) dataset. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb",
+      "id": "biapy/notebook_self_supervision_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Self_Supervision (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_self_supervision_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "self-supervision",
+        "self-supervised",
+        "SSL",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/self-supervised/BiaPy_3D_Self_Supervision.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_self-supervised.png"
+      ],
+      "description": "3D Self Supervision workflow where the idea is to pretrain the backbone model by solving a so-called pretext task without labels. This way, the model learns a representation that can be later transferred to solve a downstream task in a labeled (but smaller) dataset. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/self-supervised/BiaPy_3D_Self_Supervision.ipynb",
+      "id": "biapy/notebook_self_supervision_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Self_Supervision (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_self_supervision_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "MAE",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "self-supervision",
+        "self-supervised",
+        "SSL",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/semantic_segmentation/BiaPy_2D_Semantic_Segmentation.ipynb"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_semantic_segmentation_2d/latest/2d_semantic_segmentation.png"
+      ],
+      "description": "2D Semantic Segmentation workflow where the goal is to associate a label to every pixel of the input image. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/semantic_segmentation/BiaPy_2D_Semantic_Segmentation.ipynb",
+      "id": "biapy/notebook_semantic_segmentation_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Semantic Segmentation (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_semantic_segmentation_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "segmentation",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/super-resolution/BiaPy_2D_Super_Resolution.ipynb"
+        }
+      ],
+      "covers": [
+        "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_super_resolution_2d/latest/2d_super-resolution.png"
+      ],
+      "description": "2D Super Resolution workflow where the goal is to reconstruct high-resolution (HR) images from low-resolution (LR) ones. There is no restriction in the type of images that can be used as long as they are 2D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/super-resolution/BiaPy_2D_Super_Resolution.ipynb",
+      "id": "biapy/notebook_super_resolution_2d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Super_Resolution (2D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_super_resolution_2d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "EDSR",
+        "DFCAN",
+        "WDSR",
+        "RCAN",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "Super Resolution",
+        "SR",
+        "BiaPy",
+        "2D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "BiaPy Team"
+        }
+      ],
+      "badges": [
+        {
+          "icon": "https://colab.research.google.com/assets/colab-badge.svg",
+          "label": "Open in Colab",
+          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb"
+        }
+      ],
+      "covers": [
+        "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_super-resolution.png"
+      ],
+      "description": "3D Super Resolution workflow where the goal is to reconstruct high-resolution (HR) images from low-resolution (LR) ones. There is no restriction in the type of images that can be used as long as they are 3D files.",
+      "download_count": 1,
+      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb",
+      "id": "biapy/notebook_super_resolution_3d",
+      "links": [
+        "biapy/Notebook Preview"
+      ],
+      "name": "Super Resolution (3D) - BiaPy",
+      "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_super_resolution_3d/latest/rdf.yaml",
+      "tags": [
+        "colab",
+        "workflow",
+        "pipeline",
+        "notebook",
+        "EDSR",
+        "DFCAN",
+        "WDSR",
+        "RCAN",
+        "U-Net",
+        "ResU-Net",
+        "ResUNet++",
+        "Attention U-Net",
+        "MultiResUNet",
+        "SE U-Net",
+        "Super Resolution",
+        "SR",
+        "BiaPy",
+        "3D"
+      ],
+      "type": "application",
+      "versions": [
+        "latest"
       ]
     },
     {
@@ -5225,13 +5891,13 @@
     "default_type": "model",
     "explore_button_text": "Start Exploring",
     "n_resource_versions": {
-      "application": 104,
+      "application": 134,
       "dataset": 84,
       "model": 142,
       "notebook": 4
     },
     "n_resources": {
-      "application": 52,
+      "application": 67,
       "dataset": 42,
       "model": 45,
       "notebook": 2
@@ -5579,6 +6245,44 @@
           "stardist"
         ],
         "url_root": "https://github.com/stardist/stardist-bioimage-io"
+      },
+      {
+        "background_image": "static/img/zoo-background.svg",
+        "branch": "main",
+        "collection_file_name": "collection.yaml",
+        "contact": [
+          {
+            "affiliation": [
+              {
+                "name": "DIPC",
+                "url": "https://dipc.ehu.eus/en"
+              }
+            ],
+            "email": "daniel.franco@dipc.org",
+            "github": "danifranco",
+            "name": "Daniel Franco-Barranco"
+          }
+        ],
+        "default_type": "model",
+        "docs": "https://biapy.readthedocs.io/en/latest/",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "id": "biapy",
+        "logo": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "name": "BiaPy",
+        "repository": "danifranco/BiaPy-bioimage-io",
+        "resource_types": [
+          "model",
+          "application"
+        ],
+        "splash_feature_list": [],
+        "splash_subtitle": "BiaPy is an open source Python library for building bioimage analysis pipelines",
+        "splash_title": "BiaPy",
+        "tags": [
+          "BiaPy"
+        ],
+        "url_root": "https://github.com/danifranco/BiaPy-bioimage-io",
+        "version": "3.1.0"
       }
     ],
     "resource_types": [
