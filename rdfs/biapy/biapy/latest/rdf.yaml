@@ -1,5 +1,44 @@
 authors:
-- name: BiaPy Team
+- affiliation: Donostia International Physics Center
+  github_user: danifranco
+  name: Daniel Franco-Barranco
+  orcid: 0000-0002-1109-110X
+- affiliation: University of the Basque Country (UPV/EHU)
+  github_user: iarganda
+  name: Ignacio Arganda-Carreras
+  orcid: 0000-0003-0229-5722
+- affiliation: Universidad Carlos III de Madrid
+  github_user: arratemunoz
+  name: Arrate Muñoz-Barrutia
+  orcid: 0000-0002-1573-1661
+- affiliation: University of Seville
+  github_user: jansanrom
+  name: Jesús Ángel Andrés-San Román
+  orcid: 0000-0003-3197-5014
+- affiliation: Cambridge University
+  github_user: pedgomgal1
+  name: Pedro Javier Gómez Gálvez
+  orcid: 0000-0002-0509-227X
+- affiliation: University of Seville
+  github_user: lmescu
+  name: Luis M. Escudero
+  orcid: 0000-0001-8030-1820
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: IvanHCenalmor
+  name: Iván Hidalgo Cenalmor
+  orcid: 0009-0000-8923-568X
+- affiliation: Biofisika Institute
+  github_user: lenkaback
+  name: Lenka Backová
+  orcid: 0000-0002-3076-2618
+- affiliation: University of the Basque Country (UPV/EHU)
+  github_user: AAitorG
+  name: Aitor Gonzalez-Marfil
+  orcid: 0000-0003-1367-4154
+- affiliation: Boston College
+  github_user: donglaiw
+  name: Donglai Wei
+  orcid: 0000-0002-2329-5484
 cite:
 - doi: 10.1109/ISBI53787.2023.10230593
   text: 'BiaPy: a ready-to-use library for Bioimage Analysis Pipelines. 2023 IEEE
@@ -44,7 +83,7 @@ description: BiaPy is an open source Python library for building bioimage analys
 documentation: https://biapy.readthedocs.io/en/latest/
 format_version: 0.2.3
 icon: 
-  https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+  https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_512.png
 id: biapy/biapy/latest
 maintainers:
 - github_user: danifranco
