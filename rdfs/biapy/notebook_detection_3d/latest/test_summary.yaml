@@ -1,5 +1,5 @@
 bioimageio_spec_version: 0.4.9.post1
-rdf_sha256: 7bb423b1065045183d39f2f0ba81ebd4a05127980dc8f373b1cccad0f7e7d455
+rdf_sha256: 2731d21583432bf1a09221ea4e36a13819dd48070873d8365b59cb949750d98b
 status: passed
 tests:
   bioimageio:
@@ -18,16 +18,3 @@ tests:
     status: passed
     traceback: null
     warnings: {type: Unrecognized type 'application'. Validating as rdf.}
-  ilastik:
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: Missing/invalid weight formats for biapy/notebook_detection_3d/latest
-    name: Reproduce test outputs with ilastik 1.4.0rc8
-    status: failed
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: Missing/invalid weight formats for biapy/notebook_detection_3d/latest
-    name: Reproduce test outputs with ilastik 1.4.0
-    status: failed
-    warnings: {}

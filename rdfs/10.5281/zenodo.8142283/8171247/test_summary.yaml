@@ -64,7 +64,3 @@ tests:
     status: passed
     traceback: null
     warnings: {}
-  deepimagej:
-  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, error: rdf does
-      not have a compatible weight format., name: Initial compatibility checks with
-      DeepImageJ., status: failed}
