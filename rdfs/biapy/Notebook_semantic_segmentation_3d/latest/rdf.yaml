@@ -43,7 +43,7 @@ config:
   url_root: https://github.com/danifranco/BiaPy-bioimage-io
   version: 3.1.0
 covers:
-- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_semantic_segmentation.png
+- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_semantic_segmentation.png
 description: 3D Semantic Segmentation workflow where the goal is to associate a label
   to every pixel of the input image. There is no restriction in the type of images
   that can be used as long as they are 3D files.

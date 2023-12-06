@@ -48,7 +48,7 @@ versions:
       url_root: https://github.com/danifranco/BiaPy-bioimage-io
       version: 3.1.0
     covers:
-    - https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_super-resolution.png
+    - https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_super-resolution.png
     description: 3D Super Resolution workflow where the goal is to reconstruct high-resolution
       (HR) images from low-resolution (LR) ones. There is no restriction in the type
       of images that can be used as long as they are 3D files.

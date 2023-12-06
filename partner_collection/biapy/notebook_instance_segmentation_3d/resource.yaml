@@ -48,7 +48,7 @@ versions:
       url_root: https://github.com/danifranco/BiaPy-bioimage-io
       version: 3.1.0
     covers:
-    - https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_instance_segmentation.png
+    - https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_instance_segmentation.png
     description: 3D Instance Segmentation workflow where the goal is to detect, segment,
       and classify the individual objects of interest in the input image. BiaPy uses
       a bottom-up approach in instance segmentation workflows by learning the binary

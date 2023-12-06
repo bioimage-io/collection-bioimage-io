@@ -43,7 +43,7 @@ config:
   url_root: https://github.com/danifranco/BiaPy-bioimage-io
   version: 3.1.0
 covers:
-- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_self-supervised.png
+- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_self-supervised.png
 description: 3D Self Supervision workflow where the idea is to pretrain the backbone
   model by solving a so-called pretext task without labels. This way, the model learns
   a representation that can be later transferred to solve a downstream task in a labeled

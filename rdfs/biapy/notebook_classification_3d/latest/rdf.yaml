@@ -43,7 +43,7 @@ config:
   url_root: https://github.com/danifranco/BiaPy-bioimage-io
   version: 3.1.0
 covers:
-- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/3d_classification.png
+- https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_classification.png
 description: 3D Classification workflow where full input images are labeled as belonging
   to a predefined set of classes. There is no restriction in the type of images that
   can be used as long as they are 3D files.
