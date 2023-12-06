@@ -1,54 +1,30 @@
-authors: []
+authors:
+- affiliation: EPFL, UC3M
+  name: DeepImageJ
 badges: []
 cite:
-- doi: 10.1038/s41592-021-01262-9
-  text: 'E. Gómez-de-Mariscal, C. García-López-de-Haro, W. Ouyang, L. Donati, E. Lundberg,
-    M. Unser, A. Muñoz-Barrutia, D. Sage, "DeepImageJ: A user-friendly environment
-    to run deep learning models in ImageJ", Nat Methods 18, 1192–1195 (2021).'
+- doi: https://doi.org/10.1101/799270
+  text: 'Gómez-de-Mariscal, E., García-López-de-Haro, C., Ouyang, W., Donati, L.,
+    Lundberg E., Unser, M., Muñoz-Barrutia, A. and Sage, D. DeepImageJ: A user-friendly
+    plugin to run deep learning models in ImageJ, BioRxiv, 2019'
 config:
-  background_image: static/img/zoo-background.svg
   bioimageio:
     status: accepted
     version_id: latest
     version_name: latest
-  contact:
-  - affiliation:
-    - name: UC3M
-      url: https://www.uc3m.es/home
-    email: mamunozb@ing.uc3m.es
-    github: arratemunoz
-    name: Arrate Muñoz Barrutia
-  - affiliation:
-    - name: EPFL
-      url: https://www.epfl.ch/en/
-    email: daniel.sage@epfl.ch
-    github: dasv74
-    name: Daniel Sage
-  docs: https://github.com/deepimagej/deepimagej-plugin/wiki
-  explore_button_text: Start Exploring
-  icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
-  id: deepimagej
-  logo: https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png
-  name: DeepImageJ
-  resource_types:
-  - model
-  - notebook
-  - application
-  splash_feature_list:
-  splash_subtitle: A user-friendly plugin to run deep learning models in ImageJ
-  splash_title: deepImageJ
-  tags:
-  - deepimagej
-  url_root: https://raw.githubusercontent.com/deepimagej/models/master
+  supported_weight_formats:
+  - tensorflow_saved_model_bundle
+  - torchscript
 covers: []
-description: Export BioImage.IO model packages for deepImageJ from a model description
-  file
-documentation: https://deepimagej.github.io/deepimagej/
+description: DeepImageJ is a user-friendly plugin that enables the use of pre-trained
+  deep learning models in ImageJ and Fiji.
+documentation: https://deepimagej.github.io/
 format_version: 0.2.3
+git_repo: https://github.com/deepimagej/deepimagej-plugin
 icon: https://raw.githubusercontent.com/deepimagej/models/master/logos/icon.png
 id: deepimagej/deepimagej/latest
 maintainers: []
-name: deepimagej
+name: deepImageJ
 rdf_source: 
   https://bioimage-io.github.io/collection-bioimage-io/rdfs/deepimagej/deepimagej/latest/rdf.yaml
 source: 
@@ -56,5 +32,6 @@ source:
 tags:
 - software
 - bioengine
+- deepimagej
 type: application
 version: 2.1.11

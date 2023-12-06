@@ -86,7 +86,7 @@
         "id": "deepimagej",
         "logo": "https://raw.githubusercontent.com/deepimagej/models/master/logos/logo.png",
         "name": "DeepImageJ",
-        "repository": "fynnbe/models",
+        "repository": "deepimagej/models",
         "resource_types": [
             "model",
             "notebook",
