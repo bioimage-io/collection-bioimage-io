@@ -55,3 +55,6 @@ tests:
     status: passed
     traceback: null
     warnings: {}
+  deepimagej:
+  - {bioimageio_core_version: 0.5.9, bioimageio_spec_version: 0.4.9, name: Reproduce
+      test outputs with DeepImageJ GUI (manually tested)., status: passed}

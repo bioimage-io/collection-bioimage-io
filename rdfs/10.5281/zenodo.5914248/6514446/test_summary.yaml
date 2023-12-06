@@ -54,3 +54,135 @@ tests:
       non-validation-warnings: ['Device management is not implemented for keras yet,
           cannot unload model', Computed dataset percentiles naively by averaging
           percentiles of samples.]
+  deepimagej:
+  - {bioimageio_spec_version: 0.4.8post1, error: Sample image tiffs have not been
+      generated from numpy tests files, name: Initial compatibility checks with DeepImageJ,
+    status: failed}
+  ilastik:
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: local variable 'rd' referenced before assignment
+    name: reproduce test outputs with ilastik 1.4.0rc8 using keras_hdf5 weights
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/home/runner/work/bioimage-io-resources/bioimage-io-resources/scripts/test_with_ilastik.py\",
+        line 82, in run_tests\n    summaries = test_model(rdf_path, weight_format=weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 41, in test_model\n    model_rdf, weight_format=weight_format, devices=devices,
+        decimal=decimal, expected_type=\"model\"\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 250, in test_resource\n    rd, load_test = _test_load_resource(rdf, weight_format)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 224, in _test_load_resource\n    return rd, load_summary\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: load resource description
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - {error: null, name: has expected resource type, status: passed, traceback: null}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Device management is not implemented for keras yet,
+          cannot unload model', Computed dataset percentiles naively by averaging
+          percentiles of samples., 'Model tensorflow version (1, 15) does not match
+          1.14.0.The prediction results may be wrong']
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: 'Failed to download https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/unet_pancreatic_cell_segmentation.h5
+      (404 Client Error: NOT FOUND for url: https://zenodo.org/api/files/da7b84a8-f43a-4a24-93cd-9716be7b2655/unet_pancreatic_cell_segmentation.h5)'
+    name: load resource description
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 202, in _test_load_resource\n    rdf, weights_priority_order=None if
+        weight_format is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 57, in load_resource_description\n    rd: ResourceDescription = resolve_raw_node(raw_rd=raw_rd,
+        nodes_module=nodes)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/utils.py\",
+        line 121, in resolve_raw_node\n    rd = UriNodeTransformer(root_path=raw_rd.root_path,
+        uri_only_if_in_package=uri_only_if_in_package).transform(raw_rd)\n", "  File
+        \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 65, in transform_dict\n    return {key: self.transform(value, **kwargs)
+        for key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 65, in <dictcomp>\n    return {key: self.transform(value, **kwargs) for
+        key, value in node.items()}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in generic_transformer\n    node, **{n: self.transform(value, name=n,
+        parent=node) for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 161, in <dictcomp>\n    node, **{n: self.transform(value, name=n, parent=node)
+        for n, value in iter_fields(node)}\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 56, in transform\n    return transformer(node, **kwargs)  # noqa\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/node_transformer.py\",
+        line 339, in transform_URI\n    local_path = _resolve_source(node, root_path=self.root)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/functools.py\",
+        line 840, in wrapper\n    return dispatch(args[0].__class__)(*args, **kw)\n",
+      "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 253, in _resolve_source_uri_node\n    local_path = _download_url(path_or_remote_uri,
+        output, pbar=pbar)\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/spec/shared/_resolve_source.py\",
+        line 479, in _download_url\n    raise RuntimeError(f\"Failed to download {uri}
+        ({e})\") from e\n"]
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: load resource description
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: All URLs and paths available
+    nested_errors: null
+    status: passed
+    traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: Test documentation completeness.
+    status: passed
+    traceback: null
+    warnings: {documentation: No '# Validation' (sub)section found.}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: ['Model tensorflow version (1, 15) does not match 1.14.0.The
+          prediction results may be wrong', 'Device management is not implemented
+          for keras yet, cannot unload model', Computed dataset percentiles naively
+          by averaging percentiles of samples.]
