@@ -93,6 +93,6 @@ rdf_source:
   https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/biapy/latest/rdf.yaml
 source: https://github.com/danifranco
 tags:
+- software
 - biapy
-- bioimage.io
 type: application

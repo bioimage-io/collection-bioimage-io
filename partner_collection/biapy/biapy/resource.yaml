@@ -96,6 +96,6 @@ versions:
     name: BiaPy
     source: https://github.com/danifranco
     tags:
+    - software
     - biapy
-    - bioimage.io
     type: application
