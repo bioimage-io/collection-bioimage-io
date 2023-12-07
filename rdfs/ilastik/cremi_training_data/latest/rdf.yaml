@@ -24,6 +24,7 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
+  - software
   url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers:
 - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/cremi-cover0.png

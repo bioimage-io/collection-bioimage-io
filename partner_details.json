@@ -202,7 +202,8 @@
         "splash_subtitle": "the interactive learning and segmentation toolkit",
         "splash_title": "ilastik",
         "tags": [
-            "ilastik"
+            "ilastik",
+            "software"
         ],
         "test_summaries": {
             "deploy_branch": "gh-pages",
