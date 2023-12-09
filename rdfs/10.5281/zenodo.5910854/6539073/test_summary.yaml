@@ -83,6 +83,18 @@ tests:
       sample images to test., name: Downloading testing resources for DeepImageJ.,
     status: failed}
   ilastik:
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: Not found any of the specified weights formats ['pytorch_script']
+    name: load resource description
+    nested_errors: null
+    status: failed
+    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
+        line 202, in _test_load_resource\n    rdf, weights_priority_order=None if
+        weight_format is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
+        line 55, in load_resource_description\n    raise ValueError(f\"Not found any
+        of the specified weights formats {weights_priority_order}\")\n"]
+    warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -175,16 +187,4 @@ tests:
         line 157, in _get_model_adapter\n    from ._onnx_model_adapter import ONNXModelAdapter\n",
       "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/prediction_pipeline/_model_adapters/_onnx_model_adapter.py\",
         line 5, in <module>\n    import onnxruntime as rt\n"]
-    warnings: {}
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: Not found any of the specified weights formats ['pytorch_script']
-    name: load resource description
-    nested_errors: null
-    status: failed
-    traceback: ["  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_tests.py\",
-        line 202, in _test_load_resource\n    rdf, weights_priority_order=None if
-        weight_format is None else [weight_format]\n", "  File \"/usr/share/miniconda3/envs/ilastik-env/lib/python3.7/site-packages/bioimageio/core/resource_io/io_.py\",
-        line 55, in load_resource_description\n    raise ValueError(f\"Not found any
-        of the specified weights formats {weights_priority_order}\")\n"]
     warnings: {}
