@@ -117,15 +117,7 @@ tests:
     name: reproduce test outputs from test inputs
     status: passed
     traceback: null
-    warnings:
-      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
-          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
-          function NOT ''floor''). This results in incorrect rounding for negative
-          values.
-
-          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
-          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
-          (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755885937/work/aten/src/ATen/native/BinaryOps.cpp:607.)']
+    warnings: {}
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -154,6 +146,13 @@ tests:
     name: reproduce test outputs from test inputs
     status: passed
     traceback: null
+    warnings: {}
+  - bioimageio_core_version: 0.5.7
+    bioimageio_spec_version: 0.4.8
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
     warnings:
       non-validation-warnings: ['floor_divide is deprecated, and will be removed in
           a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
@@ -169,14 +168,15 @@ tests:
     name: reproduce test outputs from test inputs
     status: passed
     traceback: null
-    warnings: {}
-  - bioimageio_core_version: 0.5.7
-    bioimageio_spec_version: 0.4.8
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings: {}
+    warnings:
+      non-validation-warnings: ['floor_divide is deprecated, and will be removed in
+          a future version of pytorch. It currently rounds toward 0 (like the ''trunc''
+          function NOT ''floor''). This results in incorrect rounding for negative
+          values.
+
+          To keep the current behavior, use torch.div(a, b, rounding_mode=''trunc''),
+          or for actual floor division, use torch.div(a, b, rounding_mode=''floor'').
+          (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755885937/work/aten/src/ATen/native/BinaryOps.cpp:607.)']
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: No module named 'onnxruntime'

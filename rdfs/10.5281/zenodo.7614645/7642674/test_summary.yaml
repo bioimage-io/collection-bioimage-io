@@ -114,7 +114,8 @@ tests:
     status: passed
     traceback: null
     warnings:
-      non-validation-warnings: [Computed dataset percentiles naively by averaging
+      non-validation-warnings: [nn.init.xavier_uniform is now deprecated in favor
+          of nn.init.xavier_uniform_., Computed dataset percentiles naively by averaging
           percentiles of samples.]
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
@@ -146,17 +147,8 @@ tests:
     traceback: null
     warnings:
       non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples.]
-  - bioimageio_core_version: 0.5.8
-    bioimageio_spec_version: 0.4.9
-    error: null
-    name: reproduce test outputs from test inputs
-    status: passed
-    traceback: null
-    warnings:
-      non-validation-warnings: [nn.init.xavier_uniform is now deprecated in favor
-          of nn.init.xavier_uniform_., Computed dataset percentiles naively by averaging
-          percentiles of samples.]
+          percentiles of samples., nn.init.xavier_uniform is now deprecated in favor
+          of nn.init.xavier_uniform_.]
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: null
@@ -165,8 +157,16 @@ tests:
     traceback: null
     warnings:
       non-validation-warnings: [Computed dataset percentiles naively by averaging
-          percentiles of samples., nn.init.xavier_uniform is now deprecated in favor
-          of nn.init.xavier_uniform_.]
+          percentiles of samples.]
+  - bioimageio_core_version: 0.5.8
+    bioimageio_spec_version: 0.4.9
+    error: null
+    name: reproduce test outputs from test inputs
+    status: passed
+    traceback: null
+    warnings:
+      non-validation-warnings: [Computed dataset percentiles naively by averaging
+          percentiles of samples.]
   - bioimageio_core_version: 0.5.7
     bioimageio_spec_version: 0.4.8
     error: No module named 'onnxruntime'
