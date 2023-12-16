@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10391887
+id: 10.5281/zenodo.10391887
+nickname: stupendous-sheep
+nickname_icon: 🐑
+owners:
+- 612383
+status: accepted
+type: model
+versions:
+- created: '2023-12-15 16:26:47.077372'
+  doi: 10.5281/zenodo.10391888
+  name: (Empanada) 2D Instance Mitochondrial Segmentation in EM Images - 2D MitoNet
+  status: accepted
+  version_id: '10391888'
+  version_name: version from 2023-12-15
+  rdf_source: https://zenodo.org/api/records/10391888/files/rdf.yaml/content
