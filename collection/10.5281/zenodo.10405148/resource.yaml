@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10405148
+id: 10.5281/zenodo.10405148
+nickname: convivial-rabbit
+nickname_icon: 🐇
+owners:
+- 1004358
+status: accepted
+type: model
+versions:
+- created: '2023-12-21 10:08:42.111308'
+  doi: 10.5281/zenodo.10405149
+  name: Image Translation from Lifeact-RFP to sir-DNA images - Pix2Pix
+  status: accepted
+  version_id: '10405149'
+  version_name: version from 2023-12-19
+  rdf_source: https://zenodo.org/api/records/10405149/files/rdf.yaml/content
