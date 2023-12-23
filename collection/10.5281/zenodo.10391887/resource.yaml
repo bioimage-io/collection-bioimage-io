@@ -14,3 +14,18 @@ versions:
   version_id: '10391888'
   version_name: version from 2023-12-15
   rdf_source: https://zenodo.org/api/records/10391888/files/rdf.yaml/content
+  outputs:
+  - axes: yx
+    data_range:
+    - 0.0
+    - 65535.0
+    data_type: uint16
+    name: output0
+    shape:
+      offset:
+      - 0.0
+      - 0.0
+      reference_tensor: raw
+      scale:
+      - 1.0
+      - 1.0
