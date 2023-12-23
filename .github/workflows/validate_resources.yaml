@@ -52,7 +52,7 @@ jobs:
           - conda-forge
         create-args: >-  # script dependencies
           bioimageio.core
-          bioimageio.spec
+          bioimageio.spec>=0.4.9.post5
           lxml
           packaging
           typer
