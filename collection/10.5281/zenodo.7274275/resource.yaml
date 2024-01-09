@@ -14,6 +14,13 @@ versions:
   version_id: '10047226'
   version_name: version from 2023-10-27
   rdf_source: https://zenodo.org/api/records/10047226/files/rdf.yaml/content
+  config:
+    bioimageio:
+      test_kwargs:
+        pytorch_state_dict:
+          decimal: 2
+        torchscript:
+          decimal: 2
 - created: '2023-10-27 11:32:10.061066'
   doi: 10.5281/zenodo.10047209
   name: CebraNET Cellular Membranes in Volume SEM
