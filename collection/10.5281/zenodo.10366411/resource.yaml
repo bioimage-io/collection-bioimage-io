@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10366411
+id: 10.5281/zenodo.10366411
+nickname: funny-butterfly
+nickname_icon: 🦋
+owners:
+- 271523
+status: accepted
+type: model
+versions:
+- created: '2023-12-14 12:01:44.656032'
+  doi: 10.5281/zenodo.10366412
+  name: Mitochondria TOM20 artificial labelling - pix2pix
+  status: blocked
+  version_id: '10366412'
+  version_name: version from 2023-12-12
+  rdf_source: https://zenodo.org/api/records/10366412/files/rdf.yaml/content
