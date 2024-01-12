@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2024-01-11 15:31:40.010085'
+  doi: 10.5281/zenodo.10492722
+  name: Mitochondria TOM20 artificial labelling - pix2pix
+  status: accepted
+  version_id: '10492722'
+  version_name: version from 2024-01-11
+  rdf_source: https://zenodo.org/api/records/10492722/files/rdf.yaml/content
 - created: '2023-12-14 12:01:44.656032'
   doi: 10.5281/zenodo.10366412
   name: Mitochondria TOM20 artificial labelling - pix2pix
