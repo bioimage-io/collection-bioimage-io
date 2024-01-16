@@ -72,3 +72,4 @@ versions:
     - Data Augmentation
     - ZeroCostDL4Mic
     type: application
+    version: '1.13'

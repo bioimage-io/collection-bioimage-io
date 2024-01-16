@@ -64,3 +64,4 @@ versions:
     - Quality Control
     - ZeroCostDL4Mic
     type: application
+    version: '1.13'

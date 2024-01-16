@@ -82,3 +82,4 @@ versions:
     - 2D
     - deepImageJ
     type: application
+    version: '1.13'

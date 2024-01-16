@@ -74,3 +74,4 @@ versions:
     - Segmentation
     - ZeroCostDL4Mic
     type: application
+    version: 1.16.2

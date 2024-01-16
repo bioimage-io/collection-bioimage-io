@@ -75,3 +75,4 @@ versions:
     - ZeroCostDL4Mic
     - 2D
     type: application
+    version: 2.1.2
