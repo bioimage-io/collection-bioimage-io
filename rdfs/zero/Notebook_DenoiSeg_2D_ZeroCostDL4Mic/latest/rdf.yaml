@@ -15,31 +15,24 @@ cite:
     – ECCV 2020 Workshops. ECCV 2020. Lecture Notes in Computer Science, vol 12535.
     Springer, Cham. https://doi.org/10.1007/978-3-030-66415-2_21'
 config:
-  background_image: static/img/zoo-background.svg
   bioimageio:
     status: accepted
     version_id: latest
     version_name: latest
-  default_type: application
-  explore_button_text: Start Exploring
-  icon: 
-    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-  id: zero
-  logo: 
-    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-  name: ZeroCostDL4Mic
-  resource_types:
-  - model
-  - application
-  - dataset
-  splash_feature_list: []
-  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
-    Microscopy
-  splash_title: ZeroCostDL4Mic
-  tags:
-  - ZeroCostDL4Mic
-  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-  version: 1.7.1
+  dl4miceverywhere:
+    cuda_version: 11.8.0
+    description: DenoiSeg_DL4Mic is the conversion of the CellPose 2D notebook from
+      ZeroCostDL4Mic.
+    dl4miceverywhere_version: 1.0.0
+    docker_hub_image: denoiseg_zerocostdl4mic-z1.14.1-d1.0.0
+    notebook_url: 
+      https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
+    notebook_version: 1.14.1
+    python_version: '3.9'
+    requirements_url: 
+      https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/Denoiseg_requirements_simple.txt
+    sections_to_remove: 1.1. 1.2. 2. 6.3.
+    ubuntu_version: '22.04'
 covers:
 - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Denoiseg_notebook.png
 description: Joint denoising and binary segmentation of 2D images. DenoiSeg 2D is

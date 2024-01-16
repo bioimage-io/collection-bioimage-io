@@ -22,27 +22,20 @@ versions:
         Blind Spot Denoising for Microscopy. arXiv:2008.08414
       url: https://arxiv.org/abs/2008.08414
     config:
-      background_image: static/img/zoo-background.svg
-      default_type: application
-      explore_button_text: Start Exploring
-      icon: 
-        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-      id: zero
-      logo: 
-        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-      name: ZeroCostDL4Mic
-      resource_types:
-      - model
-      - application
-      - dataset
-      splash_feature_list: []
-      splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
-        in Microscopy
-      splash_title: ZeroCostDL4Mic
-      tags:
-      - ZeroCostDL4Mic
-      url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-      version: 1.7.1
+      dl4miceverywhere:
+        cuda_version: 11.8.0
+        description: DecoNoising_2D_DL4Mic is the conversion of the CellPose 2D notebook
+          from ZeroCostDL4Mic.
+        dl4miceverywhere_version: 1.0.0
+        docker_hub_image: deconoising_2d_zerocostdl4mic-z1.14.1-d1.0.0
+        notebook_url: 
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
+        notebook_version: 1.14.1
+        python_version: '3.9'
+        requirements_url: 
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/DecoNoising_2D_requirements_simple.txt
+        sections_to_remove: 2. 6.3.
+        ubuntu_version: '22.04'
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DecoNoising_notebook.png
     description: Self-supervised denoising of 2D images. DecoNoising 2D is deep-learning

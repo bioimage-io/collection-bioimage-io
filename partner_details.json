@@ -380,5 +380,28 @@
         ],
         "url_root": "https://github.com/danifranco/BiaPy-bioimage-io",
         "version": "3.1.0"
+    },
+    {
+        "background_image": "static/img/zoo-background.svg",
+        "branch": "main",
+        "collection_file_name": "collection.yaml",
+        "default_type": "model",
+        "explore_button_text": "Start Exploring",
+        "icon": "https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png",
+        "id": "dl4miceverywhere",
+        "logo": "https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png",
+        "name": "DL4MicEverywhere",
+        "repository": "HenriquesLab/DL4MicEverywhere-bioimage-io",
+        "resource_types": [
+            "application",
+            "model"
+        ],
+        "splash_feature_list": null,
+        "splash_subtitle": "DL4MicEverywhere is an open-source and user-friendly platform of deep learning techniques for bioimage analysis that ensures the portability and reproducibility of the methods.",
+        "splash_title": "DL4MicEverywhere",
+        "tags": [
+            "dl4miceverywhere"
+        ],
+        "url_root": "https://github.com/HenriquesLab/DL4MicEverywhere-bioimage-io"
     }
 ]

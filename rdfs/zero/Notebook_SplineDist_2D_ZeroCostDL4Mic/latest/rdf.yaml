@@ -13,31 +13,24 @@ cite:
   text: 'Soham Mandal, Virginie Uhlmann. SplineDist: Automated Cell Segmentation With
     Spline Curves. bioRxiv 2020.10.27.357640; doi: https://doi.org/10.1101/2020.10.27.357640'
 config:
-  background_image: static/img/zoo-background.svg
   bioimageio:
     status: accepted
     version_id: latest
     version_name: latest
-  default_type: application
-  explore_button_text: Start Exploring
-  icon: 
-    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-  id: zero
-  logo: 
-    https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-  name: ZeroCostDL4Mic
-  resource_types:
-  - model
-  - application
-  - dataset
-  splash_feature_list: []
-  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in
-    Microscopy
-  splash_title: ZeroCostDL4Mic
-  tags:
-  - ZeroCostDL4Mic
-  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-  version: 1.7.1
+  dl4miceverywhere:
+    cuda_version: 11.8.0
+    description: SplineDist2D_DL4Mic is the conversion of the CellPose 2D notebook
+      from ZeroCostDL4Mic.
+    dl4miceverywhere_version: 1.0.0
+    docker_hub_image: splinedist_2d_zerocostdl4mic-z1.14.1-d1.0.0
+    notebook_url: 
+      https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    notebook_version: 1.14.1
+    python_version: '3.9'
+    requirements_url: 
+      https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/SplineDist_2D_requirements_simple.txt
+    sections_to_remove: 1.1. 1.2. 2. 6.2.
+    ubuntu_version: '22.04'
 covers:
 - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
 description: Instance segmentation of 2D images. SplineDist is a neural network inspired

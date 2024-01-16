@@ -22,27 +22,19 @@ versions:
         Translation using Cycle-Consistent Adversarial Networks. arXiv:1703.10593
       url: https://arxiv.org/abs/1703.10593
     config:
-      background_image: static/img/zoo-background.svg
-      default_type: application
-      explore_button_text: Start Exploring
-      icon: 
-        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-      id: zero
-      logo: 
-        https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-      name: ZeroCostDL4Mic
-      resource_types:
-      - model
-      - application
-      - dataset
-      splash_feature_list: []
-      splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning
-        in Microscopy
-      splash_title: ZeroCostDL4Mic
-      tags:
-      - ZeroCostDL4Mic
-      url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
-      version: 1.7.1
+      dl4miceverywhere:
+        cuda_version: 11.8.0
+        description: CycleGAN_DL4Mic is the conversion of the CycleGAN from ZeroCostDL4Mic.
+        dl4miceverywhere_version: 1.0.0
+        docker_hub_image: cyclegan_zerocostdl4mic-z1.13.2-d1.0.0
+        notebook_url: 
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
+        notebook_version: 1.13.2
+        python_version: '3.8'
+        requirements_url: 
+          https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/CycleGAN_requirements_simple.txt
+        sections_to_remove: 2. 6.3.
+        ubuntu_version: '22.04'
     covers:
     - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cycleGAN_notebook.png
     description: Unpaired image-to-image translation of 2D images. CycleGAN is a method

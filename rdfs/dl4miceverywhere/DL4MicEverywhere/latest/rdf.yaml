@@ -1,0 +1,99 @@
+authors:
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: IvanHCenalmor
+  name: Iván Hidalgo
+  orcid: 0009-0000-8923-568X
+- affiliation: University of Edinburgh
+  github_user: jpylvanainen
+  name: Joanna W Pylvänäinen
+  orcid: 0000-0002-3540-5150
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: mariana-gferreira
+  name: Mariana G Ferreira
+  orcid: 0009-0002-2886-4612
+- affiliation: EMBL, UK
+  github_user: ctr26
+  name: Craig T Russell
+  orcid: 0000-0002-2447-5911
+- affiliation: Ikerbasque
+  github_user: iarganda
+  name: Ignacio Arganda-Carreras
+  orcid: 0000-0003-0229-5722
+- affiliation: University of Turku
+  github_user: guijacquemet
+  name: Guillaume Jacquemet
+  orcid: 0000-0002-9286-920X
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: paxcalpt
+  name: Ricardo Henriques
+  orcid: 0000-0002-2043-5234
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: esgomezm
+  name: Estibaliz Gómez de Mariscal
+  orcid: 0000-0003-2082-3277
+cite:
+- doi: 10.1101/2023.11.19.567606
+  text: 'DL4MicEverywhere: Deep learning for microscopy made flexible, shareable,
+    and reproducible. bioRxiv (2023).'
+config:
+  background_image: static/img/zoo-background.svg
+  bioimageio:
+    status: accepted
+    version_id: latest
+    version_name: latest
+  default_type: model
+  explore_button_text: Start Exploring
+  icon: 
+    https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png
+  id: dl4miceverywhere
+  logo: 
+    https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png
+  name: DL4MicEverywhere
+  resource_types:
+  - application
+  - model
+  splash_feature_list:
+  splash_subtitle: DL4MicEverywhere is an open-source and user-friendly platform of
+    deep learning techniques for bioimage analysis that ensures the portability and
+    reproducibility of the methods.
+  splash_title: DL4MicEverywhere
+  tags:
+  - dl4miceverywhere
+  url_root: https://github.com/HenriquesLab/DL4MicEverywhere-bioimage-io
+covers:
+- https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo.png
+description: DL4MicEverywhere is a platform that offers researchers an easy-to-use
+  gateway to cutting-edge deep learning techniques for bioimage analysis. It features
+  interactive Jupyter notebooks with user-friendly graphical interfaces that require
+  no coding skills. The platform utilizes Docker containers to ensure portability
+  and reproducibility, guaranteeing smooth operation across various computing environments.
+documentation: https://github.com/HenriquesLab/DL4MicEverywhere/blob/main/README.md
+format_version: 0.2.3
+icon: 
+  https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png
+id: dl4miceverywhere/DL4MicEverywhere/latest
+maintainers:
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: IvanHCenalmor
+  name: Iván Hidalgo
+  orcid: 0009-0000-8923-568X
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: mariana-gferreira
+  name: Mariana G Ferreira
+  orcid: 0009-0002-2886-4612
+- affiliation: Instituto Gulbenkian de Ciência
+  github_user: esgomezm
+  name: Estibaliz Gómez de Mariscal
+  orcid: 0000-0003-2082-3277
+name: DL4MicEverywhere
+rdf_source: 
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/dl4miceverywhere/DL4MicEverywhere/latest/rdf.yaml
+source: https://github.com/HenriquesLab/DL4MicEverywhere
+tags:
+- dl4miceverywhere
+- bioimage.io
+- docker
+- container
+- containerisation
+- zerocostdl4mic
+type: application

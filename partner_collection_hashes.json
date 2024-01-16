@@ -3,6 +3,7 @@
   "bioimageio": "f549651922eba99405e291b42bfb3440ad466670",
   "bioimageio_spec_version": "0.4.9post4",
   "deepimagej": "13bb89b7c9b636db93dc20acaae2a8a0d23f241a",
+  "dl4miceverywhere": "7782ac8c67446576b99346a15f495bebba930521",
   "fiji": "55c67f6d27a21a0b17fd65306b04ea7e34e9dd05",
   "hpa": "8b166c0fc23cfa5f06de838cab07b4651a546951",
   "icy": "ffa9fb4d5ed89317a0f126bc9a416f62451cf3d8",
@@ -10,5 +11,5 @@
   "imjoy": "f8f594dd4ff89210549e96e1949d34728852ba18",
   "qupath": "d1c9f00e2dc05c340cf8b6f7c1d8d10773f0ccfc",
   "stardist": "b5bf5043a07eda17dd23acf969f18e9a64d8962c",
-  "zero": "f196ef2f03a9cb57bd3f07cc6bb4c903ab2e3be8"
+  "zero": "ee8c8613c73d9820787ed6b81de0f633309b5bf3"
 }
