@@ -86,4 +86,8 @@ config:
       repository: danifranco/BiaPy-bioimage-io
       branch: main
       collection_file_name: collection.yaml
+    - id: dl4miceverywhere
+      repository: HenriquesLab/DL4MicEverywhere-bioimage-io
+      branch: main
+      collection_file_name: collection.yaml
 collection: []
