@@ -68,5 +68,6 @@ versions:
     - Cellpose
     - Segmentation
     - ZeroCostDL4Mic
+    - dl4miceverywhere
     type: application
     version: 1.13.2

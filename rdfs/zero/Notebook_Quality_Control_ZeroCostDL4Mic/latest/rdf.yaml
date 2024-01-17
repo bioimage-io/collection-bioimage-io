@@ -60,5 +60,6 @@ tags:
 - notebook
 - Quality Control
 - ZeroCostDL4Mic
+- dl4miceverywhere
 type: application
 version: '1.13'

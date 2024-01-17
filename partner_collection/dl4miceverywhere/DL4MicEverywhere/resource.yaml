@@ -46,7 +46,7 @@ versions:
         and reproducible. bioRxiv (2023).'
     config:
       background_image: static/img/zoo-background.svg
-      default_type: model
+      default_type: application
       explore_button_text: Start Exploring
       icon: 
         https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png

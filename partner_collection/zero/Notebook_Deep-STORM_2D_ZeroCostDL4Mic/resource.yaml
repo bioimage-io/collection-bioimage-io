@@ -71,5 +71,6 @@ versions:
     - labelling
     - ZeroCostDL4Mic
     - 2D
+    - dl4miceverywhere
     type: application
     version: 1.13.3

@@ -62,5 +62,6 @@ versions:
     - Detectron2
     - object detection
     - ZeroCostDL4Mic
+    - dl4miceverywhere
     type: application
     version: 1.14.1

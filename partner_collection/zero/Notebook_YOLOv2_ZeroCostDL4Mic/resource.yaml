@@ -62,5 +62,6 @@ versions:
     - YOLOv2
     - object detection
     - ZeroCostDL4Mic
+    - dl4miceverywhere
     type: application
     version: '1.13'

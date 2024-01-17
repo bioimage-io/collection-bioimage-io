@@ -62,5 +62,6 @@ versions:
     - pix2pix
     - ZeroCostDL4Mic
     - 2D
+    - dl4miceverywhere
     type: application
     version: 1.17.0

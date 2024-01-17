@@ -56,5 +56,6 @@ tags:
 - segmentation
 - ZeroCostDL4Mic
 - 3D
+- dl4miceverywhere
 type: application
 version: 1.15.3

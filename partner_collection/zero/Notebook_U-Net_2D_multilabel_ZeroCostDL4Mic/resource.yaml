@@ -67,5 +67,6 @@ versions:
     - multilabel
     - ZeroCostDL4Mic
     - 2D
+    - dl4miceverywhere
     type: application
     version: 2.1.2

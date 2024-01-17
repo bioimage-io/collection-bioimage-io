@@ -67,5 +67,6 @@ versions:
     - denoising
     - ZeroCostDL4Mic
     - 2D
+    - dl4miceverywhere
     type: application
     version: 1.16.2

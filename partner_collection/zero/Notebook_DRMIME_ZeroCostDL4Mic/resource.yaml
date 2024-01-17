@@ -59,5 +59,6 @@ versions:
     - DRMIME
     - image registration
     - ZeroCostDL4Mic
+    - dl4miceverywhere
     type: application
     version: 1.14.1

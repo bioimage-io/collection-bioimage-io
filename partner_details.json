@@ -385,7 +385,7 @@
         "background_image": "static/img/zoo-background.svg",
         "branch": "main",
         "collection_file_name": "collection.yaml",
-        "default_type": "model",
+        "default_type": "application",
         "explore_button_text": "Start Exploring",
         "icon": "https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere-bioimage-io/main/logo/dl4miceverywhere-logo-small.png",
         "id": "dl4miceverywhere",

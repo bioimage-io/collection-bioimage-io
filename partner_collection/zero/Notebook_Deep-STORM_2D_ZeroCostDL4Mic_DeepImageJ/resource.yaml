@@ -81,5 +81,6 @@ versions:
     - ZeroCostDL4Mic
     - 2D
     - deepImageJ
+    - dl4miceverywhere
     type: application
     version: '1.13'
