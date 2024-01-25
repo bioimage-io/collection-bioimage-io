@@ -363,11 +363,11 @@
         "default_type": "model",
         "docs": "https://biapy.readthedocs.io/en/latest/",
         "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "icon": "https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
         "id": "biapy",
-        "logo": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "logo": "https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
         "name": "BiaPy",
-        "repository": "danifranco/BiaPy-bioimage-io",
+        "repository": "BiaPyX/BiaPy-bioimage-io",
         "resource_types": [
             "model",
             "application"
@@ -378,7 +378,7 @@
         "tags": [
             "BiaPy"
         ],
-        "url_root": "https://github.com/danifranco/BiaPy-bioimage-io",
+        "url_root": "https://github.com/BiaPyX/BiaPy-bioimage-io",
         "version": "3.1.0"
     },
     {

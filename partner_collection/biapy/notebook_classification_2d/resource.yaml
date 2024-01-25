@@ -13,7 +13,7 @@ versions:
     - icon: https://colab.research.google.com/assets/colab-badge.svg
       label: Open in Colab
       url: 
-        https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/classification/BiaPy_2D_Classification.ipynb
+        https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/classification/BiaPy_2D_Classification.ipynb
     cite:
     - doi: 10.1109/ISBI53787.2023.10230593
       text: 'BiaPy: a ready-to-use library for Bioimage Analysis Pipelines. 2023 IEEE
@@ -31,10 +31,10 @@ versions:
       docs: https://biapy.readthedocs.io/en/latest/
       explore_button_text: Start Exploring
       icon: 
-        https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+        https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png
       id: biapy
       logo: 
-        https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+        https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png
       name: BiaPy
       resource_types:
       - model
@@ -45,18 +45,18 @@ versions:
       splash_title: BiaPy
       tags:
       - BiaPy
-      url_root: https://github.com/danifranco/BiaPy-bioimage-io
+      url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
       version: 3.1.0
     covers:
-    - https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/images/2d_classification.png
+    - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_classification.png
     description: 2D Classification workflow where full input images are labeled as
       belonging to a predefined set of classes. There is no restriction in the type
       of images that can be used as long as they are 2D files.
     documentation: https://biapy.readthedocs.io/en/latest/workflows/classification.html
     download_url: 
-      https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/classification/BiaPy_2D_Classification.ipynb
+      https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/classification/BiaPy_2D_Classification.ipynb
     format_version: 0.2.3
-    git_repo: https://github.com/danifranco/BiaPy
+    git_repo: https://github.com/BiaPyX/BiaPy
     id: biapy/notebook_classification_2d
     links:
     - biapy/Notebook Preview

@@ -48,6 +48,10 @@ versions:
       github_user: donglaiw
       name: Donglai Wei
       orcid: 0000-0002-2329-5484
+    - affiliation: Laboratory of Optics and Bioscience
+      github_user: ClementCaporal
+      name: Clement Caporal
+      orcid: 0000-0002-9441-9173
     cite:
     - doi: 10.1109/ISBI53787.2023.10230593
       text: 'BiaPy: a ready-to-use library for Bioimage Analysis Pipelines. 2023 IEEE
@@ -65,10 +69,10 @@ versions:
       docs: https://biapy.readthedocs.io/en/latest/
       explore_button_text: Start Exploring
       icon: 
-        https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+        https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png
       id: biapy
       logo: 
-        https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+        https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png
       name: BiaPy
       resource_types:
       - model
@@ -79,22 +83,22 @@ versions:
       splash_title: BiaPy
       tags:
       - BiaPy
-      url_root: https://github.com/danifranco/BiaPy-bioimage-io
+      url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
       version: 3.1.0
     covers:
-    - https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png
+    - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png
     description: BiaPy is an open source Python library for building bioimage analysis
       pipelines
     documentation: https://biapy.readthedocs.io/en/latest/
     format_version: 0.2.3
     icon: 
-      https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_512.png
+      https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_512.png
     id: biapy/biapy
     maintainers:
     - github_user: danifranco
       name: BiaPy Team
     name: BiaPy
-    source: https://github.com/danifranco
+    source: https://github.com/BiaPyX
     tags:
     - software
     - biapy
