@@ -23,7 +23,7 @@
       ],
       "created": "2022-06-15 22:06:22.658325",
       "description": "Nucleus segmentation for fluorescence microscopy",
-      "download_count": 55868,
+      "download_count": 55900,
       "id": "10.5281/zenodo.5764892",
       "license": "CC-BY-4.0",
       "links": [
@@ -72,7 +72,7 @@
       ],
       "created": "2022-03-08 18:36:28.378522",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 40110,
+      "download_count": 40137,
       "id": "10.5281/zenodo.6338614",
       "license": "BSD-3-Clause",
       "links": [
@@ -118,7 +118,7 @@
       ],
       "created": "2022-01-18 22:01:09.315638",
       "description": "Neuron segmentation in EM, trained on the CREMI challenge data.",
-      "download_count": 39067,
+      "download_count": 39083,
       "id": "10.5281/zenodo.5874741",
       "license": "CC-BY-4.0",
       "links": [
@@ -164,7 +164,7 @@
       ],
       "created": "2022-06-15 22:09:35.368273",
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 38565,
+      "download_count": 38585,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -209,7 +209,7 @@
       ],
       "created": "2022-06-10 06:22:28.465944",
       "description": "Mitochondria segmentation for electron microscopy.",
-      "download_count": 35124,
+      "download_count": 35142,
       "id": "10.5281/zenodo.5874841",
       "license": "CC-BY-4.0",
       "links": [
@@ -249,7 +249,7 @@
       ],
       "created": "2022-02-09 21:14:46.430029",
       "description": "{organelle} segmentation in EM of platynereis.",
-      "download_count": 34832,
+      "download_count": 34848,
       "id": "10.5281/zenodo.6028097",
       "license": "CC-BY-4.0",
       "links": [
@@ -298,7 +298,7 @@
       ],
       "created": "2023-07-26 10:47:44.642355",
       "description": "DeepImageJ compatible U-Net trained to segment phase contrast microscopy images of pancreatic stem cells on a 2D polystyrene substrate.",
-      "download_count": 34320,
+      "download_count": 34354,
       "id": "10.5281/zenodo.5914248",
       "license": "BSD-2-Clause",
       "links": [
@@ -354,7 +354,7 @@
       ],
       "created": "2022-01-21 14:50:48.356997",
       "description": "A 3D U-net to predict cell membranes in plant tissues, trained on volumes of Arabidopsis thaliana ovules acquired on a confocal microscope.",
-      "download_count": 33554,
+      "download_count": 33578,
       "id": "10.5281/zenodo.5749843",
       "license": "MIT",
       "links": [
@@ -402,7 +402,7 @@
       ],
       "created": "2022-06-15 22:12:29.012734",
       "description": "Cell segmentation in EM of platynereis.",
-      "download_count": 32748,
+      "download_count": 32766,
       "id": "10.5281/zenodo.6028280",
       "license": "CC-BY-4.0",
       "links": [
@@ -448,7 +448,7 @@
       ],
       "created": "2022-03-11 22:32:05.554959",
       "description": "StarDist - Object Detection with Star-convex Shapes",
-      "download_count": 32193,
+      "download_count": 32211,
       "id": "10.5281/zenodo.6348084",
       "license": "BSD-3-Clause",
       "links": [
@@ -500,7 +500,7 @@
       ],
       "created": "2023-03-06 19:01:04.321374",
       "description": "Cell segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 31642,
+      "download_count": 31664,
       "id": "10.5281/zenodo.6200635",
       "license": "CC-BY-4.0",
       "links": [
@@ -541,7 +541,7 @@
       ],
       "created": "2022-03-12 09:56:33.055323",
       "description": "Perform leaf segmentation in light microscopy images of Arabidopsis",
-      "download_count": 31109,
+      "download_count": 31127,
       "id": "10.5281/zenodo.6348728",
       "license": "MIT",
       "links": [
@@ -586,7 +586,7 @@
       ],
       "created": "2023-03-24 17:08:34.402776",
       "description": "3D Unet trained on confocal images of Arabidopsis thaliana apical stem cell: https://www.repository.cam.ac.uk/handle/1810/262530. Voxel size: [0.25, 0.25, 0.25]",
-      "download_count": 31022,
+      "download_count": 31045,
       "id": "10.5281/zenodo.6346511",
       "license": "MIT",
       "links": [
@@ -635,7 +635,7 @@
       ],
       "created": "2022-06-15 22:08:13.874556",
       "description": "Cell segmentation for immunofluorescence microscopy.",
-      "download_count": 29457,
+      "download_count": 29481,
       "id": "10.5281/zenodo.5847355",
       "license": "CC-BY-4.0",
       "links": [
@@ -680,7 +680,7 @@
       ],
       "created": "2022-04-01 16:06:28.519947",
       "description": "Segmentation of mitochondria in EM images.",
-      "download_count": 29409,
+      "download_count": 29429,
       "id": "10.5281/zenodo.6406803",
       "license": "CC-BY-4.0",
       "links": [
@@ -723,7 +723,7 @@
       ],
       "created": "2022-07-08 17:02:28.049385",
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 29257,
+      "download_count": 29282,
       "id": "10.5281/zenodo.6406756",
       "license": "CC-BY-4.0",
       "links": [
@@ -775,7 +775,7 @@
       ],
       "created": "2022-01-27 14:00:17.489637",
       "description": "2D UNet trained using ZeroCostDL4Mic notebooks on data from ISBI Challenge for neuron segmentation in Transmission Electron Microscopy images.",
-      "download_count": 28869,
+      "download_count": 28907,
       "id": "10.5281/zenodo.5817052",
       "license": "MIT",
       "links": [
@@ -822,7 +822,7 @@
       ],
       "created": "2023-03-02 05:53:45.695883",
       "description": "Nuclei segmentation model for segmenting images from the Human Protein Atlas",
-      "download_count": 27630,
+      "download_count": 27666,
       "id": "10.5281/zenodo.6200999",
       "license": "CC-BY-4.0",
       "links": [
@@ -865,7 +865,7 @@
       ],
       "created": "2023-03-27 12:11:52.357154",
       "description": "A 3D U-Net trained to predict the cell boundaries in live light sheet images of developing mouse embryo. Voxel size: 0.2\u00d70.2\u00d71.0 \u00b5m^3",
-      "download_count": 26867,
+      "download_count": 26899,
       "id": "10.5281/zenodo.6384845",
       "license": "MIT",
       "links": [
@@ -918,7 +918,7 @@
       ],
       "created": "2023-03-27 12:14:49.467153",
       "description": "A 3D U-Net trained to predict the nuclei and their boundaries in fixed confocal images of developing mouse embryo.Voxel size: (0.2\u00d70.2\u00d71 \u00b5m^3) (XYZ).",
-      "download_count": 25528,
+      "download_count": 25560,
       "id": "10.5281/zenodo.6383429",
       "license": "MIT",
       "links": [
@@ -966,7 +966,7 @@
       ],
       "created": "2023-03-03 13:09:05.981223",
       "description": "affinity-model",
-      "download_count": 23630,
+      "download_count": 23675,
       "id": "10.5281/zenodo.6079314",
       "license": "CC-BY-4.0",
       "links": [
@@ -1014,7 +1014,7 @@
       ],
       "created": "2023-04-06 10:47:26.453147",
       "description": "2D Unet trained on confocal images of Arabidopsis Ovules",
-      "download_count": 23533,
+      "download_count": 23573,
       "id": "10.5281/zenodo.6334383",
       "license": "MIT",
       "links": [
@@ -1061,7 +1061,7 @@
       ],
       "created": "2023-03-29 18:14:39.826271",
       "description": "This trained 2D U-Net model segments the contour, foreground and background of Bacillus Subtilis bacteria imaged with Widefield microscopy images. To obtain a unique label for each individual bacteria detected in the image one could run further watershed segmentation using the label 1 as the seed.",
-      "download_count": 23129,
+      "download_count": 23193,
       "id": "10.5281/zenodo.7261974",
       "license": "MIT",
       "links": [
@@ -1124,7 +1124,7 @@
       ],
       "created": "2023-04-06 10:26:25.873589",
       "description": "2D Unet trained on z-slices of confocal images of Arabidopsis thaliana apical stem cells",
-      "download_count": 21463,
+      "download_count": 21503,
       "id": "10.5281/zenodo.6334881",
       "license": "MIT",
       "links": [
@@ -1172,7 +1172,7 @@
       ],
       "created": "2023-03-23 21:42:30.250688",
       "description": "A 3D U-Net trained to predict the cell boundaries in lightsheet stacks of Arabidopsis Lateral Root Primordia. (0.25x0.1625x0.1625) microns ZYX",
-      "download_count": 20769,
+      "download_count": 20815,
       "id": "10.5281/zenodo.6334777",
       "license": "MIT",
       "links": [
@@ -1222,7 +1222,7 @@
       ],
       "created": "2022-05-11 12:52:23.766143",
       "description": "The winning model of HPA image classification 2021 by Bestfitting",
-      "download_count": 20581,
+      "download_count": 20629,
       "id": "10.5281/zenodo.5910854",
       "license": "MIT",
       "links": [
@@ -1268,7 +1268,7 @@
       ],
       "created": "2023-04-06 12:43:33.436336",
       "description": "A 3d U-Net trained to predict the cell boundaries in confocal stacks of Arabidopsis ovules. Voxel size: (0.235, 0.150, 0.150) microns ZYX",
-      "download_count": 19925,
+      "download_count": 19961,
       "id": "10.5281/zenodo.6334583",
       "license": "MIT",
       "links": [
@@ -1319,7 +1319,7 @@
       ],
       "created": "2022-07-08 14:35:48.861260",
       "description": "Prediction enhancer for segmenting mitochondria in EM images.",
-      "download_count": 18927,
+      "download_count": 18971,
       "id": "10.5281/zenodo.6811491",
       "license": "CC-BY-4.0",
       "links": [
@@ -1364,7 +1364,7 @@
       ],
       "created": "2022-07-28 07:37:36.393648",
       "description": "DeepImageJ compatible FRUNet trained to subtly segment cells and gland.",
-      "download_count": 18694,
+      "download_count": 18710,
       "id": "10.5281/zenodo.6865412",
       "license": "CC-BY-4.0",
       "name": "Cells and gland Segmentation (FRUNet)",
@@ -1396,7 +1396,7 @@
       ],
       "created": "2022-02-01 22:38:38.088910",
       "description": "The winning model of HPA image classification 2019 by Bestfitting",
-      "download_count": 17982,
+      "download_count": 18016,
       "id": "10.5281/zenodo.5910163",
       "license": "MIT",
       "links": [
@@ -1454,7 +1454,7 @@
       ],
       "created": "2022-05-18 09:42:30.953891",
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 16350,
+      "download_count": 16414,
       "download_url": "https://zenodo.org/api/records/6559475/files/deepimagej_fru-net_sev_segmentation.zip/content",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -1502,7 +1502,7 @@
       ],
       "created": "2022-07-07 21:30:58.116303",
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 13643,
+      "download_count": 13689,
       "id": "10.5281/zenodo.6808325",
       "license": "CC-BY-4.0",
       "links": [
@@ -1548,7 +1548,7 @@
       ],
       "created": "2023-07-07 10:12:51.478763",
       "description": "Cellular membrane prediction model for volume SEM datasets",
-      "download_count": 12977,
+      "download_count": 13029,
       "id": "10.5281/zenodo.7274275",
       "license": "CC-BY-4.0",
       "links": [
@@ -1612,7 +1612,7 @@
       ],
       "created": "2022-11-12 12:53:32.701172",
       "description": "EmbryoNet Model by embryoNet Team",
-      "download_count": 9867,
+      "download_count": 9907,
       "id": "10.5281/zenodo.7315440",
       "license": "GPL-3.0",
       "links": [
@@ -1659,7 +1659,7 @@
       ],
       "created": "2022-12-06 13:55:39.060882",
       "description": "For segmenting 2D projections of drosophila epithelia",
-      "download_count": 9053,
+      "download_count": 9089,
       "id": "10.5281/zenodo.7380171",
       "license": "CC-BY-4.0",
       "name": "Drosophila epithelia cell boundary segmentation of 2D projections",
@@ -1699,7 +1699,7 @@
       ],
       "created": "2023-03-29 11:10:26.329999",
       "description": "Unet trained on confocal images of Arabidopsis Ovules nuclei",
-      "download_count": 8758,
+      "download_count": 8797,
       "id": "10.5281/zenodo.7772662",
       "license": "MIT",
       "links": [
@@ -1742,7 +1742,7 @@
       ],
       "created": "2023-02-15 09:34:43.433531",
       "description": "HyLFM-Net trained on static images of arrested medaka hatchling hearts. The network reconstructs a volumentric image from a given light-field.",
-      "download_count": 8259,
+      "download_count": 8319,
       "id": "10.5281/zenodo.7614645",
       "license": "MIT",
       "links": [
@@ -1803,7 +1803,7 @@
       ],
       "created": "2022-05-18 10:12:14.635800",
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 6205,
+      "download_count": 6209,
       "download_url": "https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip",
       "id": "10.5281/zenodo.6559929",
       "license": "MIT",
@@ -1850,7 +1850,7 @@
       ],
       "created": "2023-03-30 16:57:43.433376",
       "description": "Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with MitoTracker and the model was trained to upsample the images by a factor of 4.",
-      "download_count": 6114,
+      "download_count": 6169,
       "id": "10.5281/zenodo.7786492",
       "license": "MIT",
       "links": [
@@ -1894,7 +1894,7 @@
       ],
       "created": "2023-06-23 10:23:37.255827",
       "description": "Label-free prediction of fluorescence images from brightield images",
-      "download_count": 3664,
+      "download_count": 3700,
       "id": "10.5281/zenodo.8064806",
       "license": "Apache-2.0",
       "links": [
@@ -1937,7 +1937,7 @@
       ],
       "created": "2023-10-11 17:13:48.737609",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135.",
-      "download_count": 3587,
+      "download_count": 3627,
       "id": "10.5281/zenodo.8421755",
       "license": "CC-BY-4.0",
       "links": [
@@ -1995,7 +1995,7 @@
       ],
       "created": "2023-10-09 06:57:28.189519",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 2706,
+      "download_count": 2738,
       "id": "10.5281/zenodo.8419845",
       "license": "CC-BY-4.0",
       "name": "UniFMIRSuperResolutionOnMicrotubules",
@@ -2041,7 +2041,7 @@
       ],
       "created": "2023-10-09 07:05:52.763368",
       "description": "Pre-training a Foundation Model for Universal Fluorescence Microscopy Image Restoration",
-      "download_count": 2108,
+      "download_count": 2134,
       "id": "10.5281/zenodo.8420099",
       "license": "CC-BY-4.0",
       "links": [
@@ -2078,7 +2078,7 @@
       ],
       "created": "2023-02-06 13:30:05.714615",
       "description": "Light-sheet and light-field images of beating and arrested hatchling (8 dpf) medaka hearts used in \"Deep learning-enhanced light-field imaging with continuous validation\" to train and evaluate a HyLFM-Net.",
-      "download_count": 2106,
+      "download_count": 2108,
       "id": "10.5281/zenodo.7612115",
       "license": "MIT",
       "name": "Hatchling Medaka Heart (HyLFM)",
@@ -2113,7 +2113,7 @@
       ],
       "created": "2023-07-21 09:09:49.349470",
       "description": "Prediction enhancer for segmenting cell boundaries in EM images.",
-      "download_count": 1710,
+      "download_count": 1714,
       "id": "10.5281/zenodo.8142283",
       "license": "MIT",
       "links": [
@@ -2156,7 +2156,7 @@
       ],
       "created": "2023-10-11 00:39:40.958129",
       "description": "This widely applicable model is trained for 3D nuclei instance segmentation and with 3D nuclei images of Arabidopsis ovules with TO-PRO-3 stain. TO-PRO-3 nuclei stain detects double-stranded nucleic acids and hence can be a useful tool for nuclear DNA quantification and 3D volumetric nuclei extraction. This model is trained with dataset 1136, 1137, 1139, 1170 and validated with 1135. Patch size for this model during inference can be flexible.",
-      "download_count": 1227,
+      "download_count": 1233,
       "id": "10.5281/zenodo.8401064",
       "license": "CC-BY-4.0",
       "links": [
@@ -2200,7 +2200,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/semantic_segmentation/BiaPy_3D_Semantic_Segmentation.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/semantic_segmentation/BiaPy_3D_Semantic_Segmentation.ipynb"
         }
       ],
       "covers": [
@@ -2208,7 +2208,7 @@
       ],
       "description": "3D Semantic Segmentation workflow where the goal is to associate a label to every pixel of the input image. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/semantic_segmentation/BiaPy_3D_Semantic_Segmentation.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/semantic_segmentation/BiaPy_3D_Semantic_Segmentation.ipynb",
       "id": "biapy/Notebook_semantic_segmentation_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -2296,6 +2296,12 @@
           "github_user": "donglaiw",
           "name": "Donglai Wei",
           "orcid": "0000-0002-2329-5484"
+        },
+        {
+          "affiliation": "Laboratory of Optics and Bioscience",
+          "github_user": "ClementCaporal",
+          "name": "Clement Caporal",
+          "orcid": "0000-0002-9441-9173"
         }
       ],
       "covers": [
@@ -2303,11 +2309,11 @@
       ],
       "description": "BiaPy is an open source Python library for building bioimage analysis pipelines",
       "download_count": 1,
-      "icon": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_512.png",
+      "icon": "https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_512.png",
       "id": "biapy/biapy",
       "name": "BiaPy",
       "rdf_source": "https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/biapy/latest/rdf.yaml",
-      "source": "https://github.com/danifranco",
+      "source": "https://github.com/BiaPyX",
       "tags": [
         "software",
         "biapy"
@@ -2327,7 +2333,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/classification/BiaPy_2D_Classification.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/classification/BiaPy_2D_Classification.ipynb"
         }
       ],
       "covers": [
@@ -2335,7 +2341,7 @@
       ],
       "description": "2D Classification workflow where full input images are labeled as belonging to a predefined set of classes. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/classification/BiaPy_2D_Classification.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/classification/BiaPy_2D_Classification.ipynb",
       "id": "biapy/notebook_classification_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2369,7 +2375,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/classification/BiaPy_3D_Classification.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/classification/BiaPy_3D_Classification.ipynb"
         }
       ],
       "covers": [
@@ -2377,7 +2383,7 @@
       ],
       "description": "3D Classification workflow where full input images are labeled as belonging to a predefined set of classes. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/classification/BiaPy_3D_Classification.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/classification/BiaPy_3D_Classification.ipynb",
       "id": "biapy/notebook_classification_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -2411,7 +2417,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb"
         }
       ],
       "covers": [
@@ -2419,7 +2425,7 @@
       ],
       "description": "2D Denoising workflow where the goal is to remove the noise from the input image. Our library includes Noise2Void without relying on noise image pairs nor clean target images to train the model. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb",
       "id": "biapy/notebook_denoising_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2457,7 +2463,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/denoising/BiaPy_3D_Denoising.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/denoising/BiaPy_3D_Denoising.ipynb"
         }
       ],
       "covers": [
@@ -2465,7 +2471,7 @@
       ],
       "description": "3D Denoising workflow where the goal is to remove the noise from the input image. Our library includes Noise2Void without relying on noise image pairs nor clean target images to train the model. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/denoising/BiaPy_3D_Denoising.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/denoising/BiaPy_3D_Denoising.ipynb",
       "id": "biapy/notebook_denoising_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -2503,7 +2509,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/detection/BiaPy_2D_Detection.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/detection/BiaPy_2D_Detection.ipynb"
         }
       ],
       "covers": [
@@ -2511,7 +2517,7 @@
       ],
       "description": "2D Detection workflow where the goal is localize objects in the input image, not requiring a pixel-level class, by extracting individual points at their center of mass. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/detection/BiaPy_2D_Detection.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/detection/BiaPy_2D_Detection.ipynb",
       "id": "biapy/notebook_detection_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2548,7 +2554,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/detection/BiaPy_3D_Detection.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/detection/BiaPy_3D_Detection.ipynb"
         }
       ],
       "covers": [
@@ -2556,7 +2562,7 @@
       ],
       "description": "3D Detection workflow where the goal is localize objects in the input image, not requiring a pixel-level class, by extracting individual points at their center of mass. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/detection/BiaPy_3D_Detection.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/detection/BiaPy_3D_Detection.ipynb",
       "id": "biapy/notebook_detection_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -2593,7 +2599,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/instance_segmentation/BiaPy_2D_Instance_Segmentation.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/instance_segmentation/BiaPy_2D_Instance_Segmentation.ipynb"
         }
       ],
       "covers": [
@@ -2601,7 +2607,7 @@
       ],
       "description": "2D Instance Segmentation workflow where the goal is to detect, segment, and classify the individual objects of interest in the input image. BiaPy uses a bottom-up approach in instance segmentation workflows by learning the binary masks, contours, and (optionally) the distance map of the objects of interest. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/instance_segmentation/BiaPy_2D_Instance_Segmentation.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/instance_segmentation/BiaPy_2D_Instance_Segmentation.ipynb",
       "id": "biapy/notebook_instance_segmentation_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2638,7 +2644,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/instance_segmentation/BiaPy_3D_Instance_Segmentation.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/instance_segmentation/BiaPy_3D_Instance_Segmentation.ipynb"
         }
       ],
       "covers": [
@@ -2646,7 +2652,7 @@
       ],
       "description": "3D Instance Segmentation workflow where the goal is to detect, segment, and classify the individual objects of interest in the input image. BiaPy uses a bottom-up approach in instance segmentation workflows by learning the binary masks, contours, and (optionally) the distance map of the objects of interest. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/instance_segmentation/BiaPy_3D_Instance_Segmentation.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/instance_segmentation/BiaPy_3D_Instance_Segmentation.ipynb",
       "id": "biapy/notebook_instance_segmentation_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -2683,7 +2689,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb"
         }
       ],
       "covers": [
@@ -2691,7 +2697,7 @@
       ],
       "description": "2D Self Supervision workflow where the idea is to pretrain the backbone model by solving a so-called pretext task without labels. This way, the model learns a representation that can be later transferred to solve a downstream task in a labeled (but smaller) dataset. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/self-supervised/BiaPy_2D_Self_Supervision.ipynb",
       "id": "biapy/notebook_self_supervision_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2730,7 +2736,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/self-supervised/BiaPy_3D_Self_Supervision.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/self-supervised/BiaPy_3D_Self_Supervision.ipynb"
         }
       ],
       "covers": [
@@ -2738,7 +2744,7 @@
       ],
       "description": "3D Self Supervision workflow where the idea is to pretrain the backbone model by solving a so-called pretext task without labels. This way, the model learns a representation that can be later transferred to solve a downstream task in a labeled (but smaller) dataset. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/self-supervised/BiaPy_3D_Self_Supervision.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/self-supervised/BiaPy_3D_Self_Supervision.ipynb",
       "id": "biapy/notebook_self_supervision_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -2778,7 +2784,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/semantic_segmentation/BiaPy_2D_Semantic_Segmentation.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/semantic_segmentation/BiaPy_2D_Semantic_Segmentation.ipynb"
         }
       ],
       "covers": [
@@ -2786,7 +2792,7 @@
       ],
       "description": "2D Semantic Segmentation workflow where the goal is to associate a label to every pixel of the input image. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/semantic_segmentation/BiaPy_2D_Semantic_Segmentation.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/semantic_segmentation/BiaPy_2D_Semantic_Segmentation.ipynb",
       "id": "biapy/notebook_semantic_segmentation_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2823,7 +2829,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/super-resolution/BiaPy_2D_Super_Resolution.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/super-resolution/BiaPy_2D_Super_Resolution.ipynb"
         }
       ],
       "covers": [
@@ -2831,7 +2837,7 @@
       ],
       "description": "2D Super Resolution workflow where the goal is to reconstruct high-resolution (HR) images from low-resolution (LR) ones. There is no restriction in the type of images that can be used as long as they are 2D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/super-resolution/BiaPy_2D_Super_Resolution.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/super-resolution/BiaPy_2D_Super_Resolution.ipynb",
       "id": "biapy/notebook_super_resolution_2d",
       "links": [
         "biapy/Notebook Preview"
@@ -2873,7 +2879,7 @@
         {
           "icon": "https://colab.research.google.com/assets/colab-badge.svg",
           "label": "Open in Colab",
-          "url": "https://colab.research.google.com/github/danifranco/BiaPy/blob/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb"
+          "url": "https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb"
         }
       ],
       "covers": [
@@ -2881,7 +2887,7 @@
       ],
       "description": "3D Super Resolution workflow where the goal is to reconstruct high-resolution (HR) images from low-resolution (LR) ones. There is no restriction in the type of images that can be used as long as they are 3D files.",
       "download_count": 1,
-      "download_url": "https://raw.githubusercontent.com/danifranco/BiaPy/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb",
+      "download_url": "https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb",
       "id": "biapy/notebook_super_resolution_3d",
       "links": [
         "biapy/Notebook Preview"
@@ -6372,11 +6378,11 @@
         "default_type": "model",
         "docs": "https://biapy.readthedocs.io/en/latest/",
         "explore_button_text": "Start Exploring",
-        "icon": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "icon": "https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
         "id": "biapy",
-        "logo": "https://raw.githubusercontent.com/danifranco/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
+        "logo": "https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/logos/BiaPy_256.png",
         "name": "BiaPy",
-        "repository": "danifranco/BiaPy-bioimage-io",
+        "repository": "BiaPyX/BiaPy-bioimage-io",
         "resource_types": [
           "model",
           "application"
@@ -6387,7 +6393,7 @@
         "tags": [
           "BiaPy"
         ],
-        "url_root": "https://github.com/danifranco/BiaPy-bioimage-io",
+        "url_root": "https://github.com/BiaPyX/BiaPy-bioimage-io",
         "version": "3.1.0"
       },
       {
