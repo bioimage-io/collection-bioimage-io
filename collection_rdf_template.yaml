@@ -83,7 +83,7 @@ config:
       branch: main
       collection_file_name: collection.yaml
     - id: biapy
-      repository: danifranco/BiaPy-bioimage-io
+      repository: BiaPyX/BiaPy-bioimage-io
       branch: main
       collection_file_name: collection.yaml
     - id: dl4miceverywhere
