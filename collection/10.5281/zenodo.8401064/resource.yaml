@@ -1,14 +1,30 @@
 doi: 10.5281/zenodo.8401064
 id: 10.5281/zenodo.8401064
 nickname: efficient-chipmunk
-nickname_icon: "\U0001F43F"
-owners: [611919]
+nickname_icon: 🐿
+owners:
+- 611919
 status: accepted
 type: model
 versions:
-- {created: '2023-10-11 00:39:40.958129', doi: 10.5281/zenodo.8429203, name: PlantSeg
-    Plant Nuclei 3D UNet, rdf_source: 'https://zenodo.org/api/records/8429203/files/rdf.yaml/content',
-  status: accepted, version_id: '8429203', version_name: version 2}
-- {created: '2023-10-02 22:50:52.979764', doi: 10.5281/zenodo.8401065, name: PlantSeg
-    Plant Nuclei 3D UNet, rdf_source: 'https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/rdf.yaml',
-  status: accepted, version_id: '8401065', version_name: version 1}
+- created: '2023-11-03 19:03:37.005153'
+  doi: 10.5281/zenodo.10070349
+  name: PlantSeg Plant Nuclei 3D UNet
+  status: accepted
+  version_id: '10070349'
+  version_name: version from 2023-11-03
+  rdf_source: https://zenodo.org/api/records/10070349/files/rdf.yaml/content
+- created: '2023-10-11 00:39:40.958129'
+  doi: 10.5281/zenodo.8429203
+  name: PlantSeg Plant Nuclei 3D UNet
+  status: accepted
+  version_id: '8429203'
+  version_name: version 2
+  rdf_source: https://zenodo.org/api/records/8429203/files/rdf.yaml/content
+- created: '2023-10-02 22:50:52.979764'
+  doi: 10.5281/zenodo.8401065
+  name: PlantSeg Plant Nuclei 3D UNet
+  status: accepted
+  version_id: '8401065'
+  version_name: version 1
+  rdf_source: https://zenodo.org/api/files/3572a812-8449-45ab-b6b7-4ff0a6f0b444/rdf.yaml
