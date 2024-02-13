@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10595459
+id: 10.5281/zenodo.10595459
+nickname: lucky-fox
+nickname_icon: 🦊
+owners:
+- 610358
+status: accepted
+type: model
+versions:
+- created: '2024-01-31 01:03:39.672435'
+  doi: 10.5281/zenodo.10595460
+  name: UniFMIRIsotropicReconstructionOnLiver
+  status: accepted
+  version_id: '10595460'
+  version_name: version from 2024-01-31
+  rdf_source: https://zenodo.org/api/records/10595460/files/rdf.yaml/content
