@@ -15,6 +15,12 @@ versions:
   status: accepted
   version_id: '5942853'
   version_name: revision 1
+  weights:
+    onnx: 
+      authors:
+      - name: Wei OUYANG
+      source: ./densenet_model.onnx
+      sha256: 0cb72ff5e414630de95674a7d523da0de19850b1cada4712201699fdd960c1b0
 - {created: '2022-01-27 10:28:20.092577', doi: 10.5281/zenodo.5910164, name: HPA Bestfitting
     Densenet, rdf_source: 'https://zenodo.org/api/files/5be7a94a-0f23-4658-bee3-d160c6eb1c83/rdf.yaml',
   status: blocked, version_id: '5910164', version_name: revision 1}

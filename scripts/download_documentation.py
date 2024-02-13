@@ -9,7 +9,8 @@ from utils import yaml
 
 
 def main(
-    folder: Path = Path(__file__).parent / "../dist",  # nested folders with rdf.yaml files
+    folder: Path = Path(__file__).parent
+    / "../dist",  # nested folders with rdf.yaml files
 ):
     """Download the documentation file for every rdf.yaml found in (subfolders of) folder"""
     if not folder.exists():
@@ -34,9 +35,12 @@ def main(
 
         try:
             resolve_source(
-                doc_uri, output=rdf_path.with_name(f"documentation.{type_ext}"), pbar=partial(tqdm, disable=True)
+                doc_uri,
+                output=rdf_path.with_name(f"documentation.{type_ext}"),
+                pbar=partial(tqdm, disable=True),
             )
-        except ValueError:
+        except Exception as e:
+            warnings.warn(f"failed to resolve doc_ui: {e}")
             _ = rdf_path.with_name("documentation.md").write_text(doc_uri)
 
 

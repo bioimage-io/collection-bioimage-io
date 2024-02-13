@@ -15,3 +15,7 @@ versions:
   training_data: {id: ilastik/platynereis_em_training_data}
   version_id: '6028098'
   version_name: revision 1
+  maintainers:
+  - github_user: constantinpape
+    name: Constantin Pape
+
