@@ -10,7 +10,7 @@ versions:
 - created: '2023-12-21 10:02:20.788035'
   doi: 10.5281/zenodo.10406344
   name: StarDist-Drosophila-Melanogaster
-  status: accepted
+  status: blocked
   version_id: '10406344'
   version_name: version from 2023-12-19
   rdf_source: https://zenodo.org/api/records/10406344/files/rdf.yaml/content
