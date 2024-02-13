@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10579821
+id: 10.5281/zenodo.10579821
+nickname: decisive-panda
+nickname_icon: 🐼
+owners:
+- 610358
+status: accepted
+type: model
+versions:
+- created: '2024-01-29 10:49:05.535263'
+  doi: 10.5281/zenodo.10579822
+  name: UniFMIRDenoiseOnTribolium
+  status: accepted
+  version_id: '10579822'
+  version_name: version from 2024-01-29
+  rdf_source: https://zenodo.org/api/records/10579822/files/rdf.yaml/content
