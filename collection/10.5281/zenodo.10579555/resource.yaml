@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10579555
+id: 10.5281/zenodo.10579555
+nickname: committed-turkey
+nickname_icon: 🦃
+owners:
+- 284203
+status: accepted
+type: model
+versions:
+- created: '2024-02-01 21:53:56.068963'
+  doi: 10.5281/zenodo.10579556
+  name: 2D Enteric Ganglia segmentation U-Net
+  status: accepted
+  version_id: '10579556'
+  version_name: version from 2024-01-29
+  rdf_source: https://zenodo.org/api/records/10579556/files/rdf.yaml/content
