@@ -10,7 +10,7 @@ versions:
 - created: '2024-01-28 11:00:43.741312'
   doi: 10.5281/zenodo.10577218
   name: UniFMIRProjectionOnFlyWing
-  status: accepted
+  status: blocked
   version_id: '10577218'
   version_name: version from 2024-01-28
   rdf_source: https://zenodo.org/api/records/10577218/files/rdf.yaml/content
