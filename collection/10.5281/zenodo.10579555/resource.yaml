@@ -14,3 +14,9 @@ versions:
   version_id: '10579556'
   version_name: version from 2024-01-29
   rdf_source: https://zenodo.org/api/records/10579556/files/rdf.yaml/content
+  authors:
+  - {affiliation: Walter and Eliza Hall Institute of Medical Research, name: Pradeep
+      Rajasekhar, github_user: pr4deepr}
+  - {affiliation: Monash Institute of Pharmaceutical Sciences, name: Daniel P.
+      Poole}
+
