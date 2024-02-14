@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10406306
+id: 10.5281/zenodo.10406306
+nickname: greedy-rat
+nickname_icon: 🐀
+owners:
+- 1004358
+status: accepted
+type: model
+versions:
+- created: '2023-12-21 10:13:49.910911'
+  doi: 10.5281/zenodo.10406307
+  name: stardist_topix2pix
+  status: accepted
+  version_id: '10406307'
+  version_name: version from 2023-12-19
+  rdf_source: https://zenodo.org/api/records/10406307/files/rdf.yaml/content
