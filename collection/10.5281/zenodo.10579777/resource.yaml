@@ -10,7 +10,7 @@ versions:
 - created: '2024-01-29 10:44:11.045351'
   doi: 10.5281/zenodo.10579778
   name: UniFMIRDenoiseOnPlanaria
-  status: accepted
+  status: blocked
   version_id: '10579778'
   version_name: version from 2024-01-29
   rdf_source: https://zenodo.org/api/records/10579778/files/rdf.yaml/content
