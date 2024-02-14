@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2024-02-14 13:17:39.153500'
+  doi: 10.5281/zenodo.10657925
+  name: UniFMIRIsotropicReconstructionOnLiver
+  status: accepted
+  version_id: '10657925'
+  version_name: version from 2024-02-14
+  rdf_source: https://zenodo.org/api/records/10657925/files/rdf.yaml/content
 - created: '2024-01-31 01:03:39.672435'
   doi: 10.5281/zenodo.10595460
   name: UniFMIRIsotropicReconstructionOnLiver
