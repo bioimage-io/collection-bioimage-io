@@ -1,0 +1,16 @@
+doi: 10.5281/zenodo.10595427
+id: 10.5281/zenodo.10595427
+nickname: greedy-shark
+nickname_icon: 🦈
+owners:
+- 610358
+status: accepted
+type: model
+versions:
+- created: '2024-01-31 00:48:04.865512'
+  doi: 10.5281/zenodo.10595428
+  name: UniFMIRVolumetricReconstructionOnVCD
+  status: blocked
+  version_id: '10595428'
+  version_name: version from 2024-01-31
+  rdf_source: https://zenodo.org/api/records/10595428/files/rdf.yaml/content
