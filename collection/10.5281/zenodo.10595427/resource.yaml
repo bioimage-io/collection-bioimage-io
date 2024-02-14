@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2024-02-14 13:14:20.065980'
+  doi: 10.5281/zenodo.10657878
+  name: UniFMIRVolumetricReconstructionOnVCD
+  status: accepted
+  version_id: '10657878'
+  version_name: version from 2024-02-14
+  rdf_source: https://zenodo.org/api/records/10657878/files/rdf.yaml/content
 - created: '2024-01-31 00:48:04.865512'
   doi: 10.5281/zenodo.10595428
   name: UniFMIRVolumetricReconstructionOnVCD
