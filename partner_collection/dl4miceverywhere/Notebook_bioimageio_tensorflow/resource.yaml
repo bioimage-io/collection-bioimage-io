@@ -1,0 +1,75 @@
+id: dl4miceverywhere/Notebook_bioimageio_tensorflow
+status: accepted
+type: application
+versions:
+- name: General BioImageIO notebook - TensorFlow
+  status: accepted
+  version_id: latest
+  version_name: latest
+  rdf_source:
+    authors:
+    - name: Estibaliz Gómez-de-Mariscal
+    - name: Constantin Pape
+    - name: Iván Hidalgo-Cenalmor
+    - name: BioImage Model Zoo team
+    badges:
+    - icon: https://colab.research.google.com/assets/colab-badge.svg
+      label: Open in Colab
+      url: 
+        https://colab.research.google.com/github/HenriquesLab/DL4MicEverywhere/blob/master/notebooks/Bespoke_notebooks/bioimageio-tensorflow/load_bioimageio_model.ipynb
+    cite:
+    - doi: https://doi.org/10.1101/2022.06.07.495102
+      text: 'Wei Ouyang, Fynn Beuttenmueller, Estibaliz Gómez-de-Mariscal, Constantin
+        Pape, et al., BioImage Model Zoo: A Community-Driven Resource for Accessible
+        Deep Learning in BioImage Analysis, bioRxiv 2022'
+    - doi: https://doi.org/10.1101/2023.11.19.567606
+      text: 'Iván Hidalgo-Cenalmor, Joanna W Pylvänäinen, Mariana G Ferreira, et al.,
+        DL4MicEverywhere: Deep learning for microscopy made flexible, shareable, and
+        reproducible, bioRxiv 2023'
+    config:
+      dl4miceverywhere:
+        cuda_version: 11.2.2
+        cudnn_version: 8.1.1.33
+        description: Notebook to load models from the BioImage Model Zoo in TensorFlow
+        dl4miceverywhere_version: 2.0.0
+        docker_hub_image: load_bioimageio_model-b1.0.0-d2.0.0
+        notebook_url: 
+          https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere/bioimageio-MF/notebooks/Bespoke_notebooks/bioimageio-tensorflow/load_bioimageio_model.ipynb
+        notebook_version: 1.0.0
+        python_version: '3.9'
+        requirements_url: 
+          https://raw.githubusercontent.com/HenriquesLab/DL4MicEverywhere/bioimageio-MF/notebooks/Bespoke_notebooks/bioimageio-tensorflow/requirements.txt
+        sections_to_remove: 1.0.
+        ubuntu_version: '20.04'
+    description: Notebook to load models from the BioImage Model Zoo in TensorFlow
+    documentation: https://github.com/HenriquesLab/DL4MicEverywhere/blob/main/README.md
+    download_url: 
+      https://colab.research.google.com/github/HenriquesLab/DL4MicEverywhere/blob/master/notebooks/Bespoke_notebooks/bioimageio-tensorflow/load_bioimageio_model.ipynb
+    format_version: 0.2.3
+    git_repo: https://github.com/bioimage-io/core-bioimage-io-python/tree/main
+    id: dl4miceverywhere/Notebook_bioimageio_tensorflow
+    links:
+    - dl4miceverywhere/Notebook Preview
+    maintainers:
+    - affiliation: Instituto Gulbenkian de Ciência
+      github_user: IvanHCenalmor
+      name: Iván Hidalgo
+      orcid: 0009-0000-8923-568X
+    - affiliation: Instituto Gulbenkian de Ciência
+      github_user: mariana-gferreira
+      name: Mariana G Ferreira
+      orcid: 0009-0002-2886-4612
+    - affiliation: Instituto Gulbenkian de Ciência
+      github_user: esgomezm
+      name: Estibaliz Gómez de Mariscal
+      orcid: 0000-0003-2082-3277
+    name: General BioImageIO notebook - TensorFlow
+    tags:
+    - colab
+    - notebook
+    - general-notebook
+    - tensorflow
+    - ZeroCostDL4Mic
+    - dl4miceverywhere
+    type: application
+    version: 1.0.0
