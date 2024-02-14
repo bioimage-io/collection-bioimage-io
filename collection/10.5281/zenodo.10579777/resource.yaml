@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2024-02-14 12:46:11.374279'
+  doi: 10.5281/zenodo.10657756
+  name: UniFMIRDenoiseOnPlanaria
+  status: accepted
+  version_id: '10657756'
+  version_name: version from 2024-02-14
+  rdf_source: https://zenodo.org/api/records/10657756/files/rdf.yaml/content
 - created: '2024-01-29 10:44:11.045351'
   doi: 10.5281/zenodo.10579778
   name: UniFMIRDenoiseOnPlanaria
