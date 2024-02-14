@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2024-02-14 12:04:20.730392'
+  doi: 10.5281/zenodo.10657537
+  name: UniFMIRProjectionOnFlyWing
+  status: accepted
+  version_id: '10657537'
+  version_name: version from 2024-02-14
+  rdf_source: https://zenodo.org/api/records/10657537/files/rdf.yaml/content
 - created: '2024-01-28 11:00:43.741312'
   doi: 10.5281/zenodo.10577218
   name: UniFMIRProjectionOnFlyWing
