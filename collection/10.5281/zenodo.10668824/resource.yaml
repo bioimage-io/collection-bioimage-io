@@ -8,7 +8,7 @@ versions:
 - created: '2024-02-16 00:54:38.090229'
   doi: 10.5281/zenodo.10668825
   name: 10.5281/zenodo.10668825
-  status: accepted
+  status: blocked
   version_id: '10668825'
   version_name: version from 2024-02-16
   rdf_source: unknown
