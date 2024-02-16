@@ -164,7 +164,7 @@
       ],
       "created": "2022-06-15 22:09:35.368273",
       "description": "Cell segmentation for phase-contrast microscopy.",
-      "download_count": 40275,
+      "download_count": 40282,
       "id": "10.5281/zenodo.5869899",
       "license": "CC-BY-4.0",
       "links": [
@@ -1454,7 +1454,7 @@
       ],
       "created": "2022-05-18 09:42:30.953891",
       "description": "DeepImageJ compatible fully residual U-Net trained to segment small extracellular vesicles in 2D TEM images",
-      "download_count": 18179,
+      "download_count": 18180,
       "download_url": "https://zenodo.org/api/records/6559475/files/deepimagej_fru-net_sev_segmentation.zip/content",
       "id": "10.5281/zenodo.6559474",
       "license": "BSD-3-Clause",
@@ -1791,7 +1791,7 @@
       ],
       "created": "2023-03-30 16:57:43.433376",
       "description": "Wasserstein GAN (WGAN) trained for super-resolution of confocal scanning microscopy images of mitochondria in U2OS cells. Mitochondria were labelled with MitoTracker and the model was trained to upsample the images by a factor of 4.",
-      "download_count": 7103,
+      "download_count": 7107,
       "id": "10.5281/zenodo.7786492",
       "license": "MIT",
       "links": [
