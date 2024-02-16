@@ -19,6 +19,9 @@ versions:
       source: latest_net_G_torchscript.pt
       sha256: 86f7daa11efe1071d3d52e698d462113409ee543827e76f597a60e5a1b6dd71c
       pytorch_version: '2.1'
+  cite:
+  - {url: 'https://arxiv.org/abs/1611.07004', text: Isola et al. arXiv in 2016}
+  - {doi: 'https://doi.org/10.1101/2020.03.20.000133', text: Lucas von Chamier et al. Nat Communications 2021}
 - created: '2023-12-14 12:01:44.656032'
   doi: 10.5281/zenodo.10366412
   name: Mitochondria TOM20 artificial labelling - pix2pix
