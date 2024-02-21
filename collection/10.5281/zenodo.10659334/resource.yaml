@@ -14,3 +14,9 @@ versions:
   version_id: '10659335'
   version_name: version from 2024-02-14
   rdf_source: https://zenodo.org/api/records/10659335/files/rdf.yaml/content
+  authors:
+  - name: 'Patris Valera'
+    github_user: patrisvalera
+  - name: 'Josue Page Vizcaino'
+    github_user: pvjosue
+  git_repo: https://github.com/pvjosue/SLNet_STORM
