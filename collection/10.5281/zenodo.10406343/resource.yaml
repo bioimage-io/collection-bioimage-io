@@ -7,6 +7,13 @@ owners:
 status: accepted
 type: model
 versions:
+- created: '2024-02-02 09:40:04.065090'
+  doi: 10.5281/zenodo.10491807
+  name: Nuclei Segmentation - Developing Tribolium Castaneum Embryo - 2D StarDist
+  status: accepted
+  version_id: '10491807'
+  version_name: version from 2024-01-11
+  rdf_source: https://zenodo.org/api/records/10491807/files/rdf.yaml/content
 - created: '2023-12-21 10:02:20.788035'
   doi: 10.5281/zenodo.10406344
   name: StarDist-Drosophila-Melanogaster
