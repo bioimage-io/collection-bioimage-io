@@ -3,20 +3,22 @@ id: 10.5281/zenodo.10659334
 nickname: determined-hedgehog
 nickname_icon: 🦔
 owners:
-- 563434
+  - 563434
 status: accepted
 type: model
 versions:
-- created: '2024-02-14 20:07:19.767983'
-  doi: 10.5281/zenodo.10659335
-  name: SLNet_STORM_10100_it
-  status: accepted
-  version_id: '10659335'
-  version_name: version from 2024-02-14
-  rdf_source: https://zenodo.org/api/records/10659335/files/rdf.yaml/content
-  authors:
-  - name: 'Patris Valera'
-    github_user: patrisvalera
-  - name: 'Josue Page Vizcaino'
-    github_user: pvjosue
-  git_repo: https://github.com/pvjosue/SLNet_STORM
+  - created: "2024-02-14 20:07:19.767983"
+    doi: 10.5281/zenodo.10659335
+    name: SLNet_STORM_10100_it
+    status: accepted
+    version_id: "10659335"
+    version_name: version from 2024-02-14
+    rdf_source: https://zenodo.org/api/records/10659335/files/rdf.yaml/content
+    authors:
+      - name: "Patris Valera"
+        github_user: patrisvalera
+      - name: "Josue Page Vizcaino"
+        github_user: pvjosue
+    git_repo: https://github.com/pvjosue/SLNet_STORM
+    cite:
+      - { doi: "10.1002/xyzacab123", text: Gizmo et al. }
