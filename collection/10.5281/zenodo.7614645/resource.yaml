@@ -6,9 +6,48 @@ owners: [96309]
 status: accepted
 type: model
 versions:
-- {created: '2023-02-15 09:34:43.433531', doi: 10.5281/zenodo.7642674, name: HyLFM-Net-stat,
-  rdf_source: 'https://zenodo.org/api/records/7642674/files/rdf.yaml/content', status: accepted,
-  version_id: '7642674', version_name: version 2}
-- {created: '2023-02-07 09:10:40.128940', doi: 10.5281/zenodo.7614646, name: HyLFM-Net-stat,
-  rdf_source: 'https://zenodo.org/api/files/e01852df-6222-4064-b768-6f87287c856d/rdf.yaml',
-  status: blocked, version_id: '7614646', version_name: version 1}
+  - created: "2023-02-15 09:34:43.433531"
+    doi: 10.5281/zenodo.7642674
+    name: HyLFM-Net-stat
+    rdf_source: "https://zenodo.org/api/records/7642674/files/rdf.yaml/content"
+    status: accepted
+    version_id: "7642674"
+    version_name: version 2
+    weights:
+      pytorch_state_dict:
+        source: weights.pt
+        sha256: 461f1151d7fea5857ce8f9ceaf9cdf08b5f78ce41785725e39a77d154ccea90a
+        architecture: model.py:HyLFM_Net
+        architecture_sha256: >-
+          fbd9428f7352a8c6bca8a47e9b85d9afe95edb35b716cc909f5cfc530f2280d3
+        kwargs:
+          z_out: 49
+          nnum: 19
+          c_res2d: [768, 768, 512, 256, "u384", 512, 256]
+          c_res3d: [32, "u16", 8, 8]
+          kernel2d: 3
+          last_kernel2d: 5
+          c_in_3d: 64
+          kernel3d: 3
+          init_fn: "xavier_uniform"
+
+        pytorch_version: 1.7
+        dependencies: conda:environment.yaml
+      onnx:
+        source: weights.onnx
+        sha256: 55ad061651840fe4b6da6733c52402ae3296392f74fed8a9482e4bc62040938f
+        opset_version: 15
+        parent: pytorch_state_dict
+      torchscript:
+        source: weights_torchscript.pt
+        sha256: ec01e0c212b5eb422dda208af004665799637a2f2729d0ebf2e884e5d9966fc2
+        pytorch_version: 1.7
+        parent: pytorch_state_dict
+
+  - created: "2023-02-07 09:10:40.128940"
+    doi: 10.5281/zenodo.7614646
+    name: HyLFM-Net-stat
+    rdf_source: "https://zenodo.org/api/files/e01852df-6222-4064-b768-6f87287c856d/rdf.yaml"
+    status: blocked
+    version_id: "7614646"
+    version_name: version 1
