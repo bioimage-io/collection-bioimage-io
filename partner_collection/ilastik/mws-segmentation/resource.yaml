@@ -31,7 +31,6 @@ versions:
       splash_title: ilastik
       tags:
       - ilastik
-      - software
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
     covers: []
     description: Segmentation plugin for models that predict pixel affinities

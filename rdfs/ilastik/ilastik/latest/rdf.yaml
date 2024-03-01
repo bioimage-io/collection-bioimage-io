@@ -26,7 +26,6 @@ config:
   splash_title: ilastik
   tags:
   - ilastik
-  - software
   url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers: []
 description: the interactive learning and segmentation toolkit

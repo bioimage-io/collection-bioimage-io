@@ -29,7 +29,6 @@ versions:
       splash_title: ilastik
       tags:
       - ilastik
-      - software
       url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
     covers:
     - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/isbi2012-cover0.jpg
