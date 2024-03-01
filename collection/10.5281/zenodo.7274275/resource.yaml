@@ -24,9 +24,9 @@ versions:
     cite:
       - doi: "10.1101/2023.04.06.535829"
         text: "Hennies et al. 2023, CebraEM: A practical workflow to segment cellular organelles in volume SEM datasets using a transferable CNN-based membrane prediction"
-      - links:
-        - imjoy/BioImageIO-Packager
-        - ilastik/ilastik
+    links:
+      - imjoy/BioImageIO-Packager
+      - ilastik/ilastik
 
   - created: "2023-10-27 11:32:10.061066"
     doi: 10.5281/zenodo.10047209
