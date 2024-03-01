@@ -8,7 +8,7 @@ type: model
 versions:
 - {created: '2023-03-27 12:14:49.467153', doi: 10.5281/zenodo.7774505, name: 3D UNet
     Mouse Embryo Fixed, rdf_source: 'https://zenodo.org/api/records/7774505/files/rdf.yaml/content',
-  status: accepted, version_id: '7774505', version_name: version 4}
+  status: accepted, version_id: '7774505', version_name: version 4, links: ['imjoy/BioImageIO-Packager', 'ilastik/ilastik']}
 - {created: '2023-03-06 11:42:20.587341', doi: 10.5281/zenodo.7701632, name: 3D UNet
     Mouse Embryo Fixed, rdf_source: 'https://zenodo.org/api/files/530fb9ae-6c28-4ad3-a8d9-5b2426c0c5d9/rdf.yaml',
   status: accepted, version_id: '7701632', version_name: version 3}
