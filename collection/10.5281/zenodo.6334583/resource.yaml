@@ -17,6 +17,22 @@ versions:
     links:
       - imjoy/BioImageIO-Packager
       - ilastik/ilastik
+    tags:
+      - 3d
+      - torchscript
+      - ilastik
+      - unet
+      - plant
+      - plantseg
+      - cell-membrane
+      - ovules
+      - tissue
+      - semantic-segmentation
+      - arabidopsis
+      - deepimagej
+      - pytorch
+      - fluorescence-light-microscopy
+      - ilastik
   - created: "2023-03-24 17:32:06.610900"
     doi: 10.5281/zenodo.7768223
     name: 3D UNet

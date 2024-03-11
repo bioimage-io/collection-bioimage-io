@@ -8,7 +8,9 @@ type: model
 versions:
 - {created: '2023-03-23 21:42:30.250688', doi: 10.5281/zenodo.7765026, name: 3D UNet
     Lateral Root Primordia Cells, rdf_source: 'https://zenodo.org/api/records/7765026/files/rdf.yaml/content',
-  status: accepted, version_id: '7765026', version_name: version 5, links: ['imjoy/BioImageIO-Packager', 'ilastik/ilastik']}
+  status: accepted, version_id: '7765026', version_name: version 5, links: ['imjoy/BioImageIO-Packager', 'ilastik/ilastik'],
+  tags: [unet, 3d, semantic-segmentation, arabidopsis, lateral-root, cell-membrane,
+    plant, tissue, light-sheet-fluorescence-microscopy, pytorch, plantseg, ilastik]}
 - {created: '2023-03-06 11:36:32.070606', doi: 10.5281/zenodo.7701561, name: 3D UNet
     Lateral Root Primordia Cells, rdf_source: 'https://zenodo.org/api/files/d78666d9-c1cc-416f-8fa6-5869f815f1db/rdf.yaml',
   status: accepted, version_id: '7701561', version_name: version 4}

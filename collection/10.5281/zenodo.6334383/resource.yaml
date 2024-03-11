@@ -14,6 +14,25 @@ versions:
     status: accepted
     version_id: "7805067"
     version_name: version 9
+    links:
+      - imjoy/BioImageIO-Packager
+      - ilastik/ilastik
+    tags:
+      [
+        unet,
+        2d,
+        semantic-segmentation,
+        arabidopsis,
+        ovules,
+        cell-membrane,
+        plant,
+        tissue,
+        fluorescence-light-microscopy,
+        pytorch,
+        plantseg,
+        ilastik
+      ]
+
   - created: "2023-03-29 10:46:19.177072"
     doi: 10.5281/zenodo.7781030
     name: 2D UNet
