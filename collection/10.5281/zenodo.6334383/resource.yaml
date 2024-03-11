@@ -17,6 +17,21 @@ versions:
     links:
       - imjoy/BioImageIO-Packager
       - ilastik/ilastik
+    tags:
+      [
+        unet,
+        2d,
+        semantic-segmentation,
+        arabidopsis,
+        ovules,
+        cell-membrane,
+        plant,
+        tissue,
+        fluorescence-light-microscopy,
+        pytorch,
+        plantseg,
+        ilastik
+      ]
 
   - created: "2023-03-29 10:46:19.177072"
     doi: 10.5281/zenodo.7781030

@@ -8,7 +8,10 @@ type: model
 versions:
 - {created: '2023-04-06 10:26:25.873589', doi: 10.5281/zenodo.7805026, name: 2D UNet
     Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/records/7805026/files/rdf.yaml/content',
-  status: accepted, version_id: '7805026', version_name: version 8, links: ['imjoy/BioImageIO-Packager', 'ilastik/ilastik']}
+  status: accepted, version_id: '7805026', version_name: version 8, links: ['imjoy/BioImageIO-Packager', 'ilastik/ilastik'],
+  tags: [unet, 2d, semantic-segmentation, arabidopsis, stem-cells, cell-membrane,
+    plant, tissue, fluorescence-light-microscopy, pytorch, plantset, ilastik]
+}
 - {created: '2023-03-29 10:33:23.534600', doi: 10.5281/zenodo.7781054, name: 2D UNet
     Arabidopsis Apical Stem Cells, rdf_source: 'https://zenodo.org/api/files/a0e182d8-5f62-4604-9131-60509b76ca26/rdf.yaml',
   status: blocked, version_id: '7781054', version_name: version 7}
