@@ -12,6 +12,13 @@ versions:
   version_id: '6624846'
   version_name: version from 2022-06-08
   rdf_source: https://zenodo.org/api/records/6624846/files/rdf.yaml/content
+  attachments:
+    files:
+      - ./exampleImage.tiff
+      - ./resultImage.tiff
+      - ./preprocessing.txt
+      - ./postprocessing.txt
+      - ./postprocessingWatershed.txt
 - created: '2022-05-18 10:12:14.635800'
   doi: 10.5281/zenodo.6559930
   name: Small Extracellular Vesicle TEM Instance Segmentation annotated data
