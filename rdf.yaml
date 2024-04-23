@@ -8,7 +8,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5764892/6322939/cover.png']
   created: '2022-06-15 22:06:22.658325'
   description: Nucleus segmentation for fluorescence microscopy
-  download_count: 66932
+  download_count: 66939
   id: 10.5281/zenodo.5764892
   license: CC-BY-4.0
   links: [ilastik/stardist_dsb_training_data, ilastik/ilastik, deepimagej/deepimagej,
@@ -29,7 +29,7 @@ collection:
     'https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6338614/6338615/example_histo.jpg']
   created: '2022-03-08 18:36:28.378522'
   description: StarDist - Object Detection with Star-convex Shapes
-  download_count: 53502
+  download_count: 53510
   id: 10.5281/zenodo.6338614
   license: BSD-3-Clause
   links: [deepimagej/deepimagej, imjoy/BioImageIO-Packager, ilastik/tnbc, bioimageio/stardist,
@@ -49,7 +49,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5869899/5869900/cover.png']
   created: '2022-06-15 22:09:35.368273'
   description: Cell segmentation for phase-contrast microscopy.
-  download_count: 45139
+  download_count: 45141
   id: 10.5281/zenodo.5869899
   license: CC-BY-4.0
   links: [ilastik/livecell_dataset, ilastik/ilastik, deepimagej/deepimagej, imjoy/BioImageIO-Packager]
@@ -68,7 +68,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.5874741/5874742/cover.png']
   created: '2022-01-18 22:01:09.315638'
   description: Neuron segmentation in EM, trained on the CREMI challenge data.
-  download_count: 44662
+  download_count: 44665
   id: 10.5281/zenodo.5874741
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/ilastik, imjoy/BioImageIO-Packager, ilastik/torch-em-3d-unet-notebook]
@@ -90,7 +90,7 @@ collection:
   created: '2023-07-26 10:47:44.642355'
   description: DeepImageJ compatible U-Net trained to segment phase contrast microscopy
     images of pancreatic stem cells on a 2D polystyrene substrate.
-  download_count: 42301
+  download_count: 42304
   id: 10.5281/zenodo.5914248
   license: BSD-2-Clause
   links: [imjoy/BioImageIO-Packager, deepimagej/deepimagej, ilastik/ilastik, deepimagej/unet-pancreaticcellsegmentation,
@@ -553,7 +553,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6811491/6811492/cover.png']
   created: '2022-07-08 14:35:48.861260'
   description: Prediction enhancer for segmenting mitochondria in EM images.
-  download_count: 23523
+  download_count: 23535
   id: 10.5281/zenodo.6811491
   license: CC-BY-4.0
   links: [deepimagej/deepimagej, ilastik/torch-em-3d-unet-notebook, ilastik/ilastik,
@@ -651,7 +651,7 @@ collection:
   covers: ['https://bioimage-io.github.io/collection-bioimage-io/rdfs/10.5281/zenodo.6808325/6808413/cover.png']
   created: '2022-07-07 21:30:58.116303'
   description: Prediction enhancer for segmenting cell boundaries in EM images.
-  download_count: 18549
+  download_count: 18561
   id: 10.5281/zenodo.6808325
   license: CC-BY-4.0
   links: [ilastik/ilastik, deepimagej/deepimagej, ilastik/torch-em-3d-unet-notebook,
@@ -823,7 +823,7 @@ collection:
   created: '2022-05-18 10:12:14.635800'
   description: DeepImageJ compatible fully residual U-Net trained to segment small
     extracellular vesicles in 2D TEM images
-  download_count: 6560
+  download_count: 6562
   download_url: https://cbia.fi.muni.cz/files/segmentation/fru-net/FRU_processing.zip
   id: 10.5281/zenodo.6559929
   license: MIT
@@ -846,7 +846,7 @@ collection:
   created: '2023-10-09 06:57:28.189519'
   description: Pre-training a Foundation Model for Universal Fluorescence Microscopy
     Image Restoration
-  download_count: 5554
+  download_count: 5557
   id: 10.5281/zenodo.8419845
   license: CC-BY-4.0
   name: UniFMIRSuperResolutionOnMicrotubules
@@ -867,7 +867,7 @@ collection:
   created: '2023-10-09 07:05:52.763368'
   description: Pre-training a Foundation Model for Universal Fluorescence Microscopy
     Image Restoration
-  download_count: 4386
+  download_count: 4389
   id: 10.5281/zenodo.8420099
   license: CC-BY-4.0
   links: [imjoy/BioImageIO-Packager]
