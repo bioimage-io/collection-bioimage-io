@@ -8,7 +8,7 @@ versions:
 - created: '2022-06-08 16:01:52.984678'
   doi: 10.5281/zenodo.6624846
   name: Fully Residual U-Net - TEM
-  status: accepted
+  status: blocked
   version_id: '6624846'
   version_name: version from 2022-06-08
   rdf_source: https://zenodo.org/api/records/6624846/files/rdf.yaml/content
