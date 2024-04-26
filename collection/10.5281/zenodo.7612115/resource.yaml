@@ -4,6 +4,14 @@ owners: [96309]
 status: accepted
 type: dataset
 versions:
-- {created: '2023-02-06 13:30:05.714615', doi: 10.5281/zenodo.7612152, name: Hatchling
-    Medaka Heart (HyLFM), rdf_source: 'https://zenodo.org/api/records/7612152/files/rdf.yaml/content',
-  status: accepted, version_id: '7612152', version_name: version 2}
+  - {
+      created: "2023-02-06 13:30:05.714615",
+      doi: 10.5281/zenodo.7612152,
+      name: Hatchling
+        Medaka Heart (HyLFM),
+      rdf_source: "https://zenodo.org/api/records/7612152/files/rdf.yaml/content",
+      status: accepted,
+      version_id: "7612152",
+      version_name: version 2,
+      format_version: "0.2.3",
+    }
