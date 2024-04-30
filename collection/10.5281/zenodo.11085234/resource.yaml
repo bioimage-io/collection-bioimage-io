@@ -1,10 +1,8 @@
 doi: 10.5281/zenodo.11085234
 id: 10.5281/zenodo.11085234
-nickname: sincere-snake
-nickname_icon: 🐍
 owners:
 - '38657'
-status: accepted
+status: blocked
 type: model
 versions:
 - created: '2024-04-29 12:54:39.454391'
