@@ -160,6 +160,9 @@ def update_from_zenodo(
             break
 
         for hit in hits:
+            if "backup.bioimage.io" in hit["metadata"]["keywords"]:
+                continue  # ignoring backups from the new S3 collection
+
             resource_doi: str = hit["conceptdoi"]
             doi: str = hit["doi"]  # "version" doi
             created = datetime.fromisoformat(hit["created"]).replace(tzinfo=None)
