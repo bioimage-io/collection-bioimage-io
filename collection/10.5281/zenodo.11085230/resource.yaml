@@ -1,0 +1,14 @@
+doi: 10.5281/zenodo.11085230
+id: 10.5281/zenodo.11085230
+owners:
+- '38657'
+status: blocked
+type: model
+versions:
+- created: '2024-04-29 12:53:35.324868'
+  doi: 10.5281/zenodo.11085231
+  name: Neuron Segmentation in 2D EM (Membrane)
+  status: accepted
+  version_id: '11085231'
+  version_name: version from 2024-04-23
+  rdf_source: https://zenodo.org/api/records/11085231/files/rdf.yaml/content
