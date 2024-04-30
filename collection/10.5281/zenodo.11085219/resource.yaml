@@ -1,10 +1,8 @@
 doi: 10.5281/zenodo.11085219
 id: 10.5281/zenodo.11085219
-nickname: handsome-sheep
-nickname_icon: 🐑
 owners:
 - '38657'
-status: accepted
+status: blocked
 type: model
 versions:
 - created: '2024-04-29 12:51:51.935712'
