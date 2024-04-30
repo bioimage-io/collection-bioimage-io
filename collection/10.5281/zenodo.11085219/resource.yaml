@@ -1,0 +1,14 @@
+doi: 10.5281/zenodo.11085219
+id: 10.5281/zenodo.11085219
+owners:
+- '38657'
+status: blocked
+type: model
+versions:
+- created: '2024-04-29 12:51:51.935712'
+  doi: 10.5281/zenodo.11085220
+  name: NucleiSegmentationBoundaryModel
+  status: accepted
+  version_id: '11085220'
+  version_name: version from 2024-04-23
+  rdf_source: https://zenodo.org/api/records/11085220/files/rdf.yaml/content
