@@ -1,10 +1,8 @@
 doi: 10.5281/zenodo.11085230
 id: 10.5281/zenodo.11085230
-nickname: acclaimed-eagle
-nickname_icon: 🦅
 owners:
 - '38657'
-status: accepted
+status: blocked
 type: model
 versions:
 - created: '2024-04-29 12:53:35.324868'
