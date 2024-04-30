@@ -1,0 +1,14 @@
+doi: 10.5281/zenodo.11085239
+id: 10.5281/zenodo.11085239
+owners:
+- '38657'
+status: accepted
+type: notebook
+versions:
+- created: '2024-04-29 12:54:57.043106'
+  doi: 10.5281/zenodo.11085240
+  name: 2D UNet Training
+  status: accepted
+  version_id: '11085240'
+  version_name: version from 2024-04-26
+  rdf_source: https://zenodo.org/api/records/11085240/files/rdf.yaml/content
