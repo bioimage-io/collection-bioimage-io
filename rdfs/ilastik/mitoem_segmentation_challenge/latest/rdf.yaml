@@ -26,7 +26,7 @@ config:
   - ilastik
   url_root: https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main
 covers:
-- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/mitoem-cover0.jpg
+- https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/mitoem-cover0.png
 - https://raw.githubusercontent.com/ilastik/bioimage-io-resources/main/dataset_src/mitoem-cover1.png
 description: Training data for mitochondria segmentation in 3d EM.
 documentation: 
