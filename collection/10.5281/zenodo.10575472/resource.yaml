@@ -1,0 +1,23 @@
+doi: 10.5281/zenodo.10575472
+id: 10.5281/zenodo.10575472
+nickname: bright-koala
+nickname_icon: 🐨
+owners:
+- 581501
+status: accepted
+type: model
+versions:
+- created: '2024-01-27 13:48:46.472057'
+  doi: 10.5281/zenodo.10575494
+  name: EMDiffuse-n
+  status: accepted
+  version_id: '10575494'
+  version_name: version from 2024-01-27
+  rdf_source: https://zenodo.org/api/records/10575494/files/rdf.yaml/content
+- created: '2024-01-27 13:39:29.606357'
+  doi: 10.5281/zenodo.10575473
+  name: EMDiffuse-n
+  status: accepted
+  version_id: '10575473'
+  version_name: version from 2024-01-27
+  rdf_source: https://zenodo.org/api/records/10575473/files/rdf.yaml/content
