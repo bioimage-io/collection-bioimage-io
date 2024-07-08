@@ -4,7 +4,7 @@ badges:
 - icon: https://colab.research.google.com/assets/colab-badge.svg
   label: Open in Colab
   url: 
-    https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb
+    https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/image_to_image/BiaPy_3D_Image_to_Image.ipynb
 cite:
 - doi: 10.1109/ISBI53787.2023.10230593
   text: 'BiaPy: a ready-to-use library for Bioimage Analysis Pipelines. 2023 IEEE
@@ -43,16 +43,16 @@ config:
   url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
   version: 3.4.6
 covers:
-- https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_super-resolution.png
-description: 3D Super Resolution workflow where the goal is to reconstruct high-resolution
-  (HR) images from low-resolution (LR) ones. There is no restriction in the type of
-  images that can be used as long as they are 3D files.
-documentation: https://biapy.readthedocs.io/en/latest/workflows/super_resolution.html
+- https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_image_to_image.png
+description: 3D Image to image workflow where the goal of this workflow aims at translating/mapping
+  input images into target images. There is no restriction in the type of images that
+  can be used as long as they are 3D files.
+documentation: https://biapy.readthedocs.io/en/latest/workflows/image_to_image.html
 download_url: 
-  https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/super-resolution/BiaPy_3D_Super_Resolution.ipynb
+  https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/image_to_image/BiaPy_3D_Image_to_Image.ipynb
 format_version: 0.2.3
 git_repo: https://github.com/BiaPyX/BiaPy
-id: biapy/notebook_super_resolution_3d/latest
+id: biapy/notebook_image_to_image_3d/latest
 links:
 - biapy/Notebook Preview
 maintainers:
@@ -72,28 +72,29 @@ maintainers:
   github_user: AAitorG
   name: Aitor Gonzalez-Marfil
   orcid: 0000-0003-1367-4154
-name: Super Resolution (3D) - BiaPy
+name: Image to image (3D) - BiaPy
 rdf_source: 
-  https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_super_resolution_3d/latest/rdf.yaml
+  https://bioimage-io.github.io/collection-bioimage-io/rdfs/biapy/notebook_image_to_image_3d/latest/rdf.yaml
 tags:
 - colab
 - workflow
 - pipeline
 - notebook
 - edsr
+- rcan
 - dfcan
 - wdsr
-- rcan
 - unet
 - resunet
 - resunet++
+- seunet
 - attention-unet
+- unetr
 - multiresunet
-- se-unet
-- resunet-se
-- unext_v1
-- Super Resolution
-- super-resolution
+- unext-v1
+- image-to-image
+- image-reconstruction
+- image-restoration
 - biapy
 - 3d
 - pytorch

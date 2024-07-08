@@ -41,7 +41,7 @@ config:
   tags:
   - BiaPy
   url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
-  version: 3.1.0
+  version: 3.4.6
 covers:
 - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_denoising.png
 description: 2D Denoising workflow where the goal is to remove the noise from the
@@ -81,14 +81,17 @@ tags:
 - workflow
 - pipeline
 - notebook
-- U-Net
-- ResU-Net
-- ResUNet++
-- Attention U-Net
-- MultiResUNet
-- SE U-Net
+- unet
+- resunet
+- resunet++
+- attention-unet
+- multiresunet
+- se-unet
+- resunet-se
+- unext_v1
 - denoising
 - Noise2Void
-- BiaPy
-- 2D
+- biapy
+- 2d
+- pytorch
 type: application

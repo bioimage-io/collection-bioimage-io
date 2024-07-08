@@ -41,7 +41,7 @@ config:
   tags:
   - BiaPy
   url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
-  version: 3.1.0
+  version: 3.4.6
 covers:
 - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_classification.png
 description: 3D Classification workflow where full input images are labeled as belonging
@@ -84,6 +84,7 @@ tags:
 - ViT
 - EfficientNet
 - Simple CNN
-- BiaPy
-- 3D
+- biapy
+- 3d
+- pytorch
 type: application

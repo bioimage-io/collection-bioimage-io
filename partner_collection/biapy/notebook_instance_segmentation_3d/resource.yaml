@@ -46,7 +46,7 @@ versions:
       tags:
       - BiaPy
       url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
-      version: 3.1.0
+      version: 3.4.6
     covers:
     - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_instance_segmentation.png
     description: 3D Instance Segmentation workflow where the goal is to detect, segment,
@@ -86,13 +86,16 @@ versions:
     - workflow
     - pipeline
     - notebook
-    - U-Net
-    - ResU-Net
-    - ResUNet++
-    - Attention U-Net
-    - MultiResUNet
-    - SE U-Net
-    - segmentation
-    - BiaPy
-    - 3D
+    - unet
+    - resunet
+    - resunet++
+    - attention-unet
+    - multiresunet
+    - se-unet
+    - resunet-se
+    - unext_v1
+    - semantic-segmentation
+    - biapy
+    - 3d
+    - pytorch
     type: application

@@ -1,8 +1,8 @@
-id: biapy/notebook_denoising_2d
+id: biapy/notebook_image_to_image_3d
 status: accepted
 type: application
 versions:
-- name: Denoising (2D) - BiaPy
+- name: Image to image (3D) - BiaPy
   status: accepted
   version_id: latest
   version_name: latest
@@ -13,7 +13,7 @@ versions:
     - icon: https://colab.research.google.com/assets/colab-badge.svg
       label: Open in Colab
       url: 
-        https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb
+        https://colab.research.google.com/github/BiaPyX/BiaPy/blob/master/notebooks/image_to_image/BiaPy_3D_Image_to_Image.ipynb
     cite:
     - doi: 10.1109/ISBI53787.2023.10230593
       text: 'BiaPy: a ready-to-use library for Bioimage Analysis Pipelines. 2023 IEEE
@@ -48,17 +48,16 @@ versions:
       url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
       version: 3.4.6
     covers:
-    - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_denoising.png
-    description: 2D Denoising workflow where the goal is to remove the noise from
-      the input image. Our library includes Noise2Void without relying on noise image
-      pairs nor clean target images to train the model. There is no restriction in
-      the type of images that can be used as long as they are 2D files.
-    documentation: https://biapy.readthedocs.io/en/latest/workflows/denoising.html
+    - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_image_to_image.png
+    description: 3D Image to image workflow where the goal of this workflow aims at
+      translating/mapping input images into target images. There is no restriction
+      in the type of images that can be used as long as they are 3D files.
+    documentation: https://biapy.readthedocs.io/en/latest/workflows/image_to_image.html
     download_url: 
-      https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/denoising/BiaPy_2D_Denoising.ipynb
+      https://raw.githubusercontent.com/BiaPyX/BiaPy/master/notebooks/image_to_image/BiaPy_3D_Image_to_Image.ipynb
     format_version: 0.2.3
     git_repo: https://github.com/BiaPyX/BiaPy
-    id: biapy/notebook_denoising_2d
+    id: biapy/notebook_image_to_image_3d
     links:
     - biapy/Notebook Preview
     maintainers:
@@ -78,23 +77,28 @@ versions:
       github_user: AAitorG
       name: Aitor Gonzalez-Marfil
       orcid: 0000-0003-1367-4154
-    name: Denoising (2D) - BiaPy
+    name: Image to image (3D) - BiaPy
     tags:
     - colab
     - workflow
     - pipeline
     - notebook
+    - edsr
+    - rcan
+    - dfcan
+    - wdsr
     - unet
     - resunet
     - resunet++
+    - seunet
     - attention-unet
+    - unetr
     - multiresunet
-    - se-unet
-    - resunet-se
-    - unext_v1
-    - denoising
-    - Noise2Void
+    - unext-v1
+    - image-to-image
+    - image-reconstruction
+    - image-restoration
     - biapy
-    - 2d
+    - 3d
     - pytorch
     type: application

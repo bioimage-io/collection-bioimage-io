@@ -46,7 +46,7 @@ versions:
       tags:
       - BiaPy
       url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
-      version: 3.1.0
+      version: 3.4.6
     covers:
     - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_super-resolution.png
     description: 2D Super Resolution workflow where the goal is to reconstruct high-resolution
@@ -83,18 +83,21 @@ versions:
     - workflow
     - pipeline
     - notebook
-    - EDSR
-    - DFCAN
-    - WDSR
-    - RCAN
-    - U-Net
-    - ResU-Net
-    - ResUNet++
-    - Attention U-Net
-    - MultiResUNet
-    - SE U-Net
+    - edsr
+    - dfcan
+    - wdsr
+    - rcan
+    - unet
+    - resunet
+    - resunet++
+    - attention-unet
+    - multiresunet
+    - se-unet
+    - resunet-se
+    - unext_v1
     - Super Resolution
-    - SR
-    - BiaPy
-    - 2D
+    - super-resolution
+    - biapy
+    - 2d
+    - pytorch
     type: application

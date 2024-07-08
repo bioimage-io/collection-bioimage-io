@@ -41,7 +41,7 @@ config:
   tags:
   - BiaPy
   url_root: https://github.com/BiaPyX/BiaPy-bioimage-io
-  version: 3.1.0
+  version: 3.4.6
 covers:
 - https://raw.githubusercontent.com/BiaPyX/BiaPy-bioimage-io/main/images/2d_self-supervised.png
 description: 3D Self Supervision workflow where the idea is to pretrain the backbone
@@ -83,15 +83,18 @@ tags:
 - pipeline
 - notebook
 - MAE
-- U-Net
-- ResU-Net
-- ResUNet++
-- Attention U-Net
-- MultiResUNet
-- SE U-Net
+- unet
+- resunet
+- resunet++
+- attention-unet
+- multiresunet
+- se-unet
+- resunet-se
+- unext_v1
 - self-supervision
 - self-supervised
 - SSL
-- BiaPy
-- 3D
+- biapy
+- 3d
+- pytorch
 type: application
